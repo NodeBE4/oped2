@@ -15,4 +15,4 @@ comments: true
 模板来自 [达摩俱乐部](https://github.com/damoresclub/damoresclub.github.io)
 
 ### 反馈
-到[NodeBE4论坛](https://be4.herokuapp.com)或[issue区](https://github.com/NodeBE4/news-beyound-wall/issues)。
+到[NodeBE4论坛](https://be4.herokuapp.com)或[issue区](https://github.com/NodeBE4/news-beyond-wall/issues)。
