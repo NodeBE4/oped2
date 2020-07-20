@@ -70,7 +70,7 @@ async function fetchCDT() {
 
 async function performCDT() {
   let site = '中国数字时代'
-  let today = Date.prototype.getDate()
+  let today = Date()
   try {
     // let siteFolder = `./news/${site}/_posts`
     let siteFolder = `./_posts`
@@ -130,7 +130,8 @@ async function performSite(site) {
     if (files.length > 0) {
       let lastArticle = fs.readFileSync(`${siteFolder}/${files[0]}`, 'utf8')
       lastDate = +lastArticle.match(/<!--(\d+)-/)[1]
-      lastId = +files[0].match(/(\d+)_/)[1]
+      // lastId = +files[0].match(/_(\d+).md/)[1]
+      lastId = 0xFFFFF
     } else {
       lastId = 0xFFFFF
       lastDate = 0
@@ -163,8 +164,14 @@ categories: [ news, ${article.site} ]
 ---
 `
   md = header + md
-  let filename = `${pubDate.substring(0, 10)}-${article.title}_${id}.md`.replace(/\//g, '--')
-  fs.writeFileSync(`./_posts/${filename}`, md)
+  // let filename = `${pubDate.substring(0, 10)}-${article.title}_${id}.md`.replace(/\//g, '--')
+  let filename = `${pubDate.substring(0, 10)}-${article.title}.md`.replace(/\//g, '--')
+  if (fs.existsSync(`./_posts/${filename}`)) {
+    //file exists
+    console.log(`skip ./_posts/${filename}`)
+  }else{
+    fs.writeFileSync(`./_posts/${filename}`, md)
+  }
 }
 
 function generateList(site) {
