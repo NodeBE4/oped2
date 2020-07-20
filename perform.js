@@ -72,7 +72,8 @@ async function performCDT() {
   let site = '中国数字时代'
   let today = Date.prototype.getDate()
   try {
-    let siteFolder = `./news/${site}/_posts`
+    // let siteFolder = `./news/${site}/_posts`
+    let siteFolder = `./_posts`
     fs.mkdirSync(siteFolder, { recursive: true })
 
     let articles = await fetchCDT()
@@ -119,7 +120,8 @@ async function perform() {
 
 async function performSite(site) {
   try {
-    let siteFolder = `./news/${site}/_posts`
+    // let siteFolder = `./news/${site}/_posts`
+    let siteFolder = `./_posts`
     fs.mkdirSync(siteFolder, { recursive: true })
 
     let files = fs.readdirSync(siteFolder)
@@ -149,21 +151,27 @@ async function performSite(site) {
 
 function generateArticle(article, date, id) {
   let md = renderMD(article)
+  let pubDate = timeConverter(article.pubDate)
   let header = `---
 layout: post
 title: "${article.title}"
-date: ${article.pubDate}
+date: ${pubDate}
 author: ${article.site}
-categories:[news, ${article.site}]
+from: ${article.link}
+tags: [ ${article.site} ]
+categories: [ news, ${article.site} ]
 ---
 `
   md = header + md
-  let filename = `${date}_${article.title}_${id}.md`.replace(/\//g, '--')
-  fs.writeFileSync(`./_posts/${article.site}/${filename}`, md)
+  let filename = `${pubDate.substring(0, 10)}-${article.title}_${id}.md`.replace(/\//g, '--')
+  fs.writeFileSync(`./_posts/${filename}`, md)
 }
 
 function generateList(site) {
-  let siteFolder = `./pages/${site}`
+  let siteFolder = `./lists/${site}`
+  if (!fs.existsSync(siteFolder)){
+      fs.mkdirSync(siteFolder);
+  }
   let files = fs.readdirSync(siteFolder).slice(0, 100)
 
   let listItems = files.map(item => {
@@ -174,7 +182,7 @@ function generateList(site) {
       let gmtPlus8 = new Date(+timestamp[1] + 8 * 60 * 60 * 1000)
       date = `${gmtPlus8.getUTCMonth() + 1}-${gmtPlus8.getUTCDate()} `
     }
-    return `${date}[${strip(title)}](/_posts/${urlMod.resolve('', `${site}/${item}`)})\n`
+    return `${date}[${strip(title)}](/lists/${urlMod.resolve('', `${site}/${item}`)})\n`
   })
   let list = listItems.join("\n")
   let md = `${site}
@@ -182,7 +190,7 @@ function generateList(site) {
 
 ${list}
 
-[查看更多](/_posts/${site})`
+[查看更多](/lists/${site})`
   fs.writeFileSync(`./lists/${site}.md`, md)
 }
 
@@ -195,8 +203,24 @@ function renderMD(item) {
 [${strip(item.title)}](${new URL(item.link).href})
 ------
 
+<div>
 ${item.content.split("\n").map(line => strip(line)).join('')}
+</div>
 `
+}
+
+function timeConverter(UNIX_timestamp){
+  var a = new Date(UNIX_timestamp);
+  // var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  // var year = a.getFullYear();
+  // var month = months[a.getMonth()];
+  // var date = a.getDate();
+  // var hour = a.getHours();
+  // var min = a.getMinutes();
+  // var sec = a.getSeconds();
+  // var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+  // return time;
+  return a.toISOString()
 }
 
 perform()
