@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>达摩俱乐部</title>
+ <link href="http://localhost:4000/news-beyound-wall/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/news-beyound-wall/"/>
+ <updated>2020-07-20T21:56:05+08:00</updated>
+ <id>http://localhost:4000/news-beyound-wall</id>
+ <author>
+   <name>达摩俱乐部</name>
+   <email>damoresclub@protonmail.com</email>
+ </author>
+
+ 
+
+</feed>

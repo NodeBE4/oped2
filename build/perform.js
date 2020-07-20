@@ -72,7 +72,7 @@ async function performCDT() {
   let site = '中国数字时代'
   let today = Date.prototype.getDate()
   try {
-    let siteFolder = `./news/${site}/_posts`
+    let siteFolder = `./_posts/${site}`
     fs.mkdirSync(siteFolder, { recursive: true })
 
     let articles = await fetchCDT()
@@ -119,7 +119,7 @@ async function perform() {
 
 async function performSite(site) {
   try {
-    let siteFolder = `./news/${site}/_posts`
+    let siteFolder = `./_posts/${site}`
     fs.mkdirSync(siteFolder, { recursive: true })
 
     let files = fs.readdirSync(siteFolder)
@@ -149,21 +149,13 @@ async function performSite(site) {
 
 function generateArticle(article, date, id) {
   let md = renderMD(article)
-  let header = `---
-layout: post
-title: "${article.title}"
-date: ${article.pubDate}
-author: ${article.site}
-categories:[news, ${article.site}]
----
-`
-  md = header + md
+
   let filename = `${date}_${article.title}_${id}.md`.replace(/\//g, '--')
   fs.writeFileSync(`./_posts/${article.site}/${filename}`, md)
 }
 
 function generateList(site) {
-  let siteFolder = `./pages/${site}`
+  let siteFolder = `./_posts/${site}`
   let files = fs.readdirSync(siteFolder).slice(0, 100)
 
   let listItems = files.map(item => {
