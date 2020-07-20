@@ -70,8 +70,9 @@ async function fetchCDT() {
 
 async function performCDT() {
   let site = '中国数字时代'
+  let today = Date.prototype.getDate()
   try {
-    let siteFolder = `./articles/${site}`
+    let siteFolder = `./_posts/${site}`
     fs.mkdirSync(siteFolder, { recursive: true })
 
     let articles = await fetchCDT()
@@ -82,7 +83,7 @@ async function performCDT() {
         id = 0xFFFFF ^ (+match[1])
       }
 
-      generateArticle(a, id)
+      generateArticle(a, today, id)
     })
 
     generateList(site)
@@ -118,7 +119,7 @@ async function perform() {
 
 async function performSite(site) {
   try {
-    let siteFolder = `./articles/${site}`
+    let siteFolder = `./_posts/${site}`
     fs.mkdirSync(siteFolder, { recursive: true })
 
     let files = fs.readdirSync(siteFolder)
@@ -137,7 +138,7 @@ async function performSite(site) {
 
     articles.filter(x => x.pubDate > lastDate).map(a => {
       lastId -= 1
-      generateArticle(a, lastId)
+      generateArticle(a, lastDate, lastId)
     })
 
     generateList(site)
@@ -146,15 +147,15 @@ async function performSite(site) {
   }
 }
 
-function generateArticle(article, id) {
+function generateArticle(article, date, id) {
   let md = renderMD(article)
 
-  let filename = `${id}_${article.title}.md`.replace(/\//g, '--')
-  fs.writeFileSync(`./articles/${article.site}/${filename}`, md)
+  let filename = `${date}_${article.title}_${id}.md`.replace(/\//g, '--')
+  fs.writeFileSync(`./_posts/${article.site}/${filename}`, md)
 }
 
 function generateList(site) {
-  let siteFolder = `./articles/${site}`
+  let siteFolder = `./_posts/${site}`
   let files = fs.readdirSync(siteFolder).slice(0, 100)
 
   let listItems = files.map(item => {
@@ -165,7 +166,7 @@ function generateList(site) {
       let gmtPlus8 = new Date(+timestamp[1] + 8 * 60 * 60 * 1000)
       date = `${gmtPlus8.getUTCMonth() + 1}-${gmtPlus8.getUTCDate()} `
     }
-    return `${date}[${strip(title)}](/articles/${urlMod.resolve('', `${site}/${item}`)})\n`
+    return `${date}[${strip(title)}](/_posts/${urlMod.resolve('', `${site}/${item}`)})\n`
   })
   let list = listItems.join("\n")
   let md = `${site}
@@ -173,7 +174,7 @@ function generateList(site) {
 
 ${list}
 
-[查看更多](/articles/${site})`
+[查看更多](/_posts/${site})`
   fs.writeFileSync(`./lists/${site}.md`, md)
 }
 
