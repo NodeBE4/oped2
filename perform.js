@@ -87,7 +87,7 @@ async function performCDT() {
       generateArticle(a, today, id)
     })
 
-    generateList(site)
+    // generateList(site)
   } catch(e) {
     console.log([site, e])
   }
@@ -144,7 +144,7 @@ async function performSite(site) {
       generateArticle(a, lastDate, lastId)
     })
 
-    generateList(site)
+    // generateList(site)
   } catch(e) {
     console.log([site, e])
   }
