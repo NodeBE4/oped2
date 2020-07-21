@@ -26,7 +26,7 @@ navigation:
     url: /about
   - name: 列表
     url: /archive
-  - name: 主题
+  - name: 来源
     url: /tags
   - name: 反馈
     url: https://be4.herokuapp.com
