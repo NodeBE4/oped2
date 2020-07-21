@@ -36,7 +36,7 @@ https://nodebe4.github.io/waimei/feed.xml
 鸣谢
 ------
 
-- 
+- [duty-machine](https://github.com/duty-machine)
 - https://feedx.net/
 - https://rsshub.app/
 
