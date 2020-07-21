@@ -1,7 +1,14 @@
+在线阅读新闻
+------
+
+https://nodebe4.github.io/waimei/
+
+分享短链接 https://git.io/JJCxX
+
 支持RSS订阅
 ------
 
-https://nodebe4.github.io/opinion/feed.xml
+https://nodebe4.github.io/waimei/feed.xml
 
 支持离线阅读
 ------
