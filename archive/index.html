@@ -9,7 +9,9 @@ permalink: /archive/
 {% endif %}
 
 <ul class="archive">
+  {% assign counter = 0 %}
   {% for post in site.posts %}
+    {% if counter < 1000 %}
     {% unless post.next %}
       <h2>{{ post.date | date: '%Y-%m-%d' }}</h2>
     {% else %}
@@ -35,5 +37,7 @@ permalink: /archive/
       </a>
       {% endfor %}
     </li>
+    {% assign counter = counter | plus: 1 %}
+    {% endif %}
   {% endfor %}
 </ul>
