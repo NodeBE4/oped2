@@ -9,9 +9,11 @@ let feedxUrls = {
   '纽约时报': 'https://feedx.net/rss/nytimes.xml',
   '美国之音': 'https://feedx.net/rss/mgzy1.xml',
   '金融时报': 'https://feedx.net/rss/ft.xml',
-  'BBC': 'https://feedx.net/rss/bbc.xml',
+  'BBC': 'https://rsshub-node.herokuapp.com/bbc/chinese', // 'https://feedx.net/rss/bbc.xml',
   '法广': 'https://feedx.net/rss/rfi.xml',
-  '德国之声': 'https://feedx.net/rss/dw.xml'
+  '德国之声': 'https://feedx.net/rss/dw.xml',
+  '联合早报': 'https://rsshub-node.herokuapp.com/zaobao/realtime/china',
+  'RTI 中央廣播電臺': 'http://www.rti.org.tw/rss/'
 }
 
 async function fetchArticles(site) {
