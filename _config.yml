@@ -105,8 +105,6 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-feed:
-  posts_limit: 100
 # Use the following plug-ins
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
@@ -120,6 +118,10 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+feed:
+  posts_limit: 100
+  tags: true
 
 # include: ["lists" "news"]
 # algolia:
