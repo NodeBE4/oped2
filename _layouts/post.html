@@ -2,12 +2,31 @@
 layout: default
 ---
 
+{% include social-share.html %}
+
+<div class="pagination">
+  {% if page.previous.url %}
+    <span class="prev" >
+        <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
+          上一篇
+        </a>
+    </span>
+  {% endif %}
+  {% if page.next.url %}
+    <span class="next" >
+        <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
+          下一篇
+        </a>
+    </span>
+  {% endif %}
+</div>
+
 <article class="post">
   <h1>{{ page.title }}</h1>
   <!-- Look the author details up from the site config. -->
   {% assign author = site.data.authors[page.author] %}
 
-  <div>
+  <div style="width:100%;">
     <span class="date">
       {{ page.date | date: "%Y-%m-%d" }}
     </span>
@@ -33,16 +52,20 @@ layout: default
     {% if page.from %}
         <span>
             <!-- Personal Info. -->
-            <a href="{{ page.from }}">来源</a>
+            <a href="{{ page.from }}"  style="font-size: $small-font-size;">原文</a>
         </span>
     {% endif %}
 
     {% if page.hackmd %}
         <span>
             <!-- Personal Info. -->
-            MD: <a href="https://hackmd.io/{{ page.hackmd }}?view">逐段点评</a>
+            MD: <a href="https://hackmd.io/{{ page.hackmd }}?view"  style="font-size: $small-font-size;">逐段点评</a>
         </span>
     {% endif %}
+
+    <span style="float: right;" title="提交到BE4新闻站">
+      <a style="color: #5CBA66; font-size: $small-font-size;" rel="nofollow" href="https://be4news.pythonanywhere.com/submit?u={{ page.from | url_encode }}&t={{ page.title | url_encode }}" target="_blank">🐍</a>
+    </span>
   </div>
 
   <div class="entry">
