@@ -152,13 +152,17 @@ async function performSite(site) {
 }
 
 function generateArticle(article, id) {
-  let today = Date().toISOString()
+  let today = new Date()
   let md = renderMD(article)
   let pubDate = timeConverter(article.pubDate)
+  if (today < pubDate) {
+    pubDate = today
+  }
+  let dateString = pubDate.toISOString()
   let header = `---
 layout: post
 title: "${article.title}"
-date: ${today}
+date: ${dateString}
 author: ${article.site}
 from: ${article.link}
 tags: [ ${article.site} ]
@@ -167,12 +171,10 @@ categories: [ news, ${article.site} ]
 `
   md = header + md
   // let filename = `${pubDate.substring(0, 10)}-${article.title}_${id}.md`.replace(/\//g, '--')
-  let filename = `${today.substring(0, 10)}-${article.title}.md`.replace(/\//g, '--')
-  if (fs.existsSync(`./_posts/${filename}`)) {
-    //file exists
-    console.log(`skip ./_posts/${filename}`)
-  }else{
+  let filename = `${dateString.substring(0, 10)}-${article.title}.md`.replace(/\//g, '--')
+  if (!fs.existsSync(`./_posts/${filename}`)) {
     fs.writeFileSync(`./_posts/${filename}`, md)
+    console.log(`add ./_posts/${filename}`)
   }
 }
 
@@ -220,7 +222,7 @@ ${item.content.split("\n").map(line => strip(line)).join('')}
 
 function timeConverter(UNIX_timestamp){
   var a = new Date(UNIX_timestamp);
-  return a.toISOString()
+  return a
 }
 
 perform()
