@@ -72,7 +72,6 @@ async function fetchCDT() {
 
 async function performCDT() {
   let site = '中国数字时代'
-  let today = Date()
   try {
     // let siteFolder = `./news/${site}/_posts`
     let siteFolder = `./_posts`
@@ -86,7 +85,7 @@ async function performCDT() {
         id = 0xFFFFF ^ (+match[1])
       }
 
-      generateArticle(a, today, id)
+      generateArticle(a, id)
     })
 
     // generateList(site)
@@ -143,7 +142,7 @@ async function performSite(site) {
 
     articles.filter(x => x.pubDate > lastDate).map(a => {
       lastId -= 1
-      generateArticle(a, lastDate, lastId)
+      generateArticle(a, lastId)
     })
 
     // generateList(site)
@@ -152,13 +151,14 @@ async function performSite(site) {
   }
 }
 
-function generateArticle(article, date, id) {
+function generateArticle(article, id) {
+  let today = Date().toISOString()
   let md = renderMD(article)
   let pubDate = timeConverter(article.pubDate)
   let header = `---
 layout: post
 title: "${article.title}"
-date: ${pubDate}
+date: ${today}
 author: ${article.site}
 from: ${article.link}
 tags: [ ${article.site} ]
@@ -167,7 +167,7 @@ categories: [ news, ${article.site} ]
 `
   md = header + md
   // let filename = `${pubDate.substring(0, 10)}-${article.title}_${id}.md`.replace(/\//g, '--')
-  let filename = `${pubDate.substring(0, 10)}-${article.title}.md`.replace(/\//g, '--')
+  let filename = `${today.substring(0, 10)}-${article.title}.md`.replace(/\//g, '--')
   if (fs.existsSync(`./_posts/${filename}`)) {
     //file exists
     console.log(`skip ./_posts/${filename}`)
@@ -220,15 +220,6 @@ ${item.content.split("\n").map(line => strip(line)).join('')}
 
 function timeConverter(UNIX_timestamp){
   var a = new Date(UNIX_timestamp);
-  // var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  // var year = a.getFullYear();
-  // var month = months[a.getMonth()];
-  // var date = a.getDate();
-  // var hour = a.getHours();
-  // var min = a.getMinutes();
-  // var sec = a.getSeconds();
-  // var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
-  // return time;
   return a.toISOString()
 }
 
