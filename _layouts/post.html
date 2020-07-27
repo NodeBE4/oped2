@@ -62,9 +62,9 @@ layout: default
             MD: <a href="https://hackmd.io/{{ page.hackmd }}?view"  style="font-size: $small-font-size;">逐段点评</a>
         </span>
     {% endif %}
-    
+
     <span style="float: right;" title="提交到时代透镜">
-      <a style="color: #32407B; font-size: $small-font-size;" rel="nofollow" href="https://chinatimeline.github.io/form/?u={{ page.from | url_encode }}&t={{ page.title | url_encode }}&d={{ page.date | slice: 0, 10 }}&e={{ page.content | strip_html }}" target="_blank" class="ssk ssk-icon ssk-github"></a>
+      <a style="color: #32407B; font-size: $small-font-size;" rel="nofollow" href="https://chinatimeline.github.io/form/?u={{ page.from | url_encode }}&t={{ page.title | url_encode }}&d={{ page.date | slice: 0, 10 }}&e={{ page.content | strip_html | truncate: 400 }}" target="_blank" class="ssk ssk-icon ssk-github"></a>
     </span>
 
     <span style="float: right;" title="提交到BE4新闻站">
