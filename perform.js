@@ -8,7 +8,6 @@ let feedxUrls = {
   '路透': 'https://feedx.net/rss/reuters.xml',
   '纽约时报': 'https://feedx.net/rss/nytimes.xml',
   '美国之音': 'https://feedx.net/rss/mgzy1.xml',
-  '金融时报': 'https://feedx.net/rss/ft.xml',
   'BBC': 'https://rsshub-node.herokuapp.com/bbc/chinese', // 'https://feedx.net/rss/bbc.xml',
   '法广': 'https://feedx.net/rss/rfi.xml',
   '德国之声': 'https://feedx.net/rss/dw.xml',
