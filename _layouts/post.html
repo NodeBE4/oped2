@@ -72,7 +72,7 @@ layout: default
     </span>
   </div>
 
-  <div class="entry">
+  <div class="entry" id="div-content-rss">
     {{ content }}
   </div>
 
@@ -100,6 +100,17 @@ layout: default
       if (e.keyCode == '37') { window.location = '{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}'; } // left arrow key
       if (e.keyCode == '39') { window.location = '{{ site.url }}{{ site.baseurl }}{{ page.next.url }}'; } // right arrow key
     };
+    /* add first image to post */
+    window.addEventListener('load', (event) => {
+      var entry = document.getElementById("div-content-rss");
+      var imglink = entry.getElementsByTagName("img")[0];
+      if (imglink){
+        var timeline_shares = document.getElementsByClassName('ssk-github');
+        for (i=0; i<timeline_shares.length; i++){
+          timeline_shares[i].href += `&i=` + encodeURI(imglink.src);
+        }
+      }
+    });
     </script>
 
   </div>
