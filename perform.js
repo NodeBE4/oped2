@@ -103,21 +103,6 @@ async function performCDT() {
   }
 }
 
-// async function fetchRFA() {
-//   let parser = new Parser()
-//   let feed = await parser.parseURL('https://www.rfa.org/mandarin/yataibaodao/rss2.xml')
-//
-//   return feed.items.map(item => {
-//     return {
-//       title: item.title,
-//       content: item['content:encoded'],
-//       link: item.guid,
-//       pubDate: Date.parse(item.pubDate),
-//       site: '自由亚洲电台'
-//     }
-//   })
-// }
-
 async function perform() {
   let sites = Object.keys(feedxUrls)
 
