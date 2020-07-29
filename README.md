@@ -28,13 +28,15 @@ https://nodebe4.github.io/waimei/feed.xml
 - [美国之音](https://feedx.net/rss/mgzy1.xml)
 - [金融时报](https://feedx.net/rss/ft.xml)
 - [BBC](https://rsshub-node.herokuapp.com/bbc/chinese)
+- [自由亚洲电台](https://www.rfa.org/mandarin/yataibaodao/rss2.xml)
 - [法广](https://feedx.net/rss/rfi.xml)
 - [德国之声](https://feedx.net/rss/dw.xml)
 - [联合早报](https://rsshub-node.herokuapp.com/zaobao/realtime/china)
 - [RTI 中央廣播電臺](http://www.rti.org.tw/rss/)
-- [CCTV新闻联播](https://rsshub-node.herokuapp.com/xinwenlianbo/index),
-- [维权网](https://wqw2010.blogspot.com/feeds/posts/default),
+- [CCTV新闻联播](https://rsshub-node.herokuapp.com/xinwenlianbo/index)
+- [维权网](https://wqw2010.blogspot.com/feeds/posts/default)
 - [寒冬](https://zh.bitterwinter.org/feed/)
+- [中国数字时代](https://chinadigitaltimes.net/chinese/feed/)
 
 鸣谢
 ------

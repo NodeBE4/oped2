@@ -9,6 +9,7 @@ let feedxUrls = {
   '纽约时报': 'https://feedx.net/rss/nytimes.xml',
   '美国之音': 'https://feedx.net/rss/mgzy1.xml',
   'BBC': 'https://rsshub-node.herokuapp.com/bbc/chinese', // 'https://feedx.net/rss/bbc.xml',
+  '自由亚洲电台': 'https://www.rfa.org/mandarin/yataibaodao/rss2.xml',
   '法广': 'https://feedx.net/rss/rfi.xml',
   '德国之声': 'https://feedx.net/rss/dw.xml',
   '联合早报': 'https://rsshub-node.herokuapp.com/zaobao/realtime/china',
@@ -23,10 +24,10 @@ async function fetchArticles(site) {
   let articles
   if (feedxUrls[site]) {
     articles = await fetchFeedx(site, feedxUrls[site])
-//  } else if (site == '中国数字时代') {
-//    articles = await fetchCDT()
-  } else if (site == '自由亚洲电台') {
-    articles = await fetchRFA()
+  //  } else if (site == '中国数字时代') {
+  //    articles = await fetchCDT()
+  // } else if (site == '自由亚洲电台') {
+  //   articles = await fetchRFA()
   }
 
   articles.sort((x, y) => x.pubDate - y.pubDate)
@@ -39,9 +40,15 @@ async function fetchFeedx(site, url) {
   let feed = await parser.parseURL(url)
 
   return feed.items.map(item => {
+    let content;
+    if(item['content:encoded']){
+      content = item['content:encoded']
+    }else{
+      content = item.content
+    }
     return {
       title: item.title,
-      content: item.content,
+      content: content,
       link: item.link,
       pubDate: Date.parse(item.pubDate),
       site: site
@@ -96,20 +103,20 @@ async function performCDT() {
   }
 }
 
-async function fetchRFA() {
-  let parser = new Parser()
-  let feed = await parser.parseURL('https://www.rfa.org/mandarin/yataibaodao/rss2.xml')
-
-  return feed.items.map(item => {
-    return {
-      title: item.title,
-      content: item['content:encoded'],
-      link: item.guid,
-      pubDate: Date.parse(item.pubDate),
-      site: '自由亚洲电台'
-    }
-  })
-}
+// async function fetchRFA() {
+//   let parser = new Parser()
+//   let feed = await parser.parseURL('https://www.rfa.org/mandarin/yataibaodao/rss2.xml')
+//
+//   return feed.items.map(item => {
+//     return {
+//       title: item.title,
+//       content: item['content:encoded'],
+//       link: item.guid,
+//       pubDate: Date.parse(item.pubDate),
+//       site: '自由亚洲电台'
+//     }
+//   })
+// }
 
 async function perform() {
   let sites = Object.keys(feedxUrls)
@@ -118,7 +125,7 @@ async function perform() {
     performSite(site)
   })
   performCDT()
-  performSite('自由亚洲电台')
+  // performSite('自由亚洲电台')
 }
 
 async function performSite(site) {
