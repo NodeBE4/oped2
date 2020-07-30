@@ -8,13 +8,13 @@ let feedxUrls = {
   '路透': 'https://feedx.net/rss/reuters.xml',
   '纽约时报': 'https://feedx.net/rss/nytimes.xml',
   '美国之音': 'https://feedx.net/rss/mgzy1.xml',
-  'BBC': 'https://rsshub-node.herokuapp.com/bbc/chinese', // 'https://feedx.net/rss/bbc.xml',
+  'BBC': 'https://rsshub.app/bbc/chinese', // 'https://feedx.net/rss/bbc.xml',
   '自由亚洲电台': 'https://www.rfa.org/mandarin/yataibaodao/rss2.xml',
   '法广': 'https://feedx.net/rss/rfi.xml',
   '德国之声': 'https://feedx.net/rss/dw.xml',
-  '联合早报': 'https://rsshub-node.herokuapp.com/zaobao/realtime/china',
+  '联合早报': 'https://rsshub.app/zaobao/realtime/china',
   'RTI 中央廣播電臺': 'http://www.rti.org.tw/rss/',
-  'CCTV新闻联播': 'https://rsshub-node.herokuapp.com/xinwenlianbo/index',
+  'CCTV新闻联播': 'https://rsshub.app/xinwenlianbo/index',
   '维权网': 'https://wqw2010.blogspot.com/feeds/posts/default',
   '寒冬': 'https://zh.bitterwinter.org/feed/'
 }
