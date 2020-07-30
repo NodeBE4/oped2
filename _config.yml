@@ -22,14 +22,16 @@ avatar:  # /images/apple-touch-icon.png #
 navigation:
   - name: 首页
     url: /
-  - name: 关于
-    url: /about
   - name: 列表
     url: /archive
   - name: 来源
     url: /tags
+  - name: 观点
+    url: https://nodebe4.github.io/opinion/
   - name: 反馈
     url: https://be4.herokuapp.com
+  - name: 关于
+    url: /about
 
 # Pagination
 paginate: 100
