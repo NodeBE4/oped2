@@ -89,12 +89,7 @@ async function performCDT() {
     let articles = await fetchCDT()
 
     articles.map(a => {
-      let id = 0
-      if (match = a.guid.match(/\?p=(\d+)/)) {
-        id = 0xFFFFF ^ (+match[1])
-      }
-
-      generateArticle(a, id)
+      generateArticle(a)
     })
 
     // generateList(site)
@@ -121,22 +116,10 @@ async function performSite(site) {
 
     let files = fs.readdirSync(siteFolder)
 
-    let lastId, lastDate
-    if (files.length > 0) {
-      let lastArticle = fs.readFileSync(`${siteFolder}/${files[0]}`, 'utf8')
-      lastDate = +lastArticle.match(/<!--(\d+)-/)[1]
-      // lastId = +files[0].match(/_(\d+).md/)[1]
-      lastId = 0xFFFFF
-    } else {
-      lastId = 0xFFFFF
-      lastDate = 0
-    }
-
     let articles = await fetchArticles(site)
 
-    articles.filter(x => x.pubDate > lastDate).map(a => {
-      lastId -= 1
-      generateArticle(a, lastId)
+    articles.map(a => {
+      generateArticle(a)
     })
 
     // generateList(site)
@@ -145,7 +128,7 @@ async function performSite(site) {
   }
 }
 
-function generateArticle(article, id) {
+function generateArticle(article) {
   let today = new Date()
   let md = renderMD(article)
   let pubDate = timeConverter(article.pubDate)
@@ -165,7 +148,6 @@ categories: [ news, ${article.site} ]
 ---
 `
   md = header + md
-  // let filename = `${pubDate.substring(0, 10)}-${article.title}_${id}.md`.replace(/\//g, '--')
   let filename = `${dateString.substring(0, 10)}-${titletext}.md`.replace(/\//g, '--')
   if (!fs.existsSync(`./_posts/${filename}`)) {
     fs.writeFileSync(`./_posts/${filename}`, md)
