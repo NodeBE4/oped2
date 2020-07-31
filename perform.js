@@ -16,7 +16,8 @@ let feedxUrls = {
   'RTI 中央廣播電臺': 'http://www.rti.org.tw/rss/',
   'CCTV新闻联播': 'https://rsshub.app/xinwenlianbo/index',
   '维权网': 'https://wqw2010.blogspot.com/feeds/posts/default',
-  '寒冬': 'https://zh.bitterwinter.org/feed/'
+  '寒冬': 'https://zh.bitterwinter.org/feed/',
+  '端傳媒': 'https://theinitium.com/newsfeed/',
 }
 
 async function fetchArticles(site) {
