@@ -9,7 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout this repo
+      uses: actions/checkout@v2
+      with:
+        lfs: true
 
     - uses: actions/setup-node@v2-beta
       with:
@@ -28,7 +31,10 @@ jobs:
         git config --local user.email "you@example.com"
         git config --local user.name "Your Name"
         git config pull.rebase false
-        git add .
+        git lfs install;
+        git lfs track "_posts/*.md";
+        git add .gitattributes;
+        git add ./_posts/*.md;
         git commit -m 'update'
         git pull
         git push origin master
