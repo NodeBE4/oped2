@@ -31,10 +31,7 @@ jobs:
         git config --local user.email "you@example.com"
         git config --local user.name "Your Name"
         git config pull.rebase false
-        git lfs install;
-        git lfs track "_posts/*.md";
-        git add .gitattributes;
-        git add ./_posts/*.md;
+        git add .
         git commit -m 'update'
         git pull
         git push origin master
