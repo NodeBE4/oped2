@@ -37,6 +37,7 @@ https://nodebe4.github.io/waimei/feed.xml
 - [维权网](https://wqw2010.blogspot.com/feeds/posts/default)
 - [寒冬](https://zh.bitterwinter.org/feed/)
 - [中国数字时代](https://chinadigitaltimes.net/chinese/feed/)
+- [Nei.st](https://nei.st/feed)
 
 鸣谢
 ------
