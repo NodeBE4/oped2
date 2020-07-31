@@ -137,12 +137,13 @@ function generateArticle(article) {
   }
   let dateString = pubDate.toISOString()
   let titletext = article.title.toString().replace('"', '\\"').replace('\'','\\\'').replace("...", "")
+  let articlelink = new URL(article.link).href
   let header = `---
 layout: post
 title: "${titletext}"
 date: ${dateString}
 author: ${article.site}
-from: ${article.link}
+from: ${articlelink}
 tags: [ ${article.site} ]
 categories: [ news, ${article.site} ]
 ---

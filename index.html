@@ -8,20 +8,21 @@ layout: default
 
 <div class="pagination">
   {% if paginator.previous_page %}
-    <span class="prev">
+    <span class="prev" style="width:10%;">
       <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="prev">
         上一页
       </a>
     </span>
   {% endif %}
+  <span style="color:gray" style="font-size: $small-font-size;width: 100%;text-align: center">每小时更新一次 左右方向键翻页</span>
   {% if paginator.next_page %}
-    <span class="next">
+    <span class="next" style="width:10%;">
       <a href="{{ site.baseurl}}{{ paginator.next_page_path }}" class="next">
         下一页
       </a>
     </span>
   {% endif %}
-
+  <hr>
 </div>
 
 <ul class="archive">
