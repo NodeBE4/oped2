@@ -482,6 +482,18 @@ nav {
     }
   }
 
+  > .center {
+    float: center;
+    width: 70%;
+    text-align: center ;
+    a {
+      color: $pagination-color;
+      &:hover, &:focus {
+        color: $pagination-over-color;
+      }
+    }
+  }
+
   > .next {
     float: right;
     text-align: right;
