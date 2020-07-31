@@ -17,7 +17,6 @@ let feedxUrls = {
   'CCTV新闻联播': 'https://rsshub.app/xinwenlianbo/index',
   '维权网': 'https://wqw2010.blogspot.com/feeds/posts/default',
   '寒冬': 'https://zh.bitterwinter.org/feed/',
-  '端傳媒': 'https://theinitium.com/newsfeed/',
 }
 
 async function fetchArticles(site) {
