@@ -3,10 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: 外媒报道
+name: Nei.st
 
 # Short bio or description (displayed in the header)
-description: git.io/JJCxX
+description: 存档 git.io/JJCxX
 
 #
 # Flags below are optional
@@ -43,7 +43,7 @@ footer-links:
   email: beauti4@protonmail.com
   facebook:
   flickr:
-  github: NodeBE4/waimei
+  github: NodeBE4/neist
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram:
   linkedin:
@@ -78,7 +78,7 @@ url: https://nodebe4.github.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/waimei"
+baseurl: "/neist"
 
 #
 # !! You don't need to change any of the configuration flags below !!
