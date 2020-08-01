@@ -4,3 +4,4 @@ _algolia_api_key
 .jekyll-metadata
 *.sh
 Gemfile.lock
+build
