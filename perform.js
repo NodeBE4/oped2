@@ -43,15 +43,21 @@ async function fetchFeedx(site, url) {
 
   return feed.items.map(item => {
     let content;
+    let link;
     if(item['content:encoded']){
       content = item['content:encoded']
     }else{
       content = item.content
     }
+    if (item['link']){
+      link = item.link
+    }else{
+      link = item.guid
+    }
     return {
       title: item.title,
       content: content,
-      link: item.link,
+      link: link,
       pubDate: Date.parse(item.pubDate),
       site: site
     }
