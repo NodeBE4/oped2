@@ -17,6 +17,7 @@ let feedxUrls = {
   'CCTV新闻联播': 'https://rsshub.app/xinwenlianbo/index',
   '维权网': 'https://wqw2010.blogspot.com/feeds/posts/default',
   '寒冬': 'https://zh.bitterwinter.org/feed/',
+  '经济学人en': 'https://feedx.net/rss/economist.xml',
 }
 
 async function fetchArticles(site) {
