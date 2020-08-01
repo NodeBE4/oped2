@@ -22,7 +22,7 @@ avatar:  # /images/apple-touch-icon.png #
 navigation:
   - name: 首页
     url: /
-  - name: 列表
+  - name: 時間
     url: /archive
   - name: 来源
     url: /tags
