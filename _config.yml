@@ -115,11 +115,7 @@ plugins:
   - jekyll-algolia
 
 # Exclude these files from your production _site
-exclude:
-  - vendor
-  - LICENSE
-  - README.md
-  - CNAME
+exclude: [ 'archived', 'vendor', 'LICENSE', 'README.md', 'CNAME' ]
 
 feed:
   posts_limit: 100
