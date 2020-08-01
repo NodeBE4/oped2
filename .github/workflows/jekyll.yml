@@ -29,7 +29,6 @@ jobs:
         bundle install
     - name: Build the site
       run: |
-        git branch -D gh-pages
         bundle exec jekyll build
         ls ${{ github.workspace }}/build
         git subtree split --prefix ${{ github.workspace }}/build -b gh-pages
