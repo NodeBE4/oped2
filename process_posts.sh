@@ -1,5 +1,5 @@
 #!/bin/bash
-tag="author: 端傳媒"
+tag="author: Nei.st"
 wordstoremove="...";
 FILES=./_posts/*
 for f in $FILES
@@ -10,7 +10,7 @@ do
     then
       # code if found
         echo "Processing $f file...";
-        git rm "$f";
+        git mv "$f" archived/nei.st/;
   fi
 
   # if [[ $f == *"新闻联播"* ]]; then
