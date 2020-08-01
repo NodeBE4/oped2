@@ -34,6 +34,5 @@ jobs:
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
         git add -f build
-        git subtree split --prefix build -b gh-pages
-        git push -f origin gh-pages:gh-pages
-        git branch -D gh-pages
+        git commit -m "Initial build subtree commit"
+        git subtree push --prefix ${{ github.workspace }}/build origin gh-pages
