@@ -2,6 +2,5 @@ node_modules/
 .jekyll-cache
 _algolia_api_key
 .jekyll-metadata
-*.sh
 Gemfile.lock
 build
