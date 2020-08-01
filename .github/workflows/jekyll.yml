@@ -8,13 +8,24 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
+    - name: Checkout this repo
+      uses: actions/checkout@v2
+      with:
+        lfs: true
+    - name: Install Jekyll and bundler
       run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future --incremental"
+        sudo apt-get install ruby-full build-essential zlib1g-dev
+        echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+        echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+        echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+        source ~/.bashrc
+        gem install jekyll bundler
+        bundle install
+    - name: Build the site
+      run: |
+        bundle exec jekyll build
+        git subtree split --prefix build -b gh-pages
+        git push -f origin gh-pages:gh-pages
+        git branch -D gh-pages
