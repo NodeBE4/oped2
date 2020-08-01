@@ -30,6 +30,7 @@ jobs:
     - name: Build the site
       run: |
         bundle exec jekyll build
+        ls ${{ github.workspace }}/build
         git subtree split --prefix ${{ github.workspace }}/build -b gh-pages
         git push -f origin gh-pages:gh-pages
         git branch -D gh-pages
