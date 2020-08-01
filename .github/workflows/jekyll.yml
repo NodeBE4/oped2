@@ -3,36 +3,25 @@ name: Jekyll site CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout this repo
-      uses: actions/checkout@v2
-      with:
-        lfs: true
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.6
-    - name: Install Jekyll and bundler
+    - uses: actions/checkout@v2
+    - name: Build the site in the jekyll/builder container
+      env:
+        ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       run: |
-        sudo apt-get install -yqq zlib1g-dev
-        echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
-        echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
-        echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-        source ~/.bashrc
-        gem install jekyll bundler
-        bundle install
-    - name: Build the site
-      run: |
-        bundle exec jekyll build
-        ls ${{ github.workspace }}/build
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/build:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future --incremental"
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
+        git push origin --delete gh-pages
         git add -f build
         git commit -m "Initial build subtree commit"
-        git subtree push --prefix ${{ github.workspace }}/build origin gh-pages
+        git subtree split --prefix build -b gh-pages
+        git push -f origin gh-pages:gh-pages
