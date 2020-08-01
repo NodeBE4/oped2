@@ -18,6 +18,7 @@ let feedxUrls = {
   '维权网': 'https://wqw2010.blogspot.com/feeds/posts/default',
   '寒冬': 'https://zh.bitterwinter.org/feed/',
   '经济学人en': 'https://feedx.net/rss/economist.xml',
+  'Solidot': 'https://rsshub.app/solidot/www',
 }
 
 async function fetchArticles(site) {
