@@ -6,7 +6,7 @@
 name: 觀點2
 
 # Short bio or description (displayed in the header)
-description: 存档 https://git.io/JJVwL
+description: 觀點高頻版 https://git.io/JJVwL
 
 #
 # Flags below are optional
@@ -24,7 +24,7 @@ navigation:
     url: /
   - name: 來源
     url: /categories
-  - name: 觀點
+  - name: 觀點1
     url: https://nodebe4.github.io/opinion/
   - name: 論壇
     url: https://be4.herokuapp.com
@@ -43,7 +43,7 @@ footer-links:
   email: beauti4@protonmail.com
   facebook:
   flickr:
-  github: NodeBE4/neist
+  github: NodeBE4/oped2
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram:
   linkedin:
@@ -78,7 +78,7 @@ url: https://nodebe4.github.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/neist"
+baseurl: "/oped2"
 
 #
 # !! You don't need to change any of the configuration flags below !!
