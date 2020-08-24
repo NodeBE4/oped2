@@ -20,12 +20,12 @@ avatar:  # /images/apple-touch-icon.png #
 # and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
 # it from the list(Delete '- name: ' and 'url: ', too!)
 navigation:
-  - name: 首頁
-    url: /
-  - name: 來源
-    url: /categories
   - name: 觀點1
     url: https://nodebe4.github.io/opinion/
+  - name: 來源
+    url: /categories
+  - name: 外媒
+    url: https://nodebe4.github.io/waimei/
   - name: 論壇
     url: https://be4.herokuapp.com
   - name: 關於
