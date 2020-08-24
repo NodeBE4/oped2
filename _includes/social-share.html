@@ -1,12 +1,17 @@
 <!-- Left & centered positioning -->
+{% if page.from %}
+  {% assign shareurl = page.from %}
+{% else %}
+  {% assign shareurl = {{site.url}}{{page.url}} %}
+{% endif %}
 <div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
-    <a href="https://chinatimeline.github.io/form/?u={{ page.from | url_encode }}&t={{ page.title | url_encode }}&d={{ page.date | slice: 0, 10 }}&e={{ page.content | strip_html }}" target="_blank" class="ssk ssk-github"  title="Github 时代透镜"></a>
-    <a href="https://www.facebook.com/sharer.php?u={{page.from}}" class="ssk ssk-facebook"></a>
-    <a href="https://twitter.com/intent/tweet?url={{page.from}}&text={{ page.title }}&hashtags={{ page.author }}" class="ssk ssk-twitter"></a>
-    <a href="https://reddit.com/submit?url={{page.from}}&title={{ page.title }}" class="ssk ssk-reddit"></a>
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{page.from}}&title={{page.title}}" class="ssk ssk-linkedin"></a>
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/{{ page.from | url_encode }}" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u={{ shareurl }}" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url={{ shareurl }}&text={{ page.title }}&hashtags={{ site.name }}" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url={{ shareurl }}&title={{ page.title }}" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ shareurl }}&title={{page.title}}" class="ssk ssk-linkedin"></a>
     <a href="mailto:{email_address}?subject={{ page.title }}&body={{ page.excerpt | strip_html }}" class="ssk ssk-email"></a>
-    <a href="http://pinterest.com/pin/create/link/?url={{page.from}}" class="ssk ssk-pinterest"></a>
-    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl={{page.from}}&title={{ page.title }}&caption={{ page.excerpt | strip_html }}&tags={{ page.author }}" class="ssk ssk-tumblr"></a>
-    <a href="https://buffer.com/add?text={{ page.title }}&url={{page.from}}" class="ssk ssk-buffer"></a>
+    <a href="http://pinterest.com/pin/create/link/?url={{ shareurl }}" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl={{ shareurl }}&title={{ page.title }}&caption={{ page.excerpt | strip_html }}&tags={{ site.name }}" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text={{ page.title }}&url={{ shareurl }}" class="ssk ssk-buffer"></a>
 </div>

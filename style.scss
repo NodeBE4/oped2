@@ -30,6 +30,22 @@ body {
   max-width: 740px;
   padding: 0 10px;
   width: 100%;
+
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -320,7 +336,7 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .masthead {
@@ -382,7 +398,7 @@ img {
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin-top: 0px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
 
@@ -483,18 +499,6 @@ nav {
     }
   }
 
-  > .center {
-    float: center;
-    width: 70%;
-    text-align: center ;
-    a {
-      color: $pagination-color;
-      &:hover, &:focus {
-        color: $pagination-over-color;
-      }
-    }
-  }
-
   > .next {
     float: right;
     text-align: right;
@@ -512,6 +516,37 @@ nav {
 .archive {
   a {
     color: $base-color;
+  }
+  time {
+    color: $base-lighten-color;
+    font-size: $small-font-size;
+    font-weight: 300;
+    margin-left: 3px;
+  }
+  /* unvisited link */
+  // a:link {
+  //   color: red;
+  // }
+
+  /* visited link */
+  a:visited {
+    color: gray;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+}
+
+.searched {
+  a {
+    color: $oc-blue-7;
   }
   time {
     color: $base-lighten-color;
@@ -605,7 +640,7 @@ footer {
   padding: 20px 0;
   text-align: center;
 
-  p {
+  p, div {
     font-size: $small-font-size;
     text-align: center;
   }
@@ -640,7 +675,6 @@ footer {
     }
   }
 }
-
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

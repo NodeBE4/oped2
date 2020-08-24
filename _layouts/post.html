@@ -7,8 +7,8 @@ layout: default
 {% assign post_tag_p2 = false %}
 {% assign post_tag_p1 = false %}
 
-{% assign pagetag = page.tags[0] %}
-{% assign tag_posts = site.tags[pagetag] %}
+{% assign tag = page.categories.last %}
+{% assign tag_posts = site.categories[tag] %}
 {% for post in tag_posts %}
   {% if post.url == page.url %}
     {% break %}
@@ -16,7 +16,7 @@ layout: default
   {% assign post_tag_m2 = post_tag_m1 %}
   {% assign post_tag_m1 = post %}
 {% endfor %}
-{% assign tag_posts = site.tags[pagetag] | reverse %}
+{% assign tag_posts = site.categories[tag] | reverse %}
 {% for post in tag_posts %}
   {% if post.url == page.url %}
     {% break %}
@@ -27,31 +27,12 @@ layout: default
 
 
 
-{% include social-share.html %}
-
-<div class="pagination">
-  {% if page.previous.url %}
-    <span class="prev" >
-        <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
-          前一篇
-        </a>
-    </span>
-  {% endif %}
-  {% if page.next.url %}
-    <span class="next" >
-        <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
-          后一篇
-        </a>
-    </span>
-  {% endif %}
-</div>
-
 <article class="post">
   <h1>{{ page.title }}</h1>
   <!-- Look the author details up from the site config. -->
   {% assign author = site.data.authors[page.author] %}
 
-  <div style="width:100%;">
+  <div>
     <span class="date">
       {{ page.date | date: "%Y-%m-%d" }}
     </span>
@@ -60,56 +41,54 @@ layout: default
     {% if author %}
         <span>
             <!-- Personal Info. -->
-            作者: <a href="{{ author.web }}">{{ author.name }}</a>
+            <a href="{{ author.web }}" style="font-size:14px;">作者: {{ author.name }}</a>
         </span>
+    {% else %}
+      {% if page.categories.last != page.author %}
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: {{ page.author }}</a>
+        </span>
+      {% endif %}
     {% endif %}
 
+
     <ul class="tag">
-      {% for tag in page.tags %}
       <li>
-        <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-          {{ tag }}
+        <a href="{{ site.url }}{{ site.baseurl }}/categories/#{{ page.categories.last }}">
+          {{ page.categories.last }}
         </a>
       </li>
-      {% endfor %}
     </ul>
 
     {% if page.from %}
         <span>
             <!-- Personal Info. -->
-            <a href="{{ page.from }}"  style="font-size: $small-font-size;">原文</a>
-        </span>
-    {% endif %}
-
-    {% if page.hackmd %}
-        <span>
-            <!-- Personal Info. -->
-            MD: <a href="https://hackmd.io/{{ page.hackmd }}?view"  style="font-size: $small-font-size;">逐段点评</a>
+            <a href="{{ page.from }}" style="font-size:14px;">原文</a>
         </span>
     {% endif %}
 
     <span style="float: right;" title="{{ page.tags[0] }}的其它文章">
-      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#{{ page.tags[0] }} 的其它文章</a>
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#{{ page.categories.last }} 的其它文章</a>
     </span>
 
-
-    <span style="float: right;" title="提交到时代透镜">
-      <a style="color: #32407B; font-size: $small-font-size;" rel="nofollow" href="https://chinatimeline.github.io/form/?u={{ page.from | url_encode }}&t={{ page.title | url_encode }}&d={{ page.date | slice: 0, 10 }}&e={{ page.content | strip_html | truncate: 400 }}" target="_blank" class="ssk ssk-icon ssk-github"></a>
-    </span>
-
-    <span style="float: right;" title="提交到BE4新闻站">
-      <a style="color: #5CBA66; font-size: $small-font-size;" rel="nofollow" href="https://be4news.pythonanywhere.com/submit?u={{ page.from | url_encode }}&t={{ page.title | url_encode }}" target="_blank">🐍</a>
-    </span>
   </div>
 
-  <div class="entry" id="div-content-rss">
+  <div class="entry">
+    {% capture video_id %}{{ page.from | replace: "https://www.youtube.com/watch?v=",'' |  replace: "https://youtu.be/", '' }}{% endcapture %}
+    {% if video_id contains "http://" or video_id contains "https://" %}
+    {% else %}
+      <iframe id="player-{{ video_id }}" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allowfullscreen></iframe>
+    {% endif %}
     {{ content }}
   </div>
 
   {% include copyright.html %}
 
   <div id="sametag">
-    <h4>#{{ page.tags[0] }} 的其它文章</h4>
+    <h4 style="display: inline-block;">#{{ page.categories.last }} 的其它文章</h4>
+    <span>--<a href="{{ site.url }}{{ site.baseurl }}{{ site.categories[tag].first.url }}">最新</a>-</span>
+    <span>-<a href="{{ site.url }}{{ site.baseurl }}{{ site.categories[tag].last.url }}">最早</a>--</span>
     {% if post_tag_m2.url %}
       <li>
         <time>{{ post_tag_m2.date | date: "%Y-%m-%d" }}</time>
@@ -157,7 +136,7 @@ layout: default
     {% if page.next.url %}
       <span class="next" >
           <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
-            后一篇：{{ page.next.title }}
+            後一篇：{{ page.next.title }}
           </a>
       </span>
     {% endif %}
@@ -167,19 +146,11 @@ layout: default
     document.body.onkeyup = function(e){
       if (e.keyCode == '37') { window.location = '{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}'; } // left arrow key
       if (e.keyCode == '39') { window.location = '{{ site.url }}{{ site.baseurl }}{{ page.next.url }}'; } // right arrow key
+      if (e.keyCode == '45') { window.location = '{{ site.url }}{{ site.baseurl }}{{ post_tag_m1.url }}'; } // insert key
+      if (e.keyCode == '46') { window.location = '{{ site.url }}{{ site.baseurl }}{{ post_tag_p1.url }}'; } // delete key
     };
-    /* add first image to post */
-    window.addEventListener('load', (event) => {
-      var entry = document.getElementById("div-content-rss");
-      var imglink = entry.getElementsByTagName("img")[0];
-      if (imglink){
-        var timeline_shares = document.getElementsByClassName('ssk-github');
-        for (i=0; i<timeline_shares.length; i++){
-          timeline_shares[i].href += `&i=` + encodeURI(imglink.src);
-        }
-      }
-    });
     </script>
+    {% include fab.html %}
 
   </div>
 
