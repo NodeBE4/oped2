@@ -28,9 +28,9 @@ navigation:
     url: https://nodebe4.github.io/waimei/
   - name: 英雄
     url: https://nodebe4.github.io/hero/
-  - name: 論壇
-    url: https://be4.herokuapp.com
-  - name: 關於
+  - name: 社會
+    url: https://nodebe4.github.io/society/
+  - name: <i class="fa fa-info-circle"></i>
     url: /about
 
 # Pagination

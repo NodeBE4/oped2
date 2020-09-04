@@ -14,7 +14,7 @@ comments: true
 
 分享短链接 https://git.io/JJCxS
 
-访问地址： <https://nodebe4.github.io/opinion2/>
+访问地址： <https://nodebe4.github.io/oped2/>
 
 每篇文章搜集被跟踪的评论者每一周的言论，每小时自动更新一次。例如：[u/Spinkcat在2020-06-01~2020-06-07的言论](https://nodebe4.github.io/opinion/Spinkcat-2020-06-07)
 
@@ -26,7 +26,7 @@ comments: true
 
 ### 支持离线阅读
 
--   下载仓库，`git clone https://github.com/NodeBE4/opinion2.git`
+-   下载仓库，`git clone https://github.com/NodeBE4/oped2.git`
 -   安装jekyll, [官方安装教程](https://jekyllrb.com/docs/installation/)
 -   运行`jekyll serve`或 `bundle exec jekyll serve`
 -   打开 http://127.0.0.1:4000/opinion
