@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "如何将字幕添加到您的 YouTube 视频中 - iYouPort"
+title: "如何将字幕添加到您的 YouTube 视频中 - iYouPort"
 date: 2020-09-10T16:02:38+00:00
 author: iYouPort
 from: https://www.iyouport.org/%e5%a6%82%e4%bd%95%e5%b0%86%e5%ad%97%e5%b9%95%e6%b7%bb%e5%8a%a0%e5%88%b0%e6%82%a8%e7%9a%84-youtube-%e8%a7%86%e9%a2%91%e4%b8%ad/
