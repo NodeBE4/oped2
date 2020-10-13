@@ -1,5 +1,9 @@
 [
     {
+        "site": "燕京书评",
+        "url": "https://rsshub-git-feature-allnow.diy.vercel.app/allnow/column/199"
+    },
+    {
         "site": "中参馆",
         "url": "https://feeds.feedburner.com/chinafile/All?format=xml"
     }
