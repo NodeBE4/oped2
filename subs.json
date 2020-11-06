@@ -33,6 +33,6 @@
     },
     {
         "site": "中参馆",
-        "url": "https://feeds.feedburner.com/chinafile/All?format=xml"
+        "url": "https://rsshub.app/chinafile/all"
     }
 ]
