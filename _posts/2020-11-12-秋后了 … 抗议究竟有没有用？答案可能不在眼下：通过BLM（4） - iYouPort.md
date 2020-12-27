@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "秋后了 … 抗议究竟有没有用？答案可能不在眼下：通过BLM（4） - iYouPort"
+title: "秋后了 … 抗议究竟有没有用？答案可能不在眼下：通过BLM（4） - iYouPort"
 date: 2020-11-12T16:01:09+00:00
 author: iYouPort
 from: https://www.iyouport.org/%e7%a7%8b%e5%90%8e%e4%ba%86-%e6%8a%97%e8%ae%ae%e7%a9%b6%e7%ab%9f%e6%9c%89%e6%b2%a1%e6%9c%89%e7%94%a8%ef%bc%9f%e7%ad%94%e6%a1%88%e5%8f%af%e8%83%bd%e4%b8%8d%e5%9c%a8%e7%9c%bc%e4%b8%8b/

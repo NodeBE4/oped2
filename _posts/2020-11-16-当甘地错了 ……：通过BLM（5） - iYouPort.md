@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "当甘地错了 ……：通过BLM（5） - iYouPort"
+title: "当甘地错了 ……：通过BLM（5） - iYouPort"
 date: 2020-11-16T16:02:11+00:00
 author: iYouPort
 from: https://www.iyouport.org/%e5%bd%93%e7%94%98%e5%9c%b0%e9%94%99%e4%ba%86-%ef%bc%9a%e9%80%9a%e8%bf%87blm%ef%bc%885%ef%bc%89/
