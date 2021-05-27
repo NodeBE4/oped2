@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "如何使用Python免费创建Discord Bot –完整教程 - iYouPort"
+title: "如何使用Python免费创建Discord Bot –完整教程 - iYouPort"
 date: 2021-04-05T15:03:58+00:00
 author: iYouPort
 from: https://www.iyouport.org/%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8python%e5%85%8d%e8%b4%b9%e5%88%9b%e5%bb%badiscord-bot-%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b/
