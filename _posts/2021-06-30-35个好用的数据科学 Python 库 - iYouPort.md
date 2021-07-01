@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "35个好用的数据科学 Python 库 - iYouPort"
+title: "35个好用的数据科学 Python 库 - iYouPort"
 date: 2021-06-30T16:03:15+00:00
 author: iYouPort
 from: https://www.iyouport.org/35%e4%b8%aa%e5%a5%bd%e7%94%a8%e7%9a%84%e6%95%b0%e6%8d%ae%e7%a7%91%e5%ad%a6-python-%e5%ba%93/
