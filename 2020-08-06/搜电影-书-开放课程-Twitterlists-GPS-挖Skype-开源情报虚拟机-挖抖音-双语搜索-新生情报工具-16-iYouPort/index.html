@@ -1,0 +1,11957 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） - iYouPort – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+  
+     搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  给行动者的护身符和武器             2020年8月7日 
+          2020年3月19日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       继续不定期更新系列
+      
+      
+    
+           
+  
+      
+
+    欢迎回来！
+    如果您忘记了本系列内容的由来、或者还没有读过以前的内容，可以在下面回顾：
+    
+      《  新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音  》
+      《  新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家  》
+      《  新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪  》
+      《  新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 — 针对特定目标人的侦查利器  》
+      《  新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来  》
+      《  新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪  》
+      《  新生情报工具（7）：全球搜人、免费手机短信、放大照片不损质量、快速查找相关视频  》
+      《  去模糊化、挖人际关系、自动社交工程攻击、监视信息战：新生情报工具（8）  》
+      《  实时钓鱼、快速提取、游行调查、跨站追踪、便携式瑞士军刀：新生情报工具（9）  》
+      《  根据位置搜索telegram群组、在互联网上跟踪人、可视化影响力关系网络、及其他：新生情报工具（10）  》
+      《  实时新闻地图、Twitter 情报分析、电话号码追踪、电子邮件侦查及其他：新生情报工具（11）  》
+      《  种子、暗网、区块链、抖音、telegram、数据集…… ：新生情报工具（12）  》
+      《  社交媒体情报、追踪电邮电话号码、挖抖音、搜网络摄像头……：新生情报工具（13）  》
+      《  挖抖音、泄漏密码、漏洞、人脸识别工具、假身份生成器、事实核查 ……：新生情报工具（14）  》
+      《  挖 Telegram 群组、搜脸、搜人、蜂窝塔、网络摄像头、物联网、黑客新闻 ……：新生情报工具（15）  》
+    
+    依旧希望今天的内容能对您有用。
+     
+    1、TikTok（抖音）数据挖掘
+    
+    AwareOnline 分享了一个提示，内容涉及如何查看 TikTok 用户的 JSON 数据，包括关注者和被关注数量、清晰版的头像（ 720×720）、以及其他信息。只需使用以下 URL 即可检索 JSON 中的数据：
+    https://www.tiktok.com/node/share/user/@UserName    
+    将 {username} 替换为目标用户名。就是这么简单。
+           
+  
+      
+
+    如果想要 1080×1080 的图像呢？
+    
+      转到 TikTok 个人简历  tiktok.com  @{username}
+      打开开发者工具 (F12)
+      选择 “Network tab”
+      刷新页面（F5）
+      选择“ XHR”标签
+      双击 “api/user/detail/”
+      打开 “AvatarLarger” 链接
+      完成
+    
+     
+    2、ClustrMaps
+    
+    ClustrMaps 是一个网站，收集基于美国的数据集，并在线提供给您搜索。有一些数据集可免费查找地址、人员和公司。
+    测试了一下，多数情况下有效，但并非所有目标人都能找到。因此，它可能不像 Pipl 那样的站点能做到的广泛程度，但是对于以美国为基地的侦查目标来说，很高兴能找到完全免费的东西:)
+           
+  
+      
+
+    Link:  https://clustrmaps.com 
+     
+    3、评估您的虚拟环境
+    
+    InviZzzible 是一种以简单可靠的方式评估您的虚拟环境的工具。它包含最新的检测和规避技术以及针对它们的修复程序。而且您可以自己添加和扩展现有技术。
+    支持：
+    
+      Cuckoo Sandbox
+      Joe Sandbox
+      VMWare virtualization products
+      VirtualBox
+      Hyper-V
+      Parallels
+      QEMU
+      BOCHS
+      Xen
+      VirtualPC
+      Sandboxie
+      Wine
+    
+    link：  https://github.com/CheckPointSW/InviZzzible 
+     
+    4、开源情报虚拟机
+    
+    DORA是基于 Michael Bazzell 最新版书推出的虚拟机。该虚拟机是使用  Packer  构建的，生成的构建文件可以导入  Virtualbox  。操作系统是XFCE作为桌面环境的64位Debian。
+    该项目旨在提供一种自动执行VM创建的方法以及该书第5章中的一些软件安装步骤。用户仍然需要完成 Firefox 的配置并安装所需的附件。
+           
+  
+      
+
+    上图中这本书在这里下载：  https://t.me/iyouport/6614 
+    link：  https://github.com/axlshear/dora-osint-vm 
+     
+    5、使用两种语言搜索 Google 的简单方法
+    
+    单一语种往往只能抓取到片面的内容。也是为什么我们会建议您使用不同语种交替进行搜索。
+    分头搜索也许很麻烦，但现在有一个方便的方法能够让您一次性以两种语言搜索谷歌，可以试试看。在这里：  https://2lingual.com/ 
+     
+    6、补充搜索工具系列
+    
+    ▶️ 
+    搜资源 —— 电影、书、艺术、餐饮、信仰、思想、文化…… 等等
+    ：
+    everfest.com
+    wikido.com
+    evensi.com
+    allevents.in
+    Googleforevents.com
+    gstlst.com
+    festivalloon.com
+    skiddle.com
+    hanghawk.com
+    ▶️ 
+    使用关键字来搜索视频
+    ：kyro.ms
+    ▶️ 
+    计算机视觉数据集搜索引擎
+    ：visualdata.io
+    比如下面这样，输入中国的结果：
+           
+  
+      
+
+    ▶️ 
+    通过动画可视化数据的工具
+    （很好玩，试试看？）：visualgo.net
+    ▶️ 
+    大规模开放在线课程搜索
+    ：
+    classcentral.com
+    classpert.com
+    my-mooc.com/en/
+    opencourser.com
+    coursera.org
+    coursebuffet.com
+    coorsy.com
+    elearning.club
+    udemy.com
+    mooc-list.com
+    
+      不要错过：《  650个名校免费在线课程，你马上就可以开始  》
+    
+    ▶️ 
+    Twitter List 搜索引擎
+    （当然这个搜不到那种被设置为私密的 lists）：
+    jump.sh
+    bit.ly/2rutgq2
+    ▶️ 
+    视频、电视电影搜索引擎
+    ：embedy.cc
+    ▶️ 
+    世界上第一个离线搜索引擎
+    ，您可以使用您最喜欢的语言进行搜索：github.com/OpenGenus/quark
+    ▶️ 
+    挖 Skype 的工具
+    ：
+    speed-friends.com/site/index
+    findonlinecontacts.com/skype-usernames
+    dizkover.com/map/skype
+    dizkover.com/tags/funny
+    dizkover.com/skype
+    findusernames.com/list/Skype
+    avatar.skype.com/v1/avatars/ Image URL
+    attend-noam.broadcast.skype.com
+    site:broadcast.skype.com CompanyName
+    ▶️ 
+    Whois IP DNS
+    ：
+    dnsviz.net
+    centralops.net/co/
+    intodns.com
+    dnsdumpster.com
+    robtex.com/dns-lookup/
+    whois.net
+    whois.domaintools.com
+    dnslytics.com
+    pulsedive.com
+    ▶️ 
+    IP查找工具
+    ：
+    find-ip.net
+    ipgeolocation.io
+    iplocation.com
+    iplocation.net
+    iplocationfinder.net
+    iplocation.io
+    iptrackerlocation.com
+    ipgp.et
+    iptrackeronline.com
+    ip-address.org
+    ▶️ 
+    GPS搜索
+    ：
+    satnavhere.com
+    gps.gov
+    latlong.net
+    gps-coordinates.net
+    gps-coordinates.org
+    geoplaner.com
+    findlatitudeandlongitude.com
+    map-gps-coordinates.com
+    itilog.com
+    ▶️ 
+    搜在线报纸
+    ：
+    newspapersglobal.com
+    newspaperabstracts.com
+    newspapers101.com
+    newspaperlists.com
+    usanewspapers.com
+    newspapers-usa.com
+    world-newspapers.com
+    findnewspapers.com
+    us-newspapers-online.com
+    newslink.org
+    ▶️ 
+    telegram 情报
+   
+     WhatsApp 群组被谷歌挖出  震惊了很多人，其实 telegram 也可以使用 dorks，这样:
+    site:t.me [username]
+    site:telegram.im [channel]
+    site:tglist.co [search terms] ‘机器人社区频道’
+    site:telegram.me messenger
+    site:tgram.io [group]
+    ▶️ 
+    telegram 搜索工具
+    ：
+    搜一切 qilyzem.com
+    搜频道 telegramchannels.me
+    搜群组 telegram-group.com/en/
+    深度搜索 search.buzz.im
+    搜帖子 tgstat.ru/en/search/
+    ▶️ 
+    API 搜索
+    apisio.scalingo.io
+    ▶️ 
+    API Directories
+   
+    apis.guru/browse-apis/
+    api-rest.com/apis/discover
+    any-api.com
+    apilist.fun
+    api-search.io
+    apiforthat.com
+    ▶️ 
+    搜监视摄像头
+   
+    听说很多读者对窥探监视摄像头更感兴趣。是的，Shodan 可以做到，但要想熟练使用它，可能需要一些基础。事实上在线查找网络摄像头的工具和技术方法非常多，包括 Evans 曾经推荐过的最  简单的 dorks  都可以做到。
+    
+      不要错过《  搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南  》
+    
+    以下是一个列表，帮您总结一下 **网络摄像头搜索工具**：也许仍不全面，但都可以使用。
+    如今是遍地监视摄像头的时代，相关调查工具的开发也处于热潮中。
+           
+  
+      
+
+    上图中这本书在这里下载：  https://t.me/iyouport/7042 
+    列表：
+    hereinreality.com/webcams/
+    webcamtaxi.com/en/
+    webcam.nl
+    worldcams.tv
+    world-webcams.nsspot.net
+    kroooz-cams.com
+    webcamsmania.com
+    camhacker.com
+    opentopia.com
+    camvista.com
+    webcamhopper.com
+    camsecure.co.uk
+    webcamsabroad.com
+    public-camera.com/en/
+    mylivestreams.com
+    pictimo.com
+    livefromiceland.is
+    the-webcam-network.com
+    iplivecams.com
+    ip-24.net
+    leonardsworlds.com
+    whatsupcams.com/en/
+    wxyzwebcams.com
+    webcamlocator.com
+    123webcam.com
+    goandroam.com
+    hdontap.com
+    city-webcams.com
+    camscape.com
+    gobefore.me
+    explorewebcams.com
+    hereinreality.com/webcams/
+    myworldwebcams.com
+    liveincam.com
+    geocam.ru/en/
+    onlinewebcameras.com
+    webcambiglook.com
+    bit.ly/37M3Qou
+    cse.google.com/cse?cx=partner-pub-2526982841387487:1817040253&amp;ie=UTF-8
+    cse.google.com/cse?cx=004985303091853907970:enq82n069w8
+    👉 “新生情报工具” 系列收纳在  &lt;列表-5 “直接行动” 中的 “开源情报”&gt;  部分，于是，您知道它的目的。
+    ▶️ 
+    卫星图像搜索工具
+    ：
+    zoom.earth
+    search.landinfo.com
+    terrapattern.com
+    earthexplorer.usgs.gov
+    search.remotepixel.ca
+    worldview.earthdata.nasa.gov
+    apps.sentinel-hub.com/eo-browser/
+    discover.digitalglobe.com
+    imagery.geocento.com
+    ▶️ 
+    Wi-Fi 搜索引擎
+    ：
+    instabridge.com/free-wifi/
+    wiman.me
+    freewifinearbyme.com
+    wififreespot.com
+    wigle.net
+    wifimap.io
+    globalconnectwifi.com/hotspot-finder
+    hotspothaven.com
+    ▶️ 
+    GPS搜索工具
+    ：
+    whatsmygps.com
+    mapcoordinates.net/en
+    geoplaner.com
+    latitude.to
+    gps-latitude-longitude.com
+    getlatlong.net
+    itilog.com
+    gps-coordinates.net
+    twcc.fr/en/
+    ▶️ 
+    IOT 搜索引擎查找可以用来攻击的设备
+    — — 黑客侦查第一步：
+    shodan.io
+    thingful.net
+    censys.io
+    onyphe.io
+    zoomeye.org
+    不要错过 “黑客主义行动力” 系列：
+    
+      《  Mr.Robot 如何摧毁邪恶公司？- 黑客主义行动力（1）  》
+      《  Elliot 如何骇客邪恶公司并保证无法被反向追踪：黑客主义行动力（2）  》
+      《  如何全面间谍任何人的智能手机私密活动 — 黑客主义行动力（3）  》
+      《  如何在音频文件中隐藏秘密信息：黑客主义行动力（4）  》
+      《  如何破解蓝牙打开监狱大门：黑客主义行动力（5）  》
+      《  ”融化” 所有债务 ……如何构建黑客树莓派 — 黑客主义行动力（6）  》
+      《  充分了解你的攻击目标：进行电子邮件侦查的简单方法 — 黑客主义行动力（7）  》
+      《  如何获取任何人的Wi-Fi密码而无需破解：黑客主义行动力（8）  》
+      持续更新中
+    
+    ▶️ 
+    搜索数据集的工具
+    ：
+    gapminder.org
+    search.openedition.org
+    data.worldbank.org
+    webdatacommons.org
+    openpaymentsdata.cms.gov
+    zenodo.org
+    public.enigma.com
+    visualdata.io
+    datasetlist.com
+    gdeltproject.org/data.html
+    datausa.io
+    datahub.io/search
+    registry.opendata.aws
+    openicpsr.org/openicpsr/
+    opendatani.gov.uk
+    opendatanetwork.com
+    data.oecd.org
+    msropendata.com
+    datasearch.gesis.org
+    figshare.com
+    dataone.org
+    data.europa.eu/euodp/en/home
+    search.datacite.org
+    opendata.cern.ch
+    dataportals.org
+    academictorrents.com
+    datasetsearch.research.google.com
+    data.gov
+    usgs.koordinates.com
+    geoseer.net
+    好啦，今天就是这样！玩得开心～ 下次见。⚪️
+    
+    —— 持续更新中 ——
+   
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       Investigations 
+       OSINT 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2020年8月7日 
+       2020年3月19日 
+    
+  
+
+" />
+    <meta property="og:description" content="
+  
+     搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  给行动者的护身符和武器             2020年8月7日 
+          2020年3月19日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       继续不定期更新系列
+      
+      
+    
+           
+  
+      
+
+    欢迎回来！
+    如果您忘记了本系列内容的由来、或者还没有读过以前的内容，可以在下面回顾：
+    
+      《  新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音  》
+      《  新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家  》
+      《  新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪  》
+      《  新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 — 针对特定目标人的侦查利器  》
+      《  新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来  》
+      《  新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪  》
+      《  新生情报工具（7）：全球搜人、免费手机短信、放大照片不损质量、快速查找相关视频  》
+      《  去模糊化、挖人际关系、自动社交工程攻击、监视信息战：新生情报工具（8）  》
+      《  实时钓鱼、快速提取、游行调查、跨站追踪、便携式瑞士军刀：新生情报工具（9）  》
+      《  根据位置搜索telegram群组、在互联网上跟踪人、可视化影响力关系网络、及其他：新生情报工具（10）  》
+      《  实时新闻地图、Twitter 情报分析、电话号码追踪、电子邮件侦查及其他：新生情报工具（11）  》
+      《  种子、暗网、区块链、抖音、telegram、数据集…… ：新生情报工具（12）  》
+      《  社交媒体情报、追踪电邮电话号码、挖抖音、搜网络摄像头……：新生情报工具（13）  》
+      《  挖抖音、泄漏密码、漏洞、人脸识别工具、假身份生成器、事实核查 ……：新生情报工具（14）  》
+      《  挖 Telegram 群组、搜脸、搜人、蜂窝塔、网络摄像头、物联网、黑客新闻 ……：新生情报工具（15）  》
+    
+    依旧希望今天的内容能对您有用。
+     
+    1、TikTok（抖音）数据挖掘
+    
+    AwareOnline 分享了一个提示，内容涉及如何查看 TikTok 用户的 JSON 数据，包括关注者和被关注数量、清晰版的头像（ 720×720）、以及其他信息。只需使用以下 URL 即可检索 JSON 中的数据：
+    https://www.tiktok.com/node/share/user/@UserName    
+    将 {username} 替换为目标用户名。就是这么简单。
+           
+  
+      
+
+    如果想要 1080×1080 的图像呢？
+    
+      转到 TikTok 个人简历  tiktok.com  @{username}
+      打开开发者工具 (F12)
+      选择 “Network tab”
+      刷新页面（F5）
+      选择“ XHR”标签
+      双击 “api/user/detail/”
+      打开 “AvatarLarger” 链接
+      完成
+    
+     
+    2、ClustrMaps
+    
+    ClustrMaps 是一个网站，收集基于美国的数据集，并在线提供给您搜索。有一些数据集可免费查找地址、人员和公司。
+    测试了一下，多数情况下有效，但并非所有目标人都能找到。因此，它可能不像 Pipl 那样的站点能做到的广泛程度，但是对于以美国为基地的侦查目标来说，很高兴能找到完全免费的东西:)
+           
+  
+      
+
+    Link:  https://clustrmaps.com 
+     
+    3、评估您的虚拟环境
+    
+    InviZzzible 是一种以简单可靠的方式评估您的虚拟环境的工具。它包含最新的检测和规避技术以及针对它们的修复程序。而且您可以自己添加和扩展现有技术。
+    支持：
+    
+      Cuckoo Sandbox
+      Joe Sandbox
+      VMWare virtualization products
+      VirtualBox
+      Hyper-V
+      Parallels
+      QEMU
+      BOCHS
+      Xen
+      VirtualPC
+      Sandboxie
+      Wine
+    
+    link：  https://github.com/CheckPointSW/InviZzzible 
+     
+    4、开源情报虚拟机
+    
+    DORA是基于 Michael Bazzell 最新版书推出的虚拟机。该虚拟机是使用  Packer  构建的，生成的构建文件可以导入  Virtualbox  。操作系统是XFCE作为桌面环境的64位Debian。
+    该项目旨在提供一种自动执行VM创建的方法以及该书第5章中的一些软件安装步骤。用户仍然需要完成 Firefox 的配置并安装所需的附件。
+           
+  
+      
+
+    上图中这本书在这里下载：  https://t.me/iyouport/6614 
+    link：  https://github.com/axlshear/dora-osint-vm 
+     
+    5、使用两种语言搜索 Google 的简单方法
+    
+    单一语种往往只能抓取到片面的内容。也是为什么我们会建议您使用不同语种交替进行搜索。
+    分头搜索也许很麻烦，但现在有一个方便的方法能够让您一次性以两种语言搜索谷歌，可以试试看。在这里：  https://2lingual.com/ 
+     
+    6、补充搜索工具系列
+    
+    ▶️ 
+    搜资源 —— 电影、书、艺术、餐饮、信仰、思想、文化…… 等等
+    ：
+    everfest.com
+    wikido.com
+    evensi.com
+    allevents.in
+    Googleforevents.com
+    gstlst.com
+    festivalloon.com
+    skiddle.com
+    hanghawk.com
+    ▶️ 
+    使用关键字来搜索视频
+    ：kyro.ms
+    ▶️ 
+    计算机视觉数据集搜索引擎
+    ：visualdata.io
+    比如下面这样，输入中国的结果：
+           
+  
+      
+
+    ▶️ 
+    通过动画可视化数据的工具
+    （很好玩，试试看？）：visualgo.net
+    ▶️ 
+    大规模开放在线课程搜索
+    ：
+    classcentral.com
+    classpert.com
+    my-mooc.com/en/
+    opencourser.com
+    coursera.org
+    coursebuffet.com
+    coorsy.com
+    elearning.club
+    udemy.com
+    mooc-list.com
+    
+      不要错过：《  650个名校免费在线课程，你马上就可以开始  》
+    
+    ▶️ 
+    Twitter List 搜索引擎
+    （当然这个搜不到那种被设置为私密的 lists）：
+    jump.sh
+    bit.ly/2rutgq2
+    ▶️ 
+    视频、电视电影搜索引擎
+    ：embedy.cc
+    ▶️ 
+    世界上第一个离线搜索引擎
+    ，您可以使用您最喜欢的语言进行搜索：github.com/OpenGenus/quark
+    ▶️ 
+    挖 Skype 的工具
+    ：
+    speed-friends.com/site/index
+    findonlinecontacts.com/skype-usernames
+    dizkover.com/map/skype
+    dizkover.com/tags/funny
+    dizkover.com/skype
+    findusernames.com/list/Skype
+    avatar.skype.com/v1/avatars/ Image URL
+    attend-noam.broadcast.skype.com
+    site:broadcast.skype.com CompanyName
+    ▶️ 
+    Whois IP DNS
+    ：
+    dnsviz.net
+    centralops.net/co/
+    intodns.com
+    dnsdumpster.com
+    robtex.com/dns-lookup/
+    whois.net
+    whois.domaintools.com
+    dnslytics.com
+    pulsedive.com
+    ▶️ 
+    IP查找工具
+    ：
+    find-ip.net
+    ipgeolocation.io
+    iplocation.com
+    iplocation.net
+    iplocationfinder.net
+    iplocation.io
+    iptrackerlocation.com
+    ipgp.et
+    iptrackeronline.com
+    ip-address.org
+    ▶️ 
+    GPS搜索
+    ：
+    satnavhere.com
+    gps.gov
+    latlong.net
+    gps-coordinates.net
+    gps-coordinates.org
+    geoplaner.com
+    findlatitudeandlongitude.com
+    map-gps-coordinates.com
+    itilog.com
+    ▶️ 
+    搜在线报纸
+    ：
+    newspapersglobal.com
+    newspaperabstracts.com
+    newspapers101.com
+    newspaperlists.com
+    usanewspapers.com
+    newspapers-usa.com
+    world-newspapers.com
+    findnewspapers.com
+    us-newspapers-online.com
+    newslink.org
+    ▶️ 
+    telegram 情报
+   
+     WhatsApp 群组被谷歌挖出  震惊了很多人，其实 telegram 也可以使用 dorks，这样:
+    site:t.me [username]
+    site:telegram.im [channel]
+    site:tglist.co [search terms] ‘机器人社区频道’
+    site:telegram.me messenger
+    site:tgram.io [group]
+    ▶️ 
+    telegram 搜索工具
+    ：
+    搜一切 qilyzem.com
+    搜频道 telegramchannels.me
+    搜群组 telegram-group.com/en/
+    深度搜索 search.buzz.im
+    搜帖子 tgstat.ru/en/search/
+    ▶️ 
+    API 搜索
+    apisio.scalingo.io
+    ▶️ 
+    API Directories
+   
+    apis.guru/browse-apis/
+    api-rest.com/apis/discover
+    any-api.com
+    apilist.fun
+    api-search.io
+    apiforthat.com
+    ▶️ 
+    搜监视摄像头
+   
+    听说很多读者对窥探监视摄像头更感兴趣。是的，Shodan 可以做到，但要想熟练使用它，可能需要一些基础。事实上在线查找网络摄像头的工具和技术方法非常多，包括 Evans 曾经推荐过的最  简单的 dorks  都可以做到。
+    
+      不要错过《  搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南  》
+    
+    以下是一个列表，帮您总结一下 **网络摄像头搜索工具**：也许仍不全面，但都可以使用。
+    如今是遍地监视摄像头的时代，相关调查工具的开发也处于热潮中。
+           
+  
+      
+
+    上图中这本书在这里下载：  https://t.me/iyouport/7042 
+    列表：
+    hereinreality.com/webcams/
+    webcamtaxi.com/en/
+    webcam.nl
+    worldcams.tv
+    world-webcams.nsspot.net
+    kroooz-cams.com
+    webcamsmania.com
+    camhacker.com
+    opentopia.com
+    camvista.com
+    webcamhopper.com
+    camsecure.co.uk
+    webcamsabroad.com
+    public-camera.com/en/
+    mylivestreams.com
+    pictimo.com
+    livefromiceland.is
+    the-webcam-network.com
+    iplivecams.com
+    ip-24.net
+    leonardsworlds.com
+    whatsupcams.com/en/
+    wxyzwebcams.com
+    webcamlocator.com
+    123webcam.com
+    goandroam.com
+    hdontap.com
+    city-webcams.com
+    camscape.com
+    gobefore.me
+    explorewebcams.com
+    hereinreality.com/webcams/
+    myworldwebcams.com
+    liveincam.com
+    geocam.ru/en/
+    onlinewebcameras.com
+    webcambiglook.com
+    bit.ly/37M3Qou
+    cse.google.com/cse?cx=partner-pub-2526982841387487:1817040253&amp;ie=UTF-8
+    cse.google.com/cse?cx=004985303091853907970:enq82n069w8
+    👉 “新生情报工具” 系列收纳在  &lt;列表-5 “直接行动” 中的 “开源情报”&gt;  部分，于是，您知道它的目的。
+    ▶️ 
+    卫星图像搜索工具
+    ：
+    zoom.earth
+    search.landinfo.com
+    terrapattern.com
+    earthexplorer.usgs.gov
+    search.remotepixel.ca
+    worldview.earthdata.nasa.gov
+    apps.sentinel-hub.com/eo-browser/
+    discover.digitalglobe.com
+    imagery.geocento.com
+    ▶️ 
+    Wi-Fi 搜索引擎
+    ：
+    instabridge.com/free-wifi/
+    wiman.me
+    freewifinearbyme.com
+    wififreespot.com
+    wigle.net
+    wifimap.io
+    globalconnectwifi.com/hotspot-finder
+    hotspothaven.com
+    ▶️ 
+    GPS搜索工具
+    ：
+    whatsmygps.com
+    mapcoordinates.net/en
+    geoplaner.com
+    latitude.to
+    gps-latitude-longitude.com
+    getlatlong.net
+    itilog.com
+    gps-coordinates.net
+    twcc.fr/en/
+    ▶️ 
+    IOT 搜索引擎查找可以用来攻击的设备
+    — — 黑客侦查第一步：
+    shodan.io
+    thingful.net
+    censys.io
+    onyphe.io
+    zoomeye.org
+    不要错过 “黑客主义行动力” 系列：
+    
+      《  Mr.Robot 如何摧毁邪恶公司？- 黑客主义行动力（1）  》
+      《  Elliot 如何骇客邪恶公司并保证无法被反向追踪：黑客主义行动力（2）  》
+      《  如何全面间谍任何人的智能手机私密活动 — 黑客主义行动力（3）  》
+      《  如何在音频文件中隐藏秘密信息：黑客主义行动力（4）  》
+      《  如何破解蓝牙打开监狱大门：黑客主义行动力（5）  》
+      《  ”融化” 所有债务 ……如何构建黑客树莓派 — 黑客主义行动力（6）  》
+      《  充分了解你的攻击目标：进行电子邮件侦查的简单方法 — 黑客主义行动力（7）  》
+      《  如何获取任何人的Wi-Fi密码而无需破解：黑客主义行动力（8）  》
+      持续更新中
+    
+    ▶️ 
+    搜索数据集的工具
+    ：
+    gapminder.org
+    search.openedition.org
+    data.worldbank.org
+    webdatacommons.org
+    openpaymentsdata.cms.gov
+    zenodo.org
+    public.enigma.com
+    visualdata.io
+    datasetlist.com
+    gdeltproject.org/data.html
+    datausa.io
+    datahub.io/search
+    registry.opendata.aws
+    openicpsr.org/openicpsr/
+    opendatani.gov.uk
+    opendatanetwork.com
+    data.oecd.org
+    msropendata.com
+    datasearch.gesis.org
+    figshare.com
+    dataone.org
+    data.europa.eu/euodp/en/home
+    search.datacite.org
+    opendata.cern.ch
+    dataportals.org
+    academictorrents.com
+    datasetsearch.research.google.com
+    data.gov
+    usgs.koordinates.com
+    geoseer.net
+    好啦，今天就是这样！玩得开心～ 下次见。⚪️
+    
+    —— 持续更新中 ——
+   
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       Investigations 
+       OSINT 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2020年8月7日 
+       2020年3月19日 
+    
+  
+
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） - iYouPort" />
+    <meta property="twitter:title" content="搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） - iYouPort" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5201)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.iyouport.org%2F%25e6%2590%259c%25e7%2594%25b5%25e5%25bd%25b1%25e3%2580%2581%25e4%25b9%25a6%25e3%2580%2581%25e5%25bc%2580%25e6%2594%25be%25e8%25af%25be%25e7%25a8%258b%25e3%2580%2581twitterlists%25e3%2580%2581gps%25e3%2580%2581%25e6%258c%2596skype%25e3%2580%2581%25e5%25bc%2580%25e6%25ba%2590%25e6%2583%2585%25e6%258a%25a5%25e8%2599%259a%2F" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.iyouport.org/%e6%90%9c%e7%94%b5%e5%bd%b1%e3%80%81%e4%b9%a6%e3%80%81%e5%bc%80%e6%94%be%e8%af%be%e7%a8%8b%e3%80%81twitterlists%e3%80%81gps%e3%80%81%e6%8c%96skype%e3%80%81%e5%bc%80%e6%ba%90%e6%83%85%e6%8a%a5%e8%99%9a/" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.iyouport.org/%e6%90%9c%e7%94%b5%e5%bd%b1%e3%80%81%e4%b9%a6%e3%80%81%e5%bc%80%e6%94%be%e8%af%be%e7%a8%8b%e3%80%81twitterlists%e3%80%81gps%e3%80%81%e6%8c%96skype%e3%80%81%e5%bc%80%e6%ba%90%e6%83%85%e6%8a%a5%e8%99%9a/&text=搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） - iYouPort&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.iyouport.org/%e6%90%9c%e7%94%b5%e5%bd%b1%e3%80%81%e4%b9%a6%e3%80%81%e5%bc%80%e6%94%be%e8%af%be%e7%a8%8b%e3%80%81twitterlists%e3%80%81gps%e3%80%81%e6%8c%96skype%e3%80%81%e5%bc%80%e6%ba%90%e6%83%85%e6%8a%a5%e8%99%9a/&title=搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） - iYouPort" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.iyouport.org/%e6%90%9c%e7%94%b5%e5%bd%b1%e3%80%81%e4%b9%a6%e3%80%81%e5%bc%80%e6%94%be%e8%af%be%e7%a8%8b%e3%80%81twitterlists%e3%80%81gps%e3%80%81%e6%8c%96skype%e3%80%81%e5%bc%80%e6%ba%90%e6%83%85%e6%8a%a5%e8%99%9a/&title=搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） - iYouPort" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） - iYouPort&body=
+  
+     搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  给行动者的护身符和武器             2020年8月7日 
+          2020年3月19日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       继续不定期更新系列
+      
+      
+    
+           
+  
+      
+
+    欢迎回来！
+    如果您忘记了本系列内容的由来、或者还没有读过以前的内容，可以在下面回顾：
+    
+      《  新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音  》
+      《  新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家  》
+      《  新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪  》
+      《  新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 — 针对特定目标人的侦查利器  》
+      《  新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来  》
+      《  新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪  》
+      《  新生情报工具（7）：全球搜人、免费手机短信、放大照片不损质量、快速查找相关视频  》
+      《  去模糊化、挖人际关系、自动社交工程攻击、监视信息战：新生情报工具（8）  》
+      《  实时钓鱼、快速提取、游行调查、跨站追踪、便携式瑞士军刀：新生情报工具（9）  》
+      《  根据位置搜索telegram群组、在互联网上跟踪人、可视化影响力关系网络、及其他：新生情报工具（10）  》
+      《  实时新闻地图、Twitter 情报分析、电话号码追踪、电子邮件侦查及其他：新生情报工具（11）  》
+      《  种子、暗网、区块链、抖音、telegram、数据集…… ：新生情报工具（12）  》
+      《  社交媒体情报、追踪电邮电话号码、挖抖音、搜网络摄像头……：新生情报工具（13）  》
+      《  挖抖音、泄漏密码、漏洞、人脸识别工具、假身份生成器、事实核查 ……：新生情报工具（14）  》
+      《  挖 Telegram 群组、搜脸、搜人、蜂窝塔、网络摄像头、物联网、黑客新闻 ……：新生情报工具（15）  》
+    
+    依旧希望今天的内容能对您有用。
+     
+    1、TikTok（抖音）数据挖掘
+    
+    AwareOnline 分享了一个提示，内容涉及如何查看 TikTok 用户的 JSON 数据，包括关注者和被关注数量、清晰版的头像（ 720×720）、以及其他信息。只需使用以下 URL 即可检索 JSON 中的数据：
+    https://www.tiktok.com/node/share/user/@UserName    
+    将 {username} 替换为目标用户名。就是这么简单。
+           
+  
+      
+
+    如果想要 1080×1080 的图像呢？
+    
+      转到 TikTok 个人简历  tiktok.com  @{username}
+      打开开发者工具 (F12)
+      选择 “Network tab”
+      刷新页面（F5）
+      选择“ XHR”标签
+      双击 “api/user/detail/”
+      打开 “AvatarLarger” 链接
+      完成
+    
+     
+    2、ClustrMaps
+    
+    ClustrMaps 是一个网站，收集基于美国的数据集，并在线提供给您搜索。有一些数据集可免费查找地址、人员和公司。
+    测试了一下，多数情况下有效，但并非所有目标人都能找到。因此，它可能不像 Pipl 那样的站点能做到的广泛程度，但是对于以美国为基地的侦查目标来说，很高兴能找到完全免费的东西:)
+           
+  
+      
+
+    Link:  https://clustrmaps.com 
+     
+    3、评估您的虚拟环境
+    
+    InviZzzible 是一种以简单可靠的方式评估您的虚拟环境的工具。它包含最新的检测和规避技术以及针对它们的修复程序。而且您可以自己添加和扩展现有技术。
+    支持：
+    
+      Cuckoo Sandbox
+      Joe Sandbox
+      VMWare virtualization products
+      VirtualBox
+      Hyper-V
+      Parallels
+      QEMU
+      BOCHS
+      Xen
+      VirtualPC
+      Sandboxie
+      Wine
+    
+    link：  https://github.com/CheckPointSW/InviZzzible 
+     
+    4、开源情报虚拟机
+    
+    DORA是基于 Michael Bazzell 最新版书推出的虚拟机。该虚拟机是使用  Packer  构建的，生成的构建文件可以导入  Virtualbox  。操作系统是XFCE作为桌面环境的64位Debian。
+    该项目旨在提供一种自动执行VM创建的方法以及该书第5章中的一些软件安装步骤。用户仍然需要完成 Firefox 的配置并安装所需的附件。
+           
+  
+      
+
+    上图中这本书在这里下载：  https://t.me/iyouport/6614 
+    link：  https://github.com/axlshear/dora-osint-vm 
+     
+    5、使用两种语言搜索 Google 的简单方法
+    
+    单一语种往往只能抓取到片面的内容。也是为什么我们会建议您使用不同语种交替进行搜索。
+    分头搜索也许很麻烦，但现在有一个方便的方法能够让您一次性以两种语言搜索谷歌，可以试试看。在这里：  https://2lingual.com/ 
+     
+    6、补充搜索工具系列
+    
+    ▶️ 
+    搜资源 —— 电影、书、艺术、餐饮、信仰、思想、文化…… 等等
+    ：
+    everfest.com
+    wikido.com
+    evensi.com
+    allevents.in
+    Googleforevents.com
+    gstlst.com
+    festivalloon.com
+    skiddle.com
+    hanghawk.com
+    ▶️ 
+    使用关键字来搜索视频
+    ：kyro.ms
+    ▶️ 
+    计算机视觉数据集搜索引擎
+    ：visualdata.io
+    比如下面这样，输入中国的结果：
+           
+  
+      
+
+    ▶️ 
+    通过动画可视化数据的工具
+    （很好玩，试试看？）：visualgo.net
+    ▶️ 
+    大规模开放在线课程搜索
+    ：
+    classcentral.com
+    classpert.com
+    my-mooc.com/en/
+    opencourser.com
+    coursera.org
+    coursebuffet.com
+    coorsy.com
+    elearning.club
+    udemy.com
+    mooc-list.com
+    
+      不要错过：《  650个名校免费在线课程，你马上就可以开始  》
+    
+    ▶️ 
+    Twitter List 搜索引擎
+    （当然这个搜不到那种被设置为私密的 lists）：
+    jump.sh
+    bit.ly/2rutgq2
+    ▶️ 
+    视频、电视电影搜索引擎
+    ：embedy.cc
+    ▶️ 
+    世界上第一个离线搜索引擎
+    ，您可以使用您最喜欢的语言进行搜索：github.com/OpenGenus/quark
+    ▶️ 
+    挖 Skype 的工具
+    ：
+    speed-friends.com/site/index
+    findonlinecontacts.com/skype-usernames
+    dizkover.com/map/skype
+    dizkover.com/tags/funny
+    dizkover.com/skype
+    findusernames.com/list/Skype
+    avatar.skype.com/v1/avatars/ Image URL
+    attend-noam.broadcast.skype.com
+    site:broadcast.skype.com CompanyName
+    ▶️ 
+    Whois IP DNS
+    ：
+    dnsviz.net
+    centralops.net/co/
+    intodns.com
+    dnsdumpster.com
+    robtex.com/dns-lookup/
+    whois.net
+    whois.domaintools.com
+    dnslytics.com
+    pulsedive.com
+    ▶️ 
+    IP查找工具
+    ：
+    find-ip.net
+    ipgeolocation.io
+    iplocation.com
+    iplocation.net
+    iplocationfinder.net
+    iplocation.io
+    iptrackerlocation.com
+    ipgp.et
+    iptrackeronline.com
+    ip-address.org
+    ▶️ 
+    GPS搜索
+    ：
+    satnavhere.com
+    gps.gov
+    latlong.net
+    gps-coordinates.net
+    gps-coordinates.org
+    geoplaner.com
+    findlatitudeandlongitude.com
+    map-gps-coordinates.com
+    itilog.com
+    ▶️ 
+    搜在线报纸
+    ：
+    newspapersglobal.com
+    newspaperabstracts.com
+    newspapers101.com
+    newspaperlists.com
+    usanewspapers.com
+    newspapers-usa.com
+    world-newspapers.com
+    findnewspapers.com
+    us-newspapers-online.com
+    newslink.org
+    ▶️ 
+    telegram 情报
+   
+     WhatsApp 群组被谷歌挖出  震惊了很多人，其实 telegram 也可以使用 dorks，这样:
+    site:t.me [username]
+    site:telegram.im [channel]
+    site:tglist.co [search terms] ‘机器人社区频道’
+    site:telegram.me messenger
+    site:tgram.io [group]
+    ▶️ 
+    telegram 搜索工具
+    ：
+    搜一切 qilyzem.com
+    搜频道 telegramchannels.me
+    搜群组 telegram-group.com/en/
+    深度搜索 search.buzz.im
+    搜帖子 tgstat.ru/en/search/
+    ▶️ 
+    API 搜索
+    apisio.scalingo.io
+    ▶️ 
+    API Directories
+   
+    apis.guru/browse-apis/
+    api-rest.com/apis/discover
+    any-api.com
+    apilist.fun
+    api-search.io
+    apiforthat.com
+    ▶️ 
+    搜监视摄像头
+   
+    听说很多读者对窥探监视摄像头更感兴趣。是的，Shodan 可以做到，但要想熟练使用它，可能需要一些基础。事实上在线查找网络摄像头的工具和技术方法非常多，包括 Evans 曾经推荐过的最  简单的 dorks  都可以做到。
+    
+      不要错过《  搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南  》
+    
+    以下是一个列表，帮您总结一下 **网络摄像头搜索工具**：也许仍不全面，但都可以使用。
+    如今是遍地监视摄像头的时代，相关调查工具的开发也处于热潮中。
+           
+  
+      
+
+    上图中这本书在这里下载：  https://t.me/iyouport/7042 
+    列表：
+    hereinreality.com/webcams/
+    webcamtaxi.com/en/
+    webcam.nl
+    worldcams.tv
+    world-webcams.nsspot.net
+    kroooz-cams.com
+    webcamsmania.com
+    camhacker.com
+    opentopia.com
+    camvista.com
+    webcamhopper.com
+    camsecure.co.uk
+    webcamsabroad.com
+    public-camera.com/en/
+    mylivestreams.com
+    pictimo.com
+    livefromiceland.is
+    the-webcam-network.com
+    iplivecams.com
+    ip-24.net
+    leonardsworlds.com
+    whatsupcams.com/en/
+    wxyzwebcams.com
+    webcamlocator.com
+    123webcam.com
+    goandroam.com
+    hdontap.com
+    city-webcams.com
+    camscape.com
+    gobefore.me
+    explorewebcams.com
+    hereinreality.com/webcams/
+    myworldwebcams.com
+    liveincam.com
+    geocam.ru/en/
+    onlinewebcameras.com
+    webcambiglook.com
+    bit.ly/37M3Qou
+    cse.google.com/cse?cx=partner-pub-2526982841387487:1817040253&amp;ie=UTF-8
+    cse.google.com/cse?cx=004985303091853907970:enq82n069w8
+    👉 “新生情报工具” 系列收纳在  &lt;列表-5 “直接行动” 中的 “开源情报”&gt;  部分，于是，您知道它的目的。
+    ▶️ 
+    卫星图像搜索工具
+    ：
+    zoom.earth
+    search.landinfo.com
+    terrapattern.com
+    earthexplorer.usgs.gov
+    search.remotepixel.ca
+    worldview.earthdata.nasa.gov
+    apps.sentinel-hub.com/eo-browser/
+    discover.digitalglobe.com
+    imagery.geocento.com
+    ▶️ 
+    Wi-Fi 搜索引擎
+    ：
+    instabridge.com/free-wifi/
+    wiman.me
+    freewifinearbyme.com
+    wififreespot.com
+    wigle.net
+    wifimap.io
+    globalconnectwifi.com/hotspot-finder
+    hotspothaven.com
+    ▶️ 
+    GPS搜索工具
+    ：
+    whatsmygps.com
+    mapcoordinates.net/en
+    geoplaner.com
+    latitude.to
+    gps-latitude-longitude.com
+    getlatlong.net
+    itilog.com
+    gps-coordinates.net
+    twcc.fr/en/
+    ▶️ 
+    IOT 搜索引擎查找可以用来攻击的设备
+    — — 黑客侦查第一步：
+    shodan.io
+    thingful.net
+    censys.io
+    onyphe.io
+    zoomeye.org
+    不要错过 “黑客主义行动力” 系列：
+    
+      《  Mr.Robot 如何摧毁邪恶公司？- 黑客主义行动力（1）  》
+      《  Elliot 如何骇客邪恶公司并保证无法被反向追踪：黑客主义行动力（2）  》
+      《  如何全面间谍任何人的智能手机私密活动 — 黑客主义行动力（3）  》
+      《  如何在音频文件中隐藏秘密信息：黑客主义行动力（4）  》
+      《  如何破解蓝牙打开监狱大门：黑客主义行动力（5）  》
+      《  ”融化” 所有债务 ……如何构建黑客树莓派 — 黑客主义行动力（6）  》
+      《  充分了解你的攻击目标：进行电子邮件侦查的简单方法 — 黑客主义行动力（7）  》
+      《  如何获取任何人的Wi-Fi密码而无需破解：黑客主义行动力（8）  》
+      持续更新中
+    
+    ▶️ 
+    搜索数据集的工具
+    ：
+    gapminder.org
+    search.openedition.org
+    data.worldbank.org
+    webdatacommons.org
+    openpaymentsdata.cms.gov
+    zenodo.org
+    public.enigma.com
+    visualdata.io
+    datasetlist.com
+    gdeltproject.org/data.html
+    datausa.io
+    datahub.io/search
+    registry.opendata.aws
+    openicpsr.org/openicpsr/
+    opendatani.gov.uk
+    opendatanetwork.com
+    data.oecd.org
+    msropendata.com
+    datasearch.gesis.org
+    figshare.com
+    dataone.org
+    data.europa.eu/euodp/en/home
+    search.datacite.org
+    opendata.cern.ch
+    dataportals.org
+    academictorrents.com
+    datasetsearch.research.google.com
+    data.gov
+    usgs.koordinates.com
+    geoseer.net
+    好啦，今天就是这样！玩得开心～ 下次见。⚪️
+    
+    —— 持续更新中 ——
+   
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       Investigations 
+       OSINT 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2020年8月7日 
+       2020年3月19日 
+    
+  
+
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.iyouport.org/%e6%90%9c%e7%94%b5%e5%bd%b1%e3%80%81%e4%b9%a6%e3%80%81%e5%bc%80%e6%94%be%e8%af%be%e7%a8%8b%e3%80%81twitterlists%e3%80%81gps%e3%80%81%e6%8c%96skype%e3%80%81%e5%bc%80%e6%ba%90%e6%83%85%e6%8a%a5%e8%99%9a/" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.iyouport.org/%e6%90%9c%e7%94%b5%e5%bd%b1%e3%80%81%e4%b9%a6%e3%80%81%e5%bc%80%e6%94%be%e8%af%be%e7%a8%8b%e3%80%81twitterlists%e3%80%81gps%e3%80%81%e6%8c%96skype%e3%80%81%e5%bc%80%e6%ba%90%e6%83%85%e6%8a%a5%e8%99%9a/&title=搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） - iYouPort&caption=
+  
+     搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  给行动者的护身符和武器             2020年8月7日 
+          2020年3月19日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       继续不定期更新系列
+      
+      
+    
+           
+  
+      
+
+    欢迎回来！
+    如果您忘记了本系列内容的由来、或者还没有读过以前的内容，可以在下面回顾：
+    
+      《  新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音  》
+      《  新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家  》
+      《  新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪  》
+      《  新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 — 针对特定目标人的侦查利器  》
+      《  新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来  》
+      《  新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪  》
+      《  新生情报工具（7）：全球搜人、免费手机短信、放大照片不损质量、快速查找相关视频  》
+      《  去模糊化、挖人际关系、自动社交工程攻击、监视信息战：新生情报工具（8）  》
+      《  实时钓鱼、快速提取、游行调查、跨站追踪、便携式瑞士军刀：新生情报工具（9）  》
+      《  根据位置搜索telegram群组、在互联网上跟踪人、可视化影响力关系网络、及其他：新生情报工具（10）  》
+      《  实时新闻地图、Twitter 情报分析、电话号码追踪、电子邮件侦查及其他：新生情报工具（11）  》
+      《  种子、暗网、区块链、抖音、telegram、数据集…… ：新生情报工具（12）  》
+      《  社交媒体情报、追踪电邮电话号码、挖抖音、搜网络摄像头……：新生情报工具（13）  》
+      《  挖抖音、泄漏密码、漏洞、人脸识别工具、假身份生成器、事实核查 ……：新生情报工具（14）  》
+      《  挖 Telegram 群组、搜脸、搜人、蜂窝塔、网络摄像头、物联网、黑客新闻 ……：新生情报工具（15）  》
+    
+    依旧希望今天的内容能对您有用。
+     
+    1、TikTok（抖音）数据挖掘
+    
+    AwareOnline 分享了一个提示，内容涉及如何查看 TikTok 用户的 JSON 数据，包括关注者和被关注数量、清晰版的头像（ 720×720）、以及其他信息。只需使用以下 URL 即可检索 JSON 中的数据：
+    https://www.tiktok.com/node/share/user/@UserName    
+    将 {username} 替换为目标用户名。就是这么简单。
+           
+  
+      
+
+    如果想要 1080×1080 的图像呢？
+    
+      转到 TikTok 个人简历  tiktok.com  @{username}
+      打开开发者工具 (F12)
+      选择 “Network tab”
+      刷新页面（F5）
+      选择“ XHR”标签
+      双击 “api/user/detail/”
+      打开 “AvatarLarger” 链接
+      完成
+    
+     
+    2、ClustrMaps
+    
+    ClustrMaps 是一个网站，收集基于美国的数据集，并在线提供给您搜索。有一些数据集可免费查找地址、人员和公司。
+    测试了一下，多数情况下有效，但并非所有目标人都能找到。因此，它可能不像 Pipl 那样的站点能做到的广泛程度，但是对于以美国为基地的侦查目标来说，很高兴能找到完全免费的东西:)
+           
+  
+      
+
+    Link:  https://clustrmaps.com 
+     
+    3、评估您的虚拟环境
+    
+    InviZzzible 是一种以简单可靠的方式评估您的虚拟环境的工具。它包含最新的检测和规避技术以及针对它们的修复程序。而且您可以自己添加和扩展现有技术。
+    支持：
+    
+      Cuckoo Sandbox
+      Joe Sandbox
+      VMWare virtualization products
+      VirtualBox
+      Hyper-V
+      Parallels
+      QEMU
+      BOCHS
+      Xen
+      VirtualPC
+      Sandboxie
+      Wine
+    
+    link：  https://github.com/CheckPointSW/InviZzzible 
+     
+    4、开源情报虚拟机
+    
+    DORA是基于 Michael Bazzell 最新版书推出的虚拟机。该虚拟机是使用  Packer  构建的，生成的构建文件可以导入  Virtualbox  。操作系统是XFCE作为桌面环境的64位Debian。
+    该项目旨在提供一种自动执行VM创建的方法以及该书第5章中的一些软件安装步骤。用户仍然需要完成 Firefox 的配置并安装所需的附件。
+           
+  
+      
+
+    上图中这本书在这里下载：  https://t.me/iyouport/6614 
+    link：  https://github.com/axlshear/dora-osint-vm 
+     
+    5、使用两种语言搜索 Google 的简单方法
+    
+    单一语种往往只能抓取到片面的内容。也是为什么我们会建议您使用不同语种交替进行搜索。
+    分头搜索也许很麻烦，但现在有一个方便的方法能够让您一次性以两种语言搜索谷歌，可以试试看。在这里：  https://2lingual.com/ 
+     
+    6、补充搜索工具系列
+    
+    ▶️ 
+    搜资源 —— 电影、书、艺术、餐饮、信仰、思想、文化…… 等等
+    ：
+    everfest.com
+    wikido.com
+    evensi.com
+    allevents.in
+    Googleforevents.com
+    gstlst.com
+    festivalloon.com
+    skiddle.com
+    hanghawk.com
+    ▶️ 
+    使用关键字来搜索视频
+    ：kyro.ms
+    ▶️ 
+    计算机视觉数据集搜索引擎
+    ：visualdata.io
+    比如下面这样，输入中国的结果：
+           
+  
+      
+
+    ▶️ 
+    通过动画可视化数据的工具
+    （很好玩，试试看？）：visualgo.net
+    ▶️ 
+    大规模开放在线课程搜索
+    ：
+    classcentral.com
+    classpert.com
+    my-mooc.com/en/
+    opencourser.com
+    coursera.org
+    coursebuffet.com
+    coorsy.com
+    elearning.club
+    udemy.com
+    mooc-list.com
+    
+      不要错过：《  650个名校免费在线课程，你马上就可以开始  》
+    
+    ▶️ 
+    Twitter List 搜索引擎
+    （当然这个搜不到那种被设置为私密的 lists）：
+    jump.sh
+    bit.ly/2rutgq2
+    ▶️ 
+    视频、电视电影搜索引擎
+    ：embedy.cc
+    ▶️ 
+    世界上第一个离线搜索引擎
+    ，您可以使用您最喜欢的语言进行搜索：github.com/OpenGenus/quark
+    ▶️ 
+    挖 Skype 的工具
+    ：
+    speed-friends.com/site/index
+    findonlinecontacts.com/skype-usernames
+    dizkover.com/map/skype
+    dizkover.com/tags/funny
+    dizkover.com/skype
+    findusernames.com/list/Skype
+    avatar.skype.com/v1/avatars/ Image URL
+    attend-noam.broadcast.skype.com
+    site:broadcast.skype.com CompanyName
+    ▶️ 
+    Whois IP DNS
+    ：
+    dnsviz.net
+    centralops.net/co/
+    intodns.com
+    dnsdumpster.com
+    robtex.com/dns-lookup/
+    whois.net
+    whois.domaintools.com
+    dnslytics.com
+    pulsedive.com
+    ▶️ 
+    IP查找工具
+    ：
+    find-ip.net
+    ipgeolocation.io
+    iplocation.com
+    iplocation.net
+    iplocationfinder.net
+    iplocation.io
+    iptrackerlocation.com
+    ipgp.et
+    iptrackeronline.com
+    ip-address.org
+    ▶️ 
+    GPS搜索
+    ：
+    satnavhere.com
+    gps.gov
+    latlong.net
+    gps-coordinates.net
+    gps-coordinates.org
+    geoplaner.com
+    findlatitudeandlongitude.com
+    map-gps-coordinates.com
+    itilog.com
+    ▶️ 
+    搜在线报纸
+    ：
+    newspapersglobal.com
+    newspaperabstracts.com
+    newspapers101.com
+    newspaperlists.com
+    usanewspapers.com
+    newspapers-usa.com
+    world-newspapers.com
+    findnewspapers.com
+    us-newspapers-online.com
+    newslink.org
+    ▶️ 
+    telegram 情报
+   
+     WhatsApp 群组被谷歌挖出  震惊了很多人，其实 telegram 也可以使用 dorks，这样:
+    site:t.me [username]
+    site:telegram.im [channel]
+    site:tglist.co [search terms] ‘机器人社区频道’
+    site:telegram.me messenger
+    site:tgram.io [group]
+    ▶️ 
+    telegram 搜索工具
+    ：
+    搜一切 qilyzem.com
+    搜频道 telegramchannels.me
+    搜群组 telegram-group.com/en/
+    深度搜索 search.buzz.im
+    搜帖子 tgstat.ru/en/search/
+    ▶️ 
+    API 搜索
+    apisio.scalingo.io
+    ▶️ 
+    API Directories
+   
+    apis.guru/browse-apis/
+    api-rest.com/apis/discover
+    any-api.com
+    apilist.fun
+    api-search.io
+    apiforthat.com
+    ▶️ 
+    搜监视摄像头
+   
+    听说很多读者对窥探监视摄像头更感兴趣。是的，Shodan 可以做到，但要想熟练使用它，可能需要一些基础。事实上在线查找网络摄像头的工具和技术方法非常多，包括 Evans 曾经推荐过的最  简单的 dorks  都可以做到。
+    
+      不要错过《  搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南  》
+    
+    以下是一个列表，帮您总结一下 **网络摄像头搜索工具**：也许仍不全面，但都可以使用。
+    如今是遍地监视摄像头的时代，相关调查工具的开发也处于热潮中。
+           
+  
+      
+
+    上图中这本书在这里下载：  https://t.me/iyouport/7042 
+    列表：
+    hereinreality.com/webcams/
+    webcamtaxi.com/en/
+    webcam.nl
+    worldcams.tv
+    world-webcams.nsspot.net
+    kroooz-cams.com
+    webcamsmania.com
+    camhacker.com
+    opentopia.com
+    camvista.com
+    webcamhopper.com
+    camsecure.co.uk
+    webcamsabroad.com
+    public-camera.com/en/
+    mylivestreams.com
+    pictimo.com
+    livefromiceland.is
+    the-webcam-network.com
+    iplivecams.com
+    ip-24.net
+    leonardsworlds.com
+    whatsupcams.com/en/
+    wxyzwebcams.com
+    webcamlocator.com
+    123webcam.com
+    goandroam.com
+    hdontap.com
+    city-webcams.com
+    camscape.com
+    gobefore.me
+    explorewebcams.com
+    hereinreality.com/webcams/
+    myworldwebcams.com
+    liveincam.com
+    geocam.ru/en/
+    onlinewebcameras.com
+    webcambiglook.com
+    bit.ly/37M3Qou
+    cse.google.com/cse?cx=partner-pub-2526982841387487:1817040253&amp;ie=UTF-8
+    cse.google.com/cse?cx=004985303091853907970:enq82n069w8
+    👉 “新生情报工具” 系列收纳在  &lt;列表-5 “直接行动” 中的 “开源情报”&gt;  部分，于是，您知道它的目的。
+    ▶️ 
+    卫星图像搜索工具
+    ：
+    zoom.earth
+    search.landinfo.com
+    terrapattern.com
+    earthexplorer.usgs.gov
+    search.remotepixel.ca
+    worldview.earthdata.nasa.gov
+    apps.sentinel-hub.com/eo-browser/
+    discover.digitalglobe.com
+    imagery.geocento.com
+    ▶️ 
+    Wi-Fi 搜索引擎
+    ：
+    instabridge.com/free-wifi/
+    wiman.me
+    freewifinearbyme.com
+    wififreespot.com
+    wigle.net
+    wifimap.io
+    globalconnectwifi.com/hotspot-finder
+    hotspothaven.com
+    ▶️ 
+    GPS搜索工具
+    ：
+    whatsmygps.com
+    mapcoordinates.net/en
+    geoplaner.com
+    latitude.to
+    gps-latitude-longitude.com
+    getlatlong.net
+    itilog.com
+    gps-coordinates.net
+    twcc.fr/en/
+    ▶️ 
+    IOT 搜索引擎查找可以用来攻击的设备
+    — — 黑客侦查第一步：
+    shodan.io
+    thingful.net
+    censys.io
+    onyphe.io
+    zoomeye.org
+    不要错过 “黑客主义行动力” 系列：
+    
+      《  Mr.Robot 如何摧毁邪恶公司？- 黑客主义行动力（1）  》
+      《  Elliot 如何骇客邪恶公司并保证无法被反向追踪：黑客主义行动力（2）  》
+      《  如何全面间谍任何人的智能手机私密活动 — 黑客主义行动力（3）  》
+      《  如何在音频文件中隐藏秘密信息：黑客主义行动力（4）  》
+      《  如何破解蓝牙打开监狱大门：黑客主义行动力（5）  》
+      《  ”融化” 所有债务 ……如何构建黑客树莓派 — 黑客主义行动力（6）  》
+      《  充分了解你的攻击目标：进行电子邮件侦查的简单方法 — 黑客主义行动力（7）  》
+      《  如何获取任何人的Wi-Fi密码而无需破解：黑客主义行动力（8）  》
+      持续更新中
+    
+    ▶️ 
+    搜索数据集的工具
+    ：
+    gapminder.org
+    search.openedition.org
+    data.worldbank.org
+    webdatacommons.org
+    openpaymentsdata.cms.gov
+    zenodo.org
+    public.enigma.com
+    visualdata.io
+    datasetlist.com
+    gdeltproject.org/data.html
+    datausa.io
+    datahub.io/search
+    registry.opendata.aws
+    openicpsr.org/openicpsr/
+    opendatani.gov.uk
+    opendatanetwork.com
+    data.oecd.org
+    msropendata.com
+    datasearch.gesis.org
+    figshare.com
+    dataone.org
+    data.europa.eu/euodp/en/home
+    search.datacite.org
+    opendata.cern.ch
+    dataportals.org
+    academictorrents.com
+    datasetsearch.research.google.com
+    data.gov
+    usgs.koordinates.com
+    geoseer.net
+    好啦，今天就是这样！玩得开心～ 下次见。⚪️
+    
+    —— 持续更新中 ——
+   
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       Investigations 
+       OSINT 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2020年8月7日 
+       2020年3月19日 
+    
+  
+
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） - iYouPort&url=https://www.iyouport.org/%e6%90%9c%e7%94%b5%e5%bd%b1%e3%80%81%e4%b9%a6%e3%80%81%e5%bc%80%e6%94%be%e8%af%be%e7%a8%8b%e3%80%81twitterlists%e3%80%81gps%e3%80%81%e6%8c%96skype%e3%80%81%e5%bc%80%e6%ba%90%e6%83%85%e6%8a%a5%e8%99%9a/" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） - iYouPort</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2020-08-06
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#iYouPort">
+          iYouPort
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.iyouport.org/%e6%90%9c%e7%94%b5%e5%bd%b1%e3%80%81%e4%b9%a6%e3%80%81%e5%bc%80%e6%94%be%e8%af%be%e7%a8%8b%e3%80%81twitterlists%e3%80%81gps%e3%80%81%e6%8c%96skype%e3%80%81%e5%bc%80%e6%ba%90%e6%83%85%e6%8a%a5%e8%99%9a/" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="iYouPort的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#iYouPort 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <article class="post-13200 post type-post status-publish format-standard has-post-thumbnail hentry category-knowledge-node category-osint category-67 tag-investigations tag-osint tag-technology tag-tools" id="post-13200">
+  <header class="entry-header">
+    <h1 class="entry-title" id="twitterlistsgpsskype16-"> 搜电影、书、开放课程、Twitterlists、GPS、挖Skype、开源情报虚拟机、挖抖音、双语搜索 ……：新生情报工具（16） </h1>
+  </header>
+  <div class="entry-meta">
+<span class="byline"> <a href="https://www.iyouport.org/author/don-evans/" rel="author" title="由McCaffrey发布"> McCaffrey </a> </span> <span class="cat-links"> <a href="https://www.iyouport.org/category/knowledge-node/" rel="category tag"> Knowledge Node </a> , <a href="https://www.iyouport.org/category/osint/" rel="category tag"> OSINT </a> , <a href="https://www.iyouport.org/category/%e7%bb%99%e8%a1%8c%e5%8a%a8%e8%80%85%e7%9a%84%e6%8a%a4%e8%ba%ab%e7%ac%a6%e5%92%8c%e6%ad%a6%e5%99%a8/" rel="category tag"> 给行动者的护身符和武器 </a> </span> <span class="published-on">         <time class="entry-date published" datetime="2020-08-07T00:02:49+08:00"> 2020年8月7日 </time>
+         <time class="updated" datetime="2020-03-19T02:01:10+08:00"> 2020年3月19日 </time>
+ </span> <span class="word-count"> 2 Minutes </span>
+  </div>
+  <div class="entry-content">
+    <ul>
+      <li class="graf graf--p"><span style="color: #00ccff;"> <em>
+      <strong>
+       继续不定期更新系列
+      </strong>
+     </em> </span></li>
+    </ul>
+    <p><img alt="" class="aligncenter size-full wp-image-13206 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=1100%2C727&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?w=1262&amp;ssl=1 1262w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=300%2C198&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=1024%2C677&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=768%2C508&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=1100%2C727&amp;ssl=1 1100w" data-recalc-dims="1" height="727" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=1100%2C727&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-13206" data-recalc-dims="1" height="727" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=1100%2C727&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?w=1262&amp;ssl=1 1262w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=300%2C198&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=1024%2C677&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=768%2C508&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/0-1.png?resize=1100%2C727&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p">欢迎回来！</p>
+    <p class="graf graf--p">如果您忘记了本系列内容的由来、或者还没有读过以前的内容，可以在下面回顾：</p>
+    <ul class="postList">
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%881%ef%bc%89%ef%bc%9a%e4%ba%ba%e8%84%b8%e8%af%86%e5%88%ab%e8%ba%ab%e4%bb%bd%e6%8c%96%e6%8e%98%e3%80%81%e6%8e%a8%e7%89%b9%e5%88%86%e6%9e%90/" href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%881%ef%bc%89%ef%bc%9a%e4%ba%ba%e8%84%b8%e8%af%86%e5%88%ab%e8%ba%ab%e4%bb%bd%e6%8c%96%e6%8e%98%e3%80%81%e6%8e%a8%e7%89%b9%e5%88%86%e6%9e%90/" rel="noopener noreferrer" target="_blank"> 新生情报工具（1）：人脸识别身份挖掘、推特分析热点事件、暗网爬虫和调查抖音 </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%882%ef%bc%89%ef%bc%9a%e5%88%ae%e5%88%80%e3%80%81%e6%89%93%e7%a0%b4%e6%8e%a8%e7%89%b9%e9%99%90%e5%88%b6%e3%80%81%e6%83%85%e6%8a%a5%e8%b5%84/" href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%882%ef%bc%89%ef%bc%9a%e5%88%ae%e5%88%80%e3%80%81%e6%89%93%e7%a0%b4%e6%8e%a8%e7%89%b9%e9%99%90%e5%88%b6%e3%80%81%e6%83%85%e6%8a%a5%e8%b5%84/" rel="noopener noreferrer" target="_blank"> 新生情报工具（2）：刮刀、打破推特限制、情报资源机器人、和袜子木偶管家 </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%883%ef%bc%89%ef%bc%9a%e6%8c%96%e6%8e%98%e6%8e%a8%e7%89%b9%e3%80%81%e6%90%9c%e6%9f%a5%e5%8a%a0%e5%af%86%e8%b4%a7%e5%b8%81%e3%80%81%e5%88%ae/" href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%883%ef%bc%89%ef%bc%9a%e6%8c%96%e6%8e%98%e6%8e%a8%e7%89%b9%e3%80%81%e6%90%9c%e6%9f%a5%e5%8a%a0%e5%af%86%e8%b4%a7%e5%b8%81%e3%80%81%e5%88%ae/" rel="noopener noreferrer" target="_blank"> 新生情报工具（3）：挖掘推特、搜查加密货币、刮刀和定向追踪 </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%884%ef%bc%89%ef%bc%9a%e6%88%98%e6%9c%af%e5%9f%b9%e8%ae%ad%e3%80%81%e7%8b%a9%e7%8c%8e%e6%8e%a8%e7%89%b9%e3%80%81%e7%91%9e%e5%a3%ab%e5%86%9b/" href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%884%ef%bc%89%ef%bc%9a%e6%88%98%e6%9c%af%e5%9f%b9%e8%ae%ad%e3%80%81%e7%8b%a9%e7%8c%8e%e6%8e%a8%e7%89%b9%e3%80%81%e7%91%9e%e5%a3%ab%e5%86%9b/" rel="noopener noreferrer" target="_blank"> 新生情报工具（4）：战术培训、狩猎推特、瑞士军刀 — 针对特定目标人的侦查利器 </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%885%ef%bc%89%ef%bc%9a%e7%bf%bb%e8%af%91%e9%97%b4%e8%b0%8d%e3%80%81%e5%a4%b4%e5%83%8f%e4%b8%ad%e7%9a%84%e7%a7%98%e5%af%86%e3%80%81%e8%bf%9e/" href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%885%ef%bc%89%ef%bc%9a%e7%bf%bb%e8%af%91%e9%97%b4%e8%b0%8d%e3%80%81%e5%a4%b4%e5%83%8f%e4%b8%ad%e7%9a%84%e7%a7%98%e5%af%86%e3%80%81%e8%bf%9e/" rel="noopener noreferrer" target="_blank"> 新生情报工具（5）：翻译间谍、头像中的秘密、连锅端利器、和追踪资金往来 </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%886%ef%bc%89%ef%bc%9a%e5%b9%bf%e6%b3%9b%e6%90%9c%e9%9b%86%e3%80%81%e5%9c%b0%e7%90%86%e5%ae%9a%e4%bd%8d%e3%80%81%e6%88%91%e7%9f%a5%e9%81%93/" href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%886%ef%bc%89%ef%bc%9a%e5%b9%bf%e6%b3%9b%e6%90%9c%e9%9b%86%e3%80%81%e5%9c%b0%e7%90%86%e5%ae%9a%e4%bd%8d%e3%80%81%e6%88%91%e7%9f%a5%e9%81%93/" rel="noopener noreferrer" target="_blank"> 新生情报工具（6）：广泛搜集、地理定位、我知道你的猫住在哪 </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%887%ef%bc%89%ef%bc%9a%e5%85%a8%e7%90%83%e6%90%9c%e4%ba%ba%e3%80%81%e5%85%8d%e8%b4%b9%e6%89%8b%e6%9c%ba%e7%9f%ad%e4%bf%a1%e3%80%81%e6%94%be/" href="https://www.iyouport.org/%e6%96%b0%e7%94%9f%e6%83%85%e6%8a%a5%e5%b7%a5%e5%85%b7%ef%bc%887%ef%bc%89%ef%bc%9a%e5%85%a8%e7%90%83%e6%90%9c%e4%ba%ba%e3%80%81%e5%85%8d%e8%b4%b9%e6%89%8b%e6%9c%ba%e7%9f%ad%e4%bf%a1%e3%80%81%e6%94%be/" rel="noopener noreferrer" target="_blank"> 新生情报工具（7）：全球搜人、免费手机短信、放大照片不损质量、快速查找相关视频 </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e5%8e%bb%e6%a8%a1%e7%b3%8a%e5%8c%96%e3%80%81%e6%8c%96%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%e3%80%81%e8%87%aa%e5%8a%a8%e7%a4%be%e4%ba%a4%e5%b7%a5%e7%a8%8b%e6%94%bb%e5%87%bb%e3%80%81%e7%9b%91%e8%a7%86/" href="https://www.iyouport.org/%e5%8e%bb%e6%a8%a1%e7%b3%8a%e5%8c%96%e3%80%81%e6%8c%96%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%e3%80%81%e8%87%aa%e5%8a%a8%e7%a4%be%e4%ba%a4%e5%b7%a5%e7%a8%8b%e6%94%bb%e5%87%bb%e3%80%81%e7%9b%91%e8%a7%86/" rel="noopener noreferrer" target="_blank"> 去模糊化、挖人际关系、自动社交工程攻击、监视信息战：新生情报工具（8） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e5%ae%9e%e6%97%b6%e9%92%93%e9%b1%bc%e3%80%81%e5%bf%ab%e9%80%9f%e6%8f%90%e5%8f%96%e3%80%81%e6%b8%b8%e8%a1%8c%e8%b0%83%e6%9f%a5%e3%80%81%e8%b7%a8%e7%ab%99%e8%bf%bd%e8%b8%aa%e3%80%81%e4%be%bf%e6%90%ba/" href="https://www.iyouport.org/%e5%ae%9e%e6%97%b6%e9%92%93%e9%b1%bc%e3%80%81%e5%bf%ab%e9%80%9f%e6%8f%90%e5%8f%96%e3%80%81%e6%b8%b8%e8%a1%8c%e8%b0%83%e6%9f%a5%e3%80%81%e8%b7%a8%e7%ab%99%e8%bf%bd%e8%b8%aa%e3%80%81%e4%be%bf%e6%90%ba/" rel="noopener noreferrer" target="_blank"> 实时钓鱼、快速提取、游行调查、跨站追踪、便携式瑞士军刀：新生情报工具（9） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%a0%b9%e6%8d%ae%e4%bd%8d%e7%bd%ae%e6%90%9c%e7%b4%a2telegram%e7%be%a4%e7%bb%84%e3%80%81%e5%9c%a8%e4%ba%92%e8%81%94%e7%bd%91%e4%b8%8a%e8%b7%9f%e8%b8%aa%e4%ba%ba%e3%80%81%e5%8f%af%e8%a7%86%e5%8c%96/" href="https://www.iyouport.org/%e6%a0%b9%e6%8d%ae%e4%bd%8d%e7%bd%ae%e6%90%9c%e7%b4%a2telegram%e7%be%a4%e7%bb%84%e3%80%81%e5%9c%a8%e4%ba%92%e8%81%94%e7%bd%91%e4%b8%8a%e8%b7%9f%e8%b8%aa%e4%ba%ba%e3%80%81%e5%8f%af%e8%a7%86%e5%8c%96/" rel="noopener noreferrer" target="_blank"> 根据位置搜索telegram群组、在互联网上跟踪人、可视化影响力关系网络、及其他：新生情报工具（10） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e5%ae%9e%e6%97%b6%e6%96%b0%e9%97%bb%e5%9c%b0%e5%9b%be%e3%80%81twitter-%e6%83%85%e6%8a%a5%e5%88%86%e6%9e%90%e3%80%81%e7%94%b5%e8%af%9d%e5%8f%b7%e7%a0%81%e8%bf%bd%e8%b8%aa%e3%80%81%e7%94%b5%e5%ad%90/" href="https://www.iyouport.org/%e5%ae%9e%e6%97%b6%e6%96%b0%e9%97%bb%e5%9c%b0%e5%9b%be%e3%80%81twitter-%e6%83%85%e6%8a%a5%e5%88%86%e6%9e%90%e3%80%81%e7%94%b5%e8%af%9d%e5%8f%b7%e7%a0%81%e8%bf%bd%e8%b8%aa%e3%80%81%e7%94%b5%e5%ad%90/" rel="noopener noreferrer" target="_blank"> 实时新闻地图、Twitter 情报分析、电话号码追踪、电子邮件侦查及其他：新生情报工具（11） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e7%a7%8d%e5%ad%90%e3%80%81%e6%9a%97%e7%bd%91%e3%80%81%e5%8c%ba%e5%9d%97%e9%93%be%e3%80%81%e6%8a%96%e9%9f%b3%e3%80%81telegram%e3%80%81%e6%95%b0%e6%8d%ae%e9%9b%86-%ef%bc%9a%e6%96%b0/" href="https://www.iyouport.org/%e7%a7%8d%e5%ad%90%e3%80%81%e6%9a%97%e7%bd%91%e3%80%81%e5%8c%ba%e5%9d%97%e9%93%be%e3%80%81%e6%8a%96%e9%9f%b3%e3%80%81telegram%e3%80%81%e6%95%b0%e6%8d%ae%e9%9b%86-%ef%bc%9a%e6%96%b0/" rel="noopener noreferrer" target="_blank"> 种子、暗网、区块链、抖音、telegram、数据集…… ：新生情报工具（12） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e7%a4%be%e4%ba%a4%e5%aa%92%e4%bd%93%e6%83%85%e6%8a%a5%e3%80%81%e8%bf%bd%e8%b8%aa%e7%94%b5%e9%82%ae%e7%94%b5%e8%af%9d%e5%8f%b7%e7%a0%81%e3%80%81%e6%8c%96%e6%8a%96%e9%9f%b3%e3%80%81%e6%90%9c%e7%bd%91/" href="https://www.iyouport.org/%e7%a4%be%e4%ba%a4%e5%aa%92%e4%bd%93%e6%83%85%e6%8a%a5%e3%80%81%e8%bf%bd%e8%b8%aa%e7%94%b5%e9%82%ae%e7%94%b5%e8%af%9d%e5%8f%b7%e7%a0%81%e3%80%81%e6%8c%96%e6%8a%96%e9%9f%b3%e3%80%81%e6%90%9c%e7%bd%91/" rel="noopener noreferrer" target="_blank"> 社交媒体情报、追踪电邮电话号码、挖抖音、搜网络摄像头……：新生情报工具（13） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%8c%96%e6%8a%96%e9%9f%b3%e3%80%81%e6%b3%84%e6%bc%8f%e5%af%86%e7%a0%81%e3%80%81%e6%bc%8f%e6%b4%9e%e3%80%81%e4%ba%ba%e8%84%b8%e8%af%86%e5%88%ab%e5%b7%a5%e5%85%b7%e3%80%81%e5%81%87%e8%ba%ab%e4%bb%bd/" href="https://www.iyouport.org/%e6%8c%96%e6%8a%96%e9%9f%b3%e3%80%81%e6%b3%84%e6%bc%8f%e5%af%86%e7%a0%81%e3%80%81%e6%bc%8f%e6%b4%9e%e3%80%81%e4%ba%ba%e8%84%b8%e8%af%86%e5%88%ab%e5%b7%a5%e5%85%b7%e3%80%81%e5%81%87%e8%ba%ab%e4%bb%bd/" rel="noopener noreferrer" target="_blank"> 挖抖音、泄漏密码、漏洞、人脸识别工具、假身份生成器、事实核查 ……：新生情报工具（14） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%8c%96-telegram-%e7%be%a4%e7%bb%84%e3%80%81%e6%90%9c%e8%84%b8%e3%80%81%e6%90%9c%e4%ba%ba%e3%80%81%e8%9c%82%e7%aa%9d%e5%a1%94%e3%80%81%e7%bd%91%e7%bb%9c%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e7%89%a9/" href="https://www.iyouport.org/%e6%8c%96-telegram-%e7%be%a4%e7%bb%84%e3%80%81%e6%90%9c%e8%84%b8%e3%80%81%e6%90%9c%e4%ba%ba%e3%80%81%e8%9c%82%e7%aa%9d%e5%a1%94%e3%80%81%e7%bd%91%e7%bb%9c%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e7%89%a9/" rel="noopener noreferrer" target="_blank"> 挖 Telegram 群组、搜脸、搜人、蜂窝塔、网络摄像头、物联网、黑客新闻 ……：新生情报工具（15） </a> 》</li>
+    </ul>
+    <p class="graf graf--p">依旧希望今天的内容能对您有用。</p>
+    <h3 class="graf graf--p" id="tiktok"> <strong class="markup--strong markup--p-strong">
+    1、TikTok（抖音）数据挖掘
+   </strong> </h3>
+    <p class="graf graf--p">AwareOnline 分享了一个提示，内容涉及如何查看 TikTok 用户的 JSON 数据，包括关注者和被关注数量、清晰版的头像（ 720×720）、以及其他信息。只需使用以下 URL 即可检索 JSON 中的数据：</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.tiktok.com/node/share/user/@UserName</code></pre></div>    </div>
+    <p class="graf graf--p">将 {username} 替换为目标用户名。就是这么简单。</p>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-13201 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=1100%2C805&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?w=1626&amp;ssl=1 1626w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=300%2C220&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=1024%2C749&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=768%2C562&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=1536%2C1124&amp;ssl=1 1536w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=1100%2C805&amp;ssl=1 1100w" data-recalc-dims="1" height="805" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=1100%2C805&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-13201" data-recalc-dims="1" height="805" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=1100%2C805&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?w=1626&amp;ssl=1 1626w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=300%2C220&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=1024%2C749&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=768%2C562&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=1536%2C1124&amp;ssl=1 1536w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/1-7.png?resize=1100%2C805&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p">如果想要 1080×1080 的图像呢？</p>
+    <ol class="postList">
+      <li class="graf graf--li">转到 TikTok 个人简历 <a class="markup--anchor markup--li-anchor" data-href="https://t.co/uNavq2NlOG?amp=1" href="https://t.co/uNavq2NlOG?amp=1" rel="noopener noreferrer" target="_blank" title="http://tiktok.com/"> tiktok.com </a> @{username}</li>
+      <li class="graf graf--li">打开开发者工具 (F12)</li>
+      <li class="graf graf--li">选择 “Network tab”</li>
+      <li class="graf graf--li">刷新页面（F5）</li>
+      <li class="graf graf--li">选择“ XHR”标签</li>
+      <li class="graf graf--li">双击 “api/user/detail/”</li>
+      <li class="graf graf--li">打开 “AvatarLarger” 链接</li>
+      <li class="graf graf--li">完成</li>
+    </ol>
+    <h3 class="graf graf--p" id="clustrmaps"> <strong class="markup--strong markup--p-strong">
+    2、ClustrMaps
+   </strong> </h3>
+    <p class="graf graf--p">ClustrMaps 是一个网站，收集基于美国的数据集，并在线提供给您搜索。有一些数据集可免费查找地址、人员和公司。</p>
+    <p class="graf graf--p">测试了一下，多数情况下有效，但并非所有目标人都能找到。因此，它可能不像 Pipl 那样的站点能做到的广泛程度，但是对于以美国为基地的侦查目标来说，很高兴能找到完全免费的东西:)</p>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-13202 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=1100%2C521&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?w=2340&amp;ssl=1 2340w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=300%2C142&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=1024%2C485&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=768%2C364&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=1536%2C727&amp;ssl=1 1536w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=2048%2C970&amp;ssl=1 2048w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=1100%2C521&amp;ssl=1 1100w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?w=2200&amp;ssl=1 2200w" data-recalc-dims="1" height="521" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=1100%2C521&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-13202" data-recalc-dims="1" height="521" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=1100%2C521&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?w=2340&amp;ssl=1 2340w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=300%2C142&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=1024%2C485&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=768%2C364&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=1536%2C727&amp;ssl=1 1536w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=2048%2C970&amp;ssl=1 2048w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?resize=1100%2C521&amp;ssl=1 1100w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/2-8.png?w=2200&amp;ssl=1 2200w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p">Link: <a class="markup--anchor markup--p-anchor" data-href="https://clustrmaps.com/" href="https://clustrmaps.com/" rel="noopener nofollow noreferrer" target="_blank"> https://clustrmaps.com </a></p>
+    <h3 class="graf graf--p" id="section"> <strong class="markup--strong markup--p-strong">
+    3、评估您的虚拟环境
+   </strong> </h3>
+    <p class="graf graf--p">InviZzzible 是一种以简单可靠的方式评估您的虚拟环境的工具。它包含最新的检测和规避技术以及针对它们的修复程序。而且您可以自己添加和扩展现有技术。</p>
+    <p class="graf graf--p">支持：</p>
+    <ul class="postList">
+      <li class="graf graf--li">Cuckoo Sandbox</li>
+      <li class="graf graf--li">Joe Sandbox</li>
+      <li class="graf graf--li">VMWare virtualization products</li>
+      <li class="graf graf--li">VirtualBox</li>
+      <li class="graf graf--li">Hyper-V</li>
+      <li class="graf graf--li">Parallels</li>
+      <li class="graf graf--li">QEMU</li>
+      <li class="graf graf--li">BOCHS</li>
+      <li class="graf graf--li">Xen</li>
+      <li class="graf graf--li">VirtualPC</li>
+      <li class="graf graf--li">Sandboxie</li>
+      <li class="graf graf--li">Wine</li>
+    </ul>
+    <p class="graf graf--p">link： <a class="markup--anchor markup--p-anchor" data-href="https://github.com/CheckPointSW/InviZzzible" href="https://github.com/CheckPointSW/InviZzzible" rel="noopener noreferrer" target="_blank"> https://github.com/CheckPointSW/InviZzzible </a></p>
+    <h3 class="graf graf--p" id="section-1"> <strong class="markup--strong markup--p-strong">
+    4、开源情报虚拟机
+   </strong> </h3>
+    <p class="graf graf--p">DORA是基于 Michael Bazzell 最新版书推出的虚拟机。该虚拟机是使用 <a class="markup--anchor markup--p-anchor" data-href="https://www.packer.io/" href="https://www.packer.io/" rel="nofollow noopener noreferrer" target="_blank"> Packer </a> 构建的，生成的构建文件可以导入 <a class="markup--anchor markup--p-anchor" data-href="https://www.virtualbox.org/" href="https://www.virtualbox.org/" rel="nofollow noopener noreferrer" target="_blank"> Virtualbox </a> 。操作系统是XFCE作为桌面环境的64位Debian。</p>
+    <p class="graf graf--p">该项目旨在提供一种自动执行VM创建的方法以及该书第5章中的一些软件安装步骤。用户仍然需要完成 Firefox 的配置并安装所需的附件。</p>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-13203 jetpack-lazy-image" data-lazy-sizes="(max-width: 982px) 100vw, 982px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?resize=982%2C1154&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?w=982&amp;ssl=1 982w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?resize=255%2C300&amp;ssl=1 255w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?resize=871%2C1024&amp;ssl=1 871w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?resize=768%2C903&amp;ssl=1 768w" data-recalc-dims="1" height="1154" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?resize=982%2C1154&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="982" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-13203" data-recalc-dims="1" height="1154" sizes="(max-width: 982px) 100vw, 982px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?resize=982%2C1154&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?w=982&amp;ssl=1 982w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?resize=255%2C300&amp;ssl=1 255w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?resize=871%2C1024&amp;ssl=1 871w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2020/03/3-8.png?resize=768%2C903&amp;ssl=1 768w" width="982" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p">上图中这本书在这里下载： <a class="markup--anchor markup--p-anchor" data-href="https://t.me/iyouport/6614" href="https://t.me/iyouport/6614" rel="nofollow noopener noreferrer" target="_blank"> https://t.me/iyouport/6614 </a></p>
+    <p class="graf graf--p">link： <a class="markup--anchor markup--p-anchor" data-href="https://github.com/axlshear/dora-osint-vm" href="https://github.com/axlshear/dora-osint-vm" rel="noopener noreferrer" target="_blank"> https://github.com/axlshear/dora-osint-vm </a></p>
+    <h3 class="graf graf--p" id="google-"> <strong class="markup--strong markup--p-strong">
+    5、使用两种语言搜索 Google 的简单方法
+   </strong> </h3>
+    <p class="graf graf--p">单一语种往往只能抓取到片面的内容。也是为什么我们会建议您使用不同语种交替进行搜索。</p>
+    <p class="graf graf--p">分头搜索也许很麻烦，但现在有一个方便的方法能够让您一次性以两种语言搜索谷歌，可以试试看。在这里： <a class="markup--anchor markup--p-anchor" data-href="https://2lingual.com/" href="https://2lingual.com/" rel="noopener noreferrer" target="_blank"> https://2lingual.com/ </a></p>
+    <h3 class="graf graf--p" id="section-2"> <strong class="markup--strong markup--p-strong">
+    6、补充搜索工具系列
+   </strong> </h3>
+    <p class="graf graf--p">▶️ <strong>
+    搜资源 —— 电影、书、艺术、餐饮、信仰、思想、文化…… 等等
+   </strong> ：</p>
+    <p class="graf graf--p">everfest.com</p>
+    <p class="graf graf--p">wikido.com</p>
+    <p class="graf graf--p">evensi.com</p>
+    <p class="graf graf--p">allevents.in</p>
+    <p class="graf graf--p">Googleforevents.com</p>
+    <p class="graf graf--p">gstlst.com</p>
+    <p class="graf graf--p">festivalloon.com</p>
+    <p class="graf graf--p">skiddle.com</p>
+    <p class="graf graf--p">hanghawk.com</p>
+    <p class="graf graf--p">▶️ <strong>
+    使用关键字来搜索视频
+   </strong> ：kyro.ms</p>
+    <p class="graf graf--p">▶️ <strong>
+    计算机视觉数据集搜索引擎
+   </strong> ：visualdata.io</p>
+    <p class="graf graf--p">比如下面这样，输入中国的结果：</p>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-13204 jetpack-lazy-image" data-lazy-sizes="(max-width: 836px) 100vw, 836px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/4-7.png?resize=836%2C770&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/4-7.png?w=836&amp;ssl=1 836w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/4-7.png?resize=300%2C276&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/4-7.png?resize=768%2C707&amp;ssl=1 768w" data-recalc-dims="1" height="770" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/4-7.png?resize=836%2C770&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="836" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-13204" data-recalc-dims="1" height="770" sizes="(max-width: 836px) 100vw, 836px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/4-7.png?resize=836%2C770&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/4-7.png?w=836&amp;ssl=1 836w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/4-7.png?resize=300%2C276&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2020/03/4-7.png?resize=768%2C707&amp;ssl=1 768w" width="836" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p">▶️ <strong>
+    通过动画可视化数据的工具
+   </strong> （很好玩，试试看？）：visualgo.net</p>
+    <p class="graf graf--p">▶️ <strong>
+    大规模开放在线课程搜索
+   </strong> ：</p>
+    <p class="graf graf--p">classcentral.com</p>
+    <p class="graf graf--p">classpert.com</p>
+    <p class="graf graf--p">my-mooc.com/en/</p>
+    <p class="graf graf--p">opencourser.com</p>
+    <p class="graf graf--p">coursera.org</p>
+    <p class="graf graf--p">coursebuffet.com</p>
+    <p class="graf graf--p">coorsy.com</p>
+    <p class="graf graf--p">elearning.club</p>
+    <p class="graf graf--p">udemy.com</p>
+    <p class="graf graf--p">mooc-list.com</p>
+    <ul class="postList">
+      <li class="graf graf--li">不要错过：《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/650%e4%b8%aa%e5%90%8d%e6%a0%a1%e5%85%8d%e8%b4%b9%e5%9c%a8%e7%ba%bf%e8%af%be%e7%a8%8b%ef%bc%8c%e4%bd%a0%e9%a9%ac%e4%b8%8a%e5%b0%b1%e5%8f%af%e4%bb%a5%e5%bc%80%e5%a7%8b/" href="https://www.iyouport.org/650%e4%b8%aa%e5%90%8d%e6%a0%a1%e5%85%8d%e8%b4%b9%e5%9c%a8%e7%ba%bf%e8%af%be%e7%a8%8b%ef%bc%8c%e4%bd%a0%e9%a9%ac%e4%b8%8a%e5%b0%b1%e5%8f%af%e4%bb%a5%e5%bc%80%e5%a7%8b/" rel="noopener noreferrer" target="_blank"> 650个名校免费在线课程，你马上就可以开始 </a> 》</li>
+    </ul>
+    <p class="graf graf--p">▶️ <strong>
+    Twitter List 搜索引擎
+   </strong> （当然这个搜不到那种被设置为私密的 lists）：</p>
+    <p class="graf graf--p">jump.sh</p>
+    <p class="graf graf--p">bit.ly/2rutgq2</p>
+    <p class="graf graf--p">▶️ <strong>
+    视频、电视电影搜索引擎
+   </strong> ：embedy.cc</p>
+    <p class="graf graf--p">▶️ <strong>
+    世界上第一个离线搜索引擎
+   </strong> ，您可以使用您最喜欢的语言进行搜索：github.com/OpenGenus/quark</p>
+    <p class="graf graf--p">▶️ <strong>
+    挖 Skype 的工具
+   </strong> ：</p>
+    <p class="graf graf--p">speed-friends.com/site/index</p>
+    <p class="graf graf--p">findonlinecontacts.com/skype-usernames</p>
+    <p class="graf graf--p">dizkover.com/map/skype</p>
+    <p class="graf graf--p">dizkover.com/tags/funny</p>
+    <p class="graf graf--p">dizkover.com/skype</p>
+    <p class="graf graf--p">findusernames.com/list/Skype</p>
+    <p class="graf graf--p">avatar.skype.com/v1/avatars/ Image URL</p>
+    <p class="graf graf--p">attend-noam.broadcast.skype.com</p>
+    <p class="graf graf--p">site:broadcast.skype.com CompanyName</p>
+    <p class="graf graf--p">▶️ <strong>
+    Whois IP DNS
+   </strong> ：</p>
+    <p class="graf graf--p">dnsviz.net</p>
+    <p class="graf graf--p">centralops.net/co/</p>
+    <p class="graf graf--p">intodns.com</p>
+    <p class="graf graf--p">dnsdumpster.com</p>
+    <p class="graf graf--p">robtex.com/dns-lookup/</p>
+    <p class="graf graf--p">whois.net</p>
+    <p class="graf graf--p">whois.domaintools.com</p>
+    <p class="graf graf--p">dnslytics.com</p>
+    <p class="graf graf--p">pulsedive.com</p>
+    <p class="graf graf--p">▶️ <strong>
+    IP查找工具
+   </strong> ：</p>
+    <p class="graf graf--p">find-ip.net</p>
+    <p class="graf graf--p">ipgeolocation.io</p>
+    <p class="graf graf--p">iplocation.com</p>
+    <p class="graf graf--p">iplocation.net</p>
+    <p class="graf graf--p">iplocationfinder.net</p>
+    <p class="graf graf--p">iplocation.io</p>
+    <p class="graf graf--p">iptrackerlocation.com</p>
+    <p class="graf graf--p">ipgp.et</p>
+    <p class="graf graf--p">iptrackeronline.com</p>
+    <p class="graf graf--p">ip-address.org</p>
+    <p class="graf graf--p">▶️ <strong>
+    GPS搜索
+   </strong> ：</p>
+    <p class="graf graf--p">satnavhere.com</p>
+    <p class="graf graf--p">gps.gov</p>
+    <p class="graf graf--p">latlong.net</p>
+    <p class="graf graf--p">gps-coordinates.net</p>
+    <p class="graf graf--p">gps-coordinates.org</p>
+    <p class="graf graf--p">geoplaner.com</p>
+    <p class="graf graf--p">findlatitudeandlongitude.com</p>
+    <p class="graf graf--p">map-gps-coordinates.com</p>
+    <p class="graf graf--p">itilog.com</p>
+    <p class="graf graf--p">▶️ <strong>
+    搜在线报纸
+   </strong> ：</p>
+    <p class="graf graf--p">newspapersglobal.com</p>
+    <p class="graf graf--p">newspaperabstracts.com</p>
+    <p class="graf graf--p">newspapers101.com</p>
+    <p class="graf graf--p">newspaperlists.com</p>
+    <p class="graf graf--p">usanewspapers.com</p>
+    <p class="graf graf--p">newspapers-usa.com</p>
+    <p class="graf graf--p">world-newspapers.com</p>
+    <p class="graf graf--p">findnewspapers.com</p>
+    <p class="graf graf--p">us-newspapers-online.com</p>
+    <p class="graf graf--p">newslink.org</p>
+    <p class="graf graf--p">▶️ <strong>
+    telegram 情报
+   </strong></p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.iyouport.org/%e6%8c%96%e6%8e%98-whatsapp-%e6%83%85%e6%8a%a5%e7%9a%84%e6%8a%80%e6%9c%af%e5%92%8c%e6%8a%80%e5%b7%a7/" href="https://www.iyouport.org/%e6%8c%96%e6%8e%98-whatsapp-%e6%83%85%e6%8a%a5%e7%9a%84%e6%8a%80%e6%9c%af%e5%92%8c%e6%8a%80%e5%b7%a7/" rel="noopener noreferrer" target="_blank"> WhatsApp 群组被谷歌挖出 </a> 震惊了很多人，其实 telegram 也可以使用 dorks，这样:</p>
+    <p class="graf graf--p">site:t.me [username]</p>
+    <p class="graf graf--p">site:telegram.im [channel]</p>
+    <p class="graf graf--p">site:tglist.co [search terms] ‘机器人社区频道’</p>
+    <p class="graf graf--p">site:telegram.me messenger</p>
+    <p class="graf graf--p">site:tgram.io [group]</p>
+    <p class="graf graf--p">▶️ <strong>
+    telegram 搜索工具
+   </strong> ：</p>
+    <p class="graf graf--p">搜一切 qilyzem.com</p>
+    <p class="graf graf--p">搜频道 telegramchannels.me</p>
+    <p class="graf graf--p">搜群组 telegram-group.com/en/</p>
+    <p class="graf graf--p">深度搜索 search.buzz.im</p>
+    <p class="graf graf--p">搜帖子 tgstat.ru/en/search/</p>
+    <p class="graf graf--p">▶️ <strong>
+    API 搜索
+   </strong> apisio.scalingo.io</p>
+    <p class="graf graf--p">▶️ <strong>
+    API Directories
+   </strong></p>
+    <p class="graf graf--p">apis.guru/browse-apis/</p>
+    <p class="graf graf--p">api-rest.com/apis/discover</p>
+    <p class="graf graf--p">any-api.com</p>
+    <p class="graf graf--p">apilist.fun</p>
+    <p class="graf graf--p">api-search.io</p>
+    <p class="graf graf--p">apiforthat.com</p>
+    <p class="graf graf--p">▶️ <strong>
+    搜监视摄像头
+   </strong></p>
+    <p class="graf graf--p">听说很多读者对窥探监视摄像头更感兴趣。是的，Shodan 可以做到，但要想熟练使用它，可能需要一些基础。事实上在线查找网络摄像头的工具和技术方法非常多，包括 Evans 曾经推荐过的最 <a class="markup--anchor markup--p-anchor" data-href="https://twitter.com/DonEvansWm/status/1214490944860381184" href="https://twitter.com/DonEvansWm/status/1214490944860381184" rel="noopener noreferrer" target="_blank"> 简单的 dorks </a> 都可以做到。</p>
+    <ul class="postList">
+      <li class="graf graf--li">不要错过《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/" href="https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/" rel="noopener noreferrer" target="_blank"> 搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 </a> 》</li>
+    </ul>
+    <p class="graf graf--p">以下是一个列表，帮您总结一下 **网络摄像头搜索工具**：也许仍不全面，但都可以使用。</p>
+    <p class="graf graf--p">如今是遍地监视摄像头的时代，相关调查工具的开发也处于热潮中。</p>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-13205 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=1100%2C1114&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?w=1226&amp;ssl=1 1226w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=296%2C300&amp;ssl=1 296w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=1011%2C1024&amp;ssl=1 1011w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=768%2C778&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=1100%2C1114&amp;ssl=1 1100w" data-recalc-dims="1" height="1114" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=1100%2C1114&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-13205" data-recalc-dims="1" height="1114" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=1100%2C1114&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?w=1226&amp;ssl=1 1226w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=296%2C300&amp;ssl=1 296w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=1011%2C1024&amp;ssl=1 1011w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=768%2C778&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2020/03/unnamed-file-3.png?resize=1100%2C1114&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p">上图中这本书在这里下载： <a class="markup--anchor markup--p-anchor" data-href="https://t.me/iyouport/7042" href="https://t.me/iyouport/7042" rel="nofollow noopener noreferrer" target="_blank"> https://t.me/iyouport/7042 </a></p>
+    <p class="graf graf--p">列表：</p>
+    <p class="graf graf--p">hereinreality.com/webcams/</p>
+    <p class="graf graf--p">webcamtaxi.com/en/</p>
+    <p class="graf graf--p">webcam.nl</p>
+    <p class="graf graf--p">worldcams.tv</p>
+    <p class="graf graf--p">world-webcams.nsspot.net</p>
+    <p class="graf graf--p">kroooz-cams.com</p>
+    <p class="graf graf--p">webcamsmania.com</p>
+    <p class="graf graf--p">camhacker.com</p>
+    <p class="graf graf--p">opentopia.com</p>
+    <p class="graf graf--p">camvista.com</p>
+    <p class="graf graf--p">webcamhopper.com</p>
+    <p class="graf graf--p">camsecure.co.uk</p>
+    <p class="graf graf--p">webcamsabroad.com</p>
+    <p class="graf graf--p">public-camera.com/en/</p>
+    <p class="graf graf--p">mylivestreams.com</p>
+    <p class="graf graf--p">pictimo.com</p>
+    <p class="graf graf--p">livefromiceland.is</p>
+    <p class="graf graf--p">the-webcam-network.com</p>
+    <p class="graf graf--p">iplivecams.com</p>
+    <p class="graf graf--p">ip-24.net</p>
+    <p class="graf graf--p">leonardsworlds.com</p>
+    <p class="graf graf--p">whatsupcams.com/en/</p>
+    <p class="graf graf--p">wxyzwebcams.com</p>
+    <p class="graf graf--p">webcamlocator.com</p>
+    <p class="graf graf--p">123webcam.com</p>
+    <p class="graf graf--p">goandroam.com</p>
+    <p class="graf graf--p">hdontap.com</p>
+    <p class="graf graf--p">city-webcams.com</p>
+    <p class="graf graf--p">camscape.com</p>
+    <p class="graf graf--p">gobefore.me</p>
+    <p class="graf graf--p">explorewebcams.com</p>
+    <p class="graf graf--p">hereinreality.com/webcams/</p>
+    <p class="graf graf--p">myworldwebcams.com</p>
+    <p class="graf graf--p">liveincam.com</p>
+    <p class="graf graf--p">geocam.ru/en/</p>
+    <p class="graf graf--p">onlinewebcameras.com</p>
+    <p class="graf graf--p">webcambiglook.com</p>
+    <p class="graf graf--p">bit.ly/37M3Qou</p>
+    <p class="graf graf--p">cse.google.com/cse?cx=partner-pub-2526982841387487:1817040253&amp;ie=UTF-8</p>
+    <p class="graf graf--p">cse.google.com/cse?cx=004985303091853907970:enq82n069w8</p>
+    <p class="graf graf--p">👉 “新生情报工具” 系列收纳在 <a class="markup--anchor markup--p-anchor" data-href="https://start.me/p/1kod2L/iyp-direct-action-5" href="https://start.me/p/1kod2L/iyp-direct-action-5" rel="noopener noreferrer" target="_blank"> &lt;列表-5 “直接行动” 中的 “开源情报”&gt; </a> 部分，于是，您知道它的目的。</p>
+    <p class="graf graf--p">▶️ <strong>
+    卫星图像搜索工具
+   </strong> ：</p>
+    <p class="graf graf--p">zoom.earth</p>
+    <p class="graf graf--p">search.landinfo.com</p>
+    <p class="graf graf--p">terrapattern.com</p>
+    <p class="graf graf--p">earthexplorer.usgs.gov</p>
+    <p class="graf graf--p">search.remotepixel.ca</p>
+    <p class="graf graf--p">worldview.earthdata.nasa.gov</p>
+    <p class="graf graf--p">apps.sentinel-hub.com/eo-browser/</p>
+    <p class="graf graf--p">discover.digitalglobe.com</p>
+    <p class="graf graf--p">imagery.geocento.com</p>
+    <p class="graf graf--p">▶️ <strong>
+    Wi-Fi 搜索引擎
+   </strong> ：</p>
+    <p class="graf graf--p">instabridge.com/free-wifi/</p>
+    <p class="graf graf--p">wiman.me</p>
+    <p class="graf graf--p">freewifinearbyme.com</p>
+    <p class="graf graf--p">wififreespot.com</p>
+    <p class="graf graf--p">wigle.net</p>
+    <p class="graf graf--p">wifimap.io</p>
+    <p class="graf graf--p">globalconnectwifi.com/hotspot-finder</p>
+    <p class="graf graf--p">hotspothaven.com</p>
+    <p class="graf graf--p">▶️ <strong>
+    GPS搜索工具
+   </strong> ：</p>
+    <p class="graf graf--p">whatsmygps.com</p>
+    <p class="graf graf--p">mapcoordinates.net/en</p>
+    <p class="graf graf--p">geoplaner.com</p>
+    <p class="graf graf--p">latitude.to</p>
+    <p class="graf graf--p">gps-latitude-longitude.com</p>
+    <p class="graf graf--p">getlatlong.net</p>
+    <p class="graf graf--p">itilog.com</p>
+    <p class="graf graf--p">gps-coordinates.net</p>
+    <p class="graf graf--p">twcc.fr/en/</p>
+    <p class="graf graf--p">▶️ <strong>
+    IOT 搜索引擎查找可以用来攻击的设备
+   </strong> — — 黑客侦查第一步：</p>
+    <p class="graf graf--p">shodan.io</p>
+    <p class="graf graf--p">thingful.net</p>
+    <p class="graf graf--p">censys.io</p>
+    <p class="graf graf--p">onyphe.io</p>
+    <p class="graf graf--p">zoomeye.org</p>
+    <p class="graf graf--p">不要错过 “黑客主义行动力” 系列：</p>
+    <ul class="postList">
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/mr-robot-%e5%a6%82%e4%bd%95%e6%91%a7%e6%af%81%e9%82%aa%e6%81%b6%e5%85%ac%e5%8f%b8%ef%bc%9f-%e9%bb%91%e5%ae%a2%e4%b8%bb%e4%b9%89%e8%a1%8c%e5%8a%a8%e5%8a%9b%ef%bc%881%ef%bc%89/" href="https://www.iyouport.org/mr-robot-%e5%a6%82%e4%bd%95%e6%91%a7%e6%af%81%e9%82%aa%e6%81%b6%e5%85%ac%e5%8f%b8%ef%bc%9f-%e9%bb%91%e5%ae%a2%e4%b8%bb%e4%b9%89%e8%a1%8c%e5%8a%a8%e5%8a%9b%ef%bc%881%ef%bc%89/" rel="noopener noreferrer" target="_blank"> Mr.Robot 如何摧毁邪恶公司？- 黑客主义行动力（1） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/elliot-%e5%a6%82%e4%bd%95%e9%aa%87%e5%ae%a2%e9%82%aa%e6%81%b6%e5%85%ac%e5%8f%b8%e5%b9%b6%e4%bf%9d%e8%af%81%e6%97%a0%e6%b3%95%e8%a2%ab%e5%8f%8d%e5%90%91%e8%bf%bd%e8%b8%aa%ef%bc%9a%e9%bb%91%e5%ae%a2/" href="https://www.iyouport.org/elliot-%e5%a6%82%e4%bd%95%e9%aa%87%e5%ae%a2%e9%82%aa%e6%81%b6%e5%85%ac%e5%8f%b8%e5%b9%b6%e4%bf%9d%e8%af%81%e6%97%a0%e6%b3%95%e8%a2%ab%e5%8f%8d%e5%90%91%e8%bf%bd%e8%b8%aa%ef%bc%9a%e9%bb%91%e5%ae%a2/" rel="noopener noreferrer" target="_blank"> Elliot 如何骇客邪恶公司并保证无法被反向追踪：黑客主义行动力（2） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e5%85%a8%e9%9d%a2%e9%97%b4%e8%b0%8d%e4%bb%bb%e4%bd%95%e4%ba%ba%e7%9a%84%e6%99%ba%e8%83%bd%e6%89%8b%e6%9c%ba%e7%a7%81%e5%af%86%e6%b4%bb%e5%8a%a8%e2%80%8a-%e2%80%8a%e9%bb%91%e5%ae%a2/" href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e5%85%a8%e9%9d%a2%e9%97%b4%e8%b0%8d%e4%bb%bb%e4%bd%95%e4%ba%ba%e7%9a%84%e6%99%ba%e8%83%bd%e6%89%8b%e6%9c%ba%e7%a7%81%e5%af%86%e6%b4%bb%e5%8a%a8%e2%80%8a-%e2%80%8a%e9%bb%91%e5%ae%a2/" rel="noopener noreferrer" target="_blank"> 如何全面间谍任何人的智能手机私密活动 — 黑客主义行动力（3） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e5%9c%a8%e9%9f%b3%e9%a2%91%e6%96%87%e4%bb%b6%e4%b8%ad%e9%9a%90%e8%97%8f%e7%a7%98%e5%af%86%e4%bf%a1%e6%81%af%ef%bc%9a%e9%bb%91%e5%ae%a2%e4%b8%bb%e4%b9%89%e8%a1%8c%e5%8a%a8%e5%8a%9b/" href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e5%9c%a8%e9%9f%b3%e9%a2%91%e6%96%87%e4%bb%b6%e4%b8%ad%e9%9a%90%e8%97%8f%e7%a7%98%e5%af%86%e4%bf%a1%e6%81%af%ef%bc%9a%e9%bb%91%e5%ae%a2%e4%b8%bb%e4%b9%89%e8%a1%8c%e5%8a%a8%e5%8a%9b/" rel="noopener noreferrer" target="_blank"> 如何在音频文件中隐藏秘密信息：黑客主义行动力（4） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e7%a0%b4%e8%a7%a3%e8%93%9d%e7%89%99%e6%89%93%e5%bc%80%e7%9b%91%e7%8b%b1%e5%a4%a7%e9%97%a8%ef%bc%9a%e9%bb%91%e5%ae%a2%e4%b8%bb%e4%b9%89%e8%a1%8c%e5%8a%a8%e5%8a%9b%ef%bc%885%ef%bc%89/" href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e7%a0%b4%e8%a7%a3%e8%93%9d%e7%89%99%e6%89%93%e5%bc%80%e7%9b%91%e7%8b%b1%e5%a4%a7%e9%97%a8%ef%bc%9a%e9%bb%91%e5%ae%a2%e4%b8%bb%e4%b9%89%e8%a1%8c%e5%8a%a8%e5%8a%9b%ef%bc%885%ef%bc%89/" rel="noopener noreferrer" target="_blank"> 如何破解蓝牙打开监狱大门：黑客主义行动力（5） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e8%9e%8d%e5%8c%96-%e6%89%80%e6%9c%89%e5%80%ba%e5%8a%a1-%e5%a6%82%e4%bd%95%e6%9e%84%e5%bb%ba%e9%bb%91%e5%ae%a2%e6%a0%91%e8%8e%93%e6%b4%be-%e9%bb%91%e5%ae%a2%e4%b8%bb/" href="https://www.iyouport.org/%e8%9e%8d%e5%8c%96-%e6%89%80%e6%9c%89%e5%80%ba%e5%8a%a1-%e5%a6%82%e4%bd%95%e6%9e%84%e5%bb%ba%e9%bb%91%e5%ae%a2%e6%a0%91%e8%8e%93%e6%b4%be-%e9%bb%91%e5%ae%a2%e4%b8%bb/" rel="noopener noreferrer" target="_blank"> ”融化” 所有债务 ……如何构建黑客树莓派 — 黑客主义行动力（6） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e5%85%85%e5%88%86%e4%ba%86%e8%a7%a3%e4%bd%a0%e7%9a%84%e6%94%bb%e5%87%bb%e7%9b%ae%e6%a0%87%ef%bc%9a%e8%bf%9b%e8%a1%8c%e7%94%b5%e5%ad%90%e9%82%ae%e4%bb%b6%e4%be%a6%e6%9f%a5%e7%9a%84%e7%ae%80%e5%8d%95/" href="https://www.iyouport.org/%e5%85%85%e5%88%86%e4%ba%86%e8%a7%a3%e4%bd%a0%e7%9a%84%e6%94%bb%e5%87%bb%e7%9b%ae%e6%a0%87%ef%bc%9a%e8%bf%9b%e8%a1%8c%e7%94%b5%e5%ad%90%e9%82%ae%e4%bb%b6%e4%be%a6%e6%9f%a5%e7%9a%84%e7%ae%80%e5%8d%95/" rel="noopener noreferrer" target="_blank"> 充分了解你的攻击目标：进行电子邮件侦查的简单方法 — 黑客主义行动力（7） </a> 》</li>
+      <li class="graf graf--li">《 <a class="markup--anchor markup--li-anchor" data-href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e8%8e%b7%e5%8f%96%e4%bb%bb%e4%bd%95%e4%ba%ba%e7%9a%84wi-fi%e5%af%86%e7%a0%81%e8%80%8c%e6%97%a0%e9%9c%80%e7%a0%b4%e8%a7%a3%ef%bc%9a%e9%bb%91%e5%ae%a2%e4%b8%bb%e4%b9%89%e8%a1%8c/" href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e8%8e%b7%e5%8f%96%e4%bb%bb%e4%bd%95%e4%ba%ba%e7%9a%84wi-fi%e5%af%86%e7%a0%81%e8%80%8c%e6%97%a0%e9%9c%80%e7%a0%b4%e8%a7%a3%ef%bc%9a%e9%bb%91%e5%ae%a2%e4%b8%bb%e4%b9%89%e8%a1%8c/" rel="noopener noreferrer" target="_blank"> 如何获取任何人的Wi-Fi密码而无需破解：黑客主义行动力（8） </a> 》</li>
+      <li class="graf graf--li">持续更新中</li>
+    </ul>
+    <p class="graf graf--p">▶️ <strong>
+    搜索数据集的工具
+   </strong> ：</p>
+    <p class="graf graf--p">gapminder.org</p>
+    <p class="graf graf--p">search.openedition.org</p>
+    <p class="graf graf--p">data.worldbank.org</p>
+    <p class="graf graf--p">webdatacommons.org</p>
+    <p class="graf graf--p">openpaymentsdata.cms.gov</p>
+    <p class="graf graf--p">zenodo.org</p>
+    <p class="graf graf--p">public.enigma.com</p>
+    <p class="graf graf--p">visualdata.io</p>
+    <p class="graf graf--p">datasetlist.com</p>
+    <p class="graf graf--p">gdeltproject.org/data.html</p>
+    <p class="graf graf--p">datausa.io</p>
+    <p class="graf graf--p">datahub.io/search</p>
+    <p class="graf graf--p">registry.opendata.aws</p>
+    <p class="graf graf--p">openicpsr.org/openicpsr/</p>
+    <p class="graf graf--p">opendatani.gov.uk</p>
+    <p class="graf graf--p">opendatanetwork.com</p>
+    <p class="graf graf--p">data.oecd.org</p>
+    <p class="graf graf--p">msropendata.com</p>
+    <p class="graf graf--p">datasearch.gesis.org</p>
+    <p class="graf graf--p">figshare.com</p>
+    <p class="graf graf--p">dataone.org</p>
+    <p class="graf graf--p">data.europa.eu/euodp/en/home</p>
+    <p class="graf graf--p">search.datacite.org</p>
+    <p class="graf graf--p">opendata.cern.ch</p>
+    <p class="graf graf--p">dataportals.org</p>
+    <p class="graf graf--p">academictorrents.com</p>
+    <p class="graf graf--p">datasetsearch.research.google.com</p>
+    <p class="graf graf--p">data.gov</p>
+    <p class="graf graf--p">usgs.koordinates.com</p>
+    <p class="graf graf--p">geoseer.net</p>
+    <p class="graf graf--p">好啦，今天就是这样！玩得开心～ 下次见。⚪️</p>
+    <p class="graf graf--p"><em>
+    —— 持续更新中 ——
+   </em></p>
+    <div id="atatags-1611829871-5f43b26410b06"></div>
+    <div class="sharedaddy sd-sharing-enabled">
+      <div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing">
+        <h3 class="sd-title" id="section-3"> 共享此文章： </h3>
+        <div class="sd-content">
+          <ul>
+            <li class="share-twitter"><a class="share-twitter sd-button share-icon no-text" data-shared="sharing-twitter-13200" href="https://www.iyouport.org/%e6%90%9c%e7%94%b5%e5%bd%b1%e3%80%81%e4%b9%a6%e3%80%81%e5%bc%80%e6%94%be%e8%af%be%e7%a8%8b%e3%80%81twitterlists%e3%80%81gps%e3%80%81%e6%8c%96skype%e3%80%81%e5%bc%80%e6%ba%90%e6%83%85%e6%8a%a5%e8%99%9a/?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="点击以在 Twitter 上共享"> <span> </span> <span class="sharing-screen-reader-text"> 点击以在 Twitter 上共享（在新窗口中打开） </span> </a></li>
+            <li class="share-facebook"><a class="share-facebook sd-button share-icon no-text" data-shared="sharing-facebook-13200" href="https://www.iyouport.org/%e6%90%9c%e7%94%b5%e5%bd%b1%e3%80%81%e4%b9%a6%e3%80%81%e5%bc%80%e6%94%be%e8%af%be%e7%a8%8b%e3%80%81twitterlists%e3%80%81gps%e3%80%81%e6%8c%96skype%e3%80%81%e5%bc%80%e6%ba%90%e6%83%85%e6%8a%a5%e8%99%9a/?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="点击以在 Facebook 上共享"> <span> </span> <span class="sharing-screen-reader-text"> 点击以在 Facebook 上共享（在新窗口中打开） </span> </a></li>
+            <li class="share-end"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-161182987-13200-5f43b264117df" data-src="https://widgets.wp.com/likes/#blog_id=161182987&amp;post_id=13200&amp;origin=www.iyouport.org&amp;obj_id=161182987-13200-5f43b264117df" id="like-post-wrapper-161182987-13200-5f43b264117df">
+      <h3 class="sd-title" id="section-4"> 赞过： </h3>
+      <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+<span class="button"> <span> 赞 </span> </span> <span class="loading"> 正在加载…… </span>
+      </div>
+ <span class="sd-text-color"> </span> <a class="sd-link-color">
+   </a>
+    </div>
+    <div class="jp-relatedposts" id="jp-relatedposts">
+      <h3 class="jp-relatedposts-headline" id="section-5"> <em>
+     相关
+    </em> </h3>
+    </div>
+  </div>
+  <div class="entry-footer">
+    <ul class="post-tags light-text">
+      <li>Tagged</li>
+      <li><a href="https://www.iyouport.org/tag/investigations/" rel="tag"> Investigations </a></li>
+      <li><a href="https://www.iyouport.org/tag/osint/" rel="tag"> OSINT </a></li>
+      <li><a href="https://www.iyouport.org/tag/technology/" rel="tag"> Technology </a></li>
+      <li><a href="https://www.iyouport.org/tag/tools/" rel="tag"> tools </a></li>
+    </ul>
+  </div>
+  <div class="entry-author-wrapper">
+    <div class="site-posted-on">
+<strong>
+    Published
+   </strong>       <time class="entry-date published" datetime="2020-08-07T00:02:49+08:00"> 2020年8月7日 </time>
+      <time class="updated" datetime="2020-03-19T02:01:10+08:00"> 2020年3月19日 </time>
+    </div>
+  </div>
+</article>
+
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#iYouPort 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-07-15/%E5%BD%93%E6%B0%91%E4%B8%BB%E5%A4%B1%E8%B4%A5-%E5%B7%AB%E6%9C%AF%E8%93%AC%E5%8B%83%E5%8F%91%E5%B1%95-%E6%81%B6%E9%AD%94%E5%9B%B0%E6%89%B0%E7%9A%84%E5%9C%9F%E5%9C%B0-iYouPort/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-10-11/%E7%BD%91%E7%BB%9C-%E6%B0%B4%E5%86%9B-%E7%9A%84%E5%B8%83%E5%B1%80-iYouPort/">最早</a>--</span>
+    
+      <li>
+        <time>2020-08-06</time>
+        <a href="https://nodebe4.github.io/oped2/2020-08-06/%E6%B4%BB%E4%B8%8B%E5%8E%BB%E9%9C%80%E8%A6%81%E5%BE%88%E5%A4%9A%E7%9F%A5%E8%AF%86%E5%92%8C%E6%8A%80%E8%83%BD-%E5%9C%A8%E7%81%BE%E9%9A%BE%E4%B8%AD%E5%B9%B8%E5%AD%98%E7%9A%84%E6%96%B9%E6%B3%95-1-%E4%B8%83%E7%82%B9%E8%A7%84%E5%88%99%E5%92%8C%E6%80%81%E5%8A%BF%E6%84%9F%E7%9F%A5-iYouPort/">
+          活下去需要很多知识和技能：在灾难中幸存的方法（1）- 七点规则和态势感知 - iYouPort
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-08-06</time>
+        <a href="https://nodebe4.github.io/oped2/2020-08-06/%E5%A6%82%E4%BD%95%E5%9C%A8Mac%E4%B8%8A%E5%8A%A0%E5%AF%86PDF-iYouPort/">
+          如何在Mac上加密PDF - iYouPort
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-08-06</time>
+        <a href="https://nodebe4.github.io/oped2/2020-08-06/%E6%83%B3%E5%81%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E5%90%97-6%E7%A7%8D%E5%B7%A5%E5%85%B7%E5%B8%AE%E6%82%A8%E5%AE%9E%E7%8E%B0%E8%BF%99%E7%82%B9-iYouPort/">
+          想做自己的电子游戏吗？6种工具帮您实现这点 - iYouPort
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2020-08-05</time>
+        <a href="https://nodebe4.github.io/oped2/2020-08-05/%E5%8F%AA%E6%9C%89%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87-%E8%BF%BD%E8%B8%AA%E7%9B%AE%E6%A0%87%E4%BA%BA%E7%9A%84%E9%95%BF%E9%80%94%E8%A1%8C%E8%B8%AA-%E6%A1%88%E4%BE%8B%E6%BC%94%E7%A4%BA-iYouPort/">
+          只有一张照片，追踪目标人的长途行踪：案例演示 - iYouPort
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2020-08-06/%E6%83%B3%E5%81%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E5%90%97-6%E7%A7%8D%E5%B7%A5%E5%85%B7%E5%B8%AE%E6%82%A8%E5%AE%9E%E7%8E%B0%E8%BF%99%E7%82%B9-iYouPort/">
+            前一篇：想做自己的电子游戏吗？6种工具帮您实现这点 - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2020-08-06/%E5%A6%82%E4%BD%95%E5%9C%A8Mac%E4%B8%8A%E5%8A%A0%E5%AF%86PDF-iYouPort/">
+            後一篇：如何在Mac上加密PDF - iYouPort
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2020-08-06/%E6%83%B3%E5%81%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E5%90%97-6%E7%A7%8D%E5%B7%A5%E5%85%B7%E5%B8%AE%E6%82%A8%E5%AE%9E%E7%8E%B0%E8%BF%99%E7%82%B9-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2020-08-06/%E5%A6%82%E4%BD%95%E5%9C%A8Mac%E4%B8%8A%E5%8A%A0%E5%AF%86PDF-iYouPort/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2020-08-06/%E5%A6%82%E4%BD%95%E5%9C%A8Mac%E4%B8%8A%E5%8A%A0%E5%AF%86PDF-iYouPort/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2020-08-06/%E6%83%B3%E5%81%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E5%90%97-6%E7%A7%8D%E5%B7%A5%E5%85%B7%E5%B8%AE%E6%82%A8%E5%AE%9E%E7%8E%B0%E8%BF%99%E7%82%B9-iYouPort/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2020-08-06/%E6%83%B3%E5%81%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E5%90%97-6%E7%A7%8D%E5%B7%A5%E5%85%B7%E5%B8%AE%E6%82%A8%E5%AE%9E%E7%8E%B0%E8%BF%99%E7%82%B9-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2020-08-06/%E5%A6%82%E4%BD%95%E5%9C%A8Mac%E4%B8%8A%E5%8A%A0%E5%AF%86PDF-iYouPort/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<iYouPort>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2020-08-06/%E5%A6%82%E4%BD%95%E5%9C%A8Mac%E4%B8%8A%E5%8A%A0%E5%AF%86PDF-iYouPort/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<iYouPort>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2020-08-06/%E6%83%B3%E5%81%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E5%90%97-6%E7%A7%8D%E5%B7%A5%E5%85%B7%E5%B8%AE%E6%82%A8%E5%AE%9E%E7%8E%B0%E8%BF%99%E7%82%B9-iYouPort/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

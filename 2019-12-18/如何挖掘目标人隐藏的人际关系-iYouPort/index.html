@@ -1,0 +1,11587 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>如何挖掘目标人隐藏的人际关系？ - iYouPort – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+  
+     如何挖掘目标人隐藏的人际关系？ 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  关于 Facebook  ,  技术防身/自我保护方法  ,  给行动者的护身符和武器             2019年12月19日 
+          2019年9月18日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       介绍一个自动化的情报挖掘工具
+      
+      
+    
+           
+  
+      
+
+    再次提醒：请注意这些进攻性知识自带的防御功能 —— 如果你不想被那些恶意者挖掘到隐情，要就要首先知道恶意者是怎么做的，然后有针对性地避免 ……  
+     开源情报栏目
+      
+    中介绍的所有工具都应该被这样使用
+    。
+    ⚠️Facebook、谷歌这类监视资本主义寡头的服务都是开源情报的金矿。因为他们知道得太多了 + 人们在使用它们的过程中太不小心了。
+    Facebook 为其用户提供了限制其朋友列表可见性的功能。但是，众所周知，通过利用“共同朋友”功能，可以在某些条件下绕过可见性限制。
+    本指南将提供一种方法和工具来自动化该过程，以便最大化可以找到的隐藏朋友的数量。
+    ⚠️请注意： 
+    社交媒体上的人际关系网络是连锅端的基本依据
+    —— 如果您有重要的敏感的人际关系，切勿令其在社交媒体上可见：
+           
+  
+      
+
+    此外，使用相同的工具，你将看到如何构建所发现的人际网络关系图，以直观的方式呈现隐秘的信息。
+    本指南还将介绍如何使用 Gephi 工具 
+    绘制图谱
+    ，并提出一种方法来 
+    识别
+    图谱中的子社区。
+    最后，本指南会将该调查过程应用于一个实际的示例场景：检索 Mark Zuckerberg 隐藏的人际关系网络，在图表上绘制这些关系，识别子社区，并以可使用浏览器探索的格式导出最终调查结果。
+    我们演示过挖掘 Facebook 的政治旋转门，还记得吗？在这里回顾：《  深层政治：Facebook金字塔的人形肌理 — — 仅仅依靠开源数据，扒开利维坦的内裤  》。
+    ⚠️这种方法可以用在任何人身上。
+    
+      
+     弱者要隐私，强者要透明
+    
+    
+           
+  
+      
+
+    
+    免责声明
+    ：本指南和相关开源情报文章中提供的所有知识仅用于教育目的。对任何形式的滥用本网不承担任何责任。
+    下面开始。
+    
+    重建隐藏的朋友列表
+   
+    Facebook 允许其用户决定是否在他们的个人资料页面显示他们自己的朋友、以及向谁显示。在设置页面中，它还会显示以下警告：
+    
+      Remember, your friends control who can see their friendships on their own Timelines. If people can see your friendship on another timeline, they’ll be able to see it in News Feed, search and other places on Facebook. If you set this to Only me, only you will be able to see your full friends list on your timeline. Other people will see only mutual friends.
+    
+    这是因为 Facebook 还提供“共同朋友”功能，前提是其中至少有一个人的“朋友”列表对当前用户可见。
+    这个问题多年来一直为人所知，但该公司不关注这个问题。
+    该功能位于URL： 
+    https://www.facebook.com/browse/mutual_friends/?uid=
+    
+    
+     ID1
+    
+    
+    &amp;node=
+    
+    
+     ID2；
+    
+    其中 ID1 和 ID2 是两个 Facebook 帐户的数字ID。稍后我们将介绍如何找到任何用户的 Facebook ID。
+    请注意， 
+    Facebook 返回的结果既不完整也不一致
+    。
+    从不同位置或帐户调用相同的功能可能会产生不同的结果。
+    由于“共同朋友”的功能，可以重建目标用户的好友列表的很大一部分：给定一个已知当前用户可以看到他们的朋友列表的帐户，并且，至少有一个与目标用户的共同朋友（称为 
+    枢纽用户
+    ），从他们的共同朋友开始， 
+    可以迭代地应用共同朋友功能，使用在每个步骤中找到的所有“新朋友”作为另一个迭代的输入，直到达到函数的固定点为止
+    。
+    为了展示这种方法的潜力，Mattia Vinci 编写了一个简单的 Python 工具，它将 
+    自动执行上述过程
+    。
+    请注意，Facebook 服务条款禁止未经许可进行抓取：因此，未经适当授权，您不得使用该工具。
+    该工具名为 ffff，可以  从Github下载  。
+    它是用 Python 3 编写的，并使用 selenium 库和 Mozilla geckodriver 来打开浏览器并递归访问共同朋友页面。
+    它会继续跟踪找到的关系，以便构建关系网络图（稍后会有详细介绍）。
+    ⚠️为了不被 Facebook 检测到抓取，该工具在每个请求之间暂停一个随机的秒数；这个间隔可以减少，但如果太少就有被平台阻挡的风险。
+    在该过程结束时，它会生成一个csv文件，其中包含找到的朋友列表，以及一个包含相关图表的gexf文件。
+    
+    建立人际关系网络图
+   
+    在进行上述调查的过程中你还可以 
+    保持跟踪目标的朋友之间存在的关系
+    。
+    如果你发现目标用户T和枢纽用户P有一个共同的朋友C，那么，现在你不仅知道C是目标的朋友，而且P和C都是朋友。
+    迭代这个过程，你就能够 
+    构建一个沿途找到的所有人际关系的网络图
+    ，其中节点是用户，连线是现有的关系。
+    一旦有了图表，就可以在其上 
+    运行不同的算法
+    ，以便尝试识别网络中的现有社区。例如，在实际情况中，这可能有助于识别工作同事、家人、最亲密朋友等不同的社区。
+    
+    实际案例：扎克伯格的朋友圈
+   
+    举个例子，我们将尝试获取一些 Mark Zuckerberg 的 Facebook 朋友，他们肯定知道这种可能性。
+    请注意，您显然可以使用公共朋友列表构建用户的关系图：在这种情况下，您不需要透视用户；只需使用他/她的 Facebook ID 作为目标和支点。
+    
+    找到目标的 Facebook ID
+   
+    首先需要了解 Mark Zuckerberg 的 Facebook ID。为了找到 Facebook 帐户的数字ID，有多种方法：  简单的 Google 搜索  就可以返回许多相关在线服务。
+    不过，本指南最喜欢的方法是 
+    自主执行
+    ：在浏览器中打开目标的 Facebook 个人资料页面（在示例中是  Mark Zuckerberg  ）并检查HTML源码（Ctrl + U）。
+    在代码中，搜索（Ctrl + F）： fb：// profile /; 应该有两个匹配，后跟相同的整数值： 
+    这个数字就是 Facebook 帐户 ID
+    。
+    在本指南的例子中，由于 Mark Zuckerberg 是该平台的首批用户之一，因此这个数字很小（是 4）；普通用户的数字会比较大。
+    
+       
+  
+      
+      
+Finding Facebook ID from the source code
+      
+    
+    
+    寻找枢纽用户
+   
+    你还需要找到至少 
+    一个拥有公开朋友列表的帐户
+    （或对你来说朋友列表可见的账户）、以及至少 
+    一个与你的调查目标相关的共同朋友
+    。
+    通常，一个便捷的方法是查看与目标进行交互的用户，例如通过评论或回应他帖子的人。
+    还要注意，为了最大化找到的“朋友”的数量， 
+    最好让枢纽用户属于不同的社区
+    （例如：工作同事、家庭成员、体育运动伙伴等）越多越好。
+    Mattia Vinci 编写了一个辅助脚本，可以自动查找与给定的目标进行交互的用户；它被称为 fint.py 就包含在  ffff项目的存储库中  。
+    它的工作方式与ffff相同，因此本指南将仅提供一个快速示例用法（使用 -h 显示所有可用选项）。
+    有关更多一般信息，请参阅  Github上的项目页面  。
+    python fint.py -fu [email protected] -fp fbpassword -d geckodriver.exe -t 4 -ls 10 -lp 10 -lc 5 -lr 5    
+    上面的命令将刮取最多100条评论（-lc）和最多1000条回应（-lr）的作者，在目标用户 4（-t）的最多10个故事（-ls）和10个照片（-lp）上。
+    输出是一个名为 
+    4-pivots.txt
+    的文件，其中包含一个 Facebook ID 列表，可以作为 ffff（选项 -P）的输入。
+    
+       
+  
+      
+      
+Finding potential pivots – users who have interacted with Mark Zuckerberg – using fint.py
+      
+    
+    由于本指南使用的目标是一个公众人物（扎克伯格），并且在 Facebook 方面有些特殊，所以，这里 
+    并不
+    真正关心构建他朋友列表的大部分内容，更多关注的是单个枢纽用户。
+    为了获得这一目标，我们尝试了另一种方式：简单的搜索即可返回一篇文章，其中列出了一些扎克伯格  已知的“朋友”  。
+    该名单上的第四位，Brian Chesky，目前有一个公开的朋友名单，这使其成为本测试中 
+    枢纽用户的完美候选人
+    。
+    现在需要找到他的 Facebook ID。上面已经展示了一些简单的方法。如果您对使用其中一个方法感到满意，就可以跳到以下部分了。
+    如果都不满意，这里将提出一种 
+    不同的方法来检索最初可能看起来很复杂的用户ID
+    ，但是，当您手动浏览 Facebook 网站时，它可能是速度最快的。
+    方法是这样：如果访问 Brian Chesky 的朋友列表页面，你会看到URL如下所示（对于从配置文件主菜单可以访问的任何页面都是如此，例如“about”，“photos”等）：
+    
+    https://www.facebook.com/brianchesky/friends?lst=100028395012070%3A
+    
+    
+     558259929
+    
+    
+    %3A1557309584&amp;source_ref=pb_friends_t
+   
+    正如您所看到的，URL包含一个参数“lst”，它包含由字符％3A分隔的三个不同的整数值（只是字符 
+    “:”
+    的URL编码）。
+    第二个整数就是用户ID，在本例中为 
+    558259929
+    。
+    您可以（并且应该）通过访问 https://www.facebook.com/558259929 仔细检查ID，并注意它重定向到 https://www.facebook.com/brianchesky。
+    
+       
+  
+      
+      
+Find Facebook ID inside URL
+      
+    
+    
+    用 ffff.py 找到隐藏的朋友
+   
+    本文不包括该工具的安装说明；一些信息可以在  项目页面  上找到。
+    在以下示例中，该工具在 Windows 上的虚拟环境中运行。从  官方的 mozilla  项目页面下载了geckodriver.exe（如ffff项目页面上的说明所述），并将其放在与 python 脚本相同的目录中。
+    现在需要一个有效的 Facebook 帐户来进行抓取。我建议不要使用自己的账号，因为它可能被平台阻止。
+    💡最好的是：  袜子木偶  ，创建一个与身份完全无关的测试帐户。更多见《  如何建立一个匿名 Facebook 账户以保护个人数据的私密性？  》
+    在本示例中，我们将假装该帐户的电子邮件地址为“   [email protected]   ”，密码为“fbpassword”。
+    现在拥有所需的所有信息：
+    
+      Facebook帐户邮箱（选项-fu）：  [email protected] 
+      Facebook帐户密码（选项-fp）：fbpassword
+      目标帐户ID（选项-t）：4
+      枢纽账户ID（选项-p）：558259929
+    
+    选项 -q 用于隐藏浏览器窗口。
+    python ffff.py -fu [email protected] -fp fbpassword -d geckodriver.exe -t 4 -p 558259929 -q    
+    要查看所有可用选项，请运行：python ffff.py -h
+    
+       
+  
+      
+      
+Starting the program
+      
+    
+    该程序很可能会在一段时间后遇到问题，例如超时；您可以使用 Ctrl + C 中断程序。这将保存所有结果以及可以恢复的文件：
+    python ffff.py -fu [email protected] -fp fbpassword — resume session-4–2019050812320    
+    
+       
+  
+      
+      
+Resuming a session after a time out
+      
+    
+    程序终止后，所有朋友都显示在屏幕上，并创建三个不同的文件：
+    
+      4-friends.csv
+      4-friends.gexf
+      session-4–20190508130137
+    
+    .csv 文件包含朋友列表（ID、名称、配置文件URL）；.gexf 文件包含准备在 Gephi 中打开的图表（稍后将详细介绍）；最后，session 文件可用于稍后恢复程序运行，例如，如果找到任何新的枢纽用户的话。
+    
+       
+  
+      
+      
+Program termination
+      
+    
+    
+    绘制社区图表
+   
+    接下来将使用 Gephi 软件绘制扎克伯格的朋友关系图表，可能以某种方式反映关系网络中存在的 
+    子社区的结构
+    。
+    这里绝不是 Gephi 的指南，也不是进行社区识别的最佳方式。这里只为了演示工具的使用方法。
+    首先，用 Gephi 打开 .gexf 文件。最初，它看起来像一堆凌乱的黑暗的线条和圆点。
+    
+       
+  
+      
+      
+Initial graph
+      
+    
+    从这里可以应用一些 
+    布局算法
+    ，这些算法可能有助于更深入地了解被视为社区的图表。
+    可以从“Overview tab”选项卡的左下窗口中选择布局。每个布局都有不同的参数：我建议都玩一下，看看它们的效果。
+    本指南先运行 OpenOrd，然后运行 ForceAtlas 2。
+    对于后者，我将 “Scaling” 值设置为10。结果尚不具有吸引力，但具有不同的形状。
+    
+       
+  
+      
+      
+Graph after running ForceAtlas2
+      
+    
+    现在可以尝试使用 “Modularity” 将节点划分到不同的社区，可以通过屏幕右侧的 “statistics” 部分计算。
+    在这里，你可以为“resolution”参数提供一个值：值越小，分区越多（即：更多社区）。
+    
+       
+  
+      
+      
+Partition nodes by modularity with a resolution of 0.6
+      
+    
+    现在我们可以为每个”Modularity” 
+    分配不同的颜色
+    。
+    在左上角的“外观”选项卡中，选择“节点”&gt;“分区”，并选择“Modularity Class”作为属性。 
+    这是为了更容易看懂
+    。
+    单击“Palette …”可以配置要使用的颜色。
+    单击“应用”所有节点将根据你定义的 Modularity Class 进行着色。如果您对找到的社区不满意，可以返回上一步并选择不同的参数。
+    如果对图表感到满意，请转到顶部菜单中的“预览”选项卡，然后配置最终图形的显示方式。
+    最后，您可以 
+    以您希望的格式导出它
+    。
+    
+       
+  
+      
+      
+Some of Mark Zuckerberg’s friendships
+      
+    
+    （上面的  大图在这里  ）
+    如果你想要一个交互式图表，你可以探索很多很棒的 
+    插件
+    ，可以以不同的格式导出图形。我喜欢  Sigma Exporter  ，你也可以试试。
+    
+    最后的评论
+   
+    本指南试图找到马克扎克伯格的 Facebook 朋友的一部分，尽管他的名单被隐藏了。
+    使用上述步骤，最终找到了 
+    335位
+    独特的、确认的朋友关系。并且，还能够绘制出所发现的社交关系图谱。Mediaservice.net 的算法给出了令人惊讶的结果。
+    总之，通过这一演示您可以知道， 
+    尽管 Facebook 有所谓的隐私设置，但是，依旧可以找到大多数 Facebook 用户的社交关系中很大一部分; 并且，可以在社交关系图谱中识别不同的社区。
+   
+    ffff是个有效的工具，自动化调查过程其效果是值得信任的。
+    如果您是防御者，请避免以任何方式将您的私密社交关系暴露在互联网上。⚪️
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       Activism 
+       Facebook 
+       Investigation 
+       OSINT 
+       technique 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2019年12月19日 
+       2019年9月18日 
+    
+  
+
+" />
+    <meta property="og:description" content="
+  
+     如何挖掘目标人隐藏的人际关系？ 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  关于 Facebook  ,  技术防身/自我保护方法  ,  给行动者的护身符和武器             2019年12月19日 
+          2019年9月18日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       介绍一个自动化的情报挖掘工具
+      
+      
+    
+           
+  
+      
+
+    再次提醒：请注意这些进攻性知识自带的防御功能 —— 如果你不想被那些恶意者挖掘到隐情，要就要首先知道恶意者是怎么做的，然后有针对性地避免 ……  
+     开源情报栏目
+      
+    中介绍的所有工具都应该被这样使用
+    。
+    ⚠️Facebook、谷歌这类监视资本主义寡头的服务都是开源情报的金矿。因为他们知道得太多了 + 人们在使用它们的过程中太不小心了。
+    Facebook 为其用户提供了限制其朋友列表可见性的功能。但是，众所周知，通过利用“共同朋友”功能，可以在某些条件下绕过可见性限制。
+    本指南将提供一种方法和工具来自动化该过程，以便最大化可以找到的隐藏朋友的数量。
+    ⚠️请注意： 
+    社交媒体上的人际关系网络是连锅端的基本依据
+    —— 如果您有重要的敏感的人际关系，切勿令其在社交媒体上可见：
+           
+  
+      
+
+    此外，使用相同的工具，你将看到如何构建所发现的人际网络关系图，以直观的方式呈现隐秘的信息。
+    本指南还将介绍如何使用 Gephi 工具 
+    绘制图谱
+    ，并提出一种方法来 
+    识别
+    图谱中的子社区。
+    最后，本指南会将该调查过程应用于一个实际的示例场景：检索 Mark Zuckerberg 隐藏的人际关系网络，在图表上绘制这些关系，识别子社区，并以可使用浏览器探索的格式导出最终调查结果。
+    我们演示过挖掘 Facebook 的政治旋转门，还记得吗？在这里回顾：《  深层政治：Facebook金字塔的人形肌理 — — 仅仅依靠开源数据，扒开利维坦的内裤  》。
+    ⚠️这种方法可以用在任何人身上。
+    
+      
+     弱者要隐私，强者要透明
+    
+    
+           
+  
+      
+
+    
+    免责声明
+    ：本指南和相关开源情报文章中提供的所有知识仅用于教育目的。对任何形式的滥用本网不承担任何责任。
+    下面开始。
+    
+    重建隐藏的朋友列表
+   
+    Facebook 允许其用户决定是否在他们的个人资料页面显示他们自己的朋友、以及向谁显示。在设置页面中，它还会显示以下警告：
+    
+      Remember, your friends control who can see their friendships on their own Timelines. If people can see your friendship on another timeline, they’ll be able to see it in News Feed, search and other places on Facebook. If you set this to Only me, only you will be able to see your full friends list on your timeline. Other people will see only mutual friends.
+    
+    这是因为 Facebook 还提供“共同朋友”功能，前提是其中至少有一个人的“朋友”列表对当前用户可见。
+    这个问题多年来一直为人所知，但该公司不关注这个问题。
+    该功能位于URL： 
+    https://www.facebook.com/browse/mutual_friends/?uid=
+    
+    
+     ID1
+    
+    
+    &amp;node=
+    
+    
+     ID2；
+    
+    其中 ID1 和 ID2 是两个 Facebook 帐户的数字ID。稍后我们将介绍如何找到任何用户的 Facebook ID。
+    请注意， 
+    Facebook 返回的结果既不完整也不一致
+    。
+    从不同位置或帐户调用相同的功能可能会产生不同的结果。
+    由于“共同朋友”的功能，可以重建目标用户的好友列表的很大一部分：给定一个已知当前用户可以看到他们的朋友列表的帐户，并且，至少有一个与目标用户的共同朋友（称为 
+    枢纽用户
+    ），从他们的共同朋友开始， 
+    可以迭代地应用共同朋友功能，使用在每个步骤中找到的所有“新朋友”作为另一个迭代的输入，直到达到函数的固定点为止
+    。
+    为了展示这种方法的潜力，Mattia Vinci 编写了一个简单的 Python 工具，它将 
+    自动执行上述过程
+    。
+    请注意，Facebook 服务条款禁止未经许可进行抓取：因此，未经适当授权，您不得使用该工具。
+    该工具名为 ffff，可以  从Github下载  。
+    它是用 Python 3 编写的，并使用 selenium 库和 Mozilla geckodriver 来打开浏览器并递归访问共同朋友页面。
+    它会继续跟踪找到的关系，以便构建关系网络图（稍后会有详细介绍）。
+    ⚠️为了不被 Facebook 检测到抓取，该工具在每个请求之间暂停一个随机的秒数；这个间隔可以减少，但如果太少就有被平台阻挡的风险。
+    在该过程结束时，它会生成一个csv文件，其中包含找到的朋友列表，以及一个包含相关图表的gexf文件。
+    
+    建立人际关系网络图
+   
+    在进行上述调查的过程中你还可以 
+    保持跟踪目标的朋友之间存在的关系
+    。
+    如果你发现目标用户T和枢纽用户P有一个共同的朋友C，那么，现在你不仅知道C是目标的朋友，而且P和C都是朋友。
+    迭代这个过程，你就能够 
+    构建一个沿途找到的所有人际关系的网络图
+    ，其中节点是用户，连线是现有的关系。
+    一旦有了图表，就可以在其上 
+    运行不同的算法
+    ，以便尝试识别网络中的现有社区。例如，在实际情况中，这可能有助于识别工作同事、家人、最亲密朋友等不同的社区。
+    
+    实际案例：扎克伯格的朋友圈
+   
+    举个例子，我们将尝试获取一些 Mark Zuckerberg 的 Facebook 朋友，他们肯定知道这种可能性。
+    请注意，您显然可以使用公共朋友列表构建用户的关系图：在这种情况下，您不需要透视用户；只需使用他/她的 Facebook ID 作为目标和支点。
+    
+    找到目标的 Facebook ID
+   
+    首先需要了解 Mark Zuckerberg 的 Facebook ID。为了找到 Facebook 帐户的数字ID，有多种方法：  简单的 Google 搜索  就可以返回许多相关在线服务。
+    不过，本指南最喜欢的方法是 
+    自主执行
+    ：在浏览器中打开目标的 Facebook 个人资料页面（在示例中是  Mark Zuckerberg  ）并检查HTML源码（Ctrl + U）。
+    在代码中，搜索（Ctrl + F）： fb：// profile /; 应该有两个匹配，后跟相同的整数值： 
+    这个数字就是 Facebook 帐户 ID
+    。
+    在本指南的例子中，由于 Mark Zuckerberg 是该平台的首批用户之一，因此这个数字很小（是 4）；普通用户的数字会比较大。
+    
+       
+  
+      
+      
+Finding Facebook ID from the source code
+      
+    
+    
+    寻找枢纽用户
+   
+    你还需要找到至少 
+    一个拥有公开朋友列表的帐户
+    （或对你来说朋友列表可见的账户）、以及至少 
+    一个与你的调查目标相关的共同朋友
+    。
+    通常，一个便捷的方法是查看与目标进行交互的用户，例如通过评论或回应他帖子的人。
+    还要注意，为了最大化找到的“朋友”的数量， 
+    最好让枢纽用户属于不同的社区
+    （例如：工作同事、家庭成员、体育运动伙伴等）越多越好。
+    Mattia Vinci 编写了一个辅助脚本，可以自动查找与给定的目标进行交互的用户；它被称为 fint.py 就包含在  ffff项目的存储库中  。
+    它的工作方式与ffff相同，因此本指南将仅提供一个快速示例用法（使用 -h 显示所有可用选项）。
+    有关更多一般信息，请参阅  Github上的项目页面  。
+    python fint.py -fu [email protected] -fp fbpassword -d geckodriver.exe -t 4 -ls 10 -lp 10 -lc 5 -lr 5    
+    上面的命令将刮取最多100条评论（-lc）和最多1000条回应（-lr）的作者，在目标用户 4（-t）的最多10个故事（-ls）和10个照片（-lp）上。
+    输出是一个名为 
+    4-pivots.txt
+    的文件，其中包含一个 Facebook ID 列表，可以作为 ffff（选项 -P）的输入。
+    
+       
+  
+      
+      
+Finding potential pivots – users who have interacted with Mark Zuckerberg – using fint.py
+      
+    
+    由于本指南使用的目标是一个公众人物（扎克伯格），并且在 Facebook 方面有些特殊，所以，这里 
+    并不
+    真正关心构建他朋友列表的大部分内容，更多关注的是单个枢纽用户。
+    为了获得这一目标，我们尝试了另一种方式：简单的搜索即可返回一篇文章，其中列出了一些扎克伯格  已知的“朋友”  。
+    该名单上的第四位，Brian Chesky，目前有一个公开的朋友名单，这使其成为本测试中 
+    枢纽用户的完美候选人
+    。
+    现在需要找到他的 Facebook ID。上面已经展示了一些简单的方法。如果您对使用其中一个方法感到满意，就可以跳到以下部分了。
+    如果都不满意，这里将提出一种 
+    不同的方法来检索最初可能看起来很复杂的用户ID
+    ，但是，当您手动浏览 Facebook 网站时，它可能是速度最快的。
+    方法是这样：如果访问 Brian Chesky 的朋友列表页面，你会看到URL如下所示（对于从配置文件主菜单可以访问的任何页面都是如此，例如“about”，“photos”等）：
+    
+    https://www.facebook.com/brianchesky/friends?lst=100028395012070%3A
+    
+    
+     558259929
+    
+    
+    %3A1557309584&amp;source_ref=pb_friends_t
+   
+    正如您所看到的，URL包含一个参数“lst”，它包含由字符％3A分隔的三个不同的整数值（只是字符 
+    “:”
+    的URL编码）。
+    第二个整数就是用户ID，在本例中为 
+    558259929
+    。
+    您可以（并且应该）通过访问 https://www.facebook.com/558259929 仔细检查ID，并注意它重定向到 https://www.facebook.com/brianchesky。
+    
+       
+  
+      
+      
+Find Facebook ID inside URL
+      
+    
+    
+    用 ffff.py 找到隐藏的朋友
+   
+    本文不包括该工具的安装说明；一些信息可以在  项目页面  上找到。
+    在以下示例中，该工具在 Windows 上的虚拟环境中运行。从  官方的 mozilla  项目页面下载了geckodriver.exe（如ffff项目页面上的说明所述），并将其放在与 python 脚本相同的目录中。
+    现在需要一个有效的 Facebook 帐户来进行抓取。我建议不要使用自己的账号，因为它可能被平台阻止。
+    💡最好的是：  袜子木偶  ，创建一个与身份完全无关的测试帐户。更多见《  如何建立一个匿名 Facebook 账户以保护个人数据的私密性？  》
+    在本示例中，我们将假装该帐户的电子邮件地址为“   [email protected]   ”，密码为“fbpassword”。
+    现在拥有所需的所有信息：
+    
+      Facebook帐户邮箱（选项-fu）：  [email protected] 
+      Facebook帐户密码（选项-fp）：fbpassword
+      目标帐户ID（选项-t）：4
+      枢纽账户ID（选项-p）：558259929
+    
+    选项 -q 用于隐藏浏览器窗口。
+    python ffff.py -fu [email protected] -fp fbpassword -d geckodriver.exe -t 4 -p 558259929 -q    
+    要查看所有可用选项，请运行：python ffff.py -h
+    
+       
+  
+      
+      
+Starting the program
+      
+    
+    该程序很可能会在一段时间后遇到问题，例如超时；您可以使用 Ctrl + C 中断程序。这将保存所有结果以及可以恢复的文件：
+    python ffff.py -fu [email protected] -fp fbpassword — resume session-4–2019050812320    
+    
+       
+  
+      
+      
+Resuming a session after a time out
+      
+    
+    程序终止后，所有朋友都显示在屏幕上，并创建三个不同的文件：
+    
+      4-friends.csv
+      4-friends.gexf
+      session-4–20190508130137
+    
+    .csv 文件包含朋友列表（ID、名称、配置文件URL）；.gexf 文件包含准备在 Gephi 中打开的图表（稍后将详细介绍）；最后，session 文件可用于稍后恢复程序运行，例如，如果找到任何新的枢纽用户的话。
+    
+       
+  
+      
+      
+Program termination
+      
+    
+    
+    绘制社区图表
+   
+    接下来将使用 Gephi 软件绘制扎克伯格的朋友关系图表，可能以某种方式反映关系网络中存在的 
+    子社区的结构
+    。
+    这里绝不是 Gephi 的指南，也不是进行社区识别的最佳方式。这里只为了演示工具的使用方法。
+    首先，用 Gephi 打开 .gexf 文件。最初，它看起来像一堆凌乱的黑暗的线条和圆点。
+    
+       
+  
+      
+      
+Initial graph
+      
+    
+    从这里可以应用一些 
+    布局算法
+    ，这些算法可能有助于更深入地了解被视为社区的图表。
+    可以从“Overview tab”选项卡的左下窗口中选择布局。每个布局都有不同的参数：我建议都玩一下，看看它们的效果。
+    本指南先运行 OpenOrd，然后运行 ForceAtlas 2。
+    对于后者，我将 “Scaling” 值设置为10。结果尚不具有吸引力，但具有不同的形状。
+    
+       
+  
+      
+      
+Graph after running ForceAtlas2
+      
+    
+    现在可以尝试使用 “Modularity” 将节点划分到不同的社区，可以通过屏幕右侧的 “statistics” 部分计算。
+    在这里，你可以为“resolution”参数提供一个值：值越小，分区越多（即：更多社区）。
+    
+       
+  
+      
+      
+Partition nodes by modularity with a resolution of 0.6
+      
+    
+    现在我们可以为每个”Modularity” 
+    分配不同的颜色
+    。
+    在左上角的“外观”选项卡中，选择“节点”&gt;“分区”，并选择“Modularity Class”作为属性。 
+    这是为了更容易看懂
+    。
+    单击“Palette …”可以配置要使用的颜色。
+    单击“应用”所有节点将根据你定义的 Modularity Class 进行着色。如果您对找到的社区不满意，可以返回上一步并选择不同的参数。
+    如果对图表感到满意，请转到顶部菜单中的“预览”选项卡，然后配置最终图形的显示方式。
+    最后，您可以 
+    以您希望的格式导出它
+    。
+    
+       
+  
+      
+      
+Some of Mark Zuckerberg’s friendships
+      
+    
+    （上面的  大图在这里  ）
+    如果你想要一个交互式图表，你可以探索很多很棒的 
+    插件
+    ，可以以不同的格式导出图形。我喜欢  Sigma Exporter  ，你也可以试试。
+    
+    最后的评论
+   
+    本指南试图找到马克扎克伯格的 Facebook 朋友的一部分，尽管他的名单被隐藏了。
+    使用上述步骤，最终找到了 
+    335位
+    独特的、确认的朋友关系。并且，还能够绘制出所发现的社交关系图谱。Mediaservice.net 的算法给出了令人惊讶的结果。
+    总之，通过这一演示您可以知道， 
+    尽管 Facebook 有所谓的隐私设置，但是，依旧可以找到大多数 Facebook 用户的社交关系中很大一部分; 并且，可以在社交关系图谱中识别不同的社区。
+   
+    ffff是个有效的工具，自动化调查过程其效果是值得信任的。
+    如果您是防御者，请避免以任何方式将您的私密社交关系暴露在互联网上。⚪️
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       Activism 
+       Facebook 
+       Investigation 
+       OSINT 
+       technique 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2019年12月19日 
+       2019年9月18日 
+    
+  
+
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="如何挖掘目标人隐藏的人际关系？ - iYouPort" />
+    <meta property="twitter:title" content="如何挖掘目标人隐藏的人际关系？ - iYouPort" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5201)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.iyouport.org%2F%25e5%25a6%2582%25e4%25bd%2595%25e6%258c%2596%25e6%258e%2598%25e7%259b%25ae%25e6%25a0%2587%25e4%25ba%25ba%25e9%259a%2590%25e8%2597%258f%25e7%259a%2584%25e4%25ba%25ba%25e9%2599%2585%25e5%2585%25b3%25e7%25b3%25bb%25ef%25bc%259f%2F" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.iyouport.org/%e5%a6%82%e4%bd%95%e6%8c%96%e6%8e%98%e7%9b%ae%e6%a0%87%e4%ba%ba%e9%9a%90%e8%97%8f%e7%9a%84%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%ef%bc%9f/" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.iyouport.org/%e5%a6%82%e4%bd%95%e6%8c%96%e6%8e%98%e7%9b%ae%e6%a0%87%e4%ba%ba%e9%9a%90%e8%97%8f%e7%9a%84%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%ef%bc%9f/&text=如何挖掘目标人隐藏的人际关系？ - iYouPort&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.iyouport.org/%e5%a6%82%e4%bd%95%e6%8c%96%e6%8e%98%e7%9b%ae%e6%a0%87%e4%ba%ba%e9%9a%90%e8%97%8f%e7%9a%84%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%ef%bc%9f/&title=如何挖掘目标人隐藏的人际关系？ - iYouPort" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.iyouport.org/%e5%a6%82%e4%bd%95%e6%8c%96%e6%8e%98%e7%9b%ae%e6%a0%87%e4%ba%ba%e9%9a%90%e8%97%8f%e7%9a%84%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%ef%bc%9f/&title=如何挖掘目标人隐藏的人际关系？ - iYouPort" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=如何挖掘目标人隐藏的人际关系？ - iYouPort&body=
+  
+     如何挖掘目标人隐藏的人际关系？ 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  关于 Facebook  ,  技术防身/自我保护方法  ,  给行动者的护身符和武器             2019年12月19日 
+          2019年9月18日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       介绍一个自动化的情报挖掘工具
+      
+      
+    
+           
+  
+      
+
+    再次提醒：请注意这些进攻性知识自带的防御功能 —— 如果你不想被那些恶意者挖掘到隐情，要就要首先知道恶意者是怎么做的，然后有针对性地避免 ……  
+     开源情报栏目
+      
+    中介绍的所有工具都应该被这样使用
+    。
+    ⚠️Facebook、谷歌这类监视资本主义寡头的服务都是开源情报的金矿。因为他们知道得太多了 + 人们在使用它们的过程中太不小心了。
+    Facebook 为其用户提供了限制其朋友列表可见性的功能。但是，众所周知，通过利用“共同朋友”功能，可以在某些条件下绕过可见性限制。
+    本指南将提供一种方法和工具来自动化该过程，以便最大化可以找到的隐藏朋友的数量。
+    ⚠️请注意： 
+    社交媒体上的人际关系网络是连锅端的基本依据
+    —— 如果您有重要的敏感的人际关系，切勿令其在社交媒体上可见：
+           
+  
+      
+
+    此外，使用相同的工具，你将看到如何构建所发现的人际网络关系图，以直观的方式呈现隐秘的信息。
+    本指南还将介绍如何使用 Gephi 工具 
+    绘制图谱
+    ，并提出一种方法来 
+    识别
+    图谱中的子社区。
+    最后，本指南会将该调查过程应用于一个实际的示例场景：检索 Mark Zuckerberg 隐藏的人际关系网络，在图表上绘制这些关系，识别子社区，并以可使用浏览器探索的格式导出最终调查结果。
+    我们演示过挖掘 Facebook 的政治旋转门，还记得吗？在这里回顾：《  深层政治：Facebook金字塔的人形肌理 — — 仅仅依靠开源数据，扒开利维坦的内裤  》。
+    ⚠️这种方法可以用在任何人身上。
+    
+      
+     弱者要隐私，强者要透明
+    
+    
+           
+  
+      
+
+    
+    免责声明
+    ：本指南和相关开源情报文章中提供的所有知识仅用于教育目的。对任何形式的滥用本网不承担任何责任。
+    下面开始。
+    
+    重建隐藏的朋友列表
+   
+    Facebook 允许其用户决定是否在他们的个人资料页面显示他们自己的朋友、以及向谁显示。在设置页面中，它还会显示以下警告：
+    
+      Remember, your friends control who can see their friendships on their own Timelines. If people can see your friendship on another timeline, they’ll be able to see it in News Feed, search and other places on Facebook. If you set this to Only me, only you will be able to see your full friends list on your timeline. Other people will see only mutual friends.
+    
+    这是因为 Facebook 还提供“共同朋友”功能，前提是其中至少有一个人的“朋友”列表对当前用户可见。
+    这个问题多年来一直为人所知，但该公司不关注这个问题。
+    该功能位于URL： 
+    https://www.facebook.com/browse/mutual_friends/?uid=
+    
+    
+     ID1
+    
+    
+    &amp;node=
+    
+    
+     ID2；
+    
+    其中 ID1 和 ID2 是两个 Facebook 帐户的数字ID。稍后我们将介绍如何找到任何用户的 Facebook ID。
+    请注意， 
+    Facebook 返回的结果既不完整也不一致
+    。
+    从不同位置或帐户调用相同的功能可能会产生不同的结果。
+    由于“共同朋友”的功能，可以重建目标用户的好友列表的很大一部分：给定一个已知当前用户可以看到他们的朋友列表的帐户，并且，至少有一个与目标用户的共同朋友（称为 
+    枢纽用户
+    ），从他们的共同朋友开始， 
+    可以迭代地应用共同朋友功能，使用在每个步骤中找到的所有“新朋友”作为另一个迭代的输入，直到达到函数的固定点为止
+    。
+    为了展示这种方法的潜力，Mattia Vinci 编写了一个简单的 Python 工具，它将 
+    自动执行上述过程
+    。
+    请注意，Facebook 服务条款禁止未经许可进行抓取：因此，未经适当授权，您不得使用该工具。
+    该工具名为 ffff，可以  从Github下载  。
+    它是用 Python 3 编写的，并使用 selenium 库和 Mozilla geckodriver 来打开浏览器并递归访问共同朋友页面。
+    它会继续跟踪找到的关系，以便构建关系网络图（稍后会有详细介绍）。
+    ⚠️为了不被 Facebook 检测到抓取，该工具在每个请求之间暂停一个随机的秒数；这个间隔可以减少，但如果太少就有被平台阻挡的风险。
+    在该过程结束时，它会生成一个csv文件，其中包含找到的朋友列表，以及一个包含相关图表的gexf文件。
+    
+    建立人际关系网络图
+   
+    在进行上述调查的过程中你还可以 
+    保持跟踪目标的朋友之间存在的关系
+    。
+    如果你发现目标用户T和枢纽用户P有一个共同的朋友C，那么，现在你不仅知道C是目标的朋友，而且P和C都是朋友。
+    迭代这个过程，你就能够 
+    构建一个沿途找到的所有人际关系的网络图
+    ，其中节点是用户，连线是现有的关系。
+    一旦有了图表，就可以在其上 
+    运行不同的算法
+    ，以便尝试识别网络中的现有社区。例如，在实际情况中，这可能有助于识别工作同事、家人、最亲密朋友等不同的社区。
+    
+    实际案例：扎克伯格的朋友圈
+   
+    举个例子，我们将尝试获取一些 Mark Zuckerberg 的 Facebook 朋友，他们肯定知道这种可能性。
+    请注意，您显然可以使用公共朋友列表构建用户的关系图：在这种情况下，您不需要透视用户；只需使用他/她的 Facebook ID 作为目标和支点。
+    
+    找到目标的 Facebook ID
+   
+    首先需要了解 Mark Zuckerberg 的 Facebook ID。为了找到 Facebook 帐户的数字ID，有多种方法：  简单的 Google 搜索  就可以返回许多相关在线服务。
+    不过，本指南最喜欢的方法是 
+    自主执行
+    ：在浏览器中打开目标的 Facebook 个人资料页面（在示例中是  Mark Zuckerberg  ）并检查HTML源码（Ctrl + U）。
+    在代码中，搜索（Ctrl + F）： fb：// profile /; 应该有两个匹配，后跟相同的整数值： 
+    这个数字就是 Facebook 帐户 ID
+    。
+    在本指南的例子中，由于 Mark Zuckerberg 是该平台的首批用户之一，因此这个数字很小（是 4）；普通用户的数字会比较大。
+    
+       
+  
+      
+      
+Finding Facebook ID from the source code
+      
+    
+    
+    寻找枢纽用户
+   
+    你还需要找到至少 
+    一个拥有公开朋友列表的帐户
+    （或对你来说朋友列表可见的账户）、以及至少 
+    一个与你的调查目标相关的共同朋友
+    。
+    通常，一个便捷的方法是查看与目标进行交互的用户，例如通过评论或回应他帖子的人。
+    还要注意，为了最大化找到的“朋友”的数量， 
+    最好让枢纽用户属于不同的社区
+    （例如：工作同事、家庭成员、体育运动伙伴等）越多越好。
+    Mattia Vinci 编写了一个辅助脚本，可以自动查找与给定的目标进行交互的用户；它被称为 fint.py 就包含在  ffff项目的存储库中  。
+    它的工作方式与ffff相同，因此本指南将仅提供一个快速示例用法（使用 -h 显示所有可用选项）。
+    有关更多一般信息，请参阅  Github上的项目页面  。
+    python fint.py -fu [email protected] -fp fbpassword -d geckodriver.exe -t 4 -ls 10 -lp 10 -lc 5 -lr 5    
+    上面的命令将刮取最多100条评论（-lc）和最多1000条回应（-lr）的作者，在目标用户 4（-t）的最多10个故事（-ls）和10个照片（-lp）上。
+    输出是一个名为 
+    4-pivots.txt
+    的文件，其中包含一个 Facebook ID 列表，可以作为 ffff（选项 -P）的输入。
+    
+       
+  
+      
+      
+Finding potential pivots – users who have interacted with Mark Zuckerberg – using fint.py
+      
+    
+    由于本指南使用的目标是一个公众人物（扎克伯格），并且在 Facebook 方面有些特殊，所以，这里 
+    并不
+    真正关心构建他朋友列表的大部分内容，更多关注的是单个枢纽用户。
+    为了获得这一目标，我们尝试了另一种方式：简单的搜索即可返回一篇文章，其中列出了一些扎克伯格  已知的“朋友”  。
+    该名单上的第四位，Brian Chesky，目前有一个公开的朋友名单，这使其成为本测试中 
+    枢纽用户的完美候选人
+    。
+    现在需要找到他的 Facebook ID。上面已经展示了一些简单的方法。如果您对使用其中一个方法感到满意，就可以跳到以下部分了。
+    如果都不满意，这里将提出一种 
+    不同的方法来检索最初可能看起来很复杂的用户ID
+    ，但是，当您手动浏览 Facebook 网站时，它可能是速度最快的。
+    方法是这样：如果访问 Brian Chesky 的朋友列表页面，你会看到URL如下所示（对于从配置文件主菜单可以访问的任何页面都是如此，例如“about”，“photos”等）：
+    
+    https://www.facebook.com/brianchesky/friends?lst=100028395012070%3A
+    
+    
+     558259929
+    
+    
+    %3A1557309584&amp;source_ref=pb_friends_t
+   
+    正如您所看到的，URL包含一个参数“lst”，它包含由字符％3A分隔的三个不同的整数值（只是字符 
+    “:”
+    的URL编码）。
+    第二个整数就是用户ID，在本例中为 
+    558259929
+    。
+    您可以（并且应该）通过访问 https://www.facebook.com/558259929 仔细检查ID，并注意它重定向到 https://www.facebook.com/brianchesky。
+    
+       
+  
+      
+      
+Find Facebook ID inside URL
+      
+    
+    
+    用 ffff.py 找到隐藏的朋友
+   
+    本文不包括该工具的安装说明；一些信息可以在  项目页面  上找到。
+    在以下示例中，该工具在 Windows 上的虚拟环境中运行。从  官方的 mozilla  项目页面下载了geckodriver.exe（如ffff项目页面上的说明所述），并将其放在与 python 脚本相同的目录中。
+    现在需要一个有效的 Facebook 帐户来进行抓取。我建议不要使用自己的账号，因为它可能被平台阻止。
+    💡最好的是：  袜子木偶  ，创建一个与身份完全无关的测试帐户。更多见《  如何建立一个匿名 Facebook 账户以保护个人数据的私密性？  》
+    在本示例中，我们将假装该帐户的电子邮件地址为“   [email protected]   ”，密码为“fbpassword”。
+    现在拥有所需的所有信息：
+    
+      Facebook帐户邮箱（选项-fu）：  [email protected] 
+      Facebook帐户密码（选项-fp）：fbpassword
+      目标帐户ID（选项-t）：4
+      枢纽账户ID（选项-p）：558259929
+    
+    选项 -q 用于隐藏浏览器窗口。
+    python ffff.py -fu [email protected] -fp fbpassword -d geckodriver.exe -t 4 -p 558259929 -q    
+    要查看所有可用选项，请运行：python ffff.py -h
+    
+       
+  
+      
+      
+Starting the program
+      
+    
+    该程序很可能会在一段时间后遇到问题，例如超时；您可以使用 Ctrl + C 中断程序。这将保存所有结果以及可以恢复的文件：
+    python ffff.py -fu [email protected] -fp fbpassword — resume session-4–2019050812320    
+    
+       
+  
+      
+      
+Resuming a session after a time out
+      
+    
+    程序终止后，所有朋友都显示在屏幕上，并创建三个不同的文件：
+    
+      4-friends.csv
+      4-friends.gexf
+      session-4–20190508130137
+    
+    .csv 文件包含朋友列表（ID、名称、配置文件URL）；.gexf 文件包含准备在 Gephi 中打开的图表（稍后将详细介绍）；最后，session 文件可用于稍后恢复程序运行，例如，如果找到任何新的枢纽用户的话。
+    
+       
+  
+      
+      
+Program termination
+      
+    
+    
+    绘制社区图表
+   
+    接下来将使用 Gephi 软件绘制扎克伯格的朋友关系图表，可能以某种方式反映关系网络中存在的 
+    子社区的结构
+    。
+    这里绝不是 Gephi 的指南，也不是进行社区识别的最佳方式。这里只为了演示工具的使用方法。
+    首先，用 Gephi 打开 .gexf 文件。最初，它看起来像一堆凌乱的黑暗的线条和圆点。
+    
+       
+  
+      
+      
+Initial graph
+      
+    
+    从这里可以应用一些 
+    布局算法
+    ，这些算法可能有助于更深入地了解被视为社区的图表。
+    可以从“Overview tab”选项卡的左下窗口中选择布局。每个布局都有不同的参数：我建议都玩一下，看看它们的效果。
+    本指南先运行 OpenOrd，然后运行 ForceAtlas 2。
+    对于后者，我将 “Scaling” 值设置为10。结果尚不具有吸引力，但具有不同的形状。
+    
+       
+  
+      
+      
+Graph after running ForceAtlas2
+      
+    
+    现在可以尝试使用 “Modularity” 将节点划分到不同的社区，可以通过屏幕右侧的 “statistics” 部分计算。
+    在这里，你可以为“resolution”参数提供一个值：值越小，分区越多（即：更多社区）。
+    
+       
+  
+      
+      
+Partition nodes by modularity with a resolution of 0.6
+      
+    
+    现在我们可以为每个”Modularity” 
+    分配不同的颜色
+    。
+    在左上角的“外观”选项卡中，选择“节点”&gt;“分区”，并选择“Modularity Class”作为属性。 
+    这是为了更容易看懂
+    。
+    单击“Palette …”可以配置要使用的颜色。
+    单击“应用”所有节点将根据你定义的 Modularity Class 进行着色。如果您对找到的社区不满意，可以返回上一步并选择不同的参数。
+    如果对图表感到满意，请转到顶部菜单中的“预览”选项卡，然后配置最终图形的显示方式。
+    最后，您可以 
+    以您希望的格式导出它
+    。
+    
+       
+  
+      
+      
+Some of Mark Zuckerberg’s friendships
+      
+    
+    （上面的  大图在这里  ）
+    如果你想要一个交互式图表，你可以探索很多很棒的 
+    插件
+    ，可以以不同的格式导出图形。我喜欢  Sigma Exporter  ，你也可以试试。
+    
+    最后的评论
+   
+    本指南试图找到马克扎克伯格的 Facebook 朋友的一部分，尽管他的名单被隐藏了。
+    使用上述步骤，最终找到了 
+    335位
+    独特的、确认的朋友关系。并且，还能够绘制出所发现的社交关系图谱。Mediaservice.net 的算法给出了令人惊讶的结果。
+    总之，通过这一演示您可以知道， 
+    尽管 Facebook 有所谓的隐私设置，但是，依旧可以找到大多数 Facebook 用户的社交关系中很大一部分; 并且，可以在社交关系图谱中识别不同的社区。
+   
+    ffff是个有效的工具，自动化调查过程其效果是值得信任的。
+    如果您是防御者，请避免以任何方式将您的私密社交关系暴露在互联网上。⚪️
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       Activism 
+       Facebook 
+       Investigation 
+       OSINT 
+       technique 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2019年12月19日 
+       2019年9月18日 
+    
+  
+
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.iyouport.org/%e5%a6%82%e4%bd%95%e6%8c%96%e6%8e%98%e7%9b%ae%e6%a0%87%e4%ba%ba%e9%9a%90%e8%97%8f%e7%9a%84%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%ef%bc%9f/" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.iyouport.org/%e5%a6%82%e4%bd%95%e6%8c%96%e6%8e%98%e7%9b%ae%e6%a0%87%e4%ba%ba%e9%9a%90%e8%97%8f%e7%9a%84%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%ef%bc%9f/&title=如何挖掘目标人隐藏的人际关系？ - iYouPort&caption=
+  
+     如何挖掘目标人隐藏的人际关系？ 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  关于 Facebook  ,  技术防身/自我保护方法  ,  给行动者的护身符和武器             2019年12月19日 
+          2019年9月18日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       介绍一个自动化的情报挖掘工具
+      
+      
+    
+           
+  
+      
+
+    再次提醒：请注意这些进攻性知识自带的防御功能 —— 如果你不想被那些恶意者挖掘到隐情，要就要首先知道恶意者是怎么做的，然后有针对性地避免 ……  
+     开源情报栏目
+      
+    中介绍的所有工具都应该被这样使用
+    。
+    ⚠️Facebook、谷歌这类监视资本主义寡头的服务都是开源情报的金矿。因为他们知道得太多了 + 人们在使用它们的过程中太不小心了。
+    Facebook 为其用户提供了限制其朋友列表可见性的功能。但是，众所周知，通过利用“共同朋友”功能，可以在某些条件下绕过可见性限制。
+    本指南将提供一种方法和工具来自动化该过程，以便最大化可以找到的隐藏朋友的数量。
+    ⚠️请注意： 
+    社交媒体上的人际关系网络是连锅端的基本依据
+    —— 如果您有重要的敏感的人际关系，切勿令其在社交媒体上可见：
+           
+  
+      
+
+    此外，使用相同的工具，你将看到如何构建所发现的人际网络关系图，以直观的方式呈现隐秘的信息。
+    本指南还将介绍如何使用 Gephi 工具 
+    绘制图谱
+    ，并提出一种方法来 
+    识别
+    图谱中的子社区。
+    最后，本指南会将该调查过程应用于一个实际的示例场景：检索 Mark Zuckerberg 隐藏的人际关系网络，在图表上绘制这些关系，识别子社区，并以可使用浏览器探索的格式导出最终调查结果。
+    我们演示过挖掘 Facebook 的政治旋转门，还记得吗？在这里回顾：《  深层政治：Facebook金字塔的人形肌理 — — 仅仅依靠开源数据，扒开利维坦的内裤  》。
+    ⚠️这种方法可以用在任何人身上。
+    
+      
+     弱者要隐私，强者要透明
+    
+    
+           
+  
+      
+
+    
+    免责声明
+    ：本指南和相关开源情报文章中提供的所有知识仅用于教育目的。对任何形式的滥用本网不承担任何责任。
+    下面开始。
+    
+    重建隐藏的朋友列表
+   
+    Facebook 允许其用户决定是否在他们的个人资料页面显示他们自己的朋友、以及向谁显示。在设置页面中，它还会显示以下警告：
+    
+      Remember, your friends control who can see their friendships on their own Timelines. If people can see your friendship on another timeline, they’ll be able to see it in News Feed, search and other places on Facebook. If you set this to Only me, only you will be able to see your full friends list on your timeline. Other people will see only mutual friends.
+    
+    这是因为 Facebook 还提供“共同朋友”功能，前提是其中至少有一个人的“朋友”列表对当前用户可见。
+    这个问题多年来一直为人所知，但该公司不关注这个问题。
+    该功能位于URL： 
+    https://www.facebook.com/browse/mutual_friends/?uid=
+    
+    
+     ID1
+    
+    
+    &amp;node=
+    
+    
+     ID2；
+    
+    其中 ID1 和 ID2 是两个 Facebook 帐户的数字ID。稍后我们将介绍如何找到任何用户的 Facebook ID。
+    请注意， 
+    Facebook 返回的结果既不完整也不一致
+    。
+    从不同位置或帐户调用相同的功能可能会产生不同的结果。
+    由于“共同朋友”的功能，可以重建目标用户的好友列表的很大一部分：给定一个已知当前用户可以看到他们的朋友列表的帐户，并且，至少有一个与目标用户的共同朋友（称为 
+    枢纽用户
+    ），从他们的共同朋友开始， 
+    可以迭代地应用共同朋友功能，使用在每个步骤中找到的所有“新朋友”作为另一个迭代的输入，直到达到函数的固定点为止
+    。
+    为了展示这种方法的潜力，Mattia Vinci 编写了一个简单的 Python 工具，它将 
+    自动执行上述过程
+    。
+    请注意，Facebook 服务条款禁止未经许可进行抓取：因此，未经适当授权，您不得使用该工具。
+    该工具名为 ffff，可以  从Github下载  。
+    它是用 Python 3 编写的，并使用 selenium 库和 Mozilla geckodriver 来打开浏览器并递归访问共同朋友页面。
+    它会继续跟踪找到的关系，以便构建关系网络图（稍后会有详细介绍）。
+    ⚠️为了不被 Facebook 检测到抓取，该工具在每个请求之间暂停一个随机的秒数；这个间隔可以减少，但如果太少就有被平台阻挡的风险。
+    在该过程结束时，它会生成一个csv文件，其中包含找到的朋友列表，以及一个包含相关图表的gexf文件。
+    
+    建立人际关系网络图
+   
+    在进行上述调查的过程中你还可以 
+    保持跟踪目标的朋友之间存在的关系
+    。
+    如果你发现目标用户T和枢纽用户P有一个共同的朋友C，那么，现在你不仅知道C是目标的朋友，而且P和C都是朋友。
+    迭代这个过程，你就能够 
+    构建一个沿途找到的所有人际关系的网络图
+    ，其中节点是用户，连线是现有的关系。
+    一旦有了图表，就可以在其上 
+    运行不同的算法
+    ，以便尝试识别网络中的现有社区。例如，在实际情况中，这可能有助于识别工作同事、家人、最亲密朋友等不同的社区。
+    
+    实际案例：扎克伯格的朋友圈
+   
+    举个例子，我们将尝试获取一些 Mark Zuckerberg 的 Facebook 朋友，他们肯定知道这种可能性。
+    请注意，您显然可以使用公共朋友列表构建用户的关系图：在这种情况下，您不需要透视用户；只需使用他/她的 Facebook ID 作为目标和支点。
+    
+    找到目标的 Facebook ID
+   
+    首先需要了解 Mark Zuckerberg 的 Facebook ID。为了找到 Facebook 帐户的数字ID，有多种方法：  简单的 Google 搜索  就可以返回许多相关在线服务。
+    不过，本指南最喜欢的方法是 
+    自主执行
+    ：在浏览器中打开目标的 Facebook 个人资料页面（在示例中是  Mark Zuckerberg  ）并检查HTML源码（Ctrl + U）。
+    在代码中，搜索（Ctrl + F）： fb：// profile /; 应该有两个匹配，后跟相同的整数值： 
+    这个数字就是 Facebook 帐户 ID
+    。
+    在本指南的例子中，由于 Mark Zuckerberg 是该平台的首批用户之一，因此这个数字很小（是 4）；普通用户的数字会比较大。
+    
+       
+  
+      
+      
+Finding Facebook ID from the source code
+      
+    
+    
+    寻找枢纽用户
+   
+    你还需要找到至少 
+    一个拥有公开朋友列表的帐户
+    （或对你来说朋友列表可见的账户）、以及至少 
+    一个与你的调查目标相关的共同朋友
+    。
+    通常，一个便捷的方法是查看与目标进行交互的用户，例如通过评论或回应他帖子的人。
+    还要注意，为了最大化找到的“朋友”的数量， 
+    最好让枢纽用户属于不同的社区
+    （例如：工作同事、家庭成员、体育运动伙伴等）越多越好。
+    Mattia Vinci 编写了一个辅助脚本，可以自动查找与给定的目标进行交互的用户；它被称为 fint.py 就包含在  ffff项目的存储库中  。
+    它的工作方式与ffff相同，因此本指南将仅提供一个快速示例用法（使用 -h 显示所有可用选项）。
+    有关更多一般信息，请参阅  Github上的项目页面  。
+    python fint.py -fu [email protected] -fp fbpassword -d geckodriver.exe -t 4 -ls 10 -lp 10 -lc 5 -lr 5    
+    上面的命令将刮取最多100条评论（-lc）和最多1000条回应（-lr）的作者，在目标用户 4（-t）的最多10个故事（-ls）和10个照片（-lp）上。
+    输出是一个名为 
+    4-pivots.txt
+    的文件，其中包含一个 Facebook ID 列表，可以作为 ffff（选项 -P）的输入。
+    
+       
+  
+      
+      
+Finding potential pivots – users who have interacted with Mark Zuckerberg – using fint.py
+      
+    
+    由于本指南使用的目标是一个公众人物（扎克伯格），并且在 Facebook 方面有些特殊，所以，这里 
+    并不
+    真正关心构建他朋友列表的大部分内容，更多关注的是单个枢纽用户。
+    为了获得这一目标，我们尝试了另一种方式：简单的搜索即可返回一篇文章，其中列出了一些扎克伯格  已知的“朋友”  。
+    该名单上的第四位，Brian Chesky，目前有一个公开的朋友名单，这使其成为本测试中 
+    枢纽用户的完美候选人
+    。
+    现在需要找到他的 Facebook ID。上面已经展示了一些简单的方法。如果您对使用其中一个方法感到满意，就可以跳到以下部分了。
+    如果都不满意，这里将提出一种 
+    不同的方法来检索最初可能看起来很复杂的用户ID
+    ，但是，当您手动浏览 Facebook 网站时，它可能是速度最快的。
+    方法是这样：如果访问 Brian Chesky 的朋友列表页面，你会看到URL如下所示（对于从配置文件主菜单可以访问的任何页面都是如此，例如“about”，“photos”等）：
+    
+    https://www.facebook.com/brianchesky/friends?lst=100028395012070%3A
+    
+    
+     558259929
+    
+    
+    %3A1557309584&amp;source_ref=pb_friends_t
+   
+    正如您所看到的，URL包含一个参数“lst”，它包含由字符％3A分隔的三个不同的整数值（只是字符 
+    “:”
+    的URL编码）。
+    第二个整数就是用户ID，在本例中为 
+    558259929
+    。
+    您可以（并且应该）通过访问 https://www.facebook.com/558259929 仔细检查ID，并注意它重定向到 https://www.facebook.com/brianchesky。
+    
+       
+  
+      
+      
+Find Facebook ID inside URL
+      
+    
+    
+    用 ffff.py 找到隐藏的朋友
+   
+    本文不包括该工具的安装说明；一些信息可以在  项目页面  上找到。
+    在以下示例中，该工具在 Windows 上的虚拟环境中运行。从  官方的 mozilla  项目页面下载了geckodriver.exe（如ffff项目页面上的说明所述），并将其放在与 python 脚本相同的目录中。
+    现在需要一个有效的 Facebook 帐户来进行抓取。我建议不要使用自己的账号，因为它可能被平台阻止。
+    💡最好的是：  袜子木偶  ，创建一个与身份完全无关的测试帐户。更多见《  如何建立一个匿名 Facebook 账户以保护个人数据的私密性？  》
+    在本示例中，我们将假装该帐户的电子邮件地址为“   [email protected]   ”，密码为“fbpassword”。
+    现在拥有所需的所有信息：
+    
+      Facebook帐户邮箱（选项-fu）：  [email protected] 
+      Facebook帐户密码（选项-fp）：fbpassword
+      目标帐户ID（选项-t）：4
+      枢纽账户ID（选项-p）：558259929
+    
+    选项 -q 用于隐藏浏览器窗口。
+    python ffff.py -fu [email protected] -fp fbpassword -d geckodriver.exe -t 4 -p 558259929 -q    
+    要查看所有可用选项，请运行：python ffff.py -h
+    
+       
+  
+      
+      
+Starting the program
+      
+    
+    该程序很可能会在一段时间后遇到问题，例如超时；您可以使用 Ctrl + C 中断程序。这将保存所有结果以及可以恢复的文件：
+    python ffff.py -fu [email protected] -fp fbpassword — resume session-4–2019050812320    
+    
+       
+  
+      
+      
+Resuming a session after a time out
+      
+    
+    程序终止后，所有朋友都显示在屏幕上，并创建三个不同的文件：
+    
+      4-friends.csv
+      4-friends.gexf
+      session-4–20190508130137
+    
+    .csv 文件包含朋友列表（ID、名称、配置文件URL）；.gexf 文件包含准备在 Gephi 中打开的图表（稍后将详细介绍）；最后，session 文件可用于稍后恢复程序运行，例如，如果找到任何新的枢纽用户的话。
+    
+       
+  
+      
+      
+Program termination
+      
+    
+    
+    绘制社区图表
+   
+    接下来将使用 Gephi 软件绘制扎克伯格的朋友关系图表，可能以某种方式反映关系网络中存在的 
+    子社区的结构
+    。
+    这里绝不是 Gephi 的指南，也不是进行社区识别的最佳方式。这里只为了演示工具的使用方法。
+    首先，用 Gephi 打开 .gexf 文件。最初，它看起来像一堆凌乱的黑暗的线条和圆点。
+    
+       
+  
+      
+      
+Initial graph
+      
+    
+    从这里可以应用一些 
+    布局算法
+    ，这些算法可能有助于更深入地了解被视为社区的图表。
+    可以从“Overview tab”选项卡的左下窗口中选择布局。每个布局都有不同的参数：我建议都玩一下，看看它们的效果。
+    本指南先运行 OpenOrd，然后运行 ForceAtlas 2。
+    对于后者，我将 “Scaling” 值设置为10。结果尚不具有吸引力，但具有不同的形状。
+    
+       
+  
+      
+      
+Graph after running ForceAtlas2
+      
+    
+    现在可以尝试使用 “Modularity” 将节点划分到不同的社区，可以通过屏幕右侧的 “statistics” 部分计算。
+    在这里，你可以为“resolution”参数提供一个值：值越小，分区越多（即：更多社区）。
+    
+       
+  
+      
+      
+Partition nodes by modularity with a resolution of 0.6
+      
+    
+    现在我们可以为每个”Modularity” 
+    分配不同的颜色
+    。
+    在左上角的“外观”选项卡中，选择“节点”&gt;“分区”，并选择“Modularity Class”作为属性。 
+    这是为了更容易看懂
+    。
+    单击“Palette …”可以配置要使用的颜色。
+    单击“应用”所有节点将根据你定义的 Modularity Class 进行着色。如果您对找到的社区不满意，可以返回上一步并选择不同的参数。
+    如果对图表感到满意，请转到顶部菜单中的“预览”选项卡，然后配置最终图形的显示方式。
+    最后，您可以 
+    以您希望的格式导出它
+    。
+    
+       
+  
+      
+      
+Some of Mark Zuckerberg’s friendships
+      
+    
+    （上面的  大图在这里  ）
+    如果你想要一个交互式图表，你可以探索很多很棒的 
+    插件
+    ，可以以不同的格式导出图形。我喜欢  Sigma Exporter  ，你也可以试试。
+    
+    最后的评论
+   
+    本指南试图找到马克扎克伯格的 Facebook 朋友的一部分，尽管他的名单被隐藏了。
+    使用上述步骤，最终找到了 
+    335位
+    独特的、确认的朋友关系。并且，还能够绘制出所发现的社交关系图谱。Mediaservice.net 的算法给出了令人惊讶的结果。
+    总之，通过这一演示您可以知道， 
+    尽管 Facebook 有所谓的隐私设置，但是，依旧可以找到大多数 Facebook 用户的社交关系中很大一部分; 并且，可以在社交关系图谱中识别不同的社区。
+   
+    ffff是个有效的工具，自动化调查过程其效果是值得信任的。
+    如果您是防御者，请避免以任何方式将您的私密社交关系暴露在互联网上。⚪️
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       Activism 
+       Facebook 
+       Investigation 
+       OSINT 
+       technique 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2019年12月19日 
+       2019年9月18日 
+    
+  
+
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=如何挖掘目标人隐藏的人际关系？ - iYouPort&url=https://www.iyouport.org/%e5%a6%82%e4%bd%95%e6%8c%96%e6%8e%98%e7%9b%ae%e6%a0%87%e4%ba%ba%e9%9a%90%e8%97%8f%e7%9a%84%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%ef%bc%9f/" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>如何挖掘目标人隐藏的人际关系？ - iYouPort</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2019-12-18
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#iYouPort">
+          iYouPort
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e6%8c%96%e6%8e%98%e7%9b%ae%e6%a0%87%e4%ba%ba%e9%9a%90%e8%97%8f%e7%9a%84%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%ef%bc%9f/" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="iYouPort的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#iYouPort 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <article class="post-9215 post type-post status-publish format-standard has-post-thumbnail hentry category-knowledge-node category-osint category--facebook category-54 category-67 tag-activism tag-facebook tag-investigation tag-osint tag-technique tag-technology tag-tools" id="post-9215">
+  <header class="entry-header">
+    <h1 class="entry-title" id="section"> 如何挖掘目标人隐藏的人际关系？ </h1>
+  </header>
+  <div class="entry-meta">
+<span class="byline"> <a href="https://www.iyouport.org/author/don-evans/" rel="author" title="由McCaffrey发布"> McCaffrey </a> </span> <span class="cat-links"> <a href="https://www.iyouport.org/category/knowledge-node/" rel="category tag"> Knowledge Node </a> , <a href="https://www.iyouport.org/category/osint/" rel="category tag"> OSINT </a> , <a href="https://www.iyouport.org/category/%e5%85%b3%e4%ba%8e-facebook/" rel="category tag"> 关于 Facebook </a> , <a href="https://www.iyouport.org/category/%e6%8a%80%e6%9c%af%e9%98%b2%e8%ba%ab-%e8%87%aa%e6%88%91%e4%bf%9d%e6%8a%a4%e6%96%b9%e6%b3%95/" rel="category tag"> 技术防身/自我保护方法 </a> , <a href="https://www.iyouport.org/category/%e7%bb%99%e8%a1%8c%e5%8a%a8%e8%80%85%e7%9a%84%e6%8a%a4%e8%ba%ab%e7%ac%a6%e5%92%8c%e6%ad%a6%e5%99%a8/" rel="category tag"> 给行动者的护身符和武器 </a> </span> <span class="published-on">         <time class="entry-date published" datetime="2019-12-19T00:04:06+08:00"> 2019年12月19日 </time>
+         <time class="updated" datetime="2019-09-18T20:53:22+08:00"> 2019年9月18日 </time>
+ </span> <span class="word-count"> 2 Minutes </span>
+  </div>
+  <div class="entry-content">
+    <ul>
+      <li class="graf graf--p"><span style="color: #00ccff;"> <em>
+      <strong>
+       介绍一个自动化的情报挖掘工具
+      </strong>
+     </em> </span></li>
+    </ul>
+    <p><img alt="" class="aligncenter size-full wp-image-9216 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=1100%2C584&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?w=1696&amp;ssl=1 1696w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=300%2C159&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=768%2C408&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=1024%2C543&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=1100%2C584&amp;ssl=1 1100w" data-recalc-dims="1" height="584" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=1100%2C584&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9216" data-recalc-dims="1" height="584" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=1100%2C584&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?w=1696&amp;ssl=1 1696w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=300%2C159&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=768%2C408&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=1024%2C543&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/头-5.jpg?resize=1100%2C584&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p">再次提醒：请注意这些进攻性知识自带的防御功能 —— 如果你不想被那些恶意者挖掘到隐情，要就要首先知道恶意者是怎么做的，然后有针对性地避免 …… <a class="markup--anchor markup--p-anchor" data-href="https://www.iyouport.org/category/osint/" href="https://www.iyouport.org/category/osint/" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     开源情报栏目
+    </strong> </a> <strong class="markup--strong markup--p-strong">
+    中介绍的所有工具都应该被这样使用
+   </strong> 。</p>
+    <p class="graf graf--p">⚠️Facebook、谷歌这类监视资本主义寡头的服务都是开源情报的金矿。因为他们知道得太多了 + 人们在使用它们的过程中太不小心了。</p>
+    <p class="graf graf--p">Facebook 为其用户提供了限制其朋友列表可见性的功能。但是，众所周知，通过利用“共同朋友”功能，可以在某些条件下绕过可见性限制。</p>
+    <p class="graf graf--p">本指南将提供一种方法和工具来自动化该过程，以便最大化可以找到的隐藏朋友的数量。</p>
+    <p class="graf graf--p">⚠️请注意： <strong class="markup--strong markup--p-strong">
+    社交媒体上的人际关系网络是连锅端的基本依据
+   </strong> —— 如果您有重要的敏感的人际关系，切勿令其在社交媒体上可见：</p>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9217 jetpack-lazy-image" data-lazy-sizes="(max-width: 887px) 100vw, 887px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?resize=887%2C2048&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?w=887&amp;ssl=1 887w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?resize=130%2C300&amp;ssl=1 130w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?resize=768%2C1774&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?resize=443%2C1024&amp;ssl=1 443w" data-recalc-dims="1" height="2048" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?resize=887%2C2048&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="887" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9217" data-recalc-dims="1" height="2048" sizes="(max-width: 887px) 100vw, 887px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?resize=887%2C2048&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?w=887&amp;ssl=1 887w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?resize=130%2C300&amp;ssl=1 130w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?resize=768%2C1774&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/1-3.jpeg?resize=443%2C1024&amp;ssl=1 443w" width="887" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p">此外，使用相同的工具，你将看到如何构建所发现的人际网络关系图，以直观的方式呈现隐秘的信息。</p>
+    <p class="graf graf--p">本指南还将介绍如何使用 Gephi 工具 <strong class="markup--strong markup--p-strong">
+    绘制图谱
+   </strong> ，并提出一种方法来 <strong class="markup--strong markup--p-strong">
+    识别
+   </strong> 图谱中的子社区。</p>
+    <p class="graf graf--p">最后，本指南会将该调查过程应用于一个实际的示例场景：检索 Mark Zuckerberg 隐藏的人际关系网络，在图表上绘制这些关系，识别子社区，并以可使用浏览器探索的格式导出最终调查结果。</p>
+    <p class="graf graf--p">我们演示过挖掘 Facebook 的政治旋转门，还记得吗？在这里回顾：《 <a class="markup--anchor markup--p-anchor" data-href="https://www.iyouport.org/%e6%b7%b1%e5%b1%82%e6%94%bf%e6%b2%bb%ef%bc%9afacebook%e9%87%91%e5%ad%97%e5%a1%94%e7%9a%84%e4%ba%ba%e5%bd%a2%e8%82%8c%e7%90%86-%e4%bb%85%e4%bb%85%e4%be%9d%e9%9d%a0%e5%bc%80%e6%ba%90/" href="https://www.iyouport.org/%e6%b7%b1%e5%b1%82%e6%94%bf%e6%b2%bb%ef%bc%9afacebook%e9%87%91%e5%ad%97%e5%a1%94%e7%9a%84%e4%ba%ba%e5%bd%a2%e8%82%8c%e7%90%86-%e4%bb%85%e4%bb%85%e4%be%9d%e9%9d%a0%e5%bc%80%e6%ba%90/" rel="noopener noreferrer" target="_blank"> 深层政治：Facebook金字塔的人形肌理 — — 仅仅依靠开源数据，扒开利维坦的内裤 </a> 》。</p>
+    <p class="graf graf--p">⚠️这种方法可以用在任何人身上。</p>
+    <blockquote class="graf graf--blockquote">
+      <p><strong>
+     弱者要隐私，强者要透明
+    </strong></p>
+    </blockquote>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9218 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=1100%2C517&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?w=1400&amp;ssl=1 1400w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=300%2C141&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=768%2C361&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=1024%2C481&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=1100%2C517&amp;ssl=1 1100w" data-recalc-dims="1" height="517" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=1100%2C517&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9218" data-recalc-dims="1" height="517" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=1100%2C517&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?w=1400&amp;ssl=1 1400w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=300%2C141&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=768%2C361&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=1024%2C481&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/2-7.png?resize=1100%2C517&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">
+    免责声明
+   </strong> ：本指南和相关开源情报文章中提供的所有知识仅用于教育目的。对任何形式的滥用本网不承担任何责任。</p>
+    <p class="graf graf--p">下面开始。</p>
+    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">
+    重建隐藏的朋友列表
+   </strong></p>
+    <p class="graf graf--p">Facebook 允许其用户决定是否在他们的个人资料页面显示他们自己的朋友、以及向谁显示。在设置页面中，它还会显示以下警告：</p>
+    <blockquote class="graf graf--blockquote">
+      <p>Remember, your friends control who can see their friendships on their own Timelines. If people can see your friendship on another timeline, they’ll be able to see it in News Feed, search and other places on Facebook. If you set this to Only me, only you will be able to see your full friends list on your timeline. Other people will see only mutual friends.</p>
+    </blockquote>
+    <p class="graf graf--p">这是因为 Facebook 还提供“共同朋友”功能，前提是其中至少有一个人的“朋友”列表对当前用户可见。</p>
+    <p class="graf graf--p">这个问题多年来一直为人所知，但该公司不关注这个问题。</p>
+    <p class="graf graf--p">该功能位于URL： <em class="markup--em markup--p-em">
+    https://www.facebook.com/browse/mutual_friends/?uid=
+   </em> <strong class="markup--strong markup--p-strong">
+    <em class="markup--em markup--p-em">
+     ID1
+    </em>
+   </strong> <em class="markup--em markup--p-em">
+    &amp;node=
+   </em> <strong class="markup--strong markup--p-strong">
+    <em class="markup--em markup--p-em">
+     ID2；
+    </em>
+   </strong> 其中 ID1 和 ID2 是两个 Facebook 帐户的数字ID。稍后我们将介绍如何找到任何用户的 Facebook ID。</p>
+    <p class="graf graf--p">请注意， <strong class="markup--strong markup--p-strong">
+    Facebook 返回的结果既不完整也不一致
+   </strong> 。</p>
+    <p class="graf graf--p">从不同位置或帐户调用相同的功能可能会产生不同的结果。</p>
+    <p class="graf graf--p">由于“共同朋友”的功能，可以重建目标用户的好友列表的很大一部分：给定一个已知当前用户可以看到他们的朋友列表的帐户，并且，至少有一个与目标用户的共同朋友（称为 <strong class="markup--strong markup--p-strong">
+    枢纽用户
+   </strong> ），从他们的共同朋友开始， <strong class="markup--strong markup--p-strong">
+    可以迭代地应用共同朋友功能，使用在每个步骤中找到的所有“新朋友”作为另一个迭代的输入，直到达到函数的固定点为止
+   </strong> 。</p>
+    <p class="graf graf--p">为了展示这种方法的潜力，Mattia Vinci 编写了一个简单的 Python 工具，它将 <strong class="markup--strong markup--p-strong">
+    自动执行上述过程
+   </strong> 。</p>
+    <p class="graf graf--p">请注意，Facebook 服务条款禁止未经许可进行抓取：因此，未经适当授权，您不得使用该工具。</p>
+    <p class="graf graf--p">该工具名为 ffff，可以 <a class="markup--anchor markup--p-anchor" data-href="https://github.com/sowdust/ffff" href="https://github.com/sowdust/ffff" rel="noopener noreferrer" target="_blank"> 从Github下载 </a> 。</p>
+    <p class="graf graf--p">它是用 Python 3 编写的，并使用 selenium 库和 Mozilla geckodriver 来打开浏览器并递归访问共同朋友页面。</p>
+    <p class="graf graf--p">它会继续跟踪找到的关系，以便构建关系网络图（稍后会有详细介绍）。</p>
+    <p class="graf graf--p">⚠️为了不被 Facebook 检测到抓取，该工具在每个请求之间暂停一个随机的秒数；这个间隔可以减少，但如果太少就有被平台阻挡的风险。</p>
+    <p class="graf graf--p">在该过程结束时，它会生成一个csv文件，其中包含找到的朋友列表，以及一个包含相关图表的gexf文件。</p>
+    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">
+    建立人际关系网络图
+   </strong></p>
+    <p class="graf graf--p">在进行上述调查的过程中你还可以 <strong class="markup--strong markup--p-strong">
+    保持跟踪目标的朋友之间存在的关系
+   </strong> 。</p>
+    <p class="graf graf--p">如果你发现目标用户T和枢纽用户P有一个共同的朋友C，那么，现在你不仅知道C是目标的朋友，而且P和C都是朋友。</p>
+    <p class="graf graf--p">迭代这个过程，你就能够 <strong class="markup--strong markup--p-strong">
+    构建一个沿途找到的所有人际关系的网络图
+   </strong> ，其中节点是用户，连线是现有的关系。</p>
+    <p class="graf graf--p">一旦有了图表，就可以在其上 <strong class="markup--strong markup--p-strong">
+    运行不同的算法
+   </strong> ，以便尝试识别网络中的现有社区。例如，在实际情况中，这可能有助于识别工作同事、家人、最亲密朋友等不同的社区。</p>
+    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">
+    实际案例：扎克伯格的朋友圈
+   </strong></p>
+    <p class="graf graf--p">举个例子，我们将尝试获取一些 Mark Zuckerberg 的 Facebook 朋友，他们肯定知道这种可能性。</p>
+    <p class="graf graf--p">请注意，您显然可以使用公共朋友列表构建用户的关系图：在这种情况下，您不需要透视用户；只需使用他/她的 Facebook ID 作为目标和支点。</p>
+    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">
+    找到目标的 Facebook ID
+   </strong></p>
+    <p class="graf graf--p">首先需要了解 Mark Zuckerberg 的 Facebook ID。为了找到 Facebook 帐户的数字ID，有多种方法： <a class="markup--anchor markup--p-anchor" data-href="https://www.google.com/search?q=find+facebook+user+id" href="https://www.google.com/search?q=find+facebook+user+id" rel="noopener noreferrer" target="_blank"> 简单的 Google 搜索 </a> 就可以返回许多相关在线服务。</p>
+    <p class="graf graf--p">不过，本指南最喜欢的方法是 <strong class="markup--strong markup--p-strong">
+    自主执行
+   </strong> ：在浏览器中打开目标的 Facebook 个人资料页面（在示例中是 <a class="markup--anchor markup--p-anchor" data-href="https://www.facebook.com/zuck" href="https://www.facebook.com/zuck" rel="noopener noreferrer" target="_blank"> Mark Zuckerberg </a> ）并检查HTML源码（Ctrl + U）。</p>
+    <p class="graf graf--p">在代码中，搜索（Ctrl + F）： fb：// profile /; 应该有两个匹配，后跟相同的整数值： <strong class="markup--strong markup--p-strong">
+    这个数字就是 Facebook 帐户 ID
+   </strong> 。</p>
+    <p class="graf graf--p">在本指南的例子中，由于 Mark Zuckerberg 是该平台的首批用户之一，因此这个数字很小（是 4）；普通用户的数字会比较大。</p>
+    <figure aria-describedby="caption-attachment-9219" class="wp-caption aligncenter" id="attachment_9219" style="width: 842px">
+<img alt="" class="size-full wp-image-9219 jetpack-lazy-image" data-lazy-sizes="(max-width: 842px) 100vw, 842px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/4-6.png?resize=842%2C344&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/4-6.png?w=842&amp;ssl=1 842w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/4-6.png?resize=300%2C123&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/4-6.png?resize=768%2C314&amp;ssl=1 768w" data-recalc-dims="1" height="344" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/4-6.png?resize=842%2C344&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="842" />       <noscript>
+ <img alt="" class="size-full wp-image-9219" data-recalc-dims="1" height="344" sizes="(max-width: 842px) 100vw, 842px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/4-6.png?resize=842%2C344&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/4-6.png?w=842&amp;ssl=1 842w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/4-6.png?resize=300%2C123&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/4-6.png?resize=768%2C314&amp;ssl=1 768w" width="842" /> 
+      </noscript>
+      <figcaption class="wp-caption-text" id="caption-attachment-9219">
+Finding Facebook ID from the source code
+      </figcaption>
+    </figure>
+    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">
+    寻找枢纽用户
+   </strong></p>
+    <p class="graf graf--p">你还需要找到至少 <strong class="markup--strong markup--p-strong">
+    一个拥有公开朋友列表的帐户
+   </strong> （或对你来说朋友列表可见的账户）、以及至少 <strong class="markup--strong markup--p-strong">
+    一个与你的调查目标相关的共同朋友
+   </strong> 。</p>
+    <p class="graf graf--p">通常，一个便捷的方法是查看与目标进行交互的用户，例如通过评论或回应他帖子的人。</p>
+    <p class="graf graf--p">还要注意，为了最大化找到的“朋友”的数量， <strong class="markup--strong markup--p-strong">
+    最好让枢纽用户属于不同的社区
+   </strong> （例如：工作同事、家庭成员、体育运动伙伴等）越多越好。</p>
+    <p class="graf graf--p">Mattia Vinci 编写了一个辅助脚本，可以自动查找与给定的目标进行交互的用户；它被称为 fint.py 就包含在 <a class="markup--anchor markup--p-anchor" data-href="https://github.com/sowdust/ffff" href="https://github.com/sowdust/ffff" rel="noopener noreferrer" target="_blank"> ffff项目的存储库中 </a> 。</p>
+    <p class="graf graf--p">它的工作方式与ffff相同，因此本指南将仅提供一个快速示例用法（使用 -h 显示所有可用选项）。</p>
+    <p class="graf graf--p">有关更多一般信息，请参阅 <a class="markup--anchor markup--p-anchor" data-href="https://github.com/sowdust/ffff" href="https://github.com/sowdust/ffff" rel="noopener noreferrer" target="_blank"> Github上的项目页面 </a> 。</p>
+    <div class="language-plaintext graf graf--p highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python fint.py -fu [email protected] -fp fbpassword -d geckodriver.exe -t 4 -ls 10 -lp 10 -lc 5 -lr 5</code></pre></div>    </div>
+    <p class="graf graf--p">上面的命令将刮取最多100条评论（-lc）和最多1000条回应（-lr）的作者，在目标用户 4（-t）的最多10个故事（-ls）和10个照片（-lp）上。</p>
+    <p class="graf graf--p">输出是一个名为 <strong class="markup--strong markup--p-strong">
+    4-pivots.txt
+   </strong> 的文件，其中包含一个 Facebook ID 列表，可以作为 ffff（选项 -P）的输入。</p>
+    <figure aria-describedby="caption-attachment-9220" class="wp-caption aligncenter" id="attachment_9220" style="width: 958px">
+<img alt="" class="size-full wp-image-9220 jetpack-lazy-image" data-lazy-sizes="(max-width: 958px) 100vw, 958px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/5-6.png?resize=958%2C698&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/5-6.png?w=958&amp;ssl=1 958w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/5-6.png?resize=300%2C219&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/5-6.png?resize=768%2C560&amp;ssl=1 768w" data-recalc-dims="1" height="698" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/5-6.png?resize=958%2C698&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="958" />       <noscript>
+ <img alt="" class="size-full wp-image-9220" data-recalc-dims="1" height="698" sizes="(max-width: 958px) 100vw, 958px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/5-6.png?resize=958%2C698&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/5-6.png?w=958&amp;ssl=1 958w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/5-6.png?resize=300%2C219&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/5-6.png?resize=768%2C560&amp;ssl=1 768w" width="958" /> 
+      </noscript>
+      <figcaption class="wp-caption-text" id="caption-attachment-9220">
+Finding potential pivots – users who have interacted with Mark Zuckerberg – using fint.py
+      </figcaption>
+    </figure>
+    <p class="graf graf--p">由于本指南使用的目标是一个公众人物（扎克伯格），并且在 Facebook 方面有些特殊，所以，这里 <strong class="markup--strong markup--p-strong">
+    并不
+   </strong> 真正关心构建他朋友列表的大部分内容，更多关注的是单个枢纽用户。</p>
+    <p class="graf graf--p">为了获得这一目标，我们尝试了另一种方式：简单的搜索即可返回一篇文章，其中列出了一些扎克伯格 <a class="markup--anchor markup--p-anchor" data-href="https://www.adweek.com/digital/mark-zuckerberg-friends-list/" href="https://www.adweek.com/digital/mark-zuckerberg-friends-list/" rel="noopener noreferrer" target="_blank"> 已知的“朋友” </a> 。</p>
+    <p class="graf graf--p">该名单上的第四位，Brian Chesky，目前有一个公开的朋友名单，这使其成为本测试中 <strong class="markup--strong markup--p-strong">
+    枢纽用户的完美候选人
+   </strong> 。</p>
+    <p class="graf graf--p">现在需要找到他的 Facebook ID。上面已经展示了一些简单的方法。如果您对使用其中一个方法感到满意，就可以跳到以下部分了。</p>
+    <p class="graf graf--p">如果都不满意，这里将提出一种 <strong class="markup--strong markup--p-strong">
+    不同的方法来检索最初可能看起来很复杂的用户ID
+   </strong> ，但是，当您手动浏览 Facebook 网站时，它可能是速度最快的。</p>
+    <p class="graf graf--p">方法是这样：如果访问 Brian Chesky 的朋友列表页面，你会看到URL如下所示（对于从配置文件主菜单可以访问的任何页面都是如此，例如“about”，“photos”等）：</p>
+    <p class="graf graf--p"><em class="markup--em markup--p-em">
+    https://www.facebook.com/brianchesky/friends?lst=100028395012070%3A
+   </em> <strong class="markup--strong markup--p-strong">
+    <em class="markup--em markup--p-em">
+     558259929
+    </em>
+   </strong> <em class="markup--em markup--p-em">
+    %3A1557309584&amp;source_ref=pb_friends_t
+   </em></p>
+    <p class="graf graf--p">正如您所看到的，URL包含一个参数“lst”，它包含由字符％3A分隔的三个不同的整数值（只是字符 <strong class="markup--strong markup--p-strong">
+    “:”
+   </strong> 的URL编码）。</p>
+    <p class="graf graf--p">第二个整数就是用户ID，在本例中为 <strong class="markup--strong markup--p-strong">
+    558259929
+   </strong> 。</p>
+    <p class="graf graf--p">您可以（并且应该）通过访问 https://www.facebook.com/558259929 仔细检查ID，并注意它重定向到 https://www.facebook.com/brianchesky。</p>
+    <figure aria-describedby="caption-attachment-9221" class="wp-caption aligncenter" id="attachment_9221" style="width: 821px">
+<img alt="" class="size-full wp-image-9221 jetpack-lazy-image" data-lazy-sizes="(max-width: 821px) 100vw, 821px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/6-7.png?resize=821%2C467&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/6-7.png?w=821&amp;ssl=1 821w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/6-7.png?resize=300%2C171&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/6-7.png?resize=768%2C437&amp;ssl=1 768w" data-recalc-dims="1" height="467" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/6-7.png?resize=821%2C467&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="821" />       <noscript>
+ <img alt="" class="size-full wp-image-9221" data-recalc-dims="1" height="467" sizes="(max-width: 821px) 100vw, 821px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/6-7.png?resize=821%2C467&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/6-7.png?w=821&amp;ssl=1 821w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/6-7.png?resize=300%2C171&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/6-7.png?resize=768%2C437&amp;ssl=1 768w" width="821" /> 
+      </noscript>
+      <figcaption class="wp-caption-text" id="caption-attachment-9221">
+Find Facebook ID inside URL
+      </figcaption>
+    </figure>
+    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">
+    用 ffff.py 找到隐藏的朋友
+   </strong></p>
+    <p class="graf graf--p">本文不包括该工具的安装说明；一些信息可以在 <a class="markup--anchor markup--p-anchor" data-href="https://github.com/sowdust/ffff" href="https://github.com/sowdust/ffff" rel="noopener noreferrer" target="_blank"> 项目页面 </a> 上找到。</p>
+    <p class="graf graf--p">在以下示例中，该工具在 Windows 上的虚拟环境中运行。从 <a class="markup--anchor markup--p-anchor" data-href="https://github.com/mozilla/geckodriver/releases" href="https://github.com/mozilla/geckodriver/releases" rel="noopener noreferrer" target="_blank"> 官方的 mozilla </a> 项目页面下载了geckodriver.exe（如ffff项目页面上的说明所述），并将其放在与 python 脚本相同的目录中。</p>
+    <p class="graf graf--p">现在需要一个有效的 Facebook 帐户来进行抓取。我建议不要使用自己的账号，因为它可能被平台阻止。</p>
+    <p class="graf graf--p">💡最好的是： <a class="markup--anchor markup--p-anchor" data-href="https://www.iyouport.org/%e6%9f%90%e4%ba%9b%e8%a1%8c%e5%8a%a8%e8%80%85%ef%bc%8c%e4%bd%a0%e9%9c%80%e8%a6%81%e4%b8%80%e4%b8%aa%e8%a2%9c%e5%ad%90%e6%9c%a8%e5%81%b6/" href="https://www.iyouport.org/%e6%9f%90%e4%ba%9b%e8%a1%8c%e5%8a%a8%e8%80%85%ef%bc%8c%e4%bd%a0%e9%9c%80%e8%a6%81%e4%b8%80%e4%b8%aa%e8%a2%9c%e5%ad%90%e6%9c%a8%e5%81%b6/" rel="noopener noreferrer" target="_blank"> 袜子木偶 </a> ，创建一个与身份完全无关的测试帐户。更多见《 <a class="markup--anchor markup--p-anchor" data-href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e5%bb%ba%e7%ab%8b%e4%b8%80%e4%b8%aa%e5%8c%bf%e5%90%8d-facebook-%e8%b4%a6%e6%88%b7%e4%bb%a5%e4%bf%9d%e6%8a%a4%e4%b8%aa%e4%ba%ba%e6%95%b0%e6%8d%ae%e7%9a%84%e7%a7%81%e5%af%86%e6%80%a7/" href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e5%bb%ba%e7%ab%8b%e4%b8%80%e4%b8%aa%e5%8c%bf%e5%90%8d-facebook-%e8%b4%a6%e6%88%b7%e4%bb%a5%e4%bf%9d%e6%8a%a4%e4%b8%aa%e4%ba%ba%e6%95%b0%e6%8d%ae%e7%9a%84%e7%a7%81%e5%af%86%e6%80%a7/" rel="noopener noreferrer" target="_blank"> 如何建立一个匿名 Facebook 账户以保护个人数据的私密性？ </a> 》</p>
+    <p class="graf graf--p">在本示例中，我们将假装该帐户的电子邮件地址为“ <a class="markup--anchor markup--p-anchor" data-href="mailto:fbuser@mediaservice.net" href="/cdn-cgi/l/email-protection#a6c0c4d3d5c3d4e6cbc3c2cfc7d5c3d4d0cfc5c388c8c3d2" rel="nofollow noopener noreferrer" target="_blank"> <span class="__cf_email__" data-cfemail="3d5b5f484e584f7d505859545c4e584f4b545e5813535849"> [email protected] </span> </a> ”，密码为“fbpassword”。</p>
+    <p class="graf graf--p">现在拥有所需的所有信息：</p>
+    <ul class="postList">
+      <li class="graf graf--li">Facebook帐户邮箱（选项-fu）： <a class="__cf_email__" data-cfemail="b3d5d1c6c0d6c1f3ded6d7dad2c0d6c1c5dad0d69dddd6c7" href="/cdn-cgi/l/email-protection"> [email protected] </a></li>
+      <li class="graf graf--li">Facebook帐户密码（选项-fp）：fbpassword</li>
+      <li class="graf graf--li">目标帐户ID（选项-t）：4</li>
+      <li class="graf graf--li">枢纽账户ID（选项-p）：558259929</li>
+    </ul>
+    <p class="graf graf--p">选项 -q 用于隐藏浏览器窗口。</p>
+    <div class="language-plaintext graf graf--p highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python ffff.py -fu [email protected] -fp fbpassword -d geckodriver.exe -t 4 -p 558259929 -q</code></pre></div>    </div>
+    <p class="graf graf--p">要查看所有可用选项，请运行：python ffff.py -h</p>
+    <figure aria-describedby="caption-attachment-9222" class="wp-caption aligncenter" id="attachment_9222" style="width: 1111px">
+<img alt="" class="size-full wp-image-9222 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=1100%2C266&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?w=1111&amp;ssl=1 1111w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=300%2C73&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=768%2C186&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=1024%2C248&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=1100%2C266&amp;ssl=1 1100w" data-recalc-dims="1" height="266" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=1100%2C266&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="size-full wp-image-9222" data-recalc-dims="1" height="266" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=1100%2C266&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?w=1111&amp;ssl=1 1111w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=300%2C73&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=768%2C186&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=1024%2C248&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/7-7.png?resize=1100%2C266&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+      <figcaption class="wp-caption-text" id="caption-attachment-9222">
+Starting the program
+      </figcaption>
+    </figure>
+    <p class="graf graf--p">该程序很可能会在一段时间后遇到问题，例如超时；您可以使用 Ctrl + C 中断程序。这将保存所有结果以及可以恢复的文件：</p>
+    <div class="language-plaintext graf graf--p highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python ffff.py -fu [email protected] -fp fbpassword — resume session-4–2019050812320</code></pre></div>    </div>
+    <figure aria-describedby="caption-attachment-9223" class="wp-caption aligncenter" id="attachment_9223" style="width: 1080px">
+<img alt="" class="size-full wp-image-9223 jetpack-lazy-image" data-lazy-sizes="(max-width: 1080px) 100vw, 1080px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?resize=1080%2C489&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?w=1080&amp;ssl=1 1080w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?resize=300%2C136&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?resize=768%2C348&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?resize=1024%2C464&amp;ssl=1 1024w" data-recalc-dims="1" height="489" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?resize=1080%2C489&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1080" />       <noscript>
+ <img alt="" class="size-full wp-image-9223" data-recalc-dims="1" height="489" sizes="(max-width: 1080px) 100vw, 1080px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?resize=1080%2C489&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?w=1080&amp;ssl=1 1080w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?resize=300%2C136&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?resize=768%2C348&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/8-6.png?resize=1024%2C464&amp;ssl=1 1024w" width="1080" /> 
+      </noscript>
+      <figcaption class="wp-caption-text" id="caption-attachment-9223">
+Resuming a session after a time out
+      </figcaption>
+    </figure>
+    <p class="graf graf--p">程序终止后，所有朋友都显示在屏幕上，并创建三个不同的文件：</p>
+    <ul class="postList">
+      <li class="graf graf--li">4-friends.csv</li>
+      <li class="graf graf--li">4-friends.gexf</li>
+      <li class="graf graf--li">session-4–20190508130137</li>
+    </ul>
+    <p class="graf graf--p">.csv 文件包含朋友列表（ID、名称、配置文件URL）；.gexf 文件包含准备在 Gephi 中打开的图表（稍后将详细介绍）；最后，session 文件可用于稍后恢复程序运行，例如，如果找到任何新的枢纽用户的话。</p>
+    <figure aria-describedby="caption-attachment-9224" class="wp-caption aligncenter" id="attachment_9224" style="width: 828px">
+<img alt="" class="size-full wp-image-9224 jetpack-lazy-image" data-lazy-sizes="(max-width: 828px) 100vw, 828px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/9-5.png?resize=828%2C617&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/9-5.png?w=828&amp;ssl=1 828w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/9-5.png?resize=300%2C224&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/9-5.png?resize=768%2C572&amp;ssl=1 768w" data-recalc-dims="1" height="617" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/9-5.png?resize=828%2C617&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="828" />       <noscript>
+ <img alt="" class="size-full wp-image-9224" data-recalc-dims="1" height="617" sizes="(max-width: 828px) 100vw, 828px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/9-5.png?resize=828%2C617&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/9-5.png?w=828&amp;ssl=1 828w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/9-5.png?resize=300%2C224&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/09/9-5.png?resize=768%2C572&amp;ssl=1 768w" width="828" /> 
+      </noscript>
+      <figcaption class="wp-caption-text" id="caption-attachment-9224">
+Program termination
+      </figcaption>
+    </figure>
+    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">
+    绘制社区图表
+   </strong></p>
+    <p class="graf graf--p">接下来将使用 Gephi 软件绘制扎克伯格的朋友关系图表，可能以某种方式反映关系网络中存在的 <strong class="markup--strong markup--p-strong">
+    子社区的结构
+   </strong> 。</p>
+    <p class="graf graf--p">这里绝不是 Gephi 的指南，也不是进行社区识别的最佳方式。这里只为了演示工具的使用方法。</p>
+    <p class="graf graf--p">首先，用 Gephi 打开 .gexf 文件。最初，它看起来像一堆凌乱的黑暗的线条和圆点。</p>
+    <figure aria-describedby="caption-attachment-9225" class="wp-caption aligncenter" id="attachment_9225" style="width: 550px">
+<img alt="" class="size-full wp-image-9225 jetpack-lazy-image" data-lazy-sizes="(max-width: 550px) 100vw, 550px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/10-3.png?resize=550%2C503&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/10-3.png?w=550&amp;ssl=1 550w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/10-3.png?resize=300%2C274&amp;ssl=1 300w" data-recalc-dims="1" height="503" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/10-3.png?resize=550%2C503&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="550" />       <noscript>
+ <img alt="" class="size-full wp-image-9225" data-recalc-dims="1" height="503" sizes="(max-width: 550px) 100vw, 550px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/10-3.png?resize=550%2C503&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/10-3.png?w=550&amp;ssl=1 550w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/09/10-3.png?resize=300%2C274&amp;ssl=1 300w" width="550" /> 
+      </noscript>
+      <figcaption class="wp-caption-text" id="caption-attachment-9225">
+Initial graph
+      </figcaption>
+    </figure>
+    <p class="graf graf--p">从这里可以应用一些 <strong class="markup--strong markup--p-strong">
+    布局算法
+   </strong> ，这些算法可能有助于更深入地了解被视为社区的图表。</p>
+    <p class="graf graf--p">可以从“Overview tab”选项卡的左下窗口中选择布局。每个布局都有不同的参数：我建议都玩一下，看看它们的效果。</p>
+    <p class="graf graf--p">本指南先运行 OpenOrd，然后运行 ForceAtlas 2。</p>
+    <p class="graf graf--p">对于后者，我将 “Scaling” 值设置为10。结果尚不具有吸引力，但具有不同的形状。</p>
+    <figure aria-describedby="caption-attachment-9226" class="wp-caption aligncenter" id="attachment_9226" style="width: 1040px">
+<img alt="" class="size-full wp-image-9226 jetpack-lazy-image" data-lazy-sizes="(max-width: 1040px) 100vw, 1040px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?resize=1040%2C852&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?w=1040&amp;ssl=1 1040w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?resize=300%2C246&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?resize=768%2C629&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?resize=1024%2C839&amp;ssl=1 1024w" data-recalc-dims="1" height="852" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?resize=1040%2C852&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1040" />       <noscript>
+ <img alt="" class="size-full wp-image-9226" data-recalc-dims="1" height="852" sizes="(max-width: 1040px) 100vw, 1040px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?resize=1040%2C852&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?w=1040&amp;ssl=1 1040w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?resize=300%2C246&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?resize=768%2C629&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/11-2.png?resize=1024%2C839&amp;ssl=1 1024w" width="1040" /> 
+      </noscript>
+      <figcaption class="wp-caption-text" id="caption-attachment-9226">
+Graph after running ForceAtlas2
+      </figcaption>
+    </figure>
+    <p class="graf graf--p">现在可以尝试使用 “Modularity” 将节点划分到不同的社区，可以通过屏幕右侧的 “statistics” 部分计算。</p>
+    <p class="graf graf--p">在这里，你可以为“resolution”参数提供一个值：值越小，分区越多（即：更多社区）。</p>
+    <figure aria-describedby="caption-attachment-9227" class="wp-caption aligncenter" id="attachment_9227" style="width: 1278px">
+<img alt="" class="size-full wp-image-9227 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=1100%2C623&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?w=1278&amp;ssl=1 1278w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=300%2C170&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=768%2C435&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=1024%2C580&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=1100%2C623&amp;ssl=1 1100w" data-recalc-dims="1" height="623" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=1100%2C623&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="size-full wp-image-9227" data-recalc-dims="1" height="623" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=1100%2C623&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?w=1278&amp;ssl=1 1278w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=300%2C170&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=768%2C435&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=1024%2C580&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/12-3.png?resize=1100%2C623&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+      <figcaption class="wp-caption-text" id="caption-attachment-9227">
+Partition nodes by modularity with a resolution of 0.6
+      </figcaption>
+    </figure>
+    <p class="graf graf--p">现在我们可以为每个”Modularity” <strong class="markup--strong markup--p-strong">
+    分配不同的颜色
+   </strong> 。</p>
+    <p class="graf graf--p">在左上角的“外观”选项卡中，选择“节点”&gt;“分区”，并选择“Modularity Class”作为属性。 <strong class="markup--strong markup--p-strong">
+    这是为了更容易看懂
+   </strong> 。</p>
+    <p class="graf graf--p">单击“Palette …”可以配置要使用的颜色。</p>
+    <p class="graf graf--p">单击“应用”所有节点将根据你定义的 Modularity Class 进行着色。如果您对找到的社区不满意，可以返回上一步并选择不同的参数。</p>
+    <p class="graf graf--p">如果对图表感到满意，请转到顶部菜单中的“预览”选项卡，然后配置最终图形的显示方式。</p>
+    <p class="graf graf--p">最后，您可以 <strong class="markup--strong markup--p-strong">
+    以您希望的格式导出它
+   </strong> 。</p>
+    <figure aria-describedby="caption-attachment-9228" class="wp-caption aligncenter" id="attachment_9228" style="width: 1024px">
+<img alt="" class="size-full wp-image-9228 jetpack-lazy-image" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?resize=1024%2C1024&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?w=1024&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?resize=150%2C150&amp;ssl=1 150w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?resize=300%2C300&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?resize=768%2C768&amp;ssl=1 768w" data-recalc-dims="1" height="1024" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?resize=1024%2C1024&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1024" />       <noscript>
+ <img alt="" class="size-full wp-image-9228" data-recalc-dims="1" height="1024" sizes="(max-width: 1024px) 100vw, 1024px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?resize=1024%2C1024&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?w=1024&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?resize=150%2C150&amp;ssl=1 150w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?resize=300%2C300&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/09/13-3.png?resize=768%2C768&amp;ssl=1 768w" width="1024" /> 
+      </noscript>
+      <figcaption class="wp-caption-text" id="caption-attachment-9228">
+Some of Mark Zuckerberg’s friendships
+      </figcaption>
+    </figure>
+    <p class="graf graf--p">（上面的 <a class="markup--anchor markup--p-anchor" data-href="https://techblog.mediaservice.net/wp-content/uploads/2019/05/final_graph.png" href="https://techblog.mediaservice.net/wp-content/uploads/2019/05/final_graph.png" rel="noopener noreferrer" target="_blank"> 大图在这里 </a> ）</p>
+    <p class="graf graf--p">如果你想要一个交互式图表，你可以探索很多很棒的 <strong class="markup--strong markup--p-strong">
+    插件
+   </strong> ，可以以不同的格式导出图形。我喜欢 <a class="markup--anchor markup--p-anchor" data-href="https://github.com/oxfordinternetinstitute/gephi-plugins/tree/sigmaexporter-plugin/modules/sigmaExporter" href="https://github.com/oxfordinternetinstitute/gephi-plugins/tree/sigmaexporter-plugin/modules/sigmaExporter" rel="noopener noreferrer" target="_blank"> Sigma Exporter </a> ，你也可以试试。</p>
+    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">
+    最后的评论
+   </strong></p>
+    <p class="graf graf--p">本指南试图找到马克扎克伯格的 Facebook 朋友的一部分，尽管他的名单被隐藏了。</p>
+    <p class="graf graf--p">使用上述步骤，最终找到了 <strong class="markup--strong markup--p-strong">
+    335位
+   </strong> 独特的、确认的朋友关系。并且，还能够绘制出所发现的社交关系图谱。Mediaservice.net 的算法给出了令人惊讶的结果。</p>
+    <p class="graf graf--p">总之，通过这一演示您可以知道， <strong class="markup--strong markup--p-strong">
+    尽管 Facebook 有所谓的隐私设置，但是，依旧可以找到大多数 Facebook 用户的社交关系中很大一部分; 并且，可以在社交关系图谱中识别不同的社区。
+   </strong></p>
+    <p class="graf graf--p">ffff是个有效的工具，自动化调查过程其效果是值得信任的。</p>
+    <p class="graf graf--p">如果您是防御者，请避免以任何方式将您的私密社交关系暴露在互联网上。⚪️</p>
+    <div id="atatags-1611829871-5f40d67fb5a66"></div>
+    <div class="sharedaddy sd-sharing-enabled">
+      <div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing">
+        <h3 class="sd-title" id="section-1"> 共享此文章： </h3>
+        <div class="sd-content">
+          <ul>
+            <li class="share-twitter"><a class="share-twitter sd-button share-icon no-text" data-shared="sharing-twitter-9215" href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e6%8c%96%e6%8e%98%e7%9b%ae%e6%a0%87%e4%ba%ba%e9%9a%90%e8%97%8f%e7%9a%84%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%ef%bc%9f/?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="点击以在 Twitter 上共享"> <span> </span> <span class="sharing-screen-reader-text"> 点击以在 Twitter 上共享（在新窗口中打开） </span> </a></li>
+            <li class="share-facebook"><a class="share-facebook sd-button share-icon no-text" data-shared="sharing-facebook-9215" href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e6%8c%96%e6%8e%98%e7%9b%ae%e6%a0%87%e4%ba%ba%e9%9a%90%e8%97%8f%e7%9a%84%e4%ba%ba%e9%99%85%e5%85%b3%e7%b3%bb%ef%bc%9f/?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="点击以在 Facebook 上共享"> <span> </span> <span class="sharing-screen-reader-text"> 点击以在 Facebook 上共享（在新窗口中打开） </span> </a></li>
+            <li class="share-end"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-161182987-9215-5f40d67fb68b9" data-src="https://widgets.wp.com/likes/#blog_id=161182987&amp;post_id=9215&amp;origin=www.iyouport.org&amp;obj_id=161182987-9215-5f40d67fb68b9" id="like-post-wrapper-161182987-9215-5f40d67fb68b9">
+      <h3 class="sd-title" id="section-2"> 赞过： </h3>
+      <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+<span class="button"> <span> 赞 </span> </span> <span class="loading"> 正在加载…… </span>
+      </div>
+ <span class="sd-text-color"> </span> <a class="sd-link-color">
+   </a>
+    </div>
+    <div class="jp-relatedposts" id="jp-relatedposts">
+      <h3 class="jp-relatedposts-headline" id="section-3"> <em>
+     相关
+    </em> </h3>
+    </div>
+  </div>
+  <div class="entry-footer">
+    <ul class="post-tags light-text">
+      <li>Tagged</li>
+      <li><a href="https://www.iyouport.org/tag/activism/" rel="tag"> Activism </a></li>
+      <li><a href="https://www.iyouport.org/tag/facebook/" rel="tag"> Facebook </a></li>
+      <li><a href="https://www.iyouport.org/tag/investigation/" rel="tag"> Investigation </a></li>
+      <li><a href="https://www.iyouport.org/tag/osint/" rel="tag"> OSINT </a></li>
+      <li><a href="https://www.iyouport.org/tag/technique/" rel="tag"> technique </a></li>
+      <li><a href="https://www.iyouport.org/tag/technology/" rel="tag"> Technology </a></li>
+      <li><a href="https://www.iyouport.org/tag/tools/" rel="tag"> tools </a></li>
+    </ul>
+  </div>
+  <div class="entry-author-wrapper">
+    <div class="site-posted-on">
+<strong>
+    Published
+   </strong>       <time class="entry-date published" datetime="2019-12-19T00:04:06+08:00"> 2019年12月19日 </time>
+      <time class="updated" datetime="2019-09-18T20:53:22+08:00"> 2019年9月18日 </time>
+    </div>
+  </div>
+</article>
+
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#iYouPort 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-07-15/%E5%BD%93%E6%B0%91%E4%B8%BB%E5%A4%B1%E8%B4%A5-%E5%B7%AB%E6%9C%AF%E8%93%AC%E5%8B%83%E5%8F%91%E5%B1%95-%E6%81%B6%E9%AD%94%E5%9B%B0%E6%89%B0%E7%9A%84%E5%9C%9F%E5%9C%B0-iYouPort/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-10-11/%E7%BD%91%E7%BB%9C-%E6%B0%B4%E5%86%9B-%E7%9A%84%E5%B8%83%E5%B1%80-iYouPort/">最早</a>--</span>
+    
+      <li>
+        <time>2019-12-19</time>
+        <a href="https://nodebe4.github.io/oped2/2019-12-19/5%E4%B8%AA%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95%E5%BF%AB%E9%80%9F%E6%A3%80%E6%B5%8B%E9%80%A0%E5%81%87%E7%85%A7%E7%89%87-iYouPort/">
+          5个简单方法快速检测造假照片 - iYouPort
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-12-18</time>
+        <a href="https://nodebe4.github.io/oped2/2019-12-18/%E6%AF%92%E9%9C%BE-%E7%9B%91%E6%8E%A7%E5%AE%A1%E6%9F%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%85%A8%E7%90%83%E8%94%93%E5%BB%B6-%E4%B8%AD%E5%9B%BD%E5%92%8C%E4%BF%84%E7%BD%97%E6%96%AF%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9%E4%B8%8E%E5%8C%BA%E5%88%AB-%E9%95%BF%E7%AF%87%E6%8A%A5%E5%91%8A-iYouPort/">
+          毒霾  -  监控审查网络的全球蔓延：中国和俄罗斯的共同点与区别（长篇报告） - iYouPort
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-12-18</time>
+        <a href="https://nodebe4.github.io/oped2/2019-12-18/%E6%98%AF%E8%B0%81%E6%AD%A3%E5%9C%A8%E5%9B%B4%E8%A7%82%E4%BD%A0%E7%9A%84%E6%80%A7%E7%94%9F%E6%B4%BB-iYouPort/">
+          是谁正在围观你的性生活？ - iYouPort
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-12-18</time>
+        <a href="https://nodebe4.github.io/oped2/2019-12-18/%E4%BD%A0%E5%AE%B6%E5%86%B0%E7%AE%B1%E5%A6%82%E4%BD%95%E4%BD%9C%E4%B8%BA%E5%91%88%E5%A0%82%E8%AF%81%E4%BE%9B-iYouPort/">
+          你家冰箱如何作为呈堂证供？ - iYouPort
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2019-12-18/%E6%98%AF%E8%B0%81%E6%AD%A3%E5%9C%A8%E5%9B%B4%E8%A7%82%E4%BD%A0%E7%9A%84%E6%80%A7%E7%94%9F%E6%B4%BB-iYouPort/">
+            前一篇：是谁正在围观你的性生活？ - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2019-12-18/%E6%AF%92%E9%9C%BE-%E7%9B%91%E6%8E%A7%E5%AE%A1%E6%9F%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%85%A8%E7%90%83%E8%94%93%E5%BB%B6-%E4%B8%AD%E5%9B%BD%E5%92%8C%E4%BF%84%E7%BD%97%E6%96%AF%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9%E4%B8%8E%E5%8C%BA%E5%88%AB-%E9%95%BF%E7%AF%87%E6%8A%A5%E5%91%8A-iYouPort/">
+            後一篇：毒霾  -  监控审查网络的全球蔓延：中国和俄罗斯的共同点与区别（长篇报告） - iYouPort
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2019-12-18/%E6%98%AF%E8%B0%81%E6%AD%A3%E5%9C%A8%E5%9B%B4%E8%A7%82%E4%BD%A0%E7%9A%84%E6%80%A7%E7%94%9F%E6%B4%BB-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2019-12-18/%E6%AF%92%E9%9C%BE-%E7%9B%91%E6%8E%A7%E5%AE%A1%E6%9F%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%85%A8%E7%90%83%E8%94%93%E5%BB%B6-%E4%B8%AD%E5%9B%BD%E5%92%8C%E4%BF%84%E7%BD%97%E6%96%AF%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9%E4%B8%8E%E5%8C%BA%E5%88%AB-%E9%95%BF%E7%AF%87%E6%8A%A5%E5%91%8A-iYouPort/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2019-12-18/%E6%AF%92%E9%9C%BE-%E7%9B%91%E6%8E%A7%E5%AE%A1%E6%9F%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%85%A8%E7%90%83%E8%94%93%E5%BB%B6-%E4%B8%AD%E5%9B%BD%E5%92%8C%E4%BF%84%E7%BD%97%E6%96%AF%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9%E4%B8%8E%E5%8C%BA%E5%88%AB-%E9%95%BF%E7%AF%87%E6%8A%A5%E5%91%8A-iYouPort/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2019-12-18/%E6%98%AF%E8%B0%81%E6%AD%A3%E5%9C%A8%E5%9B%B4%E8%A7%82%E4%BD%A0%E7%9A%84%E6%80%A7%E7%94%9F%E6%B4%BB-iYouPort/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2019-12-18/%E6%98%AF%E8%B0%81%E6%AD%A3%E5%9C%A8%E5%9B%B4%E8%A7%82%E4%BD%A0%E7%9A%84%E6%80%A7%E7%94%9F%E6%B4%BB-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2019-12-18/%E6%AF%92%E9%9C%BE-%E7%9B%91%E6%8E%A7%E5%AE%A1%E6%9F%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%85%A8%E7%90%83%E8%94%93%E5%BB%B6-%E4%B8%AD%E5%9B%BD%E5%92%8C%E4%BF%84%E7%BD%97%E6%96%AF%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9%E4%B8%8E%E5%8C%BA%E5%88%AB-%E9%95%BF%E7%AF%87%E6%8A%A5%E5%91%8A-iYouPort/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<iYouPort>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2019-12-18/%E6%AF%92%E9%9C%BE-%E7%9B%91%E6%8E%A7%E5%AE%A1%E6%9F%A5%E7%BD%91%E7%BB%9C%E7%9A%84%E5%85%A8%E7%90%83%E8%94%93%E5%BB%B6-%E4%B8%AD%E5%9B%BD%E5%92%8C%E4%BF%84%E7%BD%97%E6%96%AF%E7%9A%84%E5%85%B1%E5%90%8C%E7%82%B9%E4%B8%8E%E5%8C%BA%E5%88%AB-%E9%95%BF%E7%AF%87%E6%8A%A5%E5%91%8A-iYouPort/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<iYouPort>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2019-12-18/%E6%98%AF%E8%B0%81%E6%AD%A3%E5%9C%A8%E5%9B%B4%E8%A7%82%E4%BD%A0%E7%9A%84%E6%80%A7%E7%94%9F%E6%B4%BB-iYouPort/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
