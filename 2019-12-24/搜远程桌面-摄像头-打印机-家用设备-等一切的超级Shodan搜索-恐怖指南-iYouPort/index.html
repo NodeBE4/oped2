@@ -1,0 +1,13027 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 - iYouPort – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+  
+     搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  技术防身/自我保护方法  ,  给行动者的护身符和武器             2019年12月25日 
+          2019年10月2日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       真的建议您把本列表中的每一个搜索都试一下，即便您不是调查爱好者，尝试这些搜索也能帮助您以最简单的方式了解到联网设备有多么的不安全 —— 提醒防御。
+      
+      
+    
+           
+  
+      
+
+    众所周知，Shodan 是一个特殊的搜索引擎，它允许用户使用各种过滤器查找连接到互联网的特定类型的东西。
+    与 Google 这种搜索网址的搜索引擎不同，Shodan 是用来搜索网络空间中在线设备的，你可以通过 Shodan 搜索指定的设备，或者搜索特定类型的设备。
+    Shodan 自诞生那天起就被称为“世界上最可怕的搜索引擎”，不是没道理的。
+    Shodan不仅能够搜到某个区域的思科路由器，通过同样的机制，它还可以搜到摄像头、视频广告牌、车牌扫描仪、巨大的风力涡轮机、你的家用设备、以及许许多多的其它在线设备。
+    随着人类对所谓物联网的狂热无限膨胀，安全风险已经前所未有地严重。
+    本文是一个列表，每一个搜索项都有一个超链接指向直接的结果。
+    这是为了提醒防御；而不是伤害！
+    
+    目录
+    ：
+    
+      工业控制系统
+      远程桌面
+      网络基础设施
+      网络附加存储（NAS）
+      摄像头
+      打印机和复印机
+      家用设备
+      随机的东西
+    
+      
+     工业控制系统
+      
+     
+     三星电子广告牌
+      🔍
+    "Server: Prismview Player"    
+           
+  
+      
+
+     
+     加油泵控制器
+      🔍
+    "in-tank inventory" port:10001    
+           
+  
+      
+
+     
+     自动车牌读取器
+      🔍
+    P372 "ANPR enabled"    
+           
+  
+      
+
+     
+     交通信号灯控制器/红光摄像机
+      🔍
+    mikrotik streetlight    
+     
+     美国的投票机
+      🔍
+    "voter system serial" country:US    
+     
+     运营思科合法拦截窃听的电信公司
+      🔍
+    "Cisco IOS" "ADVIPSERVICESK9_LI-M"    
+    思科在  RFC 3924  中概述的窃听机制：
+    
+    合法拦截是指合法授权的拦截和监视拦截对象的通信。术语“拦截对象”是指电信服务的订户，其通信和/或拦截相关信息（IRI）已被合法授权拦截并交付给某些机构。
+   
+     
+     监狱专用电话
+      🔍
+    "[2J[H Encartele Confidential"    
+     
+     Tesla PowerPack 充电状态
+      🔍
+    http.title:"Tesla PowerPack System" http.component:"d3" -ga3ca4f2    
+           
+  
+      
+
+     
+     电动汽车充电器
+      🔍
+    "Server: gSOAP/2.8" "Content-Length: 583"    
+     
+     海事卫星
+      🔍
+    Shodan 制作了一个非常漂亮的  Ship Tracker  ，它可以实时绘制船舶位置。
+    在这里看到通过追踪邮轮位置揭露腐败官员撒谎的开源调查案例《  利用开源调查揭露腐败  》。（我是想说，它也能做好事……）
+    "Cobham SATCOM" OR ("Sailor" "VSAT")    
+           
+  
+      
+
+     
+     潜艇任务控制仪表板
+      🔍
+    title:"Slocum Fleet Mission Control"    
+     
+     CAREL PlantVisor
+      
+    制冷机组
+    🔍
+    "Server: CarelDataServer" "200 Document follows"    
+           
+  
+      
+
+     
+     Nordex 风力发电机场
+      🔍
+    http.title:"Nordex Control" "Windows 2000 5.0 x86" "Jetty/3.1 (JSP 1.1; Servlet 2.2; java 1.6.0_14)"    
+     
+     C4 Max商用车GPS追踪器
+      🔍
+    "[1m[35mWelcome on console"    
+           
+  
+      
+
+     
+     DICOM 标准的医用X射线机
+      🔍
+    "DICOM Server Response" port:104    
+     
+     GaugeTech电表
+      🔍
+    "Server: EIG Embedded Web Server" "200 Document follows"    
+           
+  
+      
+
+     
+     西门子工业自动化
+      🔍
+    "Siemens, SIMATIC" port:161    
+     
+     西门子HVAC控制器
+      🔍
+    "Server: Microsoft-WinCE" "Content-Length: 12581"    
+     
+     门锁门禁控制器
+      🔍
+    "HID VertX" port:4070    
+     
+     铁路管理
+      🔍
+    "log off" "select the appropriate"    
+      
+     远程桌面
+      
+     
+     无保护的VNC
+      🔍
+    "authentication disabled" "RFB 003.008"    
+    顺便说一下，  Shodan Images  是一个很棒的辅助工具，  在这里看到  。
+           
+  
+      
+
+     
+     Windows RDP
+      
+    （远程桌面协议）
+    🔍
+    "\x03\x00\x00\x0b\x06\xd0\x00\x00\x124\x00"    
+      
+     网络基础设施
+      
+     
+     MongoDB
+      🔍
+    默认情况下，旧版本不安全。  非常吓人的  。
+    "MongoDB Server Information" port:27017 -authentication    
+           
+  
+      
+
+     
+     Mongo Express Web GUI
+      🔍
+    就像臭名昭著的  phpMyAdmin  一样，但适用于 MongoDB。
+    "Set-Cookie: mongo-express=" "200 OK"    
+           
+  
+      
+
+     
+     Jenkins CI
+      🔍
+    "X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"    
+           
+  
+      
+
+     
+     Docker APIs
+      🔍
+    "Docker Containers:" port:2375    
+     
+     Pi-hole OpenDNS 服务器
+      🔍
+    "dnsmasq-pi-hole" "Recursion: enabled"    
+     
+     root用户通过telnet方式远程登录
+      🔍
+    "[email protected]" port:23 -login -password -name -Session    
+     
+     Android Root Bridges
+      🔍
+    "Android Debug Bridge" "Device" port:5555    
+     
+     Lantronix 串口的以太网设备泄漏 Telnet 密码
+      🔍
+    Lantronix password port:30718 -secured    
+     
+     Citrix 虚拟应用程序
+      🔍
+    "Citrix Applications:" port:1604    
+           
+  
+      
+
+     
+     思科智能安装
+      🔍
+     易受攻击  （有点“设计使然”，特别是暴露时）。
+    "smart install client active"    
+     
+     PBX IP 电话网关
+      🔍
+    PBX "gateway console" -password port:23    
+     
+     Polycom 视频会议
+      🔍
+    http.title:"- Polycom" "Server: lighttpd"    
+     
+     Telnet配置
+      🔍
+    "Polycom Command Shell" -failed port:23    
+           
+  
+      
+
+     
+     Bomgar 服务台门户
+      🔍
+    "Server: Bomgar" "200 OK"    
+     
+     英特尔主动管理CVE-2017–5689
+      🔍
+    "Intel(R) Active Management Technology" port:623,664,16992,16993,16994,16995    
+     
+     惠普 iLO 4 远程命令执行漏洞 (CVE-2017–12542)
+      🔍
+    HP-ILO-4 !"HP-ILO-4/2.53" !"HP-ILO-4/2.54" !"HP-ILO-4/2.55" !"HP-ILO-4/2.60" !"HP-ILO-4/2.61" !"HP-ILO-4/2.62" !"HP-iLO-4/2.70" port:1900    
+      
+     Outlook Web Access
+      
+     
+     Exchange 2007
+      🔍
+    "x-owa-version" "IE=EmulateIE7" "Server: Microsoft-IIS/7.0"    
+           
+  
+      
+
+     
+     Exchange 2010
+      🔍
+    "x-owa-version" "IE=EmulateIE7" http.favicon.hash:442749392    
+           
+  
+      
+
+     
+     Exchange 2013 / 2016
+      🔍
+    "X-AspNet-Version" http.title:"Outlook" -"x-owa-version"    
+           
+  
+      
+
+     
+     Lync / Skype 商业版
+      🔍
+    "X-MS-Server-Fqdn"    
+      
+     网络附加存储（NAS）
+      
+     
+     SMB（Samba）文件共享
+      🔍
+    产生约500,000个结果 … 可以通过添加“文档”或“视频”等来缩小范围。
+    "Authentication: disabled" port:445    
+     
+     域控制器
+      🔍
+    "Authentication: disabled" NETLOGON SYSVOL -unix port:445    
+     
+     可以匿名登录的FTP服务器
+      🔍
+    "220" "230 Login successful." port:21    
+     
+     Iomega / LenovoEMC NAS驱动器
+      🔍
+    "Set-Cookie: iomega=" -"manage/login.html" -http.title:"Log In"    
+           
+  
+      
+
+     
+     Buffalo TeraStation NAS 驱动器
+      🔍
+    Redirecting sencha port:9000    
+           
+  
+      
+
+     
+     罗技媒体服务器
+      🔍
+    "Server: Logitech Media Server" "200 OK"    
+           
+  
+      
+
+     
+     Plex 媒体服务器
+      🔍
+    "X-Plex-Protocol" "200 OK" port:32400    
+     
+     Tautulli / PlexPy 仪表板
+      🔍
+    "CherryPy/5.1.0" "/home"    
+           
+  
+      
+
+      
+     摄像头
+      
+    不需要示例图像。
+     
+     Yawcams
+      🔍
+    "Server: yawcam" "Mime-Type: text/html"    
+     
+     webcamXP/webcam7
+      🔍
+    ("webcam 7" OR "webcamXP") http.component:"mootools" -401    
+     
+     Android IP网络摄像头服务器
+      🔍
+    "Server: IP Webcam Server" "200 OK"    
+     
+     数字视频录像机
+      🔍
+    html:"DVR_H264 ActiveX"    
+      
+     打印机和复印机
+      
+     
+     惠普打印机
+      🔍
+    "Serial Number:" "Built:" "Server: HP HTTP"    
+           
+  
+      
+
+     
+     施乐复印机/打印机
+      🔍
+    ssl:"Xerox Generic Root"    
+           
+  
+      
+
+     
+     爱普生打印机
+      🔍
+    "SERVER: EPSON_Linux UPnP" "200 OK"    
+    "Server: EPSON-HTTP" "200 OK"    
+           
+  
+      
+
+     
+     佳能打印机
+      🔍
+    "Server: KS_HTTP" "200 OK"    
+    "Server: CANON HTTP Server"    
+           
+  
+      
+
+      
+     家用设备
+      
+     
+     雅马哈音响
+      🔍
+    "Server: AV_Receiver" "HTTP/1.1 406"    
+           
+  
+      
+
+     
+     Apple AirPlay 接收器
+      🔍
+    Apple TV，HomePods 等。
+    "\x08_airplay" port:5353    
+     
+     Chromecast /智能电视
+      🔍
+    "Chromecast:" port:8008    
+     
+     快思聪智能家居控制器
+      🔍
+    "Model: PYNG-HUB"    
+      
+     随机的东西
+      
+     
+     OctoPrint 3D 打印机控制器
+      🔍
+    title:"OctoPrint" -title:"Login" http.favicon.hash:1307375944    
+           
+  
+      
+
+     
+     以太坊矿工
+      🔍
+    "ETH - Total speed"    
+           
+  
+      
+
+     
+     Apache目录列表
+      🔍
+    用任何扩展名或文件名（如 phpinfo.php）替换 .pem。
+    http.title:"Index of /" http.html:".pem"    
+     
+     一大堆 Minecraft 服务器
+      🔍
+    "Minecraft Server" "protocol 340" port:25565    
+     
+     搜朝鲜！
+     🇰🇵  🔍
+    就是字面上的一切。
+    net:175.45.176.0/22,210.52.109.0/24,77.94.35.0/24    
+    以上列表可能仍不完整；Shodan 的宝藏非常非常多，持续有待挖掘。如果您有其他更好的见解，欢迎留言探讨。
+    真心建议您尝试一下本文列出的所有搜索，即便您不是调查爱好者，这些尝试也能帮您以最简单直接的方式体验到所谓的物联网有多危险。警惕。⚪️
+     Awesome Shodan Search Queries 
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       IoT 
+       OSINT 
+       search 
+       Security 
+       Shodan 
+       technique 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2019年12月25日 
+       2019年10月2日 
+    
+  
+
+" />
+    <meta property="og:description" content="
+  
+     搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  技术防身/自我保护方法  ,  给行动者的护身符和武器             2019年12月25日 
+          2019年10月2日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       真的建议您把本列表中的每一个搜索都试一下，即便您不是调查爱好者，尝试这些搜索也能帮助您以最简单的方式了解到联网设备有多么的不安全 —— 提醒防御。
+      
+      
+    
+           
+  
+      
+
+    众所周知，Shodan 是一个特殊的搜索引擎，它允许用户使用各种过滤器查找连接到互联网的特定类型的东西。
+    与 Google 这种搜索网址的搜索引擎不同，Shodan 是用来搜索网络空间中在线设备的，你可以通过 Shodan 搜索指定的设备，或者搜索特定类型的设备。
+    Shodan 自诞生那天起就被称为“世界上最可怕的搜索引擎”，不是没道理的。
+    Shodan不仅能够搜到某个区域的思科路由器，通过同样的机制，它还可以搜到摄像头、视频广告牌、车牌扫描仪、巨大的风力涡轮机、你的家用设备、以及许许多多的其它在线设备。
+    随着人类对所谓物联网的狂热无限膨胀，安全风险已经前所未有地严重。
+    本文是一个列表，每一个搜索项都有一个超链接指向直接的结果。
+    这是为了提醒防御；而不是伤害！
+    
+    目录
+    ：
+    
+      工业控制系统
+      远程桌面
+      网络基础设施
+      网络附加存储（NAS）
+      摄像头
+      打印机和复印机
+      家用设备
+      随机的东西
+    
+      
+     工业控制系统
+      
+     
+     三星电子广告牌
+      🔍
+    "Server: Prismview Player"    
+           
+  
+      
+
+     
+     加油泵控制器
+      🔍
+    "in-tank inventory" port:10001    
+           
+  
+      
+
+     
+     自动车牌读取器
+      🔍
+    P372 "ANPR enabled"    
+           
+  
+      
+
+     
+     交通信号灯控制器/红光摄像机
+      🔍
+    mikrotik streetlight    
+     
+     美国的投票机
+      🔍
+    "voter system serial" country:US    
+     
+     运营思科合法拦截窃听的电信公司
+      🔍
+    "Cisco IOS" "ADVIPSERVICESK9_LI-M"    
+    思科在  RFC 3924  中概述的窃听机制：
+    
+    合法拦截是指合法授权的拦截和监视拦截对象的通信。术语“拦截对象”是指电信服务的订户，其通信和/或拦截相关信息（IRI）已被合法授权拦截并交付给某些机构。
+   
+     
+     监狱专用电话
+      🔍
+    "[2J[H Encartele Confidential"    
+     
+     Tesla PowerPack 充电状态
+      🔍
+    http.title:"Tesla PowerPack System" http.component:"d3" -ga3ca4f2    
+           
+  
+      
+
+     
+     电动汽车充电器
+      🔍
+    "Server: gSOAP/2.8" "Content-Length: 583"    
+     
+     海事卫星
+      🔍
+    Shodan 制作了一个非常漂亮的  Ship Tracker  ，它可以实时绘制船舶位置。
+    在这里看到通过追踪邮轮位置揭露腐败官员撒谎的开源调查案例《  利用开源调查揭露腐败  》。（我是想说，它也能做好事……）
+    "Cobham SATCOM" OR ("Sailor" "VSAT")    
+           
+  
+      
+
+     
+     潜艇任务控制仪表板
+      🔍
+    title:"Slocum Fleet Mission Control"    
+     
+     CAREL PlantVisor
+      
+    制冷机组
+    🔍
+    "Server: CarelDataServer" "200 Document follows"    
+           
+  
+      
+
+     
+     Nordex 风力发电机场
+      🔍
+    http.title:"Nordex Control" "Windows 2000 5.0 x86" "Jetty/3.1 (JSP 1.1; Servlet 2.2; java 1.6.0_14)"    
+     
+     C4 Max商用车GPS追踪器
+      🔍
+    "[1m[35mWelcome on console"    
+           
+  
+      
+
+     
+     DICOM 标准的医用X射线机
+      🔍
+    "DICOM Server Response" port:104    
+     
+     GaugeTech电表
+      🔍
+    "Server: EIG Embedded Web Server" "200 Document follows"    
+           
+  
+      
+
+     
+     西门子工业自动化
+      🔍
+    "Siemens, SIMATIC" port:161    
+     
+     西门子HVAC控制器
+      🔍
+    "Server: Microsoft-WinCE" "Content-Length: 12581"    
+     
+     门锁门禁控制器
+      🔍
+    "HID VertX" port:4070    
+     
+     铁路管理
+      🔍
+    "log off" "select the appropriate"    
+      
+     远程桌面
+      
+     
+     无保护的VNC
+      🔍
+    "authentication disabled" "RFB 003.008"    
+    顺便说一下，  Shodan Images  是一个很棒的辅助工具，  在这里看到  。
+           
+  
+      
+
+     
+     Windows RDP
+      
+    （远程桌面协议）
+    🔍
+    "\x03\x00\x00\x0b\x06\xd0\x00\x00\x124\x00"    
+      
+     网络基础设施
+      
+     
+     MongoDB
+      🔍
+    默认情况下，旧版本不安全。  非常吓人的  。
+    "MongoDB Server Information" port:27017 -authentication    
+           
+  
+      
+
+     
+     Mongo Express Web GUI
+      🔍
+    就像臭名昭著的  phpMyAdmin  一样，但适用于 MongoDB。
+    "Set-Cookie: mongo-express=" "200 OK"    
+           
+  
+      
+
+     
+     Jenkins CI
+      🔍
+    "X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"    
+           
+  
+      
+
+     
+     Docker APIs
+      🔍
+    "Docker Containers:" port:2375    
+     
+     Pi-hole OpenDNS 服务器
+      🔍
+    "dnsmasq-pi-hole" "Recursion: enabled"    
+     
+     root用户通过telnet方式远程登录
+      🔍
+    "[email protected]" port:23 -login -password -name -Session    
+     
+     Android Root Bridges
+      🔍
+    "Android Debug Bridge" "Device" port:5555    
+     
+     Lantronix 串口的以太网设备泄漏 Telnet 密码
+      🔍
+    Lantronix password port:30718 -secured    
+     
+     Citrix 虚拟应用程序
+      🔍
+    "Citrix Applications:" port:1604    
+           
+  
+      
+
+     
+     思科智能安装
+      🔍
+     易受攻击  （有点“设计使然”，特别是暴露时）。
+    "smart install client active"    
+     
+     PBX IP 电话网关
+      🔍
+    PBX "gateway console" -password port:23    
+     
+     Polycom 视频会议
+      🔍
+    http.title:"- Polycom" "Server: lighttpd"    
+     
+     Telnet配置
+      🔍
+    "Polycom Command Shell" -failed port:23    
+           
+  
+      
+
+     
+     Bomgar 服务台门户
+      🔍
+    "Server: Bomgar" "200 OK"    
+     
+     英特尔主动管理CVE-2017–5689
+      🔍
+    "Intel(R) Active Management Technology" port:623,664,16992,16993,16994,16995    
+     
+     惠普 iLO 4 远程命令执行漏洞 (CVE-2017–12542)
+      🔍
+    HP-ILO-4 !"HP-ILO-4/2.53" !"HP-ILO-4/2.54" !"HP-ILO-4/2.55" !"HP-ILO-4/2.60" !"HP-ILO-4/2.61" !"HP-ILO-4/2.62" !"HP-iLO-4/2.70" port:1900    
+      
+     Outlook Web Access
+      
+     
+     Exchange 2007
+      🔍
+    "x-owa-version" "IE=EmulateIE7" "Server: Microsoft-IIS/7.0"    
+           
+  
+      
+
+     
+     Exchange 2010
+      🔍
+    "x-owa-version" "IE=EmulateIE7" http.favicon.hash:442749392    
+           
+  
+      
+
+     
+     Exchange 2013 / 2016
+      🔍
+    "X-AspNet-Version" http.title:"Outlook" -"x-owa-version"    
+           
+  
+      
+
+     
+     Lync / Skype 商业版
+      🔍
+    "X-MS-Server-Fqdn"    
+      
+     网络附加存储（NAS）
+      
+     
+     SMB（Samba）文件共享
+      🔍
+    产生约500,000个结果 … 可以通过添加“文档”或“视频”等来缩小范围。
+    "Authentication: disabled" port:445    
+     
+     域控制器
+      🔍
+    "Authentication: disabled" NETLOGON SYSVOL -unix port:445    
+     
+     可以匿名登录的FTP服务器
+      🔍
+    "220" "230 Login successful." port:21    
+     
+     Iomega / LenovoEMC NAS驱动器
+      🔍
+    "Set-Cookie: iomega=" -"manage/login.html" -http.title:"Log In"    
+           
+  
+      
+
+     
+     Buffalo TeraStation NAS 驱动器
+      🔍
+    Redirecting sencha port:9000    
+           
+  
+      
+
+     
+     罗技媒体服务器
+      🔍
+    "Server: Logitech Media Server" "200 OK"    
+           
+  
+      
+
+     
+     Plex 媒体服务器
+      🔍
+    "X-Plex-Protocol" "200 OK" port:32400    
+     
+     Tautulli / PlexPy 仪表板
+      🔍
+    "CherryPy/5.1.0" "/home"    
+           
+  
+      
+
+      
+     摄像头
+      
+    不需要示例图像。
+     
+     Yawcams
+      🔍
+    "Server: yawcam" "Mime-Type: text/html"    
+     
+     webcamXP/webcam7
+      🔍
+    ("webcam 7" OR "webcamXP") http.component:"mootools" -401    
+     
+     Android IP网络摄像头服务器
+      🔍
+    "Server: IP Webcam Server" "200 OK"    
+     
+     数字视频录像机
+      🔍
+    html:"DVR_H264 ActiveX"    
+      
+     打印机和复印机
+      
+     
+     惠普打印机
+      🔍
+    "Serial Number:" "Built:" "Server: HP HTTP"    
+           
+  
+      
+
+     
+     施乐复印机/打印机
+      🔍
+    ssl:"Xerox Generic Root"    
+           
+  
+      
+
+     
+     爱普生打印机
+      🔍
+    "SERVER: EPSON_Linux UPnP" "200 OK"    
+    "Server: EPSON-HTTP" "200 OK"    
+           
+  
+      
+
+     
+     佳能打印机
+      🔍
+    "Server: KS_HTTP" "200 OK"    
+    "Server: CANON HTTP Server"    
+           
+  
+      
+
+      
+     家用设备
+      
+     
+     雅马哈音响
+      🔍
+    "Server: AV_Receiver" "HTTP/1.1 406"    
+           
+  
+      
+
+     
+     Apple AirPlay 接收器
+      🔍
+    Apple TV，HomePods 等。
+    "\x08_airplay" port:5353    
+     
+     Chromecast /智能电视
+      🔍
+    "Chromecast:" port:8008    
+     
+     快思聪智能家居控制器
+      🔍
+    "Model: PYNG-HUB"    
+      
+     随机的东西
+      
+     
+     OctoPrint 3D 打印机控制器
+      🔍
+    title:"OctoPrint" -title:"Login" http.favicon.hash:1307375944    
+           
+  
+      
+
+     
+     以太坊矿工
+      🔍
+    "ETH - Total speed"    
+           
+  
+      
+
+     
+     Apache目录列表
+      🔍
+    用任何扩展名或文件名（如 phpinfo.php）替换 .pem。
+    http.title:"Index of /" http.html:".pem"    
+     
+     一大堆 Minecraft 服务器
+      🔍
+    "Minecraft Server" "protocol 340" port:25565    
+     
+     搜朝鲜！
+     🇰🇵  🔍
+    就是字面上的一切。
+    net:175.45.176.0/22,210.52.109.0/24,77.94.35.0/24    
+    以上列表可能仍不完整；Shodan 的宝藏非常非常多，持续有待挖掘。如果您有其他更好的见解，欢迎留言探讨。
+    真心建议您尝试一下本文列出的所有搜索，即便您不是调查爱好者，这些尝试也能帮您以最简单直接的方式体验到所谓的物联网有多危险。警惕。⚪️
+     Awesome Shodan Search Queries 
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       IoT 
+       OSINT 
+       search 
+       Security 
+       Shodan 
+       technique 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2019年12月25日 
+       2019年10月2日 
+    
+  
+
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 - iYouPort" />
+    <meta property="twitter:title" content="搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 - iYouPort" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5682)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.iyouport.org%2F%25e6%2590%259c%25e8%25bf%259c%25e7%25a8%258b%25e6%25a1%258c%25e9%259d%25a2%25e3%2580%2581%25e6%2591%2584%25e5%2583%258f%25e5%25a4%25b4%25e3%2580%2581%25e6%2589%2593%25e5%258d%25b0%25e6%259c%25ba%25e3%2580%2581%25e5%25ae%25b6%25e7%2594%25a8%25e8%25ae%25be%25e5%25a4%2587-%25e7%25ad%2589%25e4%25b8%2580%25e5%2588%2587%2F" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/&text=搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 - iYouPort&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/&title=搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 - iYouPort" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/&title=搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 - iYouPort" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 - iYouPort&body=
+  
+     搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  技术防身/自我保护方法  ,  给行动者的护身符和武器             2019年12月25日 
+          2019年10月2日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       真的建议您把本列表中的每一个搜索都试一下，即便您不是调查爱好者，尝试这些搜索也能帮助您以最简单的方式了解到联网设备有多么的不安全 —— 提醒防御。
+      
+      
+    
+           
+  
+      
+
+    众所周知，Shodan 是一个特殊的搜索引擎，它允许用户使用各种过滤器查找连接到互联网的特定类型的东西。
+    与 Google 这种搜索网址的搜索引擎不同，Shodan 是用来搜索网络空间中在线设备的，你可以通过 Shodan 搜索指定的设备，或者搜索特定类型的设备。
+    Shodan 自诞生那天起就被称为“世界上最可怕的搜索引擎”，不是没道理的。
+    Shodan不仅能够搜到某个区域的思科路由器，通过同样的机制，它还可以搜到摄像头、视频广告牌、车牌扫描仪、巨大的风力涡轮机、你的家用设备、以及许许多多的其它在线设备。
+    随着人类对所谓物联网的狂热无限膨胀，安全风险已经前所未有地严重。
+    本文是一个列表，每一个搜索项都有一个超链接指向直接的结果。
+    这是为了提醒防御；而不是伤害！
+    
+    目录
+    ：
+    
+      工业控制系统
+      远程桌面
+      网络基础设施
+      网络附加存储（NAS）
+      摄像头
+      打印机和复印机
+      家用设备
+      随机的东西
+    
+      
+     工业控制系统
+      
+     
+     三星电子广告牌
+      🔍
+    "Server: Prismview Player"    
+           
+  
+      
+
+     
+     加油泵控制器
+      🔍
+    "in-tank inventory" port:10001    
+           
+  
+      
+
+     
+     自动车牌读取器
+      🔍
+    P372 "ANPR enabled"    
+           
+  
+      
+
+     
+     交通信号灯控制器/红光摄像机
+      🔍
+    mikrotik streetlight    
+     
+     美国的投票机
+      🔍
+    "voter system serial" country:US    
+     
+     运营思科合法拦截窃听的电信公司
+      🔍
+    "Cisco IOS" "ADVIPSERVICESK9_LI-M"    
+    思科在  RFC 3924  中概述的窃听机制：
+    
+    合法拦截是指合法授权的拦截和监视拦截对象的通信。术语“拦截对象”是指电信服务的订户，其通信和/或拦截相关信息（IRI）已被合法授权拦截并交付给某些机构。
+   
+     
+     监狱专用电话
+      🔍
+    "[2J[H Encartele Confidential"    
+     
+     Tesla PowerPack 充电状态
+      🔍
+    http.title:"Tesla PowerPack System" http.component:"d3" -ga3ca4f2    
+           
+  
+      
+
+     
+     电动汽车充电器
+      🔍
+    "Server: gSOAP/2.8" "Content-Length: 583"    
+     
+     海事卫星
+      🔍
+    Shodan 制作了一个非常漂亮的  Ship Tracker  ，它可以实时绘制船舶位置。
+    在这里看到通过追踪邮轮位置揭露腐败官员撒谎的开源调查案例《  利用开源调查揭露腐败  》。（我是想说，它也能做好事……）
+    "Cobham SATCOM" OR ("Sailor" "VSAT")    
+           
+  
+      
+
+     
+     潜艇任务控制仪表板
+      🔍
+    title:"Slocum Fleet Mission Control"    
+     
+     CAREL PlantVisor
+      
+    制冷机组
+    🔍
+    "Server: CarelDataServer" "200 Document follows"    
+           
+  
+      
+
+     
+     Nordex 风力发电机场
+      🔍
+    http.title:"Nordex Control" "Windows 2000 5.0 x86" "Jetty/3.1 (JSP 1.1; Servlet 2.2; java 1.6.0_14)"    
+     
+     C4 Max商用车GPS追踪器
+      🔍
+    "[1m[35mWelcome on console"    
+           
+  
+      
+
+     
+     DICOM 标准的医用X射线机
+      🔍
+    "DICOM Server Response" port:104    
+     
+     GaugeTech电表
+      🔍
+    "Server: EIG Embedded Web Server" "200 Document follows"    
+           
+  
+      
+
+     
+     西门子工业自动化
+      🔍
+    "Siemens, SIMATIC" port:161    
+     
+     西门子HVAC控制器
+      🔍
+    "Server: Microsoft-WinCE" "Content-Length: 12581"    
+     
+     门锁门禁控制器
+      🔍
+    "HID VertX" port:4070    
+     
+     铁路管理
+      🔍
+    "log off" "select the appropriate"    
+      
+     远程桌面
+      
+     
+     无保护的VNC
+      🔍
+    "authentication disabled" "RFB 003.008"    
+    顺便说一下，  Shodan Images  是一个很棒的辅助工具，  在这里看到  。
+           
+  
+      
+
+     
+     Windows RDP
+      
+    （远程桌面协议）
+    🔍
+    "\x03\x00\x00\x0b\x06\xd0\x00\x00\x124\x00"    
+      
+     网络基础设施
+      
+     
+     MongoDB
+      🔍
+    默认情况下，旧版本不安全。  非常吓人的  。
+    "MongoDB Server Information" port:27017 -authentication    
+           
+  
+      
+
+     
+     Mongo Express Web GUI
+      🔍
+    就像臭名昭著的  phpMyAdmin  一样，但适用于 MongoDB。
+    "Set-Cookie: mongo-express=" "200 OK"    
+           
+  
+      
+
+     
+     Jenkins CI
+      🔍
+    "X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"    
+           
+  
+      
+
+     
+     Docker APIs
+      🔍
+    "Docker Containers:" port:2375    
+     
+     Pi-hole OpenDNS 服务器
+      🔍
+    "dnsmasq-pi-hole" "Recursion: enabled"    
+     
+     root用户通过telnet方式远程登录
+      🔍
+    "[email protected]" port:23 -login -password -name -Session    
+     
+     Android Root Bridges
+      🔍
+    "Android Debug Bridge" "Device" port:5555    
+     
+     Lantronix 串口的以太网设备泄漏 Telnet 密码
+      🔍
+    Lantronix password port:30718 -secured    
+     
+     Citrix 虚拟应用程序
+      🔍
+    "Citrix Applications:" port:1604    
+           
+  
+      
+
+     
+     思科智能安装
+      🔍
+     易受攻击  （有点“设计使然”，特别是暴露时）。
+    "smart install client active"    
+     
+     PBX IP 电话网关
+      🔍
+    PBX "gateway console" -password port:23    
+     
+     Polycom 视频会议
+      🔍
+    http.title:"- Polycom" "Server: lighttpd"    
+     
+     Telnet配置
+      🔍
+    "Polycom Command Shell" -failed port:23    
+           
+  
+      
+
+     
+     Bomgar 服务台门户
+      🔍
+    "Server: Bomgar" "200 OK"    
+     
+     英特尔主动管理CVE-2017–5689
+      🔍
+    "Intel(R) Active Management Technology" port:623,664,16992,16993,16994,16995    
+     
+     惠普 iLO 4 远程命令执行漏洞 (CVE-2017–12542)
+      🔍
+    HP-ILO-4 !"HP-ILO-4/2.53" !"HP-ILO-4/2.54" !"HP-ILO-4/2.55" !"HP-ILO-4/2.60" !"HP-ILO-4/2.61" !"HP-ILO-4/2.62" !"HP-iLO-4/2.70" port:1900    
+      
+     Outlook Web Access
+      
+     
+     Exchange 2007
+      🔍
+    "x-owa-version" "IE=EmulateIE7" "Server: Microsoft-IIS/7.0"    
+           
+  
+      
+
+     
+     Exchange 2010
+      🔍
+    "x-owa-version" "IE=EmulateIE7" http.favicon.hash:442749392    
+           
+  
+      
+
+     
+     Exchange 2013 / 2016
+      🔍
+    "X-AspNet-Version" http.title:"Outlook" -"x-owa-version"    
+           
+  
+      
+
+     
+     Lync / Skype 商业版
+      🔍
+    "X-MS-Server-Fqdn"    
+      
+     网络附加存储（NAS）
+      
+     
+     SMB（Samba）文件共享
+      🔍
+    产生约500,000个结果 … 可以通过添加“文档”或“视频”等来缩小范围。
+    "Authentication: disabled" port:445    
+     
+     域控制器
+      🔍
+    "Authentication: disabled" NETLOGON SYSVOL -unix port:445    
+     
+     可以匿名登录的FTP服务器
+      🔍
+    "220" "230 Login successful." port:21    
+     
+     Iomega / LenovoEMC NAS驱动器
+      🔍
+    "Set-Cookie: iomega=" -"manage/login.html" -http.title:"Log In"    
+           
+  
+      
+
+     
+     Buffalo TeraStation NAS 驱动器
+      🔍
+    Redirecting sencha port:9000    
+           
+  
+      
+
+     
+     罗技媒体服务器
+      🔍
+    "Server: Logitech Media Server" "200 OK"    
+           
+  
+      
+
+     
+     Plex 媒体服务器
+      🔍
+    "X-Plex-Protocol" "200 OK" port:32400    
+     
+     Tautulli / PlexPy 仪表板
+      🔍
+    "CherryPy/5.1.0" "/home"    
+           
+  
+      
+
+      
+     摄像头
+      
+    不需要示例图像。
+     
+     Yawcams
+      🔍
+    "Server: yawcam" "Mime-Type: text/html"    
+     
+     webcamXP/webcam7
+      🔍
+    ("webcam 7" OR "webcamXP") http.component:"mootools" -401    
+     
+     Android IP网络摄像头服务器
+      🔍
+    "Server: IP Webcam Server" "200 OK"    
+     
+     数字视频录像机
+      🔍
+    html:"DVR_H264 ActiveX"    
+      
+     打印机和复印机
+      
+     
+     惠普打印机
+      🔍
+    "Serial Number:" "Built:" "Server: HP HTTP"    
+           
+  
+      
+
+     
+     施乐复印机/打印机
+      🔍
+    ssl:"Xerox Generic Root"    
+           
+  
+      
+
+     
+     爱普生打印机
+      🔍
+    "SERVER: EPSON_Linux UPnP" "200 OK"    
+    "Server: EPSON-HTTP" "200 OK"    
+           
+  
+      
+
+     
+     佳能打印机
+      🔍
+    "Server: KS_HTTP" "200 OK"    
+    "Server: CANON HTTP Server"    
+           
+  
+      
+
+      
+     家用设备
+      
+     
+     雅马哈音响
+      🔍
+    "Server: AV_Receiver" "HTTP/1.1 406"    
+           
+  
+      
+
+     
+     Apple AirPlay 接收器
+      🔍
+    Apple TV，HomePods 等。
+    "\x08_airplay" port:5353    
+     
+     Chromecast /智能电视
+      🔍
+    "Chromecast:" port:8008    
+     
+     快思聪智能家居控制器
+      🔍
+    "Model: PYNG-HUB"    
+      
+     随机的东西
+      
+     
+     OctoPrint 3D 打印机控制器
+      🔍
+    title:"OctoPrint" -title:"Login" http.favicon.hash:1307375944    
+           
+  
+      
+
+     
+     以太坊矿工
+      🔍
+    "ETH - Total speed"    
+           
+  
+      
+
+     
+     Apache目录列表
+      🔍
+    用任何扩展名或文件名（如 phpinfo.php）替换 .pem。
+    http.title:"Index of /" http.html:".pem"    
+     
+     一大堆 Minecraft 服务器
+      🔍
+    "Minecraft Server" "protocol 340" port:25565    
+     
+     搜朝鲜！
+     🇰🇵  🔍
+    就是字面上的一切。
+    net:175.45.176.0/22,210.52.109.0/24,77.94.35.0/24    
+    以上列表可能仍不完整；Shodan 的宝藏非常非常多，持续有待挖掘。如果您有其他更好的见解，欢迎留言探讨。
+    真心建议您尝试一下本文列出的所有搜索，即便您不是调查爱好者，这些尝试也能帮您以最简单直接的方式体验到所谓的物联网有多危险。警惕。⚪️
+     Awesome Shodan Search Queries 
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       IoT 
+       OSINT 
+       search 
+       Security 
+       Shodan 
+       technique 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2019年12月25日 
+       2019年10月2日 
+    
+  
+
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/&title=搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 - iYouPort&caption=
+  
+     搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 
+  
+  
+  McCaffrey     Knowledge Node  ,  OSINT  ,  技术防身/自我保护方法  ,  给行动者的护身符和武器             2019年12月25日 
+          2019年10月2日 
+   2 Minutes 
+  
+  
+    
+       
+      
+       真的建议您把本列表中的每一个搜索都试一下，即便您不是调查爱好者，尝试这些搜索也能帮助您以最简单的方式了解到联网设备有多么的不安全 —— 提醒防御。
+      
+      
+    
+           
+  
+      
+
+    众所周知，Shodan 是一个特殊的搜索引擎，它允许用户使用各种过滤器查找连接到互联网的特定类型的东西。
+    与 Google 这种搜索网址的搜索引擎不同，Shodan 是用来搜索网络空间中在线设备的，你可以通过 Shodan 搜索指定的设备，或者搜索特定类型的设备。
+    Shodan 自诞生那天起就被称为“世界上最可怕的搜索引擎”，不是没道理的。
+    Shodan不仅能够搜到某个区域的思科路由器，通过同样的机制，它还可以搜到摄像头、视频广告牌、车牌扫描仪、巨大的风力涡轮机、你的家用设备、以及许许多多的其它在线设备。
+    随着人类对所谓物联网的狂热无限膨胀，安全风险已经前所未有地严重。
+    本文是一个列表，每一个搜索项都有一个超链接指向直接的结果。
+    这是为了提醒防御；而不是伤害！
+    
+    目录
+    ：
+    
+      工业控制系统
+      远程桌面
+      网络基础设施
+      网络附加存储（NAS）
+      摄像头
+      打印机和复印机
+      家用设备
+      随机的东西
+    
+      
+     工业控制系统
+      
+     
+     三星电子广告牌
+      🔍
+    "Server: Prismview Player"    
+           
+  
+      
+
+     
+     加油泵控制器
+      🔍
+    "in-tank inventory" port:10001    
+           
+  
+      
+
+     
+     自动车牌读取器
+      🔍
+    P372 "ANPR enabled"    
+           
+  
+      
+
+     
+     交通信号灯控制器/红光摄像机
+      🔍
+    mikrotik streetlight    
+     
+     美国的投票机
+      🔍
+    "voter system serial" country:US    
+     
+     运营思科合法拦截窃听的电信公司
+      🔍
+    "Cisco IOS" "ADVIPSERVICESK9_LI-M"    
+    思科在  RFC 3924  中概述的窃听机制：
+    
+    合法拦截是指合法授权的拦截和监视拦截对象的通信。术语“拦截对象”是指电信服务的订户，其通信和/或拦截相关信息（IRI）已被合法授权拦截并交付给某些机构。
+   
+     
+     监狱专用电话
+      🔍
+    "[2J[H Encartele Confidential"    
+     
+     Tesla PowerPack 充电状态
+      🔍
+    http.title:"Tesla PowerPack System" http.component:"d3" -ga3ca4f2    
+           
+  
+      
+
+     
+     电动汽车充电器
+      🔍
+    "Server: gSOAP/2.8" "Content-Length: 583"    
+     
+     海事卫星
+      🔍
+    Shodan 制作了一个非常漂亮的  Ship Tracker  ，它可以实时绘制船舶位置。
+    在这里看到通过追踪邮轮位置揭露腐败官员撒谎的开源调查案例《  利用开源调查揭露腐败  》。（我是想说，它也能做好事……）
+    "Cobham SATCOM" OR ("Sailor" "VSAT")    
+           
+  
+      
+
+     
+     潜艇任务控制仪表板
+      🔍
+    title:"Slocum Fleet Mission Control"    
+     
+     CAREL PlantVisor
+      
+    制冷机组
+    🔍
+    "Server: CarelDataServer" "200 Document follows"    
+           
+  
+      
+
+     
+     Nordex 风力发电机场
+      🔍
+    http.title:"Nordex Control" "Windows 2000 5.0 x86" "Jetty/3.1 (JSP 1.1; Servlet 2.2; java 1.6.0_14)"    
+     
+     C4 Max商用车GPS追踪器
+      🔍
+    "[1m[35mWelcome on console"    
+           
+  
+      
+
+     
+     DICOM 标准的医用X射线机
+      🔍
+    "DICOM Server Response" port:104    
+     
+     GaugeTech电表
+      🔍
+    "Server: EIG Embedded Web Server" "200 Document follows"    
+           
+  
+      
+
+     
+     西门子工业自动化
+      🔍
+    "Siemens, SIMATIC" port:161    
+     
+     西门子HVAC控制器
+      🔍
+    "Server: Microsoft-WinCE" "Content-Length: 12581"    
+     
+     门锁门禁控制器
+      🔍
+    "HID VertX" port:4070    
+     
+     铁路管理
+      🔍
+    "log off" "select the appropriate"    
+      
+     远程桌面
+      
+     
+     无保护的VNC
+      🔍
+    "authentication disabled" "RFB 003.008"    
+    顺便说一下，  Shodan Images  是一个很棒的辅助工具，  在这里看到  。
+           
+  
+      
+
+     
+     Windows RDP
+      
+    （远程桌面协议）
+    🔍
+    "\x03\x00\x00\x0b\x06\xd0\x00\x00\x124\x00"    
+      
+     网络基础设施
+      
+     
+     MongoDB
+      🔍
+    默认情况下，旧版本不安全。  非常吓人的  。
+    "MongoDB Server Information" port:27017 -authentication    
+           
+  
+      
+
+     
+     Mongo Express Web GUI
+      🔍
+    就像臭名昭著的  phpMyAdmin  一样，但适用于 MongoDB。
+    "Set-Cookie: mongo-express=" "200 OK"    
+           
+  
+      
+
+     
+     Jenkins CI
+      🔍
+    "X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"    
+           
+  
+      
+
+     
+     Docker APIs
+      🔍
+    "Docker Containers:" port:2375    
+     
+     Pi-hole OpenDNS 服务器
+      🔍
+    "dnsmasq-pi-hole" "Recursion: enabled"    
+     
+     root用户通过telnet方式远程登录
+      🔍
+    "[email protected]" port:23 -login -password -name -Session    
+     
+     Android Root Bridges
+      🔍
+    "Android Debug Bridge" "Device" port:5555    
+     
+     Lantronix 串口的以太网设备泄漏 Telnet 密码
+      🔍
+    Lantronix password port:30718 -secured    
+     
+     Citrix 虚拟应用程序
+      🔍
+    "Citrix Applications:" port:1604    
+           
+  
+      
+
+     
+     思科智能安装
+      🔍
+     易受攻击  （有点“设计使然”，特别是暴露时）。
+    "smart install client active"    
+     
+     PBX IP 电话网关
+      🔍
+    PBX "gateway console" -password port:23    
+     
+     Polycom 视频会议
+      🔍
+    http.title:"- Polycom" "Server: lighttpd"    
+     
+     Telnet配置
+      🔍
+    "Polycom Command Shell" -failed port:23    
+           
+  
+      
+
+     
+     Bomgar 服务台门户
+      🔍
+    "Server: Bomgar" "200 OK"    
+     
+     英特尔主动管理CVE-2017–5689
+      🔍
+    "Intel(R) Active Management Technology" port:623,664,16992,16993,16994,16995    
+     
+     惠普 iLO 4 远程命令执行漏洞 (CVE-2017–12542)
+      🔍
+    HP-ILO-4 !"HP-ILO-4/2.53" !"HP-ILO-4/2.54" !"HP-ILO-4/2.55" !"HP-ILO-4/2.60" !"HP-ILO-4/2.61" !"HP-ILO-4/2.62" !"HP-iLO-4/2.70" port:1900    
+      
+     Outlook Web Access
+      
+     
+     Exchange 2007
+      🔍
+    "x-owa-version" "IE=EmulateIE7" "Server: Microsoft-IIS/7.0"    
+           
+  
+      
+
+     
+     Exchange 2010
+      🔍
+    "x-owa-version" "IE=EmulateIE7" http.favicon.hash:442749392    
+           
+  
+      
+
+     
+     Exchange 2013 / 2016
+      🔍
+    "X-AspNet-Version" http.title:"Outlook" -"x-owa-version"    
+           
+  
+      
+
+     
+     Lync / Skype 商业版
+      🔍
+    "X-MS-Server-Fqdn"    
+      
+     网络附加存储（NAS）
+      
+     
+     SMB（Samba）文件共享
+      🔍
+    产生约500,000个结果 … 可以通过添加“文档”或“视频”等来缩小范围。
+    "Authentication: disabled" port:445    
+     
+     域控制器
+      🔍
+    "Authentication: disabled" NETLOGON SYSVOL -unix port:445    
+     
+     可以匿名登录的FTP服务器
+      🔍
+    "220" "230 Login successful." port:21    
+     
+     Iomega / LenovoEMC NAS驱动器
+      🔍
+    "Set-Cookie: iomega=" -"manage/login.html" -http.title:"Log In"    
+           
+  
+      
+
+     
+     Buffalo TeraStation NAS 驱动器
+      🔍
+    Redirecting sencha port:9000    
+           
+  
+      
+
+     
+     罗技媒体服务器
+      🔍
+    "Server: Logitech Media Server" "200 OK"    
+           
+  
+      
+
+     
+     Plex 媒体服务器
+      🔍
+    "X-Plex-Protocol" "200 OK" port:32400    
+     
+     Tautulli / PlexPy 仪表板
+      🔍
+    "CherryPy/5.1.0" "/home"    
+           
+  
+      
+
+      
+     摄像头
+      
+    不需要示例图像。
+     
+     Yawcams
+      🔍
+    "Server: yawcam" "Mime-Type: text/html"    
+     
+     webcamXP/webcam7
+      🔍
+    ("webcam 7" OR "webcamXP") http.component:"mootools" -401    
+     
+     Android IP网络摄像头服务器
+      🔍
+    "Server: IP Webcam Server" "200 OK"    
+     
+     数字视频录像机
+      🔍
+    html:"DVR_H264 ActiveX"    
+      
+     打印机和复印机
+      
+     
+     惠普打印机
+      🔍
+    "Serial Number:" "Built:" "Server: HP HTTP"    
+           
+  
+      
+
+     
+     施乐复印机/打印机
+      🔍
+    ssl:"Xerox Generic Root"    
+           
+  
+      
+
+     
+     爱普生打印机
+      🔍
+    "SERVER: EPSON_Linux UPnP" "200 OK"    
+    "Server: EPSON-HTTP" "200 OK"    
+           
+  
+      
+
+     
+     佳能打印机
+      🔍
+    "Server: KS_HTTP" "200 OK"    
+    "Server: CANON HTTP Server"    
+           
+  
+      
+
+      
+     家用设备
+      
+     
+     雅马哈音响
+      🔍
+    "Server: AV_Receiver" "HTTP/1.1 406"    
+           
+  
+      
+
+     
+     Apple AirPlay 接收器
+      🔍
+    Apple TV，HomePods 等。
+    "\x08_airplay" port:5353    
+     
+     Chromecast /智能电视
+      🔍
+    "Chromecast:" port:8008    
+     
+     快思聪智能家居控制器
+      🔍
+    "Model: PYNG-HUB"    
+      
+     随机的东西
+      
+     
+     OctoPrint 3D 打印机控制器
+      🔍
+    title:"OctoPrint" -title:"Login" http.favicon.hash:1307375944    
+           
+  
+      
+
+     
+     以太坊矿工
+      🔍
+    "ETH - Total speed"    
+           
+  
+      
+
+     
+     Apache目录列表
+      🔍
+    用任何扩展名或文件名（如 phpinfo.php）替换 .pem。
+    http.title:"Index of /" http.html:".pem"    
+     
+     一大堆 Minecraft 服务器
+      🔍
+    "Minecraft Server" "protocol 340" port:25565    
+     
+     搜朝鲜！
+     🇰🇵  🔍
+    就是字面上的一切。
+    net:175.45.176.0/22,210.52.109.0/24,77.94.35.0/24    
+    以上列表可能仍不完整；Shodan 的宝藏非常非常多，持续有待挖掘。如果您有其他更好的见解，欢迎留言探讨。
+    真心建议您尝试一下本文列出的所有搜索，即便您不是调查爱好者，这些尝试也能帮您以最简单直接的方式体验到所谓的物联网有多危险。警惕。⚪️
+     Awesome Shodan Search Queries 
+    
+    
+      
+         共享此文章： 
+        
+          
+                点击以在 Twitter 上共享（在新窗口中打开）  
+                点击以在 Facebook 上共享（在新窗口中打开）  
+            
+          
+        
+      
+    
+    
+       赞过： 
+      
+  赞    正在加载…… 
+      
+   
+   
+    
+    
+       
+     相关
+     
+    
+  
+  
+    
+      Tagged
+       IoT 
+       OSINT 
+       search 
+       Security 
+       Shodan 
+       technique 
+       Technology 
+       tools 
+    
+  
+  
+    
+
+    Published
+           2019年12月25日 
+       2019年10月2日 
+    
+  
+
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 - iYouPort&url=https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 - iYouPort</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2019-12-24
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#iYouPort">
+          iYouPort
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="iYouPort的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#iYouPort 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <article class="post-9495 post type-post status-publish format-standard has-post-thumbnail hentry category-knowledge-node category-osint category-54 category-67 tag-iot tag-osint tag-search tag-security tag-shodan tag-technique tag-technology tag-tools" id="post-9495">
+  <header class="entry-header">
+    <h1 class="entry-title" id="shodan-"> 搜远程桌面、摄像头、打印机、家用设备 … 等一切的超级Shodan搜索：恐怖指南 </h1>
+  </header>
+  <div class="entry-meta">
+<span class="byline"> <a href="https://www.iyouport.org/author/don-evans/" rel="author" title="由McCaffrey发布"> McCaffrey </a> </span> <span class="cat-links"> <a href="https://www.iyouport.org/category/knowledge-node/" rel="category tag"> Knowledge Node </a> , <a href="https://www.iyouport.org/category/osint/" rel="category tag"> OSINT </a> , <a href="https://www.iyouport.org/category/%e6%8a%80%e6%9c%af%e9%98%b2%e8%ba%ab-%e8%87%aa%e6%88%91%e4%bf%9d%e6%8a%a4%e6%96%b9%e6%b3%95/" rel="category tag"> 技术防身/自我保护方法 </a> , <a href="https://www.iyouport.org/category/%e7%bb%99%e8%a1%8c%e5%8a%a8%e8%80%85%e7%9a%84%e6%8a%a4%e8%ba%ab%e7%ac%a6%e5%92%8c%e6%ad%a6%e5%99%a8/" rel="category tag"> 给行动者的护身符和武器 </a> </span> <span class="published-on">         <time class="entry-date published" datetime="2019-12-25T00:05:47+08:00"> 2019年12月25日 </time>
+         <time class="updated" datetime="2019-10-02T14:01:14+08:00"> 2019年10月2日 </time>
+ </span> <span class="word-count"> 2 Minutes </span>
+  </div>
+  <div class="entry-content">
+    <ul>
+      <li class="graf graf--p"><span style="color: #00ccff;"> <em>
+      <strong>
+       真的建议您把本列表中的每一个搜索都试一下，即便您不是调查爱好者，尝试这些搜索也能帮助您以最简单的方式了解到联网设备有多么的不安全 —— 提醒防御。
+      </strong>
+     </em> </span></li>
+    </ul>
+    <p><img alt="" class="aligncenter size-full wp-image-9496 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=1100%2C778&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?w=1280&amp;ssl=1 1280w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=300%2C212&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=768%2C543&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=1024%2C724&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=1100%2C778&amp;ssl=1 1100w" data-recalc-dims="1" height="778" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=1100%2C778&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9496" data-recalc-dims="1" height="778" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=1100%2C778&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?w=1280&amp;ssl=1 1280w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=300%2C212&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=768%2C543&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=1024%2C724&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/魔鬼.jpg?resize=1100%2C778&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p">众所周知，Shodan 是一个特殊的搜索引擎，它允许用户使用各种过滤器查找连接到互联网的特定类型的东西。</p>
+    <p class="graf graf--p">与 Google 这种搜索网址的搜索引擎不同，Shodan 是用来搜索网络空间中在线设备的，你可以通过 Shodan 搜索指定的设备，或者搜索特定类型的设备。</p>
+    <p class="graf graf--p">Shodan 自诞生那天起就被称为“世界上最可怕的搜索引擎”，不是没道理的。</p>
+    <p class="graf graf--p">Shodan不仅能够搜到某个区域的思科路由器，通过同样的机制，它还可以搜到摄像头、视频广告牌、车牌扫描仪、巨大的风力涡轮机、你的家用设备、以及许许多多的其它在线设备。</p>
+    <p class="graf graf--p">随着人类对所谓物联网的狂热无限膨胀，安全风险已经前所未有地严重。</p>
+    <p class="graf graf--p">本文是一个列表，每一个搜索项都有一个超链接指向直接的结果。</p>
+    <p class="graf graf--p">这是为了提醒防御；而不是伤害！</p>
+    <p class="graf graf--p"><strong class="markup--strong markup--p-strong">
+    目录
+   </strong> ：</p>
+    <ul class="postList">
+      <li class="graf graf--li">工业控制系统</li>
+      <li class="graf graf--li">远程桌面</li>
+      <li class="graf graf--li">网络基础设施</li>
+      <li class="graf graf--li">网络附加存储（NAS）</li>
+      <li class="graf graf--li">摄像头</li>
+      <li class="graf graf--li">打印机和复印机</li>
+      <li class="graf graf--li">家用设备</li>
+      <li class="graf graf--li">随机的东西</li>
+    </ul>
+    <h3 class="graf graf--p" id="section"> <span style="color: #ff9900;"> <strong class="markup--strong markup--p-strong">
+     工业控制系统
+    </strong> </span> </h3>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Server%3A+Prismview+Player%22" href="https://www.shodan.io/search?query=%22Server%3A+Prismview+Player%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     三星电子广告牌
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: Prismview Player"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9497 jetpack-lazy-image" data-lazy-sizes="(max-width: 906px) 100vw, 906px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/1-2.png?resize=906%2C662&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/1-2.png?w=906&amp;ssl=1 906w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/1-2.png?resize=300%2C219&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/1-2.png?resize=768%2C561&amp;ssl=1 768w" data-recalc-dims="1" height="662" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/1-2.png?resize=906%2C662&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="906" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9497" data-recalc-dims="1" height="662" sizes="(max-width: 906px) 100vw, 906px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/1-2.png?resize=906%2C662&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/1-2.png?w=906&amp;ssl=1 906w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/1-2.png?resize=300%2C219&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/1-2.png?resize=768%2C561&amp;ssl=1 768w" width="906" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22in-tank+inventory%22+port%3A10001" href="https://www.shodan.io/search?query=%22in-tank+inventory%22+port%3A10001" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     加油泵控制器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"in-tank inventory" port:10001</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9498 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=1100%2C414&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?w=1200&amp;ssl=1 1200w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=300%2C113&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=768%2C289&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=1024%2C386&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=1100%2C414&amp;ssl=1 1100w" data-recalc-dims="1" height="414" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=1100%2C414&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9498" data-recalc-dims="1" height="414" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=1100%2C414&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?w=1200&amp;ssl=1 1200w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=300%2C113&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=768%2C289&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=1024%2C386&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/2-3.png?resize=1100%2C414&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=P372+%22ANPR+enabled%22" href="https://www.shodan.io/search?query=P372+%22ANPR+enabled%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     自动车牌读取器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>P372 "ANPR enabled"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9499 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=1100%2C459&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?w=1650&amp;ssl=1 1650w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=300%2C125&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=768%2C320&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=1024%2C427&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=1440%2C600&amp;ssl=1 1440w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=1100%2C459&amp;ssl=1 1100w" data-recalc-dims="1" height="459" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=1100%2C459&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9499" data-recalc-dims="1" height="459" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=1100%2C459&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?w=1650&amp;ssl=1 1650w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=300%2C125&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=768%2C320&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=1024%2C427&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=1440%2C600&amp;ssl=1 1440w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/3.png?resize=1100%2C459&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=mikrotik+streetlight" href="https://www.shodan.io/search?query=mikrotik+streetlight" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     交通信号灯控制器/红光摄像机
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mikrotik streetlight</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22voter+system+serial%22+country%3AUS" href="https://www.shodan.io/search?query=%22voter+system+serial%22+country%3AUS" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     美国的投票机
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"voter system serial" country:US</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Cisco+IOS%22+%22ADVIPSERVICESK9_LI-M%22" href="https://www.shodan.io/search?query=%22Cisco+IOS%22+%22ADVIPSERVICESK9_LI-M%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     运营思科合法拦截窃听的电信公司
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Cisco IOS" "ADVIPSERVICESK9_LI-M"</code></pre></div>    </div>
+    <p class="graf graf--p">思科在 <a class="markup--anchor markup--p-anchor" data-href="https://tools.ietf.org/html/rfc3924" href="https://tools.ietf.org/html/rfc3924" rel="noopener noreferrer" target="_blank"> RFC 3924 </a> 中概述的窃听机制：</p>
+    <p class="graf graf--p"><em class="markup--em markup--p-em">
+    合法拦截是指合法授权的拦截和监视拦截对象的通信。术语“拦截对象”是指电信服务的订户，其通信和/或拦截相关信息（IRI）已被合法授权拦截并交付给某些机构。
+   </em></p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22%5B2J%5BH+Encartele+Confidential%22" href="https://www.shodan.io/search?query=%22%5B2J%5BH+Encartele+Confidential%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     监狱专用电话
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"[2J[H Encartele Confidential"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=http.title%3A%22Tesla+PowerPack+System%22+http.component%3A%22d3%22+-ga3ca4f2" href="https://www.shodan.io/search?query=http.title%3A%22Tesla+PowerPack+System%22+http.component%3A%22d3%22+-ga3ca4f2" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Tesla PowerPack 充电状态
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http.title:"Tesla PowerPack System" http.component:"d3" -ga3ca4f2</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9500 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=1100%2C690&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?w=2216&amp;ssl=1 2216w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=300%2C188&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=768%2C482&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=1024%2C642&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=1100%2C690&amp;ssl=1 1100w" data-recalc-dims="1" height="690" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=1100%2C690&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9500" data-recalc-dims="1" height="690" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=1100%2C690&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?w=2216&amp;ssl=1 2216w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=300%2C188&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=768%2C482&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=1024%2C642&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/4.png?resize=1100%2C690&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Server%3A+gSOAP%2F2.8%22+%22Content-Length%3A+583%22" href="https://www.shodan.io/search?query=%22Server%3A+gSOAP%2F2.8%22+%22Content-Length%3A+583%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     电动汽车充电器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: gSOAP/2.8" "Content-Length: 583"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Cobham+SATCOM%22+OR+%28%22Sailor%22+%22VSAT%22%29" href="https://www.shodan.io/search?query=%22Cobham+SATCOM%22+OR+%28%22Sailor%22+%22VSAT%22%29" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     海事卫星
+    </strong> </a> 🔍</p>
+    <p class="graf graf--p">Shodan 制作了一个非常漂亮的 <a class="markup--anchor markup--p-anchor" data-href="https://shiptracker.shodan.io/" href="https://shiptracker.shodan.io/" rel="noopener noreferrer" target="_blank"> Ship Tracker </a> ，它可以实时绘制船舶位置。</p>
+    <p class="graf graf--p">在这里看到通过追踪邮轮位置揭露腐败官员撒谎的开源调查案例《 <a class="markup--anchor markup--p-anchor" data-href="https://www.iyouport.org/%e5%88%a9%e7%94%a8%e5%bc%80%e6%ba%90%e8%b0%83%e6%9f%a5%e6%8f%ad%e9%9c%b2%e8%85%90%e8%b4%a5-osint/" href="https://www.iyouport.org/%e5%88%a9%e7%94%a8%e5%bc%80%e6%ba%90%e8%b0%83%e6%9f%a5%e6%8f%ad%e9%9c%b2%e8%85%90%e8%b4%a5-osint/" rel="noopener noreferrer" target="_blank"> 利用开源调查揭露腐败 </a> 》。（我是想说，它也能做好事……）</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Cobham SATCOM" OR ("Sailor" "VSAT")</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9501 jetpack-lazy-image" data-lazy-sizes="(max-width: 1026px) 100vw, 1026px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?resize=1026%2C528&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?w=1026&amp;ssl=1 1026w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?resize=300%2C154&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?resize=768%2C395&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?resize=1024%2C527&amp;ssl=1 1024w" data-recalc-dims="1" height="528" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?resize=1026%2C528&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1026" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9501" data-recalc-dims="1" height="528" sizes="(max-width: 1026px) 100vw, 1026px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?resize=1026%2C528&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?w=1026&amp;ssl=1 1026w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?resize=300%2C154&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?resize=768%2C395&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/5-1.png?resize=1024%2C527&amp;ssl=1 1024w" width="1026" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=title%3A%22Slocum+Fleet+Mission+Control%22" href="https://www.shodan.io/search?query=title%3A%22Slocum+Fleet+Mission+Control%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     潜艇任务控制仪表板
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>title:"Slocum Fleet Mission Control"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.carel.com/product/plantvisor" href="https://www.carel.com/product/plantvisor" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     CAREL PlantVisor
+    </strong> </a> <strong class="markup--strong markup--p-strong">
+    制冷机组
+   </strong> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: CarelDataServer" "200 Document follows"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9502 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=1100%2C579&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?w=2344&amp;ssl=1 2344w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=300%2C158&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=768%2C404&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=1024%2C539&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=1100%2C579&amp;ssl=1 1100w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?w=2200&amp;ssl=1 2200w" data-recalc-dims="1" height="579" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=1100%2C579&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9502" data-recalc-dims="1" height="579" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=1100%2C579&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?w=2344&amp;ssl=1 2344w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=300%2C158&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=768%2C404&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=1024%2C539&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?resize=1100%2C579&amp;ssl=1 1100w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/6-1.png?w=2200&amp;ssl=1 2200w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=http.title%3A%22Nordex+Control%22+%22Windows+2000+5.0+x86%22+%22Jetty%2F3.1+%28JSP+1.1%3B+Servlet+2.2%3B+java+1.6.0_14%29%22" href="https://www.shodan.io/search?query=http.title%3A%22Nordex+Control%22+%22Windows+2000+5.0+x86%22+%22Jetty%2F3.1+%28JSP+1.1%3B+Servlet+2.2%3B+java+1.6.0_14%29%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Nordex 风力发电机场
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http.title:"Nordex Control" "Windows 2000 5.0 x86" "Jetty/3.1 (JSP 1.1; Servlet 2.2; java 1.6.0_14)"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22%5B1m%5B35mWelcome+on+console%22" href="https://www.shodan.io/search?query=%22%5B1m%5B35mWelcome+on+console%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     C4 Max商用车GPS追踪器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"[1m[35mWelcome on console"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9503 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=1100%2C217&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?w=1138&amp;ssl=1 1138w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=300%2C59&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=768%2C151&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=1024%2C202&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=1100%2C217&amp;ssl=1 1100w" data-recalc-dims="1" height="217" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=1100%2C217&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9503" data-recalc-dims="1" height="217" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=1100%2C217&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?w=1138&amp;ssl=1 1138w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=300%2C59&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=768%2C151&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=1024%2C202&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/7-1.png?resize=1100%2C217&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22DICOM+Server+Response%22+port%3A104" href="https://www.shodan.io/search?query=%22DICOM+Server+Response%22+port%3A104" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     DICOM 标准的医用X射线机
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"DICOM Server Response" port:104</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Server%3A+EIG+Embedded+Web+Server%22+%22200+Document+follows%22" href="https://www.shodan.io/search?query=%22Server%3A+EIG+Embedded+Web+Server%22+%22200+Document+follows%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     GaugeTech电表
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: EIG Embedded Web Server" "200 Document follows"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9504 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=1100%2C541&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?w=1234&amp;ssl=1 1234w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=300%2C148&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=768%2C378&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=1024%2C504&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=1100%2C541&amp;ssl=1 1100w" data-recalc-dims="1" height="541" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=1100%2C541&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9504" data-recalc-dims="1" height="541" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=1100%2C541&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?w=1234&amp;ssl=1 1234w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=300%2C148&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=768%2C378&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=1024%2C504&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/8-1.png?resize=1100%2C541&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Siemens%2C+SIMATIC%22+port%3A161" href="https://www.shodan.io/search?query=%22Siemens%2C+SIMATIC%22+port%3A161" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     西门子工业自动化
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Siemens, SIMATIC" port:161</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Server%3A+Microsoft-WinCE%22+%22Content-Length%3A+12581%22" href="https://www.shodan.io/search?query=%22Server%3A+Microsoft-WinCE%22+%22Content-Length%3A+12581%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     西门子HVAC控制器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: Microsoft-WinCE" "Content-Length: 12581"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22HID+VertX%22+port%3A4070" href="https://www.shodan.io/search?query=%22HID+VertX%22+port%3A4070" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     门锁门禁控制器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"HID VertX" port:4070</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22log+off%22+%22select+the+appropriate%22" href="https://www.shodan.io/search?query=%22log+off%22+%22select+the+appropriate%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     铁路管理
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"log off" "select the appropriate"</code></pre></div>    </div>
+    <h3 class="graf graf--p" id="section-1"> <span style="color: #ff9900;"> <strong class="markup--strong markup--p-strong">
+     远程桌面
+    </strong> </span> </h3>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22authentication+disabled%22+%22RFB+003.008%22" href="https://www.shodan.io/search?query=%22authentication+disabled%22+%22RFB+003.008%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     无保护的VNC
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"authentication disabled" "RFB 003.008"</code></pre></div>    </div>
+    <p class="graf graf--p">顺便说一下， <a class="markup--anchor markup--p-anchor" data-href="https://images.shodan.io/" href="https://images.shodan.io/" rel="noopener noreferrer" target="_blank"> Shodan Images </a> 是一个很棒的辅助工具， <a class="markup--anchor markup--p-anchor" data-href="https://images.shodan.io/?query=%22authentication+disabled%22+%21screenshot.label%3Ablank" href="https://images.shodan.io/?query=%22authentication+disabled%22+%21screenshot.label%3Ablank" rel="noopener noreferrer" target="_blank"> 在这里看到 </a> 。</p>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9505 jetpack-lazy-image" data-lazy-sizes="(max-width: 600px) 100vw, 600px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/9-1.png?resize=600%2C450&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/9-1.png?w=600&amp;ssl=1 600w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/9-1.png?resize=300%2C225&amp;ssl=1 300w" data-recalc-dims="1" height="450" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/9-1.png?resize=600%2C450&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="600" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9505" data-recalc-dims="1" height="450" sizes="(max-width: 600px) 100vw, 600px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/9-1.png?resize=600%2C450&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/9-1.png?w=600&amp;ssl=1 600w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/9-1.png?resize=300%2C225&amp;ssl=1 300w" width="600" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22%5Cx03%5Cx00%5Cx00%5Cx0b%5Cx06%5Cxd0%5Cx00%5Cx00%5Cx124%5Cx00%22" href="https://www.shodan.io/search?query=%22%5Cx03%5Cx00%5Cx00%5Cx0b%5Cx06%5Cxd0%5Cx00%5Cx00%5Cx124%5Cx00%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Windows RDP
+    </strong> </a> <strong class="markup--strong markup--p-strong">
+    （远程桌面协议）
+   </strong> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"\x03\x00\x00\x0b\x06\xd0\x00\x00\x124\x00"</code></pre></div>    </div>
+    <h3 class="graf graf--p" id="section-2"> <span style="color: #ff9900;"> <strong class="markup--strong markup--p-strong">
+     网络基础设施
+    </strong> </span> </h3>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=product%3AMongoDB+-authentication" href="https://www.shodan.io/search?query=product%3AMongoDB+-authentication" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     MongoDB
+    </strong> </a> 🔍</p>
+    <p class="graf graf--p">默认情况下，旧版本不安全。 <a class="markup--anchor markup--p-anchor" data-href="https://krebsonsecurity.com/tag/mongodb/" href="https://krebsonsecurity.com/tag/mongodb/" rel="noopener noreferrer" target="_blank"> 非常吓人的 </a> 。</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"MongoDB Server Information" port:27017 -authentication</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9506 jetpack-lazy-image" data-lazy-sizes="(max-width: 874px) 100vw, 874px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/10-2.png?resize=874%2C415&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/10-2.png?w=874&amp;ssl=1 874w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/10-2.png?resize=300%2C142&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/10-2.png?resize=768%2C365&amp;ssl=1 768w" data-recalc-dims="1" height="415" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/10-2.png?resize=874%2C415&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="874" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9506" data-recalc-dims="1" height="415" sizes="(max-width: 874px) 100vw, 874px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/10-2.png?resize=874%2C415&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/10-2.png?w=874&amp;ssl=1 874w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/10-2.png?resize=300%2C142&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/10-2.png?resize=768%2C365&amp;ssl=1 768w" width="874" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Set-Cookie%3A+mongo-express%3D%22+%22200+OK%22" href="https://www.shodan.io/search?query=%22Set-Cookie%3A+mongo-express%3D%22+%22200+OK%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Mongo Express Web GUI
+    </strong> </a> 🔍</p>
+    <p class="graf graf--p">就像臭名昭著的 <a class="markup--anchor markup--p-anchor" data-href="https://www.cvedetails.com/vulnerability-list/vendor_id-784/Phpmyadmin.html" href="https://www.cvedetails.com/vulnerability-list/vendor_id-784/Phpmyadmin.html" rel="noopener noreferrer" target="_blank"> phpMyAdmin </a> 一样，但适用于 MongoDB。</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Set-Cookie: mongo-express=" "200 OK"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9507 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=1100%2C621&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?w=2302&amp;ssl=1 2302w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=768%2C433&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=1024%2C578&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=1100%2C621&amp;ssl=1 1100w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?w=2200&amp;ssl=1 2200w" data-recalc-dims="1" height="621" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=1100%2C621&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9507" data-recalc-dims="1" height="621" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=1100%2C621&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?w=2302&amp;ssl=1 2302w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=768%2C433&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=1024%2C578&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?resize=1100%2C621&amp;ssl=1 1100w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/11-2.png?w=2200&amp;ssl=1 2200w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22X-Jenkins%22+%22Set-Cookie%3A+JSESSIONID%22+http.title%3A%22Dashboard%22" href="https://www.shodan.io/search?query=%22X-Jenkins%22+%22Set-Cookie%3A+JSESSIONID%22+http.title%3A%22Dashboard%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Jenkins CI
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9508 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=1100%2C353&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?w=1590&amp;ssl=1 1590w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=300%2C96&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=768%2C246&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=1024%2C328&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=1100%2C353&amp;ssl=1 1100w" data-recalc-dims="1" height="353" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=1100%2C353&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9508" data-recalc-dims="1" height="353" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=1100%2C353&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?w=1590&amp;ssl=1 1590w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=300%2C96&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=768%2C246&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=1024%2C328&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/12-1.png?resize=1100%2C353&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Docker+Containers%3A%22+port%3A2375" href="https://www.shodan.io/search?query=%22Docker+Containers%3A%22+port%3A2375" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Docker APIs
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Docker Containers:" port:2375</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22dnsmasq-pi-hole%22+%22Recursion%3A+enabled%22" href="https://www.shodan.io/search?query=%22dnsmasq-pi-hole%22+%22Recursion%3A+enabled%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Pi-hole OpenDNS 服务器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"dnsmasq-pi-hole" "Recursion: enabled"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22root%40%22+port%3A23+-login+-password+-name+-Session" href="https://www.shodan.io/search?query=%22root%40%22+port%3A23+-login+-password+-name+-Session" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     root用户通过telnet方式远程登录
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"[email protected]" port:23 -login -password -name -Session</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Android+Debug+Bridge%22+%22Device%22+port%3A5555" href="https://www.shodan.io/search?query=%22Android+Debug+Bridge%22+%22Device%22+port%3A5555" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Android Root Bridges
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Android Debug Bridge" "Device" port:5555</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=Lantronix+password+port%3A30718+-secured" href="https://www.shodan.io/search?query=Lantronix+password+port%3A30718+-secured" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Lantronix 串口的以太网设备泄漏 Telnet 密码
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Lantronix password port:30718 -secured</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Citrix+Applications%3A%22+port%3A1604" href="https://www.shodan.io/search?query=%22Citrix+Applications%3A%22+port%3A1604" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Citrix 虚拟应用程序
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Citrix Applications:" port:1604</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9509 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?resize=1100%2C428&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?w=1100&amp;ssl=1 1100w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?resize=300%2C117&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?resize=768%2C299&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?resize=1024%2C398&amp;ssl=1 1024w" data-recalc-dims="1" height="428" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?resize=1100%2C428&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9509" data-recalc-dims="1" height="428" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?resize=1100%2C428&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?w=1100&amp;ssl=1 1100w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?resize=300%2C117&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?resize=768%2C299&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/13-1.png?resize=1024%2C398&amp;ssl=1 1024w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22smart+install+client+active%22" href="https://www.shodan.io/search?query=%22smart+install+client+active%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     思科智能安装
+    </strong> </a> 🔍</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://2016.zeronights.ru/wp-content/uploads/2016/12/CiscoSmartInstall.v3.pdf" href="https://2016.zeronights.ru/wp-content/uploads/2016/12/CiscoSmartInstall.v3.pdf" rel="noopener noreferrer" target="_blank"> 易受攻击 </a> （有点“设计使然”，特别是暴露时）。</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"smart install client active"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=PBX+%22gateway+console%22+-password+port%3A23" href="https://www.shodan.io/search?query=PBX+%22gateway+console%22+-password+port%3A23" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     PBX IP 电话网关
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PBX "gateway console" -password port:23</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=http.title%3A%22-+Polycom%22+%22Server%3A+lighttpd%22" href="https://www.shodan.io/search?query=http.title%3A%22-+Polycom%22+%22Server%3A+lighttpd%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Polycom 视频会议
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http.title:"- Polycom" "Server: lighttpd"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Polycom+Command+Shell%22+-failed+port%3A23" href="https://www.shodan.io/search?query=%22Polycom+Command+Shell%22+-failed+port%3A23" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Telnet配置
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Polycom Command Shell" -failed port:23</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9510 jetpack-lazy-image" data-lazy-sizes="(max-width: 700px) 100vw, 700px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/14-1.png?resize=700%2C319&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/14-1.png?w=700&amp;ssl=1 700w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/14-1.png?resize=300%2C137&amp;ssl=1 300w" data-recalc-dims="1" height="319" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/14-1.png?resize=700%2C319&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="700" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9510" data-recalc-dims="1" height="319" sizes="(max-width: 700px) 100vw, 700px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/14-1.png?resize=700%2C319&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/14-1.png?w=700&amp;ssl=1 700w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/14-1.png?resize=300%2C137&amp;ssl=1 300w" width="700" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Server%3A+Bomgar%22+%22200+OK%22" href="https://www.shodan.io/search?query=%22Server%3A+Bomgar%22+%22200+OK%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Bomgar 服务台门户
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: Bomgar" "200 OK"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Intel%28R%29+Active+Management+Technology%22+port%3A623%2C664%2C16992%2C16993%2C16994%2C16995" href="https://www.shodan.io/search?query=%22Intel%28R%29+Active+Management+Technology%22+port%3A623%2C664%2C16992%2C16993%2C16994%2C16995" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     英特尔主动管理CVE-2017–5689
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Intel(R) Active Management Technology" port:623,664,16992,16993,16994,16995</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=HP-ILO-4+%21%22HP-ILO-4%2F2.53%22+%21%22HP-ILO-4%2F2.54%22+%21%22HP-ILO-4%2F2.55%22+%21%22HP-ILO-4%2F2.60%22+%21%22HP-ILO-4%2F2.61%22+%21%22HP-ILO-4%2F2.62%22+%21%22HP-iLO-4%2F2.70%22+port%3A1900" href="https://www.shodan.io/search?query=HP-ILO-4+%21%22HP-ILO-4%2F2.53%22+%21%22HP-ILO-4%2F2.54%22+%21%22HP-ILO-4%2F2.55%22+%21%22HP-ILO-4%2F2.60%22+%21%22HP-ILO-4%2F2.61%22+%21%22HP-ILO-4%2F2.62%22+%21%22HP-iLO-4%2F2.70%22+port%3A1900" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     惠普 iLO 4 远程命令执行漏洞 (CVE-2017–12542)
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HP-ILO-4 !"HP-ILO-4/2.53" !"HP-ILO-4/2.54" !"HP-ILO-4/2.55" !"HP-ILO-4/2.60" !"HP-ILO-4/2.61" !"HP-ILO-4/2.62" !"HP-iLO-4/2.70" port:1900</code></pre></div>    </div>
+    <h3 class="graf graf--p" id="outlook-web-access"> <span style="color: #ff9900;"> <strong class="markup--strong markup--p-strong">
+     Outlook Web Access
+    </strong> </span> </h3>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22x-owa-version%22+%22IE%3DEmulateIE7%22+%22Server%3A+Microsoft-IIS%2F7.0%22" href="https://www.shodan.io/search?query=%22x-owa-version%22+%22IE%3DEmulateIE7%22+%22Server%3A+Microsoft-IIS%2F7.0%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Exchange 2007
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"x-owa-version" "IE=EmulateIE7" "Server: Microsoft-IIS/7.0"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9511 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=1100%2C1208&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?w=1120&amp;ssl=1 1120w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=273%2C300&amp;ssl=1 273w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=768%2C843&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=932%2C1024&amp;ssl=1 932w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=1100%2C1208&amp;ssl=1 1100w" data-recalc-dims="1" height="1208" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=1100%2C1208&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9511" data-recalc-dims="1" height="1208" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=1100%2C1208&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?w=1120&amp;ssl=1 1120w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=273%2C300&amp;ssl=1 273w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=768%2C843&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=932%2C1024&amp;ssl=1 932w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/15-1.png?resize=1100%2C1208&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22x-owa-version%22+%22IE%3DEmulateIE7%22+http.favicon.hash%3A442749392" href="https://www.shodan.io/search?query=%22x-owa-version%22+%22IE%3DEmulateIE7%22+http.favicon.hash%3A442749392" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Exchange 2010
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"x-owa-version" "IE=EmulateIE7" http.favicon.hash:442749392</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9512 jetpack-lazy-image" data-lazy-sizes="(max-width: 1066px) 100vw, 1066px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?resize=1066%2C1016&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?w=1066&amp;ssl=1 1066w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?resize=300%2C286&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?resize=768%2C732&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?resize=1024%2C976&amp;ssl=1 1024w" data-recalc-dims="1" height="1016" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?resize=1066%2C1016&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1066" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9512" data-recalc-dims="1" height="1016" sizes="(max-width: 1066px) 100vw, 1066px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?resize=1066%2C1016&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?w=1066&amp;ssl=1 1066w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?resize=300%2C286&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?resize=768%2C732&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/16-1.png?resize=1024%2C976&amp;ssl=1 1024w" width="1066" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22X-AspNet-Version%22+http.title%3A%22Outlook%22+-%22x-owa-version%22" href="https://www.shodan.io/search?query=%22X-AspNet-Version%22+http.title%3A%22Outlook%22+-%22x-owa-version%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Exchange 2013 / 2016
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"X-AspNet-Version" http.title:"Outlook" -"x-owa-version"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9513 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=1100%2C435&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?w=1678&amp;ssl=1 1678w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=300%2C119&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=768%2C304&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=1024%2C405&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=1100%2C435&amp;ssl=1 1100w" data-recalc-dims="1" height="435" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=1100%2C435&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9513" data-recalc-dims="1" height="435" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=1100%2C435&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?w=1678&amp;ssl=1 1678w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=300%2C119&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=768%2C304&amp;ssl=1 768w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=1024%2C405&amp;ssl=1 1024w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/17-1.png?resize=1100%2C435&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22X-MS-Server-Fqdn%22" href="https://www.shodan.io/search?query=%22X-MS-Server-Fqdn%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Lync / Skype 商业版
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"X-MS-Server-Fqdn"</code></pre></div>    </div>
+    <h3 class="graf graf--p" id="nas"> <span style="color: #ff9900;"> <strong class="markup--strong markup--p-strong">
+     网络附加存储（NAS）
+    </strong> </span> </h3>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Authentication%3A+disabled%22+port%3A445" href="https://www.shodan.io/search?query=%22Authentication%3A+disabled%22+port%3A445" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     SMB（Samba）文件共享
+    </strong> </a> 🔍</p>
+    <p class="graf graf--p">产生约500,000个结果 … 可以通过添加“文档”或“视频”等来缩小范围。</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Authentication: disabled" port:445</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Authentication%3A+disabled%22+NETLOGON+SYSVOL+-unix+port%3A445" href="https://www.shodan.io/search?query=%22Authentication%3A+disabled%22+NETLOGON+SYSVOL+-unix+port%3A445" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     域控制器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Authentication: disabled" NETLOGON SYSVOL -unix port:445</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22220%22+%22230+Login+successful.%22+port%3A21" href="https://www.shodan.io/search?query=%22220%22+%22230+Login+successful.%22+port%3A21" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     可以匿名登录的FTP服务器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"220" "230 Login successful." port:21</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Set-Cookie%3A+iomega%3D%22+-%22manage%2Flogin.html%22+-http.title%3A%22Log+In%22" href="https://www.shodan.io/search?query=%22Set-Cookie%3A+iomega%3D%22+-%22manage%2Flogin.html%22+-http.title%3A%22Log+In%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Iomega / LenovoEMC NAS驱动器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Set-Cookie: iomega=" -"manage/login.html" -http.title:"Log In"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9514 jetpack-lazy-image" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/18-1.png?resize=800%2C286&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/18-1.png?w=800&amp;ssl=1 800w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/18-1.png?resize=300%2C107&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/18-1.png?resize=768%2C275&amp;ssl=1 768w" data-recalc-dims="1" height="286" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/18-1.png?resize=800%2C286&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="800" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9514" data-recalc-dims="1" height="286" sizes="(max-width: 800px) 100vw, 800px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/18-1.png?resize=800%2C286&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/18-1.png?w=800&amp;ssl=1 800w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/18-1.png?resize=300%2C107&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/18-1.png?resize=768%2C275&amp;ssl=1 768w" width="800" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=Redirecting+sencha+port%3A9000" href="https://www.shodan.io/search?query=Redirecting+sencha+port%3A9000" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Buffalo TeraStation NAS 驱动器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Redirecting sencha port:9000</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9515 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=1100%2C265&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?w=1164&amp;ssl=1 1164w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=300%2C72&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=768%2C185&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=1024%2C246&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=1100%2C265&amp;ssl=1 1100w" data-recalc-dims="1" height="265" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=1100%2C265&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9515" data-recalc-dims="1" height="265" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=1100%2C265&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?w=1164&amp;ssl=1 1164w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=300%2C72&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=768%2C185&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=1024%2C246&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/19.png?resize=1100%2C265&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Server%3A+Logitech+Media+Server%22+%22200+OK%22" href="https://www.shodan.io/search?query=%22Server%3A+Logitech+Media+Server%22+%22200+OK%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     罗技媒体服务器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: Logitech Media Server" "200 OK"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9516 jetpack-lazy-image" data-lazy-sizes="(max-width: 700px) 100vw, 700px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/20.png?resize=700%2C313&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/20.png?w=700&amp;ssl=1 700w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/20.png?resize=300%2C134&amp;ssl=1 300w" data-recalc-dims="1" height="313" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/20.png?resize=700%2C313&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="700" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9516" data-recalc-dims="1" height="313" sizes="(max-width: 700px) 100vw, 700px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/20.png?resize=700%2C313&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/20.png?w=700&amp;ssl=1 700w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/20.png?resize=300%2C134&amp;ssl=1 300w" width="700" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22X-Plex-Protocol%22+%22200+OK%22+port%3A32400" href="https://www.shodan.io/search?query=%22X-Plex-Protocol%22+%22200+OK%22+port%3A32400" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Plex 媒体服务器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"X-Plex-Protocol" "200 OK" port:32400</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22CherryPy%2F5.1.0%22+%22%2Fhome%22" href="https://www.shodan.io/search?query=%22CherryPy%2F5.1.0%22+%22%2Fhome%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Tautulli / PlexPy 仪表板
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"CherryPy/5.1.0" "/home"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9517 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=1100%2C521&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?w=1144&amp;ssl=1 1144w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=300%2C142&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=768%2C364&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=1024%2C485&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=1100%2C521&amp;ssl=1 1100w" data-recalc-dims="1" height="521" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=1100%2C521&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9517" data-recalc-dims="1" height="521" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=1100%2C521&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?w=1144&amp;ssl=1 1144w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=300%2C142&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=768%2C364&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=1024%2C485&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/21.png?resize=1100%2C521&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <h3 class="graf graf--p" id="section-3"> <span style="color: #ff9900;"> <strong class="markup--strong markup--p-strong">
+     摄像头
+    </strong> </span> </h3>
+    <p class="graf graf--p">不需要示例图像。</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Server%3A+yawcam%22+%22Mime-Type%3A+text%2Fhtml%22" href="https://www.shodan.io/search?query=%22Server%3A+yawcam%22+%22Mime-Type%3A+text%2Fhtml%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Yawcams
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: yawcam" "Mime-Type: text/html"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%28%22webcam+7%22+OR+%22webcamXP%22%29+http.component%3A%22mootools%22+-401" href="https://www.shodan.io/search?query=%28%22webcam+7%22+OR+%22webcamXP%22%29+http.component%3A%22mootools%22+-401" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     webcamXP/webcam7
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>("webcam 7" OR "webcamXP") http.component:"mootools" -401</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Server%3A+IP+Webcam+Server%22+%22200+OK%22" href="https://www.shodan.io/search?query=%22Server%3A+IP+Webcam+Server%22+%22200+OK%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Android IP网络摄像头服务器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: IP Webcam Server" "200 OK"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=html%3A%22DVR_H264+ActiveX%22" href="https://www.shodan.io/search?query=html%3A%22DVR_H264+ActiveX%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     数字视频录像机
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html:"DVR_H264 ActiveX"</code></pre></div>    </div>
+    <h3 class="graf graf--p" id="section-4"> <span style="color: #ff9900;"> <strong class="markup--strong markup--p-strong">
+     打印机和复印机
+    </strong> </span> </h3>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Serial+Number%3A%22+%22Built%3A%22+%22Server%3A+HP+HTTP%22" href="https://www.shodan.io/search?query=%22Serial+Number%3A%22+%22Built%3A%22+%22Server%3A+HP+HTTP%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     惠普打印机
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Serial Number:" "Built:" "Server: HP HTTP"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9518 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=1100%2C427&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?w=1990&amp;ssl=1 1990w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=300%2C116&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=768%2C298&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=1024%2C397&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=1100%2C427&amp;ssl=1 1100w" data-recalc-dims="1" height="427" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=1100%2C427&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9518" data-recalc-dims="1" height="427" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=1100%2C427&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?w=1990&amp;ssl=1 1990w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=300%2C116&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=768%2C298&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=1024%2C397&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/22.png?resize=1100%2C427&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=ssl%3A%22Xerox+Generic+Root%22" href="https://www.shodan.io/search?query=ssl%3A%22Xerox+Generic+Root%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     施乐复印机/打印机
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssl:"Xerox Generic Root"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9519 jetpack-lazy-image" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/23.png?resize=800%2C339&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/23.png?w=800&amp;ssl=1 800w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/23.png?resize=300%2C127&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/23.png?resize=768%2C325&amp;ssl=1 768w" data-recalc-dims="1" height="339" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/23.png?resize=800%2C339&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="800" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9519" data-recalc-dims="1" height="339" sizes="(max-width: 800px) 100vw, 800px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/23.png?resize=800%2C339&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/23.png?w=800&amp;ssl=1 800w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/23.png?resize=300%2C127&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/23.png?resize=768%2C325&amp;ssl=1 768w" width="800" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22SERVER%3A+EPSON_Linux+UPnP%22+%22200+OK%22" href="https://www.shodan.io/search?query=%22SERVER%3A+EPSON_Linux+UPnP%22+%22200+OK%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     爱普生打印机
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"SERVER: EPSON_Linux UPnP" "200 OK"</code></pre></div>    </div>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: EPSON-HTTP" "200 OK"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9520 jetpack-lazy-image" data-lazy-sizes="(max-width: 700px) 100vw, 700px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/24.png?resize=700%2C391&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/24.png?w=700&amp;ssl=1 700w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/24.png?resize=300%2C168&amp;ssl=1 300w" data-recalc-dims="1" height="391" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/24.png?resize=700%2C391&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="700" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9520" data-recalc-dims="1" height="391" sizes="(max-width: 700px) 100vw, 700px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/24.png?resize=700%2C391&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/24.png?w=700&amp;ssl=1 700w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/24.png?resize=300%2C168&amp;ssl=1 300w" width="700" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Server%3A+KS_HTTP%22+%22200+OK%22" href="https://www.shodan.io/search?query=%22Server%3A+KS_HTTP%22+%22200+OK%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     佳能打印机
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: KS_HTTP" "200 OK"</code></pre></div>    </div>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: CANON HTTP Server"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9521 jetpack-lazy-image" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/25.png?resize=800%2C283&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/25.png?w=800&amp;ssl=1 800w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/25.png?resize=300%2C106&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/25.png?resize=768%2C272&amp;ssl=1 768w" data-recalc-dims="1" height="283" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/25.png?resize=800%2C283&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="800" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9521" data-recalc-dims="1" height="283" sizes="(max-width: 800px) 100vw, 800px" src="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/25.png?resize=800%2C283&amp;ssl=1" srcset="https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/25.png?w=800&amp;ssl=1 800w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/25.png?resize=300%2C106&amp;ssl=1 300w, https://i1.wp.com/www.iyouport.org/wp-content/uploads/2019/10/25.png?resize=768%2C272&amp;ssl=1 768w" width="800" /> 
+      </noscript>
+</p>
+    <h3 class="graf graf--p" id="section-5"> <span style="color: #ff9900;"> <strong class="markup--strong markup--p-strong">
+     家用设备
+    </strong> </span> </h3>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Server%3A+AV_Receiver%22+%22HTTP%2F1.1+406%22" href="https://www.shodan.io/search?query=%22Server%3A+AV_Receiver%22+%22HTTP%2F1.1+406%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     雅马哈音响
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Server: AV_Receiver" "HTTP/1.1 406"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9522 jetpack-lazy-image" data-lazy-sizes="(max-width: 650px) 100vw, 650px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/26.png?resize=650%2C412&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/26.png?w=650&amp;ssl=1 650w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/26.png?resize=300%2C190&amp;ssl=1 300w" data-recalc-dims="1" height="412" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/26.png?resize=650%2C412&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="650" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9522" data-recalc-dims="1" height="412" sizes="(max-width: 650px) 100vw, 650px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/26.png?resize=650%2C412&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/26.png?w=650&amp;ssl=1 650w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/26.png?resize=300%2C190&amp;ssl=1 300w" width="650" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22%5Cx08_airplay%22+port%3A5353" href="https://www.shodan.io/search?query=%22%5Cx08_airplay%22+port%3A5353" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Apple AirPlay 接收器
+    </strong> </a> 🔍</p>
+    <p class="graf graf--p">Apple TV，HomePods 等。</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"\x08_airplay" port:5353</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Chromecast%3A%22+port%3A8008" href="https://www.shodan.io/search?query=%22Chromecast%3A%22+port%3A8008" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Chromecast /智能电视
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Chromecast:" port:8008</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Model%3A+PYNG-HUB%22" href="https://www.shodan.io/search?query=%22Model%3A+PYNG-HUB%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     快思聪智能家居控制器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Model: PYNG-HUB"</code></pre></div>    </div>
+    <h3 class="graf graf--p" id="section-6"> <span style="color: #ff9900;"> <strong class="markup--strong markup--p-strong">
+     随机的东西
+    </strong> </span> </h3>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=title%3A%22OctoPrint%22+-title%3A%22Login%22+http.favicon.hash%3A1307375944" href="https://www.shodan.io/search?query=title%3A%22OctoPrint%22+-title%3A%22Login%22+http.favicon.hash%3A1307375944" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     OctoPrint 3D 打印机控制器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>title:"OctoPrint" -title:"Login" http.favicon.hash:1307375944</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9523 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=1100%2C527&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?w=1909&amp;ssl=1 1909w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=300%2C144&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=768%2C368&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=1024%2C490&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=1100%2C527&amp;ssl=1 1100w" data-recalc-dims="1" height="527" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=1100%2C527&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9523" data-recalc-dims="1" height="527" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=1100%2C527&amp;ssl=1" srcset="https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?w=1909&amp;ssl=1 1909w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=300%2C144&amp;ssl=1 300w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=768%2C368&amp;ssl=1 768w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=1024%2C490&amp;ssl=1 1024w, https://i0.wp.com/www.iyouport.org/wp-content/uploads/2019/10/27.png?resize=1100%2C527&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22ETH+-+Total+speed%22" href="https://www.shodan.io/search?query=%22ETH+-+Total+speed%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     以太坊矿工
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"ETH - Total speed"</code></pre></div>    </div>
+    <p class="graf graf--p"><img alt="" class="aligncenter size-full wp-image-9524 jetpack-lazy-image" data-lazy-sizes="(max-width: 1100px) 100vw, 1100px" data-lazy-src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=1100%2C193&amp;is-pending-load=1#038;ssl=1" data-lazy-srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?w=1688&amp;ssl=1 1688w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=300%2C53&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=768%2C135&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=1024%2C180&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=1100%2C193&amp;ssl=1 1100w" data-recalc-dims="1" height="193" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=1100%2C193&amp;ssl=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1100" />       <noscript>
+ <img alt="" class="aligncenter size-full wp-image-9524" data-recalc-dims="1" height="193" sizes="(max-width: 1100px) 100vw, 1100px" src="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=1100%2C193&amp;ssl=1" srcset="https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?w=1688&amp;ssl=1 1688w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=300%2C53&amp;ssl=1 300w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=768%2C135&amp;ssl=1 768w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=1024%2C180&amp;ssl=1 1024w, https://i2.wp.com/www.iyouport.org/wp-content/uploads/2019/10/28.png?resize=1100%2C193&amp;ssl=1 1100w" width="1100" /> 
+      </noscript>
+</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=http.title%3A%22Index+of+%2F%22+http.html%3A%22.pem%22" href="https://www.shodan.io/search?query=http.title%3A%22Index+of+%2F%22+http.html%3A%22.pem%22" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     Apache目录列表
+    </strong> </a> 🔍</p>
+    <p class="graf graf--p">用任何扩展名或文件名（如 phpinfo.php）替换 .pem。</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http.title:"Index of /" http.html:".pem"</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=%22Minecraft+Server%22+%22protocol+340%22+port%3A25565" href="https://www.shodan.io/search?query=%22Minecraft+Server%22+%22protocol+340%22+port%3A25565" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     一大堆 Minecraft 服务器
+    </strong> </a> 🔍</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"Minecraft Server" "protocol 340" port:25565</code></pre></div>    </div>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://www.shodan.io/search?query=net%3A175.45.176.0%2F22%2C210.52.109.0%2F24" href="https://www.shodan.io/search?query=net%3A175.45.176.0%2F22%2C210.52.109.0%2F24" rel="noopener noreferrer" target="_blank"> <strong class="markup--strong markup--p-strong">
+     搜朝鲜！
+    </strong> 🇰🇵 </a> 🔍</p>
+    <p class="graf graf--p">就是字面上的一切。</p>
+    <div class="language-plaintext graf graf--pre highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net:175.45.176.0/22,210.52.109.0/24,77.94.35.0/24</code></pre></div>    </div>
+    <p class="graf graf--p">以上列表可能仍不完整；Shodan 的宝藏非常非常多，持续有待挖掘。如果您有其他更好的见解，欢迎留言探讨。</p>
+    <p class="graf graf--p">真心建议您尝试一下本文列出的所有搜索，即便您不是调查爱好者，这些尝试也能帮您以最简单直接的方式体验到所谓的物联网有多危险。警惕。⚪️</p>
+    <p class="graf graf--p"><a class="markup--anchor markup--p-anchor" data-href="https://github.com/jakejarvis/awesome-shodan-queries/blob/master/readme.md#intel-active-management-cve-2017-5689--" href="https://github.com/jakejarvis/awesome-shodan-queries/blob/master/readme.md#intel-active-management-cve-2017-5689--" rel="noopener noreferrer" target="_blank"> Awesome Shodan Search Queries </a></p>
+    <div id="atatags-1611829871-5f40d72bb3409"></div>
+    <div class="sharedaddy sd-sharing-enabled">
+      <div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing">
+        <h3 class="sd-title" id="section-7"> 共享此文章： </h3>
+        <div class="sd-content">
+          <ul>
+            <li class="share-twitter"><a class="share-twitter sd-button share-icon no-text" data-shared="sharing-twitter-9495" href="https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/?share=twitter" rel="nofollow noopener noreferrer" target="_blank" title="点击以在 Twitter 上共享"> <span> </span> <span class="sharing-screen-reader-text"> 点击以在 Twitter 上共享（在新窗口中打开） </span> </a></li>
+            <li class="share-facebook"><a class="share-facebook sd-button share-icon no-text" data-shared="sharing-facebook-9495" href="https://www.iyouport.org/%e6%90%9c%e8%bf%9c%e7%a8%8b%e6%a1%8c%e9%9d%a2%e3%80%81%e6%91%84%e5%83%8f%e5%a4%b4%e3%80%81%e6%89%93%e5%8d%b0%e6%9c%ba%e3%80%81%e5%ae%b6%e7%94%a8%e8%ae%be%e5%a4%87-%e7%ad%89%e4%b8%80%e5%88%87/?share=facebook" rel="nofollow noopener noreferrer" target="_blank" title="点击以在 Facebook 上共享"> <span> </span> <span class="sharing-screen-reader-text"> 点击以在 Facebook 上共享（在新窗口中打开） </span> </a></li>
+            <li class="share-end"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" data-name="like-post-frame-161182987-9495-5f40d72bb4298" data-src="https://widgets.wp.com/likes/#blog_id=161182987&amp;post_id=9495&amp;origin=www.iyouport.org&amp;obj_id=161182987-9495-5f40d72bb4298" id="like-post-wrapper-161182987-9495-5f40d72bb4298">
+      <h3 class="sd-title" id="section-8"> 赞过： </h3>
+      <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+<span class="button"> <span> 赞 </span> </span> <span class="loading"> 正在加载…… </span>
+      </div>
+ <span class="sd-text-color"> </span> <a class="sd-link-color">
+   </a>
+    </div>
+    <div class="jp-relatedposts" id="jp-relatedposts">
+      <h3 class="jp-relatedposts-headline" id="section-9"> <em>
+     相关
+    </em> </h3>
+    </div>
+  </div>
+  <div class="entry-footer">
+    <ul class="post-tags light-text">
+      <li>Tagged</li>
+      <li><a href="https://www.iyouport.org/tag/iot/" rel="tag"> IoT </a></li>
+      <li><a href="https://www.iyouport.org/tag/osint/" rel="tag"> OSINT </a></li>
+      <li><a href="https://www.iyouport.org/tag/search/" rel="tag"> search </a></li>
+      <li><a href="https://www.iyouport.org/tag/security/" rel="tag"> Security </a></li>
+      <li><a href="https://www.iyouport.org/tag/shodan/" rel="tag"> Shodan </a></li>
+      <li><a href="https://www.iyouport.org/tag/technique/" rel="tag"> technique </a></li>
+      <li><a href="https://www.iyouport.org/tag/technology/" rel="tag"> Technology </a></li>
+      <li><a href="https://www.iyouport.org/tag/tools/" rel="tag"> tools </a></li>
+    </ul>
+  </div>
+  <div class="entry-author-wrapper">
+    <div class="site-posted-on">
+<strong>
+    Published
+   </strong>       <time class="entry-date published" datetime="2019-12-25T00:05:47+08:00"> 2019年12月25日 </time>
+      <time class="updated" datetime="2019-10-02T14:01:14+08:00"> 2019年10月2日 </time>
+    </div>
+  </div>
+</article>
+
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#iYouPort 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2022-01-13/%E8%BF%99%E4%B8%AA%E5%90%8D%E5%8F%AB-%E5%9B%BD%E5%AE%B6-%E7%9A%84%E7%9B%91%E7%8B%B1-%E8%B5%B7%E4%B9%89%E5%90%8E%E7%9A%84%E5%93%88%E8%90%A8%E5%85%8B%E6%96%AF%E5%9D%A6-%E8%85%B0%E7%BC%A0%E4%B8%87%E8%B4%AF%E7%9A%84%E9%95%87%E5%8E%8B%E8%80%85-%E8%B0%A3%E8%A8%80%E5%92%8C%E7%83%88%E5%A3%AB%E7%9A%84%E7%81%AB%E7%A7%8D-iYouPort/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-10-11/%E7%BD%91%E7%BB%9C-%E6%B0%B4%E5%86%9B-%E7%9A%84%E5%B8%83%E5%B1%80-iYouPort/">最早</a>--</span>
+    
+      <li>
+        <time>2019-12-25</time>
+        <a href="https://nodebe4.github.io/oped2/2019-12-25/%E6%90%9C%E5%9B%BE%E5%8A%9F%E8%83%BD%E5%93%AA%E5%AE%B6%E5%BC%BA-%E5%9B%BE%E5%83%8F%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95%E7%9A%84%E8%83%BD%E5%8A%9B%E5%AF%B9%E6%AF%94-iYouPort/">
+          搜图功能哪家强？图像验证方法的能力对比 - iYouPort
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-12-25</time>
+        <a href="https://nodebe4.github.io/oped2/2019-12-25/%E4%B8%AD%E5%9B%BD%E6%8E%A8%E5%87%BA%E8%B6%85%E7%BA%A7%E7%9B%91%E6%8E%A7%E6%91%84%E5%83%8F%E6%9C%BA%E8%BE%85%E5%8A%A9%E7%A4%BE%E4%BC%9A%E4%BF%A1%E7%94%A8%E8%AF%84%E5%88%86-iYouPort/">
+          中国推出超级监控摄像机辅助社会信用评分 - iYouPort
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-12-24</time>
+        <a href="https://nodebe4.github.io/oped2/2019-12-24/%E6%89%8B%E6%85%A2%E6%97%A0-%E5%A6%82%E4%BD%95%E6%8A%A2%E5%9C%A8%E4%BF%A1%E6%81%AF%E8%A2%AB%E9%81%AE%E6%8C%A1-%E6%B1%A1%E6%9F%93%E6%88%96%E5%AE%8C%E5%85%A8%E6%B6%88%E5%A4%B1%E4%B9%8B%E5%89%8D%E6%8D%95%E8%8E%B7%E5%AE%83%E4%BB%AC-iYouPort/">
+          手慢无：如何抢在信息被遮挡、污染或完全消失之前捕获它们？ - iYouPort
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-12-24</time>
+        <a href="https://nodebe4.github.io/oped2/2019-12-24/%E7%BE%8E%E5%9B%BD%E5%92%8C%E4%B8%AD%E5%9B%BD%E5%9C%A8%E7%9B%91%E8%A7%86%E5%85%AC%E6%B0%91%E6%96%B9%E9%9D%A2%E5%BC%95%E9%A2%86%E5%85%A8%E7%90%83-iYouPort/">
+          美国和中国在监视公民方面引领全球 - iYouPort
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2019-12-24/%E6%89%8B%E6%85%A2%E6%97%A0-%E5%A6%82%E4%BD%95%E6%8A%A2%E5%9C%A8%E4%BF%A1%E6%81%AF%E8%A2%AB%E9%81%AE%E6%8C%A1-%E6%B1%A1%E6%9F%93%E6%88%96%E5%AE%8C%E5%85%A8%E6%B6%88%E5%A4%B1%E4%B9%8B%E5%89%8D%E6%8D%95%E8%8E%B7%E5%AE%83%E4%BB%AC-iYouPort/">
+            前一篇：手慢无：如何抢在信息被遮挡、污染或完全消失之前捕获它们？ - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2019-12-25/%E4%B8%AD%E7%BE%8E%E8%B4%B8%E6%98%93%E5%8F%98%E5%8C%96/">
+            後一篇：中美贸易变化
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2019-12-24/%E6%89%8B%E6%85%A2%E6%97%A0-%E5%A6%82%E4%BD%95%E6%8A%A2%E5%9C%A8%E4%BF%A1%E6%81%AF%E8%A2%AB%E9%81%AE%E6%8C%A1-%E6%B1%A1%E6%9F%93%E6%88%96%E5%AE%8C%E5%85%A8%E6%B6%88%E5%A4%B1%E4%B9%8B%E5%89%8D%E6%8D%95%E8%8E%B7%E5%AE%83%E4%BB%AC-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2019-12-25/%E4%B8%AD%E7%BE%8E%E8%B4%B8%E6%98%93%E5%8F%98%E5%8C%96/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2019-12-25/%E4%B8%AD%E5%9B%BD%E6%8E%A8%E5%87%BA%E8%B6%85%E7%BA%A7%E7%9B%91%E6%8E%A7%E6%91%84%E5%83%8F%E6%9C%BA%E8%BE%85%E5%8A%A9%E7%A4%BE%E4%BC%9A%E4%BF%A1%E7%94%A8%E8%AF%84%E5%88%86-iYouPort/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2019-12-24/%E6%89%8B%E6%85%A2%E6%97%A0-%E5%A6%82%E4%BD%95%E6%8A%A2%E5%9C%A8%E4%BF%A1%E6%81%AF%E8%A2%AB%E9%81%AE%E6%8C%A1-%E6%B1%A1%E6%9F%93%E6%88%96%E5%AE%8C%E5%85%A8%E6%B6%88%E5%A4%B1%E4%B9%8B%E5%89%8D%E6%8D%95%E8%8E%B7%E5%AE%83%E4%BB%AC-iYouPort/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2019-12-24/%E6%89%8B%E6%85%A2%E6%97%A0-%E5%A6%82%E4%BD%95%E6%8A%A2%E5%9C%A8%E4%BF%A1%E6%81%AF%E8%A2%AB%E9%81%AE%E6%8C%A1-%E6%B1%A1%E6%9F%93%E6%88%96%E5%AE%8C%E5%85%A8%E6%B6%88%E5%A4%B1%E4%B9%8B%E5%89%8D%E6%8D%95%E8%8E%B7%E5%AE%83%E4%BB%AC-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2019-12-25/%E4%B8%AD%E7%BE%8E%E8%B4%B8%E6%98%93%E5%8F%98%E5%8C%96/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<iYouPort>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2019-12-25/%E4%B8%AD%E5%9B%BD%E6%8E%A8%E5%87%BA%E8%B6%85%E7%BA%A7%E7%9B%91%E6%8E%A7%E6%91%84%E5%83%8F%E6%9C%BA%E8%BE%85%E5%8A%A9%E7%A4%BE%E4%BC%9A%E4%BF%A1%E7%94%A8%E8%AF%84%E5%88%86-iYouPort/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<iYouPort>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2019-12-24/%E6%89%8B%E6%85%A2%E6%97%A0-%E5%A6%82%E4%BD%95%E6%8A%A2%E5%9C%A8%E4%BF%A1%E6%81%AF%E8%A2%AB%E9%81%AE%E6%8C%A1-%E6%B1%A1%E6%9F%93%E6%88%96%E5%AE%8C%E5%85%A8%E6%B6%88%E5%A4%B1%E4%B9%8B%E5%89%8D%E6%8D%95%E8%8E%B7%E5%AE%83%E4%BB%AC-iYouPort/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
