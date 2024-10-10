@@ -1,0 +1,4467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>VyprVPN: Astrill的替代者 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+  
+    
+      
+        
+              
+  Vergil  在 星期五, 02/27/2015 - 09:03 提交 
+          
+          
+            
+              
+                
+                  
+                      vyprvpn-review.png  
+                    
+                       
+                        
+                          
+ 图片来源：vyprVPN官网 
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                   VyprVPN: Astrill的替代者 
+                
+              
+            
+            
+              
+文/
+              
+  Vergil 
+            
+            
+              
+                
+                  我们在上一篇文章  《写在Astrill VPN被屏蔽之后：没那么悲观》  一文中提及了著名商业翻墙服务 Astrill VPN 被GFW屏蔽一事，原本Astrill以其稳定和强大的服务受到大陆网民的广泛亲睐，拥有诸多的使用群体以及良好的用户口碑，所谓木秀于林风必摧之，因此也理所当然的招致了GFW的关注和封锁，虽然在上文中分析过了此次屏蔽主要集中在 L2TP/IPSEC 协议加密的 VPN 协议以及IOS客户端，并且 Astirll 也在不断努力争取早日恢复服务，但被 GFW 老大哥盯上之后，毕竟今后命运多舛难以预测。
+                  因此许多网友也给泡泡来信询问，除了Astill以外，还有没有其它优秀的商业付费翻墙服务可以使用的，而同时也有不少网友推荐了一款不错的替代者—vyprvpn，下面我们就来对其做一个简单的测评。
+                  Vyprvpn 的官方网页点击  这里  ，由Goldenfrog（金蛙）团队开发，界面清爽简单，对于个人用户提供三种付费套餐供选择。
+                  
+                  
+                    
+
+                    
+                  
+                  其中最受欢迎的“vyprvpn pro”套餐价格为每年8.33美元，这个价格要比Astrill每月5.83美元的价格高出不少，和 Astill一样几乎是全平台支持，允许两台设备同时接入，无流量限制，但付款方式上只支持Paypal和信用卡，这一点上支持支付宝付费的 Astrill 明显人性和方便许多。
+                  Vyprvpn支持三天免费试用，而“basic”套餐只支持 PPTP协议的链接，众所周知，PPTP协议由于安全性较弱，以及容易被封杀等因素，因此建议大家不要选择。
+                  下面我注册了了”Vyprvpn pro”套餐开始测评，因为他支持“PPTP”，“OpenVPN”，“L2TP/IPsec”以及“Chameleon”这四种连接协议方式。前三种方式我们在  《翻墙安全》  一文中已经介绍了它们是VPN翻墙协议中的一种，而对于第四项“Chameleon”（变色龙）相对比较陌生，我们在下文中再重点介绍。
+                  
+                  
+                    
+
+                    
+                  
+                  注册完毕之后我们首先下载PC客户端在Windows 平台上进行测试，整个安装过程毫无困难，和其它vpn翻墙软件一样，都会在Windows系统中增加一个名为“TAP-VyprVPN Adapter V9”的虚拟网卡。
+                  打开客户端，界面还是非常美观的，除了链接协议，IP地址等基本信息外，还可以看到图形化的流量监控，点击上方坐标形状的图标可以切换代理服务器，并且可以通过服务器ping值来判断链接速度，也可以直接默认选择速度最快的服务器进行连接。
+                  
+                  
+                    
+
+                    
+                  
+                  一、PPTP
+                  我们首先点击右上方的齿轮图标进入“设置”页面，然后点击“协议”选项卡，可以看到上面提及的四项链接方式，我们首先测试一下“PPTP”链接方式。（测试环境是中国联通10M光纤）
+                  果不其然，不论我如何切换服务器，PPTP模式都是无法正常链接的，因此，如上述所言，如果你决定付费购买 Vyprvpn服务，强烈建议不要购买“basic”套餐。
+                  二、L2TP/IPsec
+                  接下来我们试一下”L2TP/IPsec”协议的翻墙效果，该协议也正是Astrill被封的主要使用协议，Vyprvpn能否替代Astrill使用也将直接考验它的使用效果。
+                  我们以位于”日本“的服务器作为测试对象，上Youtube上打开一段1080P的视频进行测试，非常流畅，毫无卡顿，在看客户端上的下行速度，基本上保持在10Mbps左右，数据相当华丽了。
+                  
+                  
+                    
+
+                    
+                  
+                  但值得注意的是，我们在测试链接延迟更小的韩国和泰国服务器的时候，都发生了链接失败的报告。
+                  三、OpenVPN
+                  下面我再来测试一下“OpenVPN“协议的使用效果，很多网友都听说过不加混淆机制的OpenVPN两三年前就遭到GFW局部封杀，以前泡泡曾经介绍过的一款基于OpenVPN技术的 Pritunl 就已经无法使用了（关于Pritunl的介绍可以参见：  Pritunl：简易搭建个人VPN  ）
+                  我们以一个延迟为86ms的”泰国务器为例进行测试，切换协议后很快就链接成功，然后从Mega网盘上下载一段视频进行测试，速度表现的也很稳定。
+                  
+                  
+                    
+
+                    
+                  
+                  注意我这里使用的是OpenVPN 256位加密方式链接，如果用户使用 OpenVPN 160位加密方式连接的情况下，理论上能获得更快的访问速度。
+                  四、Chameleon变色龙
+                  上面介绍的三种常规的VPN协议以外，Vyprvpn还有一个独门绝技 Chameleon 协议链接方式，能够有效的躲避 GFW的屏蔽和封杀，下面我们具体看看使用效果。
+                  Chameleon 技术是 Golden Frog团队在2014年年初推出的一项最新技术，从官方结束文档上来看，Chameleon实际上是一种混淆技术将普通的OpenVPN 协议加密使其无法被 GFW进行DPI(深度嗅探)，它采用不可写的256位协议进行底层加密，同时不影响数据传输安全，使得用户可以轻松的跨越任何阻拦，自由的访问互联网世界，下面我们看看实际使用效果：
+                  
+                  
+                    
+
+                    
+                  
+                  我们还是以刚才测试的”泰国“服务器进行测试，发现通过 Mega 下载的视频速度丝毫不必通过OpenVPN 方式的慢，也取得了不错的下载成绩。
+                  
+                  
+                    
+
+                    
+                  
+                  五、总结
+                  应该说 Vyprvpn 是一款不错的商业翻墙服务，Astrill 具备的功能它都能够胜任，而且比前者做的更好，也符合自己相对较高的售价，除了 PPTP 协议方式以外，其它各种协议方式都能较为轻松的完成翻墙并取得不错的访问体验，更何况还有其独家开发的 Chameleon 技术进一步保障了使用效果，可以作为 Astrill 被封之后不错的替代者供大家使用。­
+                
+              
+            
+            
+              
+                
+                  
+        
+                  
+                
+              
+            
+          
+          
+             您可能感兴趣的文章 
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                另类媒体的生存                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                慕容雪村：我已习惯与恐惧同睡一张床                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                北京雾霾：视而不见的政治景观                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                在中国：火爆的信息倒卖市场和概念错位                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+          
+          
+             冒个泡吧！ 
+          
+          
+             评论 
+ 
+                   
+              
+                
+                    Anonymous (未验证)  
+                   星期三, 04/24/2019 - 22:34 
+                   永久连接 
+                
+              
+              
+                
+                  VyprVPN: Astrill的替代者 | Page 12 | 泡泡  
+                
+                    
+                    
+                      
+                        Could you inform me what style are you using  on your web site? It looks good.
+                        my blog :: &lt;a href="  http://tunklitankli.com/"&gt;Brigida&lt;/a&gt; 
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    StevElug (未验证)  
+                   星期四, 05/30/2019 - 19:58 
+                   永久连接 
+                
+              
+              
+                
+                  Cialis 5 Mg Precio Espana Stevprople  
+                
+                    
+                    
+                      
+                        Tarif Cialis 20mg Suche Viagra Kaufen Levrita Gelly Farmacy On Line &lt;a href=  http://bmpha.com&gt;levitra  utilisation&lt;/a&gt; Buy Std Medication Online Canada First Medicine Online Viagra Doxycycline Hyclate 100mg
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Matnetela (未验证)  
+                   星期五, 05/31/2019 - 19:01 
+                   永久连接 
+                
+              
+              
+                
+                  Viagra Salud Valium Matnetela  
+                
+                    
+                    
+                      
+                        Amoxicillin Long Term Use For Kidneys Doryx Best Website Online Rx &lt;a href=  http://cialisong.com&gt;cialis  5mg best price&lt;/a&gt; Pharmay Cheapest
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Franexpok (未验证)  
+                   星期日, 06/02/2019 - 04:35 
+                   永久连接 
+                
+              
+              
+                
+                  Cialis Viagra Toscana Matsculky  
+                
+                    
+                    
+                      
+                        Buy Ocuvir Cream Cialis Free 30 Day Trial &lt;a href=  http://cialtadalaff.com&gt;cialis  40 mg&lt;/a&gt; Medrol 4 Kopen Order Tadalis Sx Soft Amoxicillin Dosage For Pneumonia
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Ellincuse (未验证)  
+                   星期一, 06/03/2019 - 00:47 
+                   永久连接 
+                
+              
+              
+                
+                  Buy Viagra Super Active Online Ellnoug  
+                
+                    
+                    
+                      
+                        Order On Line Levitra &lt;a href=  http://buylevi.com&gt;cheapest  levitra 20mg&lt;/a&gt; Generic Stendra In Canada Free Shipping Overseas Levitra Generico Vardenafil
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Ellincuse (未验证)  
+                   星期一, 06/03/2019 - 16:08 
+                   永久连接 
+                
+              
+              
+                
+                  Vendita Viagra Spedizione Veloce Ellnoug  
+                
+                    
+                    
+                      
+                        Veterinary Cephalexin Super P Force Us Levitra Ritarda L'Eiaculazione &lt;a href=  http://buycheapcial.com&gt;cialis  5mg best price&lt;/a&gt; Cialis Dosaggio Consigliato Where Can I Buy Lasix Without A Prescription Effets Secondaires Cytotec
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Franexpok (未验证)  
+                   星期二, 06/04/2019 - 07:52 
+                   永久连接 
+                
+              
+              
+                
+                  Zithromax Uk Buy Matsculky  
+                
+                    
+                    
+                      
+                        Acheter Levitra En Fr &lt;a href=  http://sildenafbuy.com&gt;viagra  prescription&lt;/a&gt; Cephalexin Lyme Medscom Bewertung
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+             冒个泡吧！ 
+          
+        
+      
+    
+    
+  
+  
+
+" />
+    <meta property="og:description" content="
+  
+    
+      
+        
+              
+  Vergil  在 星期五, 02/27/2015 - 09:03 提交 
+          
+          
+            
+              
+                
+                  
+                      vyprvpn-review.png  
+                    
+                       
+                        
+                          
+ 图片来源：vyprVPN官网 
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                   VyprVPN: Astrill的替代者 
+                
+              
+            
+            
+              
+文/
+              
+  Vergil 
+            
+            
+              
+                
+                  我们在上一篇文章  《写在Astrill VPN被屏蔽之后：没那么悲观》  一文中提及了著名商业翻墙服务 Astrill VPN 被GFW屏蔽一事，原本Astrill以其稳定和强大的服务受到大陆网民的广泛亲睐，拥有诸多的使用群体以及良好的用户口碑，所谓木秀于林风必摧之，因此也理所当然的招致了GFW的关注和封锁，虽然在上文中分析过了此次屏蔽主要集中在 L2TP/IPSEC 协议加密的 VPN 协议以及IOS客户端，并且 Astirll 也在不断努力争取早日恢复服务，但被 GFW 老大哥盯上之后，毕竟今后命运多舛难以预测。
+                  因此许多网友也给泡泡来信询问，除了Astill以外，还有没有其它优秀的商业付费翻墙服务可以使用的，而同时也有不少网友推荐了一款不错的替代者—vyprvpn，下面我们就来对其做一个简单的测评。
+                  Vyprvpn 的官方网页点击  这里  ，由Goldenfrog（金蛙）团队开发，界面清爽简单，对于个人用户提供三种付费套餐供选择。
+                  
+                  
+                    
+
+                    
+                  
+                  其中最受欢迎的“vyprvpn pro”套餐价格为每年8.33美元，这个价格要比Astrill每月5.83美元的价格高出不少，和 Astill一样几乎是全平台支持，允许两台设备同时接入，无流量限制，但付款方式上只支持Paypal和信用卡，这一点上支持支付宝付费的 Astrill 明显人性和方便许多。
+                  Vyprvpn支持三天免费试用，而“basic”套餐只支持 PPTP协议的链接，众所周知，PPTP协议由于安全性较弱，以及容易被封杀等因素，因此建议大家不要选择。
+                  下面我注册了了”Vyprvpn pro”套餐开始测评，因为他支持“PPTP”，“OpenVPN”，“L2TP/IPsec”以及“Chameleon”这四种连接协议方式。前三种方式我们在  《翻墙安全》  一文中已经介绍了它们是VPN翻墙协议中的一种，而对于第四项“Chameleon”（变色龙）相对比较陌生，我们在下文中再重点介绍。
+                  
+                  
+                    
+
+                    
+                  
+                  注册完毕之后我们首先下载PC客户端在Windows 平台上进行测试，整个安装过程毫无困难，和其它vpn翻墙软件一样，都会在Windows系统中增加一个名为“TAP-VyprVPN Adapter V9”的虚拟网卡。
+                  打开客户端，界面还是非常美观的，除了链接协议，IP地址等基本信息外，还可以看到图形化的流量监控，点击上方坐标形状的图标可以切换代理服务器，并且可以通过服务器ping值来判断链接速度，也可以直接默认选择速度最快的服务器进行连接。
+                  
+                  
+                    
+
+                    
+                  
+                  一、PPTP
+                  我们首先点击右上方的齿轮图标进入“设置”页面，然后点击“协议”选项卡，可以看到上面提及的四项链接方式，我们首先测试一下“PPTP”链接方式。（测试环境是中国联通10M光纤）
+                  果不其然，不论我如何切换服务器，PPTP模式都是无法正常链接的，因此，如上述所言，如果你决定付费购买 Vyprvpn服务，强烈建议不要购买“basic”套餐。
+                  二、L2TP/IPsec
+                  接下来我们试一下”L2TP/IPsec”协议的翻墙效果，该协议也正是Astrill被封的主要使用协议，Vyprvpn能否替代Astrill使用也将直接考验它的使用效果。
+                  我们以位于”日本“的服务器作为测试对象，上Youtube上打开一段1080P的视频进行测试，非常流畅，毫无卡顿，在看客户端上的下行速度，基本上保持在10Mbps左右，数据相当华丽了。
+                  
+                  
+                    
+
+                    
+                  
+                  但值得注意的是，我们在测试链接延迟更小的韩国和泰国服务器的时候，都发生了链接失败的报告。
+                  三、OpenVPN
+                  下面我再来测试一下“OpenVPN“协议的使用效果，很多网友都听说过不加混淆机制的OpenVPN两三年前就遭到GFW局部封杀，以前泡泡曾经介绍过的一款基于OpenVPN技术的 Pritunl 就已经无法使用了（关于Pritunl的介绍可以参见：  Pritunl：简易搭建个人VPN  ）
+                  我们以一个延迟为86ms的”泰国务器为例进行测试，切换协议后很快就链接成功，然后从Mega网盘上下载一段视频进行测试，速度表现的也很稳定。
+                  
+                  
+                    
+
+                    
+                  
+                  注意我这里使用的是OpenVPN 256位加密方式链接，如果用户使用 OpenVPN 160位加密方式连接的情况下，理论上能获得更快的访问速度。
+                  四、Chameleon变色龙
+                  上面介绍的三种常规的VPN协议以外，Vyprvpn还有一个独门绝技 Chameleon 协议链接方式，能够有效的躲避 GFW的屏蔽和封杀，下面我们具体看看使用效果。
+                  Chameleon 技术是 Golden Frog团队在2014年年初推出的一项最新技术，从官方结束文档上来看，Chameleon实际上是一种混淆技术将普通的OpenVPN 协议加密使其无法被 GFW进行DPI(深度嗅探)，它采用不可写的256位协议进行底层加密，同时不影响数据传输安全，使得用户可以轻松的跨越任何阻拦，自由的访问互联网世界，下面我们看看实际使用效果：
+                  
+                  
+                    
+
+                    
+                  
+                  我们还是以刚才测试的”泰国“服务器进行测试，发现通过 Mega 下载的视频速度丝毫不必通过OpenVPN 方式的慢，也取得了不错的下载成绩。
+                  
+                  
+                    
+
+                    
+                  
+                  五、总结
+                  应该说 Vyprvpn 是一款不错的商业翻墙服务，Astrill 具备的功能它都能够胜任，而且比前者做的更好，也符合自己相对较高的售价，除了 PPTP 协议方式以外，其它各种协议方式都能较为轻松的完成翻墙并取得不错的访问体验，更何况还有其独家开发的 Chameleon 技术进一步保障了使用效果，可以作为 Astrill 被封之后不错的替代者供大家使用。­
+                
+              
+            
+            
+              
+                
+                  
+        
+                  
+                
+              
+            
+          
+          
+             您可能感兴趣的文章 
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                另类媒体的生存                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                慕容雪村：我已习惯与恐惧同睡一张床                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                北京雾霾：视而不见的政治景观                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                在中国：火爆的信息倒卖市场和概念错位                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+          
+          
+             冒个泡吧！ 
+          
+          
+             评论 
+ 
+                   
+              
+                
+                    Anonymous (未验证)  
+                   星期三, 04/24/2019 - 22:34 
+                   永久连接 
+                
+              
+              
+                
+                  VyprVPN: Astrill的替代者 | Page 12 | 泡泡  
+                
+                    
+                    
+                      
+                        Could you inform me what style are you using  on your web site? It looks good.
+                        my blog :: &lt;a href="  http://tunklitankli.com/"&gt;Brigida&lt;/a&gt; 
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    StevElug (未验证)  
+                   星期四, 05/30/2019 - 19:58 
+                   永久连接 
+                
+              
+              
+                
+                  Cialis 5 Mg Precio Espana Stevprople  
+                
+                    
+                    
+                      
+                        Tarif Cialis 20mg Suche Viagra Kaufen Levrita Gelly Farmacy On Line &lt;a href=  http://bmpha.com&gt;levitra  utilisation&lt;/a&gt; Buy Std Medication Online Canada First Medicine Online Viagra Doxycycline Hyclate 100mg
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Matnetela (未验证)  
+                   星期五, 05/31/2019 - 19:01 
+                   永久连接 
+                
+              
+              
+                
+                  Viagra Salud Valium Matnetela  
+                
+                    
+                    
+                      
+                        Amoxicillin Long Term Use For Kidneys Doryx Best Website Online Rx &lt;a href=  http://cialisong.com&gt;cialis  5mg best price&lt;/a&gt; Pharmay Cheapest
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Franexpok (未验证)  
+                   星期日, 06/02/2019 - 04:35 
+                   永久连接 
+                
+              
+              
+                
+                  Cialis Viagra Toscana Matsculky  
+                
+                    
+                    
+                      
+                        Buy Ocuvir Cream Cialis Free 30 Day Trial &lt;a href=  http://cialtadalaff.com&gt;cialis  40 mg&lt;/a&gt; Medrol 4 Kopen Order Tadalis Sx Soft Amoxicillin Dosage For Pneumonia
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Ellincuse (未验证)  
+                   星期一, 06/03/2019 - 00:47 
+                   永久连接 
+                
+              
+              
+                
+                  Buy Viagra Super Active Online Ellnoug  
+                
+                    
+                    
+                      
+                        Order On Line Levitra &lt;a href=  http://buylevi.com&gt;cheapest  levitra 20mg&lt;/a&gt; Generic Stendra In Canada Free Shipping Overseas Levitra Generico Vardenafil
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Ellincuse (未验证)  
+                   星期一, 06/03/2019 - 16:08 
+                   永久连接 
+                
+              
+              
+                
+                  Vendita Viagra Spedizione Veloce Ellnoug  
+                
+                    
+                    
+                      
+                        Veterinary Cephalexin Super P Force Us Levitra Ritarda L'Eiaculazione &lt;a href=  http://buycheapcial.com&gt;cialis  5mg best price&lt;/a&gt; Cialis Dosaggio Consigliato Where Can I Buy Lasix Without A Prescription Effets Secondaires Cytotec
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Franexpok (未验证)  
+                   星期二, 06/04/2019 - 07:52 
+                   永久连接 
+                
+              
+              
+                
+                  Zithromax Uk Buy Matsculky  
+                
+                    
+                    
+                      
+                        Acheter Levitra En Fr &lt;a href=  http://sildenafbuy.com&gt;viagra  prescription&lt;/a&gt; Cephalexin Lyme Medscom Bewertung
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+             冒个泡吧！ 
+          
+        
+      
+    
+    
+  
+  
+
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="VyprVPN: Astrill的替代者" />
+    <meta property="twitter:title" content="VyprVPN: Astrill的替代者" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5684)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fpao-pao.net%2Farticle%2F375" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://pao-pao.net/article/375" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://pao-pao.net/article/375&text=VyprVPN: Astrill的替代者&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://pao-pao.net/article/375&title=VyprVPN: Astrill的替代者" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://pao-pao.net/article/375&title=VyprVPN: Astrill的替代者" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=VyprVPN: Astrill的替代者&body=
+  
+    
+      
+        
+              
+  Vergil  在 星期五, 02/27/2015 - 09:03 提交 
+          
+          
+            
+              
+                
+                  
+                      vyprvpn-review.png  
+                    
+                       
+                        
+                          
+ 图片来源：vyprVPN官网 
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                   VyprVPN: Astrill的替代者 
+                
+              
+            
+            
+              
+文/
+              
+  Vergil 
+            
+            
+              
+                
+                  我们在上一篇文章  《写在Astrill VPN被屏蔽之后：没那么悲观》  一文中提及了著名商业翻墙服务 Astrill VPN 被GFW屏蔽一事，原本Astrill以其稳定和强大的服务受到大陆网民的广泛亲睐，拥有诸多的使用群体以及良好的用户口碑，所谓木秀于林风必摧之，因此也理所当然的招致了GFW的关注和封锁，虽然在上文中分析过了此次屏蔽主要集中在 L2TP/IPSEC 协议加密的 VPN 协议以及IOS客户端，并且 Astirll 也在不断努力争取早日恢复服务，但被 GFW 老大哥盯上之后，毕竟今后命运多舛难以预测。
+                  因此许多网友也给泡泡来信询问，除了Astill以外，还有没有其它优秀的商业付费翻墙服务可以使用的，而同时也有不少网友推荐了一款不错的替代者—vyprvpn，下面我们就来对其做一个简单的测评。
+                  Vyprvpn 的官方网页点击  这里  ，由Goldenfrog（金蛙）团队开发，界面清爽简单，对于个人用户提供三种付费套餐供选择。
+                  
+                  
+                    
+
+                    
+                  
+                  其中最受欢迎的“vyprvpn pro”套餐价格为每年8.33美元，这个价格要比Astrill每月5.83美元的价格高出不少，和 Astill一样几乎是全平台支持，允许两台设备同时接入，无流量限制，但付款方式上只支持Paypal和信用卡，这一点上支持支付宝付费的 Astrill 明显人性和方便许多。
+                  Vyprvpn支持三天免费试用，而“basic”套餐只支持 PPTP协议的链接，众所周知，PPTP协议由于安全性较弱，以及容易被封杀等因素，因此建议大家不要选择。
+                  下面我注册了了”Vyprvpn pro”套餐开始测评，因为他支持“PPTP”，“OpenVPN”，“L2TP/IPsec”以及“Chameleon”这四种连接协议方式。前三种方式我们在  《翻墙安全》  一文中已经介绍了它们是VPN翻墙协议中的一种，而对于第四项“Chameleon”（变色龙）相对比较陌生，我们在下文中再重点介绍。
+                  
+                  
+                    
+
+                    
+                  
+                  注册完毕之后我们首先下载PC客户端在Windows 平台上进行测试，整个安装过程毫无困难，和其它vpn翻墙软件一样，都会在Windows系统中增加一个名为“TAP-VyprVPN Adapter V9”的虚拟网卡。
+                  打开客户端，界面还是非常美观的，除了链接协议，IP地址等基本信息外，还可以看到图形化的流量监控，点击上方坐标形状的图标可以切换代理服务器，并且可以通过服务器ping值来判断链接速度，也可以直接默认选择速度最快的服务器进行连接。
+                  
+                  
+                    
+
+                    
+                  
+                  一、PPTP
+                  我们首先点击右上方的齿轮图标进入“设置”页面，然后点击“协议”选项卡，可以看到上面提及的四项链接方式，我们首先测试一下“PPTP”链接方式。（测试环境是中国联通10M光纤）
+                  果不其然，不论我如何切换服务器，PPTP模式都是无法正常链接的，因此，如上述所言，如果你决定付费购买 Vyprvpn服务，强烈建议不要购买“basic”套餐。
+                  二、L2TP/IPsec
+                  接下来我们试一下”L2TP/IPsec”协议的翻墙效果，该协议也正是Astrill被封的主要使用协议，Vyprvpn能否替代Astrill使用也将直接考验它的使用效果。
+                  我们以位于”日本“的服务器作为测试对象，上Youtube上打开一段1080P的视频进行测试，非常流畅，毫无卡顿，在看客户端上的下行速度，基本上保持在10Mbps左右，数据相当华丽了。
+                  
+                  
+                    
+
+                    
+                  
+                  但值得注意的是，我们在测试链接延迟更小的韩国和泰国服务器的时候，都发生了链接失败的报告。
+                  三、OpenVPN
+                  下面我再来测试一下“OpenVPN“协议的使用效果，很多网友都听说过不加混淆机制的OpenVPN两三年前就遭到GFW局部封杀，以前泡泡曾经介绍过的一款基于OpenVPN技术的 Pritunl 就已经无法使用了（关于Pritunl的介绍可以参见：  Pritunl：简易搭建个人VPN  ）
+                  我们以一个延迟为86ms的”泰国务器为例进行测试，切换协议后很快就链接成功，然后从Mega网盘上下载一段视频进行测试，速度表现的也很稳定。
+                  
+                  
+                    
+
+                    
+                  
+                  注意我这里使用的是OpenVPN 256位加密方式链接，如果用户使用 OpenVPN 160位加密方式连接的情况下，理论上能获得更快的访问速度。
+                  四、Chameleon变色龙
+                  上面介绍的三种常规的VPN协议以外，Vyprvpn还有一个独门绝技 Chameleon 协议链接方式，能够有效的躲避 GFW的屏蔽和封杀，下面我们具体看看使用效果。
+                  Chameleon 技术是 Golden Frog团队在2014年年初推出的一项最新技术，从官方结束文档上来看，Chameleon实际上是一种混淆技术将普通的OpenVPN 协议加密使其无法被 GFW进行DPI(深度嗅探)，它采用不可写的256位协议进行底层加密，同时不影响数据传输安全，使得用户可以轻松的跨越任何阻拦，自由的访问互联网世界，下面我们看看实际使用效果：
+                  
+                  
+                    
+
+                    
+                  
+                  我们还是以刚才测试的”泰国“服务器进行测试，发现通过 Mega 下载的视频速度丝毫不必通过OpenVPN 方式的慢，也取得了不错的下载成绩。
+                  
+                  
+                    
+
+                    
+                  
+                  五、总结
+                  应该说 Vyprvpn 是一款不错的商业翻墙服务，Astrill 具备的功能它都能够胜任，而且比前者做的更好，也符合自己相对较高的售价，除了 PPTP 协议方式以外，其它各种协议方式都能较为轻松的完成翻墙并取得不错的访问体验，更何况还有其独家开发的 Chameleon 技术进一步保障了使用效果，可以作为 Astrill 被封之后不错的替代者供大家使用。­
+                
+              
+            
+            
+              
+                
+                  
+        
+                  
+                
+              
+            
+          
+          
+             您可能感兴趣的文章 
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                另类媒体的生存                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                慕容雪村：我已习惯与恐惧同睡一张床                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                北京雾霾：视而不见的政治景观                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                在中国：火爆的信息倒卖市场和概念错位                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+          
+          
+             冒个泡吧！ 
+          
+          
+             评论 
+ 
+                   
+              
+                
+                    Anonymous (未验证)  
+                   星期三, 04/24/2019 - 22:34 
+                   永久连接 
+                
+              
+              
+                
+                  VyprVPN: Astrill的替代者 | Page 12 | 泡泡  
+                
+                    
+                    
+                      
+                        Could you inform me what style are you using  on your web site? It looks good.
+                        my blog :: &lt;a href="  http://tunklitankli.com/"&gt;Brigida&lt;/a&gt; 
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    StevElug (未验证)  
+                   星期四, 05/30/2019 - 19:58 
+                   永久连接 
+                
+              
+              
+                
+                  Cialis 5 Mg Precio Espana Stevprople  
+                
+                    
+                    
+                      
+                        Tarif Cialis 20mg Suche Viagra Kaufen Levrita Gelly Farmacy On Line &lt;a href=  http://bmpha.com&gt;levitra  utilisation&lt;/a&gt; Buy Std Medication Online Canada First Medicine Online Viagra Doxycycline Hyclate 100mg
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Matnetela (未验证)  
+                   星期五, 05/31/2019 - 19:01 
+                   永久连接 
+                
+              
+              
+                
+                  Viagra Salud Valium Matnetela  
+                
+                    
+                    
+                      
+                        Amoxicillin Long Term Use For Kidneys Doryx Best Website Online Rx &lt;a href=  http://cialisong.com&gt;cialis  5mg best price&lt;/a&gt; Pharmay Cheapest
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Franexpok (未验证)  
+                   星期日, 06/02/2019 - 04:35 
+                   永久连接 
+                
+              
+              
+                
+                  Cialis Viagra Toscana Matsculky  
+                
+                    
+                    
+                      
+                        Buy Ocuvir Cream Cialis Free 30 Day Trial &lt;a href=  http://cialtadalaff.com&gt;cialis  40 mg&lt;/a&gt; Medrol 4 Kopen Order Tadalis Sx Soft Amoxicillin Dosage For Pneumonia
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Ellincuse (未验证)  
+                   星期一, 06/03/2019 - 00:47 
+                   永久连接 
+                
+              
+              
+                
+                  Buy Viagra Super Active Online Ellnoug  
+                
+                    
+                    
+                      
+                        Order On Line Levitra &lt;a href=  http://buylevi.com&gt;cheapest  levitra 20mg&lt;/a&gt; Generic Stendra In Canada Free Shipping Overseas Levitra Generico Vardenafil
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Ellincuse (未验证)  
+                   星期一, 06/03/2019 - 16:08 
+                   永久连接 
+                
+              
+              
+                
+                  Vendita Viagra Spedizione Veloce Ellnoug  
+                
+                    
+                    
+                      
+                        Veterinary Cephalexin Super P Force Us Levitra Ritarda L'Eiaculazione &lt;a href=  http://buycheapcial.com&gt;cialis  5mg best price&lt;/a&gt; Cialis Dosaggio Consigliato Where Can I Buy Lasix Without A Prescription Effets Secondaires Cytotec
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Franexpok (未验证)  
+                   星期二, 06/04/2019 - 07:52 
+                   永久连接 
+                
+              
+              
+                
+                  Zithromax Uk Buy Matsculky  
+                
+                    
+                    
+                      
+                        Acheter Levitra En Fr &lt;a href=  http://sildenafbuy.com&gt;viagra  prescription&lt;/a&gt; Cephalexin Lyme Medscom Bewertung
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+             冒个泡吧！ 
+          
+        
+      
+    
+    
+  
+  
+
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://pao-pao.net/article/375" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://pao-pao.net/article/375&title=VyprVPN: Astrill的替代者&caption=
+  
+    
+      
+        
+              
+  Vergil  在 星期五, 02/27/2015 - 09:03 提交 
+          
+          
+            
+              
+                
+                  
+                      vyprvpn-review.png  
+                    
+                       
+                        
+                          
+ 图片来源：vyprVPN官网 
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                   VyprVPN: Astrill的替代者 
+                
+              
+            
+            
+              
+文/
+              
+  Vergil 
+            
+            
+              
+                
+                  我们在上一篇文章  《写在Astrill VPN被屏蔽之后：没那么悲观》  一文中提及了著名商业翻墙服务 Astrill VPN 被GFW屏蔽一事，原本Astrill以其稳定和强大的服务受到大陆网民的广泛亲睐，拥有诸多的使用群体以及良好的用户口碑，所谓木秀于林风必摧之，因此也理所当然的招致了GFW的关注和封锁，虽然在上文中分析过了此次屏蔽主要集中在 L2TP/IPSEC 协议加密的 VPN 协议以及IOS客户端，并且 Astirll 也在不断努力争取早日恢复服务，但被 GFW 老大哥盯上之后，毕竟今后命运多舛难以预测。
+                  因此许多网友也给泡泡来信询问，除了Astill以外，还有没有其它优秀的商业付费翻墙服务可以使用的，而同时也有不少网友推荐了一款不错的替代者—vyprvpn，下面我们就来对其做一个简单的测评。
+                  Vyprvpn 的官方网页点击  这里  ，由Goldenfrog（金蛙）团队开发，界面清爽简单，对于个人用户提供三种付费套餐供选择。
+                  
+                  
+                    
+
+                    
+                  
+                  其中最受欢迎的“vyprvpn pro”套餐价格为每年8.33美元，这个价格要比Astrill每月5.83美元的价格高出不少，和 Astill一样几乎是全平台支持，允许两台设备同时接入，无流量限制，但付款方式上只支持Paypal和信用卡，这一点上支持支付宝付费的 Astrill 明显人性和方便许多。
+                  Vyprvpn支持三天免费试用，而“basic”套餐只支持 PPTP协议的链接，众所周知，PPTP协议由于安全性较弱，以及容易被封杀等因素，因此建议大家不要选择。
+                  下面我注册了了”Vyprvpn pro”套餐开始测评，因为他支持“PPTP”，“OpenVPN”，“L2TP/IPsec”以及“Chameleon”这四种连接协议方式。前三种方式我们在  《翻墙安全》  一文中已经介绍了它们是VPN翻墙协议中的一种，而对于第四项“Chameleon”（变色龙）相对比较陌生，我们在下文中再重点介绍。
+                  
+                  
+                    
+
+                    
+                  
+                  注册完毕之后我们首先下载PC客户端在Windows 平台上进行测试，整个安装过程毫无困难，和其它vpn翻墙软件一样，都会在Windows系统中增加一个名为“TAP-VyprVPN Adapter V9”的虚拟网卡。
+                  打开客户端，界面还是非常美观的，除了链接协议，IP地址等基本信息外，还可以看到图形化的流量监控，点击上方坐标形状的图标可以切换代理服务器，并且可以通过服务器ping值来判断链接速度，也可以直接默认选择速度最快的服务器进行连接。
+                  
+                  
+                    
+
+                    
+                  
+                  一、PPTP
+                  我们首先点击右上方的齿轮图标进入“设置”页面，然后点击“协议”选项卡，可以看到上面提及的四项链接方式，我们首先测试一下“PPTP”链接方式。（测试环境是中国联通10M光纤）
+                  果不其然，不论我如何切换服务器，PPTP模式都是无法正常链接的，因此，如上述所言，如果你决定付费购买 Vyprvpn服务，强烈建议不要购买“basic”套餐。
+                  二、L2TP/IPsec
+                  接下来我们试一下”L2TP/IPsec”协议的翻墙效果，该协议也正是Astrill被封的主要使用协议，Vyprvpn能否替代Astrill使用也将直接考验它的使用效果。
+                  我们以位于”日本“的服务器作为测试对象，上Youtube上打开一段1080P的视频进行测试，非常流畅，毫无卡顿，在看客户端上的下行速度，基本上保持在10Mbps左右，数据相当华丽了。
+                  
+                  
+                    
+
+                    
+                  
+                  但值得注意的是，我们在测试链接延迟更小的韩国和泰国服务器的时候，都发生了链接失败的报告。
+                  三、OpenVPN
+                  下面我再来测试一下“OpenVPN“协议的使用效果，很多网友都听说过不加混淆机制的OpenVPN两三年前就遭到GFW局部封杀，以前泡泡曾经介绍过的一款基于OpenVPN技术的 Pritunl 就已经无法使用了（关于Pritunl的介绍可以参见：  Pritunl：简易搭建个人VPN  ）
+                  我们以一个延迟为86ms的”泰国务器为例进行测试，切换协议后很快就链接成功，然后从Mega网盘上下载一段视频进行测试，速度表现的也很稳定。
+                  
+                  
+                    
+
+                    
+                  
+                  注意我这里使用的是OpenVPN 256位加密方式链接，如果用户使用 OpenVPN 160位加密方式连接的情况下，理论上能获得更快的访问速度。
+                  四、Chameleon变色龙
+                  上面介绍的三种常规的VPN协议以外，Vyprvpn还有一个独门绝技 Chameleon 协议链接方式，能够有效的躲避 GFW的屏蔽和封杀，下面我们具体看看使用效果。
+                  Chameleon 技术是 Golden Frog团队在2014年年初推出的一项最新技术，从官方结束文档上来看，Chameleon实际上是一种混淆技术将普通的OpenVPN 协议加密使其无法被 GFW进行DPI(深度嗅探)，它采用不可写的256位协议进行底层加密，同时不影响数据传输安全，使得用户可以轻松的跨越任何阻拦，自由的访问互联网世界，下面我们看看实际使用效果：
+                  
+                  
+                    
+
+                    
+                  
+                  我们还是以刚才测试的”泰国“服务器进行测试，发现通过 Mega 下载的视频速度丝毫不必通过OpenVPN 方式的慢，也取得了不错的下载成绩。
+                  
+                  
+                    
+
+                    
+                  
+                  五、总结
+                  应该说 Vyprvpn 是一款不错的商业翻墙服务，Astrill 具备的功能它都能够胜任，而且比前者做的更好，也符合自己相对较高的售价，除了 PPTP 协议方式以外，其它各种协议方式都能较为轻松的完成翻墙并取得不错的访问体验，更何况还有其独家开发的 Chameleon 技术进一步保障了使用效果，可以作为 Astrill 被封之后不错的替代者供大家使用。­
+                
+              
+            
+            
+              
+                
+                  
+        
+                  
+                
+              
+            
+          
+          
+             您可能感兴趣的文章 
+            
+              
+                
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                另类媒体的生存                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                慕容雪村：我已习惯与恐惧同睡一张床                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                北京雾霾：视而不见的政治景观                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                  
+                    
+                      
+                        
+                          
+                            
+  
+                            
+                          
+                        
+                      
+                      
+                        
+                          
+                            
+                                在中国：火爆的信息倒卖市场和概念错位                                   
+ 
+                            
+                          
+                        
+                      
+                    
+                  
+                
+              
+            
+          
+          
+          
+             冒个泡吧！ 
+          
+          
+             评论 
+ 
+                   
+              
+                
+                    Anonymous (未验证)  
+                   星期三, 04/24/2019 - 22:34 
+                   永久连接 
+                
+              
+              
+                
+                  VyprVPN: Astrill的替代者 | Page 12 | 泡泡  
+                
+                    
+                    
+                      
+                        Could you inform me what style are you using  on your web site? It looks good.
+                        my blog :: &lt;a href="  http://tunklitankli.com/"&gt;Brigida&lt;/a&gt; 
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    StevElug (未验证)  
+                   星期四, 05/30/2019 - 19:58 
+                   永久连接 
+                
+              
+              
+                
+                  Cialis 5 Mg Precio Espana Stevprople  
+                
+                    
+                    
+                      
+                        Tarif Cialis 20mg Suche Viagra Kaufen Levrita Gelly Farmacy On Line &lt;a href=  http://bmpha.com&gt;levitra  utilisation&lt;/a&gt; Buy Std Medication Online Canada First Medicine Online Viagra Doxycycline Hyclate 100mg
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Matnetela (未验证)  
+                   星期五, 05/31/2019 - 19:01 
+                   永久连接 
+                
+              
+              
+                
+                  Viagra Salud Valium Matnetela  
+                
+                    
+                    
+                      
+                        Amoxicillin Long Term Use For Kidneys Doryx Best Website Online Rx &lt;a href=  http://cialisong.com&gt;cialis  5mg best price&lt;/a&gt; Pharmay Cheapest
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Franexpok (未验证)  
+                   星期日, 06/02/2019 - 04:35 
+                   永久连接 
+                
+              
+              
+                
+                  Cialis Viagra Toscana Matsculky  
+                
+                    
+                    
+                      
+                        Buy Ocuvir Cream Cialis Free 30 Day Trial &lt;a href=  http://cialtadalaff.com&gt;cialis  40 mg&lt;/a&gt; Medrol 4 Kopen Order Tadalis Sx Soft Amoxicillin Dosage For Pneumonia
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Ellincuse (未验证)  
+                   星期一, 06/03/2019 - 00:47 
+                   永久连接 
+                
+              
+              
+                
+                  Buy Viagra Super Active Online Ellnoug  
+                
+                    
+                    
+                      
+                        Order On Line Levitra &lt;a href=  http://buylevi.com&gt;cheapest  levitra 20mg&lt;/a&gt; Generic Stendra In Canada Free Shipping Overseas Levitra Generico Vardenafil
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Ellincuse (未验证)  
+                   星期一, 06/03/2019 - 16:08 
+                   永久连接 
+                
+              
+              
+                
+                  Vendita Viagra Spedizione Veloce Ellnoug  
+                
+                    
+                    
+                      
+                        Veterinary Cephalexin Super P Force Us Levitra Ritarda L'Eiaculazione &lt;a href=  http://buycheapcial.com&gt;cialis  5mg best price&lt;/a&gt; Cialis Dosaggio Consigliato Where Can I Buy Lasix Without A Prescription Effets Secondaires Cytotec
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+ 
+                   
+              
+                
+                    Franexpok (未验证)  
+                   星期二, 06/04/2019 - 07:52 
+                   永久连接 
+                
+              
+              
+                
+                  Zithromax Uk Buy Matsculky  
+                
+                    
+                    
+                      
+                        Acheter Levitra En Fr &lt;a href=  http://sildenafbuy.com&gt;viagra  prescription&lt;/a&gt; Cephalexin Lyme Medscom Bewertung
+                      
+                    
+                  
+                
+                
+                
+                   回复 
+                
+              
+              
+            
+             冒个泡吧！ 
+          
+        
+      
+    
+    
+  
+  
+
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=VyprVPN: Astrill的替代者&url=https://pao-pao.net/article/375" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>VyprVPN: Astrill的替代者</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2015-02-27
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Vergil</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#泡泡">
+          泡泡
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://pao-pao.net/article/375" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="泡泡的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#泡泡 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <section class="clearfix" id="content" role="main">
+  <div class="region region-content">
+    <div class="block block-system" id="block-system-main">
+      <div class="content">
+        <div about="/article/375" class="node node-pao-pao-article node-promoted node-full view-mode-full clearfix" id="node-375" typeof="sioc:Item foaf:Document">
+<span class="rdf-meta element-hidden" content="VyprVPN: Astrill的替代者" property="dc:title"> </span> <span class="rdf-meta element-hidden" content="7" datatype="xsd:integer" property="sioc:num_replies"> </span>           <div class="submitted">
+<span content="2015-02-27T09:03:57+01:00" datatype="xsd:dateTime" property="dc:date dc:created" rel="sioc:has_creator"> <a about="/author/30" class="username" datatype="" href="/author/30" property="foaf:name" title="查看用户资料" typeof="sioc:UserAccount" xml:lang=""> Vergil </a> 在 星期五, 02/27/2015 - 09:03 提交 </span>
+          </div>
+          <div class="content">
+            <div class="field field-name-field-image field-type-image field-label-hidden">
+              <div class="field-items">
+                <div class="field-item even">
+                  <div class="file file-image file-image-png" id="file-1024--2">
+                    <h2 class="element-invisible" id="vyprvpn-reviewpng--"> <a href="/file/1024"> vyprvpn-review.png </a> </h2>
+                    <div class="content">
+<img alt="" height="164" src="https://pao-pao.net/sites/pao-pao.net/files/styles/article_detail/public/vyprvpn-review.png?itok=cVKY8coG" title="" typeof="foaf:Image" width="290" />                       <div class="field field-name-field-image-source field-type-link-field field-label-hidden">
+                        <div class="field-items">
+                          <div class="field-item even">
+<a href="https://www.goldenfrog.com/vyprvpn"> 图片来源：vyprVPN官网 </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field field-name-title field-type-ds field-label-hidden">
+              <div class="field-items">
+                <div class="field-item even" property="dc:title">
+                  <h1 class="page-title" id="vyprvpn-astrill-"> VyprVPN: Astrill的替代者 </h1>
+                </div>
+              </div>
+            </div>
+            <div class="field-name-author">
+              <div class="label-inline">
+文/
+              </div>
+ <a about="/author/30" class="username" datatype="" href="/author/30" property="foaf:name" title="查看用户资料" typeof="sioc:UserAccount" xml:lang=""> Vergil </a>
+            </div>
+            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+              <div class="field-items">
+                <div class="field-item even" property="content:encoded">
+                  <p>我们在上一篇文章 <a href="https://pao-pao.net/article/360" rel="nofollow"> 《写在Astrill VPN被屏蔽之后：没那么悲观》 </a> 一文中提及了著名商业翻墙服务 Astrill VPN 被GFW屏蔽一事，原本Astrill以其稳定和强大的服务受到大陆网民的广泛亲睐，拥有诸多的使用群体以及良好的用户口碑，所谓木秀于林风必摧之，因此也理所当然的招致了GFW的关注和封锁，虽然在上文中分析过了此次屏蔽主要集中在 L2TP/IPSEC 协议加密的 VPN 协议以及IOS客户端，并且 Astirll 也在不断努力争取早日恢复服务，但被 GFW 老大哥盯上之后，毕竟今后命运多舛难以预测。</p>
+                  <p>因此许多网友也给泡泡来信询问，除了Astill以外，还有没有其它优秀的商业付费翻墙服务可以使用的，而同时也有不少网友推荐了一款不错的替代者—vyprvpn，下面我们就来对其做一个简单的测评。</p>
+                  <p>Vyprvpn 的官方网页点击 <a href="http://www.goldenfrog.com/vyprvpn/special/referral?offer_id=42&amp;aff_id=1884" rel="nofollow"> 这里 </a> ，由Goldenfrog（金蛙）团队开发，界面清爽简单，对于个人用户提供三种付费套餐供选择。</p>
+                  <p></p>
+                  <div class="media media-element-container media-full">
+                    <div class="ds-1col file file-image file-image-png view-mode-full clearfix">
+<img alt="" class="media-element file-full" height="473" src="https://pao-pao.net/sites/pao-pao.net/files/styles/large/public/1_20.png?itok=EleVLjrO" title="" typeof="foaf:Image" width="480" />
+                    </div>
+                  </div>
+                  <p>其中最受欢迎的“vyprvpn pro”套餐价格为每年8.33美元，这个价格要比Astrill每月5.83美元的价格高出不少，和 Astill一样几乎是全平台支持，允许两台设备同时接入，无流量限制，但付款方式上只支持Paypal和信用卡，这一点上支持支付宝付费的 Astrill 明显人性和方便许多。</p>
+                  <p>Vyprvpn支持三天免费试用，而“basic”套餐只支持 PPTP协议的链接，众所周知，PPTP协议由于安全性较弱，以及容易被封杀等因素，因此建议大家不要选择。</p>
+                  <p>下面我注册了了”Vyprvpn pro”套餐开始测评，因为他支持“PPTP”，“OpenVPN”，“L2TP/IPsec”以及“Chameleon”这四种连接协议方式。前三种方式我们在 <a href="https://pao-pao.net/article/286" rel="nofollow"> 《翻墙安全》 </a> 一文中已经介绍了它们是VPN翻墙协议中的一种，而对于第四项“Chameleon”（变色龙）相对比较陌生，我们在下文中再重点介绍。</p>
+                  <p></p>
+                  <div class="media media-element-container media-full">
+                    <div class="ds-1col file file-image file-image-png view-mode-full clearfix">
+<img alt="" class="media-element file-full" height="290" src="https://pao-pao.net/sites/pao-pao.net/files/styles/large/public/2_5.png?itok=hMfQt5Bb" title="" typeof="foaf:Image" width="480" />
+                    </div>
+                  </div>
+                  <p>注册完毕之后我们首先下载PC客户端在Windows 平台上进行测试，整个安装过程毫无困难，和其它vpn翻墙软件一样，都会在Windows系统中增加一个名为“TAP-VyprVPN Adapter V9”的虚拟网卡。</p>
+                  <p>打开客户端，界面还是非常美观的，除了链接协议，IP地址等基本信息外，还可以看到图形化的流量监控，点击上方坐标形状的图标可以切换代理服务器，并且可以通过服务器ping值来判断链接速度，也可以直接默认选择速度最快的服务器进行连接。</p>
+                  <p></p>
+                  <div class="media media-element-container media-full">
+                    <div class="ds-1col file file-image file-image-png view-mode-full clearfix">
+<img alt="" class="media-element file-full" height="480" src="https://pao-pao.net/sites/pao-pao.net/files/styles/large/public/3_4.png?itok=3nyRwWh2" title="" typeof="foaf:Image" width="383" />
+                    </div>
+                  </div>
+                  <p>一、PPTP</p>
+                  <p>我们首先点击右上方的齿轮图标进入“设置”页面，然后点击“协议”选项卡，可以看到上面提及的四项链接方式，我们首先测试一下“PPTP”链接方式。（测试环境是中国联通10M光纤）</p>
+                  <p>果不其然，不论我如何切换服务器，PPTP模式都是无法正常链接的，因此，如上述所言，如果你决定付费购买 Vyprvpn服务，强烈建议不要购买“basic”套餐。</p>
+                  <p>二、L2TP/IPsec</p>
+                  <p>接下来我们试一下”L2TP/IPsec”协议的翻墙效果，该协议也正是Astrill被封的主要使用协议，Vyprvpn能否替代Astrill使用也将直接考验它的使用效果。</p>
+                  <p>我们以位于”日本“的服务器作为测试对象，上Youtube上打开一段1080P的视频进行测试，非常流畅，毫无卡顿，在看客户端上的下行速度，基本上保持在10Mbps左右，数据相当华丽了。</p>
+                  <p></p>
+                  <div class="media media-element-container media-full">
+                    <div class="ds-1col file file-image file-image-png view-mode-full clearfix">
+<img alt="" class="media-element file-full" height="480" src="https://pao-pao.net/sites/pao-pao.net/files/styles/large/public/4_3.png?itok=fBdhRBLb" title="" typeof="foaf:Image" width="272" />
+                    </div>
+                  </div>
+                  <p>但值得注意的是，我们在测试链接延迟更小的韩国和泰国服务器的时候，都发生了链接失败的报告。</p>
+                  <p>三、OpenVPN</p>
+                  <p>下面我再来测试一下“OpenVPN“协议的使用效果，很多网友都听说过不加混淆机制的OpenVPN两三年前就遭到GFW局部封杀，以前泡泡曾经介绍过的一款基于OpenVPN技术的 Pritunl 就已经无法使用了（关于Pritunl的介绍可以参见： <a href="https://pao-pao.net/node/213" rel="nofollow"> Pritunl：简易搭建个人VPN </a> ）</p>
+                  <p>我们以一个延迟为86ms的”泰国务器为例进行测试，切换协议后很快就链接成功，然后从Mega网盘上下载一段视频进行测试，速度表现的也很稳定。</p>
+                  <p></p>
+                  <div class="media media-element-container media-full">
+                    <div class="ds-1col file file-image file-image-png view-mode-full clearfix">
+<img alt="" class="media-element file-full" height="297" src="https://pao-pao.net/sites/pao-pao.net/files/styles/large/public/5.png?itok=p4CJX7rX" title="" typeof="foaf:Image" width="480" />
+                    </div>
+                  </div>
+                  <p>注意我这里使用的是OpenVPN 256位加密方式链接，如果用户使用 OpenVPN 160位加密方式连接的情况下，理论上能获得更快的访问速度。</p>
+                  <p>四、Chameleon变色龙</p>
+                  <p>上面介绍的三种常规的VPN协议以外，Vyprvpn还有一个独门绝技 Chameleon 协议链接方式，能够有效的躲避 GFW的屏蔽和封杀，下面我们具体看看使用效果。</p>
+                  <p>Chameleon 技术是 Golden Frog团队在2014年年初推出的一项最新技术，从官方结束文档上来看，Chameleon实际上是一种混淆技术将普通的OpenVPN 协议加密使其无法被 GFW进行DPI(深度嗅探)，它采用不可写的256位协议进行底层加密，同时不影响数据传输安全，使得用户可以轻松的跨越任何阻拦，自由的访问互联网世界，下面我们看看实际使用效果：</p>
+                  <p></p>
+                  <div class="media media-element-container media-full">
+                    <div class="ds-1col file file-image file-image-png view-mode-full clearfix">
+<img alt="" class="media-element file-full" height="177" src="https://pao-pao.net/sites/pao-pao.net/files/styles/large/public/6.png?itok=NblHs08u" title="" typeof="foaf:Image" width="480" />
+                    </div>
+                  </div>
+                  <p>我们还是以刚才测试的”泰国“服务器进行测试，发现通过 Mega 下载的视频速度丝毫不必通过OpenVPN 方式的慢，也取得了不错的下载成绩。</p>
+                  <p></p>
+                  <div class="media media-element-container media-full">
+                    <div class="ds-1col file file-image file-image-png view-mode-full clearfix">
+<img alt="" class="media-element file-full" height="298" src="https://pao-pao.net/sites/pao-pao.net/files/styles/large/public/7.png?itok=3Bu9mLAi" title="" typeof="foaf:Image" width="480" />
+                    </div>
+                  </div>
+                  <p>五、总结</p>
+                  <p>应该说 Vyprvpn 是一款不错的商业翻墙服务，Astrill 具备的功能它都能够胜任，而且比前者做的更好，也符合自己相对较高的售价，除了 PPTP 协议方式以外，其它各种协议方式都能较为轻松的完成翻墙并取得不错的访问体验，更何况还有其独家开发的 Chameleon 技术进一步保障了使用效果，可以作为 Astrill 被封之后不错的替代者供大家使用。­</p>
+                </div>
+              </div>
+            </div>
+            <div class="field field-name-service-links-displays-group field-type-ds field-label-hidden">
+              <div class="field-items">
+                <div class="field-item even">
+                  <div class="service-links">
+<a class="service-links-twitter" href="https://twitter.com/share?url=https%3A//pao-pao.net/article/375&amp;text=VyprVPN%3A%20Astrill%E7%9A%84%E6%9B%BF%E4%BB%A3%E8%80%85" rel="nofollow" title="Share this on Twitter"> <img alt="Twitter logo" src="https://pao-pao.net/sites/pao-pao.net/themes/rnw_paopao/servicelinks/png/twitter.png" typeof="foaf:Image" /> </a> <a class="service-links-facebook" href="https://www.facebook.com/sharer.php?u=https%3A//pao-pao.net/article/375&amp;t=VyprVPN%3A%20Astrill%E7%9A%84%E6%9B%BF%E4%BB%A3%E8%80%85" rel="nofollow" title="Share on Facebook"> <img alt="Facebook logo" src="https://pao-pao.net/sites/pao-pao.net/themes/rnw_paopao/servicelinks/png/facebook.png" typeof="foaf:Image" /> </a> <a class="service-links-google" href="https://www.google.com/bookmarks/mark?op=add&amp;bkmk=https%3A//pao-pao.net/article/375&amp;title=VyprVPN%3A%20Astrill%E7%9A%84%E6%9B%BF%E4%BB%A3%E8%80%85" rel="nofollow" title="Bookmark this post on Google"> <img alt="谷歌 logo" src="https://pao-pao.net/sites/pao-pao.net/themes/rnw_paopao/servicelinks/png/google.png" typeof="foaf:Image" /> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block block-views related" id="block-views-articles-related-block-1">
+            <h2 id="section"> 您可能感兴趣的文章 </h2>
+            <div class="content">
+              <div class="view view-articles-related view-id-articles_related view-display-id-block_1 related promoted view-dom-id-e70e95b7e2c73a7d93d6b912b671b3b6">
+                <div class="view-content">
+                  <div class="views-row views-row-1 views-row-odd views-row-first">
+                    <div class="ds-2col node node-pao-pao-article node-promoted view-mode-home_promoted_block_ clearfix">
+                      <div class="group-left">
+                        <div class="field field-name-field-image field-type-image field-label-hidden">
+                          <div class="field-items">
+                            <div class="field-item even">
+<a href="/article/126"> <img height="90" src="https://pao-pao.net/sites/pao-pao.net/files/styles/home_promoted/public/5086883988_6c8ac8650c_z.jpg?itok=s6DxqMqz" typeof="foaf:Image" width="160" /> </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="group-right">
+                        <div class="field field-name-field-promotitle field-type-text field-label-hidden">
+                          <div class="field-items">
+                            <div class="field-item even">
+                              <h2 id="section-1"> <a href="/article/126"> 另类媒体的生存 </a>                                 <h2 id="section-2"> </h2>
+ </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="views-row views-row-2 views-row-even">
+                    <div class="ds-2col node node-pao-pao-article node-promoted view-mode-home_promoted_block_ clearfix">
+                      <div class="group-left">
+                        <div class="field field-name-field-image field-type-image field-label-hidden">
+                          <div class="field-items">
+                            <div class="field-item even">
+<a href="/article/459"> <img height="90" src="https://pao-pao.net/sites/pao-pao.net/files/styles/home_promoted/public/mu_rong_xue_cun_.jpg?itok=vkHtYBFF" typeof="foaf:Image" width="160" /> </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="group-right">
+                        <div class="field field-name-field-promotitle field-type-text field-label-hidden">
+                          <div class="field-items">
+                            <div class="field-item even">
+                              <h2 id="section-3"> <a href="/article/459"> 慕容雪村：我已习惯与恐惧同睡一张床 </a>                                 <h2 id="section-4"> </h2>
+ </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="views-row views-row-3 views-row-odd">
+                    <div class="ds-2col node node-pao-pao-article node-promoted view-mode-home_promoted_block_ clearfix">
+                      <div class="group-left">
+                        <div class="field field-name-field-image field-type-image field-label-hidden">
+                          <div class="field-items">
+                            <div class="field-item even">
+<a href="/article/240"> <img height="90" src="https://pao-pao.net/sites/pao-pao.net/files/styles/home_promoted/public/reporters_17955543.jpg?itok=gzP99i-N" typeof="foaf:Image" width="160" /> </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="group-right">
+                        <div class="field field-name-field-promotitle field-type-text field-label-hidden">
+                          <div class="field-items">
+                            <div class="field-item even">
+                              <h2 id="section-5"> <a href="/article/240"> 北京雾霾：视而不见的政治景观 </a>                                 <h2 id="section-6"> </h2>
+ </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="views-row views-row-4 views-row-even views-row-last">
+                    <div class="ds-2col node node-pao-pao-article node-promoted node-sticky view-mode-home_promoted_block_ clearfix">
+                      <div class="group-left">
+                        <div class="field field-name-field-image field-type-image field-label-hidden">
+                          <div class="field-items">
+                            <div class="field-item even">
+<a href="/article/768"> <img height="90" src="https://pao-pao.net/sites/pao-pao.net/files/styles/home_promoted/public/tou__17.jpg?itok=jmXrUnS_" typeof="foaf:Image" width="160" /> </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="group-right">
+                        <div class="field field-name-field-promotitle field-type-text field-label-hidden">
+                          <div class="field-items">
+                            <div class="field-item even">
+                              <h2 id="section-7"> <a href="/article/768"> 在中国：火爆的信息倒卖市场和概念错位 </a>                                 <h2 id="section-8"> </h2>
+ </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.block -->
+          <ul class="links inline">
+            <li class="comment-add first last active"><a class="active" href="/article/375#comment-form" title="分享您有关本文的看法与观点。"> 冒个泡吧！ </a></li>
+          </ul>
+          <div class="comment-wrapper" id="comments">
+            <h2 class="title" id="section-9"> 评论 </h2>
+ <a id="comment-10548">
+      </a>             <div about="/comment/10548#comment-10548" class="comment comment-by-anonymous clearfix" typeof="sioc:Post sioct:Comment">
+              <div class="attribution">
+                <div class="comment-submitted">
+                  <p class="commenter-name"><span rel="sioc:has_creator"> <span class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" xml:lang=""> Anonymous (未验证) </span> </span></p>
+                  <p class="comment-time"><span content="2019-04-24T22:34:40+02:00" datatype="xsd:dateTime" property="dc:date dc:created"> 星期三, 04/24/2019 - 22:34 </span></p>
+                  <p class="comment-permalink"><a class="permalink" href="/comment/10548#comment-10548" rel="bookmark"> 永久连接 </a></p>
+                </div>
+              </div>
+              <div class="comment-text">
+                <div class="comment-arrow"></div>
+                <h3 datatype="" property="dc:title" id="vyprvpn-astrill--page-12----"> <a class="permalink" href="/comment/10548#comment-10548" rel="bookmark"> VyprVPN: Astrill的替代者 | Page 12 | 泡泡 </a> </h3>
+                <div class="content">
+<span class="rdf-meta element-hidden" rel="sioc:reply_of" resource="/article/375"> </span>                   <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+                    <div class="field-items">
+                      <div class="field-item even" property="content:encoded">
+                        <p>Could you inform me what style are you using <br /> on your web site? It looks good.</p>
+                        <p>my blog :: &lt;a href=" <a href="http://tunklitankli.com/&quot;&gt;Brigida&lt;/a&gt;"> http://tunklitankli.com/"&gt;Brigida&lt;/a&gt; </a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.content -->
+                <ul class="links inline">
+                  <li class="comment-reply first last"><a href="/comment/reply/375/10548"> 回复 </a></li>
+                </ul>
+              </div>
+              <!-- /.comment-text -->
+            </div>
+ <a id="comment-12486">
+      </a>             <div about="/comment/12486#comment-12486" class="comment comment-by-anonymous clearfix" typeof="sioc:Post sioct:Comment">
+              <div class="attribution">
+                <div class="comment-submitted">
+                  <p class="commenter-name"><span rel="sioc:has_creator"> <span class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" xml:lang=""> StevElug (未验证) </span> </span></p>
+                  <p class="comment-time"><span content="2019-05-30T19:58:17+02:00" datatype="xsd:dateTime" property="dc:date dc:created"> 星期四, 05/30/2019 - 19:58 </span></p>
+                  <p class="comment-permalink"><a class="permalink" href="/comment/12486#comment-12486" rel="bookmark"> 永久连接 </a></p>
+                </div>
+              </div>
+              <div class="comment-text">
+                <div class="comment-arrow"></div>
+                <h3 datatype="" property="dc:title" id="cialis-5-mg-precio-espana-stevprople--"> <a class="permalink" href="/comment/12486#comment-12486" rel="bookmark"> Cialis 5 Mg Precio Espana Stevprople </a> </h3>
+                <div class="content">
+<span class="rdf-meta element-hidden" rel="sioc:reply_of" resource="/article/375"> </span>                   <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+                    <div class="field-items">
+                      <div class="field-item even" property="content:encoded">
+                        <p>Tarif Cialis 20mg Suche Viagra Kaufen Levrita Gelly Farmacy On Line &lt;a href= <a href="http://bmpha.com&gt;levitra"> http://bmpha.com&gt;levitra </a> utilisation&lt;/a&gt; Buy Std Medication Online Canada First Medicine Online Viagra Doxycycline Hyclate 100mg</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.content -->
+                <ul class="links inline">
+                  <li class="comment-reply first last"><a href="/comment/reply/375/12486"> 回复 </a></li>
+                </ul>
+              </div>
+              <!-- /.comment-text -->
+            </div>
+ <a id="comment-14520">
+      </a>             <div about="/comment/14520#comment-14520" class="comment comment-by-anonymous clearfix" typeof="sioc:Post sioct:Comment">
+              <div class="attribution">
+                <div class="comment-submitted">
+                  <p class="commenter-name"><span rel="sioc:has_creator"> <span class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" xml:lang=""> Matnetela (未验证) </span> </span></p>
+                  <p class="comment-time"><span content="2019-05-31T19:01:37+02:00" datatype="xsd:dateTime" property="dc:date dc:created"> 星期五, 05/31/2019 - 19:01 </span></p>
+                  <p class="comment-permalink"><a class="permalink" href="/comment/14520#comment-14520" rel="bookmark"> 永久连接 </a></p>
+                </div>
+              </div>
+              <div class="comment-text">
+                <div class="comment-arrow"></div>
+                <h3 datatype="" property="dc:title" id="viagra-salud-valium-matnetela--"> <a class="permalink" href="/comment/14520#comment-14520" rel="bookmark"> Viagra Salud Valium Matnetela </a> </h3>
+                <div class="content">
+<span class="rdf-meta element-hidden" rel="sioc:reply_of" resource="/article/375"> </span>                   <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+                    <div class="field-items">
+                      <div class="field-item even" property="content:encoded">
+                        <p>Amoxicillin Long Term Use For Kidneys Doryx Best Website Online Rx &lt;a href= <a href="http://cialisong.com&gt;cialis"> http://cialisong.com&gt;cialis </a> 5mg best price&lt;/a&gt; Pharmay Cheapest</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.content -->
+                <ul class="links inline">
+                  <li class="comment-reply first last"><a href="/comment/reply/375/14520"> 回复 </a></li>
+                </ul>
+              </div>
+              <!-- /.comment-text -->
+            </div>
+ <a id="comment-18530">
+      </a>             <div about="/comment/18530#comment-18530" class="comment comment-by-anonymous clearfix" typeof="sioc:Post sioct:Comment">
+              <div class="attribution">
+                <div class="comment-submitted">
+                  <p class="commenter-name"><span rel="sioc:has_creator"> <span class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" xml:lang=""> Franexpok (未验证) </span> </span></p>
+                  <p class="comment-time"><span content="2019-06-02T04:35:35+02:00" datatype="xsd:dateTime" property="dc:date dc:created"> 星期日, 06/02/2019 - 04:35 </span></p>
+                  <p class="comment-permalink"><a class="permalink" href="/comment/18530#comment-18530" rel="bookmark"> 永久连接 </a></p>
+                </div>
+              </div>
+              <div class="comment-text">
+                <div class="comment-arrow"></div>
+                <h3 datatype="" property="dc:title" id="cialis-viagra-toscana-matsculky--"> <a class="permalink" href="/comment/18530#comment-18530" rel="bookmark"> Cialis Viagra Toscana Matsculky </a> </h3>
+                <div class="content">
+<span class="rdf-meta element-hidden" rel="sioc:reply_of" resource="/article/375"> </span>                   <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+                    <div class="field-items">
+                      <div class="field-item even" property="content:encoded">
+                        <p>Buy Ocuvir Cream Cialis Free 30 Day Trial &lt;a href= <a href="http://cialtadalaff.com&gt;cialis"> http://cialtadalaff.com&gt;cialis </a> 40 mg&lt;/a&gt; Medrol 4 Kopen Order Tadalis Sx Soft Amoxicillin Dosage For Pneumonia</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.content -->
+                <ul class="links inline">
+                  <li class="comment-reply first last"><a href="/comment/reply/375/18530"> 回复 </a></li>
+                </ul>
+              </div>
+              <!-- /.comment-text -->
+            </div>
+ <a id="comment-20381">
+      </a>             <div about="/comment/20381#comment-20381" class="comment comment-by-anonymous clearfix" typeof="sioc:Post sioct:Comment">
+              <div class="attribution">
+                <div class="comment-submitted">
+                  <p class="commenter-name"><span rel="sioc:has_creator"> <span class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" xml:lang=""> Ellincuse (未验证) </span> </span></p>
+                  <p class="comment-time"><span content="2019-06-03T00:47:08+02:00" datatype="xsd:dateTime" property="dc:date dc:created"> 星期一, 06/03/2019 - 00:47 </span></p>
+                  <p class="comment-permalink"><a class="permalink" href="/comment/20381#comment-20381" rel="bookmark"> 永久连接 </a></p>
+                </div>
+              </div>
+              <div class="comment-text">
+                <div class="comment-arrow"></div>
+                <h3 datatype="" property="dc:title" id="buy-viagra-super-active-online-ellnoug--"> <a class="permalink" href="/comment/20381#comment-20381" rel="bookmark"> Buy Viagra Super Active Online Ellnoug </a> </h3>
+                <div class="content">
+<span class="rdf-meta element-hidden" rel="sioc:reply_of" resource="/article/375"> </span>                   <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+                    <div class="field-items">
+                      <div class="field-item even" property="content:encoded">
+                        <p>Order On Line Levitra &lt;a href= <a href="http://buylevi.com&gt;cheapest"> http://buylevi.com&gt;cheapest </a> levitra 20mg&lt;/a&gt; Generic Stendra In Canada Free Shipping Overseas Levitra Generico Vardenafil</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.content -->
+                <ul class="links inline">
+                  <li class="comment-reply first last"><a href="/comment/reply/375/20381"> 回复 </a></li>
+                </ul>
+              </div>
+              <!-- /.comment-text -->
+            </div>
+ <a id="comment-21832">
+      </a>             <div about="/comment/21832#comment-21832" class="comment comment-by-anonymous clearfix" typeof="sioc:Post sioct:Comment">
+              <div class="attribution">
+                <div class="comment-submitted">
+                  <p class="commenter-name"><span rel="sioc:has_creator"> <span class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" xml:lang=""> Ellincuse (未验证) </span> </span></p>
+                  <p class="comment-time"><span content="2019-06-03T16:08:34+02:00" datatype="xsd:dateTime" property="dc:date dc:created"> 星期一, 06/03/2019 - 16:08 </span></p>
+                  <p class="comment-permalink"><a class="permalink" href="/comment/21832#comment-21832" rel="bookmark"> 永久连接 </a></p>
+                </div>
+              </div>
+              <div class="comment-text">
+                <div class="comment-arrow"></div>
+                <h3 datatype="" property="dc:title" id="vendita-viagra-spedizione-veloce-ellnoug--"> <a class="permalink" href="/comment/21832#comment-21832" rel="bookmark"> Vendita Viagra Spedizione Veloce Ellnoug </a> </h3>
+                <div class="content">
+<span class="rdf-meta element-hidden" rel="sioc:reply_of" resource="/article/375"> </span>                   <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+                    <div class="field-items">
+                      <div class="field-item even" property="content:encoded">
+                        <p>Veterinary Cephalexin Super P Force Us Levitra Ritarda L'Eiaculazione &lt;a href= <a href="http://buycheapcial.com&gt;cialis"> http://buycheapcial.com&gt;cialis </a> 5mg best price&lt;/a&gt; Cialis Dosaggio Consigliato Where Can I Buy Lasix Without A Prescription Effets Secondaires Cytotec</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.content -->
+                <ul class="links inline">
+                  <li class="comment-reply first last"><a href="/comment/reply/375/21832"> 回复 </a></li>
+                </ul>
+              </div>
+              <!-- /.comment-text -->
+            </div>
+ <a id="comment-23334">
+      </a>             <div about="/comment/23334#comment-23334" class="comment comment-by-anonymous clearfix" typeof="sioc:Post sioct:Comment">
+              <div class="attribution">
+                <div class="comment-submitted">
+                  <p class="commenter-name"><span rel="sioc:has_creator"> <span class="username" datatype="" property="foaf:name" typeof="sioc:UserAccount" xml:lang=""> Franexpok (未验证) </span> </span></p>
+                  <p class="comment-time"><span content="2019-06-04T07:52:57+02:00" datatype="xsd:dateTime" property="dc:date dc:created"> 星期二, 06/04/2019 - 07:52 </span></p>
+                  <p class="comment-permalink"><a class="permalink" href="/comment/23334#comment-23334" rel="bookmark"> 永久连接 </a></p>
+                </div>
+              </div>
+              <div class="comment-text">
+                <div class="comment-arrow"></div>
+                <h3 datatype="" property="dc:title" id="zithromax-uk-buy-matsculky--"> <a class="permalink" href="/comment/23334#comment-23334" rel="bookmark"> Zithromax Uk Buy Matsculky </a> </h3>
+                <div class="content">
+<span class="rdf-meta element-hidden" rel="sioc:reply_of" resource="/article/375"> </span>                   <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+                    <div class="field-items">
+                      <div class="field-item even" property="content:encoded">
+                        <p>Acheter Levitra En Fr &lt;a href= <a href="http://sildenafbuy.com&gt;viagra"> http://sildenafbuy.com&gt;viagra </a> prescription&lt;/a&gt; Cephalexin Lyme Medscom Bewertung</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.content -->
+                <ul class="links inline">
+                  <li class="comment-reply first last"><a href="/comment/reply/375/23334"> 回复 </a></li>
+                </ul>
+              </div>
+              <!-- /.comment-text -->
+            </div>
+            <h2 class="title comment-form" id="section-10"> 冒个泡吧！ </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.block -->
+  </div>
+  <!-- /.region -->
+</section>
+
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#泡泡 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2018-05-30/%E4%BA%92%E8%81%94%E7%BD%91%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A2018-%E4%BE%9D%E6%97%A7%E5%91%88%E7%8E%B0%E4%B8%8D%E8%89%AF%E8%B6%8B%E5%8A%BF-%E8%BF%99%E9%87%8C%E6%98%AF%E5%85%B7%E4%BD%93%E5%88%86%E6%9E%90/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-02-04/%E6%B0%91%E6%97%8F%E7%9F%9B%E7%9B%BE%E5%BA%94%E7%94%B1%E5%81%9C%E6%AD%A2%E4%BF%A1%E6%81%AF%E9%9A%94%E7%A6%BB%E5%BC%80%E5%A7%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2015-03-05</time>
+        <a href="https://nodebe4.github.io/oped2/2015-03-05/Wi-Fi%E4%B8%87%E8%83%BD%E9%92%A5%E5%8C%99-%E8%AF%B4%E6%98%AF%E7%A0%B4%E8%A7%A3-%E5%85%B6%E5%AE%9E%E6%9C%89%E5%8D%B1%E9%99%A9/">
+          Wi-Fi万能钥匙：说是破解，其实有危险
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2015-03-04</time>
+        <a href="https://nodebe4.github.io/oped2/2015-03-04/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83-%E8%AF%B7%E7%95%99%E5%9C%A8%E6%AC%A7%E6%B4%B2/">
+          “被遗忘权”请留在欧洲
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2015-02-26</time>
+        <a href="https://nodebe4.github.io/oped2/2015-02-26/%E5%A5%B3%E6%9D%83%E4%B9%8B%E5%A3%B0%E6%98%A5%E6%99%9A-%E6%9F%A5%E6%AF%92-%E8%A2%AB%E7%BD%91%E7%BB%9C%E5%99%A4%E5%A3%B0/">
+          女权之声春晚“查毒”被网络噤声
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2015-02-25</time>
+        <a href="https://nodebe4.github.io/oped2/2015-02-25/%E7%BD%91%E7%BB%9C%E5%AE%A1%E6%9F%A5%E6%8B%96%E4%BA%86%E7%BB%8F%E6%B5%8E%E5%90%8E%E8%85%BF-%E7%BD%91%E7%BB%9C%E7%AE%A1%E5%88%B6%E7%9A%84%E5%8E%9F%E7%94%9F%E5%92%8C%E6%AC%A1%E7%94%9F%E5%8D%B1%E5%AE%B3-%E4%B8%89/">
+          网络审查拖了经济后腿：网络管制的原生和次生危害 （三）
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2015-02-26/%E5%A5%B3%E6%9D%83%E4%B9%8B%E5%A3%B0%E6%98%A5%E6%99%9A-%E6%9F%A5%E6%AF%92-%E8%A2%AB%E7%BD%91%E7%BB%9C%E5%99%A4%E5%A3%B0/">
+            前一篇：女权之声春晚“查毒”被网络噤声
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2015-03-04/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83-%E8%AF%B7%E7%95%99%E5%9C%A8%E6%AC%A7%E6%B4%B2/">
+            後一篇：“被遗忘权”请留在欧洲
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2015-02-26/%E5%A5%B3%E6%9D%83%E4%B9%8B%E5%A3%B0%E6%98%A5%E6%99%9A-%E6%9F%A5%E6%AF%92-%E8%A2%AB%E7%BD%91%E7%BB%9C%E5%99%A4%E5%A3%B0/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2015-03-04/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83-%E8%AF%B7%E7%95%99%E5%9C%A8%E6%AC%A7%E6%B4%B2/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2015-03-04/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83-%E8%AF%B7%E7%95%99%E5%9C%A8%E6%AC%A7%E6%B4%B2/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2015-02-26/%E5%A5%B3%E6%9D%83%E4%B9%8B%E5%A3%B0%E6%98%A5%E6%99%9A-%E6%9F%A5%E6%AF%92-%E8%A2%AB%E7%BD%91%E7%BB%9C%E5%99%A4%E5%A3%B0/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2015-02-26/%E5%A5%B3%E6%9D%83%E4%B9%8B%E5%A3%B0%E6%98%A5%E6%99%9A-%E6%9F%A5%E6%AF%92-%E8%A2%AB%E7%BD%91%E7%BB%9C%E5%99%A4%E5%A3%B0/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2015-03-04/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83-%E8%AF%B7%E7%95%99%E5%9C%A8%E6%AC%A7%E6%B4%B2/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<泡泡>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2015-03-04/%E8%A2%AB%E9%81%97%E5%BF%98%E6%9D%83-%E8%AF%B7%E7%95%99%E5%9C%A8%E6%AC%A7%E6%B4%B2/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<泡泡>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2015-02-26/%E5%A5%B3%E6%9D%83%E4%B9%8B%E5%A3%B0%E6%98%A5%E6%99%9A-%E6%9F%A5%E6%AF%92-%E8%A2%AB%E7%BD%91%E7%BB%9C%E5%99%A4%E5%A3%B0/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
