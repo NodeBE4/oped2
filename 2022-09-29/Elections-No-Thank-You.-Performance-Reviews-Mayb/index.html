@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Elections? No Thank You. Performance Reviews? Maybe. – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Elections? No Thank You. Performance Reviews? Maybe.
+——
+" />
+    <meta property="og:description" content="
+Elections? No Thank You. Performance Reviews? Maybe.
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Elections? No Thank You. Performance Reviews? Maybe." />
+    <meta property="twitter:title" content="Elections? No Thank You. Performance Reviews? Maybe." />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Ffeatures%2Felections-no-thank-you-performance-reviews-maybe" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/features/elections-no-thank-you-performance-reviews-maybe" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/features/elections-no-thank-you-performance-reviews-maybe&text=Elections? No Thank You. Performance Reviews? Maybe.&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/features/elections-no-thank-you-performance-reviews-maybe&title=Elections? No Thank You. Performance Reviews? Maybe." class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/features/elections-no-thank-you-performance-reviews-maybe&title=Elections? No Thank You. Performance Reviews? Maybe." class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Elections? No Thank You. Performance Reviews? Maybe.&body=
+Elections? No Thank You. Performance Reviews? Maybe.
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/features/elections-no-thank-you-performance-reviews-maybe" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/features/elections-no-thank-you-performance-reviews-maybe&title=Elections? No Thank You. Performance Reviews? Maybe.&caption=
+Elections? No Thank You. Performance Reviews? Maybe.
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Elections? No Thank You. Performance Reviews? Maybe.&url=https://www.chinafile.com/reporting-opinion/features/elections-no-thank-you-performance-reviews-maybe" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Elections? No Thank You. Performance Reviews? Maybe.</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-09-29
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Jessica Batke</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/features/elections-no-thank-you-performance-reviews-maybe" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1664461920000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/features/elections-no-thank-you-performance-reviews-maybe">Elections? No Thank You. Performance Reviews? Maybe.</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-9583a10942fd10e557d9bb1d5108ccc0">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54291_sm.jpg" title="Elections? No Thank You. Performance Reviews? Maybe." class="colorbox" data-colorbox-gallery="gallery-node-54291-HLerGkAM6Oo" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54291_sm.jpg?itok=rX73EMrF" width="1500" height="998" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Nicolas Asfouri—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>People walk through Tiananmen Square in Beijing, September 28, 2017.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">In 2018, a local government office in the southwestern Chinese city of Chongqing set out to gauge the local population’s satisfaction with their place of residence. Chongqing’s Yongchuan District Statistics Bureau would field what it termed a “<a href="https://www.chinafile.com/node/54286" target="_blank">social conditions public opinion survey</a>,” with questions tailored to both the district’s urban and rural residents.</p>
+      <p>From the city-dwellers, the survey would solicit thoughts on the area’s environmental situation.</p>
+      <p>Question one: “How clean is the city or town you live in?”</p>
+      <p>Question five: “How good is the air quality in the place where you live?”</p>
+      <p>Rural residents would be asked to opine on their access to water and the condition of public roads.</p>
+      <p>Queries put to both groups, “Do you think your local cadres are still living extravagant lifestyles?” and “Do you think the cadres around you have handled their work according to the law?” prompted them to question what, in China, is often treated as unquestionable.</p>
+      <p>In recent years, both Chinese state and Communist Party (CCP) organizations have fielded thousands such public opinion polls, on subjects ranging from hospital services, to rural revitalization, to food safety. Yet, much of the information gleaned from these surveys remains inaccessible to anyone else. And, since the mid-2010s, non-governmental entities, particularly foreign ones, have found it increasingly difficult to conduct their own surveys in China. Several new regulatory measures, as well as a tightening political environment, make it harder than ever for foreign universities and researchers to field randomized, representative public opinion surveys. Though researchers <a href="https://www.researchgate.net/publication/357896878_Chinese_Public_Opinion_about_US-China_Relations_from_Trump_to_Biden" target="_blank">do conduct</a> online, opt-in polls, this method <a href="https://www.pewresearch.org/methods/2018/08/06/video-explainer-what-are-nonprobability-surveys/" target="_blank">reduces</a> their ability to create representative samples and therefore to accurately reflect public opinion across China more broadly.</p>
+      <p>Domestic institutions such as universities also face hurdles when polling the public. They must keep their survey questions politically kosher, and they have less and less ability to work with counterparts abroad. Though pollsters both foreign and domestic have long had to <a href="https://www.economist.com/china/2020/10/22/apparatchiks-and-academics-alike-struggle-to-take-chinas-pulse" target="_blank">avoid</a> questions China’s leaders deem “sensitive,” the current situation often prevents them from asking any questions at all.</p>
+      <p>In this way, China’s state-sponsored public opinion polls typify General Secretary Xi Jinping’s model of governance, in which Beijing exercises ever-greater levels of control over the production and dissemination of knowledge. From <a href="https://www.aljazeera.com/news/2022/1/31/china-media-freedom" target="_blank">curbs</a> on foreign press, to <a href="https://www.scmp.com/tech/policy/article/3182204/china-tighten-grip-social-media-comments-requiring-sites-employ" target="_blank">tightening controls</a> over social media, to laws that <a href="https://apnews.com/article/technology-business-china-data-privacy-1d3fcbac4549c6968c07897900c96cc3" target="_blank">limit</a> all but the Party-state’s access to citizen data, Xi’s administration clearly takes seriously the notion that “<a href="https://web.archive.org/web/20220921181336/http://www.scio.gov.cn/zhzc/8/5/Document/1431758/1431758.htm" target="_blank">whoever controls information and the network owns the whole world</a>.” Beijing has always restricted information flows, but previously common exchanges between scholars, citizens, journalists, and pollsters have dwindled in recent years. The outside world has less and less insight into the views of average Chinese people—a population that makes up one fifth of humanity. The Chinese government, on the other hand, works to stay well-informed of the public’s thoughts.</p>
+      <p>Media reporting in recent decades has <a href="https://www.wsj.com/articles/SB116277606902914084" target="_blank">noted</a> the government’s <a href="https://www.washingtonpost.com/world/in-china-government-mines-public-opinion/2013/08/02/33358026-f2b5-11e2-ae43-b31dc363c3bf_story.html" target="_blank">interest</a> in polling its citizens, but details about those polls are often <a href="https://www.economist.com/china/2015/04/11/the-critical-masses" target="_blank">sparse</a>. While some offices release the results of their surveys—like those from a <a href="https://archive.ph/3EwAC" target="_blank">2020 citizen satisfaction poll</a> conducted by the Gansu Justice Department—many more are never made public. As the Beijing Municipal Statistics Bureau noted in a <a href="https://archive.ph/FUvaH" target="_blank">description</a> of its 2021 “Beijing Smart City and Digital Life Public Opinion Survey,” “survey data is for internal use and for statistical purposes only, and is not for public release.”</p>
+      <p></p>
+      <div class="pullquote">
+China’s unelected leaders seek performance reviews from their fellow citizens—whether or not those reviews are heeded.         <div class="pullquote-share">
+<span class="st_facebook_large" st_title="China’s unelected leaders seek performance reviews from their fellow citizens—whether or not those reviews are heeded." displaytext="Facebook"></span><span class="st_twitter_large" st_title="China’s unelected leaders seek performance reviews from their fellow citizens—whether or not those reviews are heeded." st_via="chinafile" displaytext="Tweet"></span><span class="st_email_large" st_title="China’s unelected leaders seek performance reviews from their fellow citizens—whether or not those reviews are heeded." displaytext="Email"></span>
+        </div>
+      </div>
+      <p></p>
+      <p>Now, a collection of Chinese government procurement notices, posted to the <a href="http://www.ccgp.gov.cn/" target="_blank">Chinese Government Procurement Network</a> website between 2016 and early 2022, offers a more detailed look at the public opinion polls central and local government offices around China are commissioning. A review of some 1,400 of these notices highlights Beijing’s preoccupation with popular threats to the Party’s rule. The poll topics, and the individual poll questions included in a handful of notices, show how China’s unelected leaders seek performance reviews from their fellow citizens—whether or not those reviews are heeded.</p>
+      <p>A wide range of Party and state entities commission public opinion polls. The Ministry of Public Security (MPS), for example, contracted out an anti-drug survey in late 2021. More than 200,000 residents throughout the country <a href="https://archive.ph/qMhQK" target="_blank">received</a> a telephone call asking them what they thought about their government’s anti-drug efforts. Based on the procurement notice they issued, the MPS had pollsters pose the following questions:</p>
+      <p>“Overall, are you satisfied with the anti-drug work your local authorities are carrying out?”</p>
+      <p>“If you discover illegal or criminal drug-related behaviors, would you report them to public security authorities?”</p>
+      <p>“Which of the following statements about drug use do you agree with?</p>
+      <ol>
+        <li>Using drugs is illegal in our country</li>
+        <li>Drug users are victims</li>
+        <li>Using drugs harms one’s health</li>
+        <li>Just trying a drug doesn’t mean one will become addicted to it</li>
+        <li>New types of drugs are confusing, and it’s hard to tell them apart.”</li>
+      </ol>
+      <p></p>
+      <p>In recent years, central and local offices representing justice, cultural, health, market regulation, science, education, and propaganda interests, among many others, have sought contractors to run their polls.</p>
+      <p>Throughout the country, the “masses’ sense of security” appears to be a perennial concern of local public security bureaus as well as their Party overseers, Politics and Law Commissions. Some version of a “sense of security” poll, sometimes combined with related topics such as “satisfaction with law and order” or “<a href="https://www.chinalawtranslate.com/criminal-procedure-2/%E6%89%AB%E9%BB%91%E9%99%A4%E6%81%B6%E4%B8%93%E9%A1%B9%E6%96%97%E4%BA%89/" target="_blank">clearing out the underworld</a>,” appear repeatedly in procurement notices from the last decade. It is no surprise that the CCP would be sensitive to whether or not citizens feel safe; the Party’s ability to provide a minimum level of economic and physical security forms the bedrock of its legitimacy. These polls can extend beyond simple measures of safety, however, to include evaluations of policing and criminal justice generally. In a 2014 “whole-province survey on the masses’ sense of security and degree of satisfaction with politics and law work,” the Guangdong Province Politics and Law Commission wanted respondents to rate the work of public security, the procuratorate, and the courts on a scale of one (“unsatisfied”) to five (“satisfied”).</p>
+      <p>“They’re collecting data from civilians and treating them more like citizens,” says Suzanne Scoggins, an associate professor at Clark University who researches policing and state legitimacy in reform-era China. “And they do care what people think. It’s about prevention and control, before they actually have to deploy law enforcement.”</p>
+      <p>A review of the topics and questions from public opinion surveys, as revealed in procurement notices, shows authorities trying to gauge popular sentiment as well as evaluate the effectiveness of certain policies or bureaucracies. Early this year, the Daxing district propaganda bureau in Beijing hoped to field a household survey to assess its efforts to “create a civilized urban area.” In 2021, Sichuan province’s Mianyang city wanted to know what residents, including both rights holders and the general public, thought about how it regulated intellectual property (“How transparent do you think our city’s intellectual property protection administrative enforcement and criminal justice is?” “How do you think our city’s intellectual property protection management services are compared to last year?”). Also in 2021, the Municipal Education Commission of Shanghai sought to survey recent college graduates about their job satisfaction, to feed into its higher education classification and evaluation index.</p>
+      <p>Though poll questions may have become more specialized over time, China’s leaders have shown a general interest in public opinion polling for more than four decades. In the 1980s, Beijing was particularly concerned about citizens’ thoughts on social and economic reforms. Indeed, pollster Yang Guansan, working for a government-affiliated think tank, <a href="https://web.archive.org/web/20200130075512/https://d-scholarship.pitt.edu/7571/1/Ren042009.pdf" target="_blank">warned</a> leaders in an internal report published just before the Tiananmen Square tragedy in 1989 that the public discontent revealed in his surveys presaged social turmoil. Old political habits die hard: the government would <a href="https://www.economist.com/china/2020/10/22/apparatchiks-and-academics-alike-struggle-to-take-chinas-pulse" target="_blank">later jail</a> Yang for allegedly inciting the protests.</p>
+      <p>But Tiananman proved only a speed bump in the development of public opinion surveys in China. By the mid-1990s, all manner of institutions <a href="https://web.archive.org/web/20200130075512/https://d-scholarship.pitt.edu/7571/1/Ren042009.pdf" target="_blank">were conducting polls</a>—even as those polls avoided politically risky topics—including commercial firms and academic institutions, as well as government and government-affiliated offices. Since 2004, the National Bureau of Statistics and its local-level equivalents have <a href="https://web.archive.org/web/20220322204801/http://www.stats.gov.cn/tjgz/tjdt/200906/t20090624_17129.html" target="_blank">regularly conducted</a> public opinion surveys; by 2009, 25 provinces had established their own “Social Conditions Public Opinion Survey Centers,” asking the same types of questions that the Chongqing government put to its residents in 2018. Indeed, in the late aughts, government officials <a href="https://archive.ph/yXrYN" target="_blank">suggested</a> that such surveys would help guide policymaking, and at least a <a href="https://archive.ph/IUuD7" target="_blank">few</a> localities <a href="https://archive.ph/HnGVM" target="_blank">incorporated</a> public opinion polling results into their cadre evaluation systems. More recently, in January 2022, the national Statistics Bureau <a href="https://web.archive.org/web/20220506194355/http://www.stats.gov.cn/tjfw/dftjxmgl/dfspgg/202202/t20220209_1827282.html" target="_blank">approved</a> the establishment of “ecology and environment mass satisfaction survey systems” in Hainan, Yunnan, Hebei, and Jiangxi provinces, hinting at the ways in which local governments are regularizing the use of specific, topical surveys.</p>
+      <p>And yet, despite the proliferation of both public and private polling services, the space to conduct independent polls has narrowed. Foreign researchers who had previously worked with domestic Chinese partners, including both universities and private companies, to conduct public opinion polls in the mainland have found it increasingly difficult in the last five years.</p>
+      <p>“The idea that you can buy a service and write a check for a company to ask questions that are not purely about toothpaste and soap? That is not happening anymore,” says Pierre Landry, an expert on Chinese politics and survey research at the Chinese University of Hong Kong. George Washington University’s Bruce Dickson, who researches popular support for the Chinese government, agrees. “Post-Xi, everything became more difficult with field research.”</p>
+      <p>2021’s <a href="https://digichina.stanford.edu/work/translation-data-security-law-of-the-peoples-republic-of-china/" target="_blank">Data Security Law</a>, which restricts where data collected from Chinese citizens can be stored, as well as enhanced oversight of financial transfers, implemented after <a href="https://www.aljazeera.com/economy/2016/1/27/analysis-behind-the-global-stock-market-plunge-of-2016" target="_blank">domestic stock market turbulence in 2015 and 2016</a>, have both affected foreign researchers’ ability to field public opinion surveys or access the results, say scholars and experts who have worked in the field. <a href="https://archive.ph/d4L8J" target="_blank">2017 regulations</a> for implementing the national Statistics Law also include specific provisions for any foreign entities seeking to “carry out any statistical survey within the territory of the People’s Republic of China.” Even domestic pollsters, who have a relatively freer hand, must still coordinate with authorities to ensure they stay within ever-changing political redlines.</p>
+      <p>Despite the state’s monopoly on politically-charged survey questions, commercial Chinese firms are intimately involved in government public opinion polling. Government offices award a fair number of polling contracts to state-run statistics bureaus, but corporate firms also survey citizens on behalf of local authorities. For its 2018 “social conditions public opinion survey,” the Yongchuan District Statistics Bureau awarded the bid to the local company Listen (Chongqing) Marketing Research. Dataway Horizon, a firm <a href="https://www.washingtonpost.com/world/in-china-government-mines-public-opinion/2013/08/02/33358026-f2b5-11e2-ae43-b31dc363c3bf_story.html" target="_blank">well-known</a> under its previous moniker of Horizon Research Consultancy Group as a <a href="https://www.economist.com/china/2015/04/11/the-critical-masses" target="_blank">key partner</a> for both <a href="https://www.academia.edu/35999302/Characteristics_Problems_and_Suggestions_of_Using_Public_Opinion_Survey_in_Local_Governments" target="_blank">Chinese government clients</a> as well as <a href="https://www.pewresearch.org/global/2012/10/16/survey-methods-42/" target="_blank">foreign</a> <a href="https://www.thechicagocouncil.org/about-us/press-room/survey-americans-japanese-koreans-favor-strong-relationships-chinese-wary-us" target="_blank">researchers</a>, has won hundreds of government survey tenders in the last five years.</p>
+      <p></p>
+      <div class="pullquote">
+“The idea that you can buy a service and write a check for a company to ask questions that are not purely about toothpaste and soap? That is not happening anymore.”         <div class="pullquote-share">
+<span class="st_facebook_large" st_title="“The idea that you can buy a service and write a check for a company to ask questions that are not purely about toothpaste and soap? That is not happening anymore.”" displaytext="Facebook"></span><span class="st_twitter_large" st_title="“The idea that you can buy a service and write a check for a company to ask questions that are not purely about toothpaste and soap? That is not happening anymore.”" st_via="chinafile" displaytext="Tweet"></span><span class="st_email_large" st_title="“The idea that you can buy a service and write a check for a company to ask questions that are not purely about toothpaste and soap? That is not happening anymore.”" displaytext="Email"></span>
+        </div>
+      </div>
+      <p></p>
+      <p>Though they offer a window into the Party-state’s governance concerns, procurement notices cannot reveal how public opinion polling results are actually deployed in internal policy debates, leadership decision-making, or the promotion of local officials. The hopeful rhetoric in the late 2000s, that suggested such polling results would be rigorously incorporated into local governance processes, has not materialized into concrete standards 15 years on. Reviewing 99 local government public opinion surveys conducted between 2011 and 2014, a researcher at the Tianjin Academy of Social Sciences <a href="https://www.academia.edu/35999302/Characteristics_Problems_and_Suggestions_of_Using_Public_Opinion_Survey_in_Local_Governments" target="_blank">found</a> that the vast majority of surveys asking about specific policies had actually been fielded after the relevant policies had already been formulated or implemented. The “<a href="https://archive.ph/PMQxg" target="_blank">Regulations on the Assessment of Leading Cadres in the Party and Government</a>,” issued by the CCP’s General Office in 2019, say only that cadre assessments should not “simply be determined by regional GDP or growth rankings, or by scores from democratic evaluations or opinion polls.” But the regulations do not say how public opinion polls could or should be used instead. The CCP Organization Department’s 2020 “<a href="https://archive.ph/w852f" target="_blank">Notice on Improving Performance Appraisals to Promote High-Quality Development</a>” does say that cadre evaluations should “make good use of ‘positive and negative reviews’ of government services, the public ecology and environment satisfaction survey, and the basic public services satisfaction survey”; it does not specify what “good use” entails or how many points a cadre might be docked if the public expressed dissatisfaction on these surveys.</p>
+      <p>In some ways, this is not surprising. Authoritarian governments have an inherent disincentive to codify public opinion as a mechanism of accountability. “If they do incorporate the polling formally into cadre evaluations, it’s like them saying, ‘We acknowledge the importance of bottom-up, semi-democratic measures,’” says <a href="https://gufaculty360.georgetown.edu/s/contact/0031Q000025mabOQAQ/ning-leng" target="_blank">Ning Leng</a>, an assistant professor at Georgetown University who focuses on the unintended consequences of nondemocratic institutions in China. “That’s not going to happen.”</p>
+      <p>Beijing also has <a href="https://www.stlouisfed.org/publications/regional-economist/second-quarter-2017/chinas-economic-data-an-accurate-reflection-or-just-smoke-and-mirrors" target="_blank">well-founded</a> concerns <a href="https://www.scmp.com/news/china/economy/article/2098007/two-more-chinese-provinces-found-faking-economic-data" target="_blank">about</a> the reliability of data local officials feed up to it. The 2014 Tianjin Academy of Social Sciences <a href="https://www.academia.edu/35999302/Characteristics_Problems_and_Suggestions_of_Using_Public_Opinion_Survey_in_Local_Governments" target="_blank">study</a> argued that government-run polls lacked credibility: “Presently, some local governments and departments have impure motivations for using public opinion polling,” the study’s author wrote. “For political gain, they conduct polls that they plan and execute themselves, and that deceive their superiors and dupe their subordinates.” Procurement notices suggest that this phenomenon may still occur. In the <a href="https://www.chinafile.com/node/54286" target="_blank">multiple-choice questionnaire</a> for Chongqing’s “social conditions public opinion survey,” most questions offered respondents two “positive” response options (for example, “Good” and “Relatively good”) but only one “negative” response option (“Not good”). Such framing skews poll results in a direction beneficial for the government requesting them.</p>
+      <p>And yet, even if Beijing’s own governance structures prevent it from accurately collecting or meaningfully using public opinion data, its desire for this data—and its desire to convert this data into popular legitimacy—cannot be wholly dismissed. Beijing still has a very real interest in keeping enough people satisfied enough that they continue to accept CCP rule. In late 2021, the Changping district government in Beijing specifically wanted to conduct a survey in order to</p>
+      <p></p>
+      <blockquote>
+“understand the satisfaction of all government services recipients, all residents, and all enterprises regarding the Changping district government’s improvement of people’s livelihoods and optimization of service management, . . . incorporate the satisfaction score into the district’s annual government evaluation results, and inform government departments and localities of the problems the public reported so they can rectify their performance, . . . continue to enhance the government’s credibility and execution, and continuously strengthen the people’s sense of identification [with the nation] and sense of having benefited.”      </blockquote>
+      <p></p>
+      <p>Procurement notices show that at least some of the government’s public opinion surveys demand polling methodologies commensurate with the gravity of the undertaking. While some tenders do include opt-in online polling as the partial or primary mode of surveying, others specifically request telephone or in-person surveys—a method which <a href="https://www.pewresearch.org/methods/2018/08/06/video-explainer-what-are-nonprobability-surveys/" target="_blank">allows</a> for more rigorous sampling techniques and helps ensure the survey results will be more representative of the population as a whole. Such specifications reflect a level of sophistication in the entities commissioning the surveys, suggesting they are seeking high-quality data broadly representative of public opinion in the area. For example, one 2019 notice, jointly tendered by Guangdong’s provincial Public Security Bureau and Politics and Law Commission, sought two contractors to run its “sense of security” polls, directing each firm to conduct either a telephone survey or an on-site survey in the first half of the year, and then to swap these tasks for the second half. At the same time, however, not all localities or offices require such gold-standard methods, and even rigorously-conducted polls don’t matter if an ambitious cadre decides to quash the results.</p>
+      <p>Of course, China’s leaders have other means of collecting information on their citizens. Landry, the survey research expert at the Chinese University of Hong Kong, wonders if public opinion might be more efficiently determined simply by harvesting personal data online: “If you have data on all the billion people, you don’t need a sample. Are surveys that useful when you have all this other stuff to supplement the data? Doing surveys is slow, it’s costly, people don’t talk, they don’t tell the truth, they’re hard to find, and you have to go back to them multiple times.” Indeed, the CCP may simply decide that their unprecedented ability to surveil their citizens both <a href="https://www.chinafile.com/reporting-opinion/features/message-control-china" target="_blank">online</a> and <a href="https://www.chinafile.com/state-surveillance-china" target="_blank">offline</a> precludes the need for old-fashioned public opinion polling.</p>
+      <p>For now, though, the country’s leaders appear convinced that, loath as they may be to be held accountable, it still behooves them—occasionally—to ask for feedback.<span class="cube"></span></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-10-05</time>
+        <a href="https://nodebe4.github.io/oped2/2022-10-05/Little-Town-on-the-Prairie/">
+          Little Town on the Prairie
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-10-03</time>
+        <a href="https://nodebe4.github.io/oped2/2022-10-03/Thanks-to-a-County-in-Utah,-Same-Sex-Couples-Can-G/">
+          Thanks to a County in Utah, Same-Sex Couples Can Get Married—In China
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-19</time>
+        <a href="https://nodebe4.github.io/oped2/2022-09-19/China-Back-to-Authoritarianism/">
+          China: Back to Authoritarianism
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-16</time>
+        <a href="https://nodebe4.github.io/oped2/2022-09-16/New-Export-Controls-on-Chinese-Semiconductors-May/">
+          New Export Controls on Chinese Semiconductors May Prove Self-Defeating
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-09-19/China-Back-to-Authoritarianism/">
+            前一篇：China: Back to Authoritarianism
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-10-03/Thanks-to-a-County-in-Utah,-Same-Sex-Couples-Can-G/">
+            後一篇：Thanks to a County in Utah, Same-Sex Couples Can Get Married—In China
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-09-19/China-Back-to-Authoritarianism/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-10-03/Thanks-to-a-County-in-Utah,-Same-Sex-Couples-Can-G/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-10-03/Thanks-to-a-County-in-Utah,-Same-Sex-Couples-Can-G/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-09-19/China-Back-to-Authoritarianism/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-09-19/China-Back-to-Authoritarianism/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-10-03/Thanks-to-a-County-in-Utah,-Same-Sex-Couples-Can-G/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-10-03/Thanks-to-a-County-in-Utah,-Same-Sex-Couples-Can-G/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-09-19/China-Back-to-Authoritarianism/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

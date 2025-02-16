@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>‘I’ve Forgotten How to Kneel in Front of You!’ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+‘I’ve Forgotten How to Kneel in Front of You!’
+——
+" />
+    <meta property="og:description" content="
+‘I’ve Forgotten How to Kneel in Front of You!’
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="‘I’ve Forgotten How to Kneel in Front of You!’" />
+    <meta property="twitter:title" content="‘I’ve Forgotten How to Kneel in Front of You!’" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fviewpoint%2Five-forgotten-how-kneel-front-of-you" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/viewpoint/ive-forgotten-how-kneel-front-of-you" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/viewpoint/ive-forgotten-how-kneel-front-of-you&text=‘I’ve Forgotten How to Kneel in Front of You!’&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/viewpoint/ive-forgotten-how-kneel-front-of-you&title=‘I’ve Forgotten How to Kneel in Front of You!’" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/viewpoint/ive-forgotten-how-kneel-front-of-you&title=‘I’ve Forgotten How to Kneel in Front of You!’" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=‘I’ve Forgotten How to Kneel in Front of You!’&body=
+‘I’ve Forgotten How to Kneel in Front of You!’
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/viewpoint/ive-forgotten-how-kneel-front-of-you" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/viewpoint/ive-forgotten-how-kneel-front-of-you&title=‘I’ve Forgotten How to Kneel in Front of You!’&caption=
+‘I’ve Forgotten How to Kneel in Front of You!’
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=‘I’ve Forgotten How to Kneel in Front of You!’&url=https://www.chinafile.com/reporting-opinion/viewpoint/ive-forgotten-how-kneel-front-of-you" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>‘I’ve Forgotten How to Kneel in Front of You!’</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-03-21
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Geremie R. Barmé</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/viewpoint/ive-forgotten-how-kneel-front-of-you" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1647882720000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/viewpoint/ive-forgotten-how-kneel-front-of-you">‘I’ve Forgotten How to Kneel in Front of You!’</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-7a7fe3691a82dc8f28fa3ddf9e21da87">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/wang_jixian_3.17_screenshot_2.2.png" title="‘I’ve Forgotten How to Kneel in Front of You!’" class="colorbox" data-colorbox-gallery="gallery-node-53861-zjoT58TR21E" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/wang_jixian_3.17_screenshot_2.2.png?itok=QmD1pn2J" width="1341" height="752" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Wang Jixian—YouTube
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A screenshot from Wang Jixian’s video ‘‘March 17: I’m still alive! Sorry, I’m used to standing upright and have forgotten how to kneel in front of you! And, on to the day when this war is won . . .’ (‘3月17日 我还活着！抱歉，我站的时间久了，不习惯下跪！直到战争胜利的那一天！ . . .’), posted March 17, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p><em>It started with a <a href="https://www.chinafile.com/reporting-opinion/viewpoint/wang-jixian-voice-other-china-odessa" target="_blank">simple message</a> to his parents. Russian forces were invading Ukraine and, in case something happened to him, Wang Jixian, a computer programmer based in Odessa, decided he had better record a few words addressed to his parents on his social media account. Following that, in a stream of <a href="https://www.youtube.com/playlist?list=PL5rZMTJX5NqOqUZqApUjDaszMAMtfGdqn" target="_blank">short videos</a> posted daily over the following weeks, Wang offered a personal on-the-ground record of what was going on around him. His version contradicted the messaging coming from Beijing; soon, Wang was being subjected to taunts, verbal assaults, and threats. On the afternoon of Thursday March 17, Odessa time, Wang realized that his WeChat accounts had been deleted. He posted the following message <a href="https://youtu.be/1LJAdtBlEw4" target="_blank">on YouTube</a> in response.</em></p>
+      <p><em>When I saw the title of this video, “Sorry, I’m used to standing upright and have forgotten how to kneel in front of you!,” I was reminded of a banner I saw in Tiananmen Square during the mass protests in May 1989. Held up by an elderly man, the banner read: “After kneeling for 30 years, it’s time to stand up and stretch my legs.” “30 years” was a reference to the purge of “Anti-Party Rightists” in 1957, during which over half a million people were denounced and many were sent off for “re-education through labor” for having aired their grievances about Communist Party rule. By the late 1970s, the vast majority of those targeted by the Anti-Rightist purge had been <a href="https://www.books.com.tw/products/0010621121" target="_blank">exonerated</a>. Ever since then, the Communist Party has maintained that five men, a handful of troublemakers, were guilty of a “frenzied attack” on China’s rulers aimed at toppling Party rule. The continued condemnation, demanded by Deng Xiaoping, who had overseen the logistics of the 1957 purge, was a <a href="https://chinaheritage.net/journal/celebrating-dai-qing-at-eighty/" target="_blank">seminal moment</a> in the Party’s crackdown on free speech and thought, something from which China has never recovered.</em></p>
+      <p align="right"><em>— Geremie R. Barmé</em></p>
+      <p align="center">* * *</p>
+      <h3 id="march-17-im-still-alive-sorry-im-used-to-standing-upright-and-have-forgotten-how-to-kneel-in-front-of-you-and-on-to-the-day-when-this-war-is-won-a-video-by-wang-jixian">‘March 17: I’m still alive! Sorry, I’m used to standing upright and have forgotten how to kneel in front of you! And, on to the day when this war is won,’ a Video by Wang Jixian</h3>
+      <p class="dropcap">March 17, 10:30 at night. This is Jixian. I’m in Odessa and I’m still alive. News about the war: The Defensive Forces are recovering lost territory, bit by bit. It feels as though we can make out the dawning light of victory.</p>
+      <p>Honestly, I really don’t know what you are so afraid of. Is my voice really that threatening to you?</p>
+      <p></p>
+      <div class="node node-article cboxes article align-left grid-4 img-yes logo-no">
+        <div class="cboxes-inner">
+          <div class="cb-head">
+            <h3 id="viewpoint"> <a href="https://www.chinafile.com/reporting-opinion/viewpoint">Viewpoint</a></h3>
+ <span class="date">03.12.22</span> <span class="type-icon"></span>
+          </div>
+          <div class="cb-link">
+<a href="https://www.chinafile.com/reporting-opinion/viewpoint/wang-jixian-voice-other-china-odessa"></a>
+          </div>
+          <div class="cb-img">
+<img src="https://www.chinafile.com/sites/default/files/styles/system/public/assets/images/article/system/wang_jixian_screenshot_1_0.png?itok=l6LlECjx" width="620" height="450" alt="" referrerpolicy="no-referrer" />
+          </div>
+          <div class="cb-cont">
+            <h2 id="wang-jixian-a-voice-from-the-other-china-but-in-odessa"><a href="https://www.chinafile.com/reporting-opinion/viewpoint/wang-jixian-voice-other-china-odessa" title="Wang Jixian: A Voice from The Other China, but in Odessa">Wang Jixian: A Voice from The Other China, but in Odessa</a></h2>
+ <span class="authors"> <span>Geremie R. Barmé</span> </span>             <div class="inner-content">
+              <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+“Hello, everyone. This is Jixian in Odessa. Just checking in to let you know that I’m okay; I’m still alive.” This is the way that Wang Jixian, a 37-year-old software engineer originally from Beijing, starts most of his daily vlog updates posted...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p></p>
+      <p>Today, I went to buy some beef and pick up the AirPods that I’d sent to Kyiv to be repaired. If nothing else, it proved to me that despite the recent bombardment of Kyiv the fellow there was still at work and deliveries between Odessa and Kyiv were still being made. Of course, Odessa is also still a functioning city. I should add that they’re Apple AirPods, so I wasn’t charged, although it did take two weeks to get them back. Doesn’t that news unsettle you, as well?</p>
+      <p>Then, around 3:45 p.m. my time [9:45 p.m. Beijing time], I learned that my Chinese social media accounts had been cancelled in a single coordinated action; they weren’t “blocked,” they were “cancelled.” Everything is gone, including the means I have to let my family know that I’m safe. It’s also the only way my parents can contact me.</p>
+      <p>You’ve deleted all of it.</p>
+      <p>Here we can accept scenes of Russian soldiers laying down their butcher’s knives; why are you incapable of tolerating one of your own citizens, a lowly computer programmer? I’m not involved in the war, nor am I spy. I have no party affiliation either.</p>
+      <p>I don’t blame the underling who deleted my accounts, because I’d like to believe that the only reason they pressed the delete key was because their superiors ordered it. But right now, I want to know who gave that order. Who’s the person responsible for this? Don’t you have parents of your own? Children even? Would you have pressed “delete” if it were your child who was in a war zone? Would you have cut off the only way they had to stay in touch with you?</p>
+      <p>Now I have to rely on other people to pass on a message to my parents. That’s right, TO PASS ON—because I can no longer contact them directly. It’s the only way I can let them know that I’m still alive; that I’m determined to see this war won, a day that I believe will not be too far off.</p>
+      <p>You cowards. Who should be the true masters of the land on which you tread? The people, or you, who lord over it and exploit the people?</p>
+      <p>I’m Chinese, the citizen of a country with a constitution and the rule of law. Its ruling party also has a constitution of its own. If you think my actions are in breach of the law, then why haven’t I been tried? If you don’t want to deal with me legally, if you want to treat me as an enemy, well, isn’t this the kind of battle ground you’d prefer? Then why don’t you come here yourself? Why are you pressuring my parents instead?</p>
+      <p>The power that you have is the power vested in you by the people. What are your cannons and weapons for? To attack your own people? If you like repressing people so much, then come here and shoot at me yourselves! But you hesitate, you prefer to support the Russians who are murdering Ukrainians. In a previous video, I told you that if this were the Second World War and the invaders were Germans, I’d volunteer to be Jewish. Now, let me tell you: I volunteer to become a Ukrainian. Don’t you enjoy seeing Ukrainians being murdered?</p>
+      <p>You cowards!</p>
+      <p>Don’t think I don’t know what is going to happen to me now. It is, after all, what you people do. You excel at concocting lies, it’s the only real talent you have; and lies are the only kind of language you really know how to speak. So, from here on in, I know I’ll be the subject of even more outrageous rumors. Do you think I really care? Every day here I’m embroiled with Big Boss Putin and his nuclear threats. A few days ago, when they used a <a href="https://www.washingtonpost.com/world/2022/03/01/cluster-munitions-vacuum-weapons-ukraine-russia/" target="_blank">vacuum bomb</a>, was that you? Why are you so scared of people knowing? The whole world knows what’s going on here; the whole world except for the people of two countries [Russia and China]. Why have you been so willing to get involved in Russia’s war on Ukraine? It’s not your fight. I’m a resident here; do you think I’m scared of your pressure? Do you honestly think that the way you treat me is more frightening than the missiles or the threat of nuclear weapons? Who should really be afraid? Just think about it.</p>
+      <p>Are you like Putin? Are you also afraid that if people know too much they’ll wake up to what’s going on and start thinking for themselves, that they’ll chose to ignore all of your lies?</p>
+      <p>Let me remind you, people nurtured by Chinese civilization know that the darkness will not always conquer the light. See what history tells us—through the ages, how did all the political forces and dynasties that tried to control people’s minds end up? You should know the answer better than anyone.</p>
+      <p>Normal everyday people just want to get on with their lives. Why do you try and force them? No matter who turns up, people will still have to pay their taxes and get on with their lives. So let me make a suggestion: give everyone a break; no one wants to force you.</p>
+      <p>Friends, when you can get in touch with my parents, my family, and my old friends on my behalf, I hope you’ll tell them that I’m here and that I’m still alive. Please, let them know what’s been going on. I only hope that, regardless of what happens to me, every time they mention my name in the future they’ll do so with a sense of pride, that they’ll know I did not bring shame on them.</p>
+      <p>If my motherland makes me choose between living on my knees or dying while standing upright, I hope you know what I’ll do. Sorry, I’m used to standing upright and I’ve forgotten how to kneel in front of you!</p>
+      <p>You can sue me, take me to court. You can formally declare that I am your enemy, but just remember one thing: I’ll never kneel before you, I’ll never bend. The only way you can convince me of anything is if you do it with reason; I will never submit to your violent ways.</p>
+      <p>Today my heart is heavy. This is Jixian. Goodnight.</p>
+      <p align="center">        <iframe width="560" height="315" src="https://www.youtube.com/embed/1LJAdtBlEw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-04-05</time>
+        <a href="https://nodebe4.github.io/oped2/2022-04-05/Arrest-Data-Show-National-Security-Law-Has-Dealt-a/">
+          Arrest Data Show National Security Law Has Dealt a Hard Blow to Free Expression in Hong Kong
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-22</time>
+        <a href="https://nodebe4.github.io/oped2/2022-03-22/Will-China-Set-Global-Tech-Standards/">
+          Will China Set Global Tech Standards?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-12</time>
+        <a href="https://nodebe4.github.io/oped2/2022-03-12/Wang-Jixian-A-Voice-from-The-Other-China,-but-in/">
+          Wang Jixian: A Voice from The Other China, but in Odessa
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-09</time>
+        <a href="https://nodebe4.github.io/oped2/2022-03-09/The-Uncompromising-Ai-Weiwei/">
+          The Uncompromising Ai Weiwei
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-03-12/Wang-Jixian-A-Voice-from-The-Other-China,-but-in/">
+            前一篇：Wang Jixian: A Voice from The Other China, but in Odessa
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-03-22/Will-China-Set-Global-Tech-Standards/">
+            後一篇：Will China Set Global Tech Standards?
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-03-12/Wang-Jixian-A-Voice-from-The-Other-China,-but-in/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-03-22/Will-China-Set-Global-Tech-Standards/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-03-22/Will-China-Set-Global-Tech-Standards/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-03-12/Wang-Jixian-A-Voice-from-The-Other-China,-but-in/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-03-12/Wang-Jixian-A-Voice-from-The-Other-China,-but-in/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-03-22/Will-China-Set-Global-Tech-Standards/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-03-22/Will-China-Set-Global-Tech-Standards/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-03-12/Wang-Jixian-A-Voice-from-The-Other-China,-but-in/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="高頻版 git.io/JUJZT">
+    <meta property="og:description" content="高頻版 git.io/JUJZT" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fnodebe4.github.io%2Foped2%2Fpage7%2F" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://nodebe4.github.io/oped2/page7/" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://nodebe4.github.io/oped2/page7/&text=觀點2-高頻版 git.io/JUJZT&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://nodebe4.github.io/oped2/page7/&title=觀點2-高頻版 git.io/JUJZT" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://nodebe4.github.io/oped2/page7/&title=觀點2-高頻版 git.io/JUJZT" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=觀點2-高頻版 git.io/JUJZT&body=" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://nodebe4.github.io/oped2/page7/" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://nodebe4.github.io/oped2/page7/&title=觀點2-高頻版 git.io/JUJZT&caption=&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=觀點2-高頻版 git.io/JUJZT&url=https://nodebe4.github.io/oped2/page7/" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+<ul class="archive">
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-14/%E4%BF%AE%E6%AD%A3%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89-%E6%97%A5%E6%9C%AC%E5%A6%82%E4%BD%95%E9%9D%A2%E5%AF%B9%E7%A4%BE%E4%BC%9A%E5%81%9C%E6%BB%9E%E4%B8%8E%E4%B8%8D%E5%85%AC/">
+      
+        修正资本主义：日本如何面对社会停滞与不公
+      </a>
+      <time>2021-09-14</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 广井良典</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/614063d4efa7ce3e3869cd38" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-13/%E4%BA%BA%E9%81%93%E4%B8%BB%E4%B9%89%E7%9A%84%E6%9A%B4%E5%8A%9B%E9%80%BB%E8%BE%91-%E7%BE%8E%E5%9B%BD%E5%9C%A8%E9%98%BF%E5%AF%8C%E6%B1%97%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%A4%B1%E8%B4%A5/">
+      
+        人道主义的暴力逻辑：美国在阿富汗为什么会失败？
+      </a>
+      <time>2021-09-13</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 费萨尔·德夫吉</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/613ef164fbcfb81445420c4b" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-12/%E5%9C%A8%E4%BF%84%E5%9B%BD%E5%8F%B2%E7%9A%84%E8%A7%86%E9%87%8E%E4%B8%AD-%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%A6%82%E4%BD%95%E9%87%8D%E5%A1%91%E5%88%A4%E6%96%AD%E7%9A%84%E5%B0%BA%E5%BA%A6/">
+      
+        在俄国史的视野中，陀思妥耶夫斯基如何重塑判断的尺度？
+      </a>
+      <time>2021-09-12</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 陈天祥</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/613d99daf4f9725a198ea902" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-11/%E5%8C%97%E5%AE%8B%E6%96%87%E6%AD%A6-%E6%96%87%E4%BA%BA%E5%9C%B0%E4%BD%8D%E7%9A%84%E6%8F%90%E9%AB%98%E4%B8%8E%E7%A4%BE%E4%BC%9A%E5%AF%B9%E6%AD%A6%E4%BA%BA%E7%9A%84%E8%BD%BB%E8%A7%86/">
+      
+        北宋文武：文人地位的提高与社会对武人的轻视
+      </a>
+      <time>2021-09-11</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 游彪</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/613c50dffbcfb81445420bc7" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-10/%E4%BB%8E%E7%8B%AC%E8%A3%81%E5%88%B0%E6%B0%91%E4%B8%BB-%E5%8F%8D%E6%8A%97%E7%9A%84%E7%81%AB%E7%84%B0-48%E5%B9%B4-iYouPort/">
+      
+        从独裁到民主，反抗的火焰 - 48年 - iYouPort
+      </a>
+      <time>2021-09-10</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e4%bb%8e%e7%8b%ac%e8%a3%81%e5%88%b0%e6%b0%91%e4%b8%bb%ef%bc%8c%e5%8f%8d%e6%8a%97%e7%9a%84%e7%81%ab%e7%84%b0-48%e5%b9%b4/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-10/%E9%82%A3%E4%BA%9B%E4%BA%BA%E7%94%9F%E4%B8%AD%E7%9A%84%E8%BD%89%E6%8A%98/">
+      
+        那些人生中的轉折
+      </a>
+      <time>2021-09-10</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: Huli</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#medium" class="tag">
+        medium
+      </a>
+      
+
+      
+      <a href="https://hulitw.medium.com/when-i-got-sg-offer-e4d91856bd96?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-10/%E9%B9%A4%E8%A7%81%E4%BF%8A%E8%BE%85-%E5%9C%A8%E6%88%98%E4%BA%89%E4%B8%8E%E9%9D%A9%E5%91%BD%E7%9A%84-%E7%9F%AD20%E4%B8%96%E7%BA%AA-%E4%BB%96%E7%9A%84%E6%80%9D%E6%83%B3%E4%B8%8E%E8%A1%8C%E5%8A%A8%E5%A1%91%E9%80%A0%E4%BA%86%E6%88%98%E5%90%8E%E6%97%A5%E6%9C%AC/">
+      
+        鹤见俊辅：在战争与革命的“短20世纪”，他的思想与行动塑造了战后日本
+      </a>
+      <time>2021-09-10</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 王升远</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/613af922efa7ce3e3869cb9a" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-09/%E4%B8%AD%E5%9B%BD-%E7%BE%8E%E5%9B%BD-%E4%BB%A5%E8%89%B2%E5%88%97-%E5%85%A8%E7%90%83%E6%9C%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E7%9B%91%E8%A7%86%E6%8A%80%E6%9C%AF%E5%85%AC%E5%8F%B8%E6%AD%A3%E5%9C%A8%E9%80%9A%E8%BF%87%E8%B5%A0%E9%80%81%E8%AE%BE%E5%A4%87%E4%BB%A5%E5%9C%A8%E6%8B%89%E4%B8%81%E7%BE%8E%E6%B4%B2%E6%89%BE%E5%88%B0%E7%AB%8B%E8%B6%B3%E7%82%B9-iYouPort/">
+      
+        中国、美国、以色列，全球最强大的监视技术公司正在通过赠送设备以在拉丁美洲找到立足点 - iYouPort
+      </a>
+      <time>2021-09-09</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e4%b8%ad%e5%9b%bd%e3%80%81%e7%be%8e%e5%9b%bd%e3%80%81%e4%bb%a5%e8%89%b2%e5%88%97%ef%bc%8c%e5%85%a8%e7%90%83%e6%9c%80%e5%bc%ba%e5%a4%a7%e7%9a%84%e7%9b%91%e8%a7%86%e6%8a%80%e6%9c%af%e5%85%ac%e5%8f%b8/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-09/%E5%8F%AA%E6%9C%89%E8%B5%B7%E4%B9%89%E6%89%8D%E8%83%BD%E6%8B%AF%E6%95%91%E6%88%91%E4%BB%AC-%E8%A6%81%E5%BD%BB%E5%BA%95%E9%93%B2%E9%99%A4%E8%AE%A9%E6%9A%B4%E6%94%BF%E6%8E%8C%E6%9D%83%E7%9A%84%E5%9C%9F%E5%A3%A4-%E8%80%8C%E4%B8%8D%E4%BB%85%E4%BB%85%E6%98%AF%E7%93%A6%E8%A7%A3%E7%8E%B0%E6%9C%89%E6%9A%B4%E6%94%BF-iYouPort/">
+      
+        只有起义才能拯救我们：要彻底铲除让暴政掌权的土壤，而不仅仅是瓦解现有暴政 - iYouPort
+      </a>
+      <time>2021-09-09</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e5%8f%aa%e6%9c%89%e8%b5%b7%e4%b9%89%e6%89%8d%e8%83%bd%e6%8b%af%e6%95%91%e6%88%91%e4%bb%ac%ef%bc%9a%e8%a6%81%e5%bd%bb%e5%ba%95%e9%93%b2%e9%99%a4%e8%ae%a9%e6%9a%b4%e6%94%bf%e6%8e%8c%e6%9d%83/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-09/A-Farewell-to-My-Students/">
+      
+        A Farewell to My Students
+      </a>
+      <time>2021-09-09</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: Xu Zhangrun &#38; Geremie R. Barmé</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#中参馆" class="tag">
+        中参馆
+      </a>
+      
+
+      
+      <a href="https://www.chinafile.com/reporting-opinion/viewpoint/farewell-my-students" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-08/%E9%87%91%E8%A7%82%E6%B6%9B-%E5%A6%82%E4%BD%95%E5%8F%91%E7%8E%B0%E6%96%87%E6%98%8E%E6%BC%94%E5%8C%96%E7%9A%84%E5%8E%86%E5%8F%B2%E6%B3%95%E5%88%99%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+      
+        金观涛：如何发现文明演化的历史法则丨燕京讲稿
+      </a>
+      <time>2021-09-08</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 张弘</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/61396d06f4f9725a198ea7bc" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-08/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%A1%94%E5%88%A9%E7%8F%AD%E8%B5%A2%E4%BA%86-%E4%BB%A5%E9%98%BF%E5%AF%8C%E6%B1%97%E4%B8%BA%E9%95%9C-%E5%85%A8%E7%90%83%E8%83%8C%E6%99%AF%E4%B8%8B%E7%9A%84%E5%A1%94%E5%88%A9%E7%8F%AD%E8%83%9C%E5%88%A9-iYouPort/">
+      
+        为什么是塔利班赢了？：以阿富汗为镜，全球背景下的塔利班胜利 - iYouPort
+      </a>
+      <time>2021-09-08</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e4%b8%ba%e4%bb%80%e4%b9%88%e6%98%af%e5%a1%94%e5%88%a9%e7%8f%ad%e8%b5%a2%e4%ba%86%ef%bc%9f%ef%bc%9a%e4%bb%a5%e9%98%bf%e5%af%8c%e6%b1%97%e4%b8%ba%e9%95%9c%ef%bc%8c%e5%85%a8%e7%90%83%e8%83%8c%e6%99%af/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-08/%E5%A6%82%E4%BD%95%E5%B0%86-DOCX-%E6%96%87%E6%A1%A3%E8%BD%AC%E6%8D%A2%E4%B8%BA-PPTX-%E6%96%87%E4%BB%B6-iYouPort/">
+      
+        如何将 DOCX 文档转换为 PPTX 文件 - iYouPort
+      </a>
+      <time>2021-09-08</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e5%b0%86-docx-%e6%96%87%e6%a1%a3%e8%bd%ac%e6%8d%a2%e4%b8%ba-pptx-%e6%96%87%e4%bb%b6/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-08/%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8A%A4%E8%87%AA%E5%B7%B1%E5%85%8D%E5%8F%97%E8%94%93%E5%BB%B6%E5%85%A8%E4%B8%96%E7%95%8C%E7%9A%84%E6%9C%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E4%BB%A5%E8%89%B2%E5%88%97%E9%97%B4%E8%B0%8D%E8%BD%AF%E4%BB%B6-Pegasus-%E7%9A%84%E6%94%BB%E5%87%BB-iYouPort/">
+      
+        如何保护自己免受蔓延全世界的最强大的以色列间谍软件 Pegasus 的攻击 - iYouPort
+      </a>
+      <time>2021-09-08</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e5%a6%82%e4%bd%95%e4%bf%9d%e6%8a%a4%e8%87%aa%e5%b7%b1%e5%85%8d%e5%8f%97%e8%94%93%e5%bb%b6%e5%85%a8%e4%b8%96%e7%95%8c%e7%9a%84%e6%9c%80%e5%bc%ba%e5%a4%a7%e7%9a%84%e4%bb%a5%e8%89%b2%e5%88%97%e9%97%b4/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-07/%E5%80%AA%E5%9F%B9%E6%B0%91-%E5%84%92%E5%AE%B6%E6%98%AF%E7%BB%B4%E6%8A%A4%E5%90%9B%E4%B8%BB%E4%B8%93%E5%88%B6%E7%9A%84%E5%B7%A5%E5%85%B7%E5%90%97-%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+      
+        倪培民：儒家是维护君主专制的工具吗？丨燕京访谈
+      </a>
+      <time>2021-09-07</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 张弘</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/61381c35efa7ce3e3869cae6" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-07/%E8%BF%99%E4%B8%80%E6%AC%A1-%E7%AB%99%E8%B5%B7%E6%9D%A5%E7%9A%84%E6%98%AF%E7%9C%9F%E6%AD%A3%E7%9A%84%E4%BA%BA%E6%B0%91-iYouPort/">
+      
+        这一次，站起来的是真正的人民 - iYouPort
+      </a>
+      <time>2021-09-07</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e8%bf%99%e4%b8%80%e6%ac%a1%ef%bc%8c%e7%ab%99%e8%b5%b7%e6%9d%a5%e7%9a%84%e6%98%af%e7%9c%9f%e6%ad%a3%e7%9a%84%e4%ba%ba%e6%b0%91/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-07/%E5%8A%A0%E5%AF%86%E9%82%AE%E4%BB%B6%E4%BE%9B%E5%BA%94%E5%95%86%E5%8D%8F%E5%8A%A9%E8%B7%A8%E5%9B%BD%E7%BB%B4%E7%A8%B3-ProtonMail-%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88-%E4%B8%BA%E4%BB%80%E4%B9%88-iYouPort/">
+      
+        加密邮件供应商协助跨国维稳：ProtonMail 做了什么？为什么？ - iYouPort
+      </a>
+      <time>2021-09-07</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e5%8a%a0%e5%af%86%e9%82%ae%e4%bb%b6%e4%be%9b%e5%ba%94%e5%95%86%e5%8d%8f%e5%8a%a9%e8%b7%a8%e5%9b%bd%e7%bb%b4%e7%a8%b3%ef%bc%9aprotonmail-%e5%81%9a%e4%ba%86%e4%bb%80%e4%b9%88%ef%bc%9f%e4%b8%ba%e4%bb%80/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-06/%E5%80%AA%E5%9F%B9%E6%B0%91-%E7%A4%BE%E4%BC%9A%E4%B8%8A%E6%B5%81%E8%A1%8C%E7%9A%84%E6%89%80%E8%B0%93%E5%84%92%E5%AE%B6%E8%A7%82%E5%BF%B5-%E5%BE%80%E5%BE%80%E4%B8%8D%E7%AC%A6%E5%90%88%E7%BB%8F%E5%85%B8%E5%84%92%E5%AD%A6%E7%B2%BE%E7%A5%9E%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+      
+        倪培民：社会上流行的所谓儒家观念，往往不符合经典儒学精神丨燕京访谈
+      </a>
+      <time>2021-09-06</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 张弘</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/6136cae7f4f9725a198ea71d" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-05/%E9%A9%AC%E5%8B%87-%E8%87%AA%E7%94%B1-%E5%9C%A8%E4%B8%A5%E5%A4%8D%E9%82%A3%E9%87%8C%E5%85%B7%E6%9C%89%E6%9C%80%E6%A0%B9%E6%9C%AC%E7%9A%84%E6%84%8F%E4%B9%89%E4%B8%A8%E4%B8%A5%E5%A4%8D%E9%80%9D%E4%B8%96%E7%99%BE%E5%B9%B4/">
+      
+        马勇：自由，在严复那里具有最根本的意义丨严复逝世百年
+      </a>
+      <time>2021-09-05</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 马勇</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/61358b11f4f9725a198ea6d3" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-05/%E9%9A%90%E5%BD%A2%E7%9A%84%E7%A9%B7%E4%BA%BA-%E7%BE%8E%E5%9B%BD-%E4%BC%9F%E5%A4%A7%E7%A4%BE%E4%BC%9A-%E8%AE%A1%E5%88%92%E5%A6%82%E4%BD%95%E6%B6%88%E9%99%A4%E7%B9%81%E8%8D%A3%E8%A1%A8%E8%B1%A1%E4%B8%8B%E7%9A%84%E9%9A%90%E6%80%A7%E8%B4%AB%E5%9B%B0/">
+      
+        “隐形的穷人”：美国“伟大社会”计划如何消除繁荣表象下的隐性贫困
+      </a>
+      <time>2021-09-05</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 杨靖</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/61347295fbcfb814454209d3" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-04/%E9%99%88%E6%81%92-%E5%B2%B3%E7%A7%80%E5%9D%A4-%E4%B8%AD%E5%9B%BD%E5%9C%A8%E4%B8%96%E7%95%8C%E5%8F%B2%E7%A0%94%E7%A9%B6%E7%9A%84%E5%AD%A6%E6%9C%AF%E6%84%8F%E8%AF%86%E5%92%8C%E6%96%87%E7%8C%AE%E6%84%8F%E8%AF%86%E9%9D%9E%E5%B8%B8%E8%96%84%E5%BC%B1%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+      
+        陈恒、岳秀坤：中国在世界史研究的学术意识和文献意识非常薄弱丨燕京讲稿
+      </a>
+      <time>2021-09-04</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 张弘</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/6132fb12fbcfb81445420951" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-03/%E4%BE%86%E8%AB%87%E8%AB%87%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E7%9F%A5%E8%AD%98%E7%84%A6%E6%85%AE/">
+      
+        來談談工程師的知識焦慮
+      </a>
+      <time>2021-09-03</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: Huli</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#medium" class="tag">
+        medium
+      </a>
+      
+
+      
+      <a href="https://hulitw.medium.com/what-to-learn-b85ee24c3e8?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-03/%E5%BD%93%E9%BB%91%E5%AE%A2%E6%88%90%E4%B8%BA%E8%8B%B1%E9%9B%84-iYouPort/">
+      
+        当黑客成为英雄 - iYouPort
+      </a>
+      <time>2021-09-03</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e5%bd%93%e9%bb%91%e5%ae%a2%e6%88%90%e4%b8%ba%e8%8b%b1%e9%9b%84/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-03/%E5%85%A8%E7%90%83%E5%8F%8D%E5%A5%A5%E8%BF%90%E8%BF%90%E5%8A%A8%E5%85%B4%E8%B5%B7-%E6%8C%91%E6%88%98%E5%A5%A5%E8%BF%90%E4%BC%9A%E7%9A%84%E9%98%B4%E6%9A%97%E9%9D%A2-iYouPort/">
+      
+        全球反奥运运动兴起，挑战奥运会的阴暗面 - iYouPort
+      </a>
+      <time>2021-09-03</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e5%85%a8%e7%90%83%e5%8f%8d%e5%a5%a5%e8%bf%90%e8%bf%90%e5%8a%a8%e5%85%b4%e8%b5%b7%ef%bc%8c%e6%8c%91%e6%88%98%e5%a5%a5%e8%bf%90%e4%bc%9a%e7%9a%84%e9%98%b4%e6%9a%97%e9%9d%a2/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-03/%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E6%97%B6%E4%BB%A3-%E7%BE%8E%E5%9B%BD%E4%BD%9C%E4%B8%BA%E5%8F%91%E5%B1%95%E4%B8%AD%E5%9B%BD%E5%AE%B6%E7%9A%84%E8%82%96%E5%83%8F-iYouPort/">
+      
+        资本主义时代：美国作为发展中国家的肖像 - iYouPort
+      </a>
+      <time>2021-09-03</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e8%b5%84%e6%9c%ac%e4%b8%bb%e4%b9%89%e6%97%b6%e4%bb%a3%ef%bc%9a%e7%be%8e%e5%9b%bd%e4%bd%9c%e4%b8%ba%e5%8f%91%e5%b1%95%e4%b8%ad%e5%9b%bd%e5%ae%b6%e7%9a%84%e8%82%96%e5%83%8f/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-03/%E7%8E%8B%E5%B8%8C-%E7%BE%8E%E5%9B%BD%E7%9F%A5%E8%AF%86%E5%88%86%E5%AD%90%E7%9A%84-%E7%96%8F%E7%A6%BB-%E4%B8%8E-%E9%A1%BA%E4%BB%8E/">
+      
+        王希：美国知识分子的“疏离”与“顺从”
+      </a>
+      <time>2021-09-03</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 张弘</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/6131b11af4f9725a198ea514" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-02/How-Much-Does-Beijing-Control-the-Ethnic-Makeup-of/">
+      
+        How Much Does Beijing Control the Ethnic Makeup of Tibet?
+      </a>
+      <time>2021-09-02</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: Andrew M. Fischer</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#中参馆" class="tag">
+        中参馆
+      </a>
+      
+
+      
+      <a href="https://www.chinafile.com/reporting-opinion/viewpoint/how-much-does-beijing-control-ethnic-makeup-of-tibet" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-02/%E4%B8%AD%E7%BE%8E%E8%B0%8D%E6%88%98%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86-%E7%A7%91%E6%8A%80%E5%B7%A8%E5%A4%B4%E5%85%AC%E5%8F%B8%E6%98%AF%E9%97%B4%E8%B0%8D%E6%B4%BB%E5%8A%A8%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86-iYouPort/">
+      
+        中美谍战第三部分：科技巨头公司是间谍活动的一部分 - iYouPort
+      </a>
+      <time>2021-09-02</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e4%b8%ad%e7%be%8e%e8%b0%8d%e6%88%98%e7%ac%ac%e4%b8%89%e9%83%a8%e5%88%86%ef%bc%9a%e7%a7%91%e6%8a%80%e5%b7%a8%e5%a4%b4%e5%85%ac%e5%8f%b8%e6%98%af%e9%97%b4%e8%b0%8d%e6%b4%bb%e5%8a%a8%e7%9a%84%e4%b8%80/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-02/%E6%8A%80%E6%9C%AF%E6%94%B9%E5%8F%98%E4%BA%86%E4%B8%AD%E5%9B%BD%E4%BA%BA%E7%94%9F%E6%B4%BB%E6%9C%AC%E8%BA%AB%E7%9A%84%E8%B4%A8%E6%84%9F-%E4%BD%86%E6%98%AF%E5%91%A2-iYouPort/">
+      
+        技术改变了中国人生活本身的质感，但是呢… - iYouPort
+      </a>
+      <time>2021-09-02</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e6%8a%80%e6%9c%af%e6%94%b9%e5%8f%98%e4%ba%86%e4%b8%ad%e5%9b%bd%e4%ba%ba%e7%94%9f%e6%b4%bb%e6%9c%ac%e8%ba%ab%e7%9a%84%e8%b4%a8%e6%84%9f%ef%bc%8c%e4%bd%86%e6%98%af%e5%91%a2/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-02/%E8%AD%A6%E5%AF%9F%E5%A6%82%E4%BD%95%E9%98%BB%E6%AD%A2%E5%85%AC%E6%B0%91%E5%AF%B9%E6%89%A7%E6%B3%95%E6%9A%B4%E5%8A%9B%E8%A1%8C%E4%B8%BA%E5%8F%96%E8%AF%81-iYouPort/">
+      
+        警察如何阻止公民对执法暴力行为取证 - iYouPort
+      </a>
+      <time>2021-09-02</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e8%ad%a6%e5%af%9f%e5%a6%82%e4%bd%95%e9%98%bb%e6%ad%a2%e5%85%ac%e6%b0%91%e5%af%b9%e6%89%a7%e6%b3%95%e6%9a%b4%e5%8a%9b%e8%a1%8c%e4%b8%ba%e5%8f%96%e8%af%81/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-01/%E7%8E%8B%E5%B8%8C%E4%B8%A8%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%B8%A6%E7%89%87-%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E5%9C%A8%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E6%89%AE%E6%BC%94%E7%9D%80%E6%80%8E%E6%A0%B7%E7%9A%84%E8%A7%92%E8%89%B2/">
+      
+        王希丨美国生活中的精神鸦片：反智主义在美国生活中扮演着怎样的角色？
+      </a>
+      <time>2021-09-01</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 王希</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/613038b2f4f9725a198ea49b" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-01/%E7%BB%88%E7%BB%93%E6%94%BF%E5%BA%9C-iYouPort/">
+      
+        终结政府 - iYouPort
+      </a>
+      <time>2021-09-01</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e7%bb%88%e7%bb%93%e6%94%bf%e5%ba%9c/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-01/%E4%B8%AD%E7%BE%8E%E8%B0%8D%E6%88%98-%E4%BA%8C-%E5%8C%97%E4%BA%AC%E6%B4%97%E5%8A%AB%E6%95%B0%E6%8D%AE-%E7%BE%8E%E5%9B%BD%E6%B6%88%E6%81%AF%E6%9D%A5%E6%BA%90%E5%9C%A8%E4%B8%AD%E5%9B%BD%E8%A2%AB%E5%B0%81%E9%94%81-iYouPort/">
+      
+        中美谍战（二）：北京洗劫数据，美国消息来源在中国被封锁 - iYouPort
+      </a>
+      <time>2021-09-01</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e4%b8%ad%e7%be%8e%e8%b0%8d%e6%88%98%ef%bc%88%e4%ba%8c%ef%bc%89%ef%bc%9a%e5%8c%97%e4%ba%ac%e6%b4%97%e5%8a%ab%e6%95%b0%e6%8d%ae%ef%bc%8c%e7%be%8e%e5%9b%bd%e6%b6%88%e6%81%af%e6%9d%a5%e6%ba%90%e5%9c%a8/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-09-01/%E5%BD%93%E6%82%A8%E4%B8%8D%E5%BE%97%E4%B8%8D%E4%BD%BF%E7%94%A8%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E6%97%B6-%E5%A6%82%E4%BD%95%E9%9A%90%E8%97%8F%E6%82%A8%E7%9A%84%E7%A1%AE%E5%88%87%E4%BD%8D%E7%BD%AE-iYouPort/">
+      
+        当您不得不使用谷歌服务时，如何隐藏您的确切位置 - iYouPort
+      </a>
+      <time>2021-09-01</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e5%bd%93%e6%82%a8%e4%b8%8d%e5%be%97%e4%b8%8d%e4%bd%bf%e7%94%a8%e8%b0%b7%e6%ad%8c%e6%9c%8d%e5%8a%a1%e6%97%b6%ef%bc%8c%e5%a6%82%e4%bd%95%e9%9a%90%e8%97%8f%e6%82%a8%e7%9a%84%e7%a1%ae%e5%88%87%e4%bd%8d/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+      <h2>2021年08月</h2>
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-31/%E7%8E%8B%E5%B8%8C-%E9%87%8D%E6%96%B0%E5%8F%91%E7%8E%B0%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E4%B8%8E-%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/">
+      
+        王希：重新发现霍夫施塔特与“反智主义”
+      </a>
+      <time>2021-08-31</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 张弘</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/612eb70eefa7ce3e3869c70d" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-31/IYP%E4%BC%98%E7%A7%80%E4%B9%A6%E7%B1%8D%E6%B1%87%E6%80%BB2021-07-08-%E6%9C%88%E7%89%88-%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD-iYouPort/">
+      
+        IYP优秀书籍汇总2021（07～08 月版） - 完全免费下载 - iYouPort
+      </a>
+      <time>2021-08-31</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/iyp%e4%bc%98%e7%a7%80%e4%b9%a6%e7%b1%8d%e6%b1%87%e6%80%bb2021%ef%bc%8807%ef%bd%9e08-%e6%9c%88%e7%89%88%ef%bc%89%e2%80%8a-%e2%80%8a%e5%ae%8c%e5%85%a8%e5%85%8d%e8%b4%b9%e4%b8%8b%e8%bd%bd/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-30/%E5%AD%99%E5%8D%AB%E5%9B%BD-%E6%9C%9D%E9%B2%9C%E5%8D%8A%E5%B2%9B-%E4%B8%AD%E5%8D%8E%E6%96%87%E5%8C%96%E5%9C%88%E5%92%8C%E6%94%B9%E5%8F%98%E4%B8%9C%E4%BA%9A%E5%8E%86%E5%8F%B2%E6%A0%BC%E5%B1%80%E7%9A%84%E4%B8%89%E5%9C%BA%E6%88%98%E4%BA%89%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+      
+        孙卫国：朝鲜半岛、中华文化圈和改变东亚历史格局的三场战争丨燕京访谈
+      </a>
+      <time>2021-08-30</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 杨泓渟</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/612da1f3fbcfb8144542072a" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-30/%E4%B8%AD%E7%BE%8E%E8%B0%8D%E6%88%98-%E4%B8%80-%E4%B8%AD%E5%A4%AE%E6%83%85%E6%8A%A5%E5%B1%80%E7%89%B9%E5%B7%A5%E6%98%AF%E5%A6%82%E4%BD%95%E8%A2%AB%E5%8C%97%E4%BA%AC%E5%8F%91%E7%8E%B0%E7%9A%84-iYouPort/">
+      
+        中美谍战（一）：中央情报局特工是如何被北京发现的？ - iYouPort
+      </a>
+      <time>2021-08-30</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e4%b8%ad%e7%be%8e%e8%b0%8d%e6%88%98%ef%bc%88%e4%b8%80%ef%bc%89%ef%bc%9a%e4%b8%ad%e5%a4%ae%e6%83%85%e6%8a%a5%e5%b1%80%e7%89%b9%e5%b7%a5%e6%98%af%e5%a6%82%e4%bd%95%e8%a2%ab%e5%8c%97%e4%ba%ac%e5%8f%91/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-30/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%90%AC%E4%B8%8D%E5%88%B0%E4%B8%AD%E4%BA%9A%E5%92%8C%E4%BF%84%E7%BD%97%E6%96%AF%E7%BB%B4%E5%90%BE%E5%B0%94%E4%BA%BA%E7%9A%84%E5%A3%B0%E9%9F%B3-iYouPort/">
+      
+        为什么听不到中亚和俄罗斯维吾尔人的声音？ - iYouPort
+      </a>
+      <time>2021-08-30</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e4%b8%ba%e4%bb%80%e4%b9%88%e5%90%ac%e4%b8%8d%e5%88%b0%e4%b8%ad%e4%ba%9a%e5%92%8c%e4%bf%84%e7%bd%97%e6%96%af%e7%bb%b4%e5%90%be%e5%b0%94%e4%ba%ba%e7%9a%84%e5%a3%b0%e9%9f%b3%ef%bc%9f/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-30/%E5%AD%99%E5%8D%AB%E5%9B%BD-%E6%98%8E%E6%B8%85%E9%BC%8E%E9%9D%A9%E4%B9%8B%E9%99%85-%E6%9C%9D%E9%B2%9C%E5%8D%8A%E5%B2%9B%E7%9A%84%E4%B8%AD%E5%8D%8E%E6%96%87%E5%8C%96%E8%AE%A4%E5%90%8C%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+      
+        孙卫国：明清鼎革之际，朝鲜半岛的中华文化认同丨燕京访谈
+      </a>
+      <time>2021-08-30</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 杨泓渟</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/612c7f60f4f9725a198ea20c" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-28/%E5%9B%B0%E9%9A%BE%E9%87%8D%E9%87%8D%E7%9A%84%E6%97%A5%E6%9C%AC%E8%81%8C%E5%9C%BA%E5%A5%B3%E6%80%A7-%E5%89%A5%E5%89%8A-%E7%B2%BE%E7%A5%9E%E9%9C%B8%E5%87%8C-%E4%B8%B4%E6%97%B6%E5%B7%A5%E4%BD%9C/">
+      
+        困难重重的日本职场女性：剥削、精神霸凌、临时工作
+      </a>
+      <time>2021-08-28</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/612af7abefa7ce3e3869c418" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-28/%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E5%BD%93%E4%BB%A3%E4%B8%AD%E5%9B%BD%E5%8F%B2%E6%96%99%E9%A6%86-%E4%B8%BA%E5%BD%93%E4%BB%A3%E4%B8%AD%E5%9B%BD%E7%A0%94%E7%A9%B6%E6%8A%A2%E6%95%91%E5%8F%B2%E6%96%99/">
+      
+        北京大学当代中国史料馆：为当代中国研究抢救史料
+      </a>
+      <time>2021-08-28</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 张弘</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/612ae976fbcfb814454205b5" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-28/%E5%9F%83%E5%8F%8A%E7%9A%84%E6%B3%95%E8%80%81%E8%80%83%E5%8F%A4%E5%AD%A6-%E5%9F%83%E5%8F%8A%E4%B8%BA%E4%BD%95%E8%87%B3%E4%BB%8A%E6%B2%A1%E8%83%BD%E9%80%83%E7%A6%BB-%E6%B3%95%E8%80%81-%E6%94%BF%E6%9D%83/">
+      
+        埃及的法老考古学：埃及为何至今没能逃离“法老”政权？
+      </a>
+      <time>2021-08-28</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 大卫·坎伯格斯</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/60cc6eaec4e6cc7492206757" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-27/%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95%E4%B8%93%E4%B8%9A%E6%90%9C%E7%B4%A2%E8%B0%B7%E6%AD%8C-iYouPort/">
+      
+        最简单的方法专业搜索谷歌 - iYouPort
+      </a>
+      <time>2021-08-27</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e6%9c%80%e7%ae%80%e5%8d%95%e7%9a%84%e6%96%b9%e6%b3%95%e4%b8%93%e4%b8%9a%e6%90%9c%e7%b4%a2%e8%b0%b7%e6%ad%8c/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-27/%E7%88%B1%E5%9B%BD%E8%80%85%E6%82%96%E8%AE%BA-iYouPort/">
+      
+        爱国者悖论 - iYouPort
+      </a>
+      <time>2021-08-27</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e7%88%b1%e5%9b%bd%e8%80%85%e6%82%96%e8%ae%ba/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-27/%E5%85%9A%E4%B8%8E%E4%BA%BA%E6%B0%91-21-%E4%B8%96%E7%BA%AA%E7%9A%84%E4%B8%AD%E5%9B%BD%E6%94%BF%E6%B2%BB-iYouPort/">
+      
+        党与人民：21 世纪的中国政治 - iYouPort
+      </a>
+      <time>2021-08-27</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e5%85%9a%e4%b8%8e%e4%ba%ba%e6%b0%91%ef%bc%9a21-%e4%b8%96%e7%ba%aa%e7%9a%84%e4%b8%ad%e5%9b%bd%e6%94%bf%e6%b2%bb/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-27/%E6%B8%85%E6%9C%AB%E6%80%9D%E6%83%B3%E7%95%8C%E7%9A%84-%E9%BB%91%E8%88%B9%E4%BA%8B%E4%BB%B6-%E6%A2%81%E5%90%AF%E8%B6%85%E7%9A%84%E6%96%B0%E5%90%8D%E8%AF%8D%E5%88%B6%E9%80%A0%E4%B8%8E%E6%B8%85%E6%9C%AB%E6%B0%91%E5%88%9D%E7%9A%84%E9%98%85%E8%AF%BB%E6%96%87%E5%8C%96/">
+      
+        清末思想界的“黑船事件”：梁启超的新名词制造与清末民初的阅读文化
+      </a>
+      <time>2021-08-27</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 李庆</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/61286ef4fbcfb814454204a2" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-26/%E6%97%B6%E9%97%B4%E7%9A%84%E6%9A%B4%E6%94%BF-iYouPort/">
+      
+        时间的暴政 - iYouPort
+      </a>
+      <time>2021-08-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#iYouPort" class="tag">
+        iYouPort
+      </a>
+      
+
+      
+      <a href="https://www.iyouport.org/%e6%97%b6%e9%97%b4%e7%9a%84%e6%9a%b4%e6%94%bf/" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-26/What-Does-the-U.S.-Withdrawal-from-Afghanistan-Mea/">
+      
+        What Does the U.S. Withdrawal from Afghanistan Mean for China?
+      </a>
+      <time>2021-08-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: Laurel Miller, Amanda Hsiao &#38; more</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#中参馆" class="tag">
+        中参馆
+      </a>
+      
+
+      
+      <a href="https://www.chinafile.com/conversation/what-does-us-withdrawal-afghanistan-mean-china" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+  
+    
+    
+    
+  
+    <li>
+      
+      <a href="/oped2/2021-08-26/%E5%8A%B3%E6%8B%89-%E5%AE%9D%E6%A3%AE-%E7%BC%A0%E8%B6%B3%E4%B9%8B%E4%B8%8B-%E8%A2%AB%E9%81%AE%E8%94%BD%E7%9A%84%E5%AE%B6%E5%8A%A1%E5%8A%B3%E5%8A%A8%E4%B8%8E%E8%A2%AB%E8%B4%AC%E6%8D%9F%E7%9A%84%E5%A5%B3%E6%80%A7%E4%BB%B7%E5%80%BC%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+      
+        劳拉·宝森：缠足之下，被遮蔽的家务劳动与被贬损的女性价值丨燕京访谈
+      </a>
+      <time>2021-08-26</time>
+
+      <!-- Look the author details up from the site config. -->
+      
+
+      
+        
+        
+          <span>
+              <!-- Personal Info. -->
+              <a  style="font-size:14px;">作者: 徐爽</a>
+          </span>
+        
+        
+      
+
+      
+      <a href="https://nodebe4.github.io/oped2/categories/#燕京书评" class="tag">
+        燕京书评
+      </a>
+      
+
+      
+      <a href="https://www.allnow.com/post/6127207dfbcfb814454200fa" style="font-size:14px;">原文</a>
+      
+
+    </li>
+  
+
+</ul>
+
+<div class="pagination">
+  
+    <span class="prev">
+      <a href="/oped2/page6/" class="prev">
+        上一页
+      </a>
+    </span>
+  
+  
+    <span class="next">
+      <a href="/oped2/page8/" class="next">
+        下一页
+      </a>
+    </span>
+  
+
+  <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    <a class="fab-action fab-action-1" title="上一页(热键 &#8594;)" href="/oped2/page6/">
+      <i>上</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一页(热键 &#8592;)" href="/oped2/page8/">
+      <i>下</i>
+    </a>
+    
+    
+    
+    
+    
+  </div>
+</div>
+
+
+  <script>
+  /* post pagination keyboard shortcuts */
+  document.body.onkeyup = function(e){
+    if (e.keyCode == '37') { window.location = '/oped2/page6/'; } // left arrow key
+    if (e.keyCode == '39') { window.location = '/oped2/page8/'; } // right arrow key
+  };
+  </script>
+
+</div>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

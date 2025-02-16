@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>王希：美国知识分子的“疏离”与“顺从” – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+王希：美国知识分子的“疏离”与“顺从”
+——
+" />
+    <meta property="og:description" content="
+王希：美国知识分子的“疏离”与“顺从”
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="王希：美国知识分子的“疏离”与“顺从”" />
+    <meta property="twitter:title" content="王希：美国知识分子的“疏离”与“顺从”" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F6131b11af4f9725a198ea514" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/6131b11af4f9725a198ea514" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/6131b11af4f9725a198ea514&text=王希：美国知识分子的“疏离”与“顺从”&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/6131b11af4f9725a198ea514&title=王希：美国知识分子的“疏离”与“顺从”" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/6131b11af4f9725a198ea514&title=王希：美国知识分子的“疏离”与“顺从”" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=王希：美国知识分子的“疏离”与“顺从”&body=
+王希：美国知识分子的“疏离”与“顺从”
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/6131b11af4f9725a198ea514" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/6131b11af4f9725a198ea514&title=王希：美国知识分子的“疏离”与“顺从”&caption=
+王希：美国知识分子的“疏离”与“顺从”
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=王希：美国知识分子的“疏离”与“顺从”&url=https://www.allnow.com/post/6131b11af4f9725a198ea514" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>王希：美国知识分子的“疏离”与“顺从”</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-09-03
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 张弘</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/6131b11af4f9725a198ea514" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/6131b11af4f9725a198ea514">王希：美国知识分子的“疏离”与“顺从”</a>
+——</p>
+
+<div>
+  <p>作者︱王希</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-03/6131b16b9c232e01c17d3380+L.jpg" data-id="6131b172904b8c02a16a43c5" alt="《美国生活中的反智主义》出版于1963年，这一时期美国民权运动高涨，1963年8月28日，在“华盛顿工作与自由游行”期间，美国著名民谣组合彼得保罗和玛丽进行表演。（图源：视觉中国）" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《美国生活中的反智主义》出版于1963年，这一时期美国民权运动高涨，1963年8月28日，在“华盛顿工作与自由游行”期间，美国著名民谣组合彼得保罗和玛丽进行表演。（图源：视觉中国）
+    </figcaption>
+  </figure>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-03/6131b1ae4cd55d54dd5dc91f+L.jpg" data-id="6131b1b1904b8c02a16a43c7" alt="本文作者王希，美国宾夕法尼亚州印第安纳大学历史系教授、北京大学历史学系荣休教授。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+本文作者王希，美国宾夕法尼亚州印第安纳大学历史系教授、北京大学历史学系荣休教授。
+    </figcaption>
+  </figure>
+  <h2 id="section"><strong>九 美国知识分子的“疏离”与“顺从”</strong></h2>
+  <p>在讨论了“反智主义”在美国生活中四个领域的演进和表现之后，霍夫施塔特用结语一章来讨论当代美国“知识分子”所面临的“疏离”（alienation）与“顺从”（conformity）困境。他注意到，在现代反智主义的高潮时期，许多知识分子不但不进行反击，反而力图重新“拥抱国家”，与主流社会重归于好。这种在他看来是向保守主义势力投降的做法似乎有情可原<a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftn1">[1]</a>，因为美国知识分子从未作为一个强大而稳固的群体在美国历史上长期存在过。殖民地时代的清教教士和革命时期的建国者，也许是美国最早的一代“知识分子”，但他们很早就退出了历史舞台。19世纪后期的“独立派”，虽然继承了建国者的精神遗风，但他们与权力不沾边，并且与时代脱节，不成气候。</p>
+  <p>此外，在20世纪之前，所谓“知识分子”群体，在美国从未作为一种独立的、有内在认同的阶层存在过。“知识分子”没有独立的经济来源，也没有机会建构起一套属于自己的文化传统。直到19世纪90年代，当“知识分子”的概念从法国进入美国的词汇之后，美国知识分子才开始逐渐形成认同，成为“一个内部更有凝聚力的阶级” （a more cohesive class）。随着知识分子对19世纪末20世纪初美国改革运动的参与，他们的立场也从进步时代的“中间偏左”逐步转向大萧条和新政时代的“更左”方向。尽管知识分子分享左翼和激进改革的意愿，但他们始终要面对来自左右翼的反智主义传统，而后者深深地根植于美国“民主体制和平等主义的情感”（the democratic institutions and the egalitarian sentiments）之中。</p>
+  <p>所以，知识分子始终面临一种身份认同的困难：一方面他们力图成为民主社会中的一员，希望为更大的公众利益而战；另一方面，他们又必须面对“民主社会”中的各种粗俗主义。不管他们是否承认，知识分子都是一个社会中的“精英”阶层，因为他们强调思想的独立、理智的生活和拥有批评的自由。这一切都会与主张“民主”和“平等”、反特权、反精英的大众构成一种紧张关系。知识分子与大众的冲突在改革的高潮中可能会被掩饰，但当政治形势的发展需要寻找替罪羊的时候，知识分子会很便利地变成反智主义的牺牲品。<a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftn2">[2]</a>在霍夫斯塔特看来，这是知识分子在现代美国面临的一个困境。</p>
+  <p>美国知识分子面临的另一个困境，是他们与政治权力的关系。这是一个20世纪初开始出现的问题，但在霍夫施塔特写作的时候变得格外重要。当知识分子的身份在20世纪初从旧时的“有闲阶级”转化成为新的具有专门知识的专家之后，他们在大学或研究机构中获得了经济安全，进入到了政府的权力结构中，重要性和地位都得到了承认。但这种政府权力与知识分子“和解”，也可能是知识分子堕落的开始。获得了机会和利益的知识分子，会被权力“微妙地腐蚀”掉，不仅“丧失了自己的独立性，甚至丧失了自己的知识分子身份认同” 。进入权力体制的知识分子，为了保住自己的位置，不敢批评美国在世界上的横行霸道，也不敢批判“美国政治话语的愚蠢”。<a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftn3">[3]</a></p>
+  <p>霍夫施塔特意识到，学者（scholars）的工作需要大学、研究所甚至政府的支持，但这一切支持都会对知识分子应有的思想和立场的独立性提出挑战。然而，知识与权力的地位并不平等（为权力服务的知识最终会变成权力的一种工具）；所以，“知识”与“权力”既不能“脱钩”（divorce），也无法“联姻”（union）。如何在一个民主社会中找到两者之间的平衡点呢？霍夫施塔特开出的药方是，保持知识分子的多元化和智识生活的多样化。他警告说： “如果所有的知识分子只是服务于权力，如果所有为权力服务的知识分子都认为他们与知识分子群体不再有任何关联，并且认为他们的责任必然而且也只能是为权力服务的时候，事情就会出现悲剧性的后果”。 尽管如此，霍夫施塔特仍然对自由主义在美国的继续幸存抱有希望。他在全书结束时表示：只要个人意志仍然能够保证在“历史的天平”上占有一席之地，知识分子和智识主义就不会消亡。<a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftn4">[4]</a></p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-03/6131b1e04cd55d54dd5dc920+L.jpg" data-id="6131b1e2904b8c02a16a43c8" alt="《美国生活中的反智主义》，[美]理查德·霍夫施塔特著，陈欣言译，后浪丨九州出版社2021年8月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《美国生活中的反智主义》，[美]理查德·霍夫施塔特著，陈欣言译，后浪丨九州出版社2021年8月版
+    </figcaption>
+  </figure>
+  <h2 id="section-1"><strong>十 《反智主义》的贡献与启示</strong></h2>
+  <p>《反智主义》的写作，代表了霍夫施塔特学术生涯中一次非同寻常的努力。他以“反智主义”为核心范畴，使用数量和种类上都令人叹为观止的研究材料，展示了美国宗教、政治、经济和教育生活中形形色色的“反智主义”以及它们的延续与变异，从而建构起一种独特的美国历史叙事，为读者开辟了一种解读美国历史和美国政治文化的新视角。我相信，这个视角对于中国读者来说具有尤其重要的意义，因为它会帮助我们看到隐藏在“民主”“平等”这些较为耳熟能详的美国价值观和美国政治实践之下的另外一种我们不太熟悉的美国历史和文化，从而获取一种对目前美国政治僵局的深层原因更深刻、更有历史感的认识。与此同时，霍夫施塔特将“反智主义”的概念带入我们的词汇中，帮助我们发现、认识和反思中国生活中的“反智主义”，并比较不同政治文化中是否会产生同样性质的、具有同等危害的“反智主义”。</p>
+  <p>也许，《反智主义》带来的最大启示，是为我们呈现了美国历史中的一个无解悖论：即一个立志追求和维系自由、民主与平等的体制，同时也在持续不断地制造一种“反智主义”的生活方式。对于霍夫施塔特那一代知识分子来说，这种悖论对美国文明始终是一种威胁。一旦大多数人顺理成章地接受了“反智主义”的生活方式，“反智主义”的情绪与心态就可能被政治野心家所利用，并在特殊的政治时刻，利用现代的传播技术，将其放大并转换成一种貌似“民主”而实为“暴政”的力量，最终扼杀拒绝顺应大众潮流的人进行独立思考的自由。而一个拒绝批判并扼杀了批判者的社会，将是一个没有活力、没有前途的社会。</p>
+  <p>霍夫施塔特的担心（思想自由在民主社会中遭到扼杀），并不是危言耸听。从冷战时代保守主义的喧嚣和麦卡锡主义制造的政治恐怖中，他看到了这种危险。事实上，在写作《反智主义》的同时，他已经对“偏执风格”（paranoid style）的政治在美国政坛上的再度出现发出警告。1964年，就在《反智主义》获普利策奖的同时，霍夫施塔特在《哈珀周刊》上发表文章，分析了以“反智主义”为基础的“偏执风格”政治。他将“偏执风格”的政治视为一种由非理性思维和非理智行为主导的政治，其特征是先入为主，拒绝真相，夸大事实，将一切与自己信仰相悖的人与事都与阴谋论联系起来。他同时指出，麦卡锡的成功在于他成功地利用了美国民众在冷战时代的焦虑感（因担心自己、家庭、社区和国家的传统优势地位丧失而引发的焦虑），并通过现代媒体和党争提供的政治空间，将大众焦虑转化成为一种恐惧，进而将这种恐惧放大，大到迫使普通美国人在政治上拒绝共产主义、在道德和心理上将共产主义视为妖魔鬼怪、将一切事实上的或想象中的与共产主义沾边的人（包括知识分子在内）都视为敌人的程度。<a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftn5">[5]</a></p>
+  <p>如果霍夫施塔特活到今天，我们不难想象他会如何解释“特朗普现象”。他的《反智主义》，已经对“反智主义”的泛滥可能带来的政治后果勾画了有力的暗示。冷战之后，美国的超级大国地位并没有维持多久。“9·11”恐怖主义袭击摧毁了美国人传统的地理安全感，全球化和数据化加速了知识的更新和信息的分享，极大地刺激了跨国资本主义的成长，而后者改变了国际政治与经济权力的格局。后发国家抓住这些新的优势，直追美国，美国作为“最富有、最自由、最伟大”的国家的地位不保，曾令美国人骄傲不已的“上帝选民”和“天定命运”的神话不堪一击。这一切对许多美国人来说，是非常难以接受的现实。</p>
+  <p>特朗普的支持者希望看到一个能够拯救美国的政治领袖的出现，而他提出的“美国第一”和“让美国再次伟大”的口号对于许多支持者来说是一个熟悉的、似乎触手可及的美好旧梦。<a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftn6">[6]</a>21世纪的特朗普支持者们，也分享着美国历史上“反智主义”的焦虑与愤怒：他们希望找回父辈曾经享有的特权与优越感、中产阶级生活的舒心和作为一个美国人的骄傲；他们怀抱对“权力精英”和“知识精英”的天然反感，拒绝接受任何“非美”（un-American）的思想与实践，并将反智主义美国的未来寄托在特朗普的大选获胜之上。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-03/6131b2404cd55d54dd5dc922+L.png" data-id="6131b2422114416715c3e7e5" alt="霍夫斯塔特。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+霍夫斯塔特。
+    </figcaption>
+  </figure>
+  <h2 id="section-2"><strong>十一 知识分子与“霍夫施塔特困境”</strong></h2>
+  <p>如同《社会达尔文主义》一样，《反智主义》也将“反智主义”的概念带出学术界之外，使其变成了一个广为使用的分析概念。但在方法论上，《反智主义》也存在着明显的缺陷。首先，霍夫施塔特的写作带有明显的“现时主义”（presentism）的目的——为了现实批判的需要，采用现代思想路径或价值判断来诠释过去。他建构了“反智主义”概念，以此来设定研究路径，寻找相关材料，建构叙事，这种做法不可避免地令人质疑“反智主义”概念的有效性和适用范围。霍夫施塔特列举了不同生活领域的“反智主义”，但并没有对它们进行比较和本质上的分析。殖民地时代宗派主义中的“反智主义”与杰克逊民主时代的“反智主义”是同一种类的吗？如果说“反智主义”的通用特征是“对思想的蔑视”，那“思想”（mind）应该如何界定呢？哪一种“思想”才算是“理性的”，应该受到尊重？霍夫施塔特并没有讨论这些问题。</p>
+  <p>霍夫施塔特对“知识分子”概念的界定也非常宽泛，甚至有些随意。霍夫施塔特的“知识分子”群体包括了各种人物：殖民地时代的清教教士、美国建国时代的领袖人物、19世纪的废奴主义者、政党政治时代的“独立派”、进步时代的“专家”、罗斯福新政的“智囊团”成员，以及麦卡锡时代敢于批评美国的作家、学者和思想家等。这些人背景复杂，成分多元，他们的共同特征是什么？为什么他们是“知识分子”（intellectual）而他们的反对者是“反知识分子”（anti-intellectual）呢？霍夫施塔特没有解释。</p>
+  <p>事实上，正如他在《反智主义》的“结论”中所指出的，美国的“知识分子”在历史上从未形成一个稳固的、独立的、可以清楚识别的群体，也从来没有创造出一种一以贯之、具有传承基因的“思想”体系。相反，我们从霍夫施塔特的描述中更多地看到的是美国“知识分子”传统的不完整性和多元性。因此，当我们看到他采用这种“知识分子针对反知识分子”（Intellectual v. Anti-intellectual）的思想模式来建构他的历史叙事时，不免想到他是否同样陷入了他力图批评的进步主义史学曾有过的局限性。如同利益冲突决定论一样，霍夫施塔特的二元对立模式也同样限制了我们去认识“反智主义”和“智识主义”各自的内部复杂性。譬如，所谓的“反智主义者”中会不会也有“智识主义”的成分呢？而所谓“智识主义者”（包括知识分子本身）是否也可能是“反智”的呢？</p>
+  <p>《反智主义》最容易为人诟病的，是它隐含的“精英主义”（elitism）的立场。当“智识”作为一种衡量标准时，拥有智识能力或选择过理智生活会被认为是一种更优越的生活素质。虽然霍夫施塔特强调知识分子本身有很多的缺点，但因为智识生活更为理性，因此它比反智生活也更为优越。然而，霍夫施塔特并没有解释“智识”与“反智”生活之间的复杂关系，以及两者是否会发生转换。这种“精英主义”立场，最终也将使霍夫施塔特陷入困境。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-03/6131b26b4cd55d54dd5dc923+L.jpg" data-id="6131b26e2114416715c3e7e6" alt="20世纪60年代，美国民权运动风起云涌。1963年美国黑人“为了工作和自由：向华盛顿进军”。（图源：视觉中国）" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+20世纪60年代，美国民权运动风起云涌。1963年美国黑人“为了工作和自由：向华盛顿进军”。（图源：视觉中国）
+    </figcaption>
+  </figure>
+  <p>在某种意义上，《反智主义》与其说是对“反智主义”的批判，不如说是对自由派知识分子所处的恶劣环境的抗议与哀叹。《反智主义》的“结语”，似乎是一首为理想状态的自由主义送终的哀歌。一方面，“反智主义”正在加速演变成为一种右翼势力的“偏执政治”；另一方面，左翼政治也在变得更加“激进”。那些力图在“左”“右”政治中间保持“独立”的知识分子（包括霍夫施塔特本人），发现自己能够生存和发挥影响力的政治空间越来越小。他们的听众与读者也在迅速分流，“独立的”知识分子作为一种“独立的”批判力量在一个高度政治化的社会难以抵挡左右翼政治的夹攻。</p>
+  <p>自从20世纪30年代末脱离左翼政治的组织和活动之后，霍夫施塔特一直埋头于象牙塔中（准确地说，他一直埋头于他在哥伦比亚大学哈密尔顿楼六层的办公室中），力图在左右翼政治之间保持一种“中立”的自由主义立场。但到了20世纪60年代，随着反对种族主义和种族歧视的民权运动与反对越战的抗议浪潮席卷整个美国、左右政治力量的交锋日趋白热化，他发现继续坚持政治“中立”愈加困难。1965年，霍夫施塔特与其他著名的历史学家一起，参加了由马丁路德·金带领的、为争取黑人选举权而举行的第三次“塞尔玛进军”（Selma March）抗议活动，这是他唯一一次对民权运动的直接参与（值得一提的是，发起第一次“塞尔玛进军”的是黑人学生领袖约翰·路易斯 [John Lewis，他在民权运动后当选并担任国会众议员多年]，当时他为了鼓励自己勇敢面对州警的暴力，在书包里放了两本书，其中一本便是霍夫施塔特的《美国政治传统》。）<a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftn7">[7]</a>尽管霍夫施塔特在感情上同情民权运动，也坚决反对越战，但他很少直接卷入到左翼抗议活动中去。</p>
+  <p>1968年，哥伦比亚大学学生为反对越战和抗议校方占用哈雷姆区（黑人区）的土地来修建体操馆的决定，举行了一场声势浩大的校园抗议活动。激进学生一度占领了学校的办公楼和教室，校方最终不得不动用校外的警察力量来终止学生的抗议活动。这桩发生在他十分钟爱的哥伦比亚大学校园里的抗议事件，给霍夫施塔特带来了极大的震撼。在当年的毕业典礼上，哥伦比亚大学打破213年的惯例，邀请霍夫施塔特作为教师代表，取代校长为全校毕业生致辞。霍夫施塔特在精心写作的短篇演讲中，对学生占领校园的行动提出了批评。他说他理解学生的立场，并支持学生对越战的反对，但他不能容忍学生对校园的占领，反对激进学生将自己的政治意愿强加于整所大学，因为大学“不是一个政治社会，也不是政治社团聚会的中心”。他强调说，大学从本质上来说是“一个进行自由探索和批判的中心”，不应该“被政治化”。他虽然意识到在现实政治中一所大学要做到“完全的和纯粹的中立”是不可能的，但主张“（政治）中立必须成为大学的目标”，因为“学术自由”对于一个社会和文明来说是至关重要的。<a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftn8">[8]</a></p>
+  <p>在《反智主义》中，霍夫施塔特努力批判的是右翼保守派的“反智主义”对知识分子的威胁。他在书中也对20世纪五六十年代的“垮掉的一代”提出了批评，认为这些自称为正统文化的反叛者的人根本没有展现出真正的“知识分子”的担当和责任感，他们所表现出的颓废主义和虚无主义也是一种“反智”现象。但他万万没有想到，“反智主义”会在美国智识生活的中心（大学）出现，而他的学生会加入到校园左翼政治的“反智主义”潮流中去。这不能不引起霍夫施塔特的深思。知识分子究竟应该如何处理与大众政治和大众的关系？这个问题早在柯蒂1954年的演讲中就被讨论。作为马克思主义者的柯蒂认为，知识分子不应自视甚高，以精英自居，甚至远离人民，而应该选择与人民站在一起，从人民那里获得支持。柯蒂引用爱默生的话警告说，知识分子如果“不与人民一起前进，他将消失在黑夜之中”（March without the people, and you march into the night）。<a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftn9">[9]</a></p>
+  <p>对于霍夫施塔特来说，在建构“反智主义”的历史叙事的时候，他似乎没有考虑过谁是“人民”的问题，也没有考虑过知识分子与人民的关系。此刻，他似乎不知道应该如何与“人民”，或者与哪一种“人民”站在一起。两年之后，霍夫施塔特将走到自己生命的尽头，为后人留下异常丰富和卓越的学术遗产。但在此时此刻，他却比任何人都更真切地面临了一种困境——作为一个坚持自由主义立场的知识分子，如何在一个高度“民主化”同时又高度“反智化”的社会中找到自己的位置。</p>
+  <p>直到今天，这种可被称为“霍夫施塔特困境”的现象，不仅依然在美国存在，而且也随着全球化的快速发展演变成为困扰所有“知识分子”的一种普遍问题。</p>
+  <p>本文是美国印第安纳大学历史系教授王希应邀为后浪版《美国生活中的反智主义》撰写的中文版序（后浪丨九州出版社2021年版），删节版将在《美国研究》发表，此版为修订后的完整版本。《燕京书评》将连续三天推送王希教授的长文，今天是第三篇。</p>
+  <p><strong>注释</strong></p>
+  <p><a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftnref1">[1]</a> Richard Hofstadter, Anti~intellectualism, pp.394~95.</p>
+  <p><a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftnref2">[2]</a> Richard Hofstadter, Anti~intellectualism, pp.399~408.</p>
+  <p><a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftnref3">[3]</a> Richard Hofstadter, Anti~intellectualism, pp. 410~415, 416~420.</p>
+  <p><a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftnref4">[4]</a> Richard Hofstadter, Anti~intellectualism, pp.427~428, 430, 432.</p>
+  <p><a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftnref5">[5]</a> Richard Hofstadter, “The Paranoid Style in American Politics,” Harper’s Magazine, November 1964, pp.76~86.该文最初是霍夫施塔特1963年在牛津大学的演讲，修订和扩充版见: Richard Hofstadter, The Paranoid Style in American Politics and Other Essays (New York: Alfred A. Knopf, 1966), pp.3~40；王希：《麦卡锡主义，一个时代的焦虑与恐惧》，第8-9页。</p>
+  <p><a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftnref6">[6]</a> 王希：《麦卡锡主义，一个时代的焦虑与恐惧》，第9~10页。</p>
+  <p><a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftnref7">[7]</a> Robert McNamara, “John Lewis: The Books in His Knapsack,” Interview with John Lewis, 1998, available at:<a href="https://medium.com/@history1800s/john-lewis-the-books-in-his-knapsack-ceec7077080">https://medium.com/@history1800s/john-lewis-the-books-in-his-knapsack-ceec7077080</a>.</p>
+  <p><a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftnref8">[8]</a> Richard Hofstadter, “The 214th Columbia University Commencement Address,” The American Scholar, Vol. 37, No. 4 (Autumn, 1968), pp.583~589.</p>
+  <p><a href="file:///G:/2021%E5%B9%B4%E6%96%87%E4%BB%B6/2021%E7%87%95%E4%BA%AC%E4%B9%A6%E8%AF%84%E7%BA%A6%E7%A8%BF%E6%9D%A5%E7%A8%BF/%E7%8E%8B%E5%B8%8C%EF%BC%9A%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/%E7%8E%8B%E5%B8%8C%E5%AE%9A%E7%A8%BF%20%20%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E5%9B%B0%E5%A2%83-0818(1).docx#_ftnref9">[9]</a> Merle Curti, “Intellectuals and Other People,” p. 282.</p>
+  <p>———</p>
+  <p>微信搜索“燕京书评”（Pekingbooks）：重申文化想象，重塑文字力量。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-09-05</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-05/%E9%9A%90%E5%BD%A2%E7%9A%84%E7%A9%B7%E4%BA%BA-%E7%BE%8E%E5%9B%BD-%E4%BC%9F%E5%A4%A7%E7%A4%BE%E4%BC%9A-%E8%AE%A1%E5%88%92%E5%A6%82%E4%BD%95%E6%B6%88%E9%99%A4%E7%B9%81%E8%8D%A3%E8%A1%A8%E8%B1%A1%E4%B8%8B%E7%9A%84%E9%9A%90%E6%80%A7%E8%B4%AB%E5%9B%B0/">
+          “隐形的穷人”：美国“伟大社会”计划如何消除繁荣表象下的隐性贫困
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-04</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-04/%E9%99%88%E6%81%92-%E5%B2%B3%E7%A7%80%E5%9D%A4-%E4%B8%AD%E5%9B%BD%E5%9C%A8%E4%B8%96%E7%95%8C%E5%8F%B2%E7%A0%94%E7%A9%B6%E7%9A%84%E5%AD%A6%E6%9C%AF%E6%84%8F%E8%AF%86%E5%92%8C%E6%96%87%E7%8C%AE%E6%84%8F%E8%AF%86%E9%9D%9E%E5%B8%B8%E8%96%84%E5%BC%B1%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+          陈恒、岳秀坤：中国在世界史研究的学术意识和文献意识非常薄弱丨燕京讲稿
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-01</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-01/%E7%8E%8B%E5%B8%8C%E4%B8%A8%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%B8%A6%E7%89%87-%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E5%9C%A8%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E6%89%AE%E6%BC%94%E7%9D%80%E6%80%8E%E6%A0%B7%E7%9A%84%E8%A7%92%E8%89%B2/">
+          王希丨美国生活中的精神鸦片：反智主义在美国生活中扮演着怎样的角色？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-31</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-31/%E7%8E%8B%E5%B8%8C-%E9%87%8D%E6%96%B0%E5%8F%91%E7%8E%B0%E9%9C%8D%E5%A4%AB%E6%96%BD%E5%A1%94%E7%89%B9%E4%B8%8E-%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89/">
+          王希：重新发现霍夫施塔特与“反智主义”
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-02/How-Much-Does-Beijing-Control-the-Ethnic-Makeup-of/">
+            前一篇：How Much Does Beijing Control the Ethnic Makeup of Tibet?
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-03/%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E6%97%B6%E4%BB%A3-%E7%BE%8E%E5%9B%BD%E4%BD%9C%E4%B8%BA%E5%8F%91%E5%B1%95%E4%B8%AD%E5%9B%BD%E5%AE%B6%E7%9A%84%E8%82%96%E5%83%8F-iYouPort/">
+            後一篇：资本主义时代：美国作为发展中国家的肖像 - iYouPort
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-09-02/How-Much-Does-Beijing-Control-the-Ethnic-Makeup-of/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-09-03/%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E6%97%B6%E4%BB%A3-%E7%BE%8E%E5%9B%BD%E4%BD%9C%E4%B8%BA%E5%8F%91%E5%B1%95%E4%B8%AD%E5%9B%BD%E5%AE%B6%E7%9A%84%E8%82%96%E5%83%8F-iYouPort/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-09-04/%E9%99%88%E6%81%92-%E5%B2%B3%E7%A7%80%E5%9D%A4-%E4%B8%AD%E5%9B%BD%E5%9C%A8%E4%B8%96%E7%95%8C%E5%8F%B2%E7%A0%94%E7%A9%B6%E7%9A%84%E5%AD%A6%E6%9C%AF%E6%84%8F%E8%AF%86%E5%92%8C%E6%96%87%E7%8C%AE%E6%84%8F%E8%AF%86%E9%9D%9E%E5%B8%B8%E8%96%84%E5%BC%B1%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-09-01/%E7%8E%8B%E5%B8%8C%E4%B8%A8%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%B8%A6%E7%89%87-%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E5%9C%A8%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E6%89%AE%E6%BC%94%E7%9D%80%E6%80%8E%E6%A0%B7%E7%9A%84%E8%A7%92%E8%89%B2/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-09-02/How-Much-Does-Beijing-Control-the-Ethnic-Makeup-of/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-09-03/%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E6%97%B6%E4%BB%A3-%E7%BE%8E%E5%9B%BD%E4%BD%9C%E4%B8%BA%E5%8F%91%E5%B1%95%E4%B8%AD%E5%9B%BD%E5%AE%B6%E7%9A%84%E8%82%96%E5%83%8F-iYouPort/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-09-04/%E9%99%88%E6%81%92-%E5%B2%B3%E7%A7%80%E5%9D%A4-%E4%B8%AD%E5%9B%BD%E5%9C%A8%E4%B8%96%E7%95%8C%E5%8F%B2%E7%A0%94%E7%A9%B6%E7%9A%84%E5%AD%A6%E6%9C%AF%E6%84%8F%E8%AF%86%E5%92%8C%E6%96%87%E7%8C%AE%E6%84%8F%E8%AF%86%E9%9D%9E%E5%B8%B8%E8%96%84%E5%BC%B1%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-09-01/%E7%8E%8B%E5%B8%8C%E4%B8%A8%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%B8%A6%E7%89%87-%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89%E5%9C%A8%E7%BE%8E%E5%9B%BD%E7%94%9F%E6%B4%BB%E4%B8%AD%E6%89%AE%E6%BC%94%E7%9D%80%E6%80%8E%E6%A0%B7%E7%9A%84%E8%A7%92%E8%89%B2/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

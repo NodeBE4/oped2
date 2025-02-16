@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Will Beijing Invade Taiwan? – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Will Beijing Invade Taiwan?
+——
+" />
+    <meta property="og:description" content="
+Will Beijing Invade Taiwan?
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Will Beijing Invade Taiwan?" />
+    <meta property="twitter:title" content="Will Beijing Invade Taiwan?" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fwill-beijing-invade-taiwan" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/will-beijing-invade-taiwan" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/will-beijing-invade-taiwan&text=Will Beijing Invade Taiwan?&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/will-beijing-invade-taiwan&title=Will Beijing Invade Taiwan?" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/will-beijing-invade-taiwan&title=Will Beijing Invade Taiwan?" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Will Beijing Invade Taiwan?&body=
+Will Beijing Invade Taiwan?
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/will-beijing-invade-taiwan" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/will-beijing-invade-taiwan&title=Will Beijing Invade Taiwan?&caption=
+Will Beijing Invade Taiwan?
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Will Beijing Invade Taiwan?&url=https://www.chinafile.com/conversation/will-beijing-invade-taiwan" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Will Beijing Invade Taiwan?</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-07-30
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Susan Thornton, Scott Swift &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/will-beijing-invade-taiwan" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1627642260000-->
+<p><a href="https://www.chinafile.com/conversation/will-beijing-invade-taiwan">Will Beijing Invade Taiwan?</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-d98fcf4e57e4f3f3e88310a171fc573a">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/gettyimages-1302222215.jpeg" title="Will Beijing Invade Taiwan?" class="colorbox" data-colorbox-gallery="gallery-node-53326-ray6TUkYPQA" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/gettyimages-1302222215.jpeg?itok=rA9r8T1B" width="1200" height="800" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+An Rong Xu—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Paintings commemorating previous battles adorn a wall in Lieyu, an outlying island of Kinmen that is the closest point between Taiwan and the People’s Republic of China, February 4, 2021.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">On July 1, Xi Jinping gave a <a href="https://asia.nikkei.com/Politics/Full-text-of-Xi-Jinping-s-speech-on-the-CCP-s-100th-anniversary" target="_blank" rel="nofollow">speech</a> marking the 100th anniversary of the Chinese Communist Party. After walking Party members through China’s recent past and glorious future, Xi turned to Taiwan. “Resolving the Taiwan question and realizing China’s complete reunification is a historic mission and an unshakable commitment of the Communist Party of China,” <a href="http://www.xinhuanet.com/english/special/2021-07/01/c_1310038244.htm" target="_blank" rel="nofollow">he said</a>. “We must take resolute action to utterly defeat any attempt toward “Taiwan independence,” and work together to create a bright future for national rejuvenation.”</p>
+      <p>What, precisely, are Beijing’s plans for Taiwan? In recent years, there has been no small amount of saber rattling, with <a href="https://www.bbc.com/news/world-asia-43806019" target="_blank" rel="nofollow">aggressive naval drills</a>, <a href="https://www.cnn.com/2021/06/15/asia/taiwan-china-warplanes-largest-adiz-incursion-intl-hnk-ml/index.html" target="_blank" rel="nofollow">aerial incursions</a>, and <a href="https://www.theguardian.com/world/2019/jan/02/all-necessary-means-xi-jinping-reserves-right-to-use-force-against-taiwan" target="_blank" rel="nofollow">warnings</a> that force would be used for reunification if necessary. But given the steep domestic and international costs of war, how likely is it that Beijing will attempt to force reunification militarily? Will the People’s Republic of China wage war on Taiwan? — <a href="https://www.chinafile.com/contributors/abby-seiff" target="_blank" rel="nofollow"><em>Abby Seiff</em></a><em><br /></em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9126" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/susan-thornton"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/thornton_sm.png?itok=Z-72h2-K" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="susan-thornton"><a href="https://www.chinafile.com/contributors/susan-thornton" title="Susan Thornton">Susan Thornton</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The simplest answer to the question of whether China will “wage war” on Taiwan is, “It depends.” No particular scenario is inevitable.</p>
+        <p>The military balance across the Taiwan Strait is changing and increasingly lopsided. This imbalance is longstanding, however, and the People’s Liberation Army’s (PLA’s) development of capabilities shouldn’t be conflated with Beijing’s intentions. The PLA simply must be prepared. Some maintain that Xi Jinping has set a <a href="https://www.thetimes.co.uk/article/taiwan-reunification-is-a-must-says-xi-jinping-p0f7wcmfd" target="_blank" rel="nofollow">timetable</a> for reunification in order to make it <a href="https://www.bbc.com/news/world-asia-54655277" target="_blank" rel="nofollow">part of his legacy</a>, but in turbulent times and facing many other daunting challenges, the weighing of costs and benefits is more likely to be determinative. Beijing is well aware that any scenario involving war on Taiwan will be dramatically costly, especially given the likelihood that global opinion will tag the mainland as the aggressor. Others point out that Beijing has <a href="https://www.brookings.edu/on-the-record/understanding-beijings-motives-regarding-taiwan-and-americas-role/" target="_blank" rel="nofollow">increased</a> its military and diplomatic pressure on Taiwan, but often mistake these moves as part of a well-honed plan, as opposed to responses to specific triggering events or trends.</p>
+        <p>Many <a href="https://www.washingtonpost.com/world/asia_pacific/taiwans-born-independent-millennials-are-becoming-xi-jinpings-lost-generation/2019/12/24/ce1da5c8-20d5-11ea-9c2b-060477c13959_story.html" target="_blank" rel="nofollow">claim</a> that public sentiment in Taiwan has irrevocably shifted against the mainland, and clearly the pressure on Hong Kong’s civil liberties in the wake of anti-government protests there have soured many of Taiwan’s youth on Beijing. Nevertheless, cross-Strait business and trade continue apace, and Taiwan’s students still head to the mainland for school and work. Over time, opinions may change. Some believe that Taiwan voters are likely to drive their leaders to take <a href="https://thediplomat.com/2020/12/more-and-more-taiwanese-favor-independence-and-think-the-us-would-help-fight-for-it/" target="_blank" rel="nofollow">increasingly pro-independence</a> stands, and that this has set a collision course with Beijing. Tsai Ing-wen, however, was reelected by a healthy margin despite (or maybe, in part, because of?) her cautious first-term stance on independence-related issues. Taiwan democracy is raucous, but ultimately pragmatic.</p>
+        <p>If there is no inevitability to Beijing waging war on Taiwan, we need to look at the factors that might make such a move more likely. Some have mentioned <a href="https://www.latimes.com/world-nation/story/2020-06-08/china-taiwan-nationalism-pla" target="_blank" rel="nofollow">domestic politics</a> as a potential catalyst for action on Taiwan, in a “wag the dog” scenario. It is difficult at this point to discern the kind of infighting that might inspire such a dramatic nationalist distraction, but with uncertainty hanging over Beijing’s political transitions it cannot be ruled out. A sudden move by Taiwan authorities away from the Republic of China Constitution, away from historical understandings around a One China framework, or to directly declare independence would all certainly be cause for alarm and would likely generate a punishing response from Beijing.</p>
+        <p>Washington also figures largely here. The line between de facto and de jure independence in the international system is a thin one that has generally been controlled by the United States. Beijing, while uncomfortable with this reality, has wagered that it could keep the U.S. from recognizing Taiwan, leaving its ambiguous status to be addressed later. But the PRC continually perceives U.S. moves toward recognition and is prone to (over)react to them. U.S. <a href="https://www.globaltimes.cn/page/202102/1214988.shtml" target="_blank" rel="nofollow">disclaimers</a> only add fuel to the paranoia. This dynamic could easily lead to the scenario envisioned by the question, especially in the current climate of mutual hostility and suspicion.</p>
+        <p>So, ultimately, whether “war is waged” over Taiwan depends on developments and leadership in Taipei, Beijing, and Washington.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9131" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/scott-swift"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/scott_swift.png?itok=svfPWg1J" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="scott-swift"><a href="https://www.chinafile.com/contributors/scott-swift" title="Scott Swift">Scott Swift</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Even the People’s Republic of China (PRC) does not definitively know the answer to this frequently posed question. The best answer is, “It depends.” The next compelling question is, “On what?”</p>
+        <p>In seeking a fuller appreciation of what is behind these questions, we need to better understand what the competition between the PRC and liberal democracies is all about. As a military practitioner it is easier for me than others to make the statement that we focus our analysis of the PRC too much on the military element. The core to the competition is about government and economic models. But this is not the discussion the PRC wants to have. They are much more comfortable with leveraging force and coercion that is core to a military competition. If we are not careful, it will be.</p>
+        <p>Among the fundamental core elements of the Chinese Communist Party that are most consequential to the question posed here are, first, its promise to the Chinese people to reverse the effects of the “100 years of humiliation.” The second element is its promise that it will never again allow the sovereignty of China to be violated. The third element is the promise to ensure the economic prosperity of the Chinese people, lifting them from the poverty forced on them by the first and second core elements.</p>
+        <p>These three elements will be key in the conditions that could trigger the PRC to move to forcibly reunite Taiwan with the PRC.</p>
+        <p>The possibility the PRC will turn to war depends on the reality that if any of these three elements are held at risk in the eyes of the CCP, their very existence is challenged. Beijing cannot afford for the Chinese people to worry that another period of “humiliation” might be at hand. In the minds of PRC leaders, this would be manifest should international recognition of Taiwan as an independent country become the norm. (This is the context of the PRC <a href="https://www.reuters.com/lifestyle/sports/china-criticises-nbc-olympics-broadcast-incomplete-map-2021-07-24/" target="_blank" rel="nofollow">protest</a> of recent NBC Olympics coverage that showed a map of China that didn’t include Taiwan.)</p>
+        <p>In the context of the second element—ensuring sovereignty—U.S. Freedom of Navigation Operations outside the PRC are viewed as actions aimed at underscoring free maritime passages as affirmed by the United Nations Convention of the Law of the Sea. To the CCP, such actions strike at the heart of their <a href="https://globalchallenges.ch/issue/1/a-sea-at-the-heart-of-chinese-national-interest/" target="_blank" rel="nofollow">legitimacy</a> in the eyes of the Chinese people.</p>
+        <p>Lastly, if the economic growth of the PRC is not sustained sufficiently to achieve promised prosperity, then there is a greater likelihood Beijing will “externalize” its internal economic challenges to include consideration of the forcible reunification of Taiwan.</p>
+        <p>To underscore a critical point, beyond the scope of Taiwan, the South China Sea, and all the other points of friction highlighted as uniquely consequential, the “competition” in its most critical context centers on the PRC’s understanding that its hybrid form of communism cannot compete against, or survive full contact with, the free and open international community of democracies.</p>
+        <p>If the PRC cannot reconcile its ability, or inability, to modify the rules-based international order to set the conditions necessary for something other than a free and open economic and governance system to compete on the global stage, it will continue to turn to force and corrosion.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9136" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/bonnie-s-glaser"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/bonnie_s._glaser.jpg?itok=pAmitscm" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="bonnie-s-glaser"><a href="https://www.chinafile.com/contributors/bonnie-s-glaser" title="Bonnie S. Glaser">Bonnie S. Glaser</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">It would be unwise to rule out the possibility of a People’s Republic of China (PRC) attack on Taiwan. PRC military modernization has focused on the mission of seizing and controlling Taiwan since the mid-1990s. The <a href="https://www.fmprc.gov.cn/ce/cegv/eng/zt/twwt/t187207.htm" target="_blank" rel="nofollow">2005 Anti-Secession Law</a> set out conditions for use of force, including the exhaustion of all means to achieve peaceful reunification. Key questions, however, are whether Xi Jinping has put unification above other national priorities, decided that it must take place now, and concluded that the risks are acceptable. I believe the answer to these questions is no.</p>
+        <p>In the 14th Five-Year Plan that was approved in March, Beijing <a href="https://www.chinadaily.com.cn/a/202011/03/WS5fa12d39a31024ad0ba82d9a_8.html" target="_blank" rel="nofollow">reaffirmed</a> its commitment to the “peaceful development of cross-Straits relations.” The same month, Xi Jinping visited Fujian, where he passed up an opportunity to visit a front-line People’s Liberation Army unit and <a href="http://www.xinhuanet.com/english/2021-03/26/c_139838605.htm" target="_blank" rel="nofollow">instead inspected</a> a mobile corps of the People’s Armed Police Force. Moreover, Xi signaled that the PRC’s approach to Taiwan would continue to rely on both carrots and sticks. He <a href="https://globaltaiwan.org/2021/06/vol-6-issue-12/" target="_blank" rel="nofollow">exhorted</a> provincial officials to “be bold in exploring new paths for integrated cross-Strait development,” including by offering economic policies that would benefit the people of Taiwan. In Xi’s July 1 speech marking the Chinese Communist Party’s (CCP’s) centenary, he reaffirmed a commitment to advancing “<a href="https://www.reuters.com/world/china/chinas-xi-pledges-reunification-with-taiwan-partys-birthday-2021-07-01/" target="_blank" rel="nofollow">peaceful reunification</a>.”</p>
+        <p>Xi is no doubt aware of the risks of waging war against Taiwan. A failed invasion or even one that ends in stalemate could pose a threat to the CCP’s legitimacy at home. An attack on Taiwan would likely result in a major war with the United States and require diverting resources from pressing domestic priorities that would set back Xi’s <a href="https://www.cfr.org/excerpt-third-revolution" target="_blank" rel="nofollow">plan</a> to achieve national rejuvenation by mid-century. Use of force would likely instill fear among China’s neighbors that Beijing could employ military means to solve other territorial disputes—potentially solidifying an anti-China coalition willing to push back against PRC aggression.</p>
+        <p>Deterring Taiwan independence, not unification, is Beijing’s top priority, and Xi has confidence that Taiwan’s “secession” can be prevented. Unification is a longer-term goal that Beijing prefers to achieve without bloodshed. The PRC has amassed a vast array of coercive tools that are being employed to undermine the confidence of the people of Taiwan in their government and weaken their will to resist integration with the mainland. As the Chinese strategist Sun Tzu wrote 2,500 years ago, “He will win who knows when to fight and when not to fight” and “to fight and conquer in all your battles is not supreme excellence; supreme excellence consists in breaking the enemy’s resistance without fighting.”</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9141" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/yu-jie-chen"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/yujiechen.jpg?itok=MWrFv4me" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="yu-jie-chen"><a href="https://www.chinafile.com/contributors/yu-jie-chen" title="Yu-Jie Chen">Yu-Jie Chen</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Beijing has long resorted to carrots and sticks to incentivize the unification of Taiwan and the People’s Republic of China (PRC) as well as to deter Taiwan’s formal declaration of independence. In recent years, however, Xi Jinping has stepped up coercion, including by increasing military pressure on Taipei. The pressure ranges from what have now become regular “<a href="https://urldefense.com/v3/__http:/www.xinhuanet.com/english/2018-04/19/c_137123087.htm__;!!JqX-yBvFPUQ!yy4uUzhLpSGsUht4b5lCDezsMXdwBvEDuYbh0GBI01JAlPlAHksGlQzWaKxp9jpz$" target="_blank" rel="nofollow">island patrols</a>” (in which People’s Liberation Army (PLA) fighter and bomber aircraft circumnavigate the island) to the PLA’s frequent entries into Taiwan’s <a href="https://fas.org/wp-content/uploads/2020/08/ADIZ-Report.pdf" target="_blank" rel="nofollow">air defense identification zone</a>. These moves appear aimed at normalizing PRC military presence around Taiwan. Beijing has multiple goals: sending warning signs both to what it views as “<a href="https://urldefense.com/v3/__https:/news.cgtn.com/news/2021-03-03/-Taiwan-independence-forces-threaten-cross-Strait-peace-spokesperson-YkVtp3XQis/index.html__;!!JqX-yBvFPUQ!yy4uUzhLpSGsUht4b5lCDezsMXdwBvEDuYbh0GBI01JAlPlAHksGlQzWaI-nvSmA$" target="_blank" rel="nofollow">independence forces</a>” in Taiwan and <a href="https://urldefense.com/v3/__https:/news.cgtn.com/news/2020-05-20/Attempts-to-split-China-will-not-be-tolerated-State-Council-spokesman-QDY2NKEbbG/index.html__;!!JqX-yBvFPUQ!yy4uUzhLpSGsUht4b5lCDezsMXdwBvEDuYbh0GBI01JAlPlAHksGlQzWaHLY72ke$" target="_blank" rel="nofollow">perpetrators of “foreign interference”</a> in the U.S.; training its armed forces and boosting combat capabilities; increasing the cost to Taipei of monitoring Beijing’s near-daily military activities; and pushing the envelope to alter the status quo across the Taiwan Strait.</p>
+        <p>Whether Beijing would actually wage war on Taiwan, however, depends mostly on Beijing’s perceptions of the cost of such an action, including its perception of Taiwan’s determination to defend itself and the potential for U.S. intervention. Thus, raising Beijing’s perception of the cost of invasion is the key to preventing it from making a devastating, tragic gambit.</p>
+        <p>Therefore, Taiwan must enhance its defensive capabilities, both military and societal. While the lure of acquiring bright, shiny objects for its arsenal may be almost irresistible, Taiwan ought to attend more to civilian preparation. There is a lot of room for improvement in the work of readying Taiwan’s citizenry for a possible PLA invasion in the hopes of prolonging and sustaining Taiwan’s resistance. For example, Enoch Wu, a rising Democratic Progressive Party politician, has <a href="https://urldefense.com/v3/__https:/tw.appledaily.com/forum/20201008/COZCM6LDPJF3DGPN2W3JDHGEQE/__;!!JqX-yBvFPUQ!yy4uUzhLpSGsUht4b5lCDezsMXdwBvEDuYbh0GBI01JAlPlAHksGlQzWaEhsOsJg$" target="_blank" rel="nofollow">proposed</a> that Taiwan transform its existing military reserves in order to develop an effective civil defense force that would constitute a defiant holdout against an invasion. But this proposal has not gained much traction. Taiwanese society must not succumb to the temptations of complacency and indifference.</p>
+        <p>Regardless of whether Beijing plans to invade Taiwan soon, miscommunication worsens the risk of war. Since Xi has refused to engage with President Tsai Ing-wen, his unilateral, non-cooperative approach might lead to miscalculation, especially amid military tensions. At this point, the possibility of China’s current militant actions causing an accident that leads to an exchange of missiles is more worrying than the prospect of an intentional invasion.</p>
+        <p>The U.S. must continue to support Taiwan. Washington should send a clear message that it will not be a bystander when the PRC threatens to unify Taiwan by force or should Beijing launch an unprovoked attack. This strategic clarity from the U.S., together with Taiwan’s readiness, would help put restraints on Beijing’s calculations. Beijing would also be wise not to force itself into a situation in which everything that occurs looks like a nail to be hammered. Waging war against Taiwan would be disastrous not only for Taiwan but also for PRC society, the world, and possibly even Xi’s tenure.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9151" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/scott-w-harold"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/scott_harold.png?itok=l4yxAgh_" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="scott-w-harold"><a href="https://www.chinafile.com/contributors/scott-w-harold" title="Scott W. Harold">Scott W. Harold</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">With the People’s Republic of China (PRC) regularly rattling its saber towards Taiwan, many observers worry that the Taiwan Strait is becoming one of the most <a href="https://www.economist.com/leaders/2021/05/01/the-most-dangerous-place-on-earth" target="_blank" rel="nofollow">dangerous places on Earth</a>. Yet, while the People’s Liberation Army (PLA) has been <a href="https://www.cfr.org/backgrounder/chinas-modernizing-military" target="_blank" rel="nofollow">modernizing</a> its forces with a Taiwan contingency in mind for the past two and a half decades, there remain good reasons to think that Xi Jinping is unlikely to launch a war of aggression against Taiwan in the near-term.</p>
+        <p>First, the PRC can live without Taiwan, and has for all but four out of the last 126 years. Only from 1945 to 1949 did a regime that controlled the mainland also occupy Taiwan. At no point in its history has Taiwan ever been part of the People’s Republic of China. And democratic Taiwan poses no military threat to the PRC today.</p>
+        <p>Second, part of the impression that the PRC may be on the verge of using force against Taiwan may stem from Chinese political warfare and psychological operations. While Xi has <a href="http://www.xinhuanet.com/english/2017-08/01/c_136491455.htm" target="_blank" rel="nofollow">ordered</a> his military to be prepared to fight and “win wars,” the reality is that the Communist Party’s goal remains to <a href="https://www.oxfordreference.com/view/10.1093/acref/9780191843730.001.0001/q-oro-ed5-00010536#:~:text=Sun%20Tzu%20fl.&amp;text=To%20win%20one%20hundred%20victories,is%20the%20acme%20of%20skill.&amp;text=Invincibility%20lies%20in%20the%20defence,of%20victory%20in%20the%20attack." target="_blank" rel="nofollow">win without fighting</a>. Any choice to ignite conflict, however, would be entirely a product of Beijing’s preferences; Taipei would never do so.</p>
+        <p>Third, the risks—for the PRC, Xi, CCP leadership, military, and Chinese people—of a war with Taiwan are enormous. Should Xi launch a war of choice and lose, his rivals could try to remove him from the leadership, whereas dangling the prospect of using force against Taiwan—without actually doing so—might help him maintain his grip on power. And Xi surely knows that the PLA cannot guarantee it could win a war for Taiwan, which would involve complex joint operations to execute an amphibious invasion and airborne assault, some of the most challenging military operations in the world.</p>
+        <p>Finally, the PLA would not merely be confronting the challenges of operating in the choppy waters of the Taiwan Strait against a highly motivated set of Taiwanese defenders who have seen the repression that occurs in places the PRC rules such as Hong Kong, Tibet, and Xinjiang. The PRC armed forces would also have to contend with the near-certain intervention of the U.S. and Japan, and potentially of other actors such as Australia, Canada, New Zealand, or the European allies, who could contribute diplomatic, economic, intelligence, or other support.</p>
+        <p>While there are good reasons why the PRC may not launch such an attack, Taiwanese, American, or Japanese policymakers might not feel overly confident that conflict will not occur: Xi has consolidated enough authority in his own hands that if he mistakenly concludes that he can win, or that he has no other choice but to fight, he might initiate hostilities even if he judges such a conflict to be high-risk. For this reason, Taiwan, the U.S., and Japan might consider accelerating joint preparations to ensure that deterrence holds and that their defense capabilities are sufficient to defeat any PRC effort at military coercion.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9156" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/ryan-hass"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/ryanhass.jpg?itok=E-0-MAlD" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="ryan-hass"><a href="https://www.chinafile.com/contributors/ryan-hass" title="Ryan Hass">Ryan Hass</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">There has been a wave of commentary by current and former officials and experts in the United States <a href="https://www.foreignaffairs.com/articles/china/2021-06-03/china-taiwan-war-temptation" target="_blank" rel="nofollow">warning</a> of <a href="https://www.politico.com/news/2021/03/15/china-growing-threat-taiwan-476170" target="_blank" rel="nofollow">impending conflict</a> in the Taiwan Strait. Several such analyses even have defined <a href="https://www.nbcnews.com/news/world/china-could-invade-taiwan-next-6-years-assume-global-leadership-n1260386" target="_blank" rel="nofollow">timespans</a> during which war will become likely.</p>
+        <p>The People’s Republic of China’s (PRC’s) recent behavior has contributed to growing alarm about Taiwan’s security. In the past few years, Beijing has drawn blood at the <a href="https://www.cfr.org/in-brief/china-india-border-dispute-what-know" target="_blank" rel="nofollow">Sino-Indian border</a>, threatened <a href="https://asia.nikkei.com/Opinion/Chinese-aggression-pushes-Vietnam-ever-closer-to-Washington" target="_blank" rel="nofollow">Vietnam</a>, become more aggressive in <a href="https://www.npr.org/2021/07/20/1018283149/china-blames-united-states-for-cyberattacks" target="_blank" rel="nofollow">cyber espionage</a>, committed mass-scale atrocities in <a href="https://www.chinafile.com/keyword/xinjiang" target="_blank" rel="nofollow">Xinjiang</a>, <a href="https://amti.csis.org/" target="_blank" rel="nofollow">bolstered</a> its military presence in the South China Sea, <a href="https://www.lawfareblog.com/water-wars-shadowboxing-taiwan-and-senkakus" target="_blank" rel="nofollow">increased</a> its operations near the Senkaku Islands, trampled <a href="https://www.chinafile.com/keyword/hong-kong" target="_blank" rel="nofollow">Hong Kong’s</a> autonomy, and intensified its military <a href="https://www.japantimes.co.jp/news/2021/04/10/asia-pacific/china-pla-taiwan-strait/" target="_blank" rel="nofollow">intimidation</a> of Taiwan. The PRC is <a href="https://www.cfr.org/backgrounder/chinas-modernizing-military" target="_blank" rel="nofollow">investing</a> heavily in military capabilities for a Taiwan contingency. The PRC’s top leaders also continue to emphasize <a href="https://www.brookings.edu/blog/order-from-chaos/2019/01/07/8-key-things-to-notice-from-xi-jinpings-new-year-speech-on-taiwan/" target="_blank" rel="nofollow">publicly</a> their determination to achieve unification with Taiwan.</p>
+        <p>Given these realities, it would be imprudent to ignore risks of conflict. Beijing certainly is not acting as if it has forsworn military options for resolving cross-Strait differences. The U.S. and Taiwan accordingly must strengthen their deterrent capability.</p>
+        <p>At the same time, viewed from Beijing’s vantage, there are still powerful reasons for the PRC to choose strategies other than use of force in pursuit of its preferred outcome on Taiwan. Any PRC attempt to take Taiwan by military means very likely would draw U.S., <a href="https://www.reuters.com/world/asia-pacific/japans-aso-peaceful-solution-desirable-any-taiwan-contingency-2021-07-06/" target="_blank" rel="nofollow">Japanese</a>, and potentially other countries’ militaries into the conflict. Beijing couldn’t enter the fight with confidence in its ability to contain the geographic scope or control escalation, including the use of nuclear weapons. PRC leaders also would expose their own national vulnerabilities. The PRC relies on imports of food, fuel, and other critical inputs to feed its people and power its economy. The People’s Liberation Army (PLA) Navy does not presently possess the capability to protect long supply lines through which these imports flow.</p>
+        <p>Any PRC use of force against Taiwan also would poison China’s image in the world. It would generate volatility that could trigger capital flight and diversion of trade flows. PRC leaders would, in effect, need to put all other national goals at risk in service of the pursuit of unification with Taiwan, an outcome that would be far from preordained in any conflict scenario.</p>
+        <p>Some may rejoin that this analysis underweights the PRC’s growing military pressure on Taiwan. Although concerning, PLA operational activities on their own are not a signal of imminent conflict. They also serve as visible symbols in Beijing’s narrative that it has the capacity to deter Taiwan from declaring independence and registering opposition to closer U.S.-Taiwan ties. Beijing would like for its military maneuvers to generate alarm in Taipei and Washington as well as attention at home; PRC leaders want to be perceived as dealing strongly with the situation.</p>
+        <p>Beijing’s approach to Taiwan can be better understood as a light dimmer rather than a switch. Beijing already is working along a continuum of efforts to “<a href="https://nationalinterest.org/blog/buzz/heres-chinas-plan-win-without-fighting-114226" target="_blank" rel="nofollow">win without fighting</a>”—to compel Taiwan to enter negotiation over the terms of the political relationship across the Taiwan Strait. An overemphasis on scanning the horizon for an invading flotilla risks losing sight of the proximate pressures Taiwan faces right now and of developing effective ways to respond.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2021-08-18</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-18/Overseas-NGOs-and-Foundations-and-COVID-in-China/">
+          Overseas NGOs and Foundations and COVID in China
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-08</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-08/Xi-s-China,-the-Handiwork-of-an-Autocratic-Rou%C3%A9/">
+          Xi’s China, the Handiwork of an Autocratic Roué
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-20</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-20/Making-Sense-of-Support-for-Donald-Trump-in-China/">
+          Making Sense of Support for Donald Trump in China
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-12</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-12/How-Should-the-U.S.-Approach-Climate-Diplomacy-wit/">
+          How Should the U.S. Approach Climate Diplomacy with China?
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-07-30/%E6%8A%8A%E4%B8%9C%E4%BA%AC%E5%A5%A5%E8%BF%90%E4%BD%9C%E4%B8%BA%E6%96%B9%E6%B3%95-%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83-%E5%A4%A7%E5%9E%8B%E6%B4%BB%E5%8A%A8-%E7%9A%84%E6%84%8F%E4%B9%89/">
+            前一篇：把东京奥运作为方法：重新思考“大型活动”的意义
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-07-31/%E5%AE%A0%E7%89%A9%E7%9A%84%E7%88%B1%E4%B8%8E%E6%99%BA%E6%85%A7-%E6%88%91%E4%BB%AC%E4%B8%8E%E7%8B%97%E7%8B%97%E4%B9%8B%E9%97%B4%E7%9A%84%E7%88%B1%E7%9A%84%E6%9C%AC%E8%B4%A8/">
+            後一篇：宠物的爱与智慧：我们与狗狗之间的爱的本质
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-07-30/%E6%8A%8A%E4%B8%9C%E4%BA%AC%E5%A5%A5%E8%BF%90%E4%BD%9C%E4%B8%BA%E6%96%B9%E6%B3%95-%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83-%E5%A4%A7%E5%9E%8B%E6%B4%BB%E5%8A%A8-%E7%9A%84%E6%84%8F%E4%B9%89/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-07-31/%E5%AE%A0%E7%89%A9%E7%9A%84%E7%88%B1%E4%B8%8E%E6%99%BA%E6%85%A7-%E6%88%91%E4%BB%AC%E4%B8%8E%E7%8B%97%E7%8B%97%E4%B9%8B%E9%97%B4%E7%9A%84%E7%88%B1%E7%9A%84%E6%9C%AC%E8%B4%A8/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-08-08/Xi-s-China,-the-Handiwork-of-an-Autocratic-Rou%C3%A9/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-07-20/Making-Sense-of-Support-for-Donald-Trump-in-China/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-07-30/%E6%8A%8A%E4%B8%9C%E4%BA%AC%E5%A5%A5%E8%BF%90%E4%BD%9C%E4%B8%BA%E6%96%B9%E6%B3%95-%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83-%E5%A4%A7%E5%9E%8B%E6%B4%BB%E5%8A%A8-%E7%9A%84%E6%84%8F%E4%B9%89/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-07-31/%E5%AE%A0%E7%89%A9%E7%9A%84%E7%88%B1%E4%B8%8E%E6%99%BA%E6%85%A7-%E6%88%91%E4%BB%AC%E4%B8%8E%E7%8B%97%E7%8B%97%E4%B9%8B%E9%97%B4%E7%9A%84%E7%88%B1%E7%9A%84%E6%9C%AC%E8%B4%A8/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-08-08/Xi-s-China,-the-Handiwork-of-an-Autocratic-Rou%C3%A9/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-07-20/Making-Sense-of-Support-for-Donald-Trump-in-China/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>2023 日本東京租房心得分享 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+2023 日本東京租房心得分享
+——
+" />
+    <meta property="og:description" content="
+2023 日本東京租房心得分享
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="2023 日本東京租房心得分享" />
+    <meta property="twitter:title" content="2023 日本東京租房心得分享" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2F2023-japan-tokyo-renting-9b4eef013bfe%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/2023-japan-tokyo-renting-9b4eef013bfe?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/2023-japan-tokyo-renting-9b4eef013bfe?source=rss-f1fb3e40dc37------2&text=2023 日本東京租房心得分享&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/2023-japan-tokyo-renting-9b4eef013bfe?source=rss-f1fb3e40dc37------2&title=2023 日本東京租房心得分享" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/2023-japan-tokyo-renting-9b4eef013bfe?source=rss-f1fb3e40dc37------2&title=2023 日本東京租房心得分享" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=2023 日本東京租房心得分享&body=
+2023 日本東京租房心得分享
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/2023-japan-tokyo-renting-9b4eef013bfe?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/2023-japan-tokyo-renting-9b4eef013bfe?source=rss-f1fb3e40dc37------2&title=2023 日本東京租房心得分享&caption=
+2023 日本東京租房心得分享
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=2023 日本東京租房心得分享&url=https://hulitw.medium.com/2023-japan-tokyo-renting-9b4eef013bfe?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>2023 日本東京租房心得分享</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-11-30
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/2023-japan-tokyo-renting-9b4eef013bfe?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1701346672000-->
+<p><a href="https://hulitw.medium.com/2023-japan-tokyo-renting-9b4eef013bfe?source=rss-f1fb3e40dc37------2">2023 日本東京租房心得分享</a>
+——</p>
+
+<div>
+  <p>在<a href="https://life.huli.tw/2023/10/29/japan-newbie-visa-address-phone-and-bank/">上一篇</a>有提到我把新手任務都跑得差不多了，但還剩下一個最麻煩的新手村大魔王，那就是租房了。</p>
+  <p>來日本一個多月以後，終於把租房以及房內的一些家具搞定了，也已經順利入住，並且有水電瓦斯以及馬斯洛需求理論的最底層：網路。趁著記憶猶新，是時候來寫一篇詳細講講租房的心得了。</p>
+  <p>對了，我之前在台灣的時候基本上都是住家裡，沒有在台灣租過房，所以連租房這件事情也是個初心者。</p>
+  <h3 id="section">第一關：定義找房條件</h3>
+  <p>既然要租房，那第一步就是想想自己想找怎樣的房子，而這之中又會牽涉更多更多細節，例如說預算、房型、地點以及可以接受的通勤時間等等。</p>
+  <h3 id="section-1">從通勤時間思考地點</h3>
+  <p>根據日經中文網在 2023 的報導，<a href="https://zh.cn.nikkei.com/politicsaeconomy/politicsasociety/51275-2023-02-03-05-00-10.html">日本人花在上班上學路上的平均時間為38分鐘</a>，而東京的平均時間則是 45 分鐘。交通費的話通常日本公司都會有全額補助，會贊助你買定期票的錢，所以倒是不用擔心。</p>
+  <p>我的辦公室在六本木那一帶，我希望能離公司比較近一點，會比較方便，能接受的通勤時間是 30 分鐘以內。</p>
+  <p>我們先來看一張東京都的地圖（來源：<a href="https://zh.m.wikipedia.org/wiki/%E4%B8%9C%E4%BA%AC">維基百科</a>）：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*2whcYmX6ljzpWczt.png" />
+  </figure>
+  <p>一般人對東京的認識大概是右邊紫色那一區，叫做東京 23 區，但實際上東京都其實滿大的，一直延伸到左邊去。六本木位於港區，在 23 區裡面中間偏下的位置。</p>
+  <p>如果想要通勤 30 分鐘以內，那大概就是中間那幾區可以考慮。決定了通勤時間以後，在決定地點時我其實還考慮了更細節的問題：電車擁擠程度。</p>
+  <p>之前就聽說過東京上班時間的電車很可怕，我自己來旅遊時也有碰過一遍，那是絕對不想再碰到的場合。於是當時我就上網找了一些電車擁擠度的文章做為參考，避免成為沙丁魚的一魚：</p>
+  <ol>
+    <li><a href="https://resources.realestate.co.jp/zh_TW/2019/08/21/%E6%9D%B1%E4%BA%AC%E6%BB%BF%E5%93%A1%E9%9B%BB%E8%BB%8A%E6%93%81%E6%93%A0%E7%A8%8B%E5%BA%A6%E8%AA%BF%E6%9F%A52018%E5%B9%B4%E5%BA%A6%E7%89%88/">東京滿員電車擁擠程度調查2018年度版｜住在這些電車路線，上班時間要做好被擠扁覺悟！</a></li>
+    <li><a href="https://tokyo.letsgojp.com/archives/479826/">擠過電車才算去過日本！「東京電車」最擁擠路線TOP5公開，你都搭過嗎？</a></li>
+  </ol>
+  <p>而通勤時間的長短其實與物理距離不一定成正比，主要還是看離車站的距離以及是否需要轉車。</p>
+  <p>舉例來說，底下這張圖是從日本紅十字會醫療中心到澀谷車站，直線距離沒有到很遠，但只能搭公車，Google 說要 19 分鐘。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*TZFtIYvRhBuV4JaC.png" />
+  </figure>
+  <p>而這張是從直線距離明顯遠很多的東京都庭園美術館到澀谷站，需要搭兩站的電車，但是卻只要 18 分鐘。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*BvDZoI6UsG-JFN3J.png" />
+  </figure>
+  <p>這就是我所說的通勤時間與物理距離不一定成正比，需要考量到各種細節。最佳解是找個不需要轉車可以直達的站，然後離這個車站又近，就能減少通勤時間，不過離車站近的房價可能也會比較高就是了，可以自己衡量。</p>
+  <p>另外再提醒一個小細節，雖然說上班通勤的交通費會補助，但是依然要考慮到下班後的通勤狀況，尤其是日本電車系統的轉換。</p>
+  <p>舉例來說，上圖左邊中間被卡掉的那個車站是「中目黑」，下方的那個車站是「目黑」，雖然這兩個車站的直線距離很近，但是從中目黑如果要到目黑，需要搭一站日比谷線到惠比壽，再從惠比壽搭一站山手線才能到目黑。</p>
+  <p>就跟台北捷運差不多，搭一站總是最貴的，從中目黑到惠比壽要 178 日幣，再轉山手線搭到目黑要 136 日幣，加起來是 314 日幣。</p>
+  <p>搭山手線半圈從澀谷到上野也才 200 日幣而已，可見這種「搭一站就要轉車」其實是對錢包很不利的行為，不過換個角度想的話就是：「既然如此就走路吧！身體健康精神好」，這樣想也是可以的。</p>
+  <p>地點決定了以後，就可以來定義更多找房條件了。</p>
+  <h3 id="section-2">更多找房條件細節</h3>
+  <p>最常見的就是這幾個：</p>
+  <ol>
+    <li>房型</li>
+    <li>大小</li>
+    <li>方位</li>
+    <li>房屋構造</li>
+    <li>建築年份</li>
+  </ol>
+  <p>房型的話日本有一套自己的術語，什麼 1K、1R、1LDK 之類的，這個上網隨便搜尋一下就會有更完整的說明，就不在這邊詳細講了，總之只要記住：</p>
+  <ol>
+    <li>K 是廚房 kitchen</li>
+    <li>L 是客廳 living</li>
+    <li>D 是用餐的地方 dining</li>
+  </ol>
+  <p>總之呢，像我跟我太太兩個人來說，通常至少需要 1LDK，預算更多的可以考慮 2LDK。</p>
+  <p>然後日本的房屋大小是用平方米來算，把它乘以 0.3（更精確是 0.3025）就是坪了。之前聽朋友說過，1LDK 的話如果是 40 平方米以上會比較舒適，也就是 12 坪。另外，這邊的坪數都是實坪，不用考慮公設跟公設比的問題。</p>
+  <p>之前有朋友去日本工作的時候有介紹自己的 1LDK 租屋，有興趣的可以看一下：<a href="https://www.youtube.com/watch?v=Oy-JuucBXmI&amp;ab_channel=SimonLin">1LDK 新家開箱 | 東京月租16萬日幣的房子長什麼樣子？日本租屋流程、房間規劃分享、Room Tour</a></p>
+  <p>至於方位的話，坐北朝南是最好的。</p>
+  <p>房屋構造的話也分成很多種，像是：</p>
+  <ol>
+    <li>木造</li>
+    <li>SC 或 S 鋼構 （鉄骨）</li>
+    <li>RC 鋼筋混凝土（鉄筋コンクリート）</li>
+    <li>SRC 鋼骨鋼筋混凝土（鉄骨鉄筋コンクリート）</li>
+  </ol>
+  <p>想要隔音好的話，挑後兩種就對了，SRC 隔音是最好的，當初我在租房時只考慮 RC 跟 SRC。更多差異可以參考：<a href="https://suumo.jp/article/oyakudachi/oyaku/chintai/fr_room/fr_roomkouzou/">RC造とは？SRC造、S造、木造とはどんな建物構造？住み心地は違うの？</a>。</p>
+  <p>至於建築年份，除了房屋新舊以外，更在意的其實跟台灣一樣，是耐震程度。像是 921 以後台灣的房屋耐震標準有改過一版，所以才會有「要買房請挑 921 之後蓋的」的說法，而日本也是類似，最近一次改版是 2000 年，因此屋齡在 20 年以內算是最適合的。</p>
+  <h3 id="section-3">其他建築設備</h3>
+  <p>非常推薦這篇裡面講到的各種細節以及設備：<a href="https://medium.com/engineercurry/%E5%A4%96%E5%9C%8B%E4%BA%BA%E5%9C%A8%E6%97%A5%E6%9C%AC%E6%9D%B1%E4%BA%AC%E7%A7%9F%E6%88%BF-%E6%88%91%E6%98%AF%E6%80%8E%E9%BA%BC%E4%BD%BF%E7%94%A8-suumo-%E6%89%BE%E6%88%BF%E7%9A%84-a284205a69d1">外國人在日本東京租房 — 我是怎麼使用 SUUMO 找房的</a>，底下我簡單講幾個比較重要的。</p>
+  <p>首先，日本這邊不像台灣很多社區大樓都有 24 小時的警衛可以代收包裹，因此喜歡網購的朋友們會覺得很不方便。這時候，你就需要有「宅配箱（宅配ボックス）」的房子了！</p>
+  <p>宅配箱說穿了就是很多個有密碼鎖的櫃子，快遞會將物品放到宅配箱，然後配一組密碼，接著把密碼放到你的信箱或是寄電子郵件給你，你下班的時候再去宅配箱拿。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*MZ0kgcwlH3iX1xLC.jpg" />
+  </figure>
+  <p>雖然聽起來很方便，但有兩點需要注意：</p>
+  <ol>
+    <li>宅配箱大小要注意，太小的放不下什麼東西，要注意網購寄來基本上都是用紙箱裝，體積會比買的物品還大</li>
+    <li>需要本人簽收的信件還是只能本人簽收</li>
+  </ol>
+  <p>針對第二點，在找地點的時候如果附近有假日會開的郵局的話，我覺得是個非常加分的選項，就可以假日去拿一定要本人簽收的信件。</p>
+  <p>接著第二個很重要的地方是敷地内ゴミ置場，也就是垃圾場。在日本倒垃圾是很麻煩的一件事情，都需要看好禮拜幾要丟什麼垃圾，例如說資源回收可能就是每週一次而已，錯過要再等一週。</p>
+  <p>因此如果有個垃圾場可以隨時倒垃圾，會是很方便的一件事情。</p>
+  <p>大概就這兩點是我覺得最重要的，其他可以看開頭貼的那篇文章，裡面有講到更多資訊。之前還看到有文章寫說有些比較貴的新房子會內建地暖，有些還會在廚房水槽內建廚餘處理機，但我自己找的房子沒看過這些就是了。</p>
+  <h3 id="section-4">第二關：定義預算</h3>
+  <p>大概知道有哪些找房條件以後，就可以根據預算來調整了。這兩樣我覺得先後順序不重要，反正一定會一直互相影響。例如說我原本預算抓 15 萬好了，結果發現這個預算底下既沒有宅配箱又沒有垃圾場，假如我很在意這兩個，就只好提高預算。</p>
+  <p>或也還有一種方式，那就是先去租房網站根據自己最想要的條件搜尋，看一下價位大概都是多少，接著才來思考預算問題。總之呢，每個人的預算都不同啦，總是會有個可以調整的空間跟上限。</p>
+  <p>再推薦一次上面那篇：<a href="https://medium.com/engineercurry/%E5%A4%96%E5%9C%8B%E4%BA%BA%E5%9C%A8%E6%97%A5%E6%9C%AC%E6%9D%B1%E4%BA%AC%E7%A7%9F%E6%88%BF-%E6%88%91%E6%98%AF%E6%80%8E%E9%BA%BC%E4%BD%BF%E7%94%A8-suumo-%E6%89%BE%E6%88%BF%E7%9A%84-a284205a69d1">外國人在日本東京租房 — 我是怎麼使用 SUUMO 找房的</a>，有教你用日本找房網站 SUUMO 來篩選，可以先用這個網站看看價位大概都是多少，再根據價位來調整預算以及想要的設備。</p>
+  <h3 id="section-5">其他需注意的細節</h3>
+  <p>日本租房基本上都會透過管理公司，所以你不會直接接觸到房東。</p>
+  <p>有些房東不想租給外國人，或是不想租給沒有保證人的人。在 SUUMO 上搜尋時記得勾選「不用保證人」之類的選項。</p>
+  <p>另外，所謂的「初期費用」就是租房以後剛開始要付的那一大筆錢，包括：</p>
+  <ol>
+    <li>第一個月的租金</li>
+    <li>押金（通常是一至兩個月）</li>
+    <li>禮金（通常是一個月，付錢給房東感謝他租你房子）</li>
+    <li>保證費用（付給保證公司）</li>
+    <li>住宅火險</li>
+    <li>仲介費（通常是一個月）</li>
+    <li>換鎖費用（這個是房客出）</li>
+  </ol>
+  <p>還不含買家具跟搬家費用什麼的，光是簽約之後要付的這一大筆，大概就要抓個「4~6 個月的房租」。</p>
+  <p>有些房子可能沒有禮金，但通常會轉嫁到租金上面，會貴一點點，不過可以省掉一些初期費用，可以自己做個取捨。</p>
+  <p>然後日本的租房合約基本上一簽就是兩年，提前解約的話要付違約金，細節的話就看合約怎麼規定。例如說我的租房合約就寫說一年後解約不用違約金，一年內的話要付一個月。</p>
+  <h3 id="section-6">第三關：整理好租房條件</h3>
+  <p>我自己整理好的租房條件長這樣：</p>
+  <h3 id="section-7">租屋地點</h3>
+  <ol>
+    <li>離六本木通勤時間 30 分鐘以內</li>
+    <li>最好是能夠不用換車直達</li>
+  </ol>
+  <h3 id="section-8">房型</h3>
+  <p>1LDK，40 平方米以上<br />方位：朝南為佳<br />構造：鋼筋</p>
+  <h3 id="section-9">預算</h3>
+  <p>基本上是希望月租 20 萬日幣以內，但如果條件不錯而且超過一點也可以接受，最高可以到 25 萬日幣。</p>
+  <h3 id="section-10">其他條件</h3>
+  <p>一定要有的：</p>
+  <ol>
+    <li>電梯</li>
+    <li>宅配箱，可以收網購的那種</li>
+    <li>敷地内ゴミ置場 (垃圾置放處)，可以隨時倒垃圾</li>
+    <li>三樓（含）以上</li>
+    <li>不要瓦斯桶</li>
+    <li>屋齡不要超過 20 年</li>
+  </ol>
+  <p>有的話很好：</p>
+  <ol>
+    <li>一樓有門禁，有安全鎖的那種</li>
+    <li>駐輪場あり (腳踏車停車場)</li>
+    <li>從家裡看出去有景觀</li>
+    <li>隔音比較好</li>
+    <li>屋齡 10 年以內</li>
+  </ol>
+  <h3 id="suumo">範例（都從 suumo 上找的）</h3>
+  <ol>
+    <li><a href="https://suumo.jp/chintai/bc_100341467784/">セントラルクリブ六本木I</a></li>
+    <li><a href="https://suumo.jp/chintai/bc_100341395526/">ウェリス六本木</a></li>
+    <li><a href="https://suumo.jp/chintai/bc_100335660253/">https://suumo.jp/chintai/bc_100335660253/</a></li>
+    <li><a href="https://suumo.jp/chintai/bc_100337794975/">麻布台TSタワ</a></li>
+    <li><a href="https://suumo.jp/chintai/bc_100333930776/">レジディア麻布台</a></li>
+  </ol>
+  <h3 id="section-11">第四關：找房屋仲介</h3>
+  <p>在日本租房基本上都透過仲介居多，如果會講日文的話直接去想租的那區的仲介公司應該是最快的。像我這種不會講日文的，找個會說中文的仲介是最省事的。</p>
+  <p>在臉書上有各種台灣人在日本的社團，裡面都會有很多房仲，據說去那邊發文說想租房的話就會收到一堆房仲的訊息（我是沒試過啦），也會有些房仲常常在那邊貼租屋訊息。</p>
+  <p>每個仲介能拿到的房源基本上都是一樣的，他們似乎有個共同的系統可以查看，而我的話是會先在 SUUMO 上面自己找好想看的，再貼給房仲幫忙聯絡。</p>
+  <p>重點來了，根據我自己的經驗，在 SUUMO 或其他網站上面看到的物件，可能只有一兩成是最後可以看的，其他都是：</p>
+  <ol>
+    <li>已經租出去了，但還沒拿掉</li>
+    <li>已經有其他人先申請了</li>
+    <li>日期搭不上（可能兩個月後才開始出租）</li>
+    <li>需要保證人</li>
+    <li>不租給外國人</li>
+  </ol>
+  <p>我可能貼了 20 間給房仲，房仲幫忙聯絡過後，發現只有 1 間是真的可以租的。</p>
+  <p>找房有時候真的就是運氣運氣的，想要找到真的很理想的房屋的話，建議短租先租個兩個月，時間拉長的話就會有更多的物件可以看。</p>
+  <p>租屋條件定好了、仲介也找了，接下來就是看房了。</p>
+  <h3 id="section-12">第五關：看房</h3>
+  <p>看房的時候可以留意幾點：</p>
+  <ol>
+    <li>從車站走到房子的距離，路途是否好走，是不是會有上下坡等等</li>
+    <li>附近的生活機能（當初找房時因為我找的區域都在比較市區，所以沒有特別考慮這點）</li>
+    <li>附近有沒有開到很晚、很熱門的餐廳（有的話怕晚上比較吵）</li>
+    <li>附近會不會有電車經過（會比較吵）</li>
+    <li>通風以及採光</li>
+    <li>實際格局，建議帶個捲尺去量，會比較知道哪邊可以放什麼家具</li>
+    <li>宅配箱大小以及數量</li>
+    <li>社區公佈欄上面有貼什麼訊息（例如說剛好設備要整修一段時間之類的）</li>
+    <li>垃圾場的大小以及可以丟的種類</li>
+    <li>電梯的數量以及大小</li>
+  </ol>
+  <p>其中最需要在意的應該就是房間格局跟大小了，格局不好的話空間會比較難利用，建議實際量一下。</p>
+  <p>想要有比較大的工作桌的話，大小一般是 120x60 左右，不需要這麼大的話可能 100x50 就夠用了。</p>
+  <p>床的話單人床約莫是 90x195 左右，要床架的話會再大一點。沙發的話兩人座 120 公分差不多，還有再小一點的。</p>
+  <p>最理想的其實是早上、中午、晚上都去看一次，畢竟有些點可能單一時間看不太出來，例如說早上很安靜，晚上其實一堆開到凌晨的居酒屋或是串烤店等等。</p>
+  <p>不過晚上的話倒是不一定要實際進屋，去那一帶繞繞也是一個方法。</p>
+  <p>當初我大概在租房網站上找了 40 個房源，最後只有大概 4 個是可以看的，其中 2 個在看房前一週內就有人先申請了，所以最後能看的只有 2 間。</p>
+  <p>最後是在兩間內挑一個比較滿意的，就直接送申請了，天下武功，唯快不破。</p>
+  <h3 id="section-13">第六關：申請以及審查</h3>
+  <p>並不是你想租房，房東跟管理公司就會租給你。</p>
+  <p>當你看好之後，你必須先提交申請，需要提供相關資料例如說入職證明以及預定年收等等，必須管理公司跟房東都同意了，才能真的開始進入簽約流程。</p>
+  <p>之前聽到的說法是房租在月薪的 1/3 以內會比較保險，舉例來說，如果想租月租 10 萬的房屋的話，月薪必須在 30 萬以上，否則審查就有比較高的機率會不通過。</p>
+  <p>這個階段就是提供一些資料給房仲，房仲幫你送申請，接下來就是等審查結果，我自己的經驗是等了一週左右。</p>
+  <h3 id="section-14">第七關：簽約</h3>
+  <p>通過了審查之後，終於可以簽約了！</p>
+  <p>簽約的過程大概要一個半小時到兩小時左右，為什麼這麼久呢？因為根據日本法律規定，房客有義務要聽完關於房子的各種重要事項，而需要考取國家資格（宅地建物取引士）才能向房客說明。</p>
+  <p>所以簽約過程中有一大段都是宅建士一字一字把重要事項唸給你聽，這個是跟台灣很不同的一點。</p>
+  <p>重要事項裡面包含的東西真的超級多，從基本的像是房屋地址、大小、屋況說明、設備等等，一直到房屋裡面哪些東西的損壞是房東負責，哪些是房客負責，再到淹水的時候要到那裡避難等等，是很詳盡的一份文件。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*CIsHtgoKfNz37mwc.jpg" />
+  </figure>
+  <p>因為宅建士是講日文，所以有房仲幫忙翻譯，不過因為合約書上面都是漢字居多，其實大概八九成也都看得懂在講什麼，完全不會日文也不用擔心。</p>
+  <p>一切確認沒問題之後，就可以簽約了，記得要帶個印章，是要簽名加蓋章，同時也需要把初期費用繳清。</p>
+  <p>都弄好之後，就會把合約拿去給管理公司簽，接下來就等著領鑰匙入住了。</p>
+  <h3 id="section-15">第八關：入住以及水電瓦斯及網路</h3>
+  <p>儘管找房時已經花費很多心力，但真正入住之後才是考驗的開始，如果會講日文或是找一個會講日文的朋友來幫忙，會順利很多。</p>
+  <p>日本的水電瓦斯是要主動去開通的，水電沒什麼問題，但瓦斯的話瓦斯公司會派人來家裡檢查設備，順便說明一些注意事項，跟瓦斯公司的溝通基本上都會是全日文。</p>
+  <p>我的話是請房仲協助預約，然後開通的時候是直接找一個會講日文的朋友幫忙，省了很多溝通的麻煩。</p>
+  <p>網路的話又是另外一個狀況了，有些房子很方便有內建網路，有另外一些已經把網路線牽好了，只要找網路公司簽約就可以用，最麻煩的是有些連線都沒牽的，就會需要施工，據說要等個一個多月才有網路可以用。</p>
+  <p>我住的地方是屬於線已經牽好了，然後管理公司有指定網路公司，所以一樣由房仲協助溝通，在網路開通前會先寄設備過來，網路線插上去以後需要登入進去設定，會需要設定 PPPoE 的帳號密碼，如果對網路一竅不通的話，大概會搞滿久的。</p>
+  <p>不過網路公司通常都會有紙本說明或是官方影片，照著做其實就可以了。</p>
+  <p>我最後用的網路是這一間：<a href="https://join.biglobe.ne.jp/ftth/hikari/lp/ls/lp02/?ls=1">BIGLOBE</a>，一個月大概是 1000 台幣左右，有附一台租來的路由器，我也不知道算貴還是便宜，沒有比較基準。</p>
+  <p>由於水電瓦斯跟網路都需要時間，不是今天申請明天就可以用，因此建議合約簽完之後就可以開始聯絡了，因為合約簽完也大概是等一週入住，剛好趁這時間把這些都搞定，入住之後就可以開始用了。</p>
+  <p>我的話因為入住時間跟短租有重疊到一週，所以沒有那麼急迫可以慢慢來，網路的話因為各種因素是入住一週後才有的，在這一週間就靠著手機熱點擔任救援投手。</p>
+  <h3 id="section-16">第九關：買家具</h3>
+  <p>把生活基本需求搞定以後，就要來進家具囉！</p>
+  <p>問過身邊的幾個朋友，家具以及家電通常會由以下管道入手：</p>
+  <ol>
+    <li>宜得利</li>
+    <li>IKEA</li>
+    <li>Mercari / 樂天市場買二手</li>
+    <li>家電以及家具組合包（關鍵字：家電セット）</li>
+    <li>透過台灣人社團購買</li>
+  </ol>
+  <p>在日本其實滿多二手家具的，價格通常都是五折起跳，有些使用的狀況也很不錯，因此是個 CP 值滿高的選項。像我的話就是在 <a href="https://jp.mercari.com/user/profile/966060067">Mercari</a> 上面買了二手的洗衣機加冰箱組合，只要 4 萬塊日幣而已，真的很超值：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*j79NjTO2BlqZp61q.jpg" />
+  </figure>
+  <p>其他比較小的家電就透過 Amazon 買，購入的品項有：</p>
+  <ol>
+    <li><a href="https://www.amazon.co.jp/-/zh/gp/product/B0BQXCZX1D/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&amp;th=1">日立 掃除機 かるパックスティック 紙パック式 スティッククリーナー PKV-BK3K V ライトラベンダー 日本製 強力パワー 軽量 自走式</a></li>
+    <li><a href="https://www.amazon.co.jp/-/zh/gp/product/B09LTYV6ZN/ref=ppx_yo_dt_b_asin_title_o00_s01?ie=UTF8&amp;psc=1&amp;language=ja_JP">象印 IH炊飯ジャー (5.5合炊き) 極め炊き ブラウン NW-VC10-TA</a></li>
+    <li><a href="https://www.amazon.co.jp/-/zh/gp/product/B08G89DTF7/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&amp;th=1">パナソニック 生ゴミ処理機 家庭用 コンポスト 温風乾燥式 6L シルバー MS-N53XD-S</a></li>
+    <li><a href="https://www.amazon.co.jp/-/zh/gp/product/B0BXX4HY2T/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&amp;th=1">XGIMI MoGo 2 投影機</a></li>
+  </ol>
+  <p>其中最貴的是廚餘處理機，要 18000 台幣左右，不過同個型號在台灣似乎要價快兩倍，這樣比下來其實還是滿超值的。</p>
+  <p>這也是人生中第一次購買廚餘機，原本在台灣的時候家裡是沒有的，但這邊倒垃圾比較麻煩規矩比較多，廚餘機似乎也比較普遍，就想說買一台試用看看。</p>
+  <p>在家電的部分，買了洗衣機、冰箱、投影機、吸塵器、電子鍋以及廚餘處理機，總花費大約是 22 萬日幣左右。</p>
+  <p>接著來講一下寢具好了，這次沒有買床，而是直接買床墊放地上，雖然說放地上如果潮濕的話似乎容易發霉，但日本的氣候比較乾燥，應該是不至於。到時候如果真的太潮濕，也可以補買一個床架。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*pcB_Jdb_l9CcyC_w.jpg" />
+  </figure>
+  <ul>
+    <li>床是宜得利買的：<a href="https://www.nitori-net.jp/ec/product/5651913s/">3つ折り高反発マットレス 厚さ10cm(日本製）シングル</a></li>
+    <li>鋪墊也是宜得利：<a href="https://www.nitori-net.jp/ec/product/7566631s/">置くだけ簡単 敷きパッド シングル(NウォームSP BR SA2311)</a></li>
+    <li>被子也是：<a href="https://www.nitori-net.jp/ec/product/7544531s/">温度調整 掛け布団 シングル(CELL 2 S)</a></li>
+    <li>枕頭當然也是：<a href="https://www.nitori-net.jp/ec/product/7550565s/">硬くなりにくい低反発まくら(Mモレーザ)</a></li>
+  </ul>
+  <p>這樣一組加起來約 23500 日幣。</p>
+  <p>最後是桌椅的部分，桌椅我隨意上網搜尋，找到了這個網站：<a href="https://www.flexispot.jp/">https://www.flexispot.jp/</a></p>
+  <p>由於桌椅都有賣，而且如果選組裝服務的話可以兩個一起組，我就買這個了。是一個電動升降桌以及椅子，加上運送以及組裝，總價是 55000 日幣。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*Ntx2cEAfX0X-ejLd.jpg" />
+  </figure>
+  <p>家電 22 萬，寢具抓個 5 萬，桌椅抓個 10 萬，加一加大概 40 萬日幣可以搞定兩個人的家具以及家電。對了，Amazon 線上刷卡可以刷台灣的卡，所以不用擔心日幣帶不夠的問題。</p>
+  <p>而宜得利的話我線上刷卡刷不過，就連 JCB 也刷不過，所以只好請我太太去現場購買再送到家裡，現場買的話就可以刷台灣的卡了，只是不能網購還是不太方便。</p>
+  <h3 id="section-17">第十關：倒垃圾</h3>
+  <p>家電跟家具買完以後，終於是能夠順利生活、睡覺以及用電腦了，但還有最後一個問題需要處理：垃圾。</p>
+  <p>每買一次 Amazon 就多一個紙箱，然後桌椅那些更是一堆紙箱以及保麗龍，這些都需要丟回收。</p>
+  <p>紙箱的話就記得壓扁，要做到更好的話就是紙箱上面黏的紙跟膠帶都要撕掉，就可以拿去丟了，記得要先看好回收的日期，大約都是每週一次，有些地方還會要求要捆起來。</p>
+  <p>目黑區的資源回收日期：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*tcw6oy1HCWH45vn8.jpg" />
+  </figure>
+  <p>除了紙箱以外，也會有一堆保麗龍。</p>
+  <p>保麗龍的話似乎在不同區會有不同分類，在我這邊是塑膠類，所以就準備一個透明袋子裝進去就好。</p>
+  <p>把垃圾全都丟掉以後，終於有「完成了」的感覺。</p>
+  <h3 id="section-18">第十一關：更換住址</h3>
+  <p>如果之前有把住址登記在其他地方，記得要去區役所更換地址。如果新家跟舊家不同區，那就要跑兩趟。</p>
+  <p>第一趟先去舊家的區役所辦理轉出，因為轉出不需要改在留卡，所以流程會比登記住址還要快，大概 15 分鐘就結束了，會拿到一個轉出單。辦理轉出之後，其實不一定要同一天去辦，14 天以內其實都可以辦理。</p>
+  <p>轉入的話就是去新住址的區役所，帶著那張轉出單然後再填寫一些資料，就可以辦理轉入了，整體流程跟之前第一次登記住址的時候差不多，在留卡上面也會寫下新的住址，到此為止就把所有搬家流程全都跑完了。</p>
+  <p>當初遷入台東區的時候什麼都沒有，沒想到目黑區有這麼一本厚厚的生活指南，裡面有中日英韓四種語言，很適合拿來學日文：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*BZ-mwl-MIguuvHz6.jpg" />
+  </figure>
+  <h3 id="section-19">總結</h3>
+  <p>簡單分享一下我目前住的地方，地點是中目黑，離車站走路約 10 分鐘，1LDK，大約 12 坪左右：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*SKiQVqJQLoZxG__-.jpg" />
+  </figure>
+  <p>這張是從陽台往內拍的，廣角鏡頭所以左右兩邊其實都還有一些空間，左下角沒拍到的地方還有放一張桌子跟椅子，右下角之後會放沙發跟小桌子，走到底左轉是廁所跟衛浴，兩個是分開的。</p>
+  <p>整棟大樓大約 30 戶左右，有宅配箱但是沒有我一開始想要的隨時都可以倒資源回收的垃圾場，屋齡是 20 年以內，但是一兩個月前有整修過所以看起來很新。</p>
+  <p>租金加管理費一個月大約為 21 萬（但是不需要禮金），稍微有點爆預算，但就如同上面寫的，當時的選擇並不多，雖然說這間沒有到非常滿意，但也算不錯了。</p>
+  <p>話說日本的租房雖然普遍比台灣貴，但是貴多少就要看每個人的選擇了，以兩個人 1LDK 的房子來說，20 萬已經算是高的了，主要是我租房的地點目黑區滿貴的，之前有朋友說覺得這一區有點像是天母的感覺。</p>
+  <p>同樣的房屋條件，只有地點變更的話，再遠個 10~15 分鐘應該可以降到 15 萬左右，再往遠處找就越遠越低，但我也不確定會到多少，有興趣的可以自己去 SUUMO 找找看。</p>
+  <p>以上就是這次租屋的心得分享，在這次租房過程中感受到了如果能懂一點日文，新手任務應該會順暢滿多的。像是有些送家具的可能會打電話跟你溝通，開通瓦斯的時候如果有些不對勁的地方也是會用日文跟你講，不會日文的話還是有點阻礙。</p>
+  <p>因此，朋友是很重要的，像我就是把水電瓦斯開通跟送家具都安排在同一天，當天直接請一個會講日文的朋友來坐鎮，解決各種溝通疑難雜症大小事。感覺每個來日本跑新手任務又不會日文的工程師說不定都碰過類似問題，如果有人出一個「新手任務大禮包」，提供中日翻譯服務，能夠幫我溝通各種業者並且在進家具的時候坐鎮家中，那我會購買的意願還是滿高的。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=9b4eef013bfe" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2024-04-09</time>
+        <a href="https://nodebe4.github.io/oped2/2024-04-09/%E5%93%A9%E7%A8%8B%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%88%B7%E5%8D%A1%E7%B4%AF%E7%A9%8D%E5%93%A9%E7%A8%8B-%E7%9C%9F%E7%9A%84%E6%9C%89%E6%AF%94%E8%BC%83%E5%88%92%E7%AE%97%E5%97%8E/">
+          哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-03-03</time>
+        <a href="https://nodebe4.github.io/oped2/2024-03-03/%E6%97%A5%E6%9C%AC%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E8%96%AA%E6%B0%B4%E5%A6%82%E4%BD%95-%E5%88%B0%E5%BA%95%E5%80%BC%E4%B8%8D%E5%80%BC%E5%BE%97%E5%8E%BB/">
+          日本軟體工程師的薪水如何？到底值不值得去？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-11-15</time>
+        <a href="https://nodebe4.github.io/oped2/2023-11-15/2023-%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%96%B0%E6%89%8B%E4%BB%BB%E5%8B%99%E7%A0%B4%E9%97%9C%E5%BF%83%E5%BE%97-%E7%B0%BD%E8%AD%89-%E4%BD%8F%E5%9D%80-%E9%96%80%E8%99%9F%E8%88%87%E9%8A%80%E8%A1%8C/">
+          2023 日本工作新手任務破關心得：簽證、住址、門號與銀行
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-10-28</time>
+        <a href="https://nodebe4.github.io/oped2/2023-10-28/%E9%AB%98%E4%B8%AD%E5%AD%B8%E6%AD%B7%E5%A4%A7%E5%AD%B8%E6%B2%92%E7%95%A2%E6%A5%AD%E7%94%B3%E8%AB%8B%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E7%B0%BD%E8%AD%89%E5%BF%83%E5%BE%97/">
+          高中學歷大學沒畢業申請日本工作簽證心得
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-11-15/2023-%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%96%B0%E6%89%8B%E4%BB%BB%E5%8B%99%E7%A0%B4%E9%97%9C%E5%BF%83%E5%BE%97-%E7%B0%BD%E8%AD%89-%E4%BD%8F%E5%9D%80-%E9%96%80%E8%99%9F%E8%88%87%E9%8A%80%E8%A1%8C/">
+            前一篇：2023 日本工作新手任務破關心得：簽證、住址、門號與銀行
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-12-06/A-Fallen-Artist-in-Mao-s-China/">
+            後一篇：A Fallen Artist in Mao’s China
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-11-15/2023-%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%96%B0%E6%89%8B%E4%BB%BB%E5%8B%99%E7%A0%B4%E9%97%9C%E5%BF%83%E5%BE%97-%E7%B0%BD%E8%AD%89-%E4%BD%8F%E5%9D%80-%E9%96%80%E8%99%9F%E8%88%87%E9%8A%80%E8%A1%8C/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-12-06/A-Fallen-Artist-in-Mao-s-China/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2024-03-03/%E6%97%A5%E6%9C%AC%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E8%96%AA%E6%B0%B4%E5%A6%82%E4%BD%95-%E5%88%B0%E5%BA%95%E5%80%BC%E4%B8%8D%E5%80%BC%E5%BE%97%E5%8E%BB/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-11-15/2023-%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%96%B0%E6%89%8B%E4%BB%BB%E5%8B%99%E7%A0%B4%E9%97%9C%E5%BF%83%E5%BE%97-%E7%B0%BD%E8%AD%89-%E4%BD%8F%E5%9D%80-%E9%96%80%E8%99%9F%E8%88%87%E9%8A%80%E8%A1%8C/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-11-15/2023-%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%96%B0%E6%89%8B%E4%BB%BB%E5%8B%99%E7%A0%B4%E9%97%9C%E5%BF%83%E5%BE%97-%E7%B0%BD%E8%AD%89-%E4%BD%8F%E5%9D%80-%E9%96%80%E8%99%9F%E8%88%87%E9%8A%80%E8%A1%8C/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-12-06/A-Fallen-Artist-in-Mao-s-China/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2024-03-03/%E6%97%A5%E6%9C%AC%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E8%96%AA%E6%B0%B4%E5%A6%82%E4%BD%95-%E5%88%B0%E5%BA%95%E5%80%BC%E4%B8%8D%E5%80%BC%E5%BE%97%E5%8E%BB/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-11-15/2023-%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%96%B0%E6%89%8B%E4%BB%BB%E5%8B%99%E7%A0%B4%E9%97%9C%E5%BF%83%E5%BE%97-%E7%B0%BD%E8%AD%89-%E4%BD%8F%E5%9D%80-%E9%96%80%E8%99%9F%E8%88%87%E9%8A%80%E8%A1%8C/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

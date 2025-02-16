@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>The Class of ’77 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+The Class of ’77
+——
+" />
+    <meta property="og:description" content="
+The Class of ’77
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="The Class of ’77" />
+    <meta property="twitter:title" content="The Class of ’77" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fnotes-chinafile%2Fclass-of-77" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/notes-chinafile/class-of-77" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/notes-chinafile/class-of-77&text=The Class of ’77&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/notes-chinafile/class-of-77&title=The Class of ’77" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/notes-chinafile/class-of-77&title=The Class of ’77" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=The Class of ’77&body=
+The Class of ’77
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/notes-chinafile/class-of-77" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/notes-chinafile/class-of-77&title=The Class of ’77&caption=
+The Class of ’77
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=The Class of ’77&url=https://www.chinafile.com/reporting-opinion/notes-chinafile/class-of-77" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>The Class of ’77</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-01-06
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Susan Jakes</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/notes-chinafile/class-of-77" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1673013660000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/notes-chinafile/class-of-77">The Class of ’77</a>
+——</p>
+
+<div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p>In August 1971, Jaime FlorCruz arrived in Beijing for a short trip to learn about Maoist China. Just days later, the Filipino college student learned he had been put on a blacklist by then President Ferdinand Marcos. Facing certain arrest and likely execution should he return, FlorCruz remained in China as an exile. He worked on a farm, learned Chinese, and was admitted to the prestigious Peking University as part of the first cohort <a href="https://www.bbc.com/news/world-asia-china-42135342" target="_blank" rel="nofollow">accepted</a> by nationwide exam in more than a decade. His classmates would go on to become the leaders of a transformed China, while FlorCruz parlayed his intimate knowledge of China into a career as one of the country’s preeminent foreign correspondents, serving as Beijing bureau chief for <em>Time Magazine</em> and CNN. Last month, the veteran journalist was <a href="https://thediplomat.com/2022/12/philippines-confirms-new-envoy-to-china/" target="_blank" rel="nofollow">confirmed</a> as the Philippines’ new ambassador to China. Before his appointment was announced, FlorCruz spoke with ChinaFile Editor Susan Jakes about his recent book, <em><a href="https://earnshawbooks.com/product/the-class-of-77/" target="_blank" rel="nofollow">The Class of ’77: How My Classmates Changed China</a></em>. The following is an edited transcript of their conversation.</p>
+      <hr />
+      <p><strong>Susan Jakes: When you arrived in China in August 1971, what were the first few months like?</strong></p>
+      <p><strong>Jaime FlorCruz:</strong> Well, the first month or so we were all giddy and excited and everything was gee whiz. Even after we heard the news from the Philippines, we thought it wouldn’t last long. We were excited about the visit, about what we were learning. I was taking copious notes. I had thought I’d write about this for the college newspaper when I got home. So it was an exciting time. Around November, the first batch of eight students took the risk of going home. We heard later that they were questioned upon entrance. After we heard their stories, that made us feel like it was going to be very difficult to go home. And that’s when we started to ask our host, can we stay a little longer. We were thinking that Marcos couldn’t possibly make this last long, but we were wrong. In September 1972, a year later, he <a href="https://martiallawmuseum.ph/magaral/declaration-of-martial-law/" target="_blank" rel="nofollow">declared</a> martial law. There were more arrests, more blacklists, which made it even more difficult. And that’s when it dawned on us that it was going to be a long, long wait.</p>
+      <p></p>
+      <div class="view view-photo-embed view-id-photo_embed view-display-id-panel_pane_3 visual-box view-dom-id-6c44d771e2028ceec270dacc2102cd5c grid-2 photo-object">
+        <div class="views-field views-field-field-common-system-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/photo/system/the_class_of_77_jaime_florcruz_book_cover.jpeg" title="The Class of ’77" class="colorbox" data-colorbox-gallery="gallery-node-54501-hVdTTcT1VdI" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/medium/public/assets/images/photo/system/the_class_of_77_jaime_florcruz_book_cover.jpeg?itok=s70NuR03" width="620" height="958" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div class="views-field views-field-field-common-system-credit">
+          <div class="field-content photo-credit img-credit">
+Courtesy of Earnshaw Books
+          </div>
+        </div>
+      </div>
+      <p><strong>During that first year, you were kind of in suspended animation?</strong></p>
+      <p>We thought, hey, we better do something useful. And we thought, oh, we want to go to school, we want to learn more about China, the New China. They said, well, the schools are still not enrolling foreign students. But if you really want to learn about China, why don’t you do what our Chinese youth are doing? Which is go down to the countryside, learn from the working people, learn the reality of China. And we said sure. It sounded like, oh, we can stay in this kibbutz. It was very romantic.</p>
+      <p><strong>When did that romantic view start to get complicated?</strong></p>
+      <p>On the farm. It wasn’t just the physical hardship that everyone goes through working on a farm wherever. But especially there, we thought, Hunan, the hometown of Mao Zedong, must be enjoying some preference. But the farm was really quite poor. Of course, our hosts tried to give us the best that they had. And I thought if this is the best that they have, it’s very poor and primitive.</p>
+      <p><strong>Did you have a sense of how long you were going to be there?</strong></p>
+      <p>That’s the other difficult part. It was sort of one month at a time. I suppose I didn’t believe I’d be there for a long, long time. But the prospect was just murky. It was unclear what we would do next.</p>
+      <p>What really turned that romantic notion for me was much later, in the mid-70s, when Deng Xiaoping was, again, <a href="https://www.britannica.com/event/Cultural-Revolution/Rise-and-fall-of-Lin-Biao-1969-71" target="_blank" rel="nofollow">criticized</a> with Confucius. And I was wondering, what’s going on? I couldn’t understand. By then, I was already getting into the history and politics of things. I had a good friend who was quite a mature man, he was from the Academy of Sciences and was polishing his English before he would be sent overseas. One day, in the privacy of his dorm, he told me: Deng Xiaoping is a good man, I don’t understand why he’s being put through this again. I embraced and swallowed everything in the <em>People’s Daily</em> at that point. But I was thinking, I trust this guy. He was a Party member. From then on, I thought, I need to really be more critical, if not cynical, about what I hear and read. I would say that was a turning point for me in terms of looking at China.</p>
+      <p><strong>You had been a student journalist. Were you thinking as an observer during that early time? Or were you . . .</strong></p>
+      <p>A believer? Yeah, I would say I was a believer the first several months of my stay there. I thought socialism and this New China was a good thing. Especially hearing about before and after liberation. It seemed like people were happy—not rich, but seemingly content with what they had. This was partly because there was no marked difference in terms of rich and poor, everybody was almost the same. I embraced that concept, but in a very simplistic way. The Chinese media was full of it wherever you turned. And I thought they really adored Mao and followed his thoughts. But it was shallow, obviously. In the beginning, I really couldn’t follow all the gobbledygook kind of vocabulary. It was only much later when I tried to figure out what they were trying to do and what went wrong.</p>
+      <p><strong>Talk a little bit about how you first started learning Chinese.</strong></p>
+      <p>It was on the farm. Our Chinese host seconded a teacher who spoke English, who doubled as our interpreter while we were on the farm. We had very primitive textbooks—mimeograph type. Our teacher, Song Mingjiang, was very good because he drilled us in oral Mandarin. I also enjoyed his stories after class. He would talk to us in English about politics because his wife was in the Foreign Ministry. He eventually rose in the ranks of the Foreign Ministry and retired as the Chinese ambassador to the EU.</p>
+      <p><strong>You had that treatment because of who you guys were?</strong></p>
+      <p>I think so. The poor guy had already spent a few years in cadre school. So when he was assigned to us, he had to go back to the farm. I don’t think he was happy, doing this half a day of work with us. And he only stayed for two or three months, just to get us started. Then he was recalled back to Beijing and picked up his career as a diplomat. He also taught us Revolutionary Peking opera—he was a good singer. So that made learning Mandarin a bit more interesting. It was very difficult. As you know, it’s a difficult language to get started. But looking back, it was a blessing.</p>
+      <p><strong>Did it feel safe to talk about your life in the Philippines?</strong></p>
+      <p>In a way it was, and sometimes, in fact, it was an advantage. Because just telling classmates and teachers about this poor exile who couldn’t go home made us seem more sympathetic—or even attractive to girls. And of course our Chinese teachers were very solicitous of our needs and gave us special attention.</p>
+      <p><strong>So ’77 comes along. And you thought you were going to have to take the college entrance exam, right?</strong></p>
+      <p>Yes. I was out of Beiyu [the Beijing Language Institute]. My choice was to sign up for philosophy, or Chinese literature, or history. At that time, those were the only departments open to foreign students. I figured language or literature, I could do it myself. Philosophy, that means Marxist philosophy. So I thought, okay, I’ll study history. Then the <em>gaokao</em> [national college entrance exam] was restored and I worried that I’d have to sit through it. It turned out that I didn’t have to because they acknowledged my three years in Manila, in undergrad. And I already had done two years at Beiyu, so they thought I could be exempted from the <em>gaokao</em>. But I had to pass the Language Placement Exam. So that was a big relief.</p>
+      <p><strong>That must have been the most competitive college examination in the history of the world, right?</strong></p>
+      <p>I think so. <a href="https://www.nytimes.com/2008/01/06/world/asia/06china.html" target="_blank" rel="nofollow">5.7 million</a> for [fewer than] 400,000 slots? Yeah, it was. I could sense the excitement, but also concern, among some of my Chinese friends who thought of it as a last chance to change the course of their lives or careers. So many of them were kind of panicking. So I was fortunate.</p>
+      <p><strong>Were you aware when you got there for the start of the school year that you were among such an extraordinary group of people?</strong></p>
+      <p>No, it took a while. I knew that something special was going on with this restoration of the <em>gaokao</em>. But I didn’t know that I’d be joining this cohort of special people until I actually knew them, one by one. Then I realized that many of them had spent years on the farms, in factories, serving the army—had rich social experience—and had somehow managed to keep up their reading and writing. And that’s when it dawned on me that this was a special cohort of students. It also became obvious when we started to talk—not just in class, but outside of class. In fact, I must have learned much more outside the classroom than in class.</p>
+      <p><strong>You were playing basketball and performing.</strong></p>
+      <p>Yeah, and visiting each other in the dorms. Because most of the classes were still just coming out of the Cultural Revolution. The professors were still very cautious. but the students were not. And it inflected that period of time. China was in a state of flux, and looking back at the Mao period, and looking forward when Deng Xiaoping said, you know, Open Door reform. But what does it mean?</p>
+      <p><strong>Other people who started college that year in China have talked about the excitement of that time, that when the library got a new book, everyone would race down to try to read it.</strong></p>
+      <p>Exactly. It was like that—especially with foreign books. Any new kind of contraband edition of something, we all just batted it around. Everybody was excited. I think that that period was about curiosity and hunger for information. And then hunger for answers to questions that must have bothered them for years: What went wrong? Why? Where is China going? What does the reform mean? What are the risks? At that time, there was a debate about the “<a href="https://www.reuters.com/article/us-china-hua/china-lays-to-rest-maos-chosen-successor-hua-guofeng-idUSPEK8158120080831" target="_blank" rel="nofollow">Two Whatevers</a>,” Hua Guofeng. Whatever Mao said, whatever he decreed, we should follow. So that was an exciting time of debate, and that was reflected in the discussions that I had with my classmates.</p>
+      <p><strong>Did you have a sense that people had just been through a terrible ordeal? Were professors or students processing what happened?</strong></p>
+      <p>They were still processing it. It was like layers and layers unfolding among them in the discussions. Some of them really believed in the past, and yet they saw with their own eyes how much of it failed. The question then was more of, well, if that failed, what now? They were more unsure of what would be next rather than a willingness to negate the past. I could already sense that sense of angst. But it didn’t happen right away.</p>
+      <p><strong>Did you go back and interview people when you were writing the book?</strong></p>
+      <p>I did. That was what I had to do to recall some of it. I looked at old pictures and tried to reconstruct whatever I went through. I never really wrote diaries, except in the first few days when I thought I would be going back.</p>
+      <p><strong>How often over the intervening years have you gone to reunions? Did you meet with your classmates every year or every so often?</strong></p>
+      <p>Yeah, we met virtually—my classmates, my basketball teammates. They’re very active in gathering people. Or when somebody returned to China from overseas, we would get together, do karaoke, or have a meal. And we would really have fun, just bantering over a meal.</p>
+      <p><strong>When you starting working for <em>Time</em>, how did your status as a journalist affect your interaction with all of these people, especially as some of them rose to power?</strong></p>
+      <p>My background, my friendships with them, turned out to be a big plus, even as I became a <em>Time Magazine</em> correspondent. Why? Because they knew me already as a friend, as Jimi, their old classmate. And so even though I’d already evolved into a foreign correspondent, they still would talk to me. I mean, jokingly, sometimes they would say: you work for an imperialist media organization. They’d rib you. But in conversations, they would forget that, and it would still be just like when we were in Beida [Peking University]. A lot of these conversations were frank and spontaneous in many ways. I think it’s also because they knew they could trust me, and that I wouldn’t get them into trouble. I knew what to use and what not to use. I benefited more from their perspective, rather than from what specific information came out of it.</p>
+      <p><strong>I wonder how having had that background shaped your view of foreign coverage of China during the time that you were also covering it.</strong></p>
+      <p>Sometimes I felt like I was in between—especially with the editors in New York—because of my longer perspective. I’ve seen China in its dystopian state. As an observer, I could appreciate even the tiny changes that we all saw over the years. It was an evolution to me. Capturing that nuance of that story is what I bring to my reporting, which is not always appreciated or useful because sometimes we want to conflate things into simple black and white. So that sometimes was frustrating. But at the same time, there were still colleagues, peers, editors who appreciated that. It helped that we had ample time to research and write and were less driven by the headlines at that time. It helped that longer perspective, to view China and to tell the China story in in a more nuanced way. At least that was what we aspired for. We didn’t always succeed. But that was what we brought into the story, to the job.</p>
+      <p><strong>Now there are just three of your classmates on the Standing Committee. How do you think about what the legacy is of having come of age in that time and place?</strong></p>
+      <p>I think it shows the importance of education, of trying to change. That generation that I studied with benefited from education, but also from openness—from the exchanges that China had with the rest of the world. Academic exchanges, technological, diplomatic, political, tourism. I think the lesson is, if China is to grow further, if China is to become strong and prosperous, they need to keep their doors open. They need to educate more generations of people like the class of ’77, who could think outside the box, who had pioneered the open-door strategy. Otherwise, it will go back to its dystopian state. In my book, I hope that comes through. Education, openness, reform: China needs to keep reforming, changing, adapting, because that’s what this class showed. And in a way, that’s what turned China into what it is now. Turning back is not an option.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2023-01-19</time>
+        <a href="https://nodebe4.github.io/oped2/2023-01-19/Xi-Jinping-s-Charm-Offensive-in-Southeast-Asia/">
+          Xi Jinping’s Charm Offensive in Southeast Asia
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-01-06</time>
+        <a href="https://nodebe4.github.io/oped2/2023-01-06/For-Your-Weekend,-January-6,-2023/">
+          For Your Weekend, January 6, 2023
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-12-16</time>
+        <a href="https://nodebe4.github.io/oped2/2022-12-16/How-Well-Is-China-Advancing-Its-Interests-in-South/">
+          How Well Is China Advancing Its Interests in Southeast Asia?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-12-13</time>
+        <a href="https://nodebe4.github.io/oped2/2022-12-13/Planting-the-Flag-in-Mosques-and-Monasteries/">
+          Planting the Flag in Mosques and Monasteries
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-12-28/%E9%95%B7%E6%A6%AE%E5%A4%96%E7%AB%99%E5%87%BA%E7%99%BC%E6%97%A5%E6%9C%AC%E4%BE%BF%E5%AE%9C%E6%A9%9F%E7%A5%A8%E8%B3%BC%E8%B2%B7%E5%BF%83%E5%BE%97/">
+            前一篇：長榮外站出發日本便宜機票購買心得
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-01-06/For-Your-Weekend,-January-6,-2023/">
+            後一篇：For Your Weekend, January 6, 2023
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-12-28/%E9%95%B7%E6%A6%AE%E5%A4%96%E7%AB%99%E5%87%BA%E7%99%BC%E6%97%A5%E6%9C%AC%E4%BE%BF%E5%AE%9C%E6%A9%9F%E7%A5%A8%E8%B3%BC%E8%B2%B7%E5%BF%83%E5%BE%97/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-01-06/For-Your-Weekend,-January-6,-2023/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-01-06/For-Your-Weekend,-January-6,-2023/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-12-16/How-Well-Is-China-Advancing-Its-Interests-in-South/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-12-28/%E9%95%B7%E6%A6%AE%E5%A4%96%E7%AB%99%E5%87%BA%E7%99%BC%E6%97%A5%E6%9C%AC%E4%BE%BF%E5%AE%9C%E6%A9%9F%E7%A5%A8%E8%B3%BC%E8%B2%B7%E5%BF%83%E5%BE%97/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-01-06/For-Your-Weekend,-January-6,-2023/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-01-06/For-Your-Weekend,-January-6,-2023/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-12-16/How-Well-Is-China-Advancing-Its-Interests-in-South/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

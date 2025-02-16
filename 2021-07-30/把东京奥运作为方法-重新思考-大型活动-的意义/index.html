@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>把东京奥运作为方法：重新思考“大型活动”的意义 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+把东京奥运作为方法：重新思考“大型活动”的意义
+——
+" />
+    <meta property="og:description" content="
+把东京奥运作为方法：重新思考“大型活动”的意义
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="把东京奥运作为方法：重新思考“大型活动”的意义" />
+    <meta property="twitter:title" content="把东京奥运作为方法：重新思考“大型活动”的意义" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F6103ba45cc21cf6e3ca09797" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/6103ba45cc21cf6e3ca09797" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/6103ba45cc21cf6e3ca09797&text=把东京奥运作为方法：重新思考“大型活动”的意义&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/6103ba45cc21cf6e3ca09797&title=把东京奥运作为方法：重新思考“大型活动”的意义" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/6103ba45cc21cf6e3ca09797&title=把东京奥运作为方法：重新思考“大型活动”的意义" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=把东京奥运作为方法：重新思考“大型活动”的意义&body=
+把东京奥运作为方法：重新思考“大型活动”的意义
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/6103ba45cc21cf6e3ca09797" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/6103ba45cc21cf6e3ca09797&title=把东京奥运作为方法：重新思考“大型活动”的意义&caption=
+把东京奥运作为方法：重新思考“大型活动”的意义
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=把东京奥运作为方法：重新思考“大型活动”的意义&url=https://www.allnow.com/post/6103ba45cc21cf6e3ca09797" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>把东京奥运作为方法：重新思考“大型活动”的意义</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-07-30
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 黄秋源</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/6103ba45cc21cf6e3ca09797" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/6103ba45cc21cf6e3ca09797">把东京奥运作为方法：重新思考“大型活动”的意义</a>
+——</p>
+
+<div>
+  <p>“东京确实有一个中心，但它是空白的”。罗兰・巴特半个多世纪之前的这句名言，在今天似乎依然成立。巴特所描述的，其实是位于东京中心的日本天皇居所。被商业区环绕的皇居，安静到在大多数时候根本不会让人注意到它的存在。正如天皇虽然是日本名义上的领袖，他只在象征的层面上偶尔发挥作用。而在当下，另一种“空洞的中心”，也存在于东京这个时空之中，它就是奥运会。</p>
+  <p>奥林匹克的五个环本身都是完满的闭合，它们所内含的却是一片空白。往年的主办国会用各种方法，往这一空隙里填充各种叙事。但在新冠疫情的影响下，本届东京奥运会，不管从准备到延期再到最后的举办，都被一种空无感所笼罩。这种“空”，既是经济层面“竹篮打水一场空”的“空”，也是政治和文化层面诸如“国民”、“历史”等大词在今天的日本越发显得“空洞”的“空”。</p>
+  <p>回顾历史，我们其实能发现，类似“实”与“空”、“正”与“负”的辩证对立，其实在东京之前所举办的奥运会上也能发现。本文试图回溯的，正是与历届东京奥运相关的片段，它们或许能给我们重新思考“大型活动”的历史意义做出些许提示。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-30/6103bad99c232e01c17d2c56+L.jpeg" data-id="6103badd904b8c02a16a3ec4" alt="奥运五环" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+奥运五环
+    </figcaption>
+  </figure>
+  <p><strong>幻影的1940年东奥：政治和体育的辩证</strong></p>
+  <p>2020年东京奥运会，曾经的一大卖点是：它将是东京第二次举办奥运会，而这又是亚洲国家的首次。但如果光看申办成功的记录的话，本届奥运会其实已经是东京的第三回了。在日语中常被称为“幻之奥运”的1940年大会，在很长一段时间内都被埋进了历史的灰烬之中。</p>
+  <p>作为亚洲最早开始现代化的国家之一，日本很快把体育的现代化也纳入自己的议程。1912年在斯德哥尔摩举办的第五届现代奥运会，是日本在国际体育舞台上的首次登场。此后，每一届的奥运，日本都派出了在世界范围内看都算是庞大的代表团。特别是，在1932年的洛杉矶奥运会上，日本队夺得七块金牌，还打破了田径等领域的记录，一时成为话题。在参加了数次比赛之后，日本自然也想到了要自己举办。1930年，时任东京市长的长田秀次郎，正式表达了申办1940年第12届奥运会的意向，并展开准备活动。</p>
+  <p>日本学者桥本一夫在其著作《幻之东京奥运》中，提出此次申办背后主要有着三个理由：首先，以东京为核心的日本关东地区，在1923年遭遇了史无前例的特大地震；向国民和世界展现自己这些年的复兴成果，是此次东京奥运的一大主题。其二，当时席卷全球的经济危机，让日本不得不想尽一切办法寻找新的收入来源；伴随着奥运到来的国际观光，无疑是一个好选择。最后，1940年将是日本的“皇纪2600年”，作为大型国际活动的奥运，非常适合用来纪念这个特殊时节。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-30/6103baf94cd55d54dd5dc237+L.jpeg" data-id="6103bafc904b8c02a16a3ec5" alt="橋本一夫、『幻の東京オリンピック：1940年大会 招致から返上まで』、講談社 、2014年1月" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+橋本一夫、『幻の東京オリンピック：1940年大会 招致から返上まで』、講談社 、2014年1月
+    </figcaption>
+  </figure>
+  <p>所谓的“皇纪”，是一种以传说中初代天皇神武天皇的即位年份（公元前660年）为起点的日本式纪年。显然，在这种纪年方式的背后，有着强烈的政治意涵。特别在明治维新以后，统治根基并不牢固的天皇，想要借着这种“万世一系”的叙事，进而把一种国家观念灌输给普通民众。另一位学者古川隆久犀利地指出，日本在申请1940年奥运时，并没有特别强调这个年份的特殊性，因为由顾拜旦等人复兴起来的现代奥运会，最重要的一个特点就在于它的“政治中立性”。而皇纪纪念这一充满了意识形态色彩的理由，与它自然是背道而驰的。</p>
+  <p>但吊诡的是，这种强调政治和体育分离的原则，其存在本身就证明了在现实中两者的密切联结。1940年的东京奥运，更是把这种辩证的关系演绎到了极致。在1932年国际奥委会（IOC）总会上，东京正式提交了举办申请书。当时所面临的其他候补城市，无一不是劲敌。包括罗马、赫尔辛基等在内的近十个城市，不仅有着身在欧洲这一“地理优势”（当时主要的奥运参加国均为欧美国家，在亚洲举办被认为是无法想象的），而且它们本身已经有着十数年的申请经历。这意味着，IOC对它们的倾斜，也是理所当然的。</p>
+  <p>帮日本解除这一困境，就是国际政治。意大利的法西斯领袖墨索里尼，很快就宣布了对东京承办的支持。这背后，既因为意大利正忙于入侵埃塞俄比亚，也有他想要和日本在军事上走得更近的背景存在。虽然一开始意大利的奥委会代表没有理会墨索里尼的意见，但在后者强大的压力之下，作为最强对手的罗马，最终还是选择了放弃。同时，桥本一夫也指出，另一位后来轴心国的领袖希特勒，其实也在东京的申办中发挥了重要作用。他不仅热情接待了日本申请团，更是靠着德国在欧洲的影响力，明里暗里为东京铺平道路。1936年7月31日，正是在柏林举办的IOC委员会投票上，东京以36：27的大差战胜了赫尔辛基，正式成为了1940年奥运会举办地。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-30/6103bb134cd55d54dd5dc238+L.jpeg" data-id="6103bb179b2d825085c26b0e" alt="1936年柏林奥运会" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+1936年柏林奥运会
+    </figcaption>
+  </figure>
+  <p>政治的要素，在东京申办成功后也没有消失；事实上，也正是它们让这届奥运会最终成为了泡影。虽然东京市民在申办成功后连放三天烟火庆祝，但这种民间的喜悦很快就被官方进行了规训。9月，文部大臣平生发出通告：奥运会不应该成为一个“节日”，而应该是提升“国民觉悟”的机会。把奥运和国家主义进行结合的这种发言，明显违背了奥运的精神，但类似的做法早就司空见惯。比如，1936年的柏林奥运会，在事实上就成为了纳粹德国进行外宣的一个平台。未掌权时的希特勒，曾明确反对奥运的举行；但在成为领袖后，他很快做出了要大办特办的重要指示。我们今天所熟悉的横跨全球的圣火传递和对赛事的电视直播，其实都是从这一届奥运会开始的。</p>
+  <p>回到日本来说，试图把1940东奥变成团结国民并要求他们做出牺牲的日本政府，很快遇到了自己制造的麻烦。1937年7月7日“卢沟桥事变”爆发，日本正式开始了对中国大陆的全面入侵。8月，陆军就宣布，因为战争，他们将会放弃对马术比赛训练的支持。渐渐地，为了把一切资源都用来支持战争，原定的场馆建设也开始受到影响。由于钢铁材料的受限，主场馆的设计一改再改；因为主要劳动力都被动员去了战场，东京的组委会又不得不依靠学生等群体的义务劳动。</p>
+  <p>更重要的是，以英国为首的许多国家，开始拿中日战争作为借口，试图取消东京的举办权。政治和奥运的关系，在此受到了最大的挑战。在反对者看来，因为这两者需要分离，正处在战争状态的日本不应该继续承办。而日本方面给出的辩护理由，则是因为两者的分离，所以“政治应该归政治，体育应该归体育”；奥运会完全可以继续进行。也就是说，同样的原则，被立场完全相反的两方都拿来作为自己的借口。现代奥运脆弱的“政治中立性”，也因此变得一览无余。终于因为战争的不断升级和建设的大幅落后，日本在1938年的7月14日正式宣布：返还1940年奥运会的主办权。其后，东京申办时最后一轮的对手赫尔辛基宣布接手。最终，还是因为不断升级的世界大战，后者也在1940年的3月正式宣布放弃。这届奥运会，也和1916年第一次世界大战中第六届大会一样，成为了战火的另一种牺牲品。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-30/6103bb539c232e01c17d2c57+L.jpeg" data-id="6103bb589b2d825085c26b10" alt="因战争取消的1940年东京奥运会" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+因战争取消的1940年东京奥运会
+    </figcaption>
+  </figure>
+  <p><strong>复兴的1964年东奥：发展和破坏的辩证</strong></p>
+  <p>战后一贫如洗的日本，很快靠着战前所积累的现代化基础和国际环境的福利，重新恢复了往日风采。就像战前把体育视为现代化的一部分一样，此时的日本，也试图靠着在运动领域的复兴，来展现国家整体的复兴。在此背景之下，重拾因为战争中断的“奥运梦”，无疑是最佳选择。1948年，日本正式复归国际奥委会。四年后，日本随即开始了对奥运会的申请工作；此时，距离日本返还1940年东奥的主办权，仅过去了14年。最终，1964年的第18届奥运会，在东京顺利召开。这也是这一赛事第一次来到亚洲。</p>
+  <p>放眼整个奥运的历史，有来自全球93个国家和地区超过5000人参加的1964年东奥，可以说是非常成功的一届。对于日本来说，最终在奖牌榜上成为美、苏之后的第三位，更可谓是实现了体育大国梦想的一个明证。也许，更为重要的是，在赛场之外，日本配合奥运会所进行的国家建设。比如，投入了一兆八百亿日元修建的新干线列车和首都高速公路，直到今天仍然领先全球。以上种种，都让本届东奥在各种官方历史中，成为了胜利和成功的象征。但在这种“发展达到了一个顶峰”的国家主义叙事的背后，自然隐藏了太多“不适宜”的侧面。比如，贯穿日本整个“高度成长期”的，是以“水俣病”为代表的各种公害问题。受害者和其家庭并不是自愿“牺牲”，这成为了日本在经济和体育复兴背后难以忽略的阴影。</p>
+  <p>一个值得注意的地方是，有关发展和破坏的各类叙事，在此时有了一个新的博弈场域：大众传媒。前述1936年柏林奥运会时的电视转播，不管是制作还是收看的范围都非常有限；1964年的东京奥运，则是历史上首次在全球范围内进行电视直播的奥运大会。与此同时，战后日本发展迅速的电影产业，在此时也成为了民众生活中必不可少的一环。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-30/6103bb789c232e01c17d2c58+L.jpg" data-id="6103bb7f904b8c02a16a3ec8" alt="1964年10月10日，日本东京，第18届夏季奥运会开幕。 广岛原子弹爆炸幸存者、19岁的田径运动员坂井义则 负责点燃奥运会主火炬。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+1964年10月10日，日本东京，第18届夏季奥运会开幕。 广岛原子弹爆炸幸存者、19岁的田径运动员坂井义则 负责点燃奥运会主火炬。
+    </figcaption>
+  </figure>
+  <p>这其中最具有代表性的一个事件，便是围绕着奥运会官方纪录片所展开的争议。1964年5月，著名导演市川崑接受了日本官方的邀请，开始了对东京奥运会的记录。这部名字十分直白的纪录片《东京奥林匹克》，最终花费了三亿五千多万日元的制作费，其总共使用的摄像机也达到了103台。虽然纪录片在上映后取得了非常好的票房成绩，并且还拿下了戛纳电影节的国际批评家大奖，但日本政府显然对于影片抱有强烈的不满。包括奥运担当大臣和文部大臣在内的高阶官员，都批判该片没有任何的“记录性”。确实，虽然《东京奥林匹克》在总体的走向上贴合了奥运会从准备到举行到闭幕的发展时间线，片子的具体构成却是一个个彼此并无太多关联的片段。</p>
+  <p>更重要的是，在这些官员们批判背后，不难发现，他们想要抱怨的，其实是影片所缺少的明确的对于“国族复兴”的“记录”。片中除了后来补剪的男子体操比赛的胜利画面之外，并没有太多关于日本队杰出表现的强调。而即使是在对其他国家运动员的镜头里，我们所能看见的，也更多的是作为个体的“人”所展现出的体育和竞技之美，而不是作为“国家”代表的他们在建功立业。同样是在官员不满后补加的镜头，还有对各奥运场馆的展现。在市川最早的成片中，关于“建筑”让人影响深刻的镜头，只有作为全篇开头的城市旧建筑为了大会被推倒，以及坐落在圣火本土传递第一站的广岛原子弹爆炸纪念馆。换句话说，原本应该是呈现“发展”的得到官方支持的纪录片，在导演手中成为了一个记录“破坏”的重要媒介。这其中的讽刺意味，也无需言表。</p>
+  <p>其实，在更广大的范围内，纪录片《东京奥林匹克》和同时代的其他电影作品共享着一种“时代精神”。学者 William Tsutsui 就提醒我们，要注意从日本经济高速发达期开始出现的日本怪兽电影中对于城市破坏的不断呈现。以1954年公开首作的《哥斯拉》为代表，在这些系列电影中的日本城市，特别是首都东京，总是无时不刻处在毁灭的阴影之中。比如上述配合奥运会而开通的首都高速路和新干线，就多次被哥斯拉和它的伙伴们毁坏。这些按照“理性”逻辑建设而成的都市，屈服在了怪兽这种“非理性”的存在之下。当然，辩证法最大的特点就在于，正和负并不总是以绝对的形式出现。Tsutsui 表示，虽然可以把这些电影解读为大众对日本历史和现代不满的一种表现，但每次总能奇迹般再复苏的东京，也可以被用来赋予观众一种对未来的信心。不可否认的是，城市不管如何发达都有可能被彻底毁坏这件事情，本身就让一种以国家为核心的线性发展观出现了裂缝。这种“历史的不稳”所具有的颠覆性，可能比任何怪兽的破坏都要巨大。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-30/6103bb999c232e01c17d2c59+L.jpeg" data-id="6103bb9d2114416715c3e28b" alt="1963年12月16日，五环奥运会标志在东京市中心的明亮灯光中脱颖而出。当主办城市为1964年夏季奥运会做准备时，这些标志点缀东京。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+1963年12月16日，五环奥运会标志在东京市中心的明亮灯光中脱颖而出。当主办城市为1964年夏季奥运会做准备时，这些标志点缀东京。
+    </figcaption>
+  </figure>
+  <p><strong>尾声：历史的轮回？</strong></p>
+  <p>尽管一种线性的时间认知可能还是世界的主流，历史的自我重复却也在我们想到或想不到的地方彰显着自己的存在。</p>
+  <p>因为全球新冠疫情而被推迟了一年的奥运会，用最直接的方式告诉了人们：尽管科学已经取得了长足的“发展”，但它似乎还是无法彻底对抗因为自然和社会的不确定性而产生的深刻“破坏”。国际政治不断加深的对立，更让人怀疑我们是不是还没有从上一届东京奥运会所处的冷战大背景下彻底走出来。在核武器所带来的恐怖平衡的笼罩之下，运动场上的竞技对抗实际已经成为了充满民族主义的另一种不见硝烟的战争。由此，第一部分所提及的政治和体育的密切联系，也仍然稳定地发挥着效力。和1964年相比，发展更为迅速的是早已成为全球性垄断产业的大众传媒。事实上，有不少评论家指出，本届奥运会之所以仍要举办的一个重要原因，就是以赞助商和转播权等为代表的商业利益。由此，2020/1年的东奥，也成为了日本学者柄谷行人所说的“资本-国家-民族”这一相互补足的“圆环”的最佳代表之一。</p>
+  <p>和往届相比，可以勉强发现的一个改变是，今天的日本民众已经不再像1964年那样对“发展主义”保有十足的信心了。在开幕式当晚，改修后呈现出“圆形”的新国立竞技场，因为组委会不允许观众入场的政策而显得空空荡荡。真正的民众们则聚集在了场外，高举标语表达出他们对日本政府决定在疫情下继续举办奥运的抗议。</p>
+  <blockquote>
+    <p>参考文献：</p>
+    <p>橋本一夫、『幻の東京オリンピック：1940年大会 招致から返上まで』、講談社 、2014年1月</p>
+    <p>古川隆久、『皇紀・万博・オリンピック―皇室ブランドと経済発展』、吉川弘文館、2020年5月</p>
+    <p>William Tsutsui, 'Oh No, There Goes Tokyo: Recreational Apocalypse and the City in Postwar Japanese Popular Culture’, in Gyan Prakash eds, Noir Urbanisms: Dystopic Images of the Modern City, Princeton University Press, 2010. 9</p>
+    <p>黄秋源，毕业于清华大学，东京大学博士在读，关注日本近现代史、建筑史。原文标题为“东京奥运会的辩证法”。</p>
+  </blockquote>
+  <p>———</p>
+  <p>微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-08-01</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-01/%E5%85%A8%E7%90%83%E5%8C%96%E6%97%B6%E4%BB%A3%E7%9A%84%E7%AC%AC%E4%B8%80%E5%9C%BA%E5%8D%B1%E6%9C%BA-%E5%A6%82%E4%BD%95%E9%87%8D%E5%A1%91%E4%B8%96%E7%95%8C%E4%B8%A8%E7%87%95%E4%BA%AC%E4%B9%A6%E5%9D%8A/">
+          全球化时代的第一场危机，如何重塑世界丨燕京书坊
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-31</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-31/%E5%AE%A0%E7%89%A9%E7%9A%84%E7%88%B1%E4%B8%8E%E6%99%BA%E6%85%A7-%E6%88%91%E4%BB%AC%E4%B8%8E%E7%8B%97%E7%8B%97%E4%B9%8B%E9%97%B4%E7%9A%84%E7%88%B1%E7%9A%84%E6%9C%AC%E8%B4%A8/">
+          宠物的爱与智慧：我们与狗狗之间的爱的本质
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-28</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-28/%E7%8C%8E%E5%B7%AB%E4%B8%8E%E5%90%AF%E8%92%99-%E5%BE%B7%E5%9B%BD%E7%9A%84%E5%8F%8D%E7%8C%8E%E5%B7%AB%E8%BF%90%E5%8A%A8%E6%98%AF%E5%A6%82%E4%BD%95%E8%B5%B0%E5%90%91%E5%90%AF%E8%92%99%E8%BF%90%E5%8A%A8%E7%9A%84/">
+          猎巫与启蒙：德国的反猎巫运动是如何走向启蒙运动的？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-27</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-27/2021%E5%B8%83%E5%85%8B%E5%A5%96%E5%85%AC%E5%B8%83%E9%95%BF%E5%90%8D%E5%8D%95-%E7%9F%B3%E9%BB%91%E4%B8%80%E9%9B%84%E6%96%B0%E4%BD%9C%E5%85%A5%E5%9B%B4/">
+          2021布克奖公布长名单，石黑一雄新作入围
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-07-30/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%88%91%E5%80%91%E5%BE%9E-Medium-%E6%90%AC%E5%88%B0%E8%87%AA%E5%BB%BA%E9%83%A8%E8%90%BD%E6%A0%BC/">
+            前一篇：為什麼我們從 Medium 搬到自建部落格？
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-07-30/Will-Beijing-Invade-Taiwan/">
+            後一篇：Will Beijing Invade Taiwan?
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-07-30/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%88%91%E5%80%91%E5%BE%9E-Medium-%E6%90%AC%E5%88%B0%E8%87%AA%E5%BB%BA%E9%83%A8%E8%90%BD%E6%A0%BC/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-07-30/Will-Beijing-Invade-Taiwan/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-07-31/%E5%AE%A0%E7%89%A9%E7%9A%84%E7%88%B1%E4%B8%8E%E6%99%BA%E6%85%A7-%E6%88%91%E4%BB%AC%E4%B8%8E%E7%8B%97%E7%8B%97%E4%B9%8B%E9%97%B4%E7%9A%84%E7%88%B1%E7%9A%84%E6%9C%AC%E8%B4%A8/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-07-28/%E7%8C%8E%E5%B7%AB%E4%B8%8E%E5%90%AF%E8%92%99-%E5%BE%B7%E5%9B%BD%E7%9A%84%E5%8F%8D%E7%8C%8E%E5%B7%AB%E8%BF%90%E5%8A%A8%E6%98%AF%E5%A6%82%E4%BD%95%E8%B5%B0%E5%90%91%E5%90%AF%E8%92%99%E8%BF%90%E5%8A%A8%E7%9A%84/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-07-30/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%88%91%E5%80%91%E5%BE%9E-Medium-%E6%90%AC%E5%88%B0%E8%87%AA%E5%BB%BA%E9%83%A8%E8%90%BD%E6%A0%BC/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-07-30/Will-Beijing-Invade-Taiwan/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-07-31/%E5%AE%A0%E7%89%A9%E7%9A%84%E7%88%B1%E4%B8%8E%E6%99%BA%E6%85%A7-%E6%88%91%E4%BB%AC%E4%B8%8E%E7%8B%97%E7%8B%97%E4%B9%8B%E9%97%B4%E7%9A%84%E7%88%B1%E7%9A%84%E6%9C%AC%E8%B4%A8/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-07-28/%E7%8C%8E%E5%B7%AB%E4%B8%8E%E5%90%AF%E8%92%99-%E5%BE%B7%E5%9B%BD%E7%9A%84%E5%8F%8D%E7%8C%8E%E5%B7%AB%E8%BF%90%E5%8A%A8%E6%98%AF%E5%A6%82%E4%BD%95%E8%B5%B0%E5%90%91%E5%90%AF%E8%92%99%E8%BF%90%E5%8A%A8%E7%9A%84/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

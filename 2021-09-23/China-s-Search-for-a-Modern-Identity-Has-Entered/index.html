@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’
+——
+" />
+    <meta property="og:description" content="
+‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’" />
+    <meta property="twitter:title" content="‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fviewpoint%2Fchinas-search-modern-identity-has-entered-new-and-perilous-phase" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/viewpoint/chinas-search-modern-identity-has-entered-new-and-perilous-phase" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/viewpoint/chinas-search-modern-identity-has-entered-new-and-perilous-phase&text=‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/viewpoint/chinas-search-modern-identity-has-entered-new-and-perilous-phase&title=‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/viewpoint/chinas-search-modern-identity-has-entered-new-and-perilous-phase&title=‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’&body=
+‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/viewpoint/chinas-search-modern-identity-has-entered-new-and-perilous-phase" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/viewpoint/chinas-search-modern-identity-has-entered-new-and-perilous-phase&title=‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’&caption=
+‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’&url=https://www.chinafile.com/reporting-opinion/viewpoint/chinas-search-modern-identity-has-entered-new-and-perilous-phase" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-09-23
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Roger Garside</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/viewpoint/chinas-search-modern-identity-has-entered-new-and-perilous-phase" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1632412860000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/viewpoint/chinas-search-modern-identity-has-entered-new-and-perilous-phase">‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-b38827125fa9ced10798f60fd108c2fc">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/gettyimages-1232333749.jpeg" title="‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’" class="colorbox" data-colorbox-gallery="gallery-node-53431-xe7JJhBIQGE" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/gettyimages-1232333749.jpeg?itok=KYnns8Tc" width="1200" height="800" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+(TPG—Getty Images)
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>The Forbidden City, obscured by a sand and wind storm, in Beijing, April 15, 2021.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">In 1980, writing the last paragraph of the last chapter of <em><a href="https://books.google.com/books/about/Coming_Alive.html?id=Ws5wAAAAMAAJ&amp;source=kp_book_description" target="_blank" rel="nofollow">Coming Alive: China After Mao</a></em>, I declared that China was moving “from totalitarian tyranny to a system more humane, part of a struggle by this nation to free itself from a straitjacket woven of feudalism, Marxism-Leninism, and twentieth-century technology.” In 2020, 40 years later, in <em><a href="https://www.ucpress.edu/book/9780520380974/china-coup" target="_blank" rel="nofollow">China Coup: The Great Leap to Freedom</a></em>, I describe a China firmly in the grip of totalitarian tyranny. In the years between, there were periods of loosening. But since Xi Jinping assumed the leadership of the Communist Party in 2012, he has progressively tightened the drawstrings the Party first imposed on China in 1949, cinching them closed with the technology of the 21st century.</p>
+      <p>My first taste of that hopeful China came when I was posted to Beijing as a British diplomat. From January 1976 to January 1979, while carrying out my second posting, I followed the struggle for the succession to Zhou Enlai and Mao Zedong. I watched as Deng Xiaoping was struck from office in April 1976; I predicted his return, and stayed just long enough to see it happen.</p>
+      <p>The events I witnessed in Beijing during those years stirred me deeply. No sooner had Mao ordered Zhou’s corpse to be <a href="https://www.chinadaily.com.cn/china/19thcpcnationalcongress/2013-01/07/content_29715125.htm" target="_blank" rel="nofollow">hurried away</a> to the cemetery at Babaoshan for cremation, than factional strife broke out. Conducted in code for years, conflict between the ailing Chairman and his cronies on the one hand and those loyal to Zhou’s legacy of rational nationalism on the other was now aired openly. Soon, under the guise of denouncing Deng, the <em>People’s Daily</em> revealed the scope of an ambitious program of pragmatic reform on which he had been working.</p>
+      <p>“If China were an elective democracy, Deng might run for President on a program like this,” I wrote to my colleagues in the Foreign Office. Fearing that the Chairman might soon follow Zhou to his grave, Mao’s cronies tried to whip up a climate favorable to a new lurch to the left. Public opinion was deeply alarmed by this. The first week of April brought Qingming, the festival for honoring the dead, along with mass demonstrations of loyalty to Zhou’s political legacy in Beijing and in many other major cities across China. I spent five days on Tiananmen Square witnessing an outpouring of deep political convictions such as had never occurred since 1949. I saw how strongly currents of unorthodox opinion could run, beneath outward compliance with the Party line.</p>
+      <p>Near midnight on Sunday April 4, 1976, the fifth day of the demonstrations, I returned for a last look around. The crowds of hundreds of thousands had gone home. But the huge square was far from empty. Row upon row of wreaths dedicated to Zhou, many bearing his portrait, were arrayed on stands facing the Gate of Heavenly Peace. They advanced northward from the monument to the very edge of the square, so that an army of Zhou Enlais confronted the portrait of Mao that hung on the Gate. As men, they had never clashed in public, but here the images of the dead Zhou and the dying Mao were arrayed against each other.</p>
+      <p>The political heart of China was occupied by forces loyal to a vision that rivaled Mao’s. What would the Party leaders do? To leave the Square occupied by the army of Zhous would hand victory to Deng and his allies. To remove them would provoke bloodshed. They did so, before dawn, and the Square filled again with sullen and anguished crowds who dispersed in the early evening, leaving a few hundred diehards gathered around the monument in the center of the Square. As night fell, detachments of People’s Armed Police emerged from the Forbidden City and the blood of those who resisted arrest spattered the paving stones. The Maoists had won their short-lived victory.</p>
+      <p>Although Mao’s followers were able to use his authority to suppress the manifestations of loyalty to Zhou, their relief was short-lived. When Mao died in early September, the world watched to see how his departure would affect the balance of power.</p>
+      <p>We did not have long to wait. A month later, my wife and I invited a Chinese couple to lunch at the Summer Palace. He was a well-connected official with a license to meet foreign diplomats. As we walked along the lakeside, his wife slowed her pace beside me, and asked me to recall when Mao’s widow, Jiang Qing, had last appeared in public. I realized that she had not been seen since the memorial service for Mao. “I do not think you will see her again for a very long time,” said my companion. Then she took me through the list of Mao’s three other closest associates, one by one, ending with the same prediction that I would not see them again for a very long time.</p>
+      <p>I realized that I was being told that all four, soon to be dubbed “The Gang of Four,” had been arrested. This was a <em>coup d’état</em> of the highest importance, domestically and internationally. I could hardly contain my impatience as we ate our lunch. As soon as was decent, I took our friends home and rushed to the embassy to telegraph the information. As far as I know, I was the first foreigner to learn of it.</p>
+      <p>A few days later the arrests were announced publicly, and the streets filled with jubilant crowds, dancing, singing, and setting off firecrackers in demonstrations that were officially sanctioned but evidently heartfelt.</p>
+      <p>Over the next two years, I followed the maneuvering by Deng and his reformist allies to gain the upper hand over Hua Guofeng, the obscure and ineffectual provincial official who had been designated by Mao as his successor. To achieve their objective, the reformers gave the impression that they were in favor not only of economic but also political reform. I witnessed a great groundswell of opinion across China in favor of their actions and intentions, which found its most intense expression at the Democracy Walls that emerged not only in Beijing but in other cities across the country, and in a plethora of magazines hand-printed by activists calling for democracy.</p>
+      <p>In Beijing, the principal Democracy Wall was on one stretch of the wide Avenue of Eternal Peace, the main East-West axis of the city. Behind it was a municipal bus depot. I spent many hours there, protected against the bitter cold by my heavy greatcoat, boots with insulated soles, and fur helmet with earflaps. In the company of a British journalist, I read wall posters by torchlight and made contact with young activists. The bravest and most articulate of these was Wei Jingsheng. The son of middle-ranking officials, Wei had been brought up in Beijing believing what the Party and his parents taught him, until the Cultural Revolution turned his world upside down and liberated him to go traveling, free of charge, across the length and breadth of China. He was the archetype of those millions of young men and women who returned from their travels convinced of the very opposite of what Mao preached. In 1978, he and others judged that the political climate would allow them—for however short a time—to call for a democratic future for their country.</p>
+      <p>When I left Beijing at the end of my tour of duty and moved to California, I faced the daunting task of judging how far economic and political reform would go. At no stage did Deng and his allies define their ultimate objectives or set out a road map of reform. “Crossing the river by feeling the stones” was their infuriatingly vague mantra. As so often in China, there was strong evidence pointing to very different conclusions.</p>
+      <p>I read again Wei’s denunciation of Deng as a “political swindler” who was duping the Chinese people into believing he would grant them political as well as economic reform. I remember how Wei had predicted to me at one of our secret meetings that he would soon be arrested. And so he was, on my birthday, March 29, 1979. He was sentenced to 15 years in prison. But, I told myself, Deng and his fellow reformers had read their Marx, who insisted that the political superstructure of society reflects its economic sub-structure. China had embarked on economic liberalization, and I ended my chapter on the economy in <em>Coming Alive </em>by predicting that stock exchanges would be reopened (as indeed they were 10 years later). Surely, I argued, China’s leaders would recognize that the political system must be reformed to accompany economic reform.</p>
+      <p>They would maintain control over the pace and methodology of reform, and not allow young activists like Wei to call the shots, but, I wrote, they could not expect to have a market economy with an unchanged political system. China, I was certain, would become a democracy—it was only a question of when and how.</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">One decade later, in May 1989, the world’s largest democracy movement was approaching its climax and Tiananmen Square was thronged with students.</p>
+      <p>Unlike during Qingming of 1976, I was not there to witness the second great manifestation of popular political will since 1949. By then I was working as a representative of the London Stock Exchange and had flown to Hong Kong to introduce our new chairman to the Governor. When our formal business was done, the governor, David Wilson, raised the subject of the students’ occupation of Tiananmen Square, and asked me: “How do you think this will end, Roger?”</p>
+      <p>How was I to reply to Wilson’s question? My mind went back to that night in April 1976 when the political fate of China had also hung in the balance.</p>
+      <p>“I fear it will become more interesting before it becomes less interesting,” I told him.</p>
+      <p>“Are you thinking of the Chinese curse: May you live in interesting times?”</p>
+      <p>“I am.”</p>
+      <p>The massacre exposed as facile optimism the hope I had expressed in <em>Coming Alive</em> that China’s leaders would recognize that the political system must be reformed to accompany economic reform.</p>
+      <p>Some years later I learned that Deng Xiaoping had said the regime would be willing to “kill 200,000 people in exchange for 20 years of stability.” In the event they killed several thousand and bought, until now, 32 years of stability. But as the years have passed, I have come to see that the true price that China has paid is not to be measured in corpses, but in moral degradation and political decay.</p>
+      <p>The Tiananmen Massacre destroyed whatever political and moral authority the Party still had before then. To rebuild the loyalty of the officials who were to rule in its name, the Party embarked on the greatest act of collective theft the world has ever seen. It took the assets owned by the state in the name of the people and transferred effective control of them into the hands of Party officials and their business cronies. This was the most extensive campaign of privatization in history. There was no legal clarity as to the identity of those who now controlled or owned the assets, and so it has remained. Corruption has been deliberately built into the economic system for a political purpose.</p>
+      <p>In 1990, I left the London Stock Exchange and set up my own company to advise countries that were embarking on a transition from the command economy to the market economy on how to develop their capital markets.</p>
+      <p>In every country in which I worked, I saw newly emerging elites professing their commitment to democracy and free markets, but shaping the new system to their own advantage, skewing regulations, or fighting for control of new institutions. In the 1990s, when I was working in Russia, hundreds of contract killings were <a href="https://www.irishtimes.com/news/contract-killings-hit-record-high-in-russia-1.1152112" target="_blank" rel="nofollow">carried out</a> every year by rival groups competing for financial power. In Novosibirsk, where I spent two months one winter initiating the first international investment fund for Siberia, the heavy mob broke into my flat after I declined to pay them protection money. In Moscow, the chief executive of a stock exchange apologized for being late for our meeting, explaining that he had been attending the funeral of his counterpart in another city, who had been assassinated. Just after meeting the founder of an exchange who wanted us to work with him, I learned he had lost the services of his chauffeur, whose knees had been shot through on the orders of a rival exchange; I declined what could have been a lucrative contract.</p>
+      <p>How did this experience help me when in later years I turned back to the study of China? It taught me much about human wickedness. As a diplomat, one observes it, but diplomatic privilege shields one from direct exposure. Its realities strike home more forcefully when the heavy mob breaks into your apartment, you meet people for whom the threat of assassination is routine, or you learn that the minister of finance who received you with such courtesy a few months ago has been exposed as the mastermind of a highly lucrative Ponzi scheme. Such experiences prompted me to look behind the façade of respectability that powerholders carefully maintain. They drove home with full force the inseparability of politics and economics, and democracy and the rule of law. They showed me the vital necessity of holding powerholders and their friends in business to account through an independent judiciary, a free press, and a vigorous civil society.</p>
+      <p>Nowhere did I did witness the coming of utopia, but time and again I was reminded of the truth spoken by Winston Churchill, “Democracy is the worst form of government, except for all those other forms that have been tried from time to time.”</p>
+      <p>Deng Xiaoping is regarded by many, inside and outside China, as a political genius. His formula of launching a transition to the market economy without political reform certainly generated enough wealth to allow the Communist Party to prolong its monopoly of political power long after their Soviet counterparts had collapsed under the weight of economic (and moral) failure. But when I read Minxin Pei’s <em><a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674027541" target="_blank" rel="nofollow">China’s Trapped Transition</a></em>, it confirmed for me what I had begun to suspect: that the contradiction between economic reform and political paralysis inherent in it could not be resolved and would eventually prove fatal. Reading Zhao Ziyang’s scathing <a href="https://www.hrichina.org/sites/default/files/the_coming_implosion.pdf" target="_blank" rel="nofollow">judgment</a>, in the secret journal he composed while under house arrest, that “What China has now is the worst form of capitalism” reinforced my view. In reviewing Pei’s book, I condemned “the complacency of all who blithely assume that China’s economic progress will lead to a smooth democratic transition.” The regime had stopped the transition to the market economy because it feared that further economic liberalization would bring political change, by undermining its political monopoly. Therefore, it would never be resumed until there was a change of political system. That was in 2009.</p>
+      <p>The complacency I saw should have been dealt a death blow when Xi Jinping came to power. He presented himself as the strong man who would stand up for the Leninist version of Marxism, and approved the internal 2013 Party directive known as “<a href="https://www.chinafile.com/document-9-chinafile-translation" target="_blank" rel="nofollow">Document 9</a>,” which condemned the core values and key institutions of liberal democracy.</p>
+      <p>In 2016, I began work on the project which was to become <em>China Coup</em>. At that time, China scholars and world leaders were tiptoeing around Xi Jinping’s China, scared to offend or simply confused. I saw a need for a truly independent assessment, free of self-censorship. To gather firsthand impressions, I spent the whole of May 2017, 31 days, in Beijing and Shanghai, meeting with 58 people, none of them officials in Party or government because I did not wish to listen to recitations of the Party line.</p>
+      <p>Instead, among the Chinese I met were a distinguished and globally respected historian of contemporary China, two leading economists with international reputations, the former editor of China’s premier reformist journal (now banned), a politically motivated painter, the Deputy Editor of the <em>Global Times</em> (for political sparring), the organizer of an independent film festival, a professor at the National Academy of Chinese Theatre Arts, a director of experimental theater, the nation’s leading playwright and theater director, the “godfather of Chinese contemporary art,” a TV producer, two publishers, the compiler of an annual report on online Chinese literature for the Chinese Academy of Social Sciences (CASS) (“there are 2.5 million writers of fiction online, of whom fifty thousand are serious”), the Chinese director of a foreign-supported environmental NGO, a curator at the National Museum, an assistant pastor at an unregistered Protestant church, the chairman of a domestic airline, businesspeople, directors of a highly successful video-sharing website for young adults, a writer of books published in English on contemporary Chinese politics, research-institute experts on China’s politics and economics, bloggers, independent filmmakers, an art critic, 150 pupils at an international school, a 21-year-old hip-hop dancer, and a rapper. Among the foreigners I met were the head of one of the largest foreign firms in China, a Pulitzer Prize-winning American author, a foreign university professor who has taught in China for 30 years, a <em>New York Times</em> correspondent, and a Carnegie Institute economist and longtime China resident.</p>
+      <p>Nearly all the Chinese people I met with were living in a state of uncertainty about their own identity and about the society they inhabited. This uncertainty was not explicitly stated, but revealed itself in more subtle ways, such as in their reluctance to express firm views on almost any topic. The contrast between them and the open, self-assured people I meet from Taiwan, Hong Kong, and Singapore was striking. The few exceptions included the Protestant pastor, the historian of contemporary China (whose most recent works are banned on the mainland), and the CASS expert on online fiction.</p>
+      <p>The uncertainty quietly manifested by the people I met was reflected in many of the residential and office buildings I saw. They had been shiny and impressive when new, but after a couple of decades they were in surprisingly poor condition. They were not manifestations of deep-seated, long-term confidence: quite the opposite. Those housing the Communist Party and its principal agencies, such as the police, were often, in contrast, massive in scale and solid in construction, as if to say to those they ruled: “You may come and go, your fortunes may rise and fall, but we are here for the long term.”</p>
+      <p>My visit, time-limited but an intensive exposure to a wide range of people and buildings, prompted me to pull together many varied and often conflicting strands of thought and knowledge from years of studying China remotely. A conclusion began to form in my mind: This regime is not authoritarian but totalitarian. After my return home, as I resumed my writing, I thought harder about the character of the regime.</p>
+      <p>The picture that formed in my mind might be summarized as follows. China’s constitution puts the Communist Party above the law and recognizes no limits to its authority. Where there are laws, they are drafted in deliberately vague language so that they can be interpreted as the will of the Party judges at any given time, or in any given circumstances. The subjects of the Party have no inviolable rights. Rights and freedoms are granted or withdrawn as the Party sees fit at any one time, or in any given circumstances. To enforce its will, the Party prefers to use persuasion and to encourage self-censorship, at which it is hugely successful, at home and abroad. Where these methods fail, it resorts to force. After my visit to China, I noted mounting evidence of this. The People’s Republic of China <a href="https://www.cfr.org/global-conflict-tracker/conflict/territorial-disputes-south-china-sea" target="_blank" rel="nofollow">disregarded</a> international law in the South China Sea; it <a href="https://www.chinafile.com/reporting-opinion/viewpoint/whos-blame-hong-kongs-weakening-rule-of-law" target="_blank" rel="nofollow">tore up</a> an international treaty in order to extinguish political freedom in Hong Kong; and it brazenly <a href="https://www.nytimes.com/2021/01/20/world/asia/china-genocide-uighurs-explained.html" target="_blank" rel="nofollow">pursued</a> its strategy of genocide in Xinjiang. In these ways and more, the regime has demonstrated beyond a shred of doubt that it extends its authority to whatever length feasible, and convinced me that it is totalitarian, not authoritarian.</p>
+      <p>The Obama administration <a href="https://www.brookings.edu/articles/the-american-pivot-to-asia/" target="_blank" rel="nofollow">initiated</a> a “pivot to Asia,” but did very little to give substance to that strategy. It was only during the Trump administration that a rude awakening from what had been a long sleep-walk gathered momentum. Until then, leaders of American public opinion in politics, the media, corporate life, and universities were not asking, let alone answering, the hard questions regarding the nature of China’s regime and how to deal with it. As my writing progressed, I saw my book’s purpose as an attempt to ask and answer those questions, and to contribute to waking up the U.S. and other liberal democracies.</p>
+      <p>I wrote <em>Coming Alive</em> at a time of hope, new beginnings, new friendships (with America, Japan, and Europe), and a healing of old wounds. I finished <em>China Coup</em> at a time of disillusion, broken trust, and benign engagement turned to suspicion and hostility. China’s search for a modern identity has entered a new and perilous phase in which there will be a crisis, which may bring chaos, or—just possibly—a new and better political order.</p>
+      <p>The regime which rules China now is outwardly strong but inwardly weak. Under Xi’s over-confident leadership, China is set on a collision course with an America awakened from complacency. He is blind to the reactions that China’s actions have provoked from the world’s strongest power and its allies. In domestic affairs, economic and social change without political reform have created economic, moral, social, and cultural problems that this totalitarian regime cannot solve, only intensify. Perforce, it relies not on trust but on control. This control has been greatly reinforced by the application of advanced technologies. Yet the regime is fearful: It fears truth, it fears freedom, and it fears the people it rules.</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">What has become clear to me in the intervening years is that while those of us outside China cannot dictate how it is governed, we can and must help those Chinese who want a free China.</p>
+      <p>The continued growth of the Chinese economy depends crucially upon continued access to the world’s reserve currencies, the international banking system, its deepest capital markets, its biggest pools of capital, and the greatest centers of scientific and technological discovery, all of which are controlled by the U.S. and its allies. This gives these countries geopolitical superiority, which they could use to create the conditions for change, exploiting their power in a way that incentivizes change and imposes a price on the present course.</p>
+      <p>The U.S. has made an excellent start through legislation that will deny access to the U.S. capital markets to companies that fail to disclose to investors financial information required by law. It will deny access to U.S. technology for many companies that are linked to the Chinese military and those that employ forced labor in Xinjiang. The Senate’s bipartisan <a href="https://www.csis.org/analysis/what-us-innovation-and-competition-act-gets-right-and-what-it-gets-wrong" target="_blank" rel="nofollow">approval</a> in late June of the U.S. Innovation and Competition Act showed America’s resolve to fully meet the challenge from the Chinese Communist Party. The EU must now make a start by definitively abandoning <a href="https://www.china-briefing.com/news/european-parliament-votes-to-freeze-the-eu-china-comprehensive-agreement-on-investment/" target="_blank" rel="nofollow">ratification</a> of its Comprehensive Agreement on Investment with China.</p>
+      <p>Where I differ from most other China analysts is that I see evidence that there are many within the upper reaches of the Chinese Communist Party who are alarmed by the trajectory Xi is pursuing. They are alarmed that he is blind to the reactions China’s actions have provoked from the world’s strongest power and its allies.</p>
+      <p>These Party members are dismayed that Xi is abandoning the strategy of reform and opening launched by Deng Xiaoping and replacing it with what I call Regression and Closure.</p>
+      <p>They also recognize that economic and social change without political reform have created problems that require not just new leaders but a new system of government. This group knows that to save China—and themselves—from catastrophe, they must remove Xi and end the dictatorship that he is determined to defend. But their will and capacity to do so depend crucially on how liberal democracies act.</p>
+      <p>Since my book containing this assessment was published, its core judgments have been confirmed by Professor <a href="https://www.foreignaffairs.com/articles/china/2020-12-04/chinese-communist-party-failed" target="_blank" rel="nofollow">Cai Xia</a>, the highest-level defector from China to the U.S. since 1949. She taught ideology to senior Party officials at the Central Party School in Beijing for 15 years. In an <a href="https://www.hoover.org/press-releases/hoover-institution-releases-essay-former-chinese-communist-party-insider-about" target="_blank" rel="nofollow">essay</a> published by the Hoover Institution in June, she wrote: “The [Chinese Communist Party (CCP)] appears to be powerful on the outside, but … is actually quite fragile inside. . . 60-70 percent of the CCP’s high-level officials understand . . . that only a democratic constitutional government can ensure long-term stability in China and protect human rights. . .”</p>
+      <p>The coup d’état to which my title refers is semi-fictional: Those who lead it are real-life leaders, the context is the real world we inhabit, and the storyline is a marriage of imagination and prediction. The coup is not the product only of the internal dynamics of Chinese politics: The U.S. plays a crucial role by engineering a Sino-American confrontation, which leads to a crisis in China’s financial markets. That crisis prompts the conspirators to activate a well-prepared contingency plan to depose Xi. Implausible? Impossible? No. But, dear reader, even if you are deeply skeptical, open the pages of <em>China Coup</em> and let me challenge your preconceived notions, and awaken your imagination. I invite you to face the greatest “what if?” question of our day.<span class="cube"></span></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2021-10-03</time>
+        <a href="https://nodebe4.github.io/oped2/2021-10-03/Chinese-Medicine-in-the-Covid-Wards/">
+          Chinese Medicine in the Covid Wards
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-28</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-28/How-Could-the-U.S.-Deter-Military-Conflict-in-the/">
+          How Could the U.S. Deter Military Conflict in the Taiwan Strait?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-09</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-09/A-Farewell-to-My-Students/">
+          A Farewell to My Students
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-02</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-02/How-Much-Does-Beijing-Control-the-Ethnic-Makeup-of/">
+          How Much Does Beijing Control the Ethnic Makeup of Tibet?
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-19/%E7%8B%84%E5%BE%B7%E7%BD%97%E4%B8%8E%E5%90%AF%E8%92%99%E6%97%B6%E4%BB%A3%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%A3%8E%E8%B2%8C-%E5%9C%A8%E6%80%9D%E6%83%B3%E5%AE%B6-%E6%96%87%E5%AD%A6%E5%AE%B6%E4%B8%8E%E6%88%8F%E5%89%A7%E5%AE%B6%E4%B9%8B%E9%97%B4/">
+            前一篇：狄德罗与启蒙时代的精神风貌：在思想家、文学家与戏剧家之间
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-24/%E5%9C%A8%E5%9C%B0%E6%96%B9%E5%92%8C%E5%85%A8%E7%90%83%E7%9A%84%E7%B4%A7%E6%80%A5%E6%97%B6%E6%9C%9F-%E6%8A%92%E6%83%85%E7%9A%84%E6%83%B3%E8%B1%A1%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%87%AA%E5%B7%B1/">
+            後一篇：在地方和全球的紧急时期，抒情的想象如何定位自己？
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-09-19/%E7%8B%84%E5%BE%B7%E7%BD%97%E4%B8%8E%E5%90%AF%E8%92%99%E6%97%B6%E4%BB%A3%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%A3%8E%E8%B2%8C-%E5%9C%A8%E6%80%9D%E6%83%B3%E5%AE%B6-%E6%96%87%E5%AD%A6%E5%AE%B6%E4%B8%8E%E6%88%8F%E5%89%A7%E5%AE%B6%E4%B9%8B%E9%97%B4/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-09-24/%E5%9C%A8%E5%9C%B0%E6%96%B9%E5%92%8C%E5%85%A8%E7%90%83%E7%9A%84%E7%B4%A7%E6%80%A5%E6%97%B6%E6%9C%9F-%E6%8A%92%E6%83%85%E7%9A%84%E6%83%B3%E8%B1%A1%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%87%AA%E5%B7%B1/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-09-28/How-Could-the-U.S.-Deter-Military-Conflict-in-the/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-09-09/A-Farewell-to-My-Students/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-09-19/%E7%8B%84%E5%BE%B7%E7%BD%97%E4%B8%8E%E5%90%AF%E8%92%99%E6%97%B6%E4%BB%A3%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%A3%8E%E8%B2%8C-%E5%9C%A8%E6%80%9D%E6%83%B3%E5%AE%B6-%E6%96%87%E5%AD%A6%E5%AE%B6%E4%B8%8E%E6%88%8F%E5%89%A7%E5%AE%B6%E4%B9%8B%E9%97%B4/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-09-24/%E5%9C%A8%E5%9C%B0%E6%96%B9%E5%92%8C%E5%85%A8%E7%90%83%E7%9A%84%E7%B4%A7%E6%80%A5%E6%97%B6%E6%9C%9F-%E6%8A%92%E6%83%85%E7%9A%84%E6%83%B3%E8%B1%A1%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E8%87%AA%E5%B7%B1/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-09-28/How-Could-the-U.S.-Deter-Military-Conflict-in-the/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-09-09/A-Farewell-to-My-Students/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

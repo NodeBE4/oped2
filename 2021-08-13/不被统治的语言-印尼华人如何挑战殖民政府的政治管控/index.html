@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>不被统治的语言：印尼华人如何挑战殖民政府的政治管控 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+不被统治的语言：印尼华人如何挑战殖民政府的政治管控
+——
+" />
+    <meta property="og:description" content="
+不被统治的语言：印尼华人如何挑战殖民政府的政治管控
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="不被统治的语言：印尼华人如何挑战殖民政府的政治管控" />
+    <meta property="twitter:title" content="不被统治的语言：印尼华人如何挑战殖民政府的政治管控" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F61172e49f4f9725a198e83ca" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/61172e49f4f9725a198e83ca" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/61172e49f4f9725a198e83ca&text=不被统治的语言：印尼华人如何挑战殖民政府的政治管控&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/61172e49f4f9725a198e83ca&title=不被统治的语言：印尼华人如何挑战殖民政府的政治管控" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/61172e49f4f9725a198e83ca&title=不被统治的语言：印尼华人如何挑战殖民政府的政治管控" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=不被统治的语言：印尼华人如何挑战殖民政府的政治管控&body=
+不被统治的语言：印尼华人如何挑战殖民政府的政治管控
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/61172e49f4f9725a198e83ca" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/61172e49f4f9725a198e83ca&title=不被统治的语言：印尼华人如何挑战殖民政府的政治管控&caption=
+不被统治的语言：印尼华人如何挑战殖民政府的政治管控
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=不被统治的语言：印尼华人如何挑战殖民政府的政治管控&url=https://www.allnow.com/post/61172e49f4f9725a198e83ca" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>不被统治的语言：印尼华人如何挑战殖民政府的政治管控</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-08-13
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 何俊德</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/61172e49f4f9725a198e83ca" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/61172e49f4f9725a198e83ca">不被统治的语言：印尼华人如何挑战殖民政府的政治管控</a>
+——</p>
+
+<div>
+  <p>2021年6月3日，南亚与东南亚研究系列讲座第五期在北大静园进行，讲座由荷兰皇家东南亚与加勒比研究所（KITLV）历史语言学家汤姆·豪格弗斯特（Tom Hoogervorst），主题为“印度尼西亚华人出版业简史（1911-1949）”。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-14/61172f529c232e01c17d30af+L.png" data-id="61172f562114416715c3e5e2" alt="讲座海报" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+讲座海报
+    </figcaption>
+  </figure>
+  <p>豪格弗斯特的研究区域为东南亚，尤其是印尼群岛地区。他的第一本专著《古代印度洋世界中的东南亚》（Southeast Asia in ancient Indian Ocean World），探讨了前现代时期东南亚与广阔的环印度洋地区之间的互动；其第二本专著《不被统治的语言：印度尼西亚华人出版业先驱》（Language Ungoverned: Indonesia’s Chinese Print Entrepreneurs, 1911-1949）进行，该书梳理了印尼华人出版业者使用马来语的历史，于今年由康奈尔大学出版社出版。此次讲座基于这本专著，展现了印尼华人出版业者将汉语与马来语元素巧妙结合，探讨了华人使用的马来语如何成为一门属于印尼大众的语言，如何挑战殖民政府在语言和政治方面的管控，以及华人如何利用自己的语言特色作为自己的“武器”，在构建自己特殊身份认同的同时获取并积累政治及经济资本。</p>
+  <p>以下为讲座纪要整理：</p>
+  <p>讲座海报借用了豪格弗斯特专著封面所使用的图片，其诸多细节反映了语言使用的相关问题。该图片出自20世纪30年代印尼三宝垄（Semarang）一家华人烟草公司广告。广告中有中文（闽南方言）、荷兰语、马来语等多种语言，体现了当时的海外华人移民的语言特色。首先，这些华人普遍掌握多门语言，虽不完全精通，但日常使用却游刃有余；其次，这种多语背景使得该人群涌现了不少优秀的作者；最后，多语混用反映了当时不同社会力量之间的角力。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-14/61172f224cd55d54dd5dc679+L.jpg" data-id="61172f23904b8c02a16a41d2" alt="Language Ungoverned: Indonesia’s Chinese Print Entrepreneurs, 1911-1949" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+Language Ungoverned: Indonesia’s Chinese Print Entrepreneurs, 1911-1949
+    </figcaption>
+  </figure>
+  <h2 id="section">华人出版业的崛起：从消费者到掌控印尼出版行业</h2>
+  <p>印尼群岛最早接触的文本，来自南亚次大陆。之后，随着阿拉伯穆斯林商人的到来，群岛地区开始出现阿拉伯文字书写的文本。18世纪，荷兰人在印尼群岛的统治趋向稳固，对记录信息怀有浓厚的兴趣，产生了大量使用拉丁字母拼写的文本。直到19世纪50年代前后，印尼群岛才出现了正规的出版行业。</p>
+  <p>这一时期，新式印刷技术传入爪哇，活跃于该地区的商人们得以大规模地印刷文本以进行信息传播。这一变化，深刻改变了人们的阅读习惯。由于可以较为便利地获取印刷品，阅读变成了人们生活中一种不可或缺的一部分。文本的大量生产也使之成为了一种商品，许多人得以从中获利，印尼社会出现了真正的出版业和出版商。</p>
+  <p>进入20世纪，除了新技术的广泛使用进一步促进了出版的商业化，荷属东印度殖民政府允许报馆自由发行除荷兰语外到各语种报纸，极大推动了印尼出版业的发展。相较于母语使用者最多但层级分明的爪哇语，马来语可以突破族群之间的界限，被包括华人在内的各种族、阶级、教育背景的人群广泛使用。因此，马来语报纸频繁地出现在在人们的日常生活当中。华人出版商们抓住机会，积极投身出版业，逐渐在该行业中确立了重要的地位。此外，他们还利用这一行业来影响舆论，宣传华人民族主义并与各种社会力量进行角力。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-14/61172efc9c232e01c17d30ae+L.png" data-id="61172efe904b8c02a16a41d1" alt="印尼华人的报纸" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+印尼华人的报纸
+    </figcaption>
+  </figure>
+  <p><br />起初，印尼报刊去欧洲化的尝试效果一般，但仍取得了一定成果。例如，在三宝垄，当地报馆就尝试在荷兰语报纸上刊出翻译成中文、马来语、爪哇语等语言的新闻概览。这种新闻概览广受欢迎，尤其受到了当地华人精英的追捧。华商通过阅读这些内容来获取资讯，以深入了解当地文化或商业信息，追踪发生在荷属东印度或中国祖籍地的时事。报纸也为人们提供了更多的消遣方式，例如，许多人沉迷于阅读报刊上的连载小说，如果想了解故事的走向，就必须不断购买新一期的报纸。连载小说勾起了人们的阅读兴趣，也因此为出版商带来了较为稳定的客户群。此外，连载小说还为文化的传播与交流做出了突出的贡献。在印尼最著名的翻译连载故事是中国的《三国演义》，而这部著作在此之前已经被多次翻译成马来语及其他东南亚语言。许多华商培养了从报纸中获取商业信息的习惯，非常愿意为了抓住商机而付出订阅报刊的小额成本。然而，殖民地其他种族的商人们却相对后知后觉，直到印尼取得独立，本地的官僚和商人才真正开始重视报纸的作用。</p>
+  <p>华人从的报刊的订阅者、阅读者逐渐变成了报刊发行的主体，其中有着多重原因。首先，自华人移民到荷属东印度群岛起，马来语就是他们首先学习的语言。许多华人精通马来语，可以熟练地使用马来语阅读、写作，甚至可以编辑发行马来语刊物。其二，源于华商资本的驱动，印尼华人当中不乏经济实力雄厚、愿意投资出版业的商贾且谙熟报刊的传播渠道和销售渠道。另外，华人出版商不仅可以轻易获取到华人、马来人、欧洲人等各群体的商业资讯和娱乐内容，还熟练掌握了对发展出版业至关重要的打字、排版、印刷等技术。通过近半个世纪的学习，华商们才完成了从荷兰语报纸的消费者到拥有并掌控印尼出版行业的转变。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-14/61172edd4cd55d54dd5dc678+L.jpeg" data-id="61172ee1904b8c02a16a41cf" alt="第一批荷兰中文学校成立于 1892 年，当时课程与本地人口分开。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+第一批荷兰中文学校成立于 1892 年，当时课程与本地人口分开。
+    </figcaption>
+  </figure>
+  <h2 id="section-1">语言之争：中国文化本位与全盘西化</h2>
+  <p>华人熟练掌握马来语并选择马来语作为其报刊第一语言，与华人的特殊历史有着紧密的联系。爪哇华人多数来自中国闽南地区，最开始更倾向于使用福建方言。移民爪哇后，许多华人学习使用拉丁字母标注闽南方言，简单明了。其次，荷属东印度社会最常用的语言是马来语，使用马来语可以促进华人与其他族群更好地交流，更好地融入当地的生活。另外，很大一部分华人移民无法接触到到中文教育，汉语水平并不高。因此，华人对于马来语的掌握日趋熟练，马来语很快成为了当地华人使用得最为流畅的语言。</p>
+  <p>到了19世纪末，华人社群中再次出现了学习并使用中文的热潮。19世纪下半叶，中国饱受欧洲列强的欺凌，国内政治的风云变化激起了印尼华人的民族主义情绪，而这样的情绪在华商创办的报刊上有较为明显的体现。首先，印尼的华人学校开始尝试系统性地教授北方官话，而非各种南方方言。其次，华人知识精英们展开了对保留传统中华文化和借鉴西洋现代文化的论争。再次，受国内外风潮影响，印尼华人在着装、生活方式等方面经历了巨大的变化。第四，印尼华人对外国势力的愤懑不断积聚，导致他们转而支持中国的民族主义运动，希望积极地为该运动贡献力量。印尼华人甚为关心中国时局的变化，其热情在报刊上展露无遗。华人积极支持中国的民族主义运动，各种变化在文化和语言层面体现得尤为明显。但由于马来语仍是当地华人群体使用得最为广泛的语言，因此这一时期华人报刊使用的语言仍以马来语为主。</p>
+  <p>1911年，辛亥革命推翻了封建帝制，吸引了越来越多的荷属东印度华人参与各类政治运动，当地华人社群出现了“再华化”（re-Sinicization）的倾向。一时间，华人学校、商会、读书会，以及与中国相关的报刊和群众组织大量涌现，甚至还出现了由当地群众组织创办的反殖民报纸。这一时期，荷属东印度华人可以大体分为两个派别。其中一派认为中国是他们的希望，故而寄期望于中国。他们受到民族主义运动的感召，即使身在南洋，依然心念中国。另一派则认为他们的未来在荷属东印度，因此努力效忠殖民政府。</p>
+  <p>另外，在荷属东印度，华人被殖民当局归类为“外籍东方人”（Foreign Orientals），承受着不平等的待遇，包括高税收、教育不平等，以及行动、从业、衣着等方面的限制，这使得许多华人在政治认同上倾向中国。为了缓和华人的反殖情绪，殖民政府取消了部分对华人的限制，允许华人接受西式教育。通过此举，殖民当局希望扶持一批效忠荷兰，经济实力较强，且在社会文化领域有所作为的华人精英。当局政策的变化，使得一部分华人精英子弟在20世纪初接受了系统的西式教育，熟练掌握荷兰语，其中不少人成为了在当地颇具影响力的大商人、大企业家。</p>
+  <p>回到语言的话题，彼时的华文报纸刊登了有一副题为《爪哇华人教育》的漫画。漫画图片描绘了当时的华人群体内部的微妙关系，反映了当时当地华人语言使用的情况。照片中的两个人正在讨论华人的教育问题，其中一位光脚扎辫子穿大褂的传统华人，操着一口夹杂着闽南方言的马来语，另一位则是接受西化“现代”教育的华人青年，使用标准的北方官话，夹杂着少量爪哇语词汇。漫画正中心赫然写着“谁更聪明？”（PINTER MANA？）。这幅漫画不仅生动地反映了华人群体内部出现的嫌隙，更体现了有趣的语言问题。漫画中使用的语言是一种明显的混合语，以马来语为基础，其中却掺入了荷兰语、爪哇语甚至是闽南方言中的词汇。这种现象在当时的荷属东印度的华人群体中十分普遍。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-14/61172eae4cd55d54dd5dc677+L.png" data-id="61172eb62114416715c3e5e1" alt="漫画《爪哇的华人教育》" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+漫画《爪哇的华人教育》
+    </figcaption>
+  </figure>
+  <p>通过漫画中的语言，读者可以看出华人语言中反映的历史问题。漫画中的传统华人学生是传统中国的代表，一位恪守中华传统的华人子弟；西化的华人学生则是另一个典型，而他却是一位只在乎自己穿着时尚的纨绔公子。在漫画作者看来，两位华人学生都不应是华人未来的前进方向，因为无论使用什么样的语言都无法让华人在殖民地获得足够的尊重。直到1942年日本占领东印度群岛，华人应该以什么形象示人的问题仍然充满了争论。</p>
+  <h2 id="section-2">语言融合：华裔马来语的衰亡</h2>
+  <p>此外，华人民族主义者常常在其所办的报纸上刊登各种笑话。笑话以马来语为基础，夹杂了闽南方言，“同志”（toengtji）等词的使用体现了华人对马来语的影响以及华人语言成分成功的在地化尝试。</p>
+  <p>在探寻这类历史语言学问题时，笑话是很重要的一手材料。相较于严肃的殖民文学，笑话以更为轻松、诙谐的方式来表达意见、进行批判，更容易绕过殖民当局的审查。在荷属东印度，一旦针对殖民当局的批评过于尖锐，出版从业者就可能面临囚禁、流放等惩罚。许多反殖民文学作品是在作者旅居外国、完成写作后才流回荷属东印度秘密发行的，其目的就是为了逃避殖民当局的管控。笑话除了可以讽刺、批评殖民当局，还经常以戏谑的口吻挖苦他人，产生一定的戏剧效果。例如，土生华人经常嘲笑新移民的口音。新移民无法发出“r”（即齿龈颤音，俗称“大舌音”），常常使用“l”的发音取而代之。基于发音的细小差别，当地华人可以很容易地分辨新老移民，而土生华人们常常对新客移民们充满了不屑和鄙夷。但值得注意的是，这样的话语通常是以笑话等较为友善的方式表达的，很少会导致正面冲突。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-14/61172e969c232e01c17d30ad+L.png" data-id="61172e9a904b8c02a16a41cd" alt="带有方言的笑话" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+带有方言的笑话
+    </figcaption>
+  </figure>
+  <p>这种充满戏谑、嘲弄口吻的笑话同样针对日本人和荷兰人。土生华人嘲笑日本人在其发音中用“r”代替“l”，与新客正好相反。荷兰人也是这类笑话中常见的主角。华人常常用荷兰人的发音缺陷来影射荷兰人的道德缺陷，并以此来讽刺荷兰人的道德问题。笑话通常不进行直接的人身攻击，而是用隐喻性较强的幽默手段，借用语言上的差异来嘲弄他人。</p>
+  <p>另外，马来语流畅与否是区分土生华人与新客华人的的关键标准。相较于土生华人，新客通常更擅长使用闽南语或其他中国南方方言，这种现象常常反映在华裔马来语文学（Sino-Malay literature）中。华裔马来语文学的作者，常常会用带有闽南语特色的“owé”、“bwansing” 、“gua”来表达不同语境下“我”的含义。这种区别对待，通常以幽默诙谐的笑话形式展现，时而表现出嘲弄的语气。</p>
+  <p>从华人的视角观察马来语，为马来语研究提供了新的思路。传统的马来语研究，通常从欧洲人的角度出发，探寻欧洲人在殖民时期对马来语的影响，忽略了华人的作用。然而，中国人是最早系统性学习马来语的群体之一。自明代开始，中国就设有机构专门学习包括占语、缅语、暹罗语在内的多种东南亚语言。明朝时，中国人使用汉字对东南亚语言注音，加强了外语学习。中国人对东南亚语言的学习，远早于欧洲人的扩张以及对东南亚的殖民，而且这样的语言学习在欧洲人殖民开始之后也并未停止。</p>
+  <p>19世纪中叶，大量中国南方居民下南洋，一系列马来语教学书籍应运而生，也主要是使用汉字对马来语进行注音的方式帮助华人读者进行学习。当出现汉字与外文的某些辅音无法对应的情况时，这些教材就会明确标注该汉字应使用广东或福建等某地的方言来发音。20世纪初，大量海外华人开始学习中文，在支持中国民族主义运动的同时，也加强不同华人群体之间的认同，促进了海外华人的团结。19世纪末，有不少华人编写教程，教海外出生的华人子弟闽南语。这类教程通常使用汉字进行注音，同时使用拉丁字母拼写的马来语进行讲解。这些编写闽南语教程的人仿佛在“逆风而行”，因为不少荷属东印度的土生华人通常更擅长马来语或是爪哇语，在几代人的时间内已然失去了流利使用中文的能力。而那些尝试教授闽南语的人，却在身体力行地帮助土生华人们找回失去的文化根基。</p>
+  <p>荷属东印度华人的语言传统十分特别，具有十分重要的研究价值。印尼华人向来就有将各种语言混合使用的传统，该传统体现了不同文化的相互交融。另外，华人语言也受到了荷属东印度当地文化与风俗的全方位影响。以上两种影响相互交织，造就了荷属东印度华人语言的多样性和复杂性。然而，由于20世纪60到90年代印尼在苏哈托统治时期禁止使用中文，对华人报刊、书籍大加限制，要找到合适的语料研究华人语言的变迁已非易事。此外，由于大部分人已无法阅读早期文本，在这样的情况下，世界范围内能够从历史语言学角度对印尼华人问题展开研究的学者已寥寥无几。豪格弗斯特的研究从语言使用切入，深入探讨了华人在荷属东印度历史中扮演的角色，为海外华人研究打开了一扇全新的窗口。</p>
+  <p>———<br />微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-08-16</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-16/%E7%88%B1%E7%84%A6%E8%99%91%E4%B8%8E%E6%80%A7%E5%8D%B1%E6%9C%BA-%E4%BC%97%E7%A5%9E%E7%9A%86%E6%AD%BB-%E6%97%B6%E4%BB%A3%E7%9A%84%E7%BA%AF%E7%88%B1%E8%80%BD%E7%BE%8E%E5%89%A7/">
+          爱焦虑与性危机：“众神皆死”时代的纯爱耽美剧
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-15</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-15/%E5%9C%A8%E9%B8%A1%E5%A8%83%E6%95%99%E8%82%B2%E4%B8%8E%E4%BD%9B%E7%B3%BB%E8%82%B2%E5%84%BF%E4%BB%A5%E5%A4%96-%E5%84%BF%E7%AB%A5%E6%96%87%E5%AD%A6%E5%A6%82%E4%BD%95%E6%95%99%E4%BC%9A%E6%88%91%E4%BB%AC%E6%83%85%E6%84%9F%E5%AD%A6%E4%B9%A0/">
+          在鸡娃教育与佛系育儿以外：儿童文学如何教会我们情感学习？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-13</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-13/%E9%99%86%E9%93%AD-%E4%BB%8E%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BA%BA%E5%8F%A3%E7%BA%A2%E5%88%A9-%E6%88%BF%E4%BB%B7%E9%97%AE%E9%A2%98%E5%88%B0%E5%A4%A7%E5%9B%BD%E7%AB%9E%E4%BA%89%E5%8A%9B%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+          陆铭：从中国的人口红利、房价问题到大国竞争力丨燕京讲稿
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-12</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-12/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91006-%E7%BD%97%E6%96%B0%E8%B0%88-%E5%86%85%E4%BA%9A%E6%80%A7-%E5%86%85%E4%BA%9A%E6%80%A7-%E6%98%AF%E5%9C%A8%E5%AD%A6%E6%9C%AF%E6%84%8F%E4%B9%89%E4%B8%8A%E5%9B%9E%E5%BA%94-%E6%96%B0%E6%B8%85%E5%8F%B2/">
+          燕声视频006 | 罗新谈“内亚性”： “内亚性”是在学术意义上回应“新清史””
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-08-13/%E9%99%86%E9%93%AD-%E4%BB%8E%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BA%BA%E5%8F%A3%E7%BA%A2%E5%88%A9-%E6%88%BF%E4%BB%B7%E9%97%AE%E9%A2%98%E5%88%B0%E5%A4%A7%E5%9B%BD%E7%AB%9E%E4%BA%89%E5%8A%9B%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+            前一篇：陆铭：从中国的人口红利、房价问题到大国竞争力丨燕京讲稿
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-08-15/%E5%9C%A8%E9%B8%A1%E5%A8%83%E6%95%99%E8%82%B2%E4%B8%8E%E4%BD%9B%E7%B3%BB%E8%82%B2%E5%84%BF%E4%BB%A5%E5%A4%96-%E5%84%BF%E7%AB%A5%E6%96%87%E5%AD%A6%E5%A6%82%E4%BD%95%E6%95%99%E4%BC%9A%E6%88%91%E4%BB%AC%E6%83%85%E6%84%9F%E5%AD%A6%E4%B9%A0/">
+            後一篇：在鸡娃教育与佛系育儿以外：儿童文学如何教会我们情感学习？
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-08-13/%E9%99%86%E9%93%AD-%E4%BB%8E%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BA%BA%E5%8F%A3%E7%BA%A2%E5%88%A9-%E6%88%BF%E4%BB%B7%E9%97%AE%E9%A2%98%E5%88%B0%E5%A4%A7%E5%9B%BD%E7%AB%9E%E4%BA%89%E5%8A%9B%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-08-15/%E5%9C%A8%E9%B8%A1%E5%A8%83%E6%95%99%E8%82%B2%E4%B8%8E%E4%BD%9B%E7%B3%BB%E8%82%B2%E5%84%BF%E4%BB%A5%E5%A4%96-%E5%84%BF%E7%AB%A5%E6%96%87%E5%AD%A6%E5%A6%82%E4%BD%95%E6%95%99%E4%BC%9A%E6%88%91%E4%BB%AC%E6%83%85%E6%84%9F%E5%AD%A6%E4%B9%A0/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-08-15/%E5%9C%A8%E9%B8%A1%E5%A8%83%E6%95%99%E8%82%B2%E4%B8%8E%E4%BD%9B%E7%B3%BB%E8%82%B2%E5%84%BF%E4%BB%A5%E5%A4%96-%E5%84%BF%E7%AB%A5%E6%96%87%E5%AD%A6%E5%A6%82%E4%BD%95%E6%95%99%E4%BC%9A%E6%88%91%E4%BB%AC%E6%83%85%E6%84%9F%E5%AD%A6%E4%B9%A0/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-08-13/%E9%99%86%E9%93%AD-%E4%BB%8E%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BA%BA%E5%8F%A3%E7%BA%A2%E5%88%A9-%E6%88%BF%E4%BB%B7%E9%97%AE%E9%A2%98%E5%88%B0%E5%A4%A7%E5%9B%BD%E7%AB%9E%E4%BA%89%E5%8A%9B%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-08-13/%E9%99%86%E9%93%AD-%E4%BB%8E%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BA%BA%E5%8F%A3%E7%BA%A2%E5%88%A9-%E6%88%BF%E4%BB%B7%E9%97%AE%E9%A2%98%E5%88%B0%E5%A4%A7%E5%9B%BD%E7%AB%9E%E4%BA%89%E5%8A%9B%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-08-15/%E5%9C%A8%E9%B8%A1%E5%A8%83%E6%95%99%E8%82%B2%E4%B8%8E%E4%BD%9B%E7%B3%BB%E8%82%B2%E5%84%BF%E4%BB%A5%E5%A4%96-%E5%84%BF%E7%AB%A5%E6%96%87%E5%AD%A6%E5%A6%82%E4%BD%95%E6%95%99%E4%BC%9A%E6%88%91%E4%BB%AC%E6%83%85%E6%84%9F%E5%AD%A6%E4%B9%A0/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-08-15/%E5%9C%A8%E9%B8%A1%E5%A8%83%E6%95%99%E8%82%B2%E4%B8%8E%E4%BD%9B%E7%B3%BB%E8%82%B2%E5%84%BF%E4%BB%A5%E5%A4%96-%E5%84%BF%E7%AB%A5%E6%96%87%E5%AD%A6%E5%A6%82%E4%BD%95%E6%95%99%E4%BC%9A%E6%88%91%E4%BB%AC%E6%83%85%E6%84%9F%E5%AD%A6%E4%B9%A0/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-08-13/%E9%99%86%E9%93%AD-%E4%BB%8E%E4%B8%AD%E5%9B%BD%E7%9A%84%E4%BA%BA%E5%8F%A3%E7%BA%A2%E5%88%A9-%E6%88%BF%E4%BB%B7%E9%97%AE%E9%A2%98%E5%88%B0%E5%A4%A7%E5%9B%BD%E7%AB%9E%E4%BA%89%E5%8A%9B%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

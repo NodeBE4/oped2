@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Appeasement at the Cineplex – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Appeasement at the Cineplex
+——
+" />
+    <meta property="og:description" content="
+Appeasement at the Cineplex
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Appeasement at the Cineplex" />
+    <meta property="twitter:title" content="Appeasement at the Cineplex" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Flibrary%2Fnyrb-china-archive%2Fappeasement-cineplex" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/library/nyrb-china-archive/appeasement-cineplex" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/library/nyrb-china-archive/appeasement-cineplex&text=Appeasement at the Cineplex&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/library/nyrb-china-archive/appeasement-cineplex&title=Appeasement at the Cineplex" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/library/nyrb-china-archive/appeasement-cineplex&title=Appeasement at the Cineplex" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Appeasement at the Cineplex&body=
+Appeasement at the Cineplex
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/library/nyrb-china-archive/appeasement-cineplex" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/library/nyrb-china-archive/appeasement-cineplex&title=Appeasement at the Cineplex&caption=
+Appeasement at the Cineplex
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Appeasement at the Cineplex&url=https://www.chinafile.com/library/nyrb-china-archive/appeasement-cineplex" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Appeasement at the Cineplex</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-04-05
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Orville Schell</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/library/nyrb-china-archive/appeasement-cineplex" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1680739200000-->
+<p><a href="https://www.chinafile.com/library/nyrb-china-archive/appeasement-cineplex">Appeasement at the Cineplex</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-d7ae618cac95862dc2761e00be6e62fc">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54741_sm.jpg" title="Appeasement at the Cineplex" class="colorbox" data-colorbox-gallery="gallery-node-54741-dEQFoAMhrKA" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54741_sm.jpg?itok=tPNdOaLM" width="1500" height="998" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Wang Zhao—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Attendees sit in front of a poster for ‘Iron Man 3’ during a promotional event for the Hollywood movie at the Forbidden City in Beijing, April 6, 2013.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">Although Beijing and Hollywood inhabit political and cultural universes that have little in common, they are similar in one important respect: both have expended vast amounts of energy, time, and capital confecting imaginary universes. The Chinese Communist Party (CCP) has long proselytized for sundry versions of its Maoist/Marxist/Leninist revolution through state-sponsored propaganda campaigns that have even airbrushed large chunks of its unsavory past from the historical record. Hollywood has engaged in its own escapist mythmaking by producing films filled with fantasy and backing them with promotional campaigns irrigated by galaxies of movie stars and inexhaustible reserves of PR and advertising. Both have wantonly employed wishful thinking, mendacity, and deception to create alternate realities that have managed to distract their respective mass audiences from the actual circumstances in which they have been living.</p>
+      <p>Despite the fact that these engines of fiction are otherwise so dissimilar, when China began “reforming and opening up” in the 1980s under Deng Xiaoping, the CCP started sniffing around Hollywood, because its cultural overlords wanted to see if they could get some of Hollywood’s seductive storytelling magic to rub off on their turgid propaganda efforts to “tell China’s story well,” as the country’s current leader, Xi Jinping, later put it. For example, realizing that the word “propaganda” sounded indelibly malign to Western ears, the Propaganda Department changed its name (but only in English) to the “Publicity Department.” At the same time, encouraged by Washington’s policy of “engagement,” which sought to transform the Sino-U.S. relationship through the alchemy of increased interaction, Hollywood executives began to be enticed by the potential of China’s immense and still-unexploited film audience.</p>
+      <p>“Out of nowhere appeared a market with 1.4 billion potential customers,” writes Erich Schwartzel in <em>Red Carpet: Hollywood, China, and the Global Battle for Cultural Supremacy</em>. “Accessing that resource would require bowing to censorship demands and navigating political land mines to build a theme park or secure Chinese financing.” But since China needed technical knowhow and Hollywood wanted more viewers, a match was tempting.</p>
+      <p>The idea of China selectively borrowing from the West harkened back to a Qing dynasty formula for modernization that called for “using things Western for matters of practice, but using things Chinese for matters of essence.” The conceit was to borrow, but only in utilitarian ways that shored up rather than undermined China’s existing system and values. Of course, at that time China’s “essence” was traditional Confucian culture, whereas now it is a confection known as “socialism with Chinese characteristics for the new Xi Jinping era.”</p>
+      <p>Ultimately the contradictions inherent in two such different political universes were not overcome in the CCP’s attempt at borrowing. The U.S. is an outspoken capitalist democracy. China remains a putative socialist “people’s republic” and refers to concerts, plays, museum exhibitions, and films as “cultural industries” that are still supposed to adhere to commandments laid down by Mao in 1942 at his Yan’an Forum on Literature and Art. Under Mao, literature, art, entertainment, culture, and media were not to be outlets for individual artistic self-expression but obedient megaphones for the Party’s unfailingly “correct” political line. Although some of Mao’s political rigidity lapsed during the reform era, Deng reminded the Chinese in 1979 that even as they might borrow practical things from abroad, they were still bound by Four Cardinal Principles: uphold the socialist path, the people’s democratic dictatorship, the leadership of the CCP, and Mao Zedong Thought and Marxism–Leninism. And lest any latter-day comrades become tempted to dismiss Mao’s dicta as ancient history, 72 years after the Yan’an Forum Xi reminded them that cultural workers should</p>
+      <blockquote>
+        <p>make patriotism into the main melody of literature and art creation, guide the people to establish and uphold correct views of history, views of the nation, views of the country and views of culture, and strengthen their fortitude and resolve to be Chinese.</p>
+      </blockquote>
+      <p align="center">* * *</p>
+      <p class="dropcap">How two such incongruent societies tried to come together, especially in matters of film, is the subject of <em>Red Carpet</em> and Ying Zhu’s <em>Hollywood in China: Behind the Scenes of the World’s Largest Movie Market</em>. In 1994, as this unlikely courtship started, Beijing allowed only 10 foreign films to be screened in China each year. But as Chinese audiences became enthralled with American movies, CCP officials, who had never lost their innate distrust of Hollywood’s penchant for just wanting to tell a good story and make a lot of money, grew restive. And when U.S. imports began generating huge box office revenues, with James Cameron’s <em>Titanic</em> (1997) capturing 28 percent of Beijing’s ticket sales, alarms began ringing. By the end of the decade, Zhu writes, “American mega-productions had captured about 70 percent of China’s film market, leaving approximately 100 domestically made films with only 30 percent market share.”</p>
+      <p>By then, Hollywood moguls were drooling over the prospect of not only infiltrating China’s multiplexes but pixilating this “people’s republic” with capitalist amusement parks and entertainment-related merchandise. Such fevered reveries were reminiscent of the 19th century, when British industrialists dreamed, as one put it, that if only they “could add an inch of material to every Chinaman’s shirt-tail, the mills of Lancashire could be kept busy for a generation.”</p>
+      <p>But as soon as China’s film industry began developing and being well received in China, the Party wanted to limit Hollywood’s soft power. Many officials still viewed American films not as a harmless form of entertainment but as an incipiently “hostile foreign force” that would undermine China’s “socialist” value system. And they were not entirely wrong, for Hollywood was part of the American hope that open markets would inevitably goad this formerly revolutionary land toward greater cultural and political openness. The two were, as the old Chinese aphorism puts it, “sleeping in the same bed but dreaming different dreams.”</p>
+      <p>With Chinese films competing so poorly against U.S. blockbusters, Beijing decreed in 1996 that two thirds of Chinese screen time would henceforth be reserved for domestic films and there would also be special holiday blackout periods when American films could not be shown. On top of that, theaters were required to contribute 5 percent of their revenue to a new state-run fund set up to promote domestic film production. Then in 1999 Beijing established the China Film Group Corporation, extending the state’s control across all sectors of the film industry.</p>
+      <p>A crucial inflection point in this uncertain Sino-U.S. rapprochement arrived when a number of Hollywood movies about Tibet, a sensitive subject for Beijing, went into production in the 1990s. <em>Seven Years in Tibet</em> (1997), directed by Jean-Jacques Annaud for Sony, told the story of a Nazi Austrian mountaineer played by Brad Pitt who became the Dalai Lama’s tutor in Lhasa during World War II. <em>Kundun</em> (1997), directed by Martin Scorsese for Disney, traced the Dalai Lama’s early years in Lhasa during the late 1930s and the 1940s. <em>Red Corner</em>(1997), directed by John Avnet for MGM, was about an American businessman (played by Richard Gere, a prominent supporter of the Dalai Lama) who is accused of murder in China. Chinese cultural watchdogs immediately attacked these films for idealizing “feudal society” in traditional Tibet and for “demonizing China.”</p>
+      <p>Officials were not only anxious about the popularity of these American films and about how they might influence the Chinese people. “If Chinese citizens view most movies as two-hour diversions, Chinese censors view them as two-hour threats,” observes Schwartzel. “Might China use its huge domestic box office as a cudgel to bend Hollywood to its will, and become ‘The Great Dictator’ of the global cinematic universe?” asks Zhu. “Can the Chinese government manage Hollywood? Or can Hollywood manage China?”</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">As China gained wealth and power and started seeking ways to reclaim its own domestic market and to influence content about China that the U.S. was sending around the world, many were surprised at how effectively it began managing Hollywood. Schwartzel observes that no other country had the economic leverage “to change not only the movies shown within its borders, but the ones made outside them.” U.S. studios unexpectedly found themselves subject to increasing pressure and forced to make more and more concessions. MGM only managed to regain favor in Beijing by sanitizing all elements relating to China in new productions. For instance, <em>Red Dawn</em> (2012), which originally featured Chinese soldiers invading an American town, was digitally altered to make the troops come from North Korea.</p>
+      <p>“Hollywood’s ready accommodation would set a pattern for future Sino-Hollywood negotiation,” writes Zhu. When Disney was banned in China because of <em>Kundun</em>, the company had just been seeking approval for an enormous theme park in Shanghai, which led Disney CEO Michael Eisner to apologize to Chinese premier Zhu Rongji. It was “a stupid mistake” to release the film, he pusillanimously recanted. “This film was a form of insult to our friends.” Later Robert Iger, Eisner’s successor, even declared that his “biggest learning” in China was: “caution is imperative, meaning to take a position that could harm our company in some form would be a big mistake.” Several months later, China lifted its ban on Disney. “If throwing a company’s creative mission under the bus was the price of regaining access to the Chinese market, Eisner was willing to pay it,” writes Schwartzel.</p>
+      <p>Eisner was hardly alone in his servility. Annaud, who had been an admirer of the Dalai Lama, restored himself to CCP favor by making a classic Maoist-style “self-criticism.” “Due to the lack of thorough understanding of Chinese history and culture, I could not predict the adverse effects of [<em>Seven Years in Tibet</em>],” he intoned. “I regret it.” Then he offered a bonus genuflection by acknowledging that Tibet was “part of Chinese territory.” Reborn as a full-fledged panda hugger, Annaud was invited to the Shanghai International Film Festival, where he accommodatingly wondered, “What would we think in France if the Chinese were interfering with Corsica? Or what would Americans think if Chinese were interfering with Puerto Rico?”</p>
+      <p>As China’s clout grew, “parts of movies started to disappear,” Schwartzel wryly notes. “China was going to be the top market, and its box office became blackmail.” Not only were controversial China-related topics being stripped from U.S. films, but U.S. producers started trying to figure out how they could also work positive bits about China into them. “With Chinese box-office riches in mind,” Schwartzel writes, producers “began stuffing characters, scenes, and products they thought would appeal to Chinese audiences into their films.”</p>
+      <p>For example, in Disney’s <em>Iron Man 3</em> (2013), starring Robert Downey Jr., a segment was added so that the popular Chinese actress Fan Bingbing could be spliced in for a cameo appearance. Then another scene was added featuring Downey surrounded by a claque of adoring Chinese schoolchildren. In 2016, Disney executives obligingly removed a Tibetan monk, “the Ancient One,” from the script for <em>Doctor Strange</em> and replaced him with Tilda Swinton as a Celtic woman. And in 2019 Paramount, the producer of <em>Top Gun: Maverick</em> (initially funded in part by the Chinese tech and entertainment company Tencent), preemptively removed Taiwanese and Japanese flags from Tom Cruise’s bomber jacket to avoid objections from Beijing.</p>
+      <p>“Chinese officials did not even have to weigh in,” Schwartzel writes. “Hollywood had so fully absorbed Beijing’s political preferences.” Such Hollywood pandering became known as “getting soy sauced.” But “while Hollywood studios were stripping their movies of Chinese villains, Chinese filmmakers were not extending the same courtesy.”</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">With Hollywood obsequiously come to heel, in 2012 CCP gatekeepers expanded the number of foreign films allowed into China from 20 to 34. But they were still not about to let foreign movies dominate their screens. If U.S. studios were going to keep profits rolling in from this lucrative, high-growth market—by 2020 it had become the world’s largest—they needed a new game plan. Their answer was coproductions with Chinese studios. But while these gave Hollywood access to new streams of capital and theaters, they also made it more vulnerable than ever to Chinese pressure and manipulation. As U.S. studios sought to appease Beijing, the results were often films so bollixed up by political nonsense that they were unwatchable.</p>
+      <p>A prime example was <em>The Great Wall</em> (2016) by the vaunted Chinese director Zhang Yimou, a coproduction between the China Film Group and the Hollywood studios Legendary Entertainment and Universal Pictures. It starred Matt Damon as a mercenary who somehow reaches China via the Silk Road and teams up with A-list Chinese actress Jing Tian to help repel an army of aliens trying to breach the Great Wall. The film was a costly East-West train wreck that was both painful to watch and had a disappointing box office return. In <em>Zootopia</em> (2016), an animated coproduction that called for a Walter Cronkite-like news anchor, different animals were sutured in to play the part in four different versions designed to placate national sentiments: a moose for American audiences, a koala for Australians, a corgi for Brits, and a panda in black suit and red tie for Chinese.</p>
+      <p>Soon, says Schwartzel, this new “coproduction strategy that was supposed to mint money for Hollywood producers had turned into a nightmare.” And things had only come under tighter control after Xi Jinping became China’s top leader in 2013, as a raft of hypernationalistic, anti-American films like <em>Wolf Warrior</em> (2015) and <em>Wolf Warrior 2</em> (2017) came out. The films’ soldier-hero, Leng Feng, was a John Wayne-like superpatriot whom the CCP saw as an antidote to all the U.S. superheroes it viewed as filled with anti-China cold war ideology and arrogance. Steeped in “jingoism cloaked as Chinese patriotism,” Zhu tells us, these <em>Wolf Warrior</em> productions were “high-concept, high-tech, and big-budget films that were at once propagandistic and crowd-pleasing.” The Party called them “leitmotif” movies whose propagandistic function was “opposed to the money worship, hedonism, and excessive individualism glorified by Hollywood imports.”</p>
+      <p><em>Wolf Warrior 2</em> made $854 million and became the highest-grossing film in Chinese history. Out of the 15 films that earned over $144 million in China in 2019, 10 were now made domestically. In 2020, according to Bloomberg, the share of foreign film receipts in China had slipped to 16 percent from 36 percent the year before. “While China had started the decade leaning on the American film industry for revenue and education,” writes Schwartzel, “the country would end it by not needing US entertainment at all.”</p>
+      <p>After China initiated its “going out” strategy in the late 1990s, entrepreneurs began stepping up foreign mergers and acquisitions. As Chinese billionaires fanned out around the world buying assets during the early 2000s, Wang Jianlin, a shopping mall and theater tycoon and the founder of the Wanda Group, became one of the most energetic. In an epic buying spree he hoovered up a Picasso painting for $28 million, the soccer team Atlético Madrid for $54 million, and the Ironman competitions for $650 million; made an investment of $2.6 billion in AMC Theatres (making Wanda the largest cinema operator in the world); and acquired a majority share in Legendary Entertainment for $3.5 billion. Many of these deals masked the fact that moguls like Wang, who became China’s richest man for a while, also wanted to get large chunks of cash out of China, and this was one way to do it. But his new economic power also helped give Beijing the chutzpah to move from simply censoring films bound for China to influencing films for distribution elsewhere around the world.</p>
+      <p>By 2020, the number of screens in China had shot up to 69,787, an increase of 9,708 since 2018. It was “too big to ignore and too lucrative to anger,” comments Schwartzel. In 2018, Xi had shifted oversight responsibilities of China’s film industry from the State Administration of Press, Publication, Radio, Film, and Television to the Party’s powerful Ministry of Propaganda. His tenacious mix of control, censorship, protectionism, state intervention, and xenophobia had helped Chinese films fare better when up against American competitors and did shift the balance.</p>
+      <p>“Now that US hegemony is being challenged by an ascendant China, the power dynamic has changed,” Zhu explains. “What’s at stake is more than competition between the old hegemon and the emerging hegemon; it is about whose version of the future will win the world’s approval.” The goal is “to reset the global narrative about China.” And what Beijing’s leaders wanted the world to know was that in their narrative, Western democracy was not the only kind of democracy, never mind that China’s version was the democratic dictatorship of the proletariat and its version of the film industry prevented Chinese from honestly probing their own history. “If film helps a nation process its past,” Schwartzel reminds us, “China has left massive portions of its history unexamined.”</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">Because the CCP has engaged in a “habitual and ruthless suppression of any alternative narratives,” Zhu writes, “so far, most of the developed world has shunned the Chinese version.” And as Xi approached his elevation to general secretary of the CCP apparently for life at the 20th National Congress this past October, China’s dedication to suppressing alternative narratives reached a new apogee. Even as it was unexpectedly rocked by demonstrations against Xi’s “zero-COVID” policies, it continued to develop and expand its film industry and, Schwartzel tells us, even to “turn American-made Hollywood movies into endorsements for itself.”</p>
+      <p>It may have been a quote credited to Stalin—“If I could control the medium of the American motion picture, I would need nothing else to convert the entire world to Communism”—that motivated Beijing to approach Hollywood in the first place. But as Xi’s techno-autocratic rule expands, the contradictions have become so antagonistic that even Hollywood’s willingness to submit has not guaranteed smooth sailing.</p>
+      <p>Of course, this is not the first time an autocratic state has bent Hollywood to its purposes. In <em>The Collaboration: Hollywood’s Pact with Hitler</em> (2013), Ben Urwand recounts Nazi Germany’s successful efforts in the 1930s when, even though most Hollywood studios were headed by Jews, Hitler’s consul general in Los Angeles, Georg Gyssling, received regular courtesy screenings before the release of films, and when he objected to a scene, it was often cut. In 1936, Louis B. Mayer even canceled an MGM project to adapt Sinclair Lewis’ novel about a fascist takeover of America, <em>It Can’t Happen Here</em>, for film.</p>
+      <p><em>Red Carpet</em> and <em>Hollywood in China</em> sketch out a frightening pattern in U.S.-China trade relations. As Schwartzel observes, “Hollywood’s experience has served as a precursor for numerous American industries trying to balance doing business in China with placating Chinese officials.” Roseate promises of “win-win” collaborations all too often prove to be wishful thinking. (There is a joke circulating among expat businessmen in China that “win-win” really means China wins twice.)</p>
+      <p>While some foreign ventures in China have succeeded, as soon as success creates economic market dependence, they usually get pressured to toe Beijing’s ideological line both at home and abroad. According to Schwartzel, “China’s omnipotence on-screen reflects the country’s increasing ubiquity in business,” and “that ubiquity has also exported a worldwide fear of crossing China.” As a result, foreigners have started to be “worried not only about losing their business but also about graver consequences: being called in for questioning, getting thrown out of the country, disappearing.”</p>
+      <p>Yet despite the multiplication of such fears and all the learned treatises that have been written about failed joint ventures, too many foreign leaders, both governmental and corporate, only learn by failing themselves. When Hollywood arrived in China, the common wisdom was that the glamour, glitz, and mythic power of Tinseltown would ultimately win the day. But as both these books show, it was Hollywood that was transformed, not Beijing. Schwartzel concludes that instead of Hollywood bringing “liberalization in storytelling” to China, Beijing generated “a risk-averse landscape where certain topics pertaining to China cannot be broached.” He further warns:</p>
+      <blockquote>
+        <p>Whether China’s entertainment industry ultimately prevails in its greater ambition of selling its country and its values to the world will be determined in this next century. That quest will also serve as a global referendum on which system will most inform the way leaders govern, states surveil, consumers spend, and citizens converse. Hollywood, once America’s most persuasive evangelist, remains beholden to another country.</p>
+      </blockquote>
+      <p>Zhu puts the wager for foreign companies even more starkly:</p>
+      <blockquote>
+        <p>A decade ago, the term “courtship” could have been used to describe the fitful relationship that, however tentative and antagonistic at times, had brought two willing partners to the negotiating table in their common pursuit of prosperity and happiness.</p>
+      </blockquote>
+      <p>But now, a much stronger Chinese film industry wants to be not just “a competitor” but one that, Zhu writes, “smashes and conquers, all at the behest of the Party. Prosperity no longer brings harmony when one partner starts to strong-arm the other.”</p>
+      <p>With the most recent eruption of demonstrations, increasing animosity toward China abroad, and decoupling from China becoming the global marketplace’s new leitmotif, perhaps foreign businesses in other economic sectors will learn from these two fine books on the film industry that these days, one must learn how to factor political risk into every due diligence effort. And with the invasion of Ukraine, Putin and Xi’s declaration of a “friendship without limits,” and Beijing’s saber-rattling in the Taiwan Straits and elsewhere, the political risks of doing business with this unpredictable “people’s republic” have risen dramatically. It is telling that in response to Beijing’s belligerence this past December, even the U.S. Department of Defense joined the Hollywood/Beijing quadrille by adding a provision to the National Defense Authorization Act—passed by both houses of Congress and signed by President Biden—making it illegal for U.S. studios to edit their films to appease Party censors and gain access to Chinese markets.<span class="cube"></span></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2023-04-13</time>
+        <a href="https://nodebe4.github.io/oped2/2023-04-13/Updates-to-Our-Database-of-Arrests-Related-to-the/">
+          Updates to Our Database of Arrests Related to the Hong Kong National Security Law
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-04-13</time>
+        <a href="https://nodebe4.github.io/oped2/2023-04-13/10-Years-of-The-North-Korea-Challenge/">
+          10 Years of The North Korea Challenge
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-04-05</time>
+        <a href="https://nodebe4.github.io/oped2/2023-04-05/As-Macron-Arrives-in-Beijing,-What-s-Next-for-Euro/">
+          As Macron Arrives in Beijing, What’s Next for Europe and China?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-03-30</time>
+        <a href="https://nodebe4.github.io/oped2/2023-03-30/For-China-s-Urban-Residents,-the-Party-State-Is-Cl/">
+          For China’s Urban Residents, the Party-State Is Closer than Ever
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-04-05/As-Macron-Arrives-in-Beijing,-What-s-Next-for-Euro/">
+            前一篇：As Macron Arrives in Beijing, What’s Next for Europe and China?
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-04-13/10-Years-of-The-North-Korea-Challenge/">
+            後一篇：10 Years of The North Korea Challenge
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-04-05/As-Macron-Arrives-in-Beijing,-What-s-Next-for-Euro/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-04-13/10-Years-of-The-North-Korea-Challenge/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-04-13/10-Years-of-The-North-Korea-Challenge/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-04-05/As-Macron-Arrives-in-Beijing,-What-s-Next-for-Euro/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-04-05/As-Macron-Arrives-in-Beijing,-What-s-Next-for-Euro/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-04-13/10-Years-of-The-North-Korea-Challenge/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-04-13/10-Years-of-The-North-Korea-Challenge/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-04-05/As-Macron-Arrives-in-Beijing,-What-s-Next-for-Euro/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

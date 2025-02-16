@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food
+——
+" />
+    <meta property="og:description" content="
+Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food" />
+    <meta property="twitter:title" content="Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fviewpoint%2Fbeijings-culinary-crusade-erasing-uyghur-identity-through-food" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/viewpoint/beijings-culinary-crusade-erasing-uyghur-identity-through-food" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/viewpoint/beijings-culinary-crusade-erasing-uyghur-identity-through-food&text=Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/viewpoint/beijings-culinary-crusade-erasing-uyghur-identity-through-food&title=Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/viewpoint/beijings-culinary-crusade-erasing-uyghur-identity-through-food&title=Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food&body=
+Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/viewpoint/beijings-culinary-crusade-erasing-uyghur-identity-through-food" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/viewpoint/beijings-culinary-crusade-erasing-uyghur-identity-through-food&title=Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food&caption=
+Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food&url=https://www.chinafile.com/reporting-opinion/viewpoint/beijings-culinary-crusade-erasing-uyghur-identity-through-food" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-05-13
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Timothy Grose</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/viewpoint/beijings-culinary-crusade-erasing-uyghur-identity-through-food" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1715611080000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/viewpoint/beijings-culinary-crusade-erasing-uyghur-identity-through-food">Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-087df33a6001b80825ab492e43e61750">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/55371_sm.jpg" title="Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food" class="colorbox" data-colorbox-gallery="gallery-node-55371-g4gG2wVxse4" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/55371_sm.jpg?itok=UbGsv99M" width="1500" height="1008" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Kevin Frayer—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A Uyghur family prays before a meal on Eid, in Kashgar, Xinjiang Uyghur Autonomous Region, July 29, 2014.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">Instruction began early on a November 2018 morning. This lesson was not taught in a classroom, but in a makeshift kitchen as part of Xinjiang’s “household school” program. There, a teacher stood before her class of adult women and <a href="https://web.archive.org/web/20231127163715/https:/mp.weixin.qq.com/s?src=11&amp;timestamp=1701102874&amp;ver=4922&amp;signature=AJy45cOPgirdkxqwYDig5w%2ALw4BGSn-GvJ5sBouCyTtbOS7mstK4kmzMbPNS3xz1Z5uEfBIr%2AXxKWDoao5wdDp7bGS7UBXk%2AxID1hZahEjPBIPSj7AZu%2AE3g5Xjp4tr3&amp;new=1" target="_blank" rel="nofollow">asked</a>: “What do you like to eat for breakfast?”</p>
+      <p>The students responded in unison, “nan and milk” or “nan and tea.”</p>
+      <p>“You don’t eat a bowl of hot congee?” the teacher interjected. This question sparked additional discussion and “even more curiosity” among the women in attendance.</p>
+      <p>As described in the official government social media account Xinjiang Women’s Voices, the teacher, affiliated with the Xinjiang branch of the All-China Women’s Federation, then offered hands-on tutorials for preparing fried dough sticks (<em>youtiao</em>), congee, onion pancakes, and steamed buns, among other side dishes. At the end of the workshop, one attendee <a href="https://web.archive.org/web/20231127163715/https:/mp.weixin.qq.com/s?src=11&amp;timestamp=1701102874&amp;ver=4922&amp;signature=AJy45cOPgirdkxqwYDig5w%2ALw4BGSn-GvJ5sBouCyTtbOS7mstK4kmzMbPNS3xz1Z5uEfBIr%2AXxKWDoao5wdDp7bGS7UBXk%2AxID1hZahEjPBIPSj7AZu%2AE3g5Xjp4tr3&amp;new=1" target="_blank" rel="nofollow">remarked</a>, “In the past, I only knew how to prepare nan and milk tea each morning; now, I am able to make scallion pancakes, fried dough sticks, and even rose buns. My family’s breakfast will now have more nutrition, vegetables, and congee as a staple, which children love to eat!”</p>
+      <p>This report—which implies that Uyghurs’ culinary traditions compare unfavorably to those of certain Han communities—exemplifies the Chinese Communist Party’s (CCP’s) approach to Uyghur culture generally. The CCP <a href="https://www.documentcloud.org/documents/22040744-orangebookfinalocrtoc?responsive=1&amp;title=1" target="_blank" rel="nofollow">views</a> many facets of Uyghur life as “backward,” so it seeks to refashion Uyghur cultural expression in a way it finds both intelligible and non-threatening, promoting a set of officially sanctioned “Han” tastes and habits as the standard for <a href="https://web.archive.org/web/20190726023846/http:/item.xjmsw.cn/xxzl/20181127/2018112752722.html" target="_blank" rel="nofollow">hygiene</a>, <a href="https://blog.westminster.ac.uk/contemporarychina/beautifying-uyghur-bodies-fashion-modernity-and-state-power-in-the-tarim-basin-2/" target="_blank" rel="nofollow">modernity</a>, and <a href="https://www.chinafile.com/reporting-opinion/viewpoint/why-china-banning-islamic-veils" target="_blank" rel="nofollow">normalcy</a>. In the case of food, Beijing often works to impose this standard through direct interventions with local women. Even when authorities <a href="https://web.archive.org/web/20240423213532/https:/www.chinadaily.com.cn/culture/2016-02/14/content_23478222.htm" target="_blank" rel="nofollow">extol the virtues</a> of the cuisine of the region, they often speak not specifically of “Uyghur food” but of “Xinjiang food,” as though the dishes so many Han tourists enjoy have their origins in geography rather than the practices and culture of the Uyghur people. At the same time, officials consider ethno-cultural diets of Uyghurs—especially if they are shaped by Islamic law—as obstacles to ethnic unity at best and a gateway to extremism at worst. <a href="https://web.archive.org/web/20231031173359/https:/mp.weixin.qq.com/s?src=11&amp;timestamp=1698772790&amp;ver=4868&amp;signature=EyxaiDauupYZ9%2ARHtpbDd1nvCsjdae%2ANFAGzSaMZR5XbXv7R6oCWLvgzP12JM20TZTVMzSH5epUn6q1at9WndYNx4FrcWOz61HCKqRhVAizS3-E8P7PVfhIqPOvEGeDk&amp;new=1" target="_blank" rel="nofollow">According to</a> Mijit Qadir, a Public Security Bureau official in Kashgar, “Muslim halal customs create an unbridgeable gap between Uyghur and Han people and widen the distance between them as would an invisible wall.” He adds:</p>
+      <blockquote>
+        <p>During my work in the PSB third division, some ethnic minority [Uyghur] police and auxiliary police have had persistent vices/outmoded habits [生活陋习, <em>shenghuo luoxi</em>]. They do not eat pork because they are not used to it; they do not use modern products because they are not used to them; and they are afraid if they do some things a religious dogma they did not choose for themselves will punish them. This outlook must change.</p>
+      </blockquote>
+      <p>Qadir, himself Uyghur, connects “ethnic minority” culinary traditions with “dogma” and pits them against modernity, as represented by Han people. For the CCP, the wrong diet can obstruct modernization, which must be embodied in a unitary “modern” culture. Thus, in order to cast off the vestiges of their supposed cultural backwardness not only must Uyghur women <a href="https://blog.westminster.ac.uk/contemporarychina/beautifying-uyghur-bodies-fashion-modernity-and-state-power-in-the-tarim-basin-2/" target="_blank" rel="nofollow">replace</a> their jilbab with pencil skirts, they must also now feed themselves as Han people do.</p>
+      <p></p>
+      <div class="node node-article cboxes article align-left grid-4 img-yes logo-no">
+        <div class="cboxes-inner">
+          <div class="cb-head">
+            <h3 id="postcard"> <a href="https://www.chinafile.com/reporting-opinion/postcard">Postcard</a></h3>
+ <span class="date">10.24.18</span> <span class="type-icon"></span>
+          </div>
+          <div class="cb-link">
+<a href="https://www.chinafile.com/reporting-opinion/postcard/million-citizens-occupy-uighur-homes-xinjiang"></a>
+          </div>
+          <div class="cb-img">
+<img src="https://www.chinafile.com/sites/default/files/styles/system/public/assets/images/article/system/uighur-home-sys.jpg?itok=h1t3BxDM" width="620" height="450" alt="" referrerpolicy="no-referrer" />
+          </div>
+          <div class="cb-cont">
+            <h2 id="chinas-government-has-ordered-a-million-citizens-to-occupy-uighur-homes-heres-what-they-think-theyre-doing"><a href="https://www.chinafile.com/reporting-opinion/postcard/million-citizens-occupy-uighur-homes-xinjiang" title="China’s Government Has Ordered a Million Citizens to Occupy Uighur Homes. Here’s What They Think They’re Doing.">China’s Government Has Ordered a Million Citizens to Occupy Uighur Homes. Here’s What They Think They’re Doing.</a></h2>
+ <span class="authors"> <span>Darren Byler</span> </span>             <div class="inner-content">
+              <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+The village children spotted the outsiders quickly. They heard their attempted greetings in the local language, saw the gleaming Chinese flags and round face of Mao Zedong pinned to their chests, and knew just how to respond. “I love China,” the...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>Although some officials believe that Uyghur cuisine is insipid, reflecting the simple and religious mindsets of those who consume it, the food prepared and served in Uyghur homes and restaurants is as diverse as the communities that inhabit the oases of the Tarim and Junggar Basins. Dough-covered stews called <a href="https://asianmarketsphilly.com/2019/02/20/dough-covered-meals-of-the-uyghurs-kazakhs-and-mongols/" target="_blank" rel="nofollow"><em>mori yapmisi</em></a> provide warming meals during Qumul’s short but frigid winters while <em>toxurmiyen</em>, a tomato-broth längmän noodle with beans, peppers, and a poached egg, is a hearty dish distinct to Yäkän. Despite regional diversity, <a href="https://apjcn.nhri.org.tw/server/APJCN/26/5/764.pdf" target="_blank" rel="nofollow">common ingredients</a> that help plate a “Uyghur cuisine” include wheat, rice, maize, sorghum, halal meat, and fruits and vegetables tolerant of arid climates, which are seasoned with various peppers, onion, and cumin. These ingredients combine in varieties of flatbread (in Uyghur, <em>nan</em>), pilaf (Uy. <em>polu</em>), steamed dumplings (<em>manta</em>), roasted dumplings (<em>samsa</em>), hand-pulled noodles (<em>längmän</em>), kebab (<em>kawab</em>), and many soups (such as <em>shorpa</em>, <em>suyuq’ash</em>, and <em>chöchürä</em>). The <a href="https://www.ewlad.biz/uyghurkitap/325-kitap/%d8%a6%db%87%d9%8a%d8%ba%db%87%d8%b1%20%d8%aa%d8%a7%d8%a6%d8%a7%d9%85%d9%84%d9%89%d8%b1%d9%89%20%d9%82%d8%a7%d9%85%db%87%d8%b3%d9%89.pdf" target="_blank" rel="nofollow"><em>Uyghur Food Encyclopedia</em></a>, published in the Xinjiang Uyghur Autonomous Region’s capital, Ürümchi, provides recipes for more than 1,800 different dishes. The volume’s introduction reads: “Uyghur cuisine is valued domestically and abroad for its many varieties, complicated and meticulous [<em>inchiklik</em>] preparations techniques, high quality, and nutritional and medicinal benefits.”</p>
+      <p>But the political climate in the Xinjiang has changed vastly since 2007, when the <em>Uyghur Food Encyclopedia</em> was first published. Beijing no longer lauds the nutritional or medicinal benefits of Uyghur cuisine. Instead, the introduction of “Chinese cuisine” into Uyghur communities is a key part of the Party-state’s comprehensive “stability work.” In addition to the repressive and often violent mechanisms of control imposed on the region in recent years—including <a href="https://www.haujournal.org/index.php/hau/article/view/1695" target="_blank" rel="nofollow">mass incarceration</a>, <a href="https://archive.vn/SPFT1" target="_blank" rel="nofollow">invasive birth control</a>, and <a href="https://madeinchinajournal.com/2020/08/24/the-spatial-cleansing-of-xinjiang-mazar-desecration-in-context/" target="_blank" rel="nofollow">religious repression</a>—Beijing is attempting to remold Uyghur culture itself, combining intensive human surveillance with paternalistic “educational” efforts. For example, the “<a href="https://www.chinafile.com/reporting-opinion/postcard/million-citizens-occupy-uighur-homes-xinjiang" target="_blank" rel="nofollow">Visit the People, Benefit the People, and Bring Together the Hearts of the People</a>” (<em>fanghuiju</em>), sometimes referred to as the “<a href="https://xinjiang.sppga.ubc.ca/chinese-sources/cadre-materials/cadre-handbooks/" target="_blank" rel="nofollow">Becoming Family</a>” campaign, dispatches government workers, many of whom are Han, to “<a href="https://archive.fo/qNhkI" target="_blank" rel="nofollow">live, study, and work</a>” with Uyghurs throughout Xinjiang. According to <a href="https://web.archive.org/web/20231127165413/https:/www.gjxfj.gov.cn/gjxfj/zw/webinfo/2020/09/1601762465048283.htm" target="_blank" rel="nofollow">2018 figures</a>, 56,000 work teams visited over 380 million people in the first four years of the campaign. Now in its <a href="https://books.google.com/books/about/%E8%AE%BF%E6%83%A0%E8%81%9A_%E6%94%BF%E7%AD%96%E5%AF%B9%E5%8D%97%E7%96%86%E4%B9%A1%E6%9D%91%E5%A6%87%E5%A5%B3%E8%A7%92.html?id=obhj0AEACAAJ" target="_blank" rel="nofollow">third phase</a> (2021-present), these workers not only serve as the eyes and ears of the government, reporting any “extremist” tendencies among the population, but also as transmitters of “healthy” culture.</p>
+      <p></p>
+      <div class="view view-photo-embed view-id-photo_embed view-display-id-panel_pane_3 visual-box view-dom-id-4b4ead405880e024bf90630876c248c6 grid-4 photo-object">
+        <div class="views-field views-field-field-common-system-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/photo/system/cooking_class_sm.png" title="Household School Cooking Class" class="colorbox" data-colorbox-gallery="gallery-node-55381-g4gG2wVxse4" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/medium/public/assets/images/photo/system/cooking_class_sm.png?itok=yz6Aqs2W" width="620" height="428" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div class="views-field views-field-field-common-system-credit">
+          <div class="field-content photo-credit img-credit">
+Xinjiang Women’s Voices via Sina Weibo
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption img-caption">
+            <p>Women take part in a “household school” cooking class, in Xinjiang, November 2018.</p>
+          </div>
+        </div>
+      </div>
+      <p>From organizing fashion shows to delivering lectures on illegal religious activities, the Party-led All-China Women’s Federation helps to carry out <em>fanghuiju</em> work. The central role the All-China Women’s Federation plays reflects the CCP’s logic: a stable Xinjiang requires “liberated” women, rescued from what Beijing <a href="https://web.archive.org/web/20240321132127/https:/www.sohu.com/a/50792427_119586" target="_blank" rel="nofollow">describes</a> as a backwards, overly religious, and sometimes “extremist” local culture. Understood from this perspective, a woman’s place in the home makes her a key vector for the spread of healthy, or unhealthy, influences. According to the chairwoman of Kashgar’s Women’s Federation, <a href="https://www.meipian.cn/c/11596039" target="_blank" rel="nofollow">Dilbär Imam</a>, “Uyghur women must eliminate the environment in which religious extremist forces disseminate [their teachings] and propagate the ‘real’ Xinjiang . . . [and] as Uyghur mothers, we must remember that when the mother is good, the child will be good; when the child is good, the <em>ethnic group</em> will be good; and when the ethnic group is good, the fatherland will be good.”</p>
+      <p>In its ongoing efforts to rescue Uyghur women from “extremism” and propel them towards modern society, the Women’s Federation of Xinjiang also holds periodic “household school” (家庭学校, <em>jiating xuexiao</em>) intensive workshops as crash courses in “civilized” living. According to the Federation’s <a href="https://web.archive.org/web/20231128152957/https:/mp.weixin.qq.com/s?src=11&amp;timestamp=1701185361&amp;ver=4924&amp;signature=hGPHjS-WIlAqeUjlZmzmrEBU451HPkeOxdR30cVgS8rL8tPFLcEBCmtH9gcy061SU5NIAJpv1eiK7RssD2IgLX3A5J0EoaYI74OcXBXXJxlQaxRIY2xJ6Lej6zcHLzJW&amp;new=1" target="_blank" rel="nofollow">official website</a>, household schools “advocate new-era women to change customs and improve the modern civilized qualities of rural women.” More specifically, the Women’s Federation <a href="https://web.archive.org/web/20231128152957/https:/mp.weixin.qq.com/s?src=11&amp;timestamp=1701185361&amp;ver=4924&amp;signature=hGPHjS-WIlAqeUjlZmzmrEBU451HPkeOxdR30cVgS8rL8tPFLcEBCmtH9gcy061SU5NIAJpv1eiK7RssD2IgLX3A5J0EoaYI74OcXBXXJxlQaxRIY2xJ6Lej6zcHLzJW&amp;new=1" target="_blank" rel="nofollow">tasks itself</a> with training “a group of modern civilized messengers who, by demonstration, will lead [other] rural women to abandon ‘bad habits’ . . . and educate women to love the Party, love their country, and love their families.”</p>
+      <p>Household school events generally entail technical training during the day and policy lectures in the evening. Cooking classes are a focal point of household school workshops. Since “diets in southern Xinjiang are monotonous,” <a href="https://web.archive.org/web/20231128153841/https:/www.fx361.com/page/2020/1130/7275193.shtml" target="_blank" rel="nofollow">according to</a> one Han Party cadre affiliated with the program, they provide hands-on instruction on meal preparation and guidance to cultivate “scientific and healthy” dietary habits. At a household school event in Konasheher county, members of the Xinjiang Women’s Federation <a href="https://web.archive.org/web/20231128155434/https:/mp.weixin.qq.com/s?src=11&amp;timestamp=1701186832&amp;ver=4924&amp;signature=4aF2sDC1eWoST7hG7nLkle83WAtGWcF0WgcjOKg6kSpJXlUYqgbZPcrC9fa76atluqWsr%2AhDj-Vgv84VQzFVykW-V8Oc1yCg7GQzOYJGkXakuyITWwIbiruFy0LAogxE&amp;new=1" target="_blank" rel="nofollow">led</a> women towards “healthy eating habits,” which begin with breakfast foods such as scallion pancakes, fried dough sticks, dumplings, steamed rolls, cold dishes, and a variety of soups—dishes that, while maybe not all actually healthful, are more typically found at breakfast stands throughout cities in central and eastern China. Meanwhile in Maralbeshi county (Bachu), the more than 260 women <a href="https://web.archive.org/web/20231128155813/https:/mp.weixin.qq.com/s/eIHQhFU7AugKYKsa08QMmg" target="_blank" rel="nofollow">attending</a> the local household school training held the same month as in Konasheher learned how to prepare 13 breakfast foods, four entrees/staples, and eight other side dishes. In addition, participants practiced washing, cutting, stir-frying, pan-frying, deep frying, and braising, among other techniques.</p>
+      <p>For some work, changes in diet must start with breakfast. Villages in <a href="https://archive.vn/gRaR4" rel="nofollow">Yeken</a> (Ch. <em>Shache</em>) and <a href="https://archive.vn/qxQ2F" target="_blank" rel="nofollow">Khotan</a> hosted household school trainings that provided instruction on preparing morning meals. Dishes included scallion pancakes, fried dough sticks, cold cucumber, fried eggs, congee, porridge, and milk tea. The goal: transform the monotonous “traditional” (i.e., Uyghur) breakfast of nan and tea.</p>
+      <p>But cooking classes aren’t only meant to teach Uyghurs how to better nourish their bodies. As is the case elsewhere, food and the manner in which it is consumed in China are important vehicles through which social and cultural identities are <a href="https://www.ucpress.edu/book/9780520293526/bitter-and-sweet" target="_blank" rel="nofollow">created and maintained</a>. During the Qin dynasty, adopting rice and wine <a href="https://link.springer.com/chapter/10.1057/9781403979278_3" target="_blank" rel="nofollow">symbolized</a> “barbarian” submission to Chinese rule. Meanwhile, popular lore has it that regional cuisines determine personalities: the spicy food of Sichuan makes its people fiery; the simple ingredients used in Shandong province <a href="https://www.scmp.com/lifestyle/food-drink/article/2157843/chinese-regional-cuisine-shandong-food-defiantly-humble-and?campaign=2157843&amp;module=perpetual_scroll_0&amp;pgtype=article" target="_blank" rel="nofollow">explain</a> residents’ humility.</p>
+      <p>Training Uyghurs to prepare “Chinese” cuisine also serves to create a more comfortable environment for the Han minders sent to “live, study, and work” in the region—who, despite wanting Uyghurs to alter their eating habits, have no intention of changing their own. A <a href="https://web.archive.org/web/20231031185041/https:/mp.weixin.qq.com/s?src=11&amp;timestamp=1698777442&amp;ver=4868&amp;signature=6yeXLUBHYKo9WUgJ0qQIaIRy976T5f1-XcwDRap-Bd1rhT8l8*G7m8He-nOmbFvWsFH27*0XBdwsjoAc5za8oPRSGf7SmCW*XOd0SYypC8bZjsb-6gzV7w2VyC0tqT20&amp;new=1" target="_blank" rel="nofollow">post</a> on Mekit County’s official “Becoming Family” or <em>fanghuiju</em> site complained:</p>
+      <blockquote>
+        <p>For someone who is not used to lamb like me, each meal [here] is “torture” [煎熬, <em>jian’ao</em>]. What’s more, most of the time we eat things I dislike such as carrots and cabbage. I also can’t tolerate using hands to eat to get [food] straight from bowls. I’m also not used to eating vegetables and rice from the same bowl. Even more, I am not accustomed to eating the same noodle or soup dish each evening and afternoon.</p>
+      </blockquote>
+      <p>For this reason, the state has often provided many Han law enforcement personnel stationed in Xinjiang with a <a href="https://archive.vn/jDJv0" target="_blank" rel="nofollow">Han</a> restaurant. In Shayar county, authorities opened a Chongqing-style cafeteria in one of the local prisons a mere 10 days after the idea was proposed. During the cafeteria’s opening ceremony, a provincial official celebrated the “<a href="https://archive.vn/GuDN7#selection-971.0-971.1" target="_blank" rel="nofollow">bridge of friendship</a>” the restaurant symbolized. The officers themselves reportedly embraced the cafeteria with open arms and heaped plates: an officer surnamed Lü <a href="https://archive.vn/jDJv0#selection-643.6-643.7" target="_blank" rel="nofollow">said</a> the opportunity to eat “delicious” Chongqing cuisine in distant Xinjiang allowed him to dedicate himself more fully to his job.</p>
+      <p>To ensure there are local chefs able to produce food for the Han workers stationed in Xinjiang, county- and township-level governments have <a href="https://web.archive.org/web/20231101190922/https:/mp.weixin.qq.com/s?src=11&amp;timestamp=1698865104&amp;ver=4870&amp;signature=yJum2eGtsSwWHsPO03n6TmfTFUcCtaXQ9Vz0Iv9aNU4ILgtg1ZhnKiSnuHx6lbWlTtD-V-YWreBL38q6n6ye8y7mr09xdywbTDgFj*U1c8LuIZzkOQtExgFBn3J1UpLs&amp;new=1" target="_blank" rel="nofollow">subsidized</a> vocational programs to train local Uyghurs in “Chinese” (中式, <em>Zhongshi</em>) cuisine—an ironic use of the term since the CCP claims Uyghurs to also be “Chinese.” Some newly trained Uyghur chefs are even placed in the service of <em>fanghuiju</em> work teams. This frees Han government minders from having to cook their own food and gives them more time for their intended tasks. In Aqchi county, Qizilsul prefecture, for example, the “Warming Stomach Project” (暖胃工程, <em>nuan wei gongcheng</em>) prepares locals to cook for for Han cadres stationed there. As one cadre <a href="https://web.archive.org/web/20231101190922/https:/mp.weixin.qq.com/s?src=11&amp;timestamp=1698865104&amp;ver=4870&amp;signature=yJum2eGtsSwWHsPO03n6TmfTFUcCtaXQ9Vz0Iv9aNU4ILgtg1ZhnKiSnuHx6lbWlTtD-V-YWreBL38q6n6ye8y7mr09xdywbTDgFj*U1c8LuIZzkOQtExgFBn3J1UpLs&amp;new=1" target="_blank" rel="nofollow">explained</a>, “In the past, work teams did not have a full-time chef, so every day one or two members who knew how to cook had to stay behind to prepare meals, which inevitably affected the village work. Now, Aqchi county provides chefs [from the Warming Stomach Project], which has easily solved this problem.” Once certified in “Chinese cooking”—a <a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1698865104&amp;ver=4870&amp;signature=yJum2eGtsSwWHsPO03n6TmfTFUcCtaXQ9Vz0Iv9aNU4ILgtg1ZhnKiSnuHx6lbWlTtD-V-YWreBL38q6n6ye8y7mr09xdywbTDgFj*U1c8LuIZzkOQtExgFBn3J1UpLs&amp;new=1" target="_blank" rel="nofollow">process</a> that demands aptitude in creating Han-inspired dishes and passing a comprehensive examination—chefs can earn between 1,500 and 2,000 renminbi per month.</p>
+      <p></p>
+      <div class="view view-photo-embed view-id-photo_embed view-display-id-panel_pane_3 visual-box view-dom-id-52fd4137c4cf0f4893af7ca345dde853 grid-4 photo-object">
+        <div class="views-field views-field-field-common-system-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/photo/system/chef.png" title="Warming Stomach Project Chef" class="colorbox" data-colorbox-gallery="gallery-node-55391-g4gG2wVxse4" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/medium/public/assets/images/photo/system/chef.png?itok=Iz0KNT_l" width="620" height="477" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div class="views-field views-field-field-common-system-credit">
+          <div class="field-content photo-credit img-credit">
+Kezhou Zero Distance via Sina Weibo
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption img-caption">
+            <p>A chef cooks in a kitchen as part of the “Warming Stomach Project,” in Aheqi village, Halaqi Township, Aheqi county, Xinjiang, 2018.</p>
+          </div>
+        </div>
+      </div>
+      <p>Han officials’ distaste for Uyghur dishes is a typical reaction in places where food becomes a <a href="https://press.uchicago.edu/ucp/books/book/chicago/M/bo3752854.html" target="_blank" rel="nofollow">site</a> of colonial <a href="https://foodispower.org/our-food-choices/colonization-food-and-the-practice-of-eating/" target="_blank" rel="nofollow">contact</a>: the colonizer’s aversion to local cuisine reifies ethnic divisions. A Han civil servant sent to “live, study, and work” in Xinjiang can have friendly interactions with a Uyghur who lives in the village where he’s stationed. And yet, the Han cadre’s distaste for Uyghur food will always prevent him from viewing Uyghurs in the village as equals.</p>
+      <p>Introducing and encouraging the preparation of “Chinese” dishes devalues Uyghur food systems. According to Sam Grey and Raj Patel’s work on <a href="https://rajpatel.org/wp-content/uploads/2009/11/Grey-Patel-2015-Food-Sovereignty-as-Decolonization.pdf" target="_blank" rel="nofollow">food sovereignty</a>, teaching the cooking techniques of colonizers weakens and eliminates an important channel of indigenous knowledge. Applying this theory to Xinjiang, Party officials are telling Uyghurs their diets are bland, monotonous, and even unhealthy while they are teaching women how to prepare “healthy” and “modern” “Chinese style” food. These recipes not only require new ingredients, they demand different preparation techniques and etiquette for sharing meals.</p>
+      <p>Even as government work teams admonish Uyghur families for eating bland, unhealthy food and for adhering to Islamic dietary restrictions that can lead to “extremism,” the CCP seems to have no problem with tourists consuming it. Indeed, Han sightseers have arrived in Xinjiang in droves and devoured local cuisine. A November 1, 2023 <a href="https://english.news.cn/20231101/df70a0a89a6c4b2985c5052ce6ae5b46/c.html" target="_blank" rel="nofollow">Xinhua report</a> indicates that over 7 million tourists visited the region in 2023 alone. Liu Quan, deputy director of the Xinjiang Department of Culture and tourism, notes the “<a href="http://www.china.org.cn/travel/2023-07/11/content_91883379.htm" target="_blank" rel="nofollow">famous local cuisine</a>” as one of the main driving forces behind these high numbers.</p>
+      <p>How to explain this apparent contradiction in the government’s view of Uyghur cuisine? Simply put, the Party-state deems Uyghur food acceptable as long as it has been appropriated and re-branded as generic “Xinjiang” food. The Qing dynasty formally christened the region “Xinjiang,” which means “new territory,” in 1884. Under the auspices of this vague title, the modern Chinese state has sought to subsume distinct local cultures, including not only Uyghur but also Kazakh and Uzbek, into a broader “Xinjiang” identity, which is itself a part of what the CCP calls the “Chinese nation,” or <em>Zhonghua minzu</em>, a collective identity that recognizes China’s diverse populations but insists on their unity. Thus official media <a href="https://news.cgtn.com/news/2020-09-08/Mo-s-delicacy-directory-Xinjiang-cuisine--TC5IXlvVYs/index.html" target="_blank" rel="nofollow">describe</a> nan, the staple food of Uyghurs, as sharing a long history with people of all ethnicities in Xinjiang, implying it is fundamentally part of a broader Chinese culture and not a Turkic or Central Asian. The Party-state is simultaneously removing indigenous foods from Uyghur homes while serving up those same dishes as de-ethnicized “Xinjiang food” for hungry Han tourists.<span class="cube"></span></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+    
+      <li>
+        <time>2024-05-28</time>
+        <a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">
+          The Future According to Xi and Putin
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-05-10</time>
+        <a href="https://nodebe4.github.io/oped2/2024-05-10/Why-the-African-Union-Stopped-the-Donkey-Hide-Trad/">
+          Why the African Union Stopped the Donkey Hide Trade with China
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-05-06</time>
+        <a href="https://nodebe4.github.io/oped2/2024-05-06/Traces-in-the-Land/">
+          Traces in the Land
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2024-05-11/2024-%E5%B9%B4-5-%E6%9C%88%E9%A6%96%E7%88%BE%E5%9B%9B%E5%A4%A9%E4%B8%89%E5%A4%9C%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+            前一篇：2024 年 5 月首爾四天三夜旅遊心得
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">
+            後一篇：The Future According to Xi and Putin
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2024-05-11/2024-%E5%B9%B4-5-%E6%9C%88%E9%A6%96%E7%88%BE%E5%9B%9B%E5%A4%A9%E4%B8%89%E5%A4%9C%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2024-05-10/Why-the-African-Union-Stopped-the-Donkey-Hide-Trad/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2024-05-11/2024-%E5%B9%B4-5-%E6%9C%88%E9%A6%96%E7%88%BE%E5%9B%9B%E5%A4%A9%E4%B8%89%E5%A4%9C%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2024-05-10/Why-the-African-Union-Stopped-the-Donkey-Hide-Trad/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>從自身經驗談談職涯上的選擇 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+從自身經驗談談職涯上的選擇
+——
+" />
+    <meta property="og:description" content="
+從自身經驗談談職涯上的選擇
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="從自身經驗談談職涯上的選擇" />
+    <meta property="twitter:title" content="從自身經驗談談職涯上的選擇" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2Fi-dont-know-how-to-choose-job-6e38534786e4%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/i-dont-know-how-to-choose-job-6e38534786e4?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/i-dont-know-how-to-choose-job-6e38534786e4?source=rss-f1fb3e40dc37------2&text=從自身經驗談談職涯上的選擇&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/i-dont-know-how-to-choose-job-6e38534786e4?source=rss-f1fb3e40dc37------2&title=從自身經驗談談職涯上的選擇" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/i-dont-know-how-to-choose-job-6e38534786e4?source=rss-f1fb3e40dc37------2&title=從自身經驗談談職涯上的選擇" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=從自身經驗談談職涯上的選擇&body=
+從自身經驗談談職涯上的選擇
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/i-dont-know-how-to-choose-job-6e38534786e4?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/i-dont-know-how-to-choose-job-6e38534786e4?source=rss-f1fb3e40dc37------2&title=從自身經驗談談職涯上的選擇&caption=
+從自身經驗談談職涯上的選擇
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=從自身經驗談談職涯上的選擇&url=https://hulitw.medium.com/i-dont-know-how-to-choose-job-6e38534786e4?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>從自身經驗談談職涯上的選擇</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-11-14
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/i-dont-know-how-to-choose-job-6e38534786e4?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1636877499000-->
+<p><a href="https://hulitw.medium.com/i-dont-know-how-to-choose-job-6e38534786e4?source=rss-f1fb3e40dc37------2">從自身經驗談談職涯上的選擇</a>
+——</p>
+
+<div>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*MXxufhftQIW97nB4" />    <figcaption>
+Photo by <a href="https://unsplash.com/@alschim?utm_source=medium&amp;utm_medium=referral">Alexander Schimmeck</a> on <a href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral">Unsplash</a>
+    </figcaption>
+  </figure>
+  <p>每到了程式導師實驗計畫進入尾聲的時候，就會有許多學生跟我討論 offer 選擇的問題，應該要去 A 公司還是 B 公司？對於這類型的問題，如果你預期我能給出一個確切的答案，沒錯，你是對的，確切的答案就是：「窩不知道」</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/420/1*L2fFKvBHRqJkg-YCyZLzgg.jpeg" />    <figcaption>
+圖片來源似乎不可考
+    </figcaption>
+  </figure>
+  <p>沒在跟你開玩笑，我是真的不知道。我覺得選擇是一件很「個人」的事情。</p>
+  <p>通常在給這類型的建議時，都會回想起自己以前是怎麼選擇的，換句話說，就是：「你會給 N 年前在選擇第一份工作的自己什麼建議？」</p>
+  <p>我自己其實相當滿意我的第一個選擇，有興趣的可以看回顧文：<a href="https://medium.com/hulis-blog/4-years-review-7fb7edc52687?source=friends_link&amp;sk=8a0099e4e8a8245f93ed140444669cd2">成為前端工程師的四週年回顧</a>，那時候我也不確定自己想做什麼，進了公司以後先學了 Node.js，寫一些簡單的後端小東西，也複習了 Android，修改了自家提供的 SDK 以及回覆廠商的問題，後來也學了 React，把前端的一些地方用 React 來重構。</p>
+  <p>前端、後端跟 Android 我都碰過了。對於這樣的工作內容，有些人就會覺得太雜了，樣樣通樣樣鬆，這樣到底有什麼用？但回頭來看，確實還滿有用的。正因為每個都懂一點，所以在討論相關知識的時候我都可以插上一腳，能比別人更快理解背後的脈絡以及系統的全貌，我覺得其實滿有幫助的。</p>
+  <p>有關於職涯的選擇，其實我過往的文章也都有談到一點，像是在 2016 年年底的：《<a href="https://blog.techbridge.cc/2016/12/31/review-2016/">一個資淺工程師年末的自我省視</a>》中，我談到了廣度跟深度以及小公司跟大公司的選擇：</p>
+  <blockquote>
+<em>我自己第一間是待新創公司，待一年多之後其實想換到大公司去工作。為什麼？因為我想體驗大公司的開發流程。在很多新創公司，開發都沒有什麼流程，規則比較鬆散。例如說我自己一個人負責那整個專案的話，我要不要寫測試、程式碼風格要不要統一，這一切都取決於在我。有也可以，但沒有也可以，沒有人會管你，但是也沒有人會給你一些建議。優點是非常自由，缺點就是沒有人帶。</em>  </blockquote>
+  <blockquote>
+<em>所以待久之後，就會想體驗一下大公司的開發流程到底長怎樣，想要試試看跟別人分工，而不再是自己一個人做一個專案。有人可以互相討論、互相指點，彼此教學相長。</em>  </blockquote>
+  <blockquote>
+<em>不過無論是哪一種類型的公司，我覺得最重要的還是「找一份可以學到東西的工作」。這個道理很簡單，你一天必須花八個小時在這一份工作上面，如果你在這份工作已經找不到什麼可以學習了，那你的成長就停滯了。雖然當個薪水小偷領這些薪水也很不錯，但我覺得你也必須考慮到你之後的職涯發展（除非這份工作你本來就是要養老用的）。要找一份學得到的東西的工作，你才能邊工作邊成長，對你自己的生涯發展也會更順利一點。</em>  </blockquote>
+  <p>在 2017 年 4 月份的：《<a href="http://webcache.googleusercontent.com/search?q=cache:t3QShtcw1nwJ:huli.logdown.com/posts/1739564-big-company-or-startup+&amp;cd=1&amp;hl=zh-TW&amp;ct=clnk&amp;gl=tw">該進大公司還是新創？</a>》一文中，我給出的方向是：</p>
+  <blockquote>
+<em>再者，其實「我應該進大公司還是新創」這個問題其實也問得不好。如果對方真的只問：「我該進大公司還是新創？」這種問題，那我也會覺得這個很空泛很爛。但就算對方這樣問，其實我們也還是可以再追問幾個問題，才會更明白提問者想要問的到底是什麼，例如說：</em>  </blockquote>
+  <blockquote>
+<em>1. 你為什麼想（或不想）進大公司？</em>  </blockquote>
+  <blockquote>
+<em>2. 你為什麼想（或不想）進新創公司？</em>  </blockquote>
+  <blockquote>
+<em>3. 你目前猶豫的點是什麼？</em>  </blockquote>
+  <blockquote>
+<em>以我的經歷來說，通常會問我這個問題的人，可能是已經拿到一間新創公司跟一間大公司的 offer 了，這時候才會提出：「我該進大公司還是新創」這個疑問。</em>  </blockquote>
+  <blockquote>
+<em>而他們通常會提出這個疑問，其實背後的點有可能是：</em>  </blockquote>
+  <blockquote>
+<em>1. 以職涯發展來說，大公司的經歷會不會比新創更吃香？至少大公司大家都聽過</em>  </blockquote>
+  <blockquote>
+<em>2. 聽說新創做的事情比較雜，會不會到那邊之後什麼都要做，反而比較像打雜的？</em>  </blockquote>
+  <blockquote>
+<em>3. 聽說在大公司只能當小螺絲，只負責其中一部分，會不會很無聊？</em>  </blockquote>
+  <blockquote>
+<em>4. 聽說人很少的小公司因為培養新人的成本很高，來了就不想放他走，是真的嗎？</em>  </blockquote>
+  <blockquote>
+<em>5. 在新創公司如果公司倒掉怎麼辦？</em>  </blockquote>
+  <blockquote>
+<em>6. 新創公司的升遷跟獎金制度聽說都不完整，那選大公司是不是比較好？</em>  </blockquote>
+  <blockquote>
+<em>因為原本的問題範圍太大，所以我們必須把這個大問題切成很多的小問題，其實這些小問題才是重點。而且你把這些小問題解決以後，大問題也就跟著解決了。</em>  </blockquote>
+  <p>接著在 2018 年年底的《<a href="https://blog.huli.tw/2018/12/29/after-two-years-am-i-senior/">兩年過後，我能夠被稱為資深工程師了嗎？</a>》，我重新回顧了兩年前的文章，並再次針對廣度與深度的問題給了一段回答，覺得先廣再深很不錯：</p>
+  <blockquote>
+<em>兩年前我覺得自己廣度比深度多很多，因此我寫了一大堆文章針對不同的主題深入研究，讓自己對技術的理解變得更深。</em>  </blockquote>
+  <blockquote>
+<em>那廣度呢？有了深度以後，我對廣度便不是這麼在乎了。我在第一份工作時還沒決定好自己想往哪裡走，因此我用 node.js 寫後端，用 react+redux 寫前端，還用 Java 寫了 Android 的 App。</em>  </blockquote>
+  <blockquote>
+<em>可是在那之後我變成了專職的前端工程師，因此對後端技術便不是那麼關注，有哪些新的潮流我都不知道，更不用說 mobile 了。還是會維持一些基本的敏感度，例如說知道新出的 Flutter 之類的，但也僅僅知道這個關鍵字而已。</em>  </blockquote>
+  <blockquote>
+<em>這其實也是我想走的方向，我覺得先廣再深其實是很不錯的一件事，你得先廣才能去找到自己想走的方向，並且也在這段時期累積一些對其他領域的基本理解，接著才走深，去深入理解你選的那個領域。</em>  </blockquote>
+  <blockquote>
+<em>以我來說，我在廣度時期讓自己理解後端、Mobile 開發或是一點架構層面的東西，這些都對我之後的職涯很有幫助，至少我有基本的概念，不會什麼都不懂。</em>  </blockquote>
+  <p>而 2019 年 2 月的大雜燴文章《<a href="https://medium.com/hulis-blog/qa-be72946f0b23">程式相關問題一網打盡：談自學、轉職、出國、職涯、教學、補習、騙錢、產業以及努力</a>》中，對於工作的選擇我給出了一個比較大方向的建議：</p>
+  <blockquote>
+<em>選工作的時候應該優先考量什麼因素？</em>  </blockquote>
+  <blockquote>
+<em>我自己會優先考量的是發展空間，在聽到工作內容時就差不多能知道在這間公司的發展性如何，我這邊指的發展性不是指說在公司內部是否能升官，而是指說個人能力的提升。</em>  </blockquote>
+  <blockquote>
+<em>舉例來說，我現在這間公司找我的時候跟我說他們要把整個平台砍掉重練，所以我就知道如果進來的話，能夠跟著一個中型專案從無到有一路建立起來，我覺得這是很寶貴的經驗，所以對我來說會覺得很有發展空間。</em>  </blockquote>
+  <blockquote>
+<em>這個邏輯可以套用到另一個問題：「什麼時候該離職？」，當你覺得發展空間有限，能學到的東西不多時就差不多可以離職了，到一個更有挑戰性的環境去。</em>  </blockquote>
+  <blockquote>
+<em>除此之外，還有很多人會選團隊，覺得團隊對了整個就都對了，因為你有那個氛圍、有那個環境，就會是一個很適合發展的地方，大家互相砥礪一起進步。不過我從以前到現在都沒進過什麼大團隊，同事也都沒有真的到很厲害所以我還沒有機會體驗到就是了，或許等我進這種公司以後再來寫篇文章跟大家分享。</em>  </blockquote>
+  <p>一直到 2020 年 4 月我自己重新出去求職，從《<a href="https://medium.com/@hulitw/i-dont-know-what-i-want-about-career-383bee0be733">關於求職，連我自己都不知道我要什麼</a>》一文中可以看出，其實我自己也不知道該怎麼選擇：</p>
+  <blockquote>
+<em>在求職的時候，有一些問題很常被問到，像是：</em>  </blockquote>
+  <blockquote>
+<em>1. 你這次求職想看一些什麼類型的公司？</em>  </blockquote>
+  <blockquote>
+<em>2. 你的職涯規劃是什麼？</em>  </blockquote>
+  <blockquote>
+<em>3. 你在工作上的目標是什麼？</em>  </blockquote>
+  <blockquote>
+<em>有些問題我以為我知道答案，但沒有，我不知道。</em>  </blockquote>
+  <blockquote>
+<em>舉例來說，一開始我都說這次求職沒有特定喜好，想要到處看看，所以公司類型都可以。想要到處看看是真的，但是都可以是真的嗎？這次也看了博奕業，但如果拿到 offer，我真的會去嗎？可能不會。如果公司很遠在南港，我會去嗎？也可能不會。</em>  </blockquote>
+  <blockquote>
+<em>一開始也看了滿多小公司，直到真的面試之後才發現，小公司我真的 ok 嗎？還是我這次其實想要找比較大一點的公司？我不知道。</em>  </blockquote>
+  <blockquote>
+<em>沒有限制是一種自由，但也是一種困擾。</em>  </blockquote>
+  <blockquote>
+<em>你想找什麼職位？資深前端工程師？好啊。那如果有 team leader 的位置呢？好啊，也可以試試看。那如果是全端呢？好啊，我也不排斥。到處看看是好事，問題是最後要怎麼做選擇。因為最後能選的只有一個，沒有什麼我全都要這種事，很多工作條件是互斥的，不相容就是不相容。</em>  </blockquote>
+  <p>如同我開頭所講的，我覺得選擇本來就是一件很個人的事情，別人的最佳選擇不一定是你的。而以我的個性來說，我相信所有的選擇都是好的選擇，相信每一個選擇都有價值，也相信自己有能力<a href="https://medium.com/@hulitw/change-43bb422a30ed">改變環境</a>。我不相信有什麼「一失足成千古恨」的選擇，就算真的有「比較差」的選擇，我也覺得自己能換個角度從中得到收穫。</p>
+  <p>所以對於選擇這件事情，如果以我自身出發，我通常給不了什麼好建議。我講出來的話大概都是：「不錯啊，可以試試看」或是「OK，沒什麼問題」之類的，因為我是真的覺得問題不大。</p>
+  <p>但如果直接把這一套用在學生上面，似乎就會顯得失去了身為一個導師的價值。對於職涯選擇的問題，我期望自己應該要能給出更有價值的答案，或是對他們更有幫助的答案。</p>
+  <p>大多數人都害怕選錯，都希望選到價值最高的那個，但是怎樣才叫做價值高？薪水高嗎？那如果薪水很高可是都用一些很偏門的技術，導致下一份很難找呢，這樣算是價值高嗎？</p>
+  <p>為了避免在這個問題打轉太久，我就先把價值定義成是「對自己成長性最有幫助」好了，從這個價值觀出發，有兩條路我都覺得不錯。</p>
+  <p>第一條是我以前的老路，進入一間你做的事情會很雜的公司。你或許會寫一點後端，也會寫前端，甚至寫到 App 去也都有可能。會推薦的原因有三個，第一個是我親身經歷過以後覺得這樣滿也幫助的，第二個是如果你對於職涯還沒有明確的規劃，都先做做看也不錯，再看看自己喜歡哪個。第三個是假設你真的很篤定要走前端，那你未來很有可能碰不到其他領域的東西了，如果不趁著第一份工作玩玩看，之後工作上就玩不到了。</p>
+  <p>第二條則是直接往想要的方向走，例如說想做前端的話就專門去做前端，只要認真工作個一兩年，大概就能把前端的技能練到一個深度，跟第一條路相比，這一條路在前端上的專業技能會更多也更深一點，但就是缺乏了一些廣度，我也不確定之後能不能補得回來。</p>
+  <p>在團隊型態跟工作方式上，最理想的形式應該是有制度化的，例如說有個完整的開發流程，跑個 scrum 然後各種 meeting 都有開，上版也很有制度，開發上也有 code review，團隊裡面還有資深的前輩可以指導，這樣當然是最理想的形式。</p>
+  <p>我自己是一直到最近兩間公司才有比較完整的開發流程，也是這時候才知道原來完整的流程是長這樣。雖然說完整的開發流程並不代表比較快，也不代表比較好，但好處是你可以先知道全貌長什麼樣子。未來到了小公司或是新創公司，你可以決定是否導入這套流程，就有一個依據可以參考。</p>
+  <p>理想的開發環境很少，因此競爭的人也多，需要衡量自己是否願意為了這個機會付出更多時間在找工作上面。我自己的建議會是設個停損點，例如說一兩個月沒找到就先去上班了，等你磨練個一兩年之後，進這些公司的機會就變大了，就可以再去挑戰一次。</p>
+  <p>對於轉職的人來說，無論去哪間公司都會學到東西，花三個月等一個理想中的 offer，不如先花三個月去上班看看軟體工程師的工作長什麼樣子。</p>
+  <p>在談選擇的時候，害怕選錯背後的原因大部分都是因為重新選擇的成本很高，例如說魷魚遊戲的那個二選一踩玻璃好了，選錯就掉下去，就會很害怕選錯。但如果選錯只是退到上一格呢？應該就不會害怕選錯了，因為選錯的成本很小。</p>
+  <p>在工作上也是這樣的，選錯的成本可能沒有你想像中的高。我身邊就有幾個進了公司可能幾天或是幾週就發現不適合，立刻辭職然後找尋新工作的案例。很多事情真的只有進了公司才會知道，面試的時候再怎麼相談甚歡，都不如工作個一兩天來得實際，有些可能面試聽起來都不錯，進來才發現一團糟，或也有可能相反，面試不怎麼樣，進去發現是天堂。</p>
+  <p>在現今軟體相關的工作需求還是滿多的，因此選錯頂多就是辭職開始找下一份工作，對自己跟對公司來說即時止損都是不錯的選擇，既然不適合就沒必要勉強繼續待著。</p>
+  <p>好了，這篇寫到這邊我也不知道自己想表達什麼。我一開始寫這篇本來標題取叫：「工程師的第一份工作該怎麼選？窩不知道」，後來想想應該還是有些建議跟面向可以參考，就改成現在的標題了，但寫一寫還是發現這個主題我寫得滿差的。</p>
+  <p>追究於其根本原因，我想還是因為我自身的價值觀吧，我相信不管去哪個環境都可以學到東西，而「繞遠路」也不一定是真的繞，看似繞路的那些足跡，或許在未來會成為不可或缺的助力。只要能夠幫助自己成長，我都認為是好的選擇。</p>
+  <p>最後還是給出幾個在選擇工作時可以先問自己的問題做個總結：</p>
+  <ol>
+    <li>你理想中的工作型態是什麼？</li>
+    <li>你討厭的工作型態是什麼？（通常要工作過才講得出來就是了）</li>
+    <li>你在這一份工作想獲得什麼？假設一年後離職了，你的履歷上想要有什麼成就？</li>
+    <li>你未來三年的職涯規劃是什麼？你的履歷想長什麼樣子？</li>
+    <li>你目前猶豫的點是什麼？是害怕選錯以後成本很高嗎？</li>
+  </ol>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=6e38534786e4" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2021-12-19</time>
+        <a href="https://nodebe4.github.io/oped2/2021-12-19/%E7%A8%8B%E5%BC%8F%E5%B0%8E%E5%B8%AB%E5%AF%A6%E9%A9%97%E8%A8%88%E7%95%AB%E7%AC%AC%E4%BA%94%E6%9C%9F%E7%B5%90%E6%A5%AD%E5%BF%83%E5%BE%97/">
+          程式導師實驗計畫第五期結業心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-11-23</time>
+        <a href="https://nodebe4.github.io/oped2/2021-11-23/%E7%82%BA%E4%BB%80%E9%BA%BC%E9%9B%B6%E6%99%82%E5%B7%AE%E6%94%BB%E6%93%8A-zero-day-%E9%80%99%E9%BA%BC%E5%8F%AF%E6%80%95-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%B8%B8%E5%B8%B8%E6%9B%B4%E6%96%B0%E8%BB%9F%E9%AB%94/">
+          為什麼零時差攻擊（zero-day）這麼可怕？為什麼要常常更新軟體？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-10-29</time>
+        <a href="https://nodebe4.github.io/oped2/2021-10-29/%E6%83%B3%E8%AE%8A%E6%88%90%E7%9A%84%E6%A8%A1%E6%A8%A3/">
+          想變成的模樣
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-10-24</time>
+        <a href="https://nodebe4.github.io/oped2/2021-10-24/%E5%9C%A8-Medium-%E4%B8%8A%E5%AF%AB%E6%8A%80%E8%A1%93%E6%96%87%E7%AB%A0-%E4%BD%A0%E7%A2%BA%E5%AE%9A%E5%97%8E/">
+          在 Medium 上寫技術文章，你確定嗎？
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-11-11/%E5%A4%A7%E5%B1%A0%E6%9D%80%E7%9A%84%E5%B9%95%E5%90%8E%E6%8E%A8%E6%89%8B-iYouPort/">
+            前一篇：大屠杀的幕后推手 - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-11-16/%E8%AD%A6%E5%AF%9F-%E9%97%B4%E8%B0%8D%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E6%8A%93%E6%8D%95%E6%8A%97%E8%AE%AE%E8%80%85-%E8%BF%9E%E9%94%85%E7%AB%AF%E7%9A%84%E6%A0%87%E5%87%86%E6%93%8D%E4%BD%9C%E6%A8%A1%E5%BC%8F-iYouPort/">
+            後一篇：警察-间谍如何定位抓捕抗议者：连锅端的标准操作模式 - iYouPort
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-11-11/%E5%A4%A7%E5%B1%A0%E6%9D%80%E7%9A%84%E5%B9%95%E5%90%8E%E6%8E%A8%E6%89%8B-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-11-16/%E8%AD%A6%E5%AF%9F-%E9%97%B4%E8%B0%8D%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E6%8A%93%E6%8D%95%E6%8A%97%E8%AE%AE%E8%80%85-%E8%BF%9E%E9%94%85%E7%AB%AF%E7%9A%84%E6%A0%87%E5%87%86%E6%93%8D%E4%BD%9C%E6%A8%A1%E5%BC%8F-iYouPort/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-11-23/%E7%82%BA%E4%BB%80%E9%BA%BC%E9%9B%B6%E6%99%82%E5%B7%AE%E6%94%BB%E6%93%8A-zero-day-%E9%80%99%E9%BA%BC%E5%8F%AF%E6%80%95-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%B8%B8%E5%B8%B8%E6%9B%B4%E6%96%B0%E8%BB%9F%E9%AB%94/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-10-29/%E6%83%B3%E8%AE%8A%E6%88%90%E7%9A%84%E6%A8%A1%E6%A8%A3/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-11-11/%E5%A4%A7%E5%B1%A0%E6%9D%80%E7%9A%84%E5%B9%95%E5%90%8E%E6%8E%A8%E6%89%8B-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-11-16/%E8%AD%A6%E5%AF%9F-%E9%97%B4%E8%B0%8D%E5%A6%82%E4%BD%95%E5%AE%9A%E4%BD%8D%E6%8A%93%E6%8D%95%E6%8A%97%E8%AE%AE%E8%80%85-%E8%BF%9E%E9%94%85%E7%AB%AF%E7%9A%84%E6%A0%87%E5%87%86%E6%93%8D%E4%BD%9C%E6%A8%A1%E5%BC%8F-iYouPort/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-11-23/%E7%82%BA%E4%BB%80%E9%BA%BC%E9%9B%B6%E6%99%82%E5%B7%AE%E6%94%BB%E6%93%8A-zero-day-%E9%80%99%E9%BA%BC%E5%8F%AF%E6%80%95-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%B8%B8%E5%B8%B8%E6%9B%B4%E6%96%B0%E8%BB%9F%E9%AB%94/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-10-29/%E6%83%B3%E8%AE%8A%E6%88%90%E7%9A%84%E6%A8%A1%E6%A8%A3/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

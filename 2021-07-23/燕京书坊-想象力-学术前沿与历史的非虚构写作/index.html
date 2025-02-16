@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>燕京书坊 | 想象力、学术前沿与历史的非虚构写作 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+燕京书坊 | 想象力、学术前沿与历史的非虚构写作
+——
+" />
+    <meta property="og:description" content="
+燕京书坊 | 想象力、学术前沿与历史的非虚构写作
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="燕京书坊 | 想象力、学术前沿与历史的非虚构写作" />
+    <meta property="twitter:title" content="燕京书坊 | 想象力、学术前沿与历史的非虚构写作" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F60fa928c67151b406e81c294" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/60fa928c67151b406e81c294" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/60fa928c67151b406e81c294&text=燕京书坊 | 想象力、学术前沿与历史的非虚构写作&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/60fa928c67151b406e81c294&title=燕京书坊 | 想象力、学术前沿与历史的非虚构写作" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/60fa928c67151b406e81c294&title=燕京书坊 | 想象力、学术前沿与历史的非虚构写作" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=燕京书坊 | 想象力、学术前沿与历史的非虚构写作&body=
+燕京书坊 | 想象力、学术前沿与历史的非虚构写作
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/60fa928c67151b406e81c294" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/60fa928c67151b406e81c294&title=燕京书坊 | 想象力、学术前沿与历史的非虚构写作&caption=
+燕京书坊 | 想象力、学术前沿与历史的非虚构写作
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=燕京书坊 | 想象力、学术前沿与历史的非虚构写作&url=https://www.allnow.com/post/60fa928c67151b406e81c294" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>燕京书坊 | 想象力、学术前沿与历史的非虚构写作</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-07-23
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 燕京书评编辑部</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/60fa928c67151b406e81c294" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/60fa928c67151b406e81c294">燕京书坊 | 想象力、学术前沿与历史的非虚构写作</a>
+——</p>
+
+<div>
+  <p>美国文化历史学家雅克·巴尔赞说过：“真正的历史，是需要书写的”；意大利历史学家克罗齐也有言：“没有叙事，就没有历史学”；美国思想史家海登·怀特更是直接指出，历史学没有专门的技术性术语，它以“日常有教养的语言为工具”。因此，叙事不仅是史学研究的基础方法，也是史学话语的根本属性。</p>
+  <p>事实上，从前的历史，大多都是以故事的形式在代际间传承的。无论中国的“二十四史”，还是西方的《希腊波斯战争史》《伯罗奔尼撒战争史》等，都以磅礴、精巧的叙述为特征。但在现代学术体系建立之后，史学与文学不断分野，历史研究朝向科学化发展。叙事不仅不再作为标准的书写方式，甚至作为传统史学最显著的痕迹而遭到质疑和排斥。</p>
+  <p>这种学科化、科学化的历史，越来越像象牙塔内部赏玩的把件，用一个又一个“黑话”般的术语和理论堆积出的解释框架，在大众眼前竖起了一面无形的高墙。“现代科学史学在构建过去时已经削弱了想象力的作用”（海登·怀特），于是原本引人入胜的往事，变得枯燥乏味；原本通俗易懂的记叙，变得晦涩聱牙。</p>
+  <p>幸运的是，依然还有许多职业史学家顽强地捍卫着作为历史学家的叙事技艺，也有作家、记者不断穿越时空的迷雾，以自己的笔墨书写着全人类共同享有的记忆。非虚构，便是其中一种谨循真实又不失韵味的历史书写。</p>
+  <p>2021年7月23-25日，《燕京书评》联合中国人民大学《中国公共史学集刊》、社科文献出版社历史学分社、北京红楼公共藏书楼，举办一场为期三天的史学嘉年华，与杨念群、罗新、王笛、赵冬梅、止庵、张宏杰等学者一起，围绕“历史的非虚构写作”展开不同层面的深入讨论，辨析它的来龙去脉、内涵与外延。</p>
+  <p>本期《燕京书坊》，我们也以此为阅读主题，与社科文献出版社历史分社同仁一起，邀请学者王笛、罗新、杨念群、止庵、张宏杰、郑小悠，媒体人包丽敏及出版人董风云、陈肖寒，共同推荐他们各自珍爱的“历史非虚构”作品。</p>
+  <p><strong>王笛</strong>（澳门大学杰出教授、历史系主任）：</p>
+  <p>我推荐的三本非虚构都是由美国作家所著、近两年在中国翻译出版的新书，代表三种不同的类型：一本写作者自己的故事，一本是记者调查，一本是历史非虚构。</p>
+  <p>《你当像鸟飞往你的山》讲的是美国犹他州乡村一个摩门教家庭女儿的经历。她父亲是个偏执狂，完全不相信公共教育，不准她上学。她被迫作为一个家庭劳动力在处理废旧汽车场干活，受到虐待，甚至生命也没有保障，因为安全事故频频发生。通过离家读大学，她逃脱了父亲控制，最后在剑桥大学获得博士学位。在这本回忆录中，她生动地描述了自己的遭遇和争取教育权的抗争。其实，原书名“Educated: A Memoir”（《受教育：一部回忆录》）便表达了这样的主题，而中文书名则花哨得多。她的描述非常生动而客观，并不断地进行自我剖析。这本书给我印象最深的是，尽管她自己有非凡的记忆力，甚至还写有日记，但她对所发生的许多事情向父母弟兄们进行核实时，发现每个人所看到的和所记忆的东西都有区别。这种现象告诉我们应该怎样看待过去：要承认记忆、观察和经历，都有相当的局限性。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa92df9c232e01c17d296e+L.jpg" data-id="60fa92e62114416715c3e078" alt="《你当像鸟飞往你的山》，[美]塔拉·韦斯特弗 著，任爱红 译，新经典文化丨南海出版公司2019年10月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《你当像鸟飞往你的山》，[美]塔拉·韦斯特弗 著，任爱红 译，新经典文化丨南海出版公司2019年10月版
+    </figcaption>
+  </figure>
+  <p>《坏血：一个硅谷巨头的秘密与谎言》的作者，是《华尔街日报》的调查记者、普利策奖得主约翰·卡雷鲁（John Carreyrou）。他通过严密的长期调查，揭开了红极一时的美女企业家伊丽莎白·霍姆斯验血设备公司的欺诈黑幕。霍姆斯宣称，通过一滴血测验出健康和疾病的各种数据，美好的设想根本无法通过自己的产品来实现；为了吸引投资人，她的公司开始进行造假。我想特别指出的是，许多非虚构的写作，往往是在事件已经发生之后，通过收集资料来重构过去的历史。卡雷鲁的这个调查，则是直接参与了对谎言的揭露；这本书的本身，就是那段历史的一部分。这种写作是非常困难的，必须采访各种当事人，通过各种途径获取资料，而且许多当事人并不愿意因此招惹麻烦；如果无法得到调查者的配合，便可能导致调查搁浅。调查过程是跌宕起伏的，这本书为我们进行非虚构写作的求真求实的精神、勇气和手段，提供了一个非常好的典范。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa92f94cd55d54dd5dbf9b+L.jpg" data-id="60fa9300904b8c02a16a3c94" alt="《坏血：一个硅谷巨头的秘密与谎言》，[美]约翰·卡雷鲁 著，成起宏 译，雅众文化丨北京联合出版公司2019年4月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《坏血：一个硅谷巨头的秘密与谎言》，[美]约翰·卡雷鲁 著，成起宏 译，雅众文化丨北京联合出版公司2019年4月版
+    </figcaption>
+  </figure>
+  <p>《猎巫：塞勒姆1692》是关于17世纪末发生在美国马萨诸塞小镇的一系列荒谬所谓对巫术的审判。“猎巫”的歇斯底里，让我想起孔飞力《叫魂》所描述的乾隆时期对“叫魂”的清剿，两者有许多的相似性。塞勒姆的“猎巫”持续不过九个月，留下的创伤却是长期的，其中的冤案直至21世纪才被了结。以至于今天，“猎巫”（witch hunt）成为了政治迫害的同义词。本书以小说般的情节徐徐展开，故事是如此的引人入胜。令我印象十分深刻的是，作者能够挖掘出这么多的细节，把这个事件还原得如此的鲜活。书中所揭示的问题是令人震惊的，值得我们认真地思考：愚昧怎样能够唆使人们对自己的家人、邻居等提出最严厉的指控，甚至把他们送上断头台。这个互害的模式，为文明世界不断地敲响着警钟。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa930f4cd55d54dd5dbf9c+L.jpg" data-id="60fa931a2114416715c3e07a" alt="《猎巫：塞勒姆1692》，[美]斯泰西·希夫 著，浦雨蝶、梁吉 译，新经典文化丨文汇出版社2020年8月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《猎巫：塞勒姆1692》，[美]斯泰西·希夫 著，浦雨蝶、梁吉 译，新经典文化丨文汇出版社2020年8月版
+    </figcaption>
+  </figure>
+  <p><strong>罗新</strong>（北京大学中国古代史研究中心暨历史学系教授）：</p>
+  <p>意大利历史学家卡洛·金茨堡在16世纪宗教裁判所档案里，读到了那时意大利北部某偏僻山村里一个小磨坊主因异端思想被审判的全部文件；他利用这些档案文件复原了审判，最重要的是他复原了这个小磨坊主的精神世界，并且深入探查了这个精神世界的构成与发展，由此勾勒出那个时代的大众文化及其与精英文化的互动关系。不管是被归为微观史，还是被归为大众文化史，《奶酪与蛆虫：一个16世纪磨坊主的宇宙》无论在方法或思想上，还是在具体的写作上，都开启了全新的史学方向。也许，足以令所有同行惊奇和羡慕的是，金茨堡这本书写得流畅、清晰且引人入胜；不是小说，胜似小说。必须强调的是，这本书的中文翻译质量非常高，称得上当今的最佳译笔。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa93364cd55d54dd5dbf9d+L.jpg" data-id="60fa933d904b8c02a16a3c95" alt="《奶酪与蛆虫：一个16世纪磨坊主的宇宙》，[意]卡洛·金茨堡 著，鲁伊 译，理想国丨广西师范大学出版社2021年7月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《奶酪与蛆虫：一个16世纪磨坊主的宇宙》，[意]卡洛·金茨堡 著，鲁伊 译，理想国丨广西师范大学出版社2021年7月版
+    </figcaption>
+  </figure>
+  <p>我自己还比较喜欢查尔斯·曼恩的《1491：前哥伦布时代美洲启示录》和《1493：物种大交换开创的世界史》，分别讨论哥伦布时代之前的美洲和哥伦布时代之后的世界。这两本书是真好，对于已有的学术界研究掌握得很好，在思想上基本跟上了学界的研究前沿，很难得。同时，写得也特好看，很美。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa93509c232e01c17d296f+L.jpg" data-id="60fa93582114416715c3e07c" alt="《1491：前哥伦布时代美洲启示录》，[美]查尔斯·曼恩 著，胡亦南 译，中信出版集团2014年3月版；《1493：物种大交换开创的世界史》，[美]查尔斯·曼恩 著，朱菲、王原 译，中信出版集团2016年9月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《1491：前哥伦布时代美洲启示录》，[美]查尔斯·曼恩 著，胡亦南 译，中信出版集团2014年3月版；《1493：物种大交换开创的世界史》，[美]查尔斯·曼恩 著，朱菲、王原 译，中信出版集团2016年9月版
+    </figcaption>
+  </figure>
+  <p>国内的作者，我推荐周思成的《大汗之怒》，是写忽必烈两次试图征服日本——所谓的“元寇”在日本（日语里称“元寇”）。这样的书，中国过去没有过，日本虽然多得不得了，但能够直接读的人很少。周思成既吸收了日本那些写作的优点，也有很好的中国视角。</p>
+  <p>他今年又出版了一本写蒙古人征服金朝末期对三个城市的攻击，《隳三都：蒙古灭金围城史》写得很好。我挺喜欢看周思成写的东西，他是我们北大历史系张帆老师的学生，所以对学术界的东西真的熟悉，而且有很多部分是他自己做的研究。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa93724cd55d54dd5dbf9e+L.jpg" data-id="60fa9378904b8c02a16a3c97" alt="《大汗之怒: 元朝征伐日本小史》，周思成 著，汉唐阳光丨山西人民出版社2019年3月版；《隳三都：蒙古灭金围城史》，周思成 著，汉唐阳光丨山西人民出版社2021年1月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《大汗之怒: 元朝征伐日本小史》，周思成 著，汉唐阳光丨山西人民出版社2019年3月版；《隳三都：蒙古灭金围城史》，周思成 著，汉唐阳光丨山西人民出版社2021年1月版
+    </figcaption>
+  </figure>
+  <p><strong>杨念群</strong>（中国人民大学历史学院教授、史学理论研究所所长）：</p>
+  <p>正统的历史写作，向来遵循客观主义原则，即用第三人称叙事描摹研究对象的言行。《中国皇帝：康熙自画像》这本著作，敢于用小说家常用的第一人称，叙述康熙皇帝的所思所想所行，突破了传统历史写作所设定的边界 。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa938b9c232e01c17d2970+L.jpg" data-id="60fa93902114416715c3e07d" alt="《中国皇帝：康熙自画像》，[美]史景迁 著，吴根友 译，上海远东出版社2005年5月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《中国皇帝：康熙自画像》，[美]史景迁 著，吴根友 译，上海远东出版社2005年5月版
+    </figcaption>
+  </figure>
+  <p>《袍哥：1940年代川西乡村的暴力与秩序》利用了燕京大学论文材料，用当年论文作者的调查与当今本书著者的叙事混合套用的手法，营造出具有想象力的历史氛围。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa939f4cd55d54dd5dbf9f+L.jpg" data-id="60fa93a2904b8c02a16a3c98" alt="《袍哥：1940年代川西乡村的暴力与秩序》，王笛 著，北京大学出版社2018年10月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《袍哥：1940年代川西乡村的暴力与秩序》，王笛 著，北京大学出版社2018年10月版
+    </figcaption>
+  </figure>
+  <p>《显微镜下的大明》通过六个不同侧面的历史片段，展示了明代政治与社会制度的运行过程。作者与专业历史研究者的不同在于，对历史材料的处理，表面似趋于碎片化，实则极具整体性，展示了另一种历史写作的叙事能力。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa93b19c232e01c17d2971+L.jpg" data-id="60fa93b69b2d825085c26912" alt="《显微镜下的大明》，马伯庸 著，博集天卷丨湖南文艺出版社2019年1月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《显微镜下的大明》，马伯庸 著，博集天卷丨湖南文艺出版社2019年1月版
+    </figcaption>
+  </figure>
+  <p><strong>止庵</strong>（作家、学者）：</p>
+  <p>在《陀思妥耶夫斯基》写作之初，约瑟夫·弗兰克就声明：“我所写的这本书并不是一部传记，或者说，即使它是一部传记，那也只是在某种特定的意义上——因为我不是从生活写到作品，而是绕道走了另一条路。我的目的在于阐释陀思妥耶夫斯基的艺术，这一目的决定了我对细节的选择以及我的视角。”</p>
+  <p>的确，弗兰克的这部著作，与其说是一部陀思妥耶夫斯基的传记，不如说是一部陀思妥耶夫斯基作品的传记。因为它没有编年史一般讲述陀思妥耶夫斯基的生平，而是对陀思妥耶夫斯基的全部作品进行了详细的解读分析，包括他的所有长短篇小说、《作家日记》，甚至还有他写的文章，无一遗漏。可是，读者不得不承认，弗兰克写出了一部个人成长史、社会变迁史和文学创作史，通过关注陀思妥耶夫斯基的作品，把这三方面的内容有机地融合在一起。读完弗兰克这部陀思妥耶夫斯基的传记，我们不仅更深刻地理解了陀思妥耶夫斯基的作品，而且看到了一个活生生的陀思妥耶夫斯基，了解了十九世纪中期俄国的历史。最后，就具有重要思想意义的陀思妥耶夫斯基而言，这也是一部陀思妥耶夫斯基的思想史。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa93c99c232e01c17d2972+L.jpg" data-id="60fa93cf9b2d825085c26913" alt="《陀思妥耶夫斯基》（五卷本），[美]约瑟夫·弗兰克 著，戴大洪 译，文学纪念碑丨广西师范大学出版社2020年7月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《陀思妥耶夫斯基》（五卷本），[美]约瑟夫·弗兰克 著，戴大洪 译，文学纪念碑丨广西师范大学出版社2020年7月版
+    </figcaption>
+  </figure>
+  <p><strong>张宏杰</strong>（中国人民大学历史学院研究馆员）：</p>
+  <p>我们提到历史，除了“盛唐”就是“弱宋”，但“盛唐”仅仅是唐朝开国百年的事，之后就不能称为盛唐了。从“盛唐”就是“弱宋”，这之间还有着非常多的、色彩斑斓的历史环节。只有了解了这段历史，才能理解“唐宋变革”。</p>
+  <p>很多人认为，这段历史过程，包括唐代的藩镇割据和五代十国，就是一团乱麻。《长安与河北之间：中晚唐的政治与文化》就是要解开这团乱麻。这本书提供了很多新史料，更关键的是作者让这些史料相互连接起来，得出了很多新的结论；这本书也提供了新的视角，尽可能站在“安史之乱”时期的人的视角，让历史的叙述更为细腻，有一种穿越的感觉。</p>
+  <p>这本书让我印象比较深的一点，是唐代对家族等小共同体的“忠”仍然被肯定，这是西周以来的价值观的一种延续。这些和日本古代社会非常相似，而在中国宋代以后基本消失。中晚唐，正是一个关键转折点。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa940d9c232e01c17d2973+L.jpg" data-id="60fa9411904b8c02a16a3c9a" alt="《长安与河北之间：中晚唐的政治与文化》，仇鹿鸣 著，谭徐锋工作室丨北京师范大学出版社2018年11月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《长安与河北之间：中晚唐的政治与文化》，仇鹿鸣 著，谭徐锋工作室丨北京师范大学出版社2018年11月版
+    </figcaption>
+  </figure>
+  <p>《从“同文三馆”起步：语言障碍与晚清近代化进程》，以“同文三馆”（京师同文馆、上海广方言馆、广东同文馆）的设立为起始，展现晚清中国人为突破英语障碍做出的努力，向读者全景式地介绍了晚清社会学习英语的状况，介绍了官办外语学堂的外语教学和成就“同文三馆”，以及官办非外语专业的洋务学堂的外语教学（福州船政局等）。此外，还有民间私人办的外语学堂和教会学校的英语教育。这部著作既介绍了民间英语学习热，也谈到了宫廷内部皇帝臣子学习英语的情况。全书提供了大量的资料和文献，深入探讨晚清社会各个领域中排除语言障碍的努力及其影响。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa943e4cd55d54dd5dbfa0+L.jpg" data-id="60fa94452114416715c3e07f" alt="《从“同文三馆”起步：语言障碍与晚清近代化进程》，季压西、陈伟民 著，学苑出版社2007年6月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《从“同文三馆”起步：语言障碍与晚清近代化进程》，季压西、陈伟民 著，学苑出版社2007年6月版
+    </figcaption>
+  </figure>
+  <p><strong>郑小悠</strong>（历史学者，国家图书馆副研究馆员）：</p>
+  <p>《隳三都》是一本令人拿起就放不下的著作，作者以悲怆沉雄的笔法，呈现了一部震撼人心的战争史诗。金朝的灭亡，是一段近乎被遗忘的历史；这与它的图存于亡，力毙乃尽的悲壮惨烈不能相称。作者是专治蒙元史的学者，但怀抱着对失败者深切的同情，从“围城史”这一近于军事技术的视角，书写政治、战争与人性，完成了这部填补空白之作。作者用心搜集组织并不充裕的金元史料，将它们编织得浑然一体，其中贯穿着历史的宏大叙事、英雄的伟岸背影，以及普通人的肝脑涂地与劫后余歌。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa945b4cd55d54dd5dbfa1+L.jpg" data-id="60fa945f9b2d825085c26914" alt="《隳三都：蒙古灭金围城史》，周思成 著，汉唐阳光丨山西人民出版社2021年1月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《隳三都：蒙古灭金围城史》，周思成 著，汉唐阳光丨山西人民出版社2021年1月版
+    </figcaption>
+  </figure>
+  <p>在新冠疫情肆虐全球的今天，写一部严肃又可读的历史读物，谈人类的身体与思想、疾病与社会，可谓恰逢其时。于赓哲老师的《疾病如何改变我们的历史》，不仅是一部医疗史，更是一部生动活泼的医疗社会史、医疗观念史。他在书中讲述疾病产生的自然环境与社会环境，对比同类疾病在不同文明发展阶段的演变与影响，澄清神乎其技的名医传奇与耸人听闻的巫蛊传说，剖解疾病本身以及加诸其上的社会观念。通过一个个出乎意料之外、又在情理之中的历史“冷知识”，展现出中国人关于疾病、医疗与社会的历史记忆。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa94a89c232e01c17d2975+L.jpg" data-id="60fa94af2114416715c3e080" alt="《疾病如何改变我们的历史》，于赓哲 著，中华书局2021年4月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《疾病如何改变我们的历史》，于赓哲 著，中华书局2021年4月版
+    </figcaption>
+  </figure>
+  <p><strong>包丽敏</strong>（前资深媒体人、知名特稿记者）：</p>
+  <p>我是做新闻的，从我所熟悉的领域出发，给读者推荐的这两本历史非虚构作品，都是新闻记者所写，应该会跟历史学者所写的非虚构作品有些不同，正好可供比对和参考。</p>
+  <p>《巴黎烧了吗？》的故事，写了1944年那个惊险的8月，希特勒下令毁灭巴黎，而戴高乐、盟军、法国共产党等多方势力，展开紧张激烈又错综复杂的斗争与合作，最终成功阻止纳粹的计划，解放了巴黎。</p>
+  <p>这么一个宏大的事件，作者用了无数具体而微的细节来描绘铺排，将历史情境一一还原在读者眼前，从最高决策者到一个普通士兵或民众，你能目睹他们的音容，触碰到他们的内心。</p>
+  <p>两位作者，分别是美国《新闻周刊》和法国《巴黎竞赛》的记者，用高超的叙事手法，将事件讲述得悬念迭出、跌宕起伏、惊心动魄，仿佛一部惊险小说，又像一部历史大片，却又能做到所有事实均有出处。</p>
+  <p>为此，两位作者翻阅了美法德三方军事档案，又采访了上至艾森豪威尔、戴高乐高级助手，下至普通士兵与巴黎市民等共800多位相关人士，掌握了海量的素材和细节。由此，在巴黎解放20周年之后，推出了这部非虚构的典范之作。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa94f14cd55d54dd5dbfa4+L.png" data-id="60fa94f82114416715c3e081" alt="《巴黎烧了吗？》，[美]拉莱·科林斯、[法]多米尼克·拉皮埃尔 著，董乐山 译，译林出版社2013年3月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《巴黎烧了吗？》，[美]拉莱·科林斯、[法]多米尼克·拉皮埃尔 著，董乐山 译，译林出版社2013年3月版
+    </figcaption>
+  </figure>
+  <p>在我刚开始从业时，前辈们就给我推荐了《光荣与梦想：1932~1972年美国叙事史》这部经典作品，它给了无数新闻人以启发，也点燃他们的职业激情。</p>
+  <p>这部书从1932年罗斯福上台，写到1972年尼克松因水门事件下台，这40年间美国的社会发展变迁；既描述了诸如经济大萧条、人权运动、麦卡锡主义、世界大战、原子弹研发等重大政治经济事件，也兼顾文化与社会图景的描摹，甚至不忘交待那些年里妇女们的服饰潮流、人们生活“热词”的变化等，堪称是一轴全景式的“工笔”画卷。</p>
+  <p>这样的历史写作，读来轻松愉悦、妙趣横生，又让人内心澎湃：原来，历史既有山川沟壑般的宏观走向，也有细腻美妙如石纹般的纹理和质感。而这一切，若无精妙的写作，则无以成就。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa950e4cd55d54dd5dbfa5+L.jfif" data-id="60fa9514904b8c02a16a3c9e" alt="《光荣与梦想：1932~1972年美国叙事史》（四卷本），[美] 威廉·曼彻斯特 著，四川外国语大学翻译学院翻译组 译，中信出版集团2015年3月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《光荣与梦想：1932~1972年美国叙事史》（四卷本），[美] 威廉·曼彻斯特 著，四川外国语大学翻译学院翻译组 译，中信出版集团2015年3月版
+    </figcaption>
+  </figure>
+  <p><strong>董风云</strong>（甲骨文书系创始人、社科文献甲骨文品牌创始人）：</p>
+  <p>最近这些年，一些新锐的欧美历史学家和长期以来相对冷门的欧洲史主题著作逐渐为中国读者所认知和接受。这些著作并非传统意义上的大经典或学术前沿作品，但它们往往从一个独特的视角或者细微的环节切入；要么集中讲述一个时代的片段，要么展开成为一部宏大的史诗。长久以来，这样的书写在中文阅读世界并不多见，但随着中国读者阅读需求的提高，越来越多的类似书出现在眼前。甲骨文书系在2021年出版的《时间的色彩：一部鲜活的世界史，1850—1960》，可以说就是这样的一部作品。本书的作者之一是当红的英国历史学家丹·琼斯，他的代表作《金雀花王朝》《空王冠》《血夏》《圣殿骑士团》已经先后被引进，并由著名译者陆大鹏担纲所有的翻译工作。</p>
+  <p>与之前看到的不同，这部作品是由丹·琼斯与巴西艺术家玛丽娜·阿马拉尔合作完成。丹·琼斯负责撰写书中的文字，玛丽娜·阿马拉尔利用数字技术，为约200幅与1850年至1960年世界历史相关的黑白照片上色。所以，这是一部由上色的历史图片与历史时间轴和大事件构成的“鲜活的”世界近代史。从拿破仑三世和维多利亚女王的统治，一直讲到核武器试验、古巴导弹危机和航天时代开始，这本书生动记录了帝国的兴衰沉浮，科学、工业与艺术的日新月异，战争的悲剧与和平时期的政治，以及缔造历史的男男女女的故事。</p>
+  <p>由于大量上色历史图片的存在，这是一部非典型的历史非虚构著作；但它给我们带来的震撼，大概也是一般非虚构作品无法带来的。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa952c9c232e01c17d2977+L.jpg" data-id="60fa95359b2d825085c26917" alt="《时间的色彩：一部鲜活的世界史，1850—1960》，[英]丹·琼斯、[巴西]玛丽娜·阿马拉尔 著，陆大鹏 译，甲骨文丨社会科学文献出版社2021年4月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《时间的色彩：一部鲜活的世界史，1850—1960》，[英]丹·琼斯、[巴西]玛丽娜·阿马拉尔 著，陆大鹏 译，甲骨文丨社会科学文献出版社2021年4月版
+    </figcaption>
+  </figure>
+  <p>柯文写道：“历史学家写下学术生涯回忆录，与当时打下学术生涯大不相同，需要两种大相径庭的思维方式。”这就是这部历史学家回忆录《走过两遍的路》的来由。在九十岁之际，柯文出版了这本回忆录。一本回忆录，当然也是一部史书：是记录他六十年学术生涯史的书，也是记录他九十年人生历程和时代变迁的书。</p>
+  <p>在回忆录里，我们可以看到柯文的几部名著，包括《在中国发现历史》《历史三调》的缘起、写作和出版过程，可以看到柯文与费正清、史华慈、列文森、汤因比、孔飞力、赖肖尔等学术巨擘亦师亦友的互动关系，也可以看到一个普通美国家庭的孩子从懵懵懂懂到涉足学术，再到孜孜以求，最终成为一代学术大家的成长历程。</p>
+  <p>面对学术和自己的一生，人们最初并不知道结果会如何。这本回忆录便是在知道结果之后，柯文为了理解和解释这个过程所做的思考。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa95489c232e01c17d2978+L.jpg" data-id="60fa954e9b2d825085c26918" alt="《走过两遍的路：我的中国历史学家之旅》，[美]柯文 著，刘楠楠 译，香港中文大学出版社2021年6月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《走过两遍的路：我的中国历史学家之旅》，[美]柯文 著，刘楠楠 译，香港中文大学出版社2021年6月版
+    </figcaption>
+  </figure>
+  <p><strong>陈肖寒</strong>（社科文献历史学分社编辑）：</p>
+  <p>推荐《溃败之路：1904~1905年俄日战争》，最重要的原因是从俄方视角阐释俄日战争的根源、战前准备、战争的进程及后果，因为目前国内已经引进出版了从日本、欧美视角看待这场战争的作品。另外，这本书的内容，不仅仅限于这场战争，还立足于国际视角深刻剖析影响双方的外交和军事决策的内部因素和外部因素，视野相当开阔。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa95629c232e01c17d2979+L.jpg" data-id="60fa9567904b8c02a16a3ca0" alt="《溃败之路：1904~1905年俄日战争》，[俄]奥列格·阿拉别托夫 著，周健 译，启微丨社会科学文献出版社2021年7月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《溃败之路：1904~1905年俄日战争》，[俄]奥列格·阿拉别托夫 著，周健 译，启微丨社会科学文献出版社2021年7月版
+    </figcaption>
+  </figure>
+  <p>种族歧视是当下热门话题之一。对于近代日本而言，西方是最重要的他者。日本作为非西方国家却要实现“西化”，其本身就存在着自我矛盾。肤色的不可改变，恰恰以一种可视化的形式，反映了这种自我矛盾。近代日本人究竟如何看待人种差异？在近代日本思想的谱系中，人种问题到底是怎样的存在？《“肤色”的忧郁：近代日本的人种体验》，通过聚焦明治时代到二战后日本精英的海外经历，考察这段曾被讳言的思想谱系。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa95799c232e01c17d297a+L.jpg" data-id="60fa957f904b8c02a16a3ca2" alt="《“肤色”的忧郁：近代日本的人种体验》，[日]真嶋亚有 著，宋晓煜 译，启微丨社会科学文献出版社2021年7月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《“肤色”的忧郁：近代日本的人种体验》，[日]真嶋亚有 著，宋晓煜 译，启微丨社会科学文献出版社2021年7月版
+    </figcaption>
+  </figure>
+  <p>思想家的思想，往往是超前和超越常人的——否则，就不会从时代中脱颖而出。由此，要从整体上理解和把握一个时代的“思想界”，就不能仅仅依赖个别思想家的文集。在这方面，民国时期海量的报纸、期刊、日记等，为我们提供了用武之地。正确地解读文本，不仅在于理解文本本身的信息，如这句话是对谁说的、在什么情况下说的、为什么要这么说、针对的对手是谁……还要理解文本产生的场域，即“批量制造”“思想”和“思想家”的政治、经济、学术、社会环境，这个环境为什么会产生这样的“思想界”。《清季民国时期的“思想界”》力图展示的是一幅普遍的图景，这幅普遍图景、对时代的把握，是存在于人的心中的。它抓住的，不是具体的个人和团体，而是要绘出时代无形的网络。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa958f4cd55d54dd5dbfa6+L.jpg" data-id="60fa9593904b8c02a16a3ca3" alt="《清季民国时期的“思想界”》，章清 著，鸣沙丨社会科学文献出版社2021年4月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《清季民国时期的“思想界”》，章清 著，鸣沙丨社会科学文献出版社2021年4月版
+    </figcaption>
+  </figure>
+  <p>清代的政府，是一个“小政府”。从职能上说，属于政府“义务”的工作，仅在于“钱谷”和“刑名”。从人事上说，知县相当于今天县长、党委、人大、政协、公检法的合体；由他控制管束的“在编公务员”，要承担相当于今天秘书、税务、公安、消防、工程、交通、宣传等一系列责任，而这些人通常只有十几位或几十位。清朝的政治原则，实行的是“知县一人负责制”，靠这么少的人统治至少十几万人是做不到的，由此，清朝的知县需要一个庞大的群体来辅助他行政，有效推行政务，以及应付上级的检查。这个群体主要由两部分构成，一是编外的差役、书吏等，二是本地的绅士。任何一位知县，都要协调好同这两个群体的关系。曾在广东四地任知县的杜凤治，留下了一部三百多万字的仕途日记。《晚清官场镜像：杜凤治日记研究》对这部日记进行了“刨根掘地”式的研究，以更深刻地表现清代地方官场的生态。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-23/60fa95a04cd55d54dd5dbfa7+L.jpg" data-id="60fa95a62114416715c3e085" alt="《晚清官场镜像：杜凤治日记研究》，邱捷 著，鸣沙丨社会科学文献出版社2021年5月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《晚清官场镜像：杜凤治日记研究》，邱捷 著，鸣沙丨社会科学文献出版社2021年5月版
+    </figcaption>
+  </figure>
+  <blockquote>
+    <p>导语由徐鹏远撰写，书单由徐鹏远、石志杭、张笑晨、张弘共同编辑。</p>
+  </blockquote>
+  <p>———</p>
+  <p>微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-07-27</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-27/%E5%AE%89%E5%90%89%E6%8B%89-%E5%8D%A1%E7%89%B9%E5%92%8C%E5%A5%B9%E7%9A%84-%E8%90%A8%E5%BE%B7%E5%BC%8F%E5%A5%B3%E4%BA%BA-%E5%9C%A8%E6%80%A7%E5%85%B3%E7%B3%BB%E4%B8%AD%E6%89%BE%E5%AF%BB%E5%8F%98%E9%9D%A9%E7%9A%84%E5%8F%AF%E8%83%BD/">
+          安吉拉·卡特和她的《萨德式女人》：在性关系中找寻变革的可能
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-24</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-24/%E7%BE%8E%E5%9B%BD%E4%B8%8E%E6%97%A5%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B8%A4%E5%9B%BD%E5%85%B3%E7%B3%BB-%E9%87%8D%E5%A4%A7%E8%8A%82%E7%82%B9%E9%83%BD%E7%A6%BB%E4%B8%8D%E5%BC%80%E4%B8%AD%E5%9B%BD%E5%9B%A0%E7%B4%A0%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+          美国与日本之间的两国关系，重大节点都离不开中国因素丨燕京讲稿
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-22</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-22/%E7%BD%97%E6%96%B0-%E5%8E%86%E5%8F%B2%E7%84%A6%E8%99%91%E6%98%AF%E6%B0%B8%E6%81%92%E7%9A%84-%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+          罗新：历史焦虑是永恒的 | 燕京访谈
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-22</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-22/%E7%BD%97%E6%96%B0%E8%B0%88%E9%9D%9E%E8%99%9A%E6%9E%84%E5%86%99%E4%BD%9C-%E5%85%AC%E4%BC%97%E5%AF%B9%E5%8E%86%E5%8F%B2%E9%9D%9E%E8%99%9A%E6%9E%84%E4%BD%9C%E5%93%81%E7%9A%84%E9%9C%80%E6%B1%82%E6%9C%89%E6%97%B6%E4%BB%A3%E7%89%B9%E5%BE%81/">
+          罗新谈非虚构写作： “公众对历史非虚构作品的需求有时代特征”
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-07-22/%E4%BA%92%E8%81%94%E7%BD%91%E5%B0%86%E4%B8%8D%E4%BC%9A%E8%AF%B4%E8%8B%B1%E8%AF%AD%E7%9A%84(%E4%BA%9A%E8%A3%94%E7%BE%8E%E5%9B%BD)%E4%BA%BA%E6%8E%92%E9%99%A4%E5%9C%A8%E5%A4%96-iYouPort/">
+            前一篇：互联网将不会说英语的(亚裔美国)人排除在外 - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-07-24/%E7%BE%8E%E5%9B%BD%E4%B8%8E%E6%97%A5%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B8%A4%E5%9B%BD%E5%85%B3%E7%B3%BB-%E9%87%8D%E5%A4%A7%E8%8A%82%E7%82%B9%E9%83%BD%E7%A6%BB%E4%B8%8D%E5%BC%80%E4%B8%AD%E5%9B%BD%E5%9B%A0%E7%B4%A0%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+            後一篇：美国与日本之间的两国关系，重大节点都离不开中国因素丨燕京讲稿
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-07-22/%E4%BA%92%E8%81%94%E7%BD%91%E5%B0%86%E4%B8%8D%E4%BC%9A%E8%AF%B4%E8%8B%B1%E8%AF%AD%E7%9A%84(%E4%BA%9A%E8%A3%94%E7%BE%8E%E5%9B%BD)%E4%BA%BA%E6%8E%92%E9%99%A4%E5%9C%A8%E5%A4%96-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-07-24/%E7%BE%8E%E5%9B%BD%E4%B8%8E%E6%97%A5%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B8%A4%E5%9B%BD%E5%85%B3%E7%B3%BB-%E9%87%8D%E5%A4%A7%E8%8A%82%E7%82%B9%E9%83%BD%E7%A6%BB%E4%B8%8D%E5%BC%80%E4%B8%AD%E5%9B%BD%E5%9B%A0%E7%B4%A0%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-07-24/%E7%BE%8E%E5%9B%BD%E4%B8%8E%E6%97%A5%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B8%A4%E5%9B%BD%E5%85%B3%E7%B3%BB-%E9%87%8D%E5%A4%A7%E8%8A%82%E7%82%B9%E9%83%BD%E7%A6%BB%E4%B8%8D%E5%BC%80%E4%B8%AD%E5%9B%BD%E5%9B%A0%E7%B4%A0%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-07-22/%E7%BD%97%E6%96%B0-%E5%8E%86%E5%8F%B2%E7%84%A6%E8%99%91%E6%98%AF%E6%B0%B8%E6%81%92%E7%9A%84-%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-07-22/%E4%BA%92%E8%81%94%E7%BD%91%E5%B0%86%E4%B8%8D%E4%BC%9A%E8%AF%B4%E8%8B%B1%E8%AF%AD%E7%9A%84(%E4%BA%9A%E8%A3%94%E7%BE%8E%E5%9B%BD)%E4%BA%BA%E6%8E%92%E9%99%A4%E5%9C%A8%E5%A4%96-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-07-24/%E7%BE%8E%E5%9B%BD%E4%B8%8E%E6%97%A5%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B8%A4%E5%9B%BD%E5%85%B3%E7%B3%BB-%E9%87%8D%E5%A4%A7%E8%8A%82%E7%82%B9%E9%83%BD%E7%A6%BB%E4%B8%8D%E5%BC%80%E4%B8%AD%E5%9B%BD%E5%9B%A0%E7%B4%A0%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-07-24/%E7%BE%8E%E5%9B%BD%E4%B8%8E%E6%97%A5%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B8%A4%E5%9B%BD%E5%85%B3%E7%B3%BB-%E9%87%8D%E5%A4%A7%E8%8A%82%E7%82%B9%E9%83%BD%E7%A6%BB%E4%B8%8D%E5%BC%80%E4%B8%AD%E5%9B%BD%E5%9B%A0%E7%B4%A0%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-07-22/%E7%BD%97%E6%96%B0-%E5%8E%86%E5%8F%B2%E7%84%A6%E8%99%91%E6%98%AF%E6%B0%B8%E6%81%92%E7%9A%84-%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

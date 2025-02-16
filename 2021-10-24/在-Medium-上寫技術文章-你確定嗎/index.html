@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>在 Medium 上寫技術文章，你確定嗎？ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+在 Medium 上寫技術文章，你確定嗎？
+——
+" />
+    <meta property="og:description" content="
+在 Medium 上寫技術文章，你確定嗎？
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="在 Medium 上寫技術文章，你確定嗎？" />
+    <meta property="twitter:title" content="在 Medium 上寫技術文章，你確定嗎？" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2Fdo-you-really-want-to-write-tech-blog-on-medium-3dd25640f26c%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/do-you-really-want-to-write-tech-blog-on-medium-3dd25640f26c?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/do-you-really-want-to-write-tech-blog-on-medium-3dd25640f26c?source=rss-f1fb3e40dc37------2&text=在 Medium 上寫技術文章，你確定嗎？&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/do-you-really-want-to-write-tech-blog-on-medium-3dd25640f26c?source=rss-f1fb3e40dc37------2&title=在 Medium 上寫技術文章，你確定嗎？" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/do-you-really-want-to-write-tech-blog-on-medium-3dd25640f26c?source=rss-f1fb3e40dc37------2&title=在 Medium 上寫技術文章，你確定嗎？" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=在 Medium 上寫技術文章，你確定嗎？&body=
+在 Medium 上寫技術文章，你確定嗎？
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/do-you-really-want-to-write-tech-blog-on-medium-3dd25640f26c?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/do-you-really-want-to-write-tech-blog-on-medium-3dd25640f26c?source=rss-f1fb3e40dc37------2&title=在 Medium 上寫技術文章，你確定嗎？&caption=
+在 Medium 上寫技術文章，你確定嗎？
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=在 Medium 上寫技術文章，你確定嗎？&url=https://hulitw.medium.com/do-you-really-want-to-write-tech-blog-on-medium-3dd25640f26c?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>在 Medium 上寫技術文章，你確定嗎？</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-10-24
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/do-you-really-want-to-write-tech-blog-on-medium-3dd25640f26c?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1635087156000-->
+<p><a href="https://hulitw.medium.com/do-you-really-want-to-write-tech-blog-on-medium-3dd25640f26c?source=rss-f1fb3e40dc37------2">在 Medium 上寫技術文章，你確定嗎？</a>
+——</p>
+
+<div>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*9ORUsG5qbgYuKoR8" />    <figcaption>
+Photo by <a href="https://unsplash.com/@possessedphotography?utm_source=medium&amp;utm_medium=referral">Possessed Photography</a> on <a href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral">Unsplash</a>
+    </figcaption>
+  </figure>
+  <p>這篇想表達的東西就跟標題一樣，是一篇 Medium 勸退文。</p>
+  <p>Medium 方便、簡單、多人協作容易（Publication），而且 SEO 又好，自然而然是很多人寫部落格的首選，像我自己也在上面寫了不少文章。如果是非技術文章的話，我認為 Medium 確實是不錯的選擇。</p>
+  <p>但對於技術部落格來說，大家都知道這不是一個合適的地方。像是不支援 Markdown 語法（我知道有這個<a href="https://markdowntomedium.com/">轉換器</a>可以用），對於程式碼的顯示也沒有原生支援，需要透過 gist 或是圖片的方式才能放進來（我也知道可以透過轉換器自動幫忙產生 gist）。</p>
+  <p>除了這些大家都知道的、顯而易見的缺點，其實還有一些東西需要考慮。</p>
+  <p>先講結論，如果你只是想短期試試水溫，「讓自己先願意寫」是首要考量，那 Medium 是個好選擇，因為它簡單方便，上手門檻低，能讓你先專注在寫作這件事情身上。</p>
+  <p>可是如果你想長期發展技術部落格，那我不會推薦 Medium，理由如下。</p>
+  <h4 id="seo-">1. SEO 雖然好，前提是你要達到一定門檻</h4>
+  <p>Medium 自從某次改版以後，對於沒有達到一定門檻的文章，會直接賞你一個 noindex，意思是搜尋引擎不會把你的網頁收錄進去，所以在 Google 上面會完全搜尋不到那篇文章，你直接拿標題去搜尋也不會有結果。</p>
+  <p>詳情可參考：<a href="https://medium.com/kung-%E7%9A%84%E6%97%A5%E5%B8%B8/medium-%E6%96%87%E7%AB%A0%E5%9C%A8-google-%E4%B8%8A%E6%B6%88%E5%A4%B1%E4%BA%86-%E9%97%9C%E6%96%BC-medium-%E7%9A%84-seo-%E6%96%B0%E6%94%BF%E7%AD%96-b05f99b2f372?sk=68d4599717077ab2fd625f265bb70832">Medium 文章在 Google 上消失了？關於 Medium 的 SEO 新政策</a></p>
+  <p>至於這個門檻到底是什麼，我猜是作者要 follower 數量大於 100，或者文章有一定的瀏覽量之類的，但我只是猜測而已。總之，在你的文章享受 SEO 紅利之前，你必須先找其他管道推廣，才有機會達到門檻。</p>
+  <h4 id="section">2. 內容無法客製化</h4>
+  <p>Medium 本來的客群就不是技術部落格，所以它的編輯器功能也很有限，就那幾種而已。就像前面說過的，貼 code 一定要透過第三方，像是先把 code 貼到 gist 再引入進來，如果只有兩三篇文章這倒是還好，如果有二十篇，你會累死。</p>
+  <p>就算是用一些現成的轉換器（或甚至自己寫），也還是有些東西無法支援，例如說 iframe，有些網頁相關的文章如果有支援 iframe，你就可以直接把 demo 的網頁嵌入進來，但是這邊不行（或許有支援 codesandbox 或是 codepen 之類的，但那終究不是自己的網頁）</p>
+  <p>總之呢，在 Medium 你就會受制於 Medium 的編輯器，他不給的你沒辦法用，對用不到的人來說是一種方便，對其他人來說則是一種限制。如果是技術部落格，我相信限制一定是多於方便的。</p>
+  <h4 id="section-1">3. 搬家困難</h4>
+  <p>在搬家的時候，最重要的有兩點，第一點是文章的輸出，沒記錯的話 Medium 匯出的應該會是比較偏向 HTML 格式的資料，就算有人提供 Markdown 的轉換，依然需要手動調整一些細節。</p>
+  <p>第二點是轉址，SEO 不想弄爛的話，轉址就要弄好，但是 Medium 會讓你轉址嗎？不會，他沒有這個功能。雖然他可以設置 canonical url，但那跟轉址還是不同的東西，是兩回事。</p>
+  <p>而且我有試過 canonical url，設置完之後過了兩個月，還是只搜得到 Medium 上面的文章，搜尋不到 canonical 指向的地方…（或許是我設置錯誤，或是新的網站權重太低？）</p>
+  <h4 id="section-2">4. 缺少分類以及索引功能</h4>
+  <p>如果今天不是 publication 而是個人作者，是沒有分類這個功能的。</p>
+  <p>再者，很多部落格都會有 Archive 這個頁面，可以很快速地看到這個部落格上面所有的文章，Medium 有這功能嗎？沒有。</p>
+  <h4 id="section-3">5. 缺少統計資料</h4>
+  <p>我在空閒時間最喜歡看的兩個網站一個叫 Google Search Console，可以看到大家用哪些關鍵字找到我的部落格；第二個叫 Google Analytics，看一下流量怎麼樣，來源的分佈如何，也可以找到參考來源網址，看看被哪些網站引用了。</p>
+  <p>但 Medium 不支援這些東西（早期好像有支援，後來拔掉了），它只有自己原生的統計資料後臺。</p>
+  <p>看完以上五點，有些人可能會想說：「搞不好以後會有這些功能啊，像是統計資料的後台不是就更新過嗎，publication 功能也越來越多了」</p>
+  <p>確實是這樣沒錯，但這樣的話你的部落格發展就會受到平台的限制，以長期經營來看，我不覺得是件好事。</p>
+  <p>那該怎麼辦呢？</p>
+  <p>如果想長期經營技術部落格，最推薦的方式當然就是自架。你可以考慮許多人用的 <a href="https://hexo.io/zh-tw/">hexo</a>，也可以考慮我用過滿意度很高的 <a href="https://blog.huli.tw/2021/08/22/eleventy-over-hexo/">eleventy</a>，總之呢，選擇有很多種。</p>
+  <p>好處很明顯，就是所有的事情都是你可以掌握的。樣式想改就改，放程式碼也超容易，搬家也超容易因為都是 markdown 格式，而網址的部份因為也是自己的，所以要設定轉址也是沒有問題的。</p>
+  <p>前面所說的 Google Analytics 跟 Google Search Console，也都可以自己設置，完全沒有問題。</p>
+  <p>雖然說 SEO 剛開始可能差了點，但長期經營以後還是有機會爬到很前面的位子。</p>
+  <p>一開始也不需要直接切過去，有許多從 Medium 搬走的人都是採取兩邊同時發文的策略，然後用 canonical 指到自己的部落格那邊，Medium 變成只是一個文章的露出管道，而不是主力。</p>
+  <p>但總之，你必須要先有一個自己的部落格才行。</p>
+  <p>有了自己的技術部落格，你才有完整的掌控權，你不用怕 Medium 改規則文章搜尋不到，不用怕 Medium 倒掉文章會全部不見，不用怕搬家很難也不用擔心不支援 markdown 格式，更不用擔心貼 code 很麻煩。</p>
+  <p>總之呢，如果長期經營技術部落格的打算，我是不推薦 Medium 的。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=3dd25640f26c" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2021-11-14</time>
+        <a href="https://nodebe4.github.io/oped2/2021-11-14/%E5%BE%9E%E8%87%AA%E8%BA%AB%E7%B6%93%E9%A9%97%E8%AB%87%E8%AB%87%E8%81%B7%E6%B6%AF%E4%B8%8A%E7%9A%84%E9%81%B8%E6%93%87/">
+          從自身經驗談談職涯上的選擇
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-10-29</time>
+        <a href="https://nodebe4.github.io/oped2/2021-10-29/%E6%83%B3%E8%AE%8A%E6%88%90%E7%9A%84%E6%A8%A1%E6%A8%A3/">
+          想變成的模樣
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-10-10</time>
+        <a href="https://nodebe4.github.io/oped2/2021-10-10/%E6%9C%8D%E5%8B%99%E5%B0%8D%E5%A4%96%E4%BD%86%E9%9C%80%E8%A6%81%E7%99%BB%E5%85%A5-%E8%83%BD%E6%9C%89%E4%BB%80%E9%BA%BC%E9%A2%A8%E9%9A%AA%E5%97%8E/">
+          服務對外但需要登入，能有什麼風險嗎？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-10-02</time>
+        <a href="https://nodebe4.github.io/oped2/2021-10-02/%E5%B0%8D%E6%96%BC%E6%95%99%E5%AD%B8%E7%9A%84%E5%8F%8D%E6%80%9D/">
+          對於教學的反思
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-10-21/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E5%AF%B9%E6%88%98%E5%B7%A8%E4%BA%BA-%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E7%9A%84%E5%BF%AB%E9%80%92%E5%B0%8F%E5%93%A5%E7%BB%88%E4%BA%8E%E7%BB%84%E7%BB%87%E8%B5%B7%E6%9D%A5%E5%BD%A2%E6%88%90%E4%BA%86%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%8F%8D%E6%8A%97%E5%8A%9B%E9%87%8F-iYouPort/">
+            前一篇：我们一起来对战巨人：世界各地的快递小哥终于组织起来形成了真正的反抗力量 - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-10-26/%E6%88%91%E4%BB%AC%E8%A6%81%E5%B0%9D%E8%AF%95%E4%B8%80%E7%A7%8D%E6%B2%A1%E6%9C%89%E9%9C%B8%E6%9D%83%E7%9A%84%E7%94%9F%E6%B4%BB-%E5%AF%B9%E9%A6%99%E6%B8%AF%E8%A1%8C%E5%8A%A8%E8%80%85%E7%9A%84%E8%AE%BF%E8%B0%88-iYouPort/">
+            後一篇：我们要尝试一种没有霸权的生活：对香港行动者的访谈 - iYouPort
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-10-21/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E5%AF%B9%E6%88%98%E5%B7%A8%E4%BA%BA-%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E7%9A%84%E5%BF%AB%E9%80%92%E5%B0%8F%E5%93%A5%E7%BB%88%E4%BA%8E%E7%BB%84%E7%BB%87%E8%B5%B7%E6%9D%A5%E5%BD%A2%E6%88%90%E4%BA%86%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%8F%8D%E6%8A%97%E5%8A%9B%E9%87%8F-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-10-26/%E6%88%91%E4%BB%AC%E8%A6%81%E5%B0%9D%E8%AF%95%E4%B8%80%E7%A7%8D%E6%B2%A1%E6%9C%89%E9%9C%B8%E6%9D%83%E7%9A%84%E7%94%9F%E6%B4%BB-%E5%AF%B9%E9%A6%99%E6%B8%AF%E8%A1%8C%E5%8A%A8%E8%80%85%E7%9A%84%E8%AE%BF%E8%B0%88-iYouPort/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-10-29/%E6%83%B3%E8%AE%8A%E6%88%90%E7%9A%84%E6%A8%A1%E6%A8%A3/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-10-10/%E6%9C%8D%E5%8B%99%E5%B0%8D%E5%A4%96%E4%BD%86%E9%9C%80%E8%A6%81%E7%99%BB%E5%85%A5-%E8%83%BD%E6%9C%89%E4%BB%80%E9%BA%BC%E9%A2%A8%E9%9A%AA%E5%97%8E/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-10-21/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%9D%A5%E5%AF%B9%E6%88%98%E5%B7%A8%E4%BA%BA-%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E7%9A%84%E5%BF%AB%E9%80%92%E5%B0%8F%E5%93%A5%E7%BB%88%E4%BA%8E%E7%BB%84%E7%BB%87%E8%B5%B7%E6%9D%A5%E5%BD%A2%E6%88%90%E4%BA%86%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%8F%8D%E6%8A%97%E5%8A%9B%E9%87%8F-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-10-26/%E6%88%91%E4%BB%AC%E8%A6%81%E5%B0%9D%E8%AF%95%E4%B8%80%E7%A7%8D%E6%B2%A1%E6%9C%89%E9%9C%B8%E6%9D%83%E7%9A%84%E7%94%9F%E6%B4%BB-%E5%AF%B9%E9%A6%99%E6%B8%AF%E8%A1%8C%E5%8A%A8%E8%80%85%E7%9A%84%E8%AE%BF%E8%B0%88-iYouPort/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-10-29/%E6%83%B3%E8%AE%8A%E6%88%90%E7%9A%84%E6%A8%A1%E6%A8%A3/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-10-10/%E6%9C%8D%E5%8B%99%E5%B0%8D%E5%A4%96%E4%BD%86%E9%9C%80%E8%A6%81%E7%99%BB%E5%85%A5-%E8%83%BD%E6%9C%89%E4%BB%80%E9%BA%BC%E9%A2%A8%E9%9A%AA%E5%97%8E/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Holding Sway – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Holding Sway
+——
+" />
+    <meta property="og:description" content="
+Holding Sway
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Holding Sway" />
+    <meta property="twitter:title" content="Holding Sway" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Ffeatures%2Fholding-sway" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/features/holding-sway" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/features/holding-sway&text=Holding Sway&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/features/holding-sway&title=Holding Sway" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/features/holding-sway&title=Holding Sway" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Holding Sway&body=
+Holding Sway
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/features/holding-sway" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/features/holding-sway&title=Holding Sway&caption=
+Holding Sway
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Holding Sway&url=https://www.chinafile.com/reporting-opinion/features/holding-sway" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Holding Sway</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-09-28
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Jessica Batke</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/features/holding-sway" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1695920760000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/features/holding-sway">Holding Sway</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-026497519d43da1ff08bd148efb7f1bc">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/ufwd_illo_steven_weinberg_9.22.23.jpg" title="Holding Sway" class="colorbox" data-colorbox-gallery="gallery-node-54911-gbsZ-aHg1uE" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/ufwd_illo_steven_weinberg_9.22.23.jpg?itok=j3FXh5cM" width="1400" height="832" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Steven Weinberg for ChinaFile
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">Swirling around in brightly-colored inflatables the shape of flying saucers, riders grin as they skid across the ice, bouncing off one another in a winter version of bumper cars. Nearby, more people pedal “ice bikes” and row sleds that look like dragon boats. Others steer snowmobiles along a go-cart-style track. Children glide along in “princess horse-drawn carts” pulled by diminutive steeds.</p>
+      <p>This winter amusement park, in China’s far northeast, about 100 miles from Vladivostok, comes stocked with snowmobiles and bumper sleds courtesy of the local United Front Work Department (UFWD). In most parts of the world, the UFWD is known—if at all—as a secretive Chinese Communist Party (CCP) organ conducting influence operations abroad. But in Gonghe Village, the local UFWD ponied up nearly one million renminbi in 2022 to purchase “snow sports equipment” for the recreation area, including not just sleds but also items such as safety nets and anti-slip mats. “Gonghe Village . . . takes the development of the ice and snow industry as an important opportunity,” said the village head in a video posted to Douyin, China’s version of Tiktok. “We are strengthening the lifeblood of the rural collective economy in the new era, and taking a solid step towards strengthening the village, enriching the people, and revitalizing the countryside.”</p>
+      <p>Given the United Front Work Department’s reputation abroad, funding an “ice and snow amusement park” might seem anomalous. This is the organization that has allegedly helped set up illegal Chinese <a href="https://jamestown.org/program/the-long-arm-of-the-lawless-the-prcs-overseas-police-stations/" target="_blank">police outposts</a> in the United States, <a href="https://sinopsis.cz/wp-content/uploads/2021/11/it0.pdf" target="_blank">inserted talking points</a> into Italian political discussions, and <a href="https://www.wilsoncenter.org/sites/default/files/media/documents/article/magic_weapons.pdf" target="_blank">cultivated</a> members of parliament in New Zealand to gin up support for China’s domestic policies, activities in line with what the U.S. Congress has <a href="https://www.congress.gov/bill/117th-congress/house-bill/1214/text" target="_blank">described</a> as the Department’s “goal of softening opposition to the Chinese Communist Party and its policies throughout the world.”</p>
+      <p>Yet despite its insidious cloak-and-dagger image in U.S. political debate, the United Front’s mission is neither particularly covert nor aimed solely at people outside China’s borders. “There’s no clear distinction between domestic and overseas united front work,” <a href="https://www.aspi.org.au/report/party-speaks-you" target="_blank">writes</a> China researcher Alex Joske. “This is because the key distinction underlying the United Front is not between domestic and overseas groups, but between the CCP and everyone else.”</p>
+      <p>“Previous coverage of United Front work has given the impression that its main operations are overseas, which is the opposite of the truth,” says Neil Thomas, Fellow for Chinese Politics at the Asia Society Policy Institute’s Center for China Analysis. “It’s primarily a domestic apparatus whose tentacles extend beyond China’s borders.” To better understand what “United Front work” means in the domestic context, ChinaFile reviewed some 2,500 procurement notices and related materials posted to the <a href="http://www.ccgp.gov.cn/" target="_blank">Chinese Government Procurement Network</a> website between January 2018 and May 2023. (Information about Gonghe Village’s amusement park costs came directly from a procurement notice announcing the winning supplier.)</p>
+      <p></p>
+      <div class="pullquote">
+“Previous coverage of United Front work has given the impression that its main operations are overseas, which is the opposite of the truth. It’s primarily a domestic apparatus whose tentacles extend beyond China’s borders.”         <div class="pullquote-share">
+<span class="st_facebook_large" st_title="“Previous coverage of United Front work has given the impression that its main operations are overseas, which is the opposite of the truth. It’s primarily a domestic apparatus whose tentacles extend beyond China’s borders.”" displaytext="Facebook"></span><span class="st_twitter_large" st_title="“Previous coverage of United Front work has given the impression that its main operations are overseas, which is the opposite of the truth. It’s primarily a domestic apparatus whose tentacles extend beyond China’s borders.”" st_via="chinafile" displaytext="Tweet"></span><span class="st_email_large" st_title="“Previous coverage of United Front work has given the impression that its main operations are overseas, which is the opposite of the truth. It’s primarily a domestic apparatus whose tentacles extend beyond China’s borders.”" displaytext="Email"></span>
+        </div>
+      </div>
+      <p></p>
+      <p>Whether the UFWD is buying 24,000 “ethnic unity enters the home” tea sets in Sichuan, or putting surveillance cameras outside 85 different places of religious worship in Shandong, it is pursuing a single mission: namely, to seek out individuals and groups in society outside the Party’s control and cement their status as friends rather than enemies. This mission speaks to the deepest needs and fears of the CCP. Rather than allow for an independent civil society that coalesces around common interests, the United Front aims to yoke influential sectors of society to the Party, reining in their behavior while harnessing their strength and momentum. In general, the Department proffers carrots, in contrast to the sticks wielded by the police and state security organs. Yet, for people whose identities the Party finds threatening, the United Front employs a heavier hand. Though the UFWD’s purchases cannot reveal the ultimate success or failure of any given initiative, they can tell us how the Department is spending its money—and thereby hint at where its priorities lie.</p>
+      <p>“People don’t appreciate how wide-ranging United Front work is, and it has continued to expand,” says Gerry Groot, a Senior Lecturer at the University of Adelaide, whose book <em><a href="https://www.routledge.com/Managing-Transitions-The-Chinese-Communist-Party-United-Front-Work-Corporatism/Groot/p/book/9780415860949" target="_blank">Managing Transitions</a></em> describes the UFWD’s historical role in easing the CCP through turbulent stages of China’s political and social development. “The nature of its work has expanded as China has changed with economic success. Now that they’re having problems, its importance will be stressed again. It will be used to manage frictions created by the economic downturn.” The Xi Jinping administration has emphasized united front work over the last decade, indicating how crucial this <a href="https://www.jstor.org/stable/26892605" target="_blank">Bolshevik concept</a> is to its vision of China’s governance.</p>
+      <p class="dropcap">The idea of the united front <a href="https://www.jstor.org/stable/26892605" target="_blank">was born</a> in 1917 during the Russian Revolution when the Bolsheviks allied with smaller factions of socialists to ensure their survival as they battled for control of Russia. Once in power, they quickly <a href="https://www.jstor.org/stable/189387" target="_blank">made contact</a> with revolutionaries in China. Through most of the 1920s, the Soviets directed the nascent Chinese Communist Party to ally with its political rival, the much larger and much better-resourced Kuomintang, in order to serve the USSR’s own geo-political ends.</p>
+      <p>“If you look at it from Stalin’s perspective, he wanted to make sure the bourgeois party, the Kuomintang, would retain a pro-Soviet orientation, and this was done by infiltrating communists into the party,” says Sergey Radchenko, a historian of Russia and China at Johns Hopkins School of Advanced International Studies. “Stalin’s idea was: a bigger party which we control through a smaller party.”</p>
+      <p>This cooperation came to a bloody end when the Kuomintang attacked the Communists and their sympathizers in the spring of 1927. But even after spending nearly a decade dodging Kuomintang assaults in the countryside, the CCP once again allied with the Kuomintang in 1936 to oppose invading Japanese forces. The CCP formed this “Second United Front” under pressure from Moscow, which wanted to prevent Japan from creeping too close to the Soviet border. It was in this context that Mao Zedong made his <a href="https://www.wilsoncenter.org/sites/default/files/media/documents/article/magic_weapons.pdf" target="_blank">oft-cited</a> comment <a href="https://archive.ph/wip/pO3xG" target="_blank">describing</a> the United Front as one of the Party’s “magic weapons,” along with military struggle and Party building, that would allow the CCP to triumph over its enemies.</p>
+      <p>After Japanese surrender at the end of World War II, and against Soviet wishes, the CCP pursued a “united front” with intellectuals and members of other political parties, aiming to isolate and defeat the Kuomintang, with which it was now engaged in a civil war. By the time the CCP emerged victorious in 1949, the United Front Work Department was already an established part of the Party’s governance firmament.</p>
+      <p>Since then, the UFWD’s political might has <a href="https://press-files.anu.edu.au/downloads/press/p328871/pdf/book.pdf?referer=1777" target="_blank">waxed and waned</a>. “Mao himself lost interest in United Front work after 1956, favouring confrontation and ‘class struggle’ over conciliation,” writes University of Adelaide’s Groot. “It was nevertheless revived each time the Party had to recover from a Mao-induced crisis.” Upon Mao’s death, the leadership leaned on the UFWD to help reinvigorate foreign business and investment ties. For a brief moment after the 1989 Tiananmen Massacre, it seemed as though the Party might grant more autonomy to United Front allies, such as the eight legally-sanctioned, if largely powerless, “<a href="https://www.scmp.com/news/china/politics/article/3136835/communist-party-not-chinas-only-political-party-there-are-eight" target="_blank">minor political parties</a>.” But as the reputational damage from Tiananmen faded away with time, so did the leadership’s attention to the UFWD.</p>
+      <p>That has changed under current Party General Secretary Xi Jinping. The Department’s clout has grown significantly in recent years, researchers studying the UFWD overwhelmingly agree. Xi, by dint of both his father’s and his own <a href="https://jamestown.org/program/united-front-work-19th-party-congress/" target="_blank">work experiences</a>, has had a lifelong front-row seat to united front work and <a href="https://jamestown.org/program/united-front-work-department-magic-weapon-home-abroad/" target="_blank">describes it</a> as a means to “Chinese people’s great rejuvenation.” In 2015 alone, the Party convened its first high-level conference on united front work in nearly a decade, created a governance group to direct united front efforts and <a href="https://www.thechinastory.org/yearbooks/yearbook-2015/forum-ascent/the-expansion-of-the-united-front-under-xi-jinping/" target="_blank">stacked</a> it with high-ranking leaders, and released <a href="https://archive.is/5R61r" target="_blank">regulations</a> to “strengthen and standardize” united front work and “consolidate and develop the patriotic united front.”</p>
+      <p>More recently, in March 2023, CCP ideological guru Wang Huning—one of the <a href="https://www.palladiummag.com/2021/10/11/the-triumph-and-terror-of-wang-huning/" target="_blank">few individuals</a> to work closely with each of the last three leaders of China—took charge of the united front portfolio in his new role on the country’s powerful Politburo Standing Committee. Wang now sits atop the Chinese People’s Political Consultative Conference (CPPCC), the government counterpart to the United Front Work Department, and oversees all united front work more broadly.</p>
+      <p></p>
+      <div class="view view-photo-embed view-id-photo_embed view-display-id-panel_pane_2 visual-box view-dom-id-fad76fe5df4d4f0b95e942552a1f78e0 grid-8 photo-object">
+        <div class="views-field views-field-field-common-system-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/photo/system/wang_huning_sm.jpg" title="Wang Huning Tibet Visit" class="colorbox" data-colorbox-gallery="gallery-node-54961-gbsZ-aHg1uE" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/assets/images/photo/system/wang_huning_sm.jpg" width="1900" height="1350" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div class="views-field views-field-field-common-system-credit">
+          <div class="field-content photo-credit img-credit">
+Yan Yan—Xinhua/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption img-caption">
+            <p>Wang Huning, a Politburo Standing Committee member and Chairman of the Chinese People’s Political Consultative Conference, visits local residents during an inspection tour of Tibet in Nyingchi, southwest China’s Tibet Autonomous Region, July 25, 2023.</p>
+          </div>
+        </div>
+      </div>
+      <p></p>
+      <p>Perhaps most importantly, a significant restructuring between 2015 and 2018 <a href="https://jamestown.org/program/reorganizing-the-united-front-work-department-new-structures-for-a-new-era-of-diaspora-and-religious-affairs-work/" target="_blank">added</a> a host of new bureaus to the United Front Work Department’s existing architecture. The Department went from seven bureaus to twelve, subsuming several state organs (and their funding) as well as streamlining the flow of power directly down from the Party center. The new formation <a href="https://jamestown.org/program/the-rise-and-rise-of-the-united-front-work-department-under-xi/" target="_blank">reflected</a> the increasing complexity and importance Beijing ascribed to the Department’s tasks.</p>
+      <p>The UFWD’s revamped <a href="https://www.aspi.org.au/report/party-speaks-you" target="_blank">org chart</a> serves as a list of the social sectors it seeks to influence. The Department maintains at least one bureau for each of the following:</p>
+      <ul>
+        <li>Members of one of the eight officially-sanctioned, non-CCP political parties (a largely vestigial inclusion at this point; though these parties do conduct their own activities, they are not independent; the UFWD has long <a href="https://archive.is/piC0e" target="_blank">vetted</a> all memberships in these parties)</li>
+        <li>Participants in the “<a href="https://baike.baidu.com/reference/3186062/86f4ScOiX0ugOFBGkoatBYu0AFe4IVEf-HVpkAG2wlTyB-vB006O6Yv9P-tGbg_eSCQ_De3WfHwBtZD-09ZlZn2Ay9XT4w" target="_blank">non-public economy</a>,” which translates to entrepreneurs and private businesses, including companies with foreign investment</li>
+        <li>Individuals in the “<a href="https://archive.is/jDNb2" target="_blank">new social strata</a>,” namely, the managers and technical staff working in the “non-public economy”; people working in new media; notaries, accountants, lawyers, auditors, industry associations, and chambers of commerce; and freelancers—basically, professionals and knowledge workers</li>
+        <li>“Xinjiang,” both the geographical region itself, as well the people—most notably members of the Uyghur, Kazakh, and Kyrgyz ethnic groups—that live there</li>
+        <li>“Tibet,” similar to the Xinjiang bureau, covers the Tibet Autonomous Region as well as its inhabitants</li>
+        <li>Other non-Han ethnic groups (besides Tibetans and Uyghurs, the Chinese state somewhat arbitrarily recognizes 53 additional groups)</li>
+        <li>Religious believers (this work is split between two bureaus, one of which focuses on specific religions, the other of which has functional responsibilities, such as overseeing religious schools)</li>
+        <li>People of Hong Kong, Macau, and Taiwan</li>
+        <li>“Overseas Chinese,” a term (华侨, <em>Huaqiao</em>) that technically only includes Chinese citizens living abroad, but in practice also often includes former Chinese citizens, their offspring, or anyone with Chinese ancestry (华裔, <em>Huayi</em>); this work is also split between two bureaus, one of which has a geographical focus and the other of which specializes in media, culture, and educational efforts</li>
+        <li>Intellectuals not affiliated with the CCP, as well as influential individuals who have made “positive contributions to society” and are not affiliated with any political party—essentially, people viewed as thought leaders and role models, but who don’t fit into any of the other categories</li>
+      </ul>
+      <p>This list represents the sectors of society the Party deems both potentially dangerous and socially influential, requiring dedicated efforts to induce loyalty.</p>
+      <p>Within each of these sectors, the UFWD must identify people to approach individually. To make its outreach more comprehensive and efficient, the Department has long compiled detailed information about specific targets. In a secret missive from 1940, the United Front Work Department of the Central Committee (then only part of an upstart Communist Party fighting against both the Kuomintang and Japan) exhorted cadres to take a more methodical approach to their united front activities:</p>
+      <blockquote>
+        <p>In the past there was a lack of conscientious investigation and deep understanding of the targets of united front work. We have to carry out a general analysis and have a general understanding of each party, group, stratum, friendly army, etc.; and we must carry out a many-sided, deep, and detailed investigation of the figures actually representative of each party, group, stratum, friendly army, agency, circle, and body. A detailed investigation and separate written record is to be made of these persons: name, age, native place, financial activities, history, changes in thought, political activities, habits, character, peculiarities, social relationships, etc. Without this kind of investigation and record, united front work will become empty and unrealistic.</p>
+      </blockquote>
+      <p>Now, United Front offices throughout the country are bringing their dossiers into the Internet age. Procurement notices call for “smart” or “big data” platforms to “informatize” UFWD work, helping to identify “talents” in society and recruit them as “members” of the united front. In 2019, Beijing’s Dongcheng district spent 1.4 million renminbi on a “comprehensive management platform” that would, in part, “effectively support the four aspects of United Front talent work: ‘discovery, cultivation, utilization, and management’.” The platform would include a database of</p>
+      <blockquote>
+        <p>basic information about members, as well as information about their familial relationships, educational background and degrees, specialized or technical positions, vocational qualifications, itinerant work or job changes, recruitment or probation, administrative or Party positions, job performance, assessments or inspections, religion (for religious figures), coming back to or returning to reside in China, and business (for individuals in the non-public economy and the new social strata).</p>
+      </blockquote>
+      <p>The database would allow UFWD officials to generate “statistics on, or browse and query the information of, all types of united front members,” as well as “gather and sort united front members by performance.”</p>
+      <p>Whether or not such “science-ification, standardization, and intelligentification” efforts can ameliorate the UFWD’s longstanding recruiting problems is another matter entirely. According to Groot, the Department struggles to find individuals that can serve its interests over the long term. In some cases, this is because the Department doesn’t advance targets’ career paths; people with political ambitions will often just join the CCP directly, rather than submit to the supervision of the UFWD as a member of one of the eight “minor parties” or as a business representative. In other cases, such as individuals who belong to targeted ethnic or religious groups, contact with the UFWD taints them in the eyes of their communities, making them less useful to the UFWD. “In many cases, once the United Front Work Department IDs and recruits them, then these people immediately start losing their value,” says Groot. “They’re compromised through their connections with the United Front Work Department.”</p>
+      <p>Recruiting challenges aside, the Party clearly still finds the United Front a vital component of its governance strategy. Even though the CCP successfully vanquished rivals to the throne, morphing from a scrappy force conducting guerrilla warfare in the countryside to the ultimate authority over a major global power, it still sees a need to approach and co-opt any parts of society outside of itself. And the United Front Work Department is a key mechanism by which the revolutionary CCP hopes to forestall any further revolutions.</p>
+      <p class="dropcap">The United Front Work Department uses a variety of different tools to appeal to its selected targets. Its primary method simply involves outreach: holding events, trainings, media tours, and the like. Targets the Party regards as more persuadable may only come into contact with this side of the UFWD’s toolkit. Individuals in the “new social strata,” for example, might be treated to a “large-scale celebration to commemorate the Shenzhen Special Economic Zone’s 40th anniversary” like the one the UFWD bid out in 2020. Members of the “new generation of private entrepreneurs” might attend a multi-week training course, like the one the United Front contracted out to Northwest University in Xi’an, including three “study trips” to other provinces, tea and art salons, and athletic activities. UFWD outreach to target groups living abroad also involves some China-based activities: a leadership camp including university students from Taiwan, for example, or a summer camp for children of Chinese descent. The Department does conduct outreach to target groups it deems “sensitive,” such as religious adherents, or members of particular ethnic communities, but supplements this with a host of additional, sometimes more coercive means.</p>
+      <p>Another major undertaking, and one that is perhaps surprising to anyone who only knows the UFWD as a shadowy influence peddler abroad, is provision of basic goods and services. For example, local United Front offices have contracted out for at least 100 road improvement projects since 2018. Many of these projects took place in the <a href="http://www.xinhuanet.com/english/2018-12/09/c_137661448.htm" target="_blank">Guangxi Zhuang Autonomous Region</a>, an area in southern China with a relatively high population of non-Han residents as well as high levels of poverty. Beyond just road improvements, local UFWDs issued hundreds of tenders for a wide variety of infrastructure and development projects, from expanding access to drinking water to promoting the raising of laying hens, from installing lighting in rural public spaces to building “supporting facilities” for a “macadamia nut industry base.”</p>
+      <p>Infrastructure projects like these make sense given the United Front’s larger mission, says Matt Schrader, an advisor for China at the International Republican Institute. “This is a core function of the UFWD—collecting the needs of target groups and translating them into policy. One clear throughline for United Front work, from its very early stages in the 1930s, is close attention to the needs of target groups and knowing what the Party can do for them. It’s a kind of customer service-oriented mindset. You see the phrase ‘fix their problems’ over and over again.”</p>
+      <p>Groot notes that “the downside of these policies is that they’re all part of assimilationist policies as well.” Building better roads, for example, “reduces the obstacles to making [non-Han people] more mainstream. Letting people more easily come in, letting people more easily go out—and marry out—allows for greater integration, breaking up local clans, and for greater assimilation.” Over the last decade, as the Party-state has <a href="https://epicenter.wcfia.harvard.edu/blog/assimilation-new-norm-chinas-ethnic-policy" target="_blank">solidified its intent</a> to promote a single, overriding “Chinese” identity, rather than encourage the organic development of multifarious ethnic identities, it has <a href="https://archive.ph/tjJJu" target="_blank">called for</a> “extensive contact, exchange, and blending of all ethnic groups,” including through “two-way migration and flow of the population” and living in “blended” communities.</p>
+      <p></p>
+      <div class="pullquote">
+“People don’t appreciate how wide-ranging United Front work is, and it has continued to expand . . . Now that they’re having problems, its importance will be stressed again. It will be used to manage frictions created by the economic downturn.”         <div class="pullquote-share">
+<span class="st_facebook_large" st_title="“People don’t appreciate how wide-ranging United Front work is, and it has continued to expand . . . Now that they’re having problems, its importance will be stressed again. It will be used to manage frictions created by the economic downturn.” " displaytext="Facebook"></span><span class="st_twitter_large" st_title="“People don’t appreciate how wide-ranging United Front work is, and it has continued to expand . . . Now that they’re having problems, its importance will be stressed again. It will be used to manage frictions created by the economic downturn.” " st_via="chinafile" displaytext="Tweet"></span><span class="st_email_large" st_title="“People don’t appreciate how wide-ranging United Front work is, and it has continued to expand . . . Now that they’re having problems, its importance will be stressed again. It will be used to manage frictions created by the economic downturn.” " displaytext="Email"></span>
+        </div>
+      </div>
+      <p></p>
+      <p>Other United Front projects have similarly assimilative aims, sometimes with the paradoxical goal of highlighting the “characteristics” of non-Han ethnic groups. One 2021 procurement notice from Guangxi, for example, offered more than 8 million renminbi to help develop the tourism industry in the Xiaodubai “ethnic minority characteristic village,” through improvements such as a “night scene lighting system” and “ethnic wall paintings.” In China’s northeastern Heilongjiang province, where members of the officially-designated Korean ethnic group are concentrated, United Front officials wanted contractors to reconstruct a “Korean culture street.” The work described in many of these notices suggests the “Disneyfication” of the original village or street, as long <a href="https://archive.is/GYrai" target="_blank">documented</a> in tourist areas across China, and more recently <a href="https://www.buzzfeednews.com/article/alison_killing/xinjiang-china-mass-detention-tourism" target="_blank">observed</a> as part of the CCP’s campaign of surveillance and repression in the Xinjiang Uyghur Autonomous Region.</p>
+      <p>According to Mareike Ohlberg, a senior fellow at the German Marshall Fund and co-author of the book <em><a href="https://www.simonandschuster.com/books/Hidden-Hand/Clive-Hamilton/9780861540280" target="_blank">Hidden Hand</a></em>, which describes the Chinese Communist Party’s efforts to influence political and social life around the world, the Party-state does welcome some degree of cultural diversity among its population, “as long as it is toothless.” But for the Party to permit open displays of difference, it must first feel secure in the underlying sympathies of a community. “Disneyfication is great for that. You make money off tourism, you talk about how much respect you have for ethnic diversity, but you get rid of anything that can challenge Party control,” Ohlberg says.</p>
+      <p>A tender for the “Into the Li People: Large-Scale Cultural Documentary Fieldwork Event” in Guangxi explicitly highlights such aims. UFWD authorities sought to create propaganda emphasizing the Li ethnic group’s fealty to the Party. The project would “invite renowned contemporary literary figures to spend nearly a month in ethnic areas of our province . . . to look back on the Redness of the Li people . . . and promote exchange and blending between all ethnicities in our province, as well as promote a unity of ideals, beliefs, emotion, and culture in all ethnic groups.”</p>
+      <p>The United Front Work Department’s activities become more blatantly intrusive when targeting individuals the Party views as potentially threatening. This includes people in ethnic and religious minority groups, whose community affiliations may provide a sense of identity more potent than Chinese nationalism or love of the Party.</p>
+      <p>Hui people may comprise only 30 percent of the population of the Ningxia Hui Autonomous Region, just south of Inner Mongolia. But the Party-state worries their Muslim religious adherence poses an inherent threat and so keeps close tabs on their houses of worship. UFWD authorities in at least three Ningxia localities sought contractors to audit the finances of or directly conduct bookkeeping for “religious activity sites,” in part to ferret out any non-reported income and to enumerate any of the sites’ fixed assets.</p>
+      <p>Throughout the country, local United Front Work Departments are making purchases so that they can better scrutinize the goings-on within religious communities. Multiple tenders solicited software that visualizes or otherwise “intelligently” manages religious sites. Authorities in Diqing Tibetan Autonomous Prefecture, in southwestern Yunnan province, wanted a “religious work grid management information system,” explicitly applying the logic of grid management—a system widely used throughout China to monitor citizens’ activities, in which localities are divided into <a href="https://theasiadialogue.com/2018/04/27/grid-management-and-social-control-in-china/" target="_blank">smaller, more controllable units</a> and government workers catalog goings-on in their part of the “grid”—to the task of controlling locals’ everyday religious activity.</p>
+      <p>International media has documented the government’s <a href="https://www.nytimes.com/2019/05/22/world/asia/china-surveillance-xinjiang.html" target="_blank">use of</a> cameras and other such surveillance equipment in the Xinjiang Uyghur Autonomous Region, <a href="https://www.chinafile.com/state-surveillance-china" target="_blank">including</a> at places of <a href="https://www.ft.com/content/c610c88a-8a57-11e8-bf9e-8771d5404543" target="_blank">religious worship</a>. But procurement notices issued by UFWDs in Shandong, Jiangxi, Hebei, Henan, and Anhui provinces show that the Party-state is conducting visual monitoring at religious sites throughout the country. Some of the notices explicitly link these surveillance programs to broader provincial or national campaigns, while others simply seek “installation and networking of video surveillance at religious sites.”</p>
+      <p></p>
+      <div class="node node-article cboxes article align-left grid-4 img-yes logo-no">
+        <div class="cboxes-inner">
+          <div class="cb-head">
+            <h3 id="notes-from-chinafile"> <a href="https://www.chinafile.com/notes-chinafile">Notes from ChinaFile</a></h3>
+ <span class="date">12.13.22</span> <span class="type-icon"></span>
+          </div>
+          <div class="cb-link">
+<a href="https://www.chinafile.com/reporting-opinion/notes-chinafile/planting-flag-mosques-and-monasteries"></a>
+          </div>
+          <div class="cb-img">
+<img src="https://www.chinafile.com/sites/default/files/styles/system/public/assets/images/article/system/54471_sm.jpg?itok=J3SNSfDS" width="620" height="450" alt="" referrerpolicy="no-referrer" />
+          </div>
+          <div class="cb-cont">
+            <h2 id="planting-the-flag-in-mosques-and-monasteries"><a href="https://www.chinafile.com/reporting-opinion/notes-chinafile/planting-flag-mosques-and-monasteries" title="Planting the Flag in Mosques and Monasteries">Planting the Flag in Mosques and Monasteries</a></h2>
+ <span class="authors"> <span>Jessica Batke</span> </span>             <div class="inner-content">
+              <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+Over the last few years, the Chinese Communist Party has physically remade places of religious worship in western China to its liking. This includes not only the Xinjiang Uyghur Autonomous Region, but also other areas with mosques or Tibetan...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p></p>
+      <p>United Front officials are not content to merely observe religious proceedings. In some cases, they also seek to alter the physical structures in which they occur. Religious Affairs bureaus (government offices <a href="https://jamestown.org/program/reorganizing-the-united-front-work-department-new-structures-for-a-new-era-of-diaspora-and-religious-affairs-work/" target="_blank">absorbed into</a> the UFWD beginning in 2018) in some areas of Gansu, Qinghai, and Sichuan bought <a href="https://www.chinafile.com/reporting-opinion/notes-chinafile/planting-flag-mosques-and-monasteries" target="_blank">flags and flagpoles</a> to install in mosques or temples, often citing the “four entrances” policy, which seeks to bring “the national flag, the constitution as well as laws and regulations, core socialist values, and China’s excellent traditional culture” into religious sites.</p>
+      <p>Several procurement notices called for contractors to “renovate” or “remodel” existing religious structures. Though the wording in most tenders left the nature of such renovations unclear, one 2021 notice clearly stated the aim of “rectifying the building style,” almost certainly a reference to the <a href="https://bitterwinter.org/chinese-government-spends-millions-to-rectify-mosques/" target="_blank">recent nationwide campaign</a> to “sinicize” mosque architecture and remove “Arabic” elements. The mosque in question, located in northeastern Jilin province’s Huadian city, <a href="https://archive.is/ufHiZ" target="_blank">received a “historical building” designation in 2018</a>, and Baidu Maps street view images from 2019 show it still sported the domes of the type later <a href="https://www.npr.org/2021/10/24/1047054983/china-muslims-sinicization" target="_blank">removed</a> from mosques across the country, sometimes <a href="https://www.npr.org/2023/05/31/1179241485/the-plan-to-remove-a-mosques-domes-in-china-sparks-rare-protest" target="_blank">sparking local protest</a>. That United Front officials in Huadian sought to “rectify” the mosque only three years after provincial officials granted it historic status illustrates how swiftly political dictates on religion have changed in the last decade.</p>
+      <p>The UFWD also tries to change the mindset and behavior of “religious personages.” Multiple procurement notices sought supplies, travel logistics support, and propaganda materials for a “Follow the Four Standards and Strive to be an Advanced Monk and Nun” campaign carried out across Tibet. The “four standards” refers to a campaign that since 2017 has demanded monks and nuns <a href="https://www.hrw.org/news/2018/10/30/china-new-political-requirements-tibetan-monastics" target="_blank">evince</a> “political reliability,” “moral integrity capable of impressing the public,” and willingness to “play an active role at critical moments,” while <a href="https://archive.is/j4ILw" target="_blank">avoiding</a> the “control of foreign forces” and “unswervingly furthering the sinicization of religion.”</p>
+      <p>In the Xinjiang Uyghur Autonomous Region, the United Front Work Department has abetted <a href="https://www.bbc.co.uk/news/extra/85qihtvw6e/the-faces-from-chinas-uyghur-detention-camps" target="_blank">atrocities</a>. As part of a campaign to install government minders in Uyghur villages and homes, one Xinjiang UFWD solicited both software and online cloud services for a management platform that tracked cadres’ efforts to build a “family of ethnic unity.” (The Department undoubtedly conducts more activities in Xinjiang than appear in the procurement notices ChinaFile reviewed; authorities have <a href="https://www.chinafile.com/reporting-opinion/features/what-satellite-images-can-show-us-about-re-education-camps-xinjiang" target="_blank">deleted</a> many Xinjiang-specific tenders from the web and have likely stopped posting some notices publicly.)</p>
+      <p>Even innocent-seeming acquisitions can belie repressive aims. In 2022, one district-level UFWD in Tibet sought oxygen equipment for a local monastery. This purchase might appear ordinary, even compassionate, until one realizes the oxygen was meant for the “Temple Management Committee” dormitory. Throughout Tibet, state-mandated Temple Management Committees have set up shop inside monasteries and nunneries to better <a href="https://www.hrw.org/news/2018/01/25/china-new-controls-tibetan-monastery" target="_blank">monitor and control</a> religious activity. They are often <a href="https://www.hrw.org/report/2021/07/06/prosecute-them-awesome-power/chinas-crackdown-tengdro-monastery-and-restrictions" target="_blank">staffed by</a> cadres from elsewhere in China who are physically unprepared for the notoriously thin air on the Tibetan plateau—hence the need for oxygen. One can imagine a newly-arrived cadre, reviewing the roster of monks now under his authority, wheezing uncomfortably into an oxygen mask.</p>
+      <p></p>
+      <div class="view view-photo-embed view-id-photo_embed view-display-id-panel_pane_2 visual-box view-dom-id-c8a1d5528923a792089ec52327e06d5d grid-8 photo-object">
+        <div class="views-field views-field-field-common-system-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/photo/system/bumper_mosque.png" title="UFWD Projects" class="colorbox" data-colorbox-gallery="gallery-node-54956-gbsZ-aHg1uE" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/assets/images/photo/system/bumper_mosque.png" width="2384" height="740" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div class="views-field views-field-field-common-system-credit">
+          <div class="field-content photo-credit img-credit">
+Ruguo Douyin account (left); Baidu Maps street view (right)
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption img-caption">
+            <p>The winter amusement park funded by a local United Front Work Department in Heilongjiang province (left) and a mosque in Jilin province that the UFWD sought to “rectify” (right).</p>
+          </div>
+        </div>
+      </div>
+      <p></p>
+      <p class="dropcap">Just how deeply the United Front Work Department truly influences Chinese society—beyond the many other Party and state organs with similar aims—is impossible to pin down. This is due to the largely intangible results of its work, a lack of publicly-available information, as well as a general dearth of recent research about united front work within mainland China. But, says the International Republican Institute’s Schrader, the importance of united front work tends to be underestimated. Speaking about the Chinese People’s Political Consultative Conference, the state counterpart to the Party’s United Front Work Department, Schrader quips that it “doesn’t really do a lot, practically speaking—but neither do country clubs, practically speaking. If it doesn’t matter, why is the <a href="https://english.news.cn/20230925/8b953ba0ead54a068954eb60f8fb1401/c.html" target="_blank">person that runs it</a> the fourth-most senior member of the Party?”</p>
+      <p>Perhaps united front work also remains unappreciated because, by definition, it is less likely to generate the kinds of <a href="https://www.aljazeera.com/news/2018/10/24/inside-chinas-internment-camps-tear-gas-tasers-and-textbooks" target="_blank">brutal</a> and <a href="https://theintercept.com/2021/01/29/china-uyghur-muslim-surveillance-police/" target="_blank">shocking</a> details that draw the attention of international observers. Party writing on united front work “highlights that this is the Party’s choice instead of violence,” says the German Marshall Fund’s Ohlberg. “Before you conquer somebody violently, you try the soft way. Only when that fails can you use harsher means.”</p>
+      <p>And yet, its relatively gentle tactics notwithstanding, the UFWD tacitly seeks a change in Chinese society that is all-encompassing and profound. The impact of this change may feel slight when it comes to how the UFWD relates to, say, an atheist Han businessman who lives a workaholic lifestyle in Shanghai. While the UFWD may target him as a member of the “non-public economy,” it views his identity (non-religious, Han, focused largely on economic rather than political or social concerns) as inherently more pro-CCP than a Tibetan, a Uyghur, or even a Han church-goer. The UFWD’s ambition—to align all citizens’ gods and traditions with the Party’s interests—implicitly aspires to sand away some of the natural human texture of Chinese society.</p>
+      <p>“You could say the United Front works (together with other Party organs) to create a massive CCP Theme Park of social life, devoid of any authenticity or spontaneous expression,” says Martin Hála, a sinologist with Charles University in Prague and founder of the China-focused website Sinopsis.cz. In a fully successful implementation of its program, “all social activity would be organized and directed by designated ‘mass organizations,’ ultimately controlled by the Party. There would be just the Party-state and the mass organizations masquerading as civil society. No other social activity allowed.”<span class="cube"></span></p>
+      <p><em>Vera Liu provided research for this article.</em></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2023-10-04</time>
+        <a href="https://nodebe4.github.io/oped2/2023-10-04/Then-Suddenly-It-Was-Gone/">
+          Then Suddenly It Was Gone
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-10-03</time>
+        <a href="https://nodebe4.github.io/oped2/2023-10-03/China-s-Foreclosed-Possibilities/">
+          China’s Foreclosed Possibilities
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-09-06</time>
+        <a href="https://nodebe4.github.io/oped2/2023-09-06/Three-Years-in,-Hong-Kong-s-National-Security-Law/">
+          Three Years in, Hong Kong’s National Security Law Has Entrenched a New Status Quo
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-08-17</time>
+        <a href="https://nodebe4.github.io/oped2/2023-08-17/What-s-Behind-the-Youth-Unemployment-Statistics-Be/">
+          What’s Behind the Youth Unemployment Statistics Beijing Just Decided to Stop Publishing?
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-09-22/CoolWallet-Pro-%E5%86%B7%E9%8C%A2%E5%8C%85%E9%96%8B%E7%AE%B1%E6%96%87/">
+            前一篇：CoolWallet Pro 冷錢包開箱文
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-10-03/China-s-Foreclosed-Possibilities/">
+            後一篇：China’s Foreclosed Possibilities
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-09-22/CoolWallet-Pro-%E5%86%B7%E9%8C%A2%E5%8C%85%E9%96%8B%E7%AE%B1%E6%96%87/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-10-03/China-s-Foreclosed-Possibilities/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-10-03/China-s-Foreclosed-Possibilities/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-09-06/Three-Years-in,-Hong-Kong-s-National-Security-Law/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-09-22/CoolWallet-Pro-%E5%86%B7%E9%8C%A2%E5%8C%85%E9%96%8B%E7%AE%B1%E6%96%87/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-10-03/China-s-Foreclosed-Possibilities/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-10-03/China-s-Foreclosed-Possibilities/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-09-06/Three-Years-in,-Hong-Kong-s-National-Security-Law/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

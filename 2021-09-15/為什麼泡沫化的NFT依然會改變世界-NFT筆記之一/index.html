@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>為什麼泡沫化的NFT依然會改變世界（NFT筆記之一） – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）
+——
+" />
+    <meta property="og:description" content="
+為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）" />
+    <meta property="twitter:title" content="為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40az%2F%25E7%2582%25BA%25E4%25BB%2580%25E9%25BA%25BC%25E6%25B3%25A1%25E6%25B2%25AB%25E5%258C%2596%25E7%259A%2584nft%25E4%25BE%259D%25E7%2584%25B6%25E6%259C%2583%25E6%2594%25B9%25E8%25AE%258A%25E4%25B8%2596%25E7%2595%258C-nft%25E7%25AD%2586%25E8%25A8%2598%25E4%25B9%258B%25E4%25B8%2580-bafyreiefxazlz4chhiey4pwzaq53ekmhziksuj2wnxsgx3osptpvistxgm" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@az/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B3%A1%E6%B2%AB%E5%8C%96%E7%9A%84nft%E4%BE%9D%E7%84%B6%E6%9C%83%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8C-nft%E7%AD%86%E8%A8%98%E4%B9%8B%E4%B8%80-bafyreiefxazlz4chhiey4pwzaq53ekmhziksuj2wnxsgx3osptpvistxgm" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@az/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B3%A1%E6%B2%AB%E5%8C%96%E7%9A%84nft%E4%BE%9D%E7%84%B6%E6%9C%83%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8C-nft%E7%AD%86%E8%A8%98%E4%B9%8B%E4%B8%80-bafyreiefxazlz4chhiey4pwzaq53ekmhziksuj2wnxsgx3osptpvistxgm&text=為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@az/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B3%A1%E6%B2%AB%E5%8C%96%E7%9A%84nft%E4%BE%9D%E7%84%B6%E6%9C%83%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8C-nft%E7%AD%86%E8%A8%98%E4%B9%8B%E4%B8%80-bafyreiefxazlz4chhiey4pwzaq53ekmhziksuj2wnxsgx3osptpvistxgm&title=為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@az/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B3%A1%E6%B2%AB%E5%8C%96%E7%9A%84nft%E4%BE%9D%E7%84%B6%E6%9C%83%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8C-nft%E7%AD%86%E8%A8%98%E4%B9%8B%E4%B8%80-bafyreiefxazlz4chhiey4pwzaq53ekmhziksuj2wnxsgx3osptpvistxgm&title=為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）&body=
+為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@az/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B3%A1%E6%B2%AB%E5%8C%96%E7%9A%84nft%E4%BE%9D%E7%84%B6%E6%9C%83%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8C-nft%E7%AD%86%E8%A8%98%E4%B9%8B%E4%B8%80-bafyreiefxazlz4chhiey4pwzaq53ekmhziksuj2wnxsgx3osptpvistxgm" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@az/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B3%A1%E6%B2%AB%E5%8C%96%E7%9A%84nft%E4%BE%9D%E7%84%B6%E6%9C%83%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8C-nft%E7%AD%86%E8%A8%98%E4%B9%8B%E4%B8%80-bafyreiefxazlz4chhiey4pwzaq53ekmhziksuj2wnxsgx3osptpvistxgm&title=為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）&caption=
+為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）&url=https://matters.news/@az/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B3%A1%E6%B2%AB%E5%8C%96%E7%9A%84nft%E4%BE%9D%E7%84%B6%E6%9C%83%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8C-nft%E7%AD%86%E8%A8%98%E4%B9%8B%E4%B8%80-bafyreiefxazlz4chhiey4pwzaq53ekmhziksuj2wnxsgx3osptpvistxgm" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-09-15
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 張潔平</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@az/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B3%A1%E6%B2%AB%E5%8C%96%E7%9A%84nft%E4%BE%9D%E7%84%B6%E6%9C%83%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8C-nft%E7%AD%86%E8%A8%98%E4%B9%8B%E4%B8%80-bafyreiefxazlz4chhiey4pwzaq53ekmhziksuj2wnxsgx3osptpvistxgm" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1631756099000-->
+<p><a href="https://matters.news/@az/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B3%A1%E6%B2%AB%E5%8C%96%E7%9A%84nft%E4%BE%9D%E7%84%B6%E6%9C%83%E6%94%B9%E8%AE%8A%E4%B8%96%E7%95%8C-nft%E7%AD%86%E8%A8%98%E4%B9%8B%E4%B8%80-bafyreiefxazlz4chhiey4pwzaq53ekmhziksuj2wnxsgx3osptpvistxgm">為什麼泡沫化的NFT依然會改變世界（NFT筆記之一）</a>
+——</p>
+
+<div>
+  <p>NFT的火爆，曾被媒體形容為是疫情晚期奇怪的標誌性時尚。今年以來，這三個字母越來越多地進入普通人視野，從藝術圈、遊戲圈、娛樂文創圈到媒體圈⋯⋯當然還有技術圈、區塊鏈圈和名聲不好的炒幣圈，人人都開始談論NFT，談論著誰的NFT又賣了離譜的天價，還能把什麼東西NFT化，又或是誰的NFT涉嫌侵權，賺了大錢那算誰的。</p>
+  <p>在加密貨幣的整體熊市裡，NFT一枝獨秀，今年截至7月的銷售額已經超過 25 億美元，而 2020 年上半年，這個數字僅為 1370 萬美元。 </p>
+  <p>NFT肯定存在泡沫。這數十億百億的銷售與投資中，許多有可能暴跌至零點。但這並不妨礙一個事實：NFT不會死亡，它會刺激新經濟的增長，也會深刻改變互聯網的價值規範。</p>
+  <p>為什麼這樣說？NFT是什麼？它有什麼特性能承載「定義規範」這樣的使命？在諸多新的數學規範和技術裡，為什麼僅有 4 年歷史的NFT有最具擴展性的商業潛力？本文嘗試梳理這些問題，也在梳理的過程中，與讀者一起積累我們審視數字世界的全新視角。</p>
+  <p><strong>NFT：數字世界的一張空白支票</strong></p>
+  <p>NFT是Non-Fungible Token的英文縮寫，直譯為不可替代性代幣、非同質化通證。從名稱可以看出，它是相對於Fungible Token（FT、同質化通證）來說的。</p>
+  <p>我們熟知的比特幣、以太幣等數字貨幣，都是同質化通證，當然美元也是，意思是，只要幣值相同，每一個比特幣都是一樣的，可以互換替代，亦可分割成較小的單位。NFT和比特幣一樣，也是架構在區塊鏈上的價值體系，但不同的是，每一個 NFT 具有一串唯一的 ID，不可互換，不可分割，同時，它還包含一個可以填入任何「內容」的字段。</p>
+  <p>也就是說，NFT像是具有自描述能力的一張白紙——就像一個媒介、一張支票，空白處可以填入你想要填的任何內容。因為支票有獨一無二的編碼，所以無需經過人手的查驗、繁複的信任機制驗證，銀行系統之間完全可以自動讀解、辨認。這種特性，使得NFT成為一個數字資產容器，可以以去中心化的形式，標記原生的數字資產所有權。</p>
+  <p>這種數字資產，包括了最常見的各種類型的「數字內容」，比如現在大家看到的大量NFT藝術品、影像內容、科研論文。也包括更立體的元宇宙內容，比如遊戲裡的裝備、土地證、房地產、點數卡。作為一張白紙，它其實還可以填入任何東西，比如一行If This Then That的條件指令，利用智能合約機制，在條件滿足時自動化地執行指令，常被應用於資產轉移、資產分潤等等。這也是大量藝術品NFT交易的使用場景：當買家收藏某藝術品NFT時，藝術家可以提前在NFT中約定，買家每一次轉手，後續轉售的 X%歸藝術家，自動轉到藝術家的區塊鏈錢包。智能合約自動處理這些操作，無需中間人參與或引入延遲。</p>
+  <p><strong>看得懂的NFT案例</strong></p>
+  <p>最近半年，有一些有趣的NFT案例，幫我們理解、也不斷拓寬「NFT可以幹什麼」的想像邊界：</p>
+  <p>最經典的應用場景，當然是亙古有之的藝術收藏。如果說總交易量已經衝破3億美金的CryptoPunks（就是那些解析度很低、價錢很高的小人頭像）令普通人感到迷之困惑，下面這個例子應該比較容易理解：7月16日，藝術家蔡國強的首個NFT項目《瞬間的永恆——101個火藥畫的引爆》，48小時之內，在平台上經歷NFT藏家們的激烈競逐，尤其最後一小時在3個買家的輪番瘋狂抬價之下，拍賣出250萬美金的收藏成交價。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/89b1ddc7-9ae8-4a8d-9716-10ff5b5fab58.jpeg" data-asset-id="89b1ddc7-9ae8-4a8d-9716-10ff5b5fab58" referrerpolicy="no-referrer" />    <figcaption>
+<span>cryptopunks</span>
+    </figcaption>
+  </figure>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/348b7b98-686d-49c8-a6ff-3d0117b54a91.jpeg" data-asset-id="348b7b98-686d-49c8-a6ff-3d0117b54a91" referrerpolicy="no-referrer" />    <figcaption>
+<span>蔡國強，瞬間的永恆——101個火藥畫的引爆</span>
+    </figcaption>
+  </figure>
+  <p>表面上看，NFT藝術品的收藏和傳統藝術品的收藏，差異似乎只是從線下搬到線上而已。但回溯蔡國強作品拍賣這個過程，還有一些可能對藝術市場帶來根本改變的不同：</p>
+  <p>1. 競拍、交易全過程的數據透明，哪一個買家（地址），曾出過什麼價錢，在什麼價位買下，未來某天又在什麼價錢賣出，這些數據都寫在區塊鏈上，公開透明，無法刪改。可以想見，當市場活動累積，儘管加密貨幣錢包的匿名性極強（你並不會知道ID背後的真人是誰），但每一個ID的每一個交易行為都被記錄、公開，就意味著所有人的收藏/投資信用記錄都可以累積，也會成為新入場者選擇自己投資/收藏標的物的公開信息依據之一。</p>
+  <p>2. 藝術家與藏家之間的交易分潤，包括此後任何一次轉手，都可以按比例分潤給藝術家——這些動作都由智能合約自動執行，確實免除了相當大的中間人成本。</p>
+  <p>3. 人人都是藏家。與進入傳統藝術拍賣與收藏市場的高門檻不同，NFT是一個民主化了的藝術市場，只要有一個區塊鏈錢包，人人都可隨時參與NFT交易。買不起蔡國強的250萬美元作品，NFT市場上還有無數從幾美元到幾十、幾百美元的內容資產可供收藏。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/919adccb-dd6e-4cb5-afd3-36dd5de7b261.jpeg" data-asset-id="919adccb-dd6e-4cb5-afd3-36dd5de7b261" referrerpolicy="no-referrer" />    <figcaption>
+<span>OpenSea</span>
+    </figcaption>
+  </figure>
+  <p><strong>重新定義所有權，重新定義收藏</strong></p>
+  <p>在這個過程裡，我儘量不用「購買」這個詞，而用「收藏」。</p>
+  <p>當有人說，他購買了某個數字內容的NFT，並不是意味着讓其他人無法閱讀它，而是通過區塊鏈的標記，向所有人公示，購買者花了真金白銀，「收藏」了該數字資產。</p>
+  <p>這其實是過去的互聯網不容易實現的一種商業模式：可以標記所有權，卻不壟斷流通性。可以繼續流通，卻可得到利益回報。</p>
+  <p>傳統互聯網的基礎設計，決定了在其中發布的內容在數據結構上是同質的，沒有獨一無二的ID。因此，整個價值互聯網萬泉歸一，如同大江大海，內容生產者要麼任其免費流動，依靠流經自己作品的注意力換取廣告收入，或是用各種不成比例的防範工具去做一些有限的攔截：在文字裡署名、在照片上打碼、禁止copy&amp;paste、設立付費牆。但基礎如此，很簡單的技術就可以批量破解攔截，這也讓傳統互聯網的收費機制始終非常彆扭。</p>
+  <p>而在以區塊鏈為基礎設計、有NFT做標記、有數字貨幣運行的世界，就彷彿同質的大江大海裂解成無數裝水的瓶子——瓶子可以無限分割，小到你肉眼看不出來。但每個瓶子都有標籤可以自我描述，不管流到哪裡，都知道從哪裡來、流經何處、誰擁有你。這個最基礎的改變，會帶來很多根本的變化，其中之一，就是新的商業模式——比如收藏。</p>
+  <p>收藏一個NFT的動作，雖然體驗可能很像你在電商平台購物，但本質不同。它更像是給一顆小行星命名，小行星的某個屬性從此屬於你，但它並不會從價值的星空裡消失。</p>
+  <p>傳統世界，每個物件本身就獨一無二，收藏就等於獨佔所有權。傳統互聯網世界，數字原生物件失去了獨一無二性，複製成本為零，無法在互聯網世界的內在邏輯中主張所有權，收藏幾乎失去意義。而在區塊鏈和NFT的世界，數字原生物件恢復了（每一個版本的）獨一無二性，但同時也保留了可複製性。在區塊鏈世界，可以主張數字物件的所有權，而且「所有權」有了新的定義邊界。在這時，收藏，更像一種「指認」而非「擁有」。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/46208f82-10e0-4484-84dd-6f83f1a218a8.jpeg" data-asset-id="46208f82-10e0-4484-84dd-6f83f1a218a8" referrerpolicy="no-referrer" />    <figcaption>
+<span>《小王子》日文版影片</span>
+    </figcaption>
+  </figure>
+  <p>正因為出現了人與數字內容之間新的所有權關係，新的商業模式也有了巨大的想像空間。</p>
+  <p>當收藏（主張所有權）與流通（繼續開放共享）並不矛盾時，許多在傳統互聯網破解不了的難題，在理論上迎刃而解。這種商業模式，尤其給難以以排他方式販售的公共品（public goods）帶來了多元價值回報的可能。</p>
+  <p>比如以下幾個例子：</p>
+  <p>獨立音樂。獨立樂隊The Kings of Leon 發行了一張包含三種代幣類型的 NFT 專輯，其中一種為所有者提供了該樂隊未來演出現場的「終身前排座位」。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/3ead6c0f-755e-476b-88be-881fdc5e87c8.png" data-asset-id="3ead6c0f-755e-476b-88be-881fdc5e87c8" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>新聞。有41年歷史的CNN宣布會精選一系列典藏的新聞事件，透過區塊鏈發行 NFT，稱之為「Moment」進行銷售。但這些收藏行為，並不會令這些重要新聞事件的記錄從公眾眼前消失。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/cece2de2-4704-47b5-aee7-76ccc0c29f3e.png" data-asset-id="cece2de2-4704-47b5-aee7-76ccc0c29f3e" referrerpolicy="no-referrer" />    <figcaption>
+<span></span>
+    </figcaption>
+  </figure>
+  <p>代碼。發明萬維網（www）的互聯網之父 Tim Berners-Lee，6月23日透過蘇富比拍賣行，以NFT形式拍賣了他在1990至1991年間，所撰寫的9,555行 www 原始代碼，7天之內，以超過540萬美元成交。有趣的是，他此前一直拒絕為 www 的發明申請專利，為的就是讓所有人都可以自由地使用萬維網，不受專利所規定的權利所限。但此次他可以既拍賣原始代碼，推動代碼的收藏，同時，並沒有任何人需要為了使用萬維網而開始花錢。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/609fdc72-3088-4e37-a338-9cc94870e407.jpeg" data-asset-id="609fdc72-3088-4e37-a338-9cc94870e407" referrerpolicy="no-referrer" />    <figcaption>
+<span> Tim Berners-Lee和他的www原始代碼</span>
+    </figcaption>
+  </figure>
+  <p><strong>盲人摸象的新世界，繼續摸下去</strong></p>
+  <p>我們說，許多在傳統互聯網破解不了的難題，在重新定義、指認所有權之後，理論上可以迎刃而解。當然這是理論。現實中，這距離我們日常生活的習慣、觀念、慣性還相當遙遠，改變還會動搖傳統世界巨大的既得利益，並不可能一蹴而就。</p>
+  <p>但底層架構的變化，從表面的一個一個應用、一個一個泡沫體現出來，都是盲人摸象。只要這是真實的、足以改變世界的變化，沒有別的辦法，唯有繼續摸下去。</p>
+  <p>正如互聯網的先驅人物、也是Netscape、a16z的共同創始人馬克·安德森在訪談中所說：「有時我們會覺得所有激動人心的事都結束了，邊界已經關閉，我們走到了科技歷史的盡頭，除了維持現狀以外，無事可做。這不過是缺乏想象力罷了。事實恰恰相反。」</p>
+  <p>我們所說的「以區塊鏈為基礎設計、有NFT做標記、有數字貨幣運行的世界」，不算嚴謹地簡稱為 Web3 的世界，會給創作者、內容、社交帶來什麼樣的潛力？下面這張圖的意思，留待下一篇繼續寫。請多指教。</p>
+  <figure class="image">
+<img src="https://assets.matters.news/embed/4d16a683-eae9-4e36-a73e-76007c1b5e31.png" data-asset-id="4d16a683-eae9-4e36-a73e-76007c1b5e31" referrerpolicy="no-referrer" />    <figcaption>
+<span>從Web1到Web3的世界</span>
+    </figcaption>
+  </figure>
+  <p><br /></p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2023-04-04/%E7%AA%B8%E7%AA%B8-%E7%AA%A3%E7%AA%A3/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2018-10-29/%E5%88%9D%E5%85%A5%E4%BA%BA%E9%A1%9E%E5%AD%B8%E7%9A%84%E6%96%B0%E8%81%9E%E5%AD%B8%E5%BE%92%E8%A9%B2%E5%A6%82%E4%BD%95%E9%81%A9%E6%87%89%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%B8%E7%A7%91%E5%80%AB%E7%90%86/">最早</a>--</span>
+    
+      <li>
+        <time>2022-10-12</time>
+        <a href="https://nodebe4.github.io/oped2/2022-10-12/%E9%80%83%E9%81%BF%E7%B5%B1%E6%B2%BB%E7%9A%84%E8%97%9D%E8%A1%93-%E5%A4%A7%E7%90%86%E7%9A%84%E6%95%B8%E4%BD%8D%E9%81%8A%E6%B0%91%E8%81%9A%E8%90%BD/">
+          逃避統治的藝術——大理的數位遊民聚落
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-02-07</time>
+        <a href="https://nodebe4.github.io/oped2/2022-02-07/%E5%AF%AB%E7%B5%A6%E9%A6%AC%E7%89%B9%E5%B8%82%E6%B0%91-2021%E8%AC%9D%E8%AC%9D%E4%BD%A0%E4%B8%80%E5%90%8C%E6%8E%A2%E9%9A%AA-2022-Web3-Matters/">
+          寫給馬特市民：2021謝謝你一同探險，2022 Web3 Matters
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-03</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-03/%E9%A3%9F%E8%BE%B2%E8%88%87%E9%84%89%E6%84%81-%E5%A5%B9%E5%80%91%E4%B8%8D%E4%B8%80%E6%A8%A3%E7%9A%84%E5%8F%B0%E6%B8%AF%E9%80%A3%E7%B5%90/">
+          食農與鄉愁 她們不一樣的台港連結
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-06-30</time>
+        <a href="https://nodebe4.github.io/oped2/2021-06-30/%E5%8D%81%E7%AF%87%E5%A0%B1%E5%B0%8E%E5%91%8A%E8%A8%B4%E4%BD%A0-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A8%82%E9%96%B1%E7%AB%AF%E5%82%B3%E5%AA%92-%E5%B0%B1%E6%98%AF%E6%94%AF%E6%8C%81%E6%88%91%E7%9A%84%E5%AF%AB%E4%BD%9C/">
+          【 十篇報導告訴你，為什麼訂閱端傳媒，就是支持我的寫作】
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-15/%E4%BB%8E-%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD-%E5%88%B0-%E5%A4%B1%E6%8E%A7%E7%8E%A9%E5%AE%B6-%E8%99%9A%E6%8B%9F%E7%9A%84%E5%8F%8D%E6%8A%97-%E5%BE%80%E5%BE%80%E5%81%87%E4%BD%9C%E7%9C%9F%E6%97%B6%E7%9C%9F%E4%BA%A6%E5%81%87/">
+            前一篇：从《黑客帝国》到《失控玩家》：虚拟的反抗，往往假作真时真亦假
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-16/%E9%98%B2%E7%96%AB%E6%88%98%E5%A3%AB%E5%AF%B9%E6%88%98%E7%9B%91%E8%A7%86%E5%88%B6%E5%BA%A6-%E4%BB%96%E4%BB%AC%E8%B5%A2%E4%BA%86-iYouPort/">
+            後一篇：防疫战士对战监视制度：他们赢了 - iYouPort
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-09-15/%E4%BB%8E-%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD-%E5%88%B0-%E5%A4%B1%E6%8E%A7%E7%8E%A9%E5%AE%B6-%E8%99%9A%E6%8B%9F%E7%9A%84%E5%8F%8D%E6%8A%97-%E5%BE%80%E5%BE%80%E5%81%87%E4%BD%9C%E7%9C%9F%E6%97%B6%E7%9C%9F%E4%BA%A6%E5%81%87/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-09-16/%E9%98%B2%E7%96%AB%E6%88%98%E5%A3%AB%E5%AF%B9%E6%88%98%E7%9B%91%E8%A7%86%E5%88%B6%E5%BA%A6-%E4%BB%96%E4%BB%AC%E8%B5%A2%E4%BA%86-iYouPort/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-02-07/%E5%AF%AB%E7%B5%A6%E9%A6%AC%E7%89%B9%E5%B8%82%E6%B0%91-2021%E8%AC%9D%E8%AC%9D%E4%BD%A0%E4%B8%80%E5%90%8C%E6%8E%A2%E9%9A%AA-2022-Web3-Matters/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-07-03/%E9%A3%9F%E8%BE%B2%E8%88%87%E9%84%89%E6%84%81-%E5%A5%B9%E5%80%91%E4%B8%8D%E4%B8%80%E6%A8%A3%E7%9A%84%E5%8F%B0%E6%B8%AF%E9%80%A3%E7%B5%90/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-09-15/%E4%BB%8E-%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD-%E5%88%B0-%E5%A4%B1%E6%8E%A7%E7%8E%A9%E5%AE%B6-%E8%99%9A%E6%8B%9F%E7%9A%84%E5%8F%8D%E6%8A%97-%E5%BE%80%E5%BE%80%E5%81%87%E4%BD%9C%E7%9C%9F%E6%97%B6%E7%9C%9F%E4%BA%A6%E5%81%87/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-09-16/%E9%98%B2%E7%96%AB%E6%88%98%E5%A3%AB%E5%AF%B9%E6%88%98%E7%9B%91%E8%A7%86%E5%88%B6%E5%BA%A6-%E4%BB%96%E4%BB%AC%E8%B5%A2%E4%BA%86-iYouPort/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-02-07/%E5%AF%AB%E7%B5%A6%E9%A6%AC%E7%89%B9%E5%B8%82%E6%B0%91-2021%E8%AC%9D%E8%AC%9D%E4%BD%A0%E4%B8%80%E5%90%8C%E6%8E%A2%E9%9A%AA-2022-Web3-Matters/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-07-03/%E9%A3%9F%E8%BE%B2%E8%88%87%E9%84%89%E6%84%81-%E5%A5%B9%E5%80%91%E4%B8%8D%E4%B8%80%E6%A8%A3%E7%9A%84%E5%8F%B0%E6%B8%AF%E9%80%A3%E7%B5%90/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

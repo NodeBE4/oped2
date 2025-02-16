@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>2024 年 5 月首爾四天三夜旅遊心得 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+2024 年 5 月首爾四天三夜旅遊心得
+——
+" />
+    <meta property="og:description" content="
+2024 年 5 月首爾四天三夜旅遊心得
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="2024 年 5 月首爾四天三夜旅遊心得" />
+    <meta property="twitter:title" content="2024 年 5 月首爾四天三夜旅遊心得" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2Fkorea-travel-2024-seoul-eac8f0314eb4%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/korea-travel-2024-seoul-eac8f0314eb4?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/korea-travel-2024-seoul-eac8f0314eb4?source=rss-f1fb3e40dc37------2&text=2024 年 5 月首爾四天三夜旅遊心得&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/korea-travel-2024-seoul-eac8f0314eb4?source=rss-f1fb3e40dc37------2&title=2024 年 5 月首爾四天三夜旅遊心得" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/korea-travel-2024-seoul-eac8f0314eb4?source=rss-f1fb3e40dc37------2&title=2024 年 5 月首爾四天三夜旅遊心得" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=2024 年 5 月首爾四天三夜旅遊心得&body=
+2024 年 5 月首爾四天三夜旅遊心得
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/korea-travel-2024-seoul-eac8f0314eb4?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/korea-travel-2024-seoul-eac8f0314eb4?source=rss-f1fb3e40dc37------2&title=2024 年 5 月首爾四天三夜旅遊心得&caption=
+2024 年 5 月首爾四天三夜旅遊心得
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=2024 年 5 月首爾四天三夜旅遊心得&url=https://hulitw.medium.com/korea-travel-2024-seoul-eac8f0314eb4?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>2024 年 5 月首爾四天三夜旅遊心得</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-05-11
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/korea-travel-2024-seoul-eac8f0314eb4?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1715470958000-->
+<p><a href="https://hulitw.medium.com/korea-travel-2024-seoul-eac8f0314eb4?source=rss-f1fb3e40dc37------2">2024 年 5 月首爾四天三夜旅遊心得</a>
+——</p>
+
+<div>
+  <p>來日本工作半年之後，迎來了日本的黃金週，只要請三天假就可以放滿十天，不過老實說這麼長的假期也不知道要到哪裡玩，於是我在請假之前先查了一下機票，看看從東京出發可以去哪裡。</p>
+  <p>由於不想去太遠的地方，因此選擇其實滿少的，最近的就是韓國，再來應該是台灣，就沒了。其他地方像是夏威夷也要 9 個小時，東南亞的話如泰國也要 6 個半小時，中國的話因為台胞證過期很久了，就沒有列入旅遊清單中。</p>
+  <p>本來想說那就在日本玩就好，或乾脆就待在家吧，但在查機票的時候突然發現在黃金週中段（需要請假那幾天）有便宜的商務艙機票，猶豫一天之後就刷下去了，才有了這次的旅遊心得。</p>
+  <p>那到底多便宜呢？</p>
+  <p>韓亞航空商務艙，東京首爾來回，一個人才 16000 台幣而已，雖然說只是兩個多小時的短程航班，但這個價格我還是覺得滿值得的。底下一樣分天流水帳記錄一下去了哪裡，又吃了什麼。</p>
+  <h3 id="day1-bhc">Day1：弘大住宿以及 BHC 炸雞</h3>
+  <p>這次是搭 OZ101，下午一點半的飛機，大約四點到仁川機場，話說成田機場真的是頗遠，從我家出發至少要一個半小時才能到，所以儘管是一點半的飛機，也是大約九點十點就要出門了（我不喜歡太趕）。</p>
+  <p>到機場之後發現人潮比預期中的還少，可能是在黃金週中段（4/30）才出國的人不多吧？更多應該是早就出國了，或是還沒出國，也看到新聞說這次黃金週似乎請假的人不多。</p>
+  <p>出境之後第一件事情就是去貴賓室，由於韓亞航空是星空聯盟的，所以去的是成田一航廈的 ANA 貴賓室，人也是不多，雖然貴賓室很大但是食物只開了一區，另外一區是空的。熟食的部分就炸雞跟咖哩飯，以及可以單點的烏龍麵或是蕎麥麵等等。</p>
+  <p>不過我還是覺得選擇有點太少，因此稍微吃了一點之後就先離開了（話說炸雞味道不錯，但也就只有炸雞）。</p>
+  <p>離開之後去哪呢？去另外一個也在成田一航廈的聯合航空 UA 貴賓室，一進去之後就覺得很寬敞很大，雖然人也不多，但熟食還是開了兩區，而且選擇更多，最重要的是有水果區！去過這兩個貴賓室之後，覺得 UA 更勝一籌，之後再來的話去 ANA 吃個炸雞以後就可以到 UA 吃飯休息了。</p>
+  <p>這次飛首爾的機型是 A380–800，在買機票的時候我有先查過機型，後來想想覺得這確實滿重要的，雖然說都是商務艙，但是機型差很多。</p>
+  <p>例如說這次搭的 A380–800 是雙層的飛機，商務艙空間滿大的，就會覺得這錢花的值得，這次沒拍座位，底下借<a href="https://m.flyasiana.com/C/HK/ZH/contents/a380-800">韓亞航空</a>網站的照片來用：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/960/0*nwoV10EAlBInJ8uS.jpg" />    <figcaption>
+A380 商務艙
+    </figcaption>
+  </figure>
+  <p>而回程是 A330–300，同樣是商務艙但就差很多：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/960/0*wJIBzGu-1wPF0XmG.jpg" />    <figcaption>
+A330 商務艙
+    </figcaption>
+  </figure>
+  <p>餐點的話有兩種可以選，西式跟韓式，西式的話長這樣，主餐是雞肉，我滿喜歡的：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*iI3xxX9maB5swyLx.jpg" />    <figcaption>
+真的滿好吃的
+    </figcaption>
+  </figure>
+  <p>韓式的話是拌飯，我覺得味道也滿不錯的，只是醬汁有點辣而已（可以自己決定要拌多少就是了）：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*pvoqNo8oVzX-58BH.jpg" />    <figcaption>
+味道不錯但有點辣
+    </figcaption>
+  </figure>
+  <p>抵達機場之後入境沒有排太久，大概十五分鐘左右而已，拿完行李之後就直接去搭機場快線 AREX 了。在搭之前從車站旁的販賣機買了韓國交通卡 Tmoney，一張 5000 韓幣，話說這邊買會比去便利商店買還貴，但因為懶惰省時間，就直接在販賣機買了。</p>
+  <p>從機場到弘大大約也要將近一個小時，到車站之後再走個 10 分鐘左右前往飯店，到的時候差不多晚上 6 點。這次的住宿是 <a href="https://maps.app.goo.gl/k8udQW5FosCiPWpb8">Amanti Seoul Hotel</a>，三個晚上合計約 16000 台幣，一個晚上要 5000 多。</p>
+  <p>話說我訂完機票之後查住宿感覺選擇滿多，但那時候拖延症發作懶得訂，隔了幾週之後再查發現幾乎沒什麼選擇了，而且價格貴了不少，看來這種事情真的不能拖，趕快下訂比較實在。</p>
+  <p>住宿的話我覺得就普普通通吧，雖然說 Google Maps 上面寫四星級，但我自己是感受不到，而且房間燈光滿昏暗的，真的不像有這個等級。但地點的話是滿方便的，離弘大商圈走路大約五分鐘左右而已。附近其實有幾間更方便的，但我查過價錢也更貴，三個晚上要 22000 以上，下不了手。</p>
+  <p>在房間裡面短暫休息之後，就前往第一站：BHC 炸雞。</p>
+  <p>這間是看 <a href="https://youtu.be/lN70r3a32Q0?si=SjTCrtWTyf-Bk_Vd&amp;t=683">YouTuber</a> 推薦的，也點了他推薦的口味，先來上個圖：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*ci-JccKumFJmSMw0.jpg" />    <figcaption>
+真香
+    </figcaption>
+  </figure>
+  <p>味道確實是不錯，不過吃完的心得是兩個人吃還是有點太多了，而且吃到最後面有點膩。價格的話炸雞搭配兩罐飲料是 30000 韓元，台幣 715 塊，滿能接受的。</p>
+  <p>吃完炸雞之後就到弘大商圈逛逛，逛完就回去睡覺了。</p>
+  <h3 id="day2">Day2：樂天世界塔以及寶可夢</h3>
+  <p>我太太一直以來都對韓國沒什麼興趣，這次的首爾之旅也是一樣，但很剛好地在去之前幾天，公佈了寶可夢要在首爾開快閃店的消息：<a href="https://holiday.presslogic.com/article/418701/pokemon%E5%B0%8F%E9%8E%AE-%E9%A6%96%E7%88%BE%E6%A8%82%E5%A4%A9-%E6%AF%94%E5%8D%A1%E8%B6%85%E3%80%81%E8%83%8C%E8%83%8C%E9%BE%8D%E3%80%81%E6%B4%BB%E5%8B%95%E8%A9%B3%E6%83%85">「Pokémon小鎮」登陸韓國首爾樂天！打卡巨型背背龍、必買比卡超樂天塔超萌公仔！</a>，於是她突然變得很期待首爾之旅。</p>
+  <p>這次去首爾的最主要目的其實是我想搭便宜的商務艙以及來韓國吃吃東西，所以本來就沒有安排什麼景點，行程很隨意，因此第二天就來樂天世界塔看寶可夢。商店跟戶外的園區都是十點半才開，我們差不多將近 11 點到，戶外園區已經排了一圈了。</p>
+  <p>看到這個人潮我才想到那天是 5/1 勞動節，韓國放假，難怪人這麼多。</p>
+  <p>排了大概半小時左右順利進去，不過很多活動都是下午才開始，因此早上就只是進去拍拍照而已：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/960/0*aHuwjXUcNuzrv-Zs.jpg" />
+  </figure>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*xjH-KxhAc3mfLuK1.jpg" />
+  </figure>
+  <p>晃了一圈之後就進去室內，排隊方式的話是放了兩台平板，在上面輸入電話就會拿到號碼，而像我們這種沒有韓國電話的外國人就要直接跟工作人員說，就會拿到別的卡片，上面寫著入場時間。我們是 12 點左右排到的，拿到的入場時間是下午 3 點。</p>
+  <p>後來就隨便找個地方吃飯，點了豆腐鍋跟全州拌飯，花了 32000 韓幣，折合台幣 760 塊。吃完飯之後繼續在百貨公司內晃來晃去，一直晃到 3 點進場。</p>
+  <p>不知道是主辦單位太小看寶可夢的威力，還是租不到更大的場地，整個空間我覺得都有點太小：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/960/0*uhjUzgqakXzMm64h.jpg" />
+  </figure>
+  <p>照片拍到的差不多就是全部了，上半部人很多那邊是結帳區，然後左邊那個卡比獸後面還有一小區可以逛，整體空間不大，而且人超級多，動線規劃的也不是很好。更可惜的是樂天世界塔限定的那幾隻還沒開賣，然後先開賣的一些商品似乎也賣完了，因此其實沒什麼可以買。</p>
+  <p>我買了一隻這個我覺得很可愛：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*oyChjjSBh7B6ELU_.jpg" />
+  </figure>
+  <p>逛完之後就回飯店休息一下，晚上出來吃飯，本來想吃之前看好的一間烤肉，到了店門口發現要排隊，於是就隨便吃了附近的另一間韓式烤肉的餐廳，點了兩份肉外加兩碗白飯，吃了 71000 韓幣，約台幣 1700 塊，肉不錯但價格似乎小貴。</p>
+  <p>吃完之後繼續去弘大找尋街頭表演，話說這次會住弘大是因為我第一次來首爾的時候就被弘大吸引住了，跳舞的街頭表演很有活力，以前都是在家看 YouTube 上的舞蹈 cover 或是 random dance 之類的，但在現場看感受完全不同，很讚。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*XVulpqS3EMq8cXwY.jpg" />
+  </figure>
+  <h3 id="day3--t1--">Day3：弘大申美京辣炒雞排 + T1 網咖 + 汝矣島現代百貨</h3>
+  <p>這天中午去吃了有名的<a href="https://maps.app.goo.gl/sDnT5fNcUsJ2igko6">弘大申美京辣炒雞排</a>，十一點多到的，店裡空無一人。除了主菜之外還點了一碗白飯來分，因為主菜真的是滿下飯的。</p>
+  <p>吃完之後的感想是味道不錯但似乎有點太重口味，有點承受不住，另一個感想是我跟太太一致認同店員很帥。價格是 33000 韓幣，折合台幣 785 元。</p>
+  <p>接著下一個行程是就在弘大的 T1 網咖，一進門就可以看到五個人的立牌：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*nAuCnCg9nIU_snWo.jpg" />
+  </figure>
+  <p>還可以跟巨大版的 Faker 公仔合照：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*zm4WFNPwIZf38B9_.jpg" />
+  </figure>
+  <p>網咖的部分我就沒嘗試了，只是來這邊逛逛拍拍照而已：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*kXNavOEOb1nQg7Si.jpg" />
+  </figure>
+  <p>朝聖完 T1 網咖以後，就前往汝矣島現代百貨。來這邊純粹只是因為不知道要幹嘛，所以找個地方晃晃而已。在那邊其實也沒特別做什麼，就走著走著休息坐下來看漫畫，喝個藍瓶咖啡邊看漫畫，回家的時候也是邊搭車邊看漫畫。最近剛好迷上韓國漫畫，用 LINE WEBTOON 看著正版的漫畫（有些免費有些要課金，通常是看到後面要課金，我課了大概一千多），很多其實滿好看的，停不下來。</p>
+  <p>在那邊晃到下午四點就搭車回飯店了，回去之後開始繼續看漫畫，看到晚上快八點才出門覓食。話說韓國的天超晚才黑，在日本我七點下班天一定是黑的，但是在韓國就算七點半了都還沒黑。</p>
+  <p>因為我太太說想吃韓國版的松屋（平價連鎖餐廳），因此這天吃的是平價美食 ssada gimbab，點了一個紫菜飯捲跟泡麵還有一罐飲料，才 12500 韓幣而已，300 塊台幣，確實是滿平價的，味道也不錯，但就是泡麵有點太辣了。</p>
+  <p>吃完之後依照慣例去弘大晃晃，跟前幾天都是至少兩人或更多人的表演者不同，這次是一個人獨挑大樑：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*kTWFDDE59uTJLCIg.jpg" />
+  </figure>
+  <p>查了一下 IG 跟 YouTube，發現 YouTube 上面有 40 萬的訂閱，真的厲害，是一個日本女生但是在韓國發展，當天的表演還有直播紀錄：<a href="https://www.youtube.com/watch?v=VbXTixTyP-Q&amp;ab_channel=YuKagawa%EC%B9%B4%EA%B0%80%EC%99%80%EC%9C%A0">https://www.youtube.com/watch?v=VbXTixTyP-Q&amp;ab_channel=YuKagawa%EC%B9%B4%EA%B0%80%EC%99%80%EC%9C%A0</a></p>
+  <h3 id="day4">Day4：幸運壓線再訪寶可夢</h3>
+  <p>這天要回東京的飛機是下午 3 點半飛，因此下午 1 點半要到機場，等於 12 點左右要出發。原本想說在飯店待到差不多的時間退房然後去機場，但是在前一天晚上接到了一個新消息。</p>
+  <p>那就是之前說還沒開賣的世界塔限定娃娃要開賣啦！算一算時間覺得應該來得及，於是事先規劃了一番。</p>
+  <p>我太太早上先去排隊，如果人很多就放棄回飯店，人不多就繼續排隊，而我繼續在飯店睡覺，睡到 9 點多再帶著行李搭車過去會合（商店 10:30 才開）。</p>
+  <p>寶可夢狂粉如我太太，早上 6 點就出門去排隊了，大概 7 點到，拿到 16 號，順利搶到第一批進去，而我也按照原定計畫退房之後帶著行李過去會合，順利在 10:30 左右進入商店。</p>
+  <p>話說在日本這種限定商品一定都有限購，每人限購一隻之類的，但是在韓國場卻發現完全沒有類似的公告，拿著翻譯去問工作人員，他跟我說：no limit，還真的沒有限購，傻眼。於是我只能幫後面進場的人默哀，可能所有娃娃都在前三批就被拿光了，後面的人完全看不到。</p>
+  <p>雖然不知道會不會補貨就是了，但根據前兩天去的情形，很有可能不會補。不過活動會到五月底左右，真的不補的話好像有點誇張？之後再繼續觀望一下。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*OcMZeJIlz1S8h5CF.jpg" />
+  </figure>
+  <p>總之呢，照著計畫買了一些東西就跑去附近等機場巴士了，剛好附近有可以直達機場的巴士，而且可以用信用卡在車上付款，很方便，到機場的時候才 12:30 而已，時間還綽綽有餘。因為買太多東西行李箱裝不下，於是就在機場尋找裝箱服務，最左邊跟最右邊都有，買了一個中的箱子是 8000 韓幣，差不多 190 元台幣。</p>
+  <p>出境之後發現仁川機場一航廈有夠大，光是從最左邊走到最右邊大概就要個十分鐘了，東西很多，還有看到 riot 的特別專區，可以體驗玩遊戲也可以看到很多裝飾：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*De8oOQjs_59coUbj.jpg" />
+  </figure>
+  <p>貴賓室的話普普通通，東西沒有很多，而且也沒辦法點餐，就不特別寫了。</p>
+  <p>如同開頭講過，這次回日本是搭 A330–300，而且飛機是肉眼可見的舊，座位的螢幕是超級舊的那一種，餐點的部分一樣有西式跟韓式，味道一樣都很不錯：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*zDHEHGKi77BTRcsV.jpg" />
+  </figure>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*mi_RAg9jvt_fAawE.jpg" />
+  </figure>
+  <p>話說之前好像沒來過成田一航廈，比想像中小滿多的，但入境還是要排隊，這時候就發揮出在日本工作的優點了，憑著再入國許可直接越過重重人潮，花不到兩分鐘就入境了，感覺真好。</p>
+  <h3 id="section">總結</h3>
+  <p>先來算一下花費。</p>
+  <p>機票的話是 32000 台幣，住宿是 16000 台幣，光這兩樣就花了 48000 台幣。</p>
+  <p>吃的話是 4260 台幣，吃了五餐而已，平均一餐 850 塊，一個人是 425 元，似乎有點偏高，畢竟我也沒有覺得吃得特別好。</p>
+  <p>交通的話一個人大約是 32000 韓幣，折合台幣 760，兩個人就是 1520 元。</p>
+  <p>因此這整趟算下來的花費約 54000 元左右，一天 13500 元，一人天 6750 台幣，比起之前我統計過的<a href="https://life.huli.tw/2023/07/27/2023-july-korea-trip-seoul-92ba2d0608ff/#%E8%8A%B1%E8%B2%BB%E7%B8%BD%E7%B5%90">平均數字</a>一人天 4000~5000 來說貴上不少，主要還是住宿太貴的緣故。</p>
+  <p>這是我第四次去首爾了，感覺還是不錯的，不過開始漸漸意識到儘管有兩個人，有些東西分食還是不太夠，比較適合人多一點再來，不然吃東西會有點綁手綁腳的，因為份量都太多了。下次如果再去韓國，可能會選首爾釜山以外的地方，例如說大邱（雖然我也已經去過一次就是了），想吃吃看有名的巨松排骨。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=eac8f0314eb4" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2024-06-28</time>
+        <a href="https://nodebe4.github.io/oped2/2024-06-28/%E5%88%B0%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%80%8E%E9%BA%BC%E7%B9%B3%E7%A8%85-%E7%A8%85%E6%9C%89%E5%A4%9A%E9%87%8D-%E8%B7%9F%E5%8F%B0%E7%81%A3%E6%AF%94%E5%91%A2/">
+          到日本工作怎麼繳稅？稅有多重？跟台灣比呢？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-06-10</time>
+        <a href="https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+          2024 年日本家族滯在簽證申請心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-04-09</time>
+        <a href="https://nodebe4.github.io/oped2/2024-04-09/%E5%93%A9%E7%A8%8B%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%88%B7%E5%8D%A1%E7%B4%AF%E7%A9%8D%E5%93%A9%E7%A8%8B-%E7%9C%9F%E7%9A%84%E6%9C%89%E6%AF%94%E8%BC%83%E5%88%92%E7%AE%97%E5%97%8E/">
+          哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-03-03</time>
+        <a href="https://nodebe4.github.io/oped2/2024-03-03/%E6%97%A5%E6%9C%AC%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E8%96%AA%E6%B0%B4%E5%A6%82%E4%BD%95-%E5%88%B0%E5%BA%95%E5%80%BC%E4%B8%8D%E5%80%BC%E5%BE%97%E5%8E%BB/">
+          日本軟體工程師的薪水如何？到底值不值得去？
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2024-05-10/Why-the-African-Union-Stopped-the-Donkey-Hide-Trad/">
+            前一篇：Why the African Union Stopped the Donkey Hide Trade with China
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2024-05-13/Beijing-s-Culinary-Crusade-Erasing-Uyghur-Identit/">
+            後一篇：Beijing’s Culinary Crusade: Erasing Uyghur Identity through Food
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2024-05-10/Why-the-African-Union-Stopped-the-Donkey-Hide-Trad/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2024-05-13/Beijing-s-Culinary-Crusade-Erasing-Uyghur-Identit/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2024-04-09/%E5%93%A9%E7%A8%8B%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%88%B7%E5%8D%A1%E7%B4%AF%E7%A9%8D%E5%93%A9%E7%A8%8B-%E7%9C%9F%E7%9A%84%E6%9C%89%E6%AF%94%E8%BC%83%E5%88%92%E7%AE%97%E5%97%8E/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2024-05-10/Why-the-African-Union-Stopped-the-Donkey-Hide-Trad/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2024-05-13/Beijing-s-Culinary-Crusade-Erasing-Uyghur-Identit/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2024-04-09/%E5%93%A9%E7%A8%8B%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%88%B7%E5%8D%A1%E7%B4%AF%E7%A9%8D%E5%93%A9%E7%A8%8B-%E7%9C%9F%E7%9A%84%E6%9C%89%E6%AF%94%E8%BC%83%E5%88%92%E7%AE%97%E5%97%8E/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

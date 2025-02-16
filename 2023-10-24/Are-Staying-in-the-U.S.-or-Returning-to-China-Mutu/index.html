@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Are Staying in the U.S. or Returning to China Mutually Exclusive? – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Are Staying in the U.S. or Returning to China Mutually Exclusive?
+——
+" />
+    <meta property="og:description" content="
+Are Staying in the U.S. or Returning to China Mutually Exclusive?
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Are Staying in the U.S. or Returning to China Mutually Exclusive?" />
+    <meta property="twitter:title" content="Are Staying in the U.S. or Returning to China Mutually Exclusive?" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fare-staying-us-or-returning-china-mutually-exclusive" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/are-staying-us-or-returning-china-mutually-exclusive" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/are-staying-us-or-returning-china-mutually-exclusive&text=Are Staying in the U.S. or Returning to China Mutually Exclusive?&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/are-staying-us-or-returning-china-mutually-exclusive&title=Are Staying in the U.S. or Returning to China Mutually Exclusive?" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/are-staying-us-or-returning-china-mutually-exclusive&title=Are Staying in the U.S. or Returning to China Mutually Exclusive?" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Are Staying in the U.S. or Returning to China Mutually Exclusive?&body=
+Are Staying in the U.S. or Returning to China Mutually Exclusive?
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/are-staying-us-or-returning-china-mutually-exclusive" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/are-staying-us-or-returning-china-mutually-exclusive&title=Are Staying in the U.S. or Returning to China Mutually Exclusive?&caption=
+Are Staying in the U.S. or Returning to China Mutually Exclusive?
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Are Staying in the U.S. or Returning to China Mutually Exclusive?&url=https://www.chinafile.com/conversation/are-staying-us-or-returning-china-mutually-exclusive" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Are Staying in the U.S. or Returning to China Mutually Exclusive?</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-10-24
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Wendy Zhou, Zizhu Zhang &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/are-staying-us-or-returning-china-mutually-exclusive" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1698166860000-->
+<p><a href="https://www.chinafile.com/conversation/are-staying-us-or-returning-china-mutually-exclusive">Are Staying in the U.S. or Returning to China Mutually Exclusive?</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-a295806d333070b35201f6ddbb4e49dd">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54986_sm.jpg" title="Are Staying in the U.S. or Returning to China Mutually Exclusive?" class="colorbox" data-colorbox-gallery="gallery-node-54986-z6UjGMaYhbs" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54986_sm.jpg?itok=rcuOBkMV" width="1500" height="956" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Frederic J. Brown—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Students walk past an entrance to the University of Southern California in Los Angeles, April 11, 2012.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">The past several years have seen <a href="https://opendoorsdata.org/fact_sheets/china/" target="_blank" rel="nofollow">declines</a> in both the number of Chinese students studying in the U.S. and U.S. students studying China.</p>
+      <p>We asked Chinese students studying, or who have recently completed their studies, in the U.S. why they chose to go to school in America and how the tense relationship between the U.S. and China has affected their studies and post-graduation plans. —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-10501" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/wendy-zhou"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/wendy_zhou_sm.jpg?itok=5DwNIwc4" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="wendy-zhou"><a href="https://www.chinafile.com/contributors/wendy-zhou" title="Wendy Zhou">Wendy Zhou</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">As a self-defined “in-betweener,” the question of whether to stay in the U.S. always lingers. Longing for new experiences, I am constantly floating and transitioning: a media practitioner-turned-researcher, a Chinese student grappling with everyday immigrant barriers, and a soul from a northern industrial town who finds it challenging to return to or blend into first-tier cities and new lands. I once envisioned returning to a place close to home, like Hong Kong, or flying frequently between China and the U.S. However, the challenging pandemic restrictions and Sino-U.S. geopolitical deadlocks unexpectedly pushed me to transform my temporary diasporic “either-or” mentality into a decisive “yes-or-no” mode, compelling me to decide where to take root.</p>
+        <p>And yet, I remain open to both “yes” and “no” and think the two can still co-exist. For now, “yes” signifies my prioritization of opportunities in North America, my continued studies in media politics, and the cultivation of my sense of belonging by reflecting on and re-articulating my identity as “Asian.” I once spurned the “Asian” label and contested the racism-victim narrative, until the <a href="https://www.nytimes.com/live/2021/03/17/us/shooting-atlanta-acworth" target="_blank" rel="nofollow">2021 Atlanta spa shooting</a> occurred just a 10-minute drive from my then apartment. Along with several friends, I spent three months intensively advocating for <a href="https://www.instagram.com/asian4justice/?hl=en" target="_blank" rel="nofollow">anti-racism initiatives</a>, including promoting culturally inclusive and racially aware research and teaching practices. In school, at public events, and through news stories, I’ve become more sensitive to—and gained strength from—other marginalized groups, especially female leaders and thinkers. I was a newcomer to organizing. So my female friends, be they students or teachers, became my guides. They taught me to articulate racial awareness through speeches, to advocate for new educational proposals, and to carve out spaces for mental healing. As writer Cathy Park Hong aptly <a href="https://www.newyorker.com/books/under-review/minor-feelings-and-the-possibilities-of-asian-american-identity" target="_blank" rel="nofollow">puts it</a>, Asians in America occupy a “vague purgatorial status,” often seen as culturally distanced, silent, diligent rule-abiders. But now, we, or at least I, recognize that voicing our perspectives and taking action are essential for growth.</p>
+        <p>The other side of my answer, “no,” means that my unsettled identity of exodus remains vibrant. The growth of diasporic communities, especially among writers, inspires me to embrace being a diasporic Chinese—an identity-aware storyteller and intellectual. From this perspective, neither China nor the U.S. is my only and final destination. “China” can extend beyond a fixed point in time and space, transforming into an aching yet resilient practice of writing and thinking, rooted in my experiences as a sojourner. This view allows me to scrutinize some unavoidable memories of my family and the homeland. The China of the 1900s to 2000s is often depicted as an era of rapid growth and enhanced living standards. However, my recollections, anchored in a community of state-owned-factory workers, reveal another narrative: one of mass layoffs, fiscal challenges, and a clouded future. As a child, shadows of these tales haunted my dreams—fears my parents would lose their jobs and worries we would need to search for a new home elsewhere. China’s interaction with the world is multilayered and subtle, ranging from 5G and e-commerce to talent flow and TikTok songs. Each story takes on a different hue, depending on one’s perspective. China has evolved from its past self. While it remains a cornerstone of my emotional attachment and research interests, it’s not the exclusive benchmark for my opinions or stories. In essence, the Chinese identity harbors within me, encompassing a world far beyond borders.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10506" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/zizhu-zhang"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/zizhu_zhang_sm.jpg?itok=Gjg2MZit" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="zizhu-zhang"><a href="https://www.chinafile.com/contributors/zizhu-zhang" title="Zizhu Zhang">Zizhu Zhang</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">It has been 15 years since I first left China for college in the U.K. After I graduated, I was lucky enough to be offered a correspondent job and spent two and a half years in Nairobi, during which time I got to know many adventurous and ambitious young people who had lived and worked around the world. Although I enjoyed my international experience, every time I heard my American friends in Kenya saying that their dream was to go home and contribute to their local communities, I was envious because I didn’t have the confidence to say the same thing. Still, after some consideration, I returned to China a few years ago and continued to work in journalism until I decided to leave again for the U.S. in 2021. Disrupted access to information, ideological homogeneity, and the social pressure for material and marital stability I felt as a woman were the main things that persuaded me to leave.</p>
+        <p>Today, being Chinese and living in the U.S. is not easy. An outdated and inflexible immigration system has constrained many immigrants’ mobility and career flexibility, and dealing with the system and being subject to it brings anxiety. The tension between the U.S. and China has also narrowed my career options. During my graduate studies in New York, I hoped to find a journalist or research role focusing on China’s domestic and international affairs in the U.S., but such hopes have grown thinner as I have realized how difficult it is to access information on and from China nowadays. I do not expect the situation to improve significantly in the coming years, and so I am primarily pursuing work in the private sector now. I have thought about job opportunities in Europe, too, but I believe the scale of the U.S. economy and the country’s geopolitical significance offer me more. In many respects, my decision to stay in the U.S. reflects practical considerations rather than personal preferences.</p>
+        <p>As a woman who came to the U.S. in my 30s, there are other charms to the country that persuaded me to stay. Here, I am exposed to more ideas and career options, feel less dominated by a male partner’s career plan and family priorities in relationships, and enjoy more freedom to dress and express my feelings and opinions. I found it harder to obtain the same freedoms in China. Instead, when I was in China, I often felt the need to apologize for not making conventional life decisions and felt pressure to explain why I wasn’t saving money to buy a house or getting married early enough, as a lot of young Chinese people would choose for their lives.</p>
+        <p>I desire to live “elsewhere” to pursue my career because I want to understand myself and the society I come from better. The U.S. is just one option among many “elsewheres.” My family supports me because it was very rare for them as college graduates to have the same opportunity in the 1980s. Such support has kept me motivated to build my life in the U.S.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10511" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/edward-huang"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/default_images/chop-dark.png?itok=Xgh4UJzo" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="edward-huang"><a href="https://www.chinafile.com/contributors/edward-huang" title="Edward Huang">Edward Huang</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">When ChinaFile published a <a href="https://www.chinafile.com/conversation/should-i-stay-or-should-i-go" target="_blank" rel="nofollow">similar conversation</a> seven years ago, the question of whether recent Chinese graduates of U.S. universities should stay in America or return to China was less of an “either/or” question than it is today. Now, the two options seem far more mutually exclusive. During the COVID-19 pandemic, Chinese students attending school in the U.S. were blamed for carrying and spreading the disease both in America and in China. The hostility directed at us highlights a transition underway wherein inclusiveness and internationalism are giving way to exclusion and nationalism.</p>
+        <p>For me, the question of whether to stay in America or return to China pits my work against other parts of my life. I came to the U.S. for graduate school because of its vibrant academic community, its rigorous research training, a less hierarchical environment, and academic freedom. On the other hand, I miss my life in China; I miss the hustle and bustle of city streets, the spring rolls and eggs with fried oysters I grew up eating, and most importantly, I miss my family and friends. There are aspects of American life that I prefer, and work opportunities in China that I value. I appreciate the respect of personal space in the U.S., and as a sociologist I am passionate about many fascinating research questions about Chinese society. However, as the sparse flights between China and the U.S. have demonstrated, building a life and a career across both countries is now a challenge, if not a dream.</p>
+        <p>The value of globalization that once drove us to travel across the Pacific Ocean to study has diminished. Chinese people today face ever-increasing threats to their freedom and security, while in America the rights of minority groups are under constant challenge. When I visited home two years ago, my grandmother called me a traitor simply for studying in America. Walking around campus, strangers have told me to “go do your calculus.” We international students are products of an open world, and our destiny is bound to the destiny of that world. We are obligated to defend it—for ourselves, for our peers, and for the generations to come.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10516" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/junyi-lv"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/junyi_lv_sm.jpg?itok=15A5HT7p" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="junyi-lv"><a href="https://www.chinafile.com/contributors/junyi-lv" title="Junyi Lv">Junyi Lv</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">I always wanted to see a bigger world. I chose to study in the U.S. for practical reasons: Not only does the U.S. have top communications programs (my major), the duration of Master’s degree programs in the U.S. is, in general, longer than that of programs in other countries such as the U.K. I wanted to have the opportunity to experience a different culture over a longer period of time.</p>
+        <p>Studying in Los Angeles, I lived in a “bubble.” My daily life was not greatly affected by the geopolitical climate. Los Angeles is a diverse city where people from all over the world live together, and the University of Southern California’s campus is also diverse. The number of applicants from China to the Master’s degree program I attended has increased since the beginning of the COVID-19 pandemic. When I think about where to live after I graduate, I’d prefer to be somewhere friendly to Asians but work in academia doesn’t offer much choice in terms of location; you have to go where the jobs are.</p>
+        <p>I want to live a life where I can support myself and my family, and do something for our communities. I come from a coal city in China. This motivated me to research coal and energy transition. One thing I do know, at least for now, is that I cannot do a nine-to-five job anymore. While academia is not perfect, I enjoy being able to freely arrange my time, working past midnight if I need to, waking up late the next morning.</p>
+        <p>When it comes to returning to China or staying in the U.S., I would prefer to stay in the U.S. for the moment without ruling out the possibility of going back to China at some point. The Song Dynasty poet Su Shi’s <a href="https://poetryandplaces.com/2020/09/30/written-on-the-wall-of-west-forest-temple-by-su-shi/" target="_blank" rel="nofollow">celebrated quatrain</a> about Lu Mountain cautions us that we can’t see the true face of something when we are standing in the middle of it. Through my fieldwork comparing energy transition in coal-producing regions of Kentucky and in my native Shanxi province, I believe I may actually come to see China more clearly.</p>
+        <p>I think Chinese society is in a transition phase. A lot is being reshuffled and remapped. Coming out of the pandemic, people may have different priorities in their lives, and many, especially among younger generations, are experiencing anxiety and confusion. But it is also a time to reorient. I can only hope for the best.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10521" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/fan-chen"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/fan_chen_sm.jpg?itok=jPhXuj3W" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="fan-chen"><a href="https://www.chinafile.com/contributors/fan-chen" title="Fan Chen">Fan Chen</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">I came to the U.S. for college to study political science and journalism in 2016, a time when the U.S. remained a beacon of free speech. I wanted to hone my reporting techniques and cover news without censorship. I hoped I would understand China better by living abroad.</p>
+        <p>The privilege of living in New York is that you often blend into the metropolis too smoothly to recognize or worry about your identity as a foreigner. Even when Donald Trump was president, college was a bubble.</p>
+        <p>That changed in 2020 when COVID-19 broke out. Before then, I hadn’t thought much about being Chinese in America. Suddenly, safety was a serious consideration. I felt the uneasiness of wearing a mask and the fear of walking alone on streets in one of the most liberal cities in the world. On a subway, someone pushed me and yelled “Go back to China.” When people yelled racist slurs at me on the street, I wasn’t sure if I should respond.</p>
+        <p>I used to dream about entering the U.S. as a complete outsider and stranger and using this unique perspective and identity to confront culture shock and observe society directly. I wanted to understand American society better from places outside of major cities. I was thinking about doing local news as a curious Chinese outsider and taking photographs in towns and cities, trying to understand what democracy looks like from a hyper local level, meeting people whose families have lived here for generations and learning their views of the country. I hoped to do a version of what Peter Hessler and other Peace Corps members had done in China in the 1990s.</p>
+        <p>But now I am faced with an either-or question. Should I strive to make a living here in the U.S., or should I return as soon as I can before I lose contact with Chinese society?</p>
+        <p>I look forward to a life that is safe, creative, and rewarding. A life where I’m free and unlimited to pursue and delve into issues I am interested in, where I produce work that I’m proud of, where I can broaden and deepen my understanding of the world.</p>
+        <p>I don’t expect revolutionary changes to take place in Chinese society in the next 5-10 years, but I feel there is gathering momentum for change. Chinese society is like a rubber band that has been stretched out for too long. It has lost its elasticity. It is involuted, high-pressure, cynical, and tired. Class divisions have been further solidified, and resources have been gradually eaten up. After coming to see clearly the “cannibalistic” nature of capital, I occasionally raise my fist but I find I am gradually losing the courage to protest.</p>
+        <p>Maybe the whole world is this way. I maintain confidence in the future, but I can’t help but feel pessimistic about the way the international situation, frequent environmental crises, and social problems are tearing Chinese society apart. That makes finding a way out all the more urgent.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10531" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/cici-yu"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/cici_yu_sm.jpg?itok=BvSoHF6-" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="cici-yu"><a href="https://www.chinafile.com/contributors/cici-yu" title="Cici Yu">Cici Yu</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">When I’m interviewing for jobs, I often get asked what my dream life would be. Traveling the world as a journalist sounds ideal, but my more realistic aspiration is to become a data-driven journalist shedding light on underrepresented communities and telling compelling human stories. To achieve this, I need an environment that allows me to investigate, write, and publish freely. Considering my values, career prospects, and salary and work requirements, I believe staying in the U.S. after graduation is the best choice for me now.</p>
+        <p>As I witness censorship stifling expression in China, I feel safer remaining in the U.S. where I can freely share my thoughts and write stories. Moreover, the prospect of earning under $1,000 a month as a new graduate in China undervalues my overseas education, given my parents’ substantial investment. Most importantly, I appreciate the work-life balance and benefits that U.S. jobs offer.</p>
+        <p>It is ideal for me to stay in the U.S. after graduation, but I am also aware that visa status has been a common hurdle for international students seeking internships and jobs. Since beginning college at Boston University, I have scrambled to apply for internships for the upcoming spring or summer during the fall semester. Twice, I applied to a local radio station and was rejected the next day. I later learned my visa status triggered automatic rejection without human review—answering “yes” to needing work authorization in the future stopped my application from proceeding to the next step. Discovering my immigration status hindered potential newsroom opportunities was disheartening. In spite of the prevalent notion of “equal opportunity” for job applications in workplaces, it’s evident that international students often find themselves in a disadvantaged position, impeding their ability to compete on equal footing with their domestic counterparts.</p>
+        <p>Although uncertainty about my future immigration status has been a constant source of anxiety, I realized I shouldn’t let this hinder any applications. I can apply to graduate school in the STEM field to secure what’s known as an <a href="https://studyinthestates.dhs.gov/stem-opt-hub/additional-resources/stem-opt-extension-overview#:~:text=The%20STEM%20OPT%20extension%20is,in%20an%20approved%20STEM%20field." target="_blank" rel="nofollow">Optional Practical Training visa</a>, which will provide more time to get my foot in the door of the journalism industry. I can also demonstrate eligibility for the <a href="https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement" target="_blank" rel="nofollow">O-1 visa</a>, another type of work authorization for those with extraordinary ability or achievement. Through researching and talking to other Chinese journalists who have successfully stayed in the U.S., I have learned that H1B sponsorship is not the only option for my future career development.</p>
+        <p>Given the deteriorating state of the media in China, I no longer envision a viable future in journalism there. There may be roadblocks ahead, but my plan is to work in America after I graduate and later pivot to reporting on China, if and when it becomes possible. No newsroom is perfect, even in the U.S., but since I received my journalism education here, I feel more comfortable practicing what I learned for my future career.</p>
+        <p>I struggled with my identity of “being in the middle” when I first came to the U.S. at 16. Through a mix of Chinese and American education, I have developed my own worldview and ability to think critically. I now see myself as a global citizen, not limited to “being in the middle.” I have found power in documenting diverse experiences and writing stories without self-censorship. Although I am pessimistic about China’s future, not knowing what will happen to my motherland, I hope to thrive where I am now and use my international experience to report on China in the future.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2023-11-07</time>
+        <a href="https://nodebe4.github.io/oped2/2023-11-07/China-Saudi-RMB-Settlement-Will-Insulate-the-Oil-T/">
+          China-Saudi RMB Settlement Will Insulate the Oil Trade from U.S. Sanctions
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-11-01</time>
+        <a href="https://nodebe4.github.io/oped2/2023-11-01/ChinaFile-Presents-China-Reporting-in-Exile/">
+          ChinaFile Presents: China Reporting in Exile
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-10-24</time>
+        <a href="https://nodebe4.github.io/oped2/2023-10-24/What-Is-the-Future-for-International-Students-in-C/">
+          What Is the Future for International Students in China?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-10-16</time>
+        <a href="https://nodebe4.github.io/oped2/2023-10-16/What-s-Behind-China-s-Laws-to-Protect-Privacy/">
+          What’s Behind China’s Laws to Protect Privacy?
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-10-24/What-Is-the-Future-for-International-Students-in-C/">
+            前一篇：What Is the Future for International Students in China?
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-10-28/%E9%AB%98%E4%B8%AD%E5%AD%B8%E6%AD%B7%E5%A4%A7%E5%AD%B8%E6%B2%92%E7%95%A2%E6%A5%AD%E7%94%B3%E8%AB%8B%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E7%B0%BD%E8%AD%89%E5%BF%83%E5%BE%97/">
+            後一篇：高中學歷大學沒畢業申請日本工作簽證心得
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-10-24/What-Is-the-Future-for-International-Students-in-C/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-10-28/%E9%AB%98%E4%B8%AD%E5%AD%B8%E6%AD%B7%E5%A4%A7%E5%AD%B8%E6%B2%92%E7%95%A2%E6%A5%AD%E7%94%B3%E8%AB%8B%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E7%B0%BD%E8%AD%89%E5%BF%83%E5%BE%97/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-11-01/ChinaFile-Presents-China-Reporting-in-Exile/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-10-24/What-Is-the-Future-for-International-Students-in-C/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-10-24/What-Is-the-Future-for-International-Students-in-C/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-10-28/%E9%AB%98%E4%B8%AD%E5%AD%B8%E6%AD%B7%E5%A4%A7%E5%AD%B8%E6%B2%92%E7%95%A2%E6%A5%AD%E7%94%B3%E8%AB%8B%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E7%B0%BD%E8%AD%89%E5%BF%83%E5%BE%97/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-11-01/ChinaFile-Presents-China-Reporting-in-Exile/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-10-24/What-Is-the-Future-for-International-Students-in-C/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

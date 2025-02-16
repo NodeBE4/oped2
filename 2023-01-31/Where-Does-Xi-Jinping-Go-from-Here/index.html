@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Where Does Xi Jinping Go from Here? – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Where Does Xi Jinping Go from Here?
+——
+" />
+    <meta property="og:description" content="
+Where Does Xi Jinping Go from Here?
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Where Does Xi Jinping Go from Here?" />
+    <meta property="twitter:title" content="Where Does Xi Jinping Go from Here?" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fviewpoint%2Fwhere-does-xi-jinping-go-here" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/viewpoint/where-does-xi-jinping-go-here" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/viewpoint/where-does-xi-jinping-go-here&text=Where Does Xi Jinping Go from Here?&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/viewpoint/where-does-xi-jinping-go-here&title=Where Does Xi Jinping Go from Here?" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/viewpoint/where-does-xi-jinping-go-here&title=Where Does Xi Jinping Go from Here?" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Where Does Xi Jinping Go from Here?&body=
+Where Does Xi Jinping Go from Here?
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/viewpoint/where-does-xi-jinping-go-here" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/viewpoint/where-does-xi-jinping-go-here&title=Where Does Xi Jinping Go from Here?&caption=
+Where Does Xi Jinping Go from Here?
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Where Does Xi Jinping Go from Here?&url=https://www.chinafile.com/reporting-opinion/viewpoint/where-does-xi-jinping-go-here" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Where Does Xi Jinping Go from Here?</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-01-31
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Neil Thomas</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/viewpoint/where-does-xi-jinping-go-here" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1675186500000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/viewpoint/where-does-xi-jinping-go-here">Where Does Xi Jinping Go from Here?</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-7823f41dca3186cf27780dd4cae9e2db">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/podium_54531_sm.jpg" title="Where Does Xi Jinping Go from Here?" class="colorbox" data-colorbox-gallery="gallery-node-54531-beFcBidh29I" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/podium_54531_sm.jpg?itok=1jpZ22ch" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Lintao Zhang—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Chinese President Xi Jinping speaks at a podium during a meeting between members of the Standing Committee of the Political Bureau of the 20th Chinese Communist Party Central Committee and Chinese and foreign journalists at The Great Hall of People in Beijing, October 23, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">Popular narratives about Chinese leader Xi Jinping are in flux. Just a few months ago, he was widely seen as an unassailable force. But unusually widespread protests in late November, followed by a complete reversal of his zero-COVID policy, have prompted some to <a href="https://foreignpolicy.com/2022/12/06/china-protests-middle-class-xi-jinping-democracy/" target="_blank" rel="nofollow">question</a> whether Xi is losing his grip. While Xi never possessed godlike powers, and could end up facing a <a href="https://www.foreignaffairs.com/china/xi-versus-street" target="_blank" rel="nofollow">bumpier period</a> in <a href="https://www.foreignaffairs.com/china/problem-zero-xi-pandemic-policy-crisis" target="_blank" rel="nofollow">state-society relations</a>, this shift in perception makes it worth casting a retrospective eye on the progress he made in strengthening his position at the 20th Party Congress. These moves still provide Xi with a strong political base to overcome external and internal threats to his authority despite policy errors and economic headwinds.</p>
+      <p>The 20th Party Congress remains a watershed in Chinese politics. Convened in Beijing from October 16-22, the Congress elected a Central Committee that then met for its First Plenum on October 23 to approve a precedent-defying third term for Xi as General Secretary of the Chinese Communist Party (CCP). This coronation capped a remarkable decade of power consolidation by the country’s most dominant ruler since Mao Zedong’s death in 1976.</p>
+      <p>While this outcome was expected, the Central Committee surprised analysts and <a href="https://www.reuters.com/breakingviews/xi-jinpings-third-term-gets-markets-thumbs-down-2022-10-24/" target="_blank" rel="nofollow">shocked markets</a> by selecting a Politburo Standing Committee (PSC) and Politburo stacked almost completely with Xi allies. China watchers <a href="https://www.brookings.edu/events/toward-xis-third-term-chinas-20th-party-congress-and-beyond/" target="_blank" rel="nofollow">generally assumed</a>, based on his actions at the 19th Party Congress in 2017, when he had already established his political command, that Xi would retain some senior leaders and economic moderates from other factions on these bodies.</p>
+      <p>Xi also laid out his vision for China’s future. The report he delivered to the opening session of the Congress confirmed a long-term policy agenda focused on political control, economic statism, and global influence. A new amendment to the Party’s constitution <a href="https://asia.nikkei.com/Politics/China-s-party-congress/China-s-new-Communist-Party-constitution-mandates-loyalty-to-Xi" target="_blank" rel="nofollow">mandates loyalty</a> to Xi’s leadership. He has maneuvered the people, processes, and institutions of Chinese politics to maximize his ability to rule for life.</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">Xi emerged from the Congress and Plenum with an unprecedented grip on the CCP. No paramount leader in the post-Mao era managed to assemble a leadership team with a greater proportion of personal allies than Xi now has. He swept all seven positions on the PSC, keeping his long-time associate Zhao Leji and chief ideologue Wang Huning on board and elevating allies Li Qiang, Cai Qi, Ding Xuexiang, and Li Xi. On the broader 24-member Politburo, Xi increased his majority of loyalists—people with personal or professional ties to him or to his top lieutenants—from around 60 percent to over 80 percent. Xi loyalists also now dominate the Central Secretariat, which runs the Party’s day-to-day business, and the Central Military Commission (CMC), which leads the armed forces.</p>
+      <p>Xi’s political grip flows from his control of the selection process for top Party bodies. According to state news agency <a href="http://cpc.people.com.cn/20th/n1/2022/1024/c448334-32550803.html" target="_blank" rel="nofollow">Xinhua</a>, the pre-Congress process of “conversation and investigation” with senior cadres that Xi introduced five years ago included new requirements this time to “put political standards first” and promote officials who are “firm supporters” of his leadership. Compared to 2017, when according to Xinhua he <a href="http://www.xinhuanet.com/politics/19cpcnc/2017-10/26/c_1121860147.htm" target="_blank" rel="nofollow">interviewed</a> 57 leaders, Xi reportedly <a href="http://cpc.people.com.cn/20th/n1/2022/1024/c448334-32550803.html" target="_blank" rel="nofollow">spoke with</a> only 30 leaders in 2022, and he did not consult with Party elders or with national government leaders who did not hold top Party positions. These apparent snubs suggest the political impotency of the State Council compared to Party leadership bodies and the political weakness of old factional networks tied to ex-leaders Jiang Zemin and Hu Jintao.</p>
+      <p>Xi ignored many decades-old political norms to achieve this degree of dominance. He not only exempted himself from the 20-year norm of Politburo members aged 68 or older retiring (he was 69 at the time of the Congress), but he also retained CMC Vice Chairman Zhang Youxia (72) and promoted current Foreign Minister Wang Yi (69). And he forced the 67-year-olds Li Keqiang and Wang Yang to leave the PSC, the first early retirements from the PSC in <a href="https://www.bloomberg.com/graphics/2022-china-party-congress-xi-new-leaders/" target="_blank" rel="nofollow">two decades</a>. The departure of Li and Wang, along with the demotion from the Politburo of <a href="https://www.scmp.com/news/china/politics/article/3197001/chinas-hu-chunhua-loses-politburo-seat-raising-doubts-about-political-future" target="_blank" rel="nofollow">Hu Chunhua</a> (who was only 59), banished the last senior leaders associated with the once-powerful Communist Youth League, a CCP-run youth movement from which Hu Jintao promoted several allies into high officialdom, ending any lingering norms of factional power-sharing. This incoming Politburo was also the first since 1992 without a single female member.</p>
+      <p>Xi not only prioritizes political loyalty over norms such as retirement ages, power sharing, and collective leadership, but also over governance experience and policy expertise. One of his biggest departures from precedent was the elevation of Shanghai Party Secretary Li Qiang, rather than Wang Yang or Hu Chunhua, to <a href="https://www.theguardian.com/world/2022/oct/24/who-is-li-qiang-the-man-poised-to-become-chinas-next-premier" target="_blank" rel="nofollow">succeed</a> Li Keqiang as premier in March. Unlike every premier since 1976, and unlike Wang and Hu, Li Qiang has never served as a vice premier or even in any central government position. Some <a href="https://www.wsj.com/articles/china-li-qiang-xi-jinping-11667399077" target="_blank" rel="nofollow">more optimistic takes</a> portray Li as a pro-business premier, given his track record as a local leader in rich provinces. However, observers <a href="https://www.nytimes.com/2013/01/06/opinion/sunday/kristof-looking-for-a-jump-start-in-china.html" target="_blank" rel="nofollow">used similar evidence</a> a decade ago to argue that Xi himself would advance market reforms when he came to power.</p>
+      <p>The new era of “<a href="https://www.eurasiagroup.net/live-post/top-risks-2023-2-Maximum-Xi" target="_blank" rel="nofollow">maximum Xi</a>” heightens political risk across multiple dimensions. Other leaders are less likely to push back against Xi’s views, as they now know definitively that their careers depend on supporting Xi’s agenda. They and the Chinese public will increasingly see major policy decisions as expressions of Xi’s personal leadership, creating a sticky political dynamic wherein correcting errors becomes more difficult as criticism of policy becomes tantamount to criticism of Xi. When Xi does decide on a new direction, his power renders policymaking susceptible to volatile shifts, as demonstrated by the sudden about-face on zero-COVID, a reversal that is hard to imagine could have happened unless Xi personally decided to change course and could then bring the whole system with him. Xi’s loyalists also have less experience in national or even provincial leadership roles than their predecessors, especially his top economic team of Li Qiang, Ding Xuexiang, and He Lifeng.</p>
+      <p>To be sure, Xi’s stronger control could lead to better policy implementation. The value of improved implementation, however, depends on the quality of his policies, and Xi unfortunately appears committed to his long-standing political agenda. Recent pragmatic steps, such as the minor detente in U.S.-China diplomacy and the prioritization of economic recovery in 2023, are likely to prove less indicative of Xi’s long-term decisionmaking than the political undercurrents that necessitated these adjustments in the first place.</p>
+      <p>Beijing’s constructive efforts appear to be a tactical shift to reduce pressures on the economy at an especially difficult time for China, as the country moves from frequent COVID lockdowns to the virus ripping its way through the population. Next year, if the growth rate recovers to near pre-COVID levels, and if Washington offers little incentive to adopt less confrontational tactics, then a more confident Xi will likely return to a more interventionist regulatory policy and a more assertive foreign policy.</p>
+      <p>Indeed, in <a href="http://www.qstheory.cn/dukan/qs/2022-12/31/c_1129246574.htm" target="_blank" rel="nofollow">closed-door remarks</a> at the First Plenum, which were only published on December 31, Xi informed the new Party leadership of his belief that “history has repeatedly proven that using struggle to seek security leads to the survival of security, while using compromise to seek security leads to the death of security; and that using struggle to seek development leads to the flourishing of development, while using compromise to seek development leads to the decline of development.”</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">Per the Party constitution, the Central Committee is formally the CCP’s “highest leading body,” with “the power to make decisions on major national policies.” But the Central Committee holds a plenum only about once a year, in between which times the PSC and the Politburo formally exercise their powers to “direct all Party work.” The composition of the new 376-member 20th Central Committee, which includes 205 full members and 171 non-voting alternate members, reflects both political machinations and policy priorities.</p>
+      <p>Similar to the role he took in selecting the PSC and the Politburo, Xi “<a href="http://www.news.cn/politics/cpc20/2022-10/22/c_1129075571.htm" target="_blank" rel="nofollow">personally directed the gatekeeping</a>” of selections to the Central Committee. This allowed him to promote loyalists and retire legacy officials. According to Xinhua reports, the large <a href="http://www.news.cn/politics/cpc20/2022-10/22/c_1129075571.htm" target="_blank" rel="nofollow">turnover rate</a> of 65.4 percent, even higher than 64.9 percent in <a href="http://www.xinhuanet.com/politics/2017-10/24/c_1121850995.htm" target="_blank" rel="nofollow">2017</a>, was much higher than rates of 48.9 percent in <a href="http://cpc.people.com.cn/18/n/2012/1114/c350837-19582905-5.html" target="_blank" rel="nofollow">2012</a> and 49.3 percent in <a href="http://www.chinadaily.com.cn/hqzg/2007-10/22/content_6195699_5.htm" target="_blank" rel="nofollow">2007</a>, before Xi’s leadership. The average age of members also inched up to 57.2 from 57.0 in 2017 and 56.1 in 2012.</p>
+      <p>While Xi promoted relatively inexperienced allies to top positions, the same was not true lower down the chain of command, where he has cultivated the political loyalty of policy experts. Overall, Xi selected what may be the most educated committee ever—49.5 percent are technocrats, up from 37.2 percent in 2012, and 7.7 percent are senior STEM scholars, up from 4.0 percent in 2012—reflecting his <a href="https://www.bloomberg.com/news/articles/2021-03-01/xi-mobilizes-china-for-tech-revolution-to-cut-dependence-on-west" target="_blank" rel="nofollow">calls</a> for China to innovate a way out of its flagging growth model and dependencies on Western technology. Female representation inched up to a still dismal 8.8 percent, while ethnic minority representation fell for at least the fourth consecutive time to 8.5 percent, suggesting a challenging road ahead for gender equality and minority rights.</p>
+      <p>The same Xinhua article that described Xi’s role in the selection process for the Central Committee also hinted at the policy priorities of his new administration. Teams vetting candidates for the Central Committee preferred provincial government officials who had focused on poverty alleviation, cross-regional development, and environmental protection; candidates working in central-level government agencies who had helped China respond to U.S.-led sanctions and overcome critical technology chokepoints; and leaders in state-owned enterprises who had success in upholding Party leadership and upgrading domestic value chains. Cadres who want to advance in Xi’s China will now likely further prioritize these objectives.</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">Every Party Congress amends the Party constitution. Distinct from the state constitution of the People’s Republic of China, the Constitution of the Chinese Communist Party is the supreme law of the CCP, outlining its principles, activities, and structures. It underpins a broader system of intra-Party regulations, which Xi is expanding and rewriting to improve his ability to govern the Party and the Party’s ability to govern the country.</p>
+      <p>Last year’s amendments to the Party Constitution strengthened Xi’s personal rule. Party members are now <a href="https://www.12371.cn/special/zggcdzc/zggcdzcqw/" target="_blank" rel="nofollow">constitutionally obliged</a> to <a href="https://jamestown.org/program/the-20th-party-congress-xi-jinping-exerts-overwhelming-control-over-personnel-but-offers-no-clues-on-reviving-the-economy/" target="_blank" rel="nofollow">implement</a> the “two upholds”: “uphold Comrade Xi Jinping’s core position on the Party Central Committee and in the Party as a whole and uphold the Central Committee’s authority and its centralized and unified leadership.” This mandate is a further step by Xi in entrenching his position, by formally equating opposition to his leadership with opposition to the Party itself.</p>
+      <p>Several omissions, however, surprised observers. In the lead-up to the Party Congress, the “two establishments”—establishing Xi as the Party’s core and establishing the guiding position of his thought—had dominated Party discourse, leading <a href="https://www.scmp.com/news/china/politics/article/3195732/chinas-xi-jinping-further-consolidate-power-changes-communist" target="_blank" rel="nofollow">many to think</a> the “two establishments” would also feature in the updated constitution. Similarly, Party-watchers were <a href="https://www.scmp.com/news/china/politics/article/3186774/will-chinese-president-xi-jinping-be-given-formal-title-peoples" target="_blank" rel="nofollow">on the lookout</a> for phrases that would place Xi on par with Mao. These included formally shortening Xi’s wordy signature ideology from “Xi Jinping Thought on Socialism with Chinese Characteristics for a New Era” to “Xi Jinping Thought,” or sanctifying the use of Mao-era terms such as “people’s leader” or “helmsman” to refer to Xi. None of these phrases made it into the Party constitution.</p>
+      <p>Some writers believe <a href="https://asia.nikkei.com/Editor-s-Picks/China-up-close/Analysis-China-s-elders-defend-party-charter-from-Xi-onslaught" target="_blank" rel="nofollow">these omissions show</a> that Xi’s leadership still faces meaningful resistance in the Party. But this conclusion seems premature. To accompany the new constitution, Xinhua published a <a href="http://www.gov.cn/xinwen/2022-10/26/content_5721815.htm" target="_blank" rel="nofollow">Q&amp;A</a> with an anonymous leading cadre from the 20th Party Congress secretariat—possibly Wang Huning, who headed the body. The cadre said the addition of the “two upholds” would help Party members “deeply comprehend the decisive significance of the ‘two establishments.’” At a “<a href="http://cpc.people.com.cn/n1/2017/1227/c64094-29730489.html" target="_blank" rel="nofollow">democratic life meeting</a>” on December 25-26, the Politburo “unanimously agreed” that the Party’s successes over the past year affirmed the importance of the two establishments. More speculatively, the Congress may not have enshrined Xi as the “people’s leader” in the constitution because even Xi himself may believe it inappropriate to equate himself with Chairman Mao, the revolutionary hero and founder of the nation.</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">The <a href="http://my.china-embassy.gov.cn/eng/zgxw/202210/t20221026_10792358.htm" target="_blank" rel="nofollow">political report</a> to the 20th Party Congress, a <a href="https://asia.nikkei.com/Politics/China-s-party-congress/Transcript-President-Xi-Jinping-s-report-to-China-s-2022-party-congress" target="_blank" rel="nofollow">truncated</a> version of which Xi delivered in a speech at the conclave, represents the most authoritative statement of the Party’s current worldview and policy priorities. Even small changes in the language used by Party leaders in these reports, or tweaks to the rigid format that the reports typically follow, can evince meaningful policy shifts.</p>
+      <p>Political reports do not go into detail about specific policies (such as “zero-COVID”), but their high-level messages inform policymaking for the next five years and beyond. Xi says the most recent report constitutes a “<a href="http://www.news.cn/mrdx/2023-01/21/c_1310692374.htm" target="_blank" rel="nofollow">grand blueprint</a>” for governing China. Its content signaled continuity rather than change in Xi’s personal leadership and policy agenda, drawing heavily from the most recent <a href="https://cset.georgetown.edu/publication/china-14th-five-year-plan/" target="_blank" rel="nofollow">Five-Year Plan</a> and the third “<a href="https://www.nytimes.com/2021/11/16/world/asia/china-history-xi-jinping.html" target="_blank" rel="nofollow">history resolution</a>,” both issued in 2021. Overall, it suggests that Xi will keep pushing China in a more authoritarian, statist, and nationalist direction in the coming years and even decades.</p>
+      <p>This includes the Chinese economy, where the Party plans to play a stronger role, such as by taking board seats in major firms and guiding capital towards favored sectors. The political report introduced “<a href="http://www.news.cn/politics/cpc20/2022-10/22/c_1129075571.htm" target="_blank" rel="nofollow">systems thinking</a>” as part of Xi’s ideology. According to Xi, “all things are interconnected and interdependent,” as economic, political, and social reforms involve adjusting a balance of interests wherein “pulling one hair moves the whole body.” China’s increasingly complex policy issues therefore require enhanced Party oversight and more government “systems” to manage all aspects of the country’s development.</p>
+      <p>Xi presents this increase in Party control as necessary to counter rising threats. The Party previously presented China as in a “<a href="http://www.news.cn/politics/cpc20/2022-10/22/c_1129075571.htm" target="_blank" rel="nofollow">period of strategic opportunity</a>,” in which favorable domestic and international environments enabled a focus on economic development. Xi’s latest report shows that he believes China has now entered a period in which “strategic opportunity co-exists with risks and challenges, and uncertain and unpredictable factors are increasing.” Moreover, the report continues, “various ‘black swan’ and ‘gray rhino’ events may occur at any time,” highlighting the Party’s rising concern with preparing for both unexpected crises and foreseeable threats, respectively.</p>
+      <p>Xi wants to balance economic growth with national security. The 2022 political report contained a new section devoted to national security, which should “permeate every aspect and the whole process” of governance. To prepare for “high winds, choppy waves, and even dangerous storms,” Xi’s report called for stronger Party leadership, people-centered policymaking, and a spirit of struggle. The report also added a section on science, education, and human capital, priority areas to bolster indigenous innovation and address the political risks of lagging productivity growth and Western chokeholds on key technologies.</p>
+      <p>Even high-single-digit GDP growth targets now seem beyond reach. Development remains the Party’s “top priority,” but its “primary task” is now “high-quality development.” This includes elevating Xi’s “new development pattern,” a strategy that unites development and security goals by boosting domestic demand and homegrown technology while increasing global reliance on Chinese supply chains. Xi’s political report identified new growth drivers—AI, IT, biotech, green industries, high-end manufacturing, renewable energy, and new industrial materials (such as those engineered with nanotechnology)—but was notably less enthusiastic about markets, openness, and supply-side structural reform than even his previous report in 2017. The report’s vision of strategic economic management also requires the Party to expand oversight of the private sector, by “strengthening Party building” in non-state firms and “improving corporate governance” of financial firms, and of private wealth, by “regulating the mechanism of wealth accumulation.”</p>
+      <p>The report suggested that Xi is preparing China for long-term strategic competition with the United States. It defined the Party’s overarching goal for China as “building a socialist modern great power” by the centenary of the People’s Republic in 2049, and to “use Chinese-style modernization to comprehensively advance the great rejuvenation of the Chinese nation.” The Party has long wanted to achieve “modernization” by mid-century, but this report stated in the clearest terms yet that Xi wants China to “lead the world in comprehensive national power and international influence.” The new link between “Chinese-style modernization” and “national rejuvenation” emphasizes Xi’s determination to steer China on the Party’s own course, one that rejects democratic politics, individual freedoms, and U.S. leadership in global governance. That includes efforts to “actively participate“ in global human rights governance and the formulation of global security rules. Xi’s report did not change Taiwan policy, but a new phrase—“resolving the Taiwan question is for the Chinese people themselves to decide”—portends more assertive pushback against U.S. and allied efforts to support Taiwan.</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">The most dramatic moment of the Party Congress was also its least insightful. At the closing session on October 22, a few minutes after foreign media had arrived, attendants cajoled erstwhile Party Secretary Hu Jintao out of his seat and escorted him off the stage. The 79-year-old Hu appeared upset and unwilling to leave.</p>
+      <p>Xinhua’s English-language <a href="https://twitter.com/XHNews/status/1583829975932997637" target="_blank" rel="nofollow">Twitter account</a> said Hu “was not feeling well” and went “to a room next to the meeting venue for a rest.” But Hu’s exit sparked speculation that he was ejected after protesting Xi’s new leadership line-up, or that Xi had deliberately humiliated Hu to assert his political dominance. Media outlets scrutinized the brief episode in <a href="https://www.wsj.com/story/hu-jintaos-removal-from-chinas-party-congress-a-frame-by-frame-breakdown-63d154cb" target="_blank" rel="nofollow">painstaking detail</a> to try and decipher its hidden meaning.</p>
+      <p>The only truth so far is that we don’t know what happened. Hu’s age and known infirmity make a health event plausible but not certain. Xi’s obsessions with control, perception, and process make it unlikely that he planned a disruptive display of disunity at the Party’s biggest set-piece, especially as Hu hardly posed a political threat. Hu’s <a href="https://www.washingtonpost.com/world/2022/12/05/jiang-zemin-funeral-china/" target="_blank" rel="nofollow">reappearance</a> at a ceremony on December 5 to honor his predecessor Jiang Zemin, who died on November 30, and on a <a href="http://www.gov.cn/xinwen/2023-01/19/content_5737963.htm" target="_blank" rel="nofollow">list of retired comrades</a> to whom the Xi administration sent Lunar New Year greetings on January 19, further suggest his Congress exit was not an orchestrated purge. Still, such judgments are educated guesses made in the absence of reliable information.</p>
+      <p>The more consequential lacuna in our understanding of Chinese politics—the length of Xi’s tenure as leader—remains unfilled even after the Congress. His third term, his history resolution, his refusal to anoint a political heir, and his personalization of Party ideology all suggest that he may plan to rule for life. And his consolidation of power across multiple fronts of elite politics at the 20th Party Congress suggests that he maintains the political capital necessary to do so.</p>
+      <p>Indeed, a few days after winning reappointment, Xi led his new Politburo Standing Committee on a visit to the old revolutionary site of Yangjialing in Yan’an, where Mao cemented his absolute authority at the Seventh Party Congress in 1945. Xi <a href="http://www.gov.cn/xinwen/2022-10/29/content_5722469.htm" target="_blank" rel="nofollow">hailed that Congress</a> as “marking the Party’s political, ideological, and organizational maturity,” which included “forming a group of well-tested politicians who held high the banner of Mao Zedong.” Xi appears to draw a parallel between Mao in 1945 and his own consolidation of power in 2022, with the implication being that Xi plans to lead the Party for decades to come.</p>
+      <p>Xi’s succession is a “gray rhino” political risk for China: we know it will happen, but we do not know when, we do not know how, and we do not know what comes next. The longer Xi rules, and the older he gets, the more his allies will begin jockeying to succeed him, with competition likely to arise between different sub-factions of loyalists who share vertical ties to Xi but lack horizontal ties with each other. A contested succession could bring policy confusion, economic stasis, or even political chaos.<span class="cube"></span></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2023-02-03</time>
+        <a href="https://nodebe4.github.io/oped2/2023-02-03/Updated-Information-about-National-Security-Law-Re/">
+          Updated Information about National Security Law-Related Arrests in Hong Kong
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-02-03</time>
+        <a href="https://nodebe4.github.io/oped2/2023-02-03/National-Security-Law-Related-Arrests-in-Hong-Kong/">
+          National Security Law-Related Arrests in Hong Kong: An Update
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-01-26</time>
+        <a href="https://nodebe4.github.io/oped2/2023-01-26/What-Impact-Would-a-U.S.-Debt-Default-Have-on-Chin/">
+          What Impact Would a U.S. Debt Default Have on China?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-01-19</time>
+        <a href="https://nodebe4.github.io/oped2/2023-01-19/Xi-Jinping-s-Charm-Offensive-in-Southeast-Asia/">
+          Xi Jinping’s Charm Offensive in Southeast Asia
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-01-26/What-Impact-Would-a-U.S.-Debt-Default-Have-on-Chin/">
+            前一篇：What Impact Would a U.S. Debt Default Have on China?
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-02-03/National-Security-Law-Related-Arrests-in-Hong-Kong/">
+            後一篇：National Security Law-Related Arrests in Hong Kong: An Update
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-01-26/What-Impact-Would-a-U.S.-Debt-Default-Have-on-Chin/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-02-03/National-Security-Law-Related-Arrests-in-Hong-Kong/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-02-03/National-Security-Law-Related-Arrests-in-Hong-Kong/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-01-26/What-Impact-Would-a-U.S.-Debt-Default-Have-on-Chin/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-01-26/What-Impact-Would-a-U.S.-Debt-Default-Have-on-Chin/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-02-03/National-Security-Law-Related-Arrests-in-Hong-Kong/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-02-03/National-Security-Law-Related-Arrests-in-Hong-Kong/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-01-26/What-Impact-Would-a-U.S.-Debt-Default-Have-on-Chin/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

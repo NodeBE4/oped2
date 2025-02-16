@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>北宋文武：文人地位的提高与社会对武人的轻视 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+北宋文武：文人地位的提高与社会对武人的轻视
+——
+" />
+    <meta property="og:description" content="
+北宋文武：文人地位的提高与社会对武人的轻视
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="北宋文武：文人地位的提高与社会对武人的轻视" />
+    <meta property="twitter:title" content="北宋文武：文人地位的提高与社会对武人的轻视" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F613c50dffbcfb81445420bc7" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/613c50dffbcfb81445420bc7" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/613c50dffbcfb81445420bc7&text=北宋文武：文人地位的提高与社会对武人的轻视&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/613c50dffbcfb81445420bc7&title=北宋文武：文人地位的提高与社会对武人的轻视" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/613c50dffbcfb81445420bc7&title=北宋文武：文人地位的提高与社会对武人的轻视" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=北宋文武：文人地位的提高与社会对武人的轻视&body=
+北宋文武：文人地位的提高与社会对武人的轻视
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/613c50dffbcfb81445420bc7" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/613c50dffbcfb81445420bc7&title=北宋文武：文人地位的提高与社会对武人的轻视&caption=
+北宋文武：文人地位的提高与社会对武人的轻视
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=北宋文武：文人地位的提高与社会对武人的轻视&url=https://www.allnow.com/post/613c50dffbcfb81445420bc7" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>北宋文武：文人地位的提高与社会对武人的轻视</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-09-11
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 游彪</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/613c50dffbcfb81445420bc7" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/613c50dffbcfb81445420bc7">北宋文武：文人地位的提高与社会对武人的轻视</a>
+——</p>
+
+<div>
+  <p>“出将入相”，是中国古代宋朝之前统治集团内的精英人才仕途升迁、流动的正常现象。统治集团中的精英人才常常文武兼备，既能安邦定国，也能运筹帷幄，决胜千里。北宋建国后，与以往各朝相比，文官、武将之间的区别越来越明显，两者之间的差距也越来越大，文官的身份地位越来越高，武将群体无论政治地位、形象，抑或素质都远远不能和文官相比，之前令人羡慕的“投笔从戎”、弃文从武的现象不再出现，更多的是文官对武人的蔑视和敌意，以及千方百计摆脱进入武人群体的可能。从宋代之前的“一张一弛，文武之道也”，文武地位相近或相同，到宋代武人地位的沦落，其中经历了一个转化过程，这个过程从宋朝建立初年就已经开始了。</p>
+  <p>北宋王朝建立者赵匡胤，原本是五代后周一名高级禁军将领，并无深厚的资历和显赫的军功。后周显德七年（960），赵匡胤在后周都城开封附近的陈桥驿发动兵变，黄袍加身，轻而易举地从后周恭帝孤儿寡母手里夺取了政权，开始了宋代的统治。赵匡胤通过兵变夺取政权，靠的并不是他的威望与功勋，而是沿袭了唐代以来藩镇割据时出现的士兵随意拥立将领的模式。五代时期，天下大乱，天子权威不受人重视，任何拥有强大武力之人均可称王称霸。节度使安重荣公开宣称：“天子宁有种邪？兵强马壮者为之尔！”这种言论，就是这一时期政治现实赤裸裸的写照。</p>
+  <p>亲身经历唐末五代藩镇割据、武夫跋扈的赵匡胤，又通过兵变建立赵宋王朝，从内心深处视武人为社会动乱、政权更迭的根源所在，担忧兵变事件再次上演。事实上，赵匡胤的担心并不是多余的，赵匡胤称帝后没过多久，先后发生了地方节度使李筠和李重进的造反，虽然两人的叛乱都很快被镇压下去，其他地方藩镇慑于北宋中央政府强大的武力不敢轻举妄动，但这两次叛乱无疑加重了赵匡胤对武将的猜忌心理。于是，在加强君主专制集权的背景下，从赵匡胤开始的宋朝统治者，均把百般防范武将作为基本国策予以执行，“重文教，轻武事”的观念影响贯穿了整个宋代。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-11/613c51239c232e01c17d341b+L.jpg" data-id="613c51262114416715c3e857" alt="《追宋：细说古典中国的黄金时代》，游彪著， 天喜文化丨天地出版社2021年4月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《追宋：细说古典中国的黄金时代》，游彪著， 天喜文化丨天地出版社2021年4月版
+    </figcaption>
+  </figure>
+  <p>为了防止中央高级武将同样通过兵变夺取宋朝政权，北宋建立后不久，赵匡胤首先通过著名的“杯酒释兵权”，剥夺了与他一同发动陈桥兵变的高级武将的兵权。通过授予掌握禁军兵权的石守信等高级武将荣誉头衔，赏赐大量金钱、美女作为交出手中兵权的补偿，同时与他们结成姻亲，让其放心并巩固关系。正是因为有了强大武力作为后盾，再用金钱、美女、姻亲等作为条件，赵匡胤成功地解除了朝廷禁军高级将领的兵权，避免了“陈桥兵变”的再次发生。</p>
+  <p>在“杯酒释兵权”事件中，赵匡胤赤裸裸地劝诱石守信等禁军高级将领放弃人生追求，纵情享乐：“人生如白驹过隙，所谓好富贵者，不过欲多积金钱，厚自娱乐，使子孙无贫乏耳。卿等何不释去兵权，出守大藩，择便好田宅市之，为子孙立永远不可动之业；多置歌儿舞女，日饮酒相欢以终天命。我且与尔曹约为婚姻，君臣之间，两无猜疑，上下相安，不亦善乎！”接着，赵匡胤又用同样的手法，逐步将中央及各地节度使的兵权统统收归国家，最后集中到皇帝手中。</p>
+  <p>在用怀柔政策解除武人装备的同时，宋初统治者也采用严酷手段，对军队将领大力整治。后周时，赵匡胤通过担任禁军高级将领掌握精锐、核心部队，为发动陈桥兵变提供了便利条件。赵匡胤称帝后，担心禁军高级将领会仿效自己搞兵变，对禁军统帅防范极严。为了不让禁军统帅权力过大，赵匡胤可谓煞费苦心，他将禁军最高统帅职位降低，任用一些资历浅、军功不卓著之人担任禁军统帅。同时，将之前两头制的禁军最高统帅分为三头制，而且将统兵权与调兵权分开。禁军统帅只有统兵权，没有调兵权。最高军事机关枢密院有调兵权，却没有统兵权。这样，皇帝牢牢将军权掌握在了自己手中。</p>
+  <p>赵匡胤降低禁军统帅职位，分割其权力后，对禁军统帅仍然不放心。任何风吹草动，他都毫不手软。殿前都虞侯张琼是赵匡胤一手提拔起来的将领，为人英勇善战，忠心耿耿，曾经多次在战斗中殊死保卫赵匡胤的安全，因此赵匡胤称帝后，将亲军交给张琼统领。后来，只因张琼得罪了赵匡胤的亲信史珪、石汉卿，两人诬告张琼私下里豢养部曲亲信，多疑的赵匡胤不问青红皂白，立即下令将张琼逮捕审讯，并下令杖责，将张琼杖击得几乎气绝身亡。生性耿直的张琼不堪忍受屈辱，自杀身亡。事后得知真相的赵匡胤并没有惩处诬告张琼致死的元凶，只是轻描淡写地对张琼家抚恤了事。殿前都指挥使韩重赟多年统率禁军，一直深受赵匡胤信任。但有人诬告韩重赟私下将皇帝亲兵变成自己的亲信，立即触动了赵匡胤敏感的神经。赵匡胤暴跳如雷，当场下令将韩重赟逮捕处死，幸亏宰相赵普出面力保，韩重赟才幸免于难。虽然事后赵匡胤也调查清楚有人故意陷害韩重赟，但他出于防范心理，仍然罢免了韩重赟禁军统帅之职，改派他人。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-11/613c513f4cd55d54dd5dc9c6+L.png" data-id="613c5144904b8c02a16a443c" alt="杯酒释兵权" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+杯酒释兵权
+    </figcaption>
+  </figure>
+  <p>透过张琼、韩重赟二人的遭遇，可以看出赵匡胤对禁军高级将帅抱着高度警惕与猜忌的态度。在赵匡胤多疑的审视下，高级将官特别是禁军高级将领为求自保，不得不谨慎从事，甚至不惜“装疯卖傻”来打消皇帝的疑心。如张琼冤死后接替其职位的杨信，其最大的特点是谨慎和“忠直无他肠”，后来忽然得了哑疾，不能说话，但这样一个身体有残疾之人，赵匡胤并不嫌弃，反而更为信任。出身胡族的党进目不识丁、性格粗鲁，先后任侍卫步军、马军都指挥使十余年。据史书记载，杨信临死前突然开口说话：党进表面上“朴直”，实际上十分善于察言观色。两人性格的分裂与受宠，无疑都是赵匡胤高压下产生的变种。为求个人平安和皇帝宠信，高级武将即便不如杨信、党进般装痴卖傻，也逐渐奉行明哲保身之术。《宋史》记载石守信等武人大多贪赃枉法，曾经多次遭到宋太祖批评。太祖朝负责守边的大将更是大多数有着不同程度的违法行为。这些记载可以说明武将素质低下，他们已不能如前代名将一般享有盛名。但换个角度观察，这些武人自我损毁形象的行为，不啻一种自我保护的手段。因为太祖朝对于贪官污吏的处罚相当严重，很多贪官一旦被查明罪名属实，都会被处以极刑。石守信等人作为朝廷高官，对于国家法典不会毫不知情，他们很清楚太祖希望整顿吏治的决心。但他们仍然我行我素，毫不收敛，应该是明白太祖不会对他们动手：自己越声名狼藉，在士人和社会上越是没有声望，称王称帝的可能性就越小。这种结果也正是宋太祖希望看到的。当自甘堕落成为一种自我保护的手段并获得皇帝的默认时，武将们便开始有恃无恐地在这条道路上迅速走下去，并且造成的恶劣影响越来越大。</p>
+  <p>高级将领交出了兵权，但军队仍然需要有人来统领，这样武将与军队之间仍然存在联系。为了防止将领与士兵、军队与地方结成亲密关系，宋朝政府针对武将实行种种限制，还实行“更戍法”，就是不断将部队调动驻扎地。表面上称是为了锻炼士兵，熟悉各地情况，实际上是怕军队在某一地区驻扎时间太长，与当地结成牢固关系。在调动过程中，宋朝政府又不断调换统军将领，其结果使得兵不知将、将不知兵，士兵常年疲于换防，劳民伤财。</p>
+  <p>值得注意的是，北宋开国之初，功臣宿将俱在，同时各地割据政权林立，为了消灭割据势力，统一全国，东征西讨武力征伐不可避免，武人在一定程度上仍然受到朝廷重视。如北宋初年驻守西北前线的武将郭进、李汉超、姚内斌及冯继业等，在赵匡胤的允许下，均拥有较多的用兵权和财权。但这种状况，只是出现在沿边地区，其职权仅限于各自的防区。其他高级别的将帅，在宋朝统治者狭隘的政治态度影响下，已有顺从迎合及保守的趋势，其所为较以往历史上的著名将帅已大为逊色，这一点在赵匡胤多次武力攻取弹丸之地的北汉未果上可见一斑。</p>
+  <p>宋太祖一朝，正值内外用兵之际，重文轻武政策的消极作用尚不明显。宋太宗时代是武将群体素质和命运出现逆转之时。通过“烛影斧声”继位的宋太宗，是一个猜忌心极强的人，对武将更为猜忌。他曾说过一段意味深长的话：“国家若无外忧，必有内患。外忧不过边事，皆可预防。惟奸邪无状，若为内患，深可惧也。帝王用心，常须谨此。”此处所说的“奸邪”，针对的就是武将。为了防范武人，宋太宗在抑制方面煞费苦心。宋太祖赵匡胤时，对武将作战虽然也进行干涉，但基本能让武将放开手脚，自由发挥。宋太宗既不懂军事，又不放心武将作战，为了牢牢掌控战场，他在战前对将领颁赐阵图，临阵对敌，命令武将必须完全根据皇帝颁布的阵图应敌。不依据阵图对敌，即便获胜，回朝后仍然要受到惩处。依据阵图应敌战败的，却可以堂而皇之地逃脱惩处。在这种奇怪氛围的笼罩下，武将不求有功，但求无过，碌碌无为，毫无作为。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-11/613c51609c232e01c17d341c+L.png" data-id="613c51672114416715c3e858" alt="烛影斧声" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+烛影斧声
+    </figcaption>
+  </figure>
+  <p>五代武人横行，文教无人重视。赵匡胤称帝后，大力在武将中推广学习儒家经典，所谓“今之武臣，亦当使其读经书，欲其知为治之道也”。其实，武将提高文化素养本是应该的事情，但赵匡胤所谓的“为治之道”，并非真正的古今治乱之道，而是儒家宣扬的忠君臣子之道。北宋朝廷一方面对武将严加管束，打击毫不手软；另一方面，用忠君思想诱导武将，让其放弃个人思想，一心效忠皇帝。在软硬两手打击下，一些高级将领表现出令人啼笑皆非的行为。如党进目不识丁，为了显示自己尚文，也要在朝廷上讲几句文绉绉的话语，结果闹出笑话。宋太宗时，武人王显出任枢密使，宋太宗告诫他：“爱卿世代并非出身儒门，从小遭遇兵荒马乱，一定缺乏教育，学问不多。如今爱卿在朕左右日理万机，一定没有空闲时间博览群书。”随即太宗赐给王显《军戒》三篇，说：“看看此书亦可以免于尴尬。”对武将不重视军事素质的培养，反而以所谓“提高文化修养”来要求武将，未免本末倒置。这样做的结果，使得大批武将将精力放在了扮演“儒雅”上，而不是如何提高自身的军事素养。</p>
+  <p>随着北宋统治者对武将有意打击、压制，越来越多的武将不求上进，明哲保身。那些稍有所作为，或者有所抱负的武将，在宋朝重文抑武政策下，要么终身才华得不到施展，要么被打压、排挤，落个悲惨的结局。《宋史》中记载了一位名叫呼延赞的北宋初年武将，此人出身将门，久经沙场，勇猛异常，一心想上场杀敌，报效国家。当时北宋太宗两次武力收复燕云十六州均告失败，对契丹心生畏惧，不敢发动第三次北伐，呼延赞向朝廷献计献策，并请求带兵戍边。为了表示抗辽决心，呼延赞全家人身上都刺有“赤心杀契丹”文字，其子耳后还刺有“出门忘家为国，临阵忘死为主”两行小字。呼延赞为了使家中幼儿长大后身体强健，甚至在冬季用冷水浇其身体。呼延赞还自己设计降魔杵、破阵刀等重兵器，希望将来在战场能够一展身手。但宋太宗对呼延赞并不欣赏，雍熙北伐时，仅仅因为厌恶呼延赞的装束，几乎将其斩首。一心向往上阵杀敌报国的呼延赞最终困顿死于军营庶务之中。呼延赞的遭遇，正是当时武将群体因自身角色而造成悲剧的缩影。</p>
+  <p>经过宋太祖、宋太宗两代皇帝苦心孤诣的打压，北宋初年的武将群体，从唐末五代崇尚武力征伐，变得循规蹈矩、唯唯诺诺，毫无武人血性。如曾经以主帅身份东征西讨的名将曹彬，在率领大军攻灭南唐，取得统一全国的重大功劳时，丝毫不敢有一点居功自傲的表现，日常温文尔雅，甚至位居枢密使高官时，在路上遇到士人，主动退避让路。曹彬的“谦让”获得了文人士大夫的好感。但就是这样一个将领，反因酒坊使弥德超一句“曹彬秉政岁久，能得士众心”就迅速遭到宋太宗的免职。大将潘美因受太祖、太宗信任，执掌兵权。潘美每次到地方任职，都主动将妻子、儿女留在都城，只携带几个侍妾前往赴任。如果侍妾在任所生育，潘美马上派人将其妾与孩子一同带回京城府第，同时向皇帝报告。名义上是认祖归宗，实际上是让自己的妻子、儿女作为人质，让皇帝放心。虽然历朝以来对武人的防范一直存在，但像宋代如此如履薄冰，确实比较少见。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-11/613c51834cd55d54dd5dc9c7+L.png" data-id="613c518e2114416715c3e859" alt="呼延赞收复燕云十六州时的场景" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+呼延赞收复燕云十六州时的场景
+    </figcaption>
+  </figure>
+  <p><strong>文人地位的提高与社会对武人的轻视</strong></p>
+  <p>在打压武人实力的同时，北宋从建国之日起，历朝皇帝就有意识地提高文臣的政治地位，处心积虑地营造整个国家“崇文”的气氛。如宋太祖公开宣称：“宰相当用读书人。”暗含着新王朝排斥武人担任宰相。宋代重视科举取士，开国初年，科举中第人数尚少。宋太宗继位仅两个月，科举考试就一次性录取近六百人，数量远远超过太祖朝。由于录取数量过多，执政大臣都觉得过分，担心其中有滥竽充数之人，故而向太宗进谏。但太宗一门心思打算“兴文教，抑武事”，因此，对于臣僚的意见置之不理。宋太宗为了表示“崇文”的决心，大规模重建三馆（昭文馆、集贤院、史馆），亲赐名为“崇文院”。太宗还亲率文武大臣到新落成的秘阁登楼观书，宫中原有的“讲武殿”改名为“崇政殿”。从宣扬武力的“讲武”到体现重视政事的“崇政”，这暗示了北宋王朝国策的转变。在皇帝若明若暗的推动下，北宋重文抑武的大政方针得以确立，文人地位越来越高，相比之下，武人地位越来越低。武将逐渐丧失了职业荣誉感和自豪感，其积极进取的精神和斗志遭到严重摧残，从而极大地降低了作为战将角色的群体素质。</p>
+  <p>在“满朝朱紫贵，尽是读书人”的大环境下，与唐、五代相比，宋代的社会风气发生了根本性转化：社会的优秀人才不再愿意或主动进入军营，文臣更不愿意改换武职。这一点，在北宋初年宋太祖朝时已经初露端倪。当时宋太祖打算让颇为尚武的文臣辛仲甫改换军职，辛仲甫回家将皇帝之意告诉母亲，结果遭到母亲的强烈反对。宋真宗时状元陈尧咨射术高超，但他宁肯担任级别较低的文官，也拒绝出任更高级别的武职。即便是忧国忧民、心怀天下的范仲淹，在与西夏作战的关键时期，朝廷为了鼓励武事，下令其与文臣韩琦、庞籍、王沿一同改任高级武职观察使，但范仲淹等人接到任命后，先后上书坚决辞之。宋神宗、哲宗朝，以兵略见长，著有《何博士备论》《司马法讲义》《三略讲义》等兵书的何去非，其最大的愿望不是成为著名军事家，而是千方百计地将自己的武职身份改为文臣。</p>
+  <p>由此可见，在皇帝有意推动下，重文抑武思想已经成为北宋社会的普遍价值观。在这种价值观的指导下，社会上的优秀人才纷纷涌向文官一途，原本同样重要的武将一途乏人问津。长此以往，无疑会影响到宋代武将队伍水平的提高，直接导致宋代军队在对外作战时的力不从心。此外，宋代推行募兵制度，士兵成分极为复杂，破产农民、地痞无赖，甚至罪犯都能混迹于军队之内，这严重削弱和降低了军人群体的社会地位和尊严。于是，社会上视当兵为贱职，连带着武人地位自然降低。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-11/613c51a59c232e01c17d341d+L.png" data-id="613c51a9904b8c02a16a443e" alt="何去非《何博士备论》" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+何去非《何博士备论》
+    </figcaption>
+  </figure>
+  <p>宋太祖朝，朝廷开始有意识地推行“重文轻武”政策。宋太宗时，“重文轻武”的社会风气真正形成。宋真宗时，继续推行“重文轻武”政策，结果在宋辽交战中，武将群体整体素质表现得极为低下，除少数武将尚称果敢外，绝大多数北宋武将面对来袭的辽军，或躲或逃，毫无斗志。如宋真宗咸平年间，辽军南犯，北宋禁军统帅傅潜统兵十万，却不敢应敌，“闭门自守”。禁军高级军官王荣奉命带领五千余骑兵追击撤退的辽军，王荣不敢进攻，徘徊数日，后为了搪塞朝廷，才不得已率领军队到宋辽界河南岸往返奔跑了一番。由于他担心遇到辽军，下令部下昼夜急驰，最后战马累死了近一半。</p>
+  <p>宋辽澶渊之盟签订后，北方战事基本停息，宋廷武备进一步松弛，武将更受到冷遇。寇准担任枢密使时，武人曹利用担任枢密副使。寇准一向瞧不起曹利用，两人一旦因为政事发生争执，寇准总是轻蔑地说：“你只是一介匹夫，懂得什么军国大事？”除了在朝堂之上武人不受重视，在疆场之上，武人统帅地位也逐渐让位于文臣。宋仁宗时期，朝廷“重文轻武”之风达到了顶峰，军功价值遭到了社会的普遍轻视，甚至出现了“状元登第，虽将兵数十万，恢复幽蓟，逐强虏于穷漠，凯歌劳还，献捷太庙，其荣亦不可及也”如此咄咄怪论。</p>
+  <p>据宋代笔记小说《默记》记载，狄青任定州总管时，一次会客，官妓白牡丹趁着酒醉，公然取笑狄青脸上的从军刺文。一个地位卑贱的官妓，竟然敢在公开场合嘲笑朝廷地方高级将领，可见武将不受世人重视之一斑。在此背景下，参军报效国家成为不受人重视甚至蔑视的事情，文臣将武人应该承担的角色包揽下来，在战场上遥控指挥，排兵布阵，众多的武将则沦为指挥系统中的配角，毫无发言权。当时朝廷军事枢纽枢密院中武将寥寥无几，地方驻军也基本由文官任统帅。如宋人刘挚所云：“不以武人为大帅专制一道，必以文臣为经略以总制之。武人为总管，领兵马，号将官受制，出入战守，唯所指挥。”</p>
+  <blockquote>
+    <p>本文选自游彪《追宋：细说古典中国的黄金时代》，由天喜文化授权刊发。</p>
+  </blockquote>
+  <p>———</p>
+  <p>微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-09-13</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-13/%E4%BA%BA%E9%81%93%E4%B8%BB%E4%B9%89%E7%9A%84%E6%9A%B4%E5%8A%9B%E9%80%BB%E8%BE%91-%E7%BE%8E%E5%9B%BD%E5%9C%A8%E9%98%BF%E5%AF%8C%E6%B1%97%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%A4%B1%E8%B4%A5/">
+          人道主义的暴力逻辑：美国在阿富汗为什么会失败？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-12</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-12/%E5%9C%A8%E4%BF%84%E5%9B%BD%E5%8F%B2%E7%9A%84%E8%A7%86%E9%87%8E%E4%B8%AD-%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%A6%82%E4%BD%95%E9%87%8D%E5%A1%91%E5%88%A4%E6%96%AD%E7%9A%84%E5%B0%BA%E5%BA%A6/">
+          在俄国史的视野中，陀思妥耶夫斯基如何重塑判断的尺度？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-10</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-10/%E9%B9%A4%E8%A7%81%E4%BF%8A%E8%BE%85-%E5%9C%A8%E6%88%98%E4%BA%89%E4%B8%8E%E9%9D%A9%E5%91%BD%E7%9A%84-%E7%9F%AD20%E4%B8%96%E7%BA%AA-%E4%BB%96%E7%9A%84%E6%80%9D%E6%83%B3%E4%B8%8E%E8%A1%8C%E5%8A%A8%E5%A1%91%E9%80%A0%E4%BA%86%E6%88%98%E5%90%8E%E6%97%A5%E6%9C%AC/">
+          鹤见俊辅：在战争与革命的“短20世纪”，他的思想与行动塑造了战后日本
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-08</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-08/%E9%87%91%E8%A7%82%E6%B6%9B-%E5%A6%82%E4%BD%95%E5%8F%91%E7%8E%B0%E6%96%87%E6%98%8E%E6%BC%94%E5%8C%96%E7%9A%84%E5%8E%86%E5%8F%B2%E6%B3%95%E5%88%99%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+          金观涛：如何发现文明演化的历史法则丨燕京讲稿
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-10/%E4%BB%8E%E7%8B%AC%E8%A3%81%E5%88%B0%E6%B0%91%E4%B8%BB-%E5%8F%8D%E6%8A%97%E7%9A%84%E7%81%AB%E7%84%B0-48%E5%B9%B4-iYouPort/">
+            前一篇：从独裁到民主，反抗的火焰 - 48年 - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-12/%E5%9C%A8%E4%BF%84%E5%9B%BD%E5%8F%B2%E7%9A%84%E8%A7%86%E9%87%8E%E4%B8%AD-%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%A6%82%E4%BD%95%E9%87%8D%E5%A1%91%E5%88%A4%E6%96%AD%E7%9A%84%E5%B0%BA%E5%BA%A6/">
+            後一篇：在俄国史的视野中，陀思妥耶夫斯基如何重塑判断的尺度？
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-09-10/%E4%BB%8E%E7%8B%AC%E8%A3%81%E5%88%B0%E6%B0%91%E4%B8%BB-%E5%8F%8D%E6%8A%97%E7%9A%84%E7%81%AB%E7%84%B0-48%E5%B9%B4-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-09-12/%E5%9C%A8%E4%BF%84%E5%9B%BD%E5%8F%B2%E7%9A%84%E8%A7%86%E9%87%8E%E4%B8%AD-%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%A6%82%E4%BD%95%E9%87%8D%E5%A1%91%E5%88%A4%E6%96%AD%E7%9A%84%E5%B0%BA%E5%BA%A6/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-09-12/%E5%9C%A8%E4%BF%84%E5%9B%BD%E5%8F%B2%E7%9A%84%E8%A7%86%E9%87%8E%E4%B8%AD-%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%A6%82%E4%BD%95%E9%87%8D%E5%A1%91%E5%88%A4%E6%96%AD%E7%9A%84%E5%B0%BA%E5%BA%A6/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-09-10/%E9%B9%A4%E8%A7%81%E4%BF%8A%E8%BE%85-%E5%9C%A8%E6%88%98%E4%BA%89%E4%B8%8E%E9%9D%A9%E5%91%BD%E7%9A%84-%E7%9F%AD20%E4%B8%96%E7%BA%AA-%E4%BB%96%E7%9A%84%E6%80%9D%E6%83%B3%E4%B8%8E%E8%A1%8C%E5%8A%A8%E5%A1%91%E9%80%A0%E4%BA%86%E6%88%98%E5%90%8E%E6%97%A5%E6%9C%AC/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-09-10/%E4%BB%8E%E7%8B%AC%E8%A3%81%E5%88%B0%E6%B0%91%E4%B8%BB-%E5%8F%8D%E6%8A%97%E7%9A%84%E7%81%AB%E7%84%B0-48%E5%B9%B4-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-09-12/%E5%9C%A8%E4%BF%84%E5%9B%BD%E5%8F%B2%E7%9A%84%E8%A7%86%E9%87%8E%E4%B8%AD-%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%A6%82%E4%BD%95%E9%87%8D%E5%A1%91%E5%88%A4%E6%96%AD%E7%9A%84%E5%B0%BA%E5%BA%A6/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-09-12/%E5%9C%A8%E4%BF%84%E5%9B%BD%E5%8F%B2%E7%9A%84%E8%A7%86%E9%87%8E%E4%B8%AD-%E9%99%80%E6%80%9D%E5%A6%A5%E8%80%B6%E5%A4%AB%E6%96%AF%E5%9F%BA%E5%A6%82%E4%BD%95%E9%87%8D%E5%A1%91%E5%88%A4%E6%96%AD%E7%9A%84%E5%B0%BA%E5%BA%A6/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-09-10/%E9%B9%A4%E8%A7%81%E4%BF%8A%E8%BE%85-%E5%9C%A8%E6%88%98%E4%BA%89%E4%B8%8E%E9%9D%A9%E5%91%BD%E7%9A%84-%E7%9F%AD20%E4%B8%96%E7%BA%AA-%E4%BB%96%E7%9A%84%E6%80%9D%E6%83%B3%E4%B8%8E%E8%A1%8C%E5%8A%A8%E5%A1%91%E9%80%A0%E4%BA%86%E6%88%98%E5%90%8E%E6%97%A5%E6%9C%AC/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

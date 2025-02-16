@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>愛沙尼亞數位居民申請心得 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+愛沙尼亞數位居民申請心得
+——
+" />
+    <meta property="og:description" content="
+愛沙尼亞數位居民申請心得
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="愛沙尼亞數位居民申請心得" />
+    <meta property="twitter:title" content="愛沙尼亞數位居民申請心得" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2Festonia-e-resident-1614efd60895%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/estonia-e-resident-1614efd60895?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/estonia-e-resident-1614efd60895?source=rss-f1fb3e40dc37------2&text=愛沙尼亞數位居民申請心得&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/estonia-e-resident-1614efd60895?source=rss-f1fb3e40dc37------2&title=愛沙尼亞數位居民申請心得" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/estonia-e-resident-1614efd60895?source=rss-f1fb3e40dc37------2&title=愛沙尼亞數位居民申請心得" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=愛沙尼亞數位居民申請心得&body=
+愛沙尼亞數位居民申請心得
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/estonia-e-resident-1614efd60895?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/estonia-e-resident-1614efd60895?source=rss-f1fb3e40dc37------2&title=愛沙尼亞數位居民申請心得&caption=
+愛沙尼亞數位居民申請心得
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=愛沙尼亞數位居民申請心得&url=https://hulitw.medium.com/estonia-e-resident-1614efd60895?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>愛沙尼亞數位居民申請心得</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-09-23
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/estonia-e-resident-1614efd60895?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1727134301000-->
+<p><a href="https://hulitw.medium.com/estonia-e-resident-1614efd60895?source=rss-f1fb3e40dc37------2">愛沙尼亞數位居民申請心得</a>
+——</p>
+
+<div>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/874/0*zQwROdOqcTP0kJHQ.png" />    <figcaption>
+愛沙尼亞數位居民官網
+    </figcaption>
+  </figure>
+  <p>大約半年前左右，跟朋友聊天時無意間得知有「愛沙尼亞數位居民」這個酷東西，正式名稱為「e-Residency of Estonia」，任何人都可以申請，通過之後可以拿到一個讀卡機跟數位身分證，接著就可以直接在網路上在愛沙尼亞開公司以及開戶。</p>
+  <p>但數位居民終究只存在於數位，這並不是合法的愛沙尼亞公民，也沒有什麼永久居留權，連簽證都算不上，在實體的世界中，有沒有 e-Residency 應該是沒有差別的。</p>
+  <p>那為什麼我想申請這個？申請這個又能幹嘛呢？</p>
+  <h3 id="section">辦這個可以幹嘛？</h3>
+  <p>聽到這個酷東西之後，先上網稍微研究了一下，網路上的中文參考資源不多，基本上就那幾個：</p>
+  <ol>
+    <li><a href="https://medium.com/%E7%88%B1%E6%B2%99%E5%B0%BC%E4%BA%9A%E7%94%B5%E5%AD%90%E5%85%AC%E6%B0%91%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/%E7%88%B1%E6%B2%99%E5%B0%BC%E4%BA%9A%E7%94%B5%E5%AD%90%E5%85%AC%E6%B0%91%E8%AE%A1%E5%88%92%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97-%E9%9B%B6-8b0eba8b2b96">爱沙尼亚电子公民计划不完全指南·零</a> (2018)</li>
+    <li><a href="https://yichuncheng.medium.com/%E5%8D%81%E5%88%86%E9%90%98%E6%88%90%E7%82%BA%E6%84%9B%E6%B2%99%E5%B0%BC%E4%BA%9E%E6%95%B8%E4%BD%8D%E5%85%AC%E6%B0%91-9fb3f194a194">十分鐘成為愛沙尼亞數位公民</a> (2019)</li>
+    <li><a href="https://theinitium.com/article/20230112-international-chinese-estonia-e-id">愛沙尼亞的中國「數字居民」：通往新身份之路</a> (2023)</li>
+  </ol>
+  <p>不過我在寫這篇之前還有找到一個資源超豐富的網站：<a href="https://rososa.com/">爱沙尼亚电子居民社区</a>，裡面很多資源，滿推薦這個的。話說這網站有特別寫一篇<a href="https://rososa.com/e-residency-faq/">电子居民常见问题汇总</a>，裡面有提到：</p>
+  <blockquote>
+<em>虽然有时候你会在网络上看到“电子公民”这个词，但是答案是：没有“电子公民”这个东西，它其实是“电子居民”。从词语的具体含义和法律含义来说，“公民”与“居民”虽一字之隔，但是有着巨大的差别，过去在互联网上有很多网站和博主使用过“电子公民”一词，在不严谨的情形下，很多网友将“电子居民”与“电子公民”混用。本站(rososa.com)也与爱沙尼亚电子居民办公室做过沟通和确认，中文应为“电子居民”。所以也推荐大家本着避免误会，和传达准确意义的角度，统一使用正确的称呼：“电子居民”</em>  </blockquote>
+  <p>聽起來滿有道理的，因此這篇標題才會是「數位居民」而非「數位公民」。</p>
+  <p>總之呢，研究完一輪之後，發現跟我理解的差不多，成為數位公民之後，在網路以外的世界是沒有任何差異的，你入境愛沙尼亞也不會走特別通道，原本需要簽證的話現在還是需要。</p>
+  <p>因此，所謂的愛沙尼亞數位居民，說穿了就是「住在愛沙尼亞數位世界的人」。</p>
+  <h3 id="section-1">愛沙尼亞數位世界</h3>
+  <p>如果你說在台灣有個台灣版的數位公民，發給你一個自然人憑證然後可以使用網路上的服務，這可能沒什麼大不了的，因為大多數服務可能還是需要你跑一趟實體的據點，或者是蓋章之類的。如果想要開公司的話，一樣要去跑大地遊戲。</p>
+  <p>但愛沙尼亞就不同了，他們什麼都可以在線上辦，甚至連投票也可以。</p>
+  <p>國家發展委員會資訊管理處的<a href="https://ws.ndc.gov.tw/Download.ashx?u=LzAwMS9hZG1pbmlzdHJhdG9yLzEwL3JlbGZpbGUvMC8xMTM5Mi9iY2JiYzk5NC02NTA3LTQzMDAtODViYy0yMTkwM2JhMTM5NDgucGRm&amp;n=5pW45L2N5rK75ZyL55qE5oSb5rKZ5bC85Lqe77yM5pW45L2N5YWs5rCR542o5q2l5YWo55CDLnBkZg==&amp;icon=..pdf">數位治國的愛沙尼亞，數位公民獨步全球</a>一文中有提到：</p>
+  <blockquote>
+<em>根據愛沙尼亞官方統計，在愛沙尼亞有 99%的銀行轉帳通過數位平臺進行，95%的納稅人在網上申報所得，98%的藥物以數位方式提供處方，66%的人口曾參加線上人口普查，98%的愛沙尼亞人皆使用數位身份證，由此可知，愛沙尼亞民眾數位化程度也相當高，幾乎所有大小事都能在線上完成。根據世界銀行 2016 年的報告統計，愛沙尼亞已經有超過 3 千多個政府和銀行的服務可以透過網路提供：透過網路，可以在 20 分鐘內成立 1 間公司；不需要透過會計師，在 5 分鐘內即可申報收入</em>  </blockquote>
+  <p>還真的什麼都可以在網路上搞定，非常方便。</p>
+  <p>想知道更多的話可以參考 2021 年報導者的文章：<a href="https://www.twreporter.org/a/e-id-in-estonia">連「政府」都備份好了！愛沙尼亞如何打造世界最成功的數位社會？</a>。</p>
+  <p>有不少人想成為愛沙尼亞數位居民，都是因為透過這個身份，可以在愛沙尼亞，也就是歐盟裡面開一間公司，如果想做那邊的生意的話，是一個非常方便的管道。而這也是數位居民的主要目的，官方網站的標題已經告訴你了：</p>
+  <blockquote>
+<em>e-Residency of Estonia | Apply &amp; start an EU company online</em>  </blockquote>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/624/0*SxAMJui7UYgvBTjI.png" />
+  </figure>
+  <p>那如果不需要開公司的話，申請這個數位居民可以幹嘛？</p>
+  <p>似乎還真的不能幹嘛，因為開戶的話如果是以個人的身份，應該還是開不了（或是很困難，這部分我沒有深入研究），但我的話覺得倒是沒什麼關係，更多是出自於有趣，覺得「哇，愛沙尼亞數位居民欸，這聽起來就超酷的啦」。</p>
+  <h3 id="section-2">申請歷程</h3>
+  <p>更多介紹以及申請連結都在官網上面：<a href="https://www.e-resident.gov.ee/">https://www.e-resident.gov.ee/</a></p>
+  <p>基本上整個流程就是：</p>
+  <ol>
+    <li>填資料申請</li>
+    <li>等待結果</li>
+    <li>通過</li>
+    <li>等待寄送 ID card，只能去愛沙尼亞大使館領（我選東京的）</li>
+    <li>去大使館領取 ID card</li>
+    <li>完成</li>
+  </ol>
+  <p>申請的部分，反正就資料填一填，但要填的東西還不少，包括：</p>
+  <ol>
+    <li>申請理由</li>
+    <li>個人聯絡資訊</li>
+    <li>護照</li>
+    <li>證件照</li>
+    <li>社群媒體帳號</li>
+    <li>履歷（來看你的學歷跟經歷）</li>
+    <li>（還有一些但我懶得寫）</li>
+  </ol>
+  <p>我不確定是不是每樣都是必須的（例如說社群媒體帳號），但我是都有給就是了。另外，最後送出申請時需要支付 120 歐元的手續費，折合台幣約 4300 塊。</p>
+  <p>送出之後，就會收到一封 email 說已經成功送出申請，接著就是等結果了。</p>
+  <p>我是 5/19 的時候送出申請的，5/29 收到通過的信件，話說信件上面寫的是「Your application for the e-resident’s digital ID has received a positive decision」，「positive decision」，學到了新的用法。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*vf9sxif1Zn5JT0_c.png" />    <figcaption>
+申請通過的信件
+    </figcaption>
+  </figure>
+  <p>通過之後就會開始製作我的 ID card 然後寄到我選的東京大使館，要等寄到之後才能去領。等了一個多月，終於在 6/27 收到信件，通知說我的 ID card 寄到了。</p>
+  <p>信裡會有一個預約連結，點左上角的國旗可以選語言：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*B5cGWsC9ZVYLL9Ut.png" />    <figcaption>
+預約系統
+    </figcaption>
+  </figure>
+  <p>如果人在台灣的話，來東京玩的時候可以順便約時間去拿，但並不是每個時段都可以，目前（2024 年 8 月）只有每週一跟三的早上可以預約而已，其他時間是不行的。</p>
+  <h3 id="section-3">領取證件</h3>
+  <p>愛沙尼亞駐東京大使館在一個滿尷尬的位置，離周遭的每一個地鐵站都不算近：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/441/0*y30tBPuzQHEULIKg.png" />    <figcaption>
+地圖
+    </figcaption>
+  </figure>
+  <p>我是搭到北參道之後走過去的，路程大約是 15 分鐘。強烈建議不要在夏天做這種事，你大概有 80% 的機率會後悔，因為超級熱，而且沿途沒什麼遮蔽物，就沿路曬曬曬一直曬到大使館。比較好的做法可能是找個更近的地鐵站（外苑前）、搭公車或是搭計程車，否則太陽真的太可怕。</p>
+  <p>不確定那邊能不能拍照，但是 <a href="https://maps.app.goo.gl/1WJKqP6xXytrYbwJA">Google Maps</a> 上面有一些照片可以看，就是一個小小的建築物，到門口之後需要按對講機告知身份才能進去。</p>
+  <p>進去之後確實如我朋友所說，還滿漂亮的，第一次看到大使館，原來是這種感覺。</p>
+  <p>然後就會有人來處理一些手續，會簽一份文件跟按指紋，整個流程大約 15 分鐘，大部分時間都在等，中間也沒聊什麼。總之呢，最後就會拿到證件外加讀卡機，還有一份使用說明（讀卡機在裡面）：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*5gmtNKGQ9LxII6nV.jpg" />
+  </figure>
+  <h3 id="section-4">進入愛沙尼亞數位世界</h3>
+  <p>在開始之前，需要做一些前置準備。</p>
+  <p>在電腦上要安裝一個叫 DigiDoc 的軟體，接上讀卡機以後可以用這個軟體簽署電子文件，也能看到自己的個人資料：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*WwLPfn_PeVBWcNzm.png" />
+  </figure>
+  <p>再來的話還要裝瀏覽器的擴充套件，裝完之後就可以登入愛沙尼亞的網站，查看有哪些服務可以使用：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*_g8pljFaQoFGinfs433vTw.png" />
+  </figure>
+  <p>跟之前查得差不多，基本上什麼都可以在上面完成，全部都整合在同一個入口裡面，滿方便的。而且剛剛提到的 DigiDoc 跟這個網站，應該都是他們自己的公民就會使用的服務，是同一套系統，而不是只為了數位居民而建的。</p>
+  <p>話說我拿到證件之後才發現原來這個數位居民不是永久的，效期是五年，快到五年的時候需要更新，更新的時候要再付 120 歐元左右的更新費用，底下是 dashboard 的截圖：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/784/0*DWg24JP2c0mRGsw0.png" />
+  </figure>
+  <p>還有另一件事情是官方的文件有提到成為數位居民之後，會拿到一個 @eesti.ee 的 email 地址，所有官方的通知都會寄到這個地址去，但因為它並沒有一個真的 email client 讓你登入，所以需要去網站上設定 email forwarding，轉到自己在用的其他信箱去。</p>
+  <p>我試了一下，這句話讓我以為我會有一個「<a href="mailto:xxx@eesti.ee">xxx@eesti.ee</a>」的 email 可以用，所有寄到這邊來的，都會轉到我設定好的信箱去。</p>
+  <p>不過我在哪都找不到這個 xxx 是什麼，最後好不容易才搜尋到這個公告：<a href="https://www.eesti.ee/en/news/email-addresses-using-names-and-ending-in-eestiee-are-closed-as-of-today">Email addresses using names and ending in @eesti.ee are closed as of today</a>，看起來那個 xxx 是 personal identification code，類似身分證字號的東西。</p>
+  <p>嘗試寄到我的地址之後，直接噴了一個錯誤訊息是不允許某個 IP 發送到這個位置，看來就只能收來自官方的信件而已，沒辦法做為私人用途。</p>
+  <p>這樣講起來根本也不用知道什麼 @eesti.ee，從頭到尾就只是能設定一個 email address，讓官方把通知信件寄給你，僅此而已，否則多一個 @eesti.ee 的信箱感覺挺帥的。</p>
+  <h3 id="section-5">結語</h3>
+  <p>以上就是我申請愛沙尼亞數位居民的歷程，目前得到的結論是：「如果沒有想在愛沙尼亞開公司，申請這個沒有其他實際用途」。</p>
+  <p>因此，下一步我就要來研究怎麼在那邊開個公司了。</p>
+  <p>原本其實是想寫在同一篇的，但我想得太天真了，因為有不少東西需要研究。最簡單的方案就是找個一條龍的線上服務，從開公司到提供會計服務全部搞定，類似於台灣的 <a href="https://simpany.co/">Simpany</a>，但一個月需要 60 歐元（大部分都是會計用途），一年就是 25,000 台幣左右，如果我這個公司也是沒什麼在運作的（整年搞不好三四筆紀錄而已），那成本有點太高了。</p>
+  <p>這些開發票、申報以及記帳的東西，如果不複雜的話其實可以考慮自己來（法規允許的話），也可以分開找不同的線上服務花錢處理，看有沒有更簡單的方式。</p>
+  <p>綜合以上所述，開公司以及事前研究的部分還在進行中，因此之後會再寫一篇，只是不知道要多久就是了（正大光明的拖稿預告）。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=1614efd60895" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+    
+      <li>
+        <time>2025-02-15</time>
+        <a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">
+          不會日文去考 JLPT 日檢 N2 可以得幾分？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-07-11</time>
+        <a href="https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/">
+          1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-06-28</time>
+        <a href="https://nodebe4.github.io/oped2/2024-06-28/%E5%88%B0%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%80%8E%E9%BA%BC%E7%B9%B3%E7%A8%85-%E7%A8%85%E6%9C%89%E5%A4%9A%E9%87%8D-%E8%B7%9F%E5%8F%B0%E7%81%A3%E6%AF%94%E5%91%A2/">
+          到日本工作怎麼繳稅？稅有多重？跟台灣比呢？
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/">
+            前一篇：1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">
+            後一篇：不會日文去考 JLPT 日檢 N2 可以得幾分？
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

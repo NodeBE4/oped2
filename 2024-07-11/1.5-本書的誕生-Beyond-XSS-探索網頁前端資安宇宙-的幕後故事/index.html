@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事
+——
+" />
+    <meta property="og:description" content="
+1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事" />
+    <meta property="twitter:title" content="1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2Fstory-behind-beyond-xss-12c2179ae7dc%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/story-behind-beyond-xss-12c2179ae7dc?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/story-behind-beyond-xss-12c2179ae7dc?source=rss-f1fb3e40dc37------2&text=1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/story-behind-beyond-xss-12c2179ae7dc?source=rss-f1fb3e40dc37------2&title=1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/story-behind-beyond-xss-12c2179ae7dc?source=rss-f1fb3e40dc37------2&title=1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事&body=
+1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/story-behind-beyond-xss-12c2179ae7dc?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/story-behind-beyond-xss-12c2179ae7dc?source=rss-f1fb3e40dc37------2&title=1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事&caption=
+1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事&url=https://hulitw.medium.com/story-behind-beyond-xss-12c2179ae7dc?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-07-11
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/story-behind-beyond-xss-12c2179ae7dc?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1720736106000-->
+<p><a href="https://hulitw.medium.com/story-behind-beyond-xss-12c2179ae7dc?source=rss-f1fb3e40dc37------2">1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事</a>
+——</p>
+
+<div>
+  <h3 id="beyond-xss">1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事</h3>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/750/0*yvdTskmpZj1PNi_E.jpg" />    <figcaption>
+書的封面
+    </figcaption>
+  </figure>
+  <p><a href="https://www.tenlong.com.tw/products/9786267383803?list_name=r-zh_tw">Beyond XSS：探索網頁前端資安宇宙</a>是一本即將於 7 月 19 日正式發售的書籍，其內容源自於我在 2023 年 9 月時參加的 iThome 鐵人賽同名系列文章，基本上整本書是改寫自那個系列文，但有修正了一些錯誤，並且加上了全新的章節。</p>
+  <p>這篇文章就來寫一下這本書背後的故事，包括我為什麼寫、怎麼寫，以及到底花了多久，又為什麼是 1.5 本書。前面會有一段時間聽我在講古，如果只對出書的部分有興趣，可以快速略過。</p>
+  <h3 id="section">17 年前的夢想</h3>
+  <p>從小時候開始，就一直覺得能寫一本電腦書的話，那真是太好了。畢竟書並不是每個人都可以寫的，要有出版社的認可，才能寫上一本；而需要得到認可，無論是在技術還是在寫作，都必須具備一定的能力。因此，出書這件事情的目的，對我來說並不在於書要賣得多好，而是「能出書」這件事情的價值。</p>
+  <p>大概就像金曲獎一樣，入圍就是肯定，不管得不得獎，只要能入圍就已經很厲害了。</p>
+  <p>之前在寫我自己的<a href="https://life.huli.tw/2017/10/05/the-programming-journey-1-b9b19c0ef05b/">故事</a>時就有提過我小時候的經歷，這邊再詳細寫一次。想寫書不是只有說說而已，早在 2007 年的時候，我就寫信到專門出電腦書的松崗出版社，提說我想寫一本 Visual Basic 2005 的入門書。</p>
+  <p>而那時出版社回覆由於 Visual Basic 2005 即將改版，因此他們目前並沒有出版入門書籍的計畫，而當時的我也沒有其他能寫的主題，所以就只好放棄。</p>
+  <p>2007 年，距今 17 年前，那時我 13 歲，國中二年級。</p>
+  <p>當時的提案內容已經不見了，但如果我沒記錯的話，我應該是覺得那些入門書雖然嘴上說著入門，但其實對一般人（或是對我這個國中生）來說門檻還是太高，入不了門。因此我希望由我的角度來寫一本入門書，目標是讓國中生也能看得懂，也能學習寫程式。看來這種「我能講得比其他人清楚」的自信，是從小就有了。</p>
+  <p>既然沒辦法寫書，那就只好試試看其他管道了。</p>
+  <p>在同年年底，我寫信給雜誌《電腦王》，現在看起來那封信件很沒禮貌，沒頭沒尾的：</p>
+  <blockquote>
+<em>請問對這個主題有興趣嗎?<br />用VB2005寫一個檔案監視程式</em>  </blockquote>
+  <p>但以一個沒什麼在用 email 的國中生來說，或許也就這樣了？</p>
+  <p>而電腦王的編輯則是很認真回覆了我的信，並且附上提案的範例，跟我說可以給他們一個比較完整的說明，他們才比較好評估是否錄用。而在那之後我給出了這樣一份提案：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*HXlnRHBMtzRAbeOq.png" />    <figcaption>
+提案初體驗
+    </figcaption>
+  </figure>
+  <p>接著，編輯回覆說提案沒有問題，於是我就開始寫了，大概花了一週的時間寫完，然後收到編輯修改過的稿子，看到文章裡面有好多虛線以及註解還有修改建議，那時我才知道：「原來 Word 應該是要這樣用」。</p>
+  <p>於是呢，在 2008 年 2 月，我寫的稿子被登上了電腦王雜誌，我那時候超級無敵興奮。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/800/0*4QARxTZSdfT0KpHo.png" />    <figcaption>
+電腦王雜誌翻拍
+    </figcaption>
+  </figure>
+  <p>除了我寫的文章被刊出來很開心以外，拿到稿費也很開心。稿費是一字一塊，而且不知道為什麼，我記得連程式碼也算在內（但我沒有偷灌水啦），最後拿到了 3000 多塊錢。</p>
+  <p>對一個國中生來說，3000 塊是很大一筆錢。</p>
+  <p>然後有個插曲滿好笑的，因為要申請稿費的緣故，需要提供我的身份證影本，結果我回他說：「沒有身分證怎麼辦？」，不過後來因為我剛好滿 14 歲，所以就為了這個去申請了身份證。</p>
+  <p>隔了一年，2009 年的 2 月，我又投稿了一篇新的文章，題目為：「Keylogger鍵盤記錄自己寫」，被刊登在 2009 年 6 月出版的雜誌上面。</p>
+  <p>後來升上高中之後，就沒有再繼續投稿了。之所以會特別寫這一段，是因為這大概是我開始寫作的開端吧，比部落格還要早。</p>
+  <h3 id="section-1">為什麼一定要是書？</h3>
+  <p>讓我們把時間快轉到 2009 年的 5 年後，也就是 2014 年，我大二的時候。因為開始工作的關係，又開始寫起了部落格。只所以會說又，是因為高中的時候也曾經寫過，但只寫了三四個月就停更放棄了。</p>
+  <p>從那之後就養成了固定寫部落格文章的習慣，從 2014 一直到現在 2024，這十年間都沒停過。而這段期間也累積了不少讀者，寫過不少文章，也收到許多讚賞的留言，稱讚說某篇文章寫得真好之類的。</p>
+  <p>既然寫文章收到這些讚賞已經很開心了，而且部落格也在特定的圈子中小有名氣，那為什麼非得寫書不可呢？</p>
+  <p>答案或許跟開頭講的一樣吧，出書有種被認可的感覺，並不是每個人都可以出書的。雖然說寫文章得到稱讚一樣會覺得被認可，但或許是我覺得這樣還不夠吧？或許對大眾（還有我）來說，「我寫了一篇超讚的技術文章」跟「我寫了一本書」，後者還是更厲害一點。</p>
+  <p>再者，技術文章通常只是一篇，但要寫書的話，需要更完整的規劃，才能撐起一本書的篇幅。雖然說也有一些書寫得不怎麼樣，但對我來說，我對寫書有一種迷思，認為能出書就是強者。</p>
+  <p>一直到 2021 年 7 月的時候，我還在社群媒體上發文，講說小時候的目標之一是寫電腦書，而現在想寫書，最快的管道應該就是 iThome 鐵人賽了，不過我很懶得再參加一次，還是作罷吧。</p>
+  <p>但你知道的，後來我還是參加了。</p>
+  <h3 id="section-2">寫書的捷徑與心態的轉變</h3>
+  <p>iThome 鐵人賽是一個由 iThome 所舉辦的活動，固定在每年的八九月左右，參賽者必須連續 30 天發文，才算完成比賽，而比賽會根據主題分成不同組別，例如說 Web 組、資安組或是 DevOps 組等等。</p>
+  <p>在 2017 年的時候我有寫了一個 <a href="https://ithelp.ithome.com.tw/users/20091346/ironman/1150">Half-Stack Developer 養成計畫</a>系列，拿到了優選。</p>
+  <p>而應該是從 2020 年開始，出版社博碩文化開始與 iThome 鐵人賽合作，得獎的書籍都有機會可以出書，至今這個系列已經累積了上百本的書籍。</p>
+  <p>這就是為什麼我當時會說想寫書的話，最快的管道就是透過這個比賽，因為只要能得獎，幾乎就是出書的保證。但其實透過鐵人賽得獎來出書，跟我原本想出書的初衷，是有點不太一樣的。</p>
+  <p>我為什麼想出書？因為想得到出版社的肯定，我的理想情節是有天出版社主動寄信給我，跟我說他們看我文章寫得不錯，想要邀請我出書，這就是我所謂的「得到出版社的認可」。</p>
+  <p>但如果透過鐵人賽就不同了，雖然說我同樣是得到了鐵人賽評審的認可，但之所以能出書，並不是因為「出版社主動看到了我的文章，覺得我的文章有潛力」，而是「我鐵人賽得了獎」，對我來說還是不太一樣的。</p>
+  <p>這大概就像是我想要在 YouTube 上面一直發表翻唱 cover，直到某天有唱片公司聯絡我說：「你唱得不錯，有沒有興趣簽約？」，而不是自己去報名歌唱比賽，拿了冠軍之後被合作的唱片公司簽走。</p>
+  <p>或許是一種主動跟被動的差別吧？我認為「被動地被發現」比「主動讓別人看見我」，來得更加厲害，更加特別。</p>
+  <p>可能很多人會覺得這有些幼稚，覺得這是莫名其妙的堅持，但無論如何，我就是那樣想的。</p>
+  <p>在近期探索自我的過程中，我才漸漸明白原來「想要變得特別」是我做很多事情的原因（我以前沒發現這件事）。如果透過鐵人賽得獎出書，我就變得跟許多人一樣，就不特別了。</p>
+  <p>然而，在 2023 年的時候，我還是報名了鐵人賽，並且不諱言自己就是為了出書而來。</p>
+  <p>之所以會下這個決定，是因為我仔細思考了一番，最後認為無論管道是什麼，途徑是什麼，只要能出書的話，都是值得嘗試的，畢竟出書對我來說還是有其意義在。</p>
+  <p>因此，那次報名鐵人賽，在寫的時候就是抱持著我要寫一本書的心態跟架構下去寫的。既然都報名了，那就要認真寫；既然都認真寫了，那就一定要得獎。</p>
+  <h3 id="section-3">出書 222：2 本書、2 家出版社、2 次延遲交稿</h3>
+  <p>2023 年 9 月 30 號，我的第 15 屆 iThome 鐵人賽畫下了句點，順利達成了連續 30 天發文的目標，而文章的品質也在我預期之中。預期之中的意思是，有些文章我寫完的時候，會打從心底覺得自己似乎有點厲害，並且給出自己的文章「這切入點真是特別」或是「這個講解方式太強了吧」這些評語。</p>
+  <p>而 10 月中的時候，鐵人賽都還沒公布得獎名單，深智數位出版社就透過 email 聯繫了我，說看到我的文章後覺得豐富的經歷讓人印象深刻，問我有沒有出書的意願。</p>
+  <p>而後來也跟他們開了簡短的線上會議，大致討論了一下。</p>
+  <p>雖然說他們一開始想出的是鐵人賽那個系列，但我認為鐵人賽的合作出版社是另一間博碩文化，在參賽的規章中也有寫說在相同條件下，博碩文化應該優於其他出版社。因此鐵人賽的文章我想先留給博碩文化，至少先談過之後再來決定後續規劃（儘管當時還沒公布得獎名單，但我就覺得一定會有我，至少拿個優選不為過吧）。</p>
+  <p>但同時我一直有個很想寫的系列，那就是被我放置很久的：<a href="https://github.com/aszx87410/blog/discussions/93">JavaScript 隨意聊聊</a>，因此與深智討論過後，他們同意用這本書繼續推進，用這本書來簽合約。</p>
+  <p>在 11 月初的時候，我們就完成了簽約，當初我自己訂的交稿日期是隔年的 3 月。</p>
+  <p>於是呢，從那之後我就過著寫書、拖延、拖稿、寫書、拖延、拖稿的無窮迴圈。</p>
+  <p>而 11 月底的時候，鐵人賽公佈了得獎名單，我的系列文是資安組的冠軍，順利拿到了出書的機會。</p>
+  <p>接著在 12 月 4 日，收到了博碩文化的通知信，依照裡面的指示與編輯加了 LINE，等待後續的通知。</p>
+  <p>而到了隔年（也就是今年，2024 年）的 1 月 31 日，收到博碩的後續通知，要我們整理鐵人賽系列文的全文 Word 檔案、基本資料以及新書規劃，內容是市場上同類型的作品有哪些，自己的作品又有哪些優勢等等。</p>
+  <p>而差不多在同一天，我的 JavaScript 書籍進度只有 170 頁（預計要寫 400 頁），進度落後，我自己評估沒辦法在約定好的 3 月完成，因此先通知編輯會延期，至於延到什麼時候，等 2 月底再確定。</p>
+  <p>到了 2 月底的時候，進度是 210 頁，大概是一半左右，因此我跟編輯說需要延到五月底。</p>
+  <p>然後在 3 月初的時候，博碩那邊有了後續進展，開始到了下一個階段，需要安排線上會議。由於我平日上班時間都沒有辦法，比較難請假，因此只能詢問日本的假日（只有特定幾天）或是平日晚上有沒有空。</p>
+  <p>到了 4 月 10 日，收到博碩的通知，給了交稿格式範本讓我們參考，並希望我們提供想要問的問題，之後會安排時間與作者們線上會議。</p>
+  <p>而這個時候，我對出書這件事情有了一些別的想法。</p>
+  <p>從時程中其實可以看出博碩這邊由於是一次跟所有鐵人賽得獎者聯繫，所以進度會更緩慢一點，但這對我來說反倒是個優點，因為我才有時間能先把 JavaScript 的書完成。</p>
+  <p>雖然說原本我是很期待同時跟兩間出版社合作，想說可以比較一下彼此的差異順便寫一篇心得文，但真的合作之後發現自己有點太天真了，蠟燭兩頭燒是真的忙不太過來，就算進度比較緩慢也一樣。</p>
+  <p>而且除了寫書，也有其他很多生活上與工作上的事情要忙，開始漸漸覺得要同時顧到兩邊確實是有點累。</p>
+  <p>除此之外，4 月中的時候我的 JavaScript 書籍進度在 320 頁，雖然已經完成了 80%，但剩下的那 20% 是很花時間的一個章節（scope、closure 與 this），我並不覺得在一個半月內可以寫完，因此有很高的機率必須往後再延。</p>
+  <p>總之呢，我覺得當時再繼續這樣下去的話，我可能會先 burn out，於是再三思考過後，決定把 JavaScript 那本書籍先暫停，並且把鐵人賽的系列文簽給深智，博碩的話就不接著跑後續流程了。</p>
+  <p>做這個決定背後的理由是基於：</p>
+  <ol>
+    <li>為了避免太累，只能選擇一間合作</li>
+    <li>JavaScript 書籍需要先暫停寫作。因為一來沒辦法如期交稿，再繼續延我不太好意思，二來我對這個系列有其他想法，例如說其實可以先開個 workshop 再根據學生 feedback 改善，才出成書籍等等。</li>
+    <li>只出鐵人賽那本的話，我希望速度盡可能快一點</li>
+  </ol>
+  <p>因為已經與深智先簽了約，所以把出書的計畫停了也不太對，所以就需要拿鐵人賽那本來補，改成簽那本，而且交稿日維持不變。至於博碩的話還在偏早期的階段，還沒正式開過會也還沒簽約，還來得及中止。</p>
+  <p>總之呢，跟兩邊都告知了這個狀況以後，就朝這個方向走了。</p>
+  <p>這也是為什麼標題會說是 1.5 本書，因為那 0.5 本是未完成的 JavaScript 書籍，那個章節我依舊還沒動筆。</p>
+  <p>因為鐵人賽那本 XSS 的書，原本就是照著寫書的架構去規劃，所以要改的東西並不多，改起來滿快的，因此也在五月底的時候順利交稿。</p>
+  <p>5/29 交稿之後，隔了一週深智就給了第一章節排版過的範例讓我確認，與此同時跟我要了書的作者介紹以及封面封底的文字，封面的設計我也自己用 AI 產生了幾張圖，讓他們作為範例參考：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*LT1b29RCq0dYVFk9.png" />    <figcaption>
+Bing 幫我產生的封面圖
+    </figcaption>
+  </figure>
+  <p>6/17 的時候排版完成，進行第一次校對，6/20 二校，6/26 最後校對，接著 7/2 就被通知書籍已經開始預購了。</p>
+  <p>進入校對之後，文字上就沒有什麼動了，基本上都是改善一些排版而已。</p>
+  <h3 id="section-4">書跟原本的系列文差在哪裡？</h3>
+  <p>前面一再提到當初寫鐵人賽系列文的時候，就已經是用寫書的規劃去寫的，所以原本就規劃 30 篇隸屬於五個章節，從賽後我自己用 Docusaurus 架的網站可以看出來這件事情：<a href="https://aszx87410.github.io/beyond-xss/">https://aszx87410.github.io/beyond-xss/</a></p>
+  <p>因此，大約有八成的內容其實都是直接照搬文章。</p>
+  <p>剩下的兩成是一些小細節，除了修錯字以及比較不通順的地方以外，我還做了底下這些事情。</p>
+  <h3 id="section-5">去除連結</h3>
+  <p>當我在寫文章的時候有兩個習慣：</p>
+  <ol>
+    <li>附上一堆參考連結</li>
+    <li>自己還沒這麼熟的地方，就先放個連結連到補充資訊，讓讀者自己參考</li>
+  </ol>
+  <p>但這兩點對於實體書籍來講，閱讀體驗其實是不太好的。因為你在看書的時候，不會拿出手機或電腦來訪問這些連結，所以這些連結對於在看實體書籍的人來說，是沒什麼幫助的，甚至閱讀起來會有些干擾。</p>
+  <p>因此，有些地方如果參考連結太多，我會把那些內容拿掉或是縮減，盡可能讓它不要太干擾閱讀的體驗。</p>
+  <p>再者，有些「有興趣的話可以看 XXX」的地方我拿掉了，直接把參考內容的大意寫在書籍裡面，讀者就不需要自己去看。舉例來講，在第一章我有談到 Chromium 的 RCE 漏洞 CVE-2021–30632，但並沒有解釋原因，而是讓讀者自己去看：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/750/0*Pp3EdAkY_noZg4vP.png" />    <figcaption>
+原本鐵人的文章
+    </figcaption>
+  </figure>
+  <p>說穿了其實就是覺得發生原因太複雜需要更多時間研究，但因為沒時間或因為懶所以沒有仔細看，因此至少留個連結給有興趣的人自己看。</p>
+  <p>但這樣其實閱讀體驗也不太好，因此在書籍版我就直接補上了相關內容，大概講了一下漏洞發生的原因：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*H9qQpH5dPqV1DWhy.png" />    <figcaption>
+出書修改後的內容
+    </figcaption>
+  </figure>
+  <p>這只是其中一處而已，還有其他地方也做了類似的事情。</p>
+  <h3 id="section-6">補充內容</h3>
+  <p>XSS 系列文完成的日期是 2023 年 9 月底，其實已經是半年前了，在這半年當中我也有學到一些新知識，就順勢補充進去書裡面。</p>
+  <p>例如說原本有一個章節在談 MIME sniffing，是有關 content-type 的知識，我就把今年 4 月份看到的 Flatt Security 的研究 <a href="https://speakerdeck.com/flatt_security/xss-using-dirty-content-type-in-cloud-era">XSS using dirty Content Type in cloud era</a> 也一起補充了進去。</p>
+  <p>只要是我有想到可以補充的地方，都會順便補充一下。</p>
+  <h3 id="section-7">新增章節</h3>
+  <p>上面的這些改變頂多只是「改進原有的內容」，實際上的主軸還是與原本的文章相同。而我自己認為既然都出書了，那在書籍裡面就應該提供額外的附加價值，一定要有更多本來的文章沒有的東西。</p>
+  <p>因此，特地為書籍寫了一個全新的章節：「Case study — 有趣的攻擊案例分享」，寫了 5 個我覺得非常值得一提的例子，這部分大約有 30 頁左右。</p>
+  <p>話說寫完之後我才發現怎麼 5 個案例全部都是 XSS，說好的「Beyond XSS」呢。</p>
+  <h3 id="section-8">寫書以及與出版社合作的心得</h3>
+  <p>同時與兩間出版社合作的過程中，自然也有感受到兩間出版社的不同。</p>
+  <p>博碩文化有許多與鐵人賽作者的合作經驗，因此有一套完整的規劃，就有點像大公司會有那種完整的新人教育訓練一樣，他們會主動提供各種的範例讓你參考，而你自己也必須做出回應，去研究市場上的同類書籍，並且繳交書籍規劃等等。</p>
+  <p>不過由於鐵人賽的作者有很多人，所以前置作業的時間會拉的比較長一點。如果對博碩出版的完整流程有興趣，可以參考 Taiming 寫的：<a href="https://just-taiming.medium.com/ithome-%E9%90%B5%E4%BA%BA%E8%B3%BD%E7%B3%BB%E5%88%97%E6%9B%B8%E7%B1%8D-%E5%AE%8C%E6%95%B4%E5%87%BA%E7%89%88%E6%94%BB%E7%95%A5-ea4a3d124341">iThome 鐵人賽系列書籍-完整出版攻略</a>。</p>
+  <p>而相對來說，深智數位就比較沒有這麼完整的規劃，主動提供的資源較少一些，但也因為少了許多前置作業，所以可以縮短整體的時程。</p>
+  <p>總之呢，我自己與這兩間出版社合作過後，並沒有特別推薦或是不推薦哪一間，兩間合作起來都沒什麼問題，主要還是根據自己的需求以及偏好而定，我自己的話就與深智的風格滿契合的，合作的滿順利的。</p>
+  <p>至於有關寫書的心得，儘管大部分內容都有了，但還是覺得滿累的，畢竟對寫書的標準跟寫部落格的標準還是不同的，前者應該要更嚴格一點。另外，實體書本這個載體也是非常特殊，一旦印出了，就沒有辦法更改，因此需要嚴格要求內容的正確性以及盡可能去除錯字以及排版錯誤等等。</p>
+  <p>還有我之前提過的，同樣是附一個連結，説「想知道更多可以看這裡」，在網頁上可能 10 個人還會有一兩個點進去，但是在書上，可能 10 個人裡面沒有一個會拿起手機輸入網址。因此，需要盡可能把想補充的都直接補充在書上。</p>
+  <p>話說回來，前面有提到寫書曾經是我的夢想之一，參加鐵人賽也是為了寫書，那現在夢想達成了，感覺如何？</p>
+  <p>達成了一個里程碑，會開心一下是難免，但總覺得沒有想像中這麼…興奮嗎？比起書籍出版這件事情，在文章寫完的當下，或是看到有人推薦系列文的時候，其實更為開心。</p>
+  <p>仔細想想，或許追求目標的過程，比達成目標更為有趣吧。</p>
+  <p>以上就是這次寫書的心得以及背後的故事，如果對書有興趣的話，可以至書局購買：<a href="https://www.tenlong.com.tw/products/9786267383803?list_name=r-zh_tw">Beyond XSS：探索網頁前端資安宇宙</a></p>
+  <p>最後附上出書跟與出版社聯絡的完整時間軸，供有興趣的人參考：</p>
+  <p>2023/09/01 iThome 鐵人賽開賽<br />2023/09/30 iThome 鐵人賽完賽<br />2023/10/13 深智數位出版社聯繫，詢問出書意願<br />2023/10/20 初次線上會議<br />2023/10/22 我提了兩個想法，一個是 JavaScript 隨意聊聊，另一個冷知識大全<br />2023/10/25 決定出 JavaScript 的書，收到合約<br />2023/11/01 簽完合約回傳<br />2023/11/09 收到簽好的合約，約定交稿日為 2024/03/01<br />2023/11/28 鐵人賽公布得獎名單<br />2023/12/04 [博碩] 收到博碩文化的通知信，詢問出版意願並且加 LINE<br />2023/12/08 [博碩] 收到訊息說要填寫基本資料，之後會主動聯繫</p>
+  <p>2024/01/23 [博碩] 收到訊息說因為編輯有點狀況，會於月底發放詳細資訊<br />2024/01/31 進度 170 頁，評估無法完成，延後交稿日<br />2024/01/31 [博碩] 收到博碩文化後續通知，要整理全文 word、基本資料以及新書規劃<br />2024/02/13 [博碩] 回傳需要的檔案<br />2024/02/29 進度 210 頁，預計需要延期到五月底<br />2024/03/08 [博碩] 安排博碩會議時間，我說 3/20 跟平日晚上可以<br />2024/04/10 [博碩] 提供交稿格式範本、出版提問清單以及會議時程<br />2024/04/15 [博碩] 告知博碩不繼續之後的流程<br />2024/04/15 與深智重新簽了新的合約，拿 XSS 換<br />2024/05/29 初稿完成<br />2024/06/04 確認書籍排版<br />2024/06/17 排版完成，一次校對<br />2024/06/20 二次校對<br />2024/06/26 最後校對<br />2024/07/02 通知書籍已經開始預購<br />2024/07/19 書籍發售</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=12c2179ae7dc" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2025-02-15</time>
+        <a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">
+          不會日文去考 JLPT 日檢 N2 可以得幾分？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-09-23</time>
+        <a href="https://nodebe4.github.io/oped2/2024-09-23/%E6%84%9B%E6%B2%99%E5%B0%BC%E4%BA%9E%E6%95%B8%E4%BD%8D%E5%B1%85%E6%B0%91%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+          愛沙尼亞數位居民申請心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-06-28</time>
+        <a href="https://nodebe4.github.io/oped2/2024-06-28/%E5%88%B0%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%80%8E%E9%BA%BC%E7%B9%B3%E7%A8%85-%E7%A8%85%E6%9C%89%E5%A4%9A%E9%87%8D-%E8%B7%9F%E5%8F%B0%E7%81%A3%E6%AF%94%E5%91%A2/">
+          到日本工作怎麼繳稅？稅有多重？跟台灣比呢？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-06-10</time>
+        <a href="https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+          2024 年日本家族滯在簽證申請心得
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2024-06-28/%E5%88%B0%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%80%8E%E9%BA%BC%E7%B9%B3%E7%A8%85-%E7%A8%85%E6%9C%89%E5%A4%9A%E9%87%8D-%E8%B7%9F%E5%8F%B0%E7%81%A3%E6%AF%94%E5%91%A2/">
+            前一篇：到日本工作怎麼繳稅？稅有多重？跟台灣比呢？
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2024-09-23/%E6%84%9B%E6%B2%99%E5%B0%BC%E4%BA%9E%E6%95%B8%E4%BD%8D%E5%B1%85%E6%B0%91%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+            後一篇：愛沙尼亞數位居民申請心得
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2024-06-28/%E5%88%B0%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%80%8E%E9%BA%BC%E7%B9%B3%E7%A8%85-%E7%A8%85%E6%9C%89%E5%A4%9A%E9%87%8D-%E8%B7%9F%E5%8F%B0%E7%81%A3%E6%AF%94%E5%91%A2/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2024-09-23/%E6%84%9B%E6%B2%99%E5%B0%BC%E4%BA%9E%E6%95%B8%E4%BD%8D%E5%B1%85%E6%B0%91%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2024-09-23/%E6%84%9B%E6%B2%99%E5%B0%BC%E4%BA%9E%E6%95%B8%E4%BD%8D%E5%B1%85%E6%B0%91%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2024-06-28/%E5%88%B0%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%80%8E%E9%BA%BC%E7%B9%B3%E7%A8%85-%E7%A8%85%E6%9C%89%E5%A4%9A%E9%87%8D-%E8%B7%9F%E5%8F%B0%E7%81%A3%E6%AF%94%E5%91%A2/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2024-06-28/%E5%88%B0%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%80%8E%E9%BA%BC%E7%B9%B3%E7%A8%85-%E7%A8%85%E6%9C%89%E5%A4%9A%E9%87%8D-%E8%B7%9F%E5%8F%B0%E7%81%A3%E6%AF%94%E5%91%A2/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2024-09-23/%E6%84%9B%E6%B2%99%E5%B0%BC%E4%BA%9E%E6%95%B8%E4%BD%8D%E5%B1%85%E6%B0%91%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2024-09-23/%E6%84%9B%E6%B2%99%E5%B0%BC%E4%BA%9E%E6%95%B8%E4%BD%8D%E5%B1%85%E6%B0%91%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2024-06-28/%E5%88%B0%E6%97%A5%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%80%8E%E9%BA%BC%E7%B9%B3%E7%A8%85-%E7%A8%85%E6%9C%89%E5%A4%9A%E9%87%8D-%E8%B7%9F%E5%8F%B0%E7%81%A3%E6%AF%94%E5%91%A2/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

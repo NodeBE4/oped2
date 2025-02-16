@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>From My Anguished Heart—A Letter to My Daughter – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+From My Anguished Heart—A Letter to My Daughter
+——
+" />
+    <meta property="og:description" content="
+From My Anguished Heart—A Letter to My Daughter
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="From My Anguished Heart—A Letter to My Daughter" />
+    <meta property="twitter:title" content="From My Anguished Heart—A Letter to My Daughter" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fviewpoint%2Fmy-anguished-heart-letter-my-daughter" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/viewpoint/my-anguished-heart-letter-my-daughter" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/viewpoint/my-anguished-heart-letter-my-daughter&text=From My Anguished Heart—A Letter to My Daughter&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/viewpoint/my-anguished-heart-letter-my-daughter&title=From My Anguished Heart—A Letter to My Daughter" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/viewpoint/my-anguished-heart-letter-my-daughter&title=From My Anguished Heart—A Letter to My Daughter" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=From My Anguished Heart—A Letter to My Daughter&body=
+From My Anguished Heart—A Letter to My Daughter
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/viewpoint/my-anguished-heart-letter-my-daughter" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/viewpoint/my-anguished-heart-letter-my-daughter&title=From My Anguished Heart—A Letter to My Daughter&caption=
+From My Anguished Heart—A Letter to My Daughter
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=From My Anguished Heart—A Letter to My Daughter&url=https://www.chinafile.com/reporting-opinion/viewpoint/my-anguished-heart-letter-my-daughter" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>From My Anguished Heart—A Letter to My Daughter</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-07-21
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Xu Zhangrun &#38; Geremie R. Barmé</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/viewpoint/my-anguished-heart-letter-my-daughter" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1658409180000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/viewpoint/my-anguished-heart-letter-my-daughter">From My Anguished Heart—A Letter to My Daughter</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-2fe71128fc6e5063efe6a7b46e73be75">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54091_sm.jpg" title="From My Anguished Heart—A Letter to My Daughter" class="colorbox" data-colorbox-gallery="gallery-node-54091-eIMWZU5ZWbM" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54091_sm.jpg?itok=IFKDqP7R" width="1500" height="988" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Lintao Zhang—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A girl sits on her father’s shoulders during a flag-lowering ceremony in Tiananmen Square, Beijing, June 9, 2012.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <h3 id="translators-introduction">Translator’s Introduction</h3>
+      <p class="dropcap">In early July 2020, Xu Zhangrun was detained for supposedly having “solicited prostitutes” during a trip with friends to Sichuan in late 2019. He was being persecuted for his <a href="http://chinaheritage.net/journal/imminent-fears-immediate-hopes-a-beijing-jeremiad/" target="_blank" rel="nofollow">unsparing critiques</a> of Xi Jinping, starting in July 2018. The charge against him was spurious and the kind of legalized calumny often used by the authorities to silence critics. While he was held in custody, Tsinghua University fired him from his position as a professor of law, a job that he had held for two decades. The university also notified Xu that he had been stripped of his pension and all accrued benefits; the authorities even canceled his accreditation as an educator, meaning that he was no longer employable. To add insult to injury, Tsinghua ordered him to vacate his apartment on the university campus. An outcry both in China and internationally possibly influenced a decision to release him a few days after he was detained, and as soon as he regained his freedom Xu issued further broadsides aimed at the authorities. Over the following eight months—part of the Lunar Gengzi Year of the Rat, according to the traditional Chinese calendar—he published a series of uncompromising essays written in an epistolary style. On February 11, 2021, the eve of the Xinchou Year of the Ox, he posted the <a href="http://chinaheritage.net/journal/introducing-xu-zhangruns-ten-letters-from-a-year-of-plague/%5d" target="_blank" rel="nofollow">introduction</a> to a collection of those essays titled <em>Ten Letters from a Plague Year</em>.</p>
+      <p>ChinaFile has previously published two letters in the series: “<a href="https://www.chinafile.com/reporting-opinion/viewpoint/letter-my-editors-and-chinas-censors" target="_blank" rel="nofollow">A Letter to My Editors and to China’s Censors</a>” and “<a href="https://www.chinafile.com/reporting-opinion/viewpoint/farewell-my-students" target="_blank" rel="nofollow">A Farewell to My Students</a>.” The following letter is addressed to the writer’s daughter, who, having just completed her doctoral studies in Australia, was about to return to Beijing. In July 2022, Xu Zhangrun was still waiting for a response.</p>
+      <p align="right">—<em>Geremie Barmé</em></p>
+      <h2 align="center" id="from-my-anguished-hearta-letter-to-my-daughter">From My Anguished Heart—A Letter to My Daughter</h2>
+      <p class="dropcap">Si’er, my beloved daughter:</p>
+      <p>I am writing to you on the eve of your return to China. Although joyful at the prospect of your coming home, my happiness is overshadowed by despondence.</p>
+      <p>There are no words to express my thrill at the thought that with a doctorate in hand you’ll be teaching at the China University of Political Science and Law, your parents’ alma mater. It’s an ideal job and one that couldn’t make me more proud of you. Among other things, we had our first home there next to the Little Moon Brook that runs near the campus. That’s where you learned your first words and took your first steps. I well remember you setting off all kitted out for your first day of school and how later that day, when I rushed to pick you up, I found you doodling intently in a book.</p>
+      <p>I’d head over to the school every lunchtime to bring you home for a midday meal, balancing you in front of me as I rode back on my bike; sometimes I put you in the basket attached to the handlebars. Often we’d take a few spins around campus before we ate lunch, and after a few laps you’d cry out: “Daddy, daddy, you’re making me dizzy!” When the winter cold bit at our faces and hands, we’d head straight home after only one quick lap. Our place was dank and moldy because of the damp coming from the public toilet along the western wall outside, but at least it kept the wind at bay.</p>
+      <p>Back then, even though your mother and I were both university lecturers, our wages were so low that by the end of the month we were reduced to buying the leftover vegetables they sold at the local market for one <em>yuan</em> [<em>equivalent to a few cents</em>] a bunch. If we ate sparingly that’d keep us going until payday. When we set off on our shopping expeditions, you would always remind me: “Daddy, daddy, be sure you don’t buy anything expensive. I don’t want to eat expensive things.”</p>
+      <p>Eventually, you and your mother would join me in the faraway but warm country of Australia [<em>where I was studying for a higher degree</em>]. Then, years later, we returned to Beijing in the middle of the winter so I could take my new job at <a href="https://chinaheritage.net/journal/speaking-up-for-a-man-who-dared-to-speak-out/" target="_blank" rel="nofollow">Tsinghua University</a>. That was a spacious and beautiful campus, one that had been created long ago for the benefit of those who would follow in the footsteps of its idealistic founders.</p>
+      <p>I remember our time in Melbourne so well. Every morning mom would see us off to school with packed lunches in our satchels—two future Ph.D.s heading off to their studies! Though we were excited when you started at your new school, we were also very nervous. On that first day we managed to hold ourselves in check until morning recess, when we rushed over to the school to spy on you from afar. And there you were, appearing suddenly in a crowd of your classmates as you all streamed out into the playground. You were holding something you’d made in class and even though you hardly knew a word of English you were giggling and chatting away happily. Until then I’d been holding your mother’s hand, and I squeezed it as we finally relaxed. We hung around until the bell rang, reluctant to leave until we saw you safely back inside. Though we felt buoyed as we headed home, we couldn’t dispel our lingering sense of anxiety. At the end of the school day we came back, camera in hand, so we could take a picture of you. That has remained fresh in my mind, you standing there proudly in your uniform with an unruly wisp of hair sticking up on your forehead.</p>
+      <p>The years have passed in the blink of an eye. Now, you will soon be a university lecturer and I’m bursting with pride.</p>
+      <p>Yet, as I’ve told you, I’m also wary; it’s no longer a vague or abstract parental concern. My heart is racked by guilt and an agony that is gnawing away at me. That’s because of what has happened since I dared <a href="http://chinaheritage.net/journal/imminent-fears-immediate-hopes-a-beijing-jeremiad" target="_blank" rel="nofollow">speak up</a> two years ago [<em>when I published “Imminent Fears, Immediate Hopes” in July 2018</em>]. During my recent detention, Tsinghua University fired me and stripped me of my teaching accreditation, so now I’m both unemployed and, for all intents and purposes, a “non-person.” It’s inevitable that my status could well affect you. I’m convinced that disaster looms, no matter how often the authorities reassure me that you won’t be penalized because of me.</p>
+      <p>The 20th century taught us all that they can’t be trusted under any circumstances. You’d have a better chance if you believed the Devil himself than trust anything that they tell you. Tens of millions of lives destroyed and legions of unrequited souls grieving in the wilderness speak a truth that is beyond words.</p>
+      <p>How could I not be agonizing over your return?</p>
+      <p>In the first place, the authorities probably already have your computer and mobile phone, including, of course, your WeChat account, under constant surveillance. They’ve probably compiled a detailed dossier as well—everything from what you’ve said and done while overseas, whom you’ve encountered, whom you plan to meet with, right up to and including the details of conversations on certain topics, the things you’ve taken an interest in, even what films you’ve been going to, or what you’ve published. They’ll pretty much have scoped out what you’re thinking today and what you’re planning to do tomorrow.</p>
+      <p>I can’t pretend that I have any particular insight into their precise modus operandi, let alone that I’m familiar with the routines of their undercover agents, but there’s one thing that I know for sure—it’s something that everyone in China is familiar with—Big Brother knows everything about you. Big Brother is not only omnipotent, he takes a particular pleasure in his work. People in the system get a kick out of every covert operation, they savor the pungent smell of blood of each kill, and they are emboldened by every success. To their insensate and cunning minds we are nothing more than statistics, corporeal digits to be manipulated and abused at will. Their power reinforces their belief that [<em>as it says in Corinthians 6:12</em>]: “All things are lawful for me.” Every unbridled action they take and each measure of satisfaction they extract from it further diminishes what little remains of their humanity.</p>
+      <p>I know for a fact that they’ve already collected information on your life in Sydney. You see, when they interrogated me the day after I was released from detention—at 4:00 p.m. on July 11, 2020, to be precise—they mentioned you specifically; they hinted that they knew everything about you, even though you’ve been living in another country for years, my beloved daughter! A country where, under normal circumstances, you would never imagine there were operatives of China’s SS. Why are they doing all of this? What are they planning? It’s simply because you’re my daughter. Dearest Si’er, you will suffer for my original sin. Your father has brought a calamity down upon you.</p>
+      <p>Then, once you’re back here in China and go to report to your new job, or even before then, it’s inevitable that they will approach you “for a chat.” They’ll say it’s because the powers that be want to “express their solicitude” for you. During the ensuing conversation, they will either make a point of directly asking about or simply inquire in passing what you think about your father. In particular, they’ll want to know what you think about what your father thinks. Depending on how you react, they’ll follow a time-honored logic and probe further, extrapolating and surmising in the process until, before you know it, you’ll have been issued with a stern warning.</p>
+      <p>Naturally, all of it will be couched in faux-sympathetic terms: They’ll claim that they only want to understand your circumstances so they can better support what is in your best interest. Nonetheless, they will make it quite clear that your life is in their hands. In reality, their display of casual magnanimity reflects an arrogance that masks a deadly potential.</p>
+      <p>As the conversation proceeds they’ll trot out all the tired old clichés: We appreciate all too well that father and daughter are two different people and that he’s responsible for who he is, just as you are for who you are. You will surely be familiar with our official policy, as it is quite specific: While the state is ever-mindful of an individual’s family background, what really matters is how you act yourself. We encourage you to understand your father’s case in the broader context and to be mindful of developing the correct attitude regardless of any familial bond you may feel. Relax, they’ll tell you, no pressure, just do the very best you can. No matter what they say, the core message is that you’re guilty and that, henceforth, you must live in submission; compliance is obligatory.</p>
+      <p>What distresses me, my dear daughter, is how you will respond to all of this. Nothing you say will convince or satisfy them. How will you act in future? How can you prove that you are your own person? Why in heaven’s name can’t a citizen just be left alone without having to “perform” in some politically appropriate fashion. Is there no way out without your being forced to distance yourself from me politically, to deny our father-daughter relationship? Even if that were possible—and it’s what you decided that you had to do—do you really think that’ll be the end of it? Don’t be fooled, my dear one: they are experts at probing the dark recesses of the human soul; they know how to manipulate people. They are masterful at exploiting people’s psychological vulnerabilities. They use their well-honed skills to identify and amplify a person’s basest instincts in pursuit of their odious ends.</p>
+      <p>Once you start your job, “friendly conversations” with the authorities will be a regular feature of your life. Let me illustrate on the basis of my own experience: There’s one cop at my local police station who clearly relishes the power that he has over me. Semi-literate at best, he enjoys upbraiding me for my ideological backwardness and he pontificates about my moral turpitude. If that’s how I’m being treated, you can imagine how they might deal with you. Remember, they are capable of anything; in pursuit of their ends they feel absolutely no compunction or moral restraint. People like them simply have no sense of right or wrong; it’s not because there is no justice in the world, it’s because people like them simply don’t care. They have long ago banished all sense of moral decency.</p>
+      <p>There’s a line in the <em><a href="https://chinaheritage.net/journal/the-innocent-cry-to-heaven-the-odour-of-such-a-state-is-felt-on-high/" target="_blank" rel="nofollow">Book of Documents</a></em>: “I have heard that the good man, doing good, finds the day insufficient; and that the evil man, doing evil, also finds the day insufficient.” Believe me when I say, there’s simply no limit to their perfidy! I know your sweet personality all too well and I’m worried that after just a few “heart-to-heart conversations” like that they may be able to break down your resistance. They’ll reduce you to living in a constant state of anxiety, and you will feel as though your actions are circumscribed in every direction. You may well sense that you are enveloped in an all-encompassing and nameless terror; you’ll feel impotent at the thought of the omnipresent surveillance; the realization that there’s no way out will be heartbreaking. Not only will you be weighed down psychologically, your ability to function normally and enjoy life will be severely compromised. Your existence will be like an endless test, the aim of which is nothing more than survival. That’s why, my dearest daughter, if you are back here in our homeland we will become one another’s hostages. We’ll be obliged to obey and our kidnappers will revel in their villainy.</p>
+      <p>Henceforth you’ll live in a state of constant vigilance; you’ll be on guard regardless of whether you’re just teaching a class or taking part in a meeting. One ill-considered remark or some minor issue in your everyday life could invite some new disaster. If it were anybody else they might be willing to overlook it, but because it’s you—my daughter—the odds are that it’ll become an issue. Even a minor thing can snowball into a serious problem. Remember, in a world ruled by what Isaiah Berlin <a href="https://chinaheritage.net/journal/xi-jinpings-china-stalins-artificial-dialectic/" target="_blank" rel="nofollow">called</a> “the artificial dialectic,” laws, be they manmade or natural, count for naught.</p>
+      <p>Human sentiment is quite malleable, and cold indifference can all too readily replace the warm intimacies of the past. It’s more than likely that, from now on, acquaintances will keep you at arm’s length and young men may even be reluctant to date you. Professionally, things like applications to attend international conferences will most probably be denied. As to other academic opportunities, such as professional advancement and promotion, these too will be beyond your reach. None of this, however, will unfold in an overt fashion; it will be made to seem as though these petty obstacles are simply a matter of course, and they will be as inevitable as they are inescapable. Over time, you will be reduced to a state of mute frustration.</p>
+      <p>Of course, they’ll pretend as though none of this is because of me; nothing will be traceable back to my case. Over time, however, the repeated coincidences will be quite remarkable and everyone will know what’s afoot without a word having to be said. You too will know what’s happening and just who is stage-managing it all, as well as exactly how their inspired skulduggery is implemented.</p>
+      <p>Take my case, for example: from early last year [<em>2019</em>], I have been barred from all academic activities and unable to publish anything. Since my release from police detention in mid-July [<em>2020</em>], no one in the academic world has contacted me. After all, they are also hostage to an all-encompassing culture of surveillance. It’s not that my erstwhile colleagues are particularly morally deficient, they are simply prisoners of fear. On balance, they have simply made a calculation that being in contact with me isn’t worth the risk.</p>
+      <p>Remember the years when I was happily surrounded by learned colleagues both here and overseas, and the pleasure I took in organizing academic conferences and involving <a href="https://www.chinafile.com/reporting-opinion/viewpoint/farewell-my-students" target="_blank" rel="nofollow">my students</a> in all kinds of activities? What a contrast to my present reality: The constellation of friends has fallen away like a meteor shower in the dead of night. Today, no hint of my sociable past remains. It’s as though I never even knew anybody; it’s <a href="https://chinaheritage.net/journal/composed-of-eros-of-dust-xu-zhangrun-goes-shopping/" target="_blank" rel="nofollow">as though</a> I never even existed.</p>
+      <p>Although I’m personally well acquainted with a few hundred professors at Tsinghua University—out of an academic community numbering about four thousand—only one of them has had the courage to <a href="http://chinaheritage.net/journal/jaccuse-tsinghua-university/" target="_blank" rel="nofollow">speak out on my behalf</a>. One other has kept in touch. As for everyone else, I haven’t heard a peep from any of them.</p>
+      <p>These days, most people act as though they don’t even know who I am, even when our paths do cross. They walk past me with a lowered gaze so as to avoid eye contact. Then there are those famous overseas Chinese fair-weather friends who pointedly avoid any attempt to contact me when they are visiting the Tsinghua Law Faculty where I taught for all those years. The best I can expect from such “old friends” is a curt message sent via an intermediary in which they plead that it wouldn’t be appropriate for them to meet me, or that they don’t have any time to catch up. But I know that they have more than enough time for wining and dining with friends night after night during their Beijing stay. It goes without saying that these overseas visitors are happy to have my former colleagues join in the revelries; after all, they are useful acquaintances on top of which they are politically safe.</p>
+      <p>Tell me, dear one: is your father expecting too much of human nature, or is he just hopelessly naïve? Upon reflection I’d say that neither is the case, it’s just that we live in remorseless times and people simply need to get by as best they can. Despite the fact that those overseas visitors are ethnically Chinese people who have made it and have become foreign citizens they are, ultimately, just the same as the rest of us; they are subject to the same foibles and concerns, fears and limitations. That having been said, there really isn’t anything exceptional about them at all; they too are made of commonplace stuff and they have to think about their families and their children. Since they’re happy enough to accept the largesse—and enjoy the endless banquets—of the authorities, I shouldn’t be surprised that I’m being treated like this, for such is human nature. I guess I should count my blessings and be grateful that they haven’t done anything to add to my woes.</p>
+      <p>Finally, Si’er, if you make an attempt to resist the pressure, to fight back or show signs of reluctance, even if it’s nothing more than hesitating to respond to their judgment of me or perhaps even by defending me—especially if you show that you approve of my views—believe me: they have an armory at the ready. These range from issuing formal warnings to suspending you from your job, reducing your wages, and even firing you. Their repertoire even includes calling in the police. Any or all of these measures may be deployed against you and they will trot out their sanctions with practiced aplomb. That’s because these people are professional enforcers who live and breathe this stuff. They abandoned human decency long ago. As their ugly faces, their shameless expressions, appear even now in my mind’s eye, as I contemplate their unbridled cruelty, let me confess to you my darling daughter that, if any of this were to befall you, no matter if only in the most tangential way, my heart would simply shatter.</p>
+      <p>Perhaps I’m worrying unnecessarily, although I would note that they have recently called your mother in for questioning a few times and I’ve been formally interrogated twice. When they have me at the police station a whole gang of them come marching into the interrogation room, arranging themselves in front of me as though I’m nothing more than a prisoner on parole. They are invariably foul-mouthed and intimidating and there are always a few sub-literate youngsters from state security present who take particular pleasure in coming up with various wild exaggerations, ad hominem attacks, and ludicrous claims. To them, I’m nothing more or less than a prisoner of their empire. And they’re right.</p>
+      <p>All that I have experienced at their hands only heightens my anxiety about you, both now as well as into the future. To think that you’ll be exposed to who knows how many threats simply because you’re my daughter! I haven’t been able to make it safe for you to return and start your new job; I can’t even be certain that you’ll have a secure and stable livelihood. Quite the opposite: I have added to your woes and exposed you to the kind of systemic revenge that awaits anyone who dares resist the totalitarian state. It’s also what I get for having been too hopeful for far too long and simply for putting up with things. Having confessed all of this to you, the fact remains that you shouldn’t have to suffer for my deeds.</p>
+      <p>I remember the night 20 years ago when the three of us returned to Beijing after our years overseas. There’d been a big snowstorm and the city was cloaked in white and absolutely freezing. Tsinghua University, my new employer, had made a big to-do about sending a car to meet us, so we waited patiently at the airport for ages. Despite what turned out to be that early disappointment, I was still elated at the thought of my new job, so I didn’t let it worry me unduly. Though I was wearing shorts I barely felt the cold; you, however, were shaking as we waited. For a moment I had a dark premonition about the future, but I banished my sense of foreboding almost immediately. Sometimes you have to let yourself be fooled, or even lie to yourself.</p>
+      <p>We kept looking around expecting someone to turn up. Back then Beijing airport was the kind of place you’d imagine in a developing country, and in the dead of night it was like some desolate forgotten corner of the world. The place was all but empty, though we could hear the drivers of the unlicensed cabs lined up outside hawking rides into the city. Eventually, we gave up and stumbled outside with our luggage to take one of the unlicensed cabs. If it hadn’t been so dark, we would have probably been scared off by the sight of the rust bucket we ended up in. But we were excited about everything, even the snow piled up on the roadside as the chassis of the car scraped the black ice on the ground. The city was shrouded in a thick smoke-haze—back then people had no idea how poisonous the smog was, and we didn’t have a clue about anything, though your mother kept a protective hold of you in the back seat. In the meantime, we’d managed to rouse an old classmate of your mother’s and they put us up in a spare apartment they had in the city. By the time we settled in it was already dawn.</p>
+      <p>In the years that followed, all we ever wanted was to be able to do our work and enjoy an uneventful life.</p>
+      <p>At Tsinghua, I would have never imagined that the <a href="https://news.tsinghua.edu.cn/info/1307/46590.htm" target="_blank" rel="nofollow">person</a> running the Communist Party cell in the Faculty of Law was a remnant of the Cultural Revolution. He immediately revealed himself to be the worst kind of petty tyrant, unreasonable and thuggish in every way imaginable; he was a classic Party heavy that, by then, people rarely seemed to encounter any more. He has now subjected me to two solid decades of relentless humiliation, although I wasn’t the only one caught in his sights: Virtually every academic in the faculty has suffered at his hands. If you don’t believe me, just ask any of the retired lecturers from the Law Faculty, or even the people who still work there. The poor souls who are in the Yellow Springs [<em>of the afterlife</em>] have long since been freed from his vile ministrations. Initially, I held myself in check, though I knew it was only a matter of time before we clashed and he would have his revenge.</p>
+      <p>Over the years, his malice had such a negative effect on my health that, at one point, I actually started coughing up blood. And his malicious treatment of me continues to this day; he still takes advantage of every opportunity to defame me in private and slander me in public. I have no idea what other damage he’s done to me behind my back. He is one of those people who embodies the darkest aspects of Chinese society and civilization; he exemplifies the very worst that China can be. Others share my outrage, but my hatred is deeply personal.</p>
+      <p>China has become vastly more wealthy over the past two decades and, although there is still a yawning chasm between those who are well-off and the poor, a majority have over time come to enjoy a better standard of living. Moreover, people increasingly behave as though they’re in a modern civilized nation. This is particularly obvious when you see how relaxed young people are now that they can finally enjoy being consumers.</p>
+      <p>Over those years [before the rise of Xi Jinping], I was so happy in my job that I never even applied for leave. Of course, there were times that something or other might get under my skin so much that I’d wake in the night in an overwrought state, but then the sense of hope would well up in me and I’d just throw myself back into the struggle. That cycle continued up until about seven or eight years ago; we felt that, although everyone knew that the system was outmoded, we shared a sense of future possibility. That’s why we kept working away and refused to give in to despair. We were sure that we were making a meaningful contribution and that, bit by bit, China would finally experience a breakthrough and become a truly modern nation. It would take that crucial last step and become a modern political civilization. Who thought we’d end up where we are today? In fact, the totalitarian impulse might be getting stronger, even as its death knell is tolling. For the moment, however, this new round of madness has just begun, and as a result we must all suffer.</p>
+      <p>We’ve been looking forward to your coming home to teach for so long. What could be better for professors like us than to have a daughter teaching at a university; to use one’s native language in one’s own country and to be able to give voice to one’s deepest thoughts; to be able to celebrate every sign of progress as well as mourn moments of retreat, all the while to brim with energy and hope every day as your heart takes flight anew. It’s a unique feeling, a profound bond of intimacy with the place you are from. All three of us teachers: we’d be so proud. There was also a selfish element in our happiness as we could hope that, like in the past, the three of us would be able to go out together on the weekend and catch up over a meal. We’d pick a good restaurant and enjoy a leisurely evening in each other’s company, the bright moon shining down on us and the singing of cicadas all around.</p>
+      <p>When I’m feeling particularly alone late at night here in my rustic spot far from the city, I sometimes go through our old photos. The past unfolds before me like a cavalcade and suddenly my mind is free to roam once more . . . until tears well up and blind me.</p>
+      <p>Everything is different now. Tsinghua not only fired me, they also wiped out my life’s work. As you know, I’ve been deprived of the right to speak, let alone to speak out; my mouth is clamped shut, my freedoms curtailed. Not only have they killed off my academic life, they won’t allow me to earn a living. I’m even forbidden from accepting any financial support. Deprived of a livelihood, I truly am their prisoner.</p>
+      <p>From early next year [<em>January 2021</em>], I’m eligible for 1,000 yuan (<em>U.S.$150</em>) a month in unemployment benefits. At least that’s the same income as some 600 million other Chinese who, like me, are on the bottom rung of society. I might be adrift, but at least I’m not alone. Yet after having taught for 34 years, that’s all I’ll have. It’s a fitting enough punishment for someone who chose to raise a voice in protest regardless of the cost.</p>
+      <p>Previously, I’d imagined that when you took up your teaching appointment we’d be like colleagues. If one could ever talk about having a dream, that was mine. Now, as the years pass, age and ill health will invariably take their toll and I’ll probably end up as a burden on you.</p>
+      <p>I’m telling you all of this, my dearest daughter, because I don’t want to keep anything from you and, at this moment, I need to let you know that, no matter what I’ve said here, the decision of what to do is yours alone. If you feel at a loss, then may I suggest that you follow your intuition and seek prayerful guidance from the Heavens. If neither instinct nor the Heavens offer solace, and only if you really want to, perhaps you’ll let me know and allow me to suggest a course of action. This is all that I can offer you now and it doesn’t matter how you use my advice. For better or worse, you will have to live with the consequences of whatever decision you make.</p>
+      <p>As I write this, the torrential autumn rain blurs the outside world. The street light near my front door illuminates the pelting downpour, making it look as though columns of water are gushing upwards out of the ground. The sky reverberates with claps of thunder, and bolts of lightning crackle brightly overhead. It’s as though the darkest recesses of the universe are trembling. Meanwhile, I imagine that Australia is basking in the early hope of spring. I wonder, my darling daughter, are you already safely tucked into bed?</p>
+      <p>“And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.”</p>
+      <p>Another name for time is water and water is the image of time; nothing can escape its passage: “till thou return unto the ground; for out of it wast thou taken: for dust thou art, and unto dust shalt thou return.”</p>
+      <p>As the poet Joseph Brodsky <a href="https://sites.google.com/site/poetryandtranslations/joseph-brodsky/-mother-to-christ" target="_blank" rel="nofollow">wrote</a>: “For dust is surely time’s flesh; time’s very flesh and blood.”</p>
+      <p>The flames of the universe flare up, and in the ashes one finds eternity. From that is born a truth that is the daughter of time. The blazing fire is fueled by the tears of an unfathomable suffering that none of us can escape.</p>
+      <p>I love you, Si’er. You are the tender core of my heart.</p>
+      <p>Your Father</p>
+      <p align="right"><em>The 12th Day of the Eighth Month of the Gengzi Year</em><br /><em>September 28, 2020</em></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-07-26</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-26/Can-a-New-U.S.-Law-Prevent-Uyghur-Forced-Labor/">
+          Can a New U.S. Law Prevent Uyghur Forced Labor?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-25</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-25/Norma-in-Kaohsiung/">
+          Norma in Kaohsiung
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-05</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-05/Arrests-and-Charges-Related-to-Hong-Kong's-Nationa/">
+          Arrests and Charges Related to Hong Kong's National Security Law
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-05</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-05/2021-(Most-Recent)-Official-PRC-Place-Name-Data-Av/">
+          2021 (Most Recent) Official PRC Place Name Data Available for Download
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-07-05/Arrests-and-Charges-Related-to-Hong-Kong's-Nationa/">
+            前一篇：Arrests and Charges Related to Hong Kong's National Security Law
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-07-23/2022-%E5%B9%B4-7-%E6%9C%88%E5%87%BA%E5%9C%8B%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97-%E6%98%9F%E5%AE%87%E8%88%AA%E7%A9%BA-TPE-SIN/">
+            後一篇：2022 年 7 月出國旅遊心得（星宇航空 TPE-SIN）
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-07-05/Arrests-and-Charges-Related-to-Hong-Kong's-Nationa/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-07-23/2022-%E5%B9%B4-7-%E6%9C%88%E5%87%BA%E5%9C%8B%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97-%E6%98%9F%E5%AE%87%E8%88%AA%E7%A9%BA-TPE-SIN/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-07-25/Norma-in-Kaohsiung/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-07-05/Arrests-and-Charges-Related-to-Hong-Kong's-Nationa/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-07-05/Arrests-and-Charges-Related-to-Hong-Kong's-Nationa/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-07-23/2022-%E5%B9%B4-7-%E6%9C%88%E5%87%BA%E5%9C%8B%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97-%E6%98%9F%E5%AE%87%E8%88%AA%E7%A9%BA-TPE-SIN/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-07-25/Norma-in-Kaohsiung/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-07-05/Arrests-and-Charges-Related-to-Hong-Kong's-Nationa/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

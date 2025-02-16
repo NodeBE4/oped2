@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>How Could the U.S. Deter Military Conflict in the Taiwan Strait? – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+How Could the U.S. Deter Military Conflict in the Taiwan Strait?
+——
+" />
+    <meta property="og:description" content="
+How Could the U.S. Deter Military Conflict in the Taiwan Strait?
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="How Could the U.S. Deter Military Conflict in the Taiwan Strait?" />
+    <meta property="twitter:title" content="How Could the U.S. Deter Military Conflict in the Taiwan Strait?" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fhow-could-us-deter-military-conflict-taiwan-strait" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/how-could-us-deter-military-conflict-taiwan-strait" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/how-could-us-deter-military-conflict-taiwan-strait&text=How Could the U.S. Deter Military Conflict in the Taiwan Strait?&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/how-could-us-deter-military-conflict-taiwan-strait&title=How Could the U.S. Deter Military Conflict in the Taiwan Strait?" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/how-could-us-deter-military-conflict-taiwan-strait&title=How Could the U.S. Deter Military Conflict in the Taiwan Strait?" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=How Could the U.S. Deter Military Conflict in the Taiwan Strait?&body=
+How Could the U.S. Deter Military Conflict in the Taiwan Strait?
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/how-could-us-deter-military-conflict-taiwan-strait" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/how-could-us-deter-military-conflict-taiwan-strait&title=How Could the U.S. Deter Military Conflict in the Taiwan Strait?&caption=
+How Could the U.S. Deter Military Conflict in the Taiwan Strait?
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=How Could the U.S. Deter Military Conflict in the Taiwan Strait?&url=https://www.chinafile.com/conversation/how-could-us-deter-military-conflict-taiwan-strait" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>How Could the U.S. Deter Military Conflict in the Taiwan Strait?</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-09-28
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Daniel R. Russel, Shelley Rigger &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/how-could-us-deter-military-conflict-taiwan-strait" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1632827220000-->
+<p><a href="https://www.chinafile.com/conversation/how-could-us-deter-military-conflict-taiwan-strait">How Could the U.S. Deter Military Conflict in the Taiwan Strait?</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-4d06d8d7139c13bc38cb3c8d8df65c38">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/gettyimages-1235261033.jpeg" title="How Could the U.S. Deter Military Conflict in the Taiwan Strait?" class="colorbox" data-colorbox-gallery="gallery-node-53436-sDKyvBIYg6E" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/gettyimages-1235261033.jpeg?itok=E2l3MQhR" width="1200" height="800" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Sam Yeh—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A U.S.-made E2K Early Warning Aircraft (EWA) takes off from a motorway in Pingtung, southern Taiwan, during the annual Han Kuang drill, September 15, 2021.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">Last week, China flew 24 warplanes into Taiwan’s air defense identification zone. One of the largest <a href="https://www.cnn.com/2021/09/24/asia/taiwan-china-warplane-flights-intl-hnk-ml/index.html" target="_blank" rel="nofollow">incursions</a> in recent years, the People’s Liberation Army flyover came a day after Taipei applied to join the Comprehensive and Progressive Agreement for Trans-Pacific Partnership. Beijing, which applied to the trade pact a week earlier, has <a href="https://www.channelnewsasia.com/business/china-taiwan-trans-pacific-deal-application-2196251" target="_blank" rel="nofollow">opposed</a> Taiwan’s bid. In response, Taiwan’s Foreign Ministry issued a <a href="https://www.asahi.com/ajw/articles/14446784" target="_blank" rel="nofollow">statement</a> branding China an “arch criminal” bent on increasing hostilities across the strait.</p>
+      <p>In our last Conversation on Taiwan, ChinaFile contributors <a href="https://www.chinafile.com/conversation/will-beijing-invade-taiwan" target="_blank" rel="nofollow">debated</a> whether the People’s Republic of China could or would wage war on Taiwan. This week, we asked contributors about deterrents—tactics to reduce tension and lessen the possibility of conflict. What might those deterrents look like, and how effective would they be?</p>
+      <p>We asked each participant to focus on a sole aspect of deterrence—military, economic, or diplomatic. —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9201" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/daniel-r-russel"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/daniel_russel.jpg?itok=uK3ToFCu" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="daniel-r-russel"><a href="https://www.chinafile.com/contributors/daniel-r-russel" title="Daniel R. Russel">Daniel R. Russel</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">There are several prerequisites to successful diplomacy. One is being clear about what you are trying to achieve or prevent. Another is understanding your counterpart, particularly in terms of how they tend to make policy decisions, what <em>their</em> priorities are, and what considerations are most likely to influence their judgments. A third is having a functional relationship between key interlocutors. None of these conditions can be credibly ascribed to the current U.S.-China relationship.</p>
+        <p>If avoiding military conflict with the People’s Republic of China (PRC) over Taiwan were the sole objective of U.S. policy, acceding to Chinese domination of the island would be the most straightforward approach. But obviously there are other powerful policy objectives and considerations shaping Washington’s strategy. These include domestic U.S. politics, America’s global leadership and credibility, the <a href="https://www.ait.org.tw/our-relationship/policy-history/key-u-s-foreign-policy-documents-region/taiwan-relations-act/" target="_blank" rel="nofollow">Taiwan Relations Act</a> and the momentum of 40 years of consistent Taiwan policy, opposition to Chinese regional hegemony, and a resolute determination to protect the security and political autonomy of an important democratic partner. Some would add <a href="https://www.voanews.com/a/east-asia-pacific_can-taiwans-silicon-shield-protect-it-against-chinas-aggression/6205660.html" target="_blank" rel="nofollow">semiconductors</a> to this list. Pursuit of these goals inevitably incurs some risk of military conflict.</p>
+        <p>Understanding our counterparts requires parsing the significance of PRC military exercises and incursions around Taiwan. How much is theater, how much is warning, and how much is preparation for the real thing? The shrill but rote nature of Chinese hyperbolic talking points on Taiwan comes across as noise, not as reason, which can obscure our grasp of the PRC’s determination to complete what it regards as the final step in unifying China. But perhaps even more important to the Party leadership than <em>taking</em> Taiwan is <em>not losing</em> Taiwan. Thus, what could precipitate military conflict is a conviction in Beijing that the “window of opportunity” for unification is closing and that failure to act now—regardless of consequences—would guarantee Taiwan independence. The aggregation of seemingly modest words and deeds by the U.S. and the Taiwan authorities could be misheard in Beijing as the scrape of a closing window.</p>
+        <p>Meanwhile, bilateral dialogue began to atrophy after the grand pageantry of Donald Trump’s November 2017 state visit to China, and the handful of attempts made so far by the Biden Administration have not gone well. Not only does this diminish prospects for defusing tension over Taiwan through traditional diplomatic means, but the dearth of communication also increases the risk of miscalculation and mismanagement of an all-too-possible incident around the Taiwan Strait.</p>
+        <p>Where does this leave us? In this set of circumstances there is no playbook of plausible diplomatic moves by the U.S. and Western allies likely to significantly <em>reduce</em> tensions, although there is a cornucopia of potential actions that could <em>raise</em> them. So, while lowering tensions <em>per se</em> may not be our chief priority, keeping them from spiraling out of control probably should be. A good starting point would surely be Obama’s <a href="https://foreignpolicy.com/2014/06/04/obamas-dont-do-stupid-shit-foreign-policy/" target="_blank" rel="nofollow">dictum</a>: “don’t do stupid shit.”</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9206" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/shelley-rigger"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/rigger_sm.png?itok=oHpi1PMz" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="shelley-rigger"><a href="https://www.chinafile.com/contributors/shelley-rigger" title="Shelley Rigger">Shelley Rigger</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">A military crisis in the Taiwan Strait would take a huge toll on everyone involved, but the consequences for Taiwan would be catastrophic. Avoiding war is in Taiwan’s paramount interest.</p>
+        <p>That should go without saying, but it doesn’t. Too many Americans talk about war in the Taiwan Strait as if it were some kind of potentially <a href="https://independentaustralia.net/politics/politics-display/taiwan-could-be-the-trigger-for-a-catastrophic-war-,15021" target="_blank" rel="nofollow">necessary evil</a>—a price “we” may have to pay to restrain Beijing’s influence in the region. In fact, war is guaranteed to bring mass death and destruction to the very people we say we aim to help.</p>
+        <p>Taiwan is not an airbag designed to absorb the impact of a collision between the United States and a rising People’s Republic of China (PRC). It is a community of 24 million people who treasure their freedom and their lives.</p>
+        <p>The U.S. and its allies have good reason to help Taiwan avoid being annexed by the PRC. That, too, would be catastrophic for Taiwan. Deterring Beijing requires the U.S. to demonstrate both the capacity and the willingness to fight for Taiwan. Beijing is committed to bringing Taiwan under a Chinese flag; it is the cost and risk of doing so that have prevented it from using force.</p>
+        <p>There’s a thin line, though, between establishing a credible deterrent and destabilizing the fragile equilibrium in the Strait. Right now, Beijing knows that while it cannot annex Taiwan at an acceptable cost, Taiwan is not going to lunge for formal independence, either. While Beijing’s ultimate goal is elusive, its greatest fear is in check.</p>
+        <p>When it comes to Taiwan independence, Beijing takes no chances. It <a href="https://www.reuters.com/article/us-taiwan-president-inauguration/taiwan-president-rejects-beijing-rule-china-says-reunification-inevitable-idUSKBN22W08X" target="_blank" rel="nofollow">parses</a> every word and gesture for evidence that Taipei is looking for an opening to break away; it sees everything through the lens of a toxic and corrosive distrust. Taiwan’s leaders have learned to navigate the narrow space within which they can assert their autonomy, and sometimes even expand their international connections, without giving Beijing excuses to escalate.</p>
+        <p>The U.S., too, needs to be cautious not to accommodate Beijing or cater to its demands, but to ensure its actions to assist Taiwan are worth the cost. They need to be substantive and high-impact; they shouldn’t give Beijing excuses to squeeze Taiwan without yielding a proportionate benefit. Taiwan can’t afford symbolic gestures. For example, changing the name of Taiwan’s representative office in the U.S. (the Taipei Economic and Cultural Representative Office), as some <a href="https://www.taipeitimes.com/News/editorials/archives/2021/09/12/2003764215" target="_blank" rel="nofollow">advocate</a>, requires a stronger justification than “Taiwan deserves it.” Such an action is exactly the sort of thing Beijing uses to support its claim that the U.S. is reneging on its commitments to the PRC. So unless it has concrete benefits that outweigh the dangers of feeding Beijing’s fears, the U.S. shouldn’t do it.</p>
+        <p>The recommendation that Washington replace its long-standing “strategic ambiguity” approach with “<a href="https://www.lawfareblog.com/taiwan-strategic-clarity-and-war-powers-us-commitment-taiwan-requires-congressional-buy" target="_blank" rel="nofollow">strategic clarity</a>,” promising to defend Taiwan against a PRC attack, is another example. For decades, the U.S. has taken an even-handed approach, one designed to deter Taiwan from provoking China, on the one hand, and to deter the PRC from attacking Taiwan, on the other. If the U.S. switches to “strategic clarity” by dropping the elements that caution Taiwan, Beijing’s war-planning won’t change, but the PRC leadership will have a powerful new excuse to make life even more difficult for Taiwan and its leaders.</p>
+        <p>If the U.S. wants to signal its dissatisfaction with the PRC’s behavior, it has plenty of options that don’t put Taiwan’s security on the line. There are economic, diplomatic, and even military policies the U.S. could adopt that would send the desired message to Beijing without making Taiwan the centerpiece of the confrontation. As for supporting Taiwan, political and military cooperation are high on the list, but recognizing that Taiwan’s greatest strength is its economy is critical. Promises of military action ring hollow when Washington won’t spend a nickel of political capital to <a href="https://www.cfr.org/blog/time-now-trade-deal-taiwan" target="_blank" rel="nofollow">secure</a> a trade pact with Taiwan.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9211" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/michael-mazarr"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/michael_mazarr.jpg?itok=9vpkO_sX" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="michael-mazarr"><a href="https://www.chinafile.com/contributors/michael-mazarr" title="Michael Mazarr">Michael Mazarr</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The United States could use economic tools to lessen the risk of war in at least three ways: preserve a stabilizing influence over Taiwan, break Taiwan’s international isolation, and threaten the People’s Republic of China (PRC) with severe costs in the event of aggression.</p>
+        <p>The United States is one of Taiwan’s top trade partners and has <a href="https://ustr.gov/countries-regions/china/taiwan" target="_blank" rel="nofollow">over $17 billion</a> in foreign direct investment (FDI) stock on the island. Washington can use these economic ties to support its long-standing policy of stabilizing cross-strait relations, signaling that risky leanings in the direction of independence would have serious economic consequences.</p>
+        <p>At the same time, the United States can help draw Taiwan into more multilateral trade and financial institutions and agreements, as part of a campaign to deepen the relationships between Taiwan and the global community. As more countries do business with Taiwan, more foreign investors will travel there, more students will study there, more tourists will visit, and, in turn, the PRC will face a greater backlash if it attacks.</p>
+        <p>Most importantly, the United States can outline powerful economic consequences for Beijing in the event of Chinese aggression. It makes sense for Washington to assemble as many non-military tools of punishment as possible to provide itself with <a href="https://www.lowyinstitute.org/publications/countering-china-s-adventurism-over-taiwan-third-way#_ednref46" target="_blank" rel="nofollow">maximum flexibility</a> in the event of war—and to do so multilaterally, organizing collective threats of economic consequences. These might include:</p>
+        <ul>
+          <li><em>Limits on new foreign investment.</em> FDI in China <a href="https://www.reuters.com/article/us-china-economy-fdi/china-was-largest-recipient-of-fdi-in-2020-report-idUSKBN29T0TC" target="_blank" rel="nofollow">reached</a> $163 billion in 2020 to lead the world in inbound FDI. Recent reports <a href="https://www.ft.com/content/d5e09db3-549e-4a0b-8dbf-e499d0606df4" target="_blank" rel="nofollow">indicate</a> that Western banks and investment firms are looking to bolster their stake even further. The United States could seek to starve Beijing of as much of this capital as possible.</li>
+          <li><em>Targeted embargoes on Chinese exports.</em> The United States and many other leading recipients of Chinese exports could threaten bans on selected categories of exports, including electrical equipment, vehicles, toys, clothes and other textiles, and plastics. This would <a href="https://wits.worldbank.org/CountryProfile/en/Country/CHN/Year/LTST/TradeFlow/Export/Partner/by-country/Product/Total" target="_blank" rel="nofollow">threaten</a> over $1 trillion in Chinese exports and put at risk tens of millions of jobs.</li>
+          <li><em>A ban on any scientific or technological collaboration with Chinese researchers.</em> Should China engage in military adventurism, the country could lose the right for its researchers and engineers to benefit from international collaboration.</li>
+          <li><em>Limits on visits and tourism.</em> In 2018, China <a href="https://chinapower.csis.org/tourism/" target="_blank" rel="nofollow">received</a> roughly 63 million foreign tourists, and tourism contributes hundreds of billions to its economy. If China invades Taiwan, Washington could work with other countries to implement a tourism embargo.</li>
+          <li><em>A global campaign to deny China access to high-priority, high-sensitivity investments.</em> Washington could work with allies to build an investment fund able to take more decisive action to prevent China from gaining control of key infrastructure around the world, from ports to local telecommunication networks.</li>
+          <li><em>A national strategy to reduce U.S. vulnerability to Chinese counter-sanctions.</em> China would surely respond to such moves with punitive economic steps of its own. The United States could begin now to take steps to insulate itself from this blowback, knowing there will be limits on the degree to which this is possible.</li>
+        </ul>
+        <p>Taken together, these steps might allow the United States to confront China with the prospect of severe and lasting economic pain. One RAND study <a href="https://www.rand.org/content/dam/rand/pubs/research_reports/RR1100/RR1140/RAND_RR1140.pdf" target="_blank" rel="nofollow">concluded</a> that because of lost trade and investment, a major war over Taiwan could slash China’s GDP by 25 to 35 percent. Combined with a wide range of other measures, the prospects of such an economic calamity could help give pause to any temptation to aggression in Beijing.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9216" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/chas-w-freeman"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/chas-freeman-2_0.jpg?itok=u1JTOGtD" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="chas-w-freeman"><a href="https://www.chinafile.com/contributors/chas-w-freeman" title="Chas W. Freeman">Chas W. Freeman</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Military actions by the United States will <em>not</em> lessen the likelihood of military conflict over Taiwan. They will increase it. The more the U.S. postures itself to defend Taiwan, the less Taiwan will do to defend itself. Such actions will appear to validate the People’s Republic of China (PRC) view that American strategy aims to divide and weaken China and to frustrate the aims of both the 1911 and 1949 Chinese nationalist revolutions—which aimed to return China to wealth and power by unifying it, ending foreign spheres of influence on its territory, eliminating warlordism (local armed resistance to central authority), and restoring international respect for Chinese sovereignty and territorial integrity. In this context, foreign efforts at military “deterrence” only provoke the PRC to increase its efforts to intimidate Taiwan and lead to escalating Sino-American confrontation and an arms race.</p>
+        <p>Defining the Taiwan issue in purely military terms perpetuates and exacerbates it, it doesn’t advance it toward resolution or mitigate the risks it poses. As a practical matter, there can be no military balance between the 24 million-strong Chinese democracy on Taiwan and the 1.4 billion-strong mainland, which must arm itself to deal with potential adversaries on 14 land borders, in Japan, and from the United States Navy. Policy toward Taiwan cannot rest on military deterrence or balance alone.</p>
+        <p>The question of Taiwan’s relationship with the rest of China is a product of the Chinese Civil War. Ending wars requires the agreement of the parties to them. They do not end because one side decides they should be over. The interposition of U.S. forces between the parties to the Chinese Civil War limited further combat between them but did not end their contention.</p>
+        <p>Many inhabitants of Taiwan would now clearly prefer not to continue to embrace a Chinese identity. That is their right, providing they are prepared to deal with the consequences rather than impose them on others. As American independence from Britain demonstrated, no people can separate from another without the agreement of those from whom they are separating. Usually self-determination requires a war. Often, as the examples of the Confederate States of America, Kashmiris, Kurds, Palestinians, and Tibetans illustrate, even the most determined attempts to achieve self-determination fail catastrophically.</p>
+        <p>The overriding U.S. interest has always been to limit or preclude the destabilizing effects of warfare between the Chinese parties. This, rather than fighting the mainland on behalf of Taiwan self-determination, is still the determinative U.S. interest. The United States should seek to incentivize Beijing and Taipei to resolve their differences peacefully through negotiations and to craft their own compromises with each other, not abet military confrontation or lessen the incentives for them to negotiate a mutually acceptable status for Taiwan.</p>
+        <p>A cross-Strait agreement that preserves Taiwan’s democracy, precludes the People’s Liberation Army’s use of Taiwan for strategic purposes, and removes the risk of a trans-Pacific war over Taiwan’s status is very much in the U.S. interest. Jiang Zemin’s 2003 “<a href="http://www.china-embassy.org/eng/zt/twwt/t36736.htm" target="_blank" rel="nofollow">8-point proposal</a>” proposed just this sort of arrangement. In its own interest, the United States should encourage progress toward cross-Strait agreement on Taiwan’s status, not offer open-ended military backing for Taipei’s efforts to change the status quo or achieve recognition as a state separate from the rest of China.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2021-10-06</time>
+        <a href="https://nodebe4.github.io/oped2/2021-10-06/The-Man-Behind-Xi-Jinping-s-Foreign-Policy/">
+          The Man Behind Xi Jinping’s Foreign Policy
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-10-03</time>
+        <a href="https://nodebe4.github.io/oped2/2021-10-03/Chinese-Medicine-in-the-Covid-Wards/">
+          Chinese Medicine in the Covid Wards
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-23</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-23/China-s-Search-for-a-Modern-Identity-Has-Entered/">
+          ‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-09</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-09/A-Farewell-to-My-Students/">
+          A Farewell to My Students
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">
+            前一篇：爱德华·萨义德及其反对者：《东方学》引发的学界战争
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-10-02/%E5%B0%8D%E6%96%BC%E6%95%99%E5%AD%B8%E7%9A%84%E5%8F%8D%E6%80%9D/">
+            後一篇：對於教學的反思
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-10-02/%E5%B0%8D%E6%96%BC%E6%95%99%E5%AD%B8%E7%9A%84%E5%8F%8D%E6%80%9D/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-10-03/Chinese-Medicine-in-the-Covid-Wards/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-09-23/China-s-Search-for-a-Modern-Identity-Has-Entered/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-10-02/%E5%B0%8D%E6%96%BC%E6%95%99%E5%AD%B8%E7%9A%84%E5%8F%8D%E6%80%9D/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-10-03/Chinese-Medicine-in-the-Covid-Wards/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-09-23/China-s-Search-for-a-Modern-Identity-Has-Entered/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>DEF CON 30 CTF final 遊記（下） – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+DEF CON 30 CTF final 遊記（下）
+——
+" />
+    <meta property="og:description" content="
+DEF CON 30 CTF final 遊記（下）
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="DEF CON 30 CTF final 遊記（下）" />
+    <meta property="twitter:title" content="DEF CON 30 CTF final 遊記（下）" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2Fdef-con-30-ctf-final-3-e19eeeed8e44%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/def-con-30-ctf-final-3-e19eeeed8e44?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/def-con-30-ctf-final-3-e19eeeed8e44?source=rss-f1fb3e40dc37------2&text=DEF CON 30 CTF final 遊記（下）&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/def-con-30-ctf-final-3-e19eeeed8e44?source=rss-f1fb3e40dc37------2&title=DEF CON 30 CTF final 遊記（下）" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/def-con-30-ctf-final-3-e19eeeed8e44?source=rss-f1fb3e40dc37------2&title=DEF CON 30 CTF final 遊記（下）" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=DEF CON 30 CTF final 遊記（下）&body=
+DEF CON 30 CTF final 遊記（下）
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/def-con-30-ctf-final-3-e19eeeed8e44?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/def-con-30-ctf-final-3-e19eeeed8e44?source=rss-f1fb3e40dc37------2&title=DEF CON 30 CTF final 遊記（下）&caption=
+DEF CON 30 CTF final 遊記（下）
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=DEF CON 30 CTF final 遊記（下）&url=https://hulitw.medium.com/def-con-30-ctf-final-3-e19eeeed8e44?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>DEF CON 30 CTF final 遊記（下）</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-08-17
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/def-con-30-ctf-final-3-e19eeeed8e44?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1660743205000-->
+<p><a href="https://hulitw.medium.com/def-con-30-ctf-final-3-e19eeeed8e44?source=rss-f1fb3e40dc37------2">DEF CON 30 CTF final 遊記（下）</a>
+——</p>
+
+<div>
+  <p>第一篇寫台北飛美國心得，第二篇寫 DEF CON &amp; CTF 心得，第三篇就來隨意寫一下其他的心得。</p>
+  <h3 id="after-party">After Party</h3>
+  <p>前面有提過最後一天的比賽只到下午兩點而已，而最近幾年好像有些隊伍都會自動出來辦一個 after party，讓選手們互相交流認識一下，地點在威尼斯人的總統套房，我因為好奇去參觀了一下，真的猛：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*7DAcyTaPn_6rtLlQODCiSQ.jpeg" />    <figcaption>
+很大的房間而且 view 超讚
+    </figcaption>
+  </figure>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*NHAo00BmJAgrD5XFb2Emtg.jpeg" />    <figcaption>
+電影放映室
+    </figcaption>
+  </figure>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*LxH3RyoMSoi_0mKG0QXMAQ.jpeg" />    <figcaption>
+撞球桌，厲害吧
+    </figcaption>
+  </figure>
+  <p>房間裡面還有一台鋼琴，不過我沒拍就是了。</p>
+  <p>趴踢實際的樣子可以參考主辦人之一的推特：<a href="https://twitter.com/gf_256/status/1559249419991560193">https://twitter.com/gf_256/status/1559249419991560193</a></p>
+  <h3 id="section">賭博</h3>
+  <p>既然都到了 vegas，當然是要小賭一下，我這次只玩了兩種：</p>
+  <ol>
+    <li>21 點</li>
+    <li>轉盤</li>
+  </ol>
+  <p>21 點的話就運氣運氣的，我是跟機器玩的不是跟真人玩，只要把紙鈔投進去就會自動換成籌碼，每一輪有幾個選擇：</p>
+  <ol>
+    <li>split（分牌，要兩張牌同個點數才能分）</li>
+    <li>double down（再要一張並加倍賭注）</li>
+    <li>stand（不要了）</li>
+    <li>hit（再要一張）</li>
+  </ol>
+  <p>然後都會有一個 minimum bet，基本上很多都是 5 塊錢，最小賭注就是 5 塊。然後當莊家開場其中一張是 A 的時候，機器會問你要不要買保險，例如說我賭 5 塊錢，保險就是 2.5 塊，似乎當莊家 21 點的時候可以賠少一點。</p>
+  <p>總之呢，我都拿 20 塊下去賭，賭到變成 50 就 cash out，機器就會吐一張紙給你，你再拿那張紙去跟櫃檯換真的錢。我第一次換錢的時候什麼都沒看就給我，第二次換的時候說要看護照。</p>
+  <p>在這邊我成功把三張 20 塊變成三張 50 塊 🎉</p>
+  <p>原本在想要不要跟真人玩，但真人的話最小賭注基本上都是 15 塊起跳，先算了。</p>
+  <p>之後跟朋友去其他賭場走走，在另外一間玩了轉盤（Roulette），策略很簡單，就是「明明是獨立機率卻不信邪」，例如說前面四次都開紅色，下一次就押黑色之類的。</p>
+  <p>靠著這個錯覺策略，在出現四次黑色時壓了紅色，輸 50，下一局再壓紅色，又輸 50，接著再壓，又輸 50，幸好還有錢，下一局直接壓 100 紅色，把之前輸的贏了一些回來，然後再隨便下個幾盤。</p>
+  <p>最後的結果是在轉盤這邊似乎沒輸沒贏。</p>
+  <p>朋友則是靠著他的充電線不小心壓到螢幕的下注小賺了 25 塊，然後就趕快 cash out 了。</p>
+  <h3 id="section-1">天氣</h3>
+  <p>拉斯維加斯的天氣其實比我想得好，待的這幾天中有一兩天是陰天，甚至還有一天晚上是下大雨。我記得第二天中午出門的時候真的滿熱的，但晚上其實就滿 ok，有些陰天的時候白天出門也滿 ok，不會覺得特別熱。</p>
+  <h3 id="section-2">食物</h3>
+  <p>這次有吃一些速食（麥當勞）跟一些餐廳，速食就沒什麼好特別講的，份量跟台灣差不多，而餐廳的話值得一提，有不少餐廳的份量真的都滿大份的，光是點一個義大利麵就可以吃不完。</p>
+  <p>然後也不是每天都吃美式食物，有吃一些義式料理之類的，比想像中好吃滿多的，覺得有點驚艷。</p>
+  <p>還有去吃一間滿特別的吃到飽的餐廳，跟台灣的差滿多的，buffet 的部分都是一些沙拉跟水果，肉的部分是會有很多不同的人拿著一串肉到你桌上，問你要不要，要的話就切一塊下來到你盤子上。肉的種類超多，吃一輪大概就飽了。</p>
+  <h3 id="section-3">回台灣</h3>
+  <p>我回台灣的行程一樣也有點特別：</p>
+  <ol>
+    <li>AA LAS -&gt; LAX</li>
+    <li>AA 班號 JL 執飛 LAX -&gt; HND (+1)</li>
+    <li>JL HND -&gt; TSA(+2)</li>
+  </ol>
+  <p>飛到日本以後因為當天沒有其他 JL 班機回台灣，所以需要在機場過夜。對，這就是為什麼我今天可以把三篇心得都寫完，因為這時候是日本時間晚上 10:56 分，而我在日航貴賓室寫著心得。</p>
+  <p>在 LAS check in 的時候地勤跟我說我的行李掛不到台北，只能掛到日本，於是跟我說幫我掛到 LAX，我在洛杉磯再去求救。我問他說能不能直接掛到日本，我去日本再求救，因為我從 LA 飛日本的班機比較趕一點。</p>
+  <p>但他說時間很充足，去洛杉磯求救比較好，就照著他說的做了。</p>
+  <p>幸好飛到洛杉磯的班機不但沒有 delay，還提早到了 10 分鐘，拿完行李以後我去 AA 櫃檯說明狀況，他說要去 JL 櫃檯掛，跑去 JL 櫃檯發現沒什麼人，很快就把我的行李處理好了，然後印了兩張新的日航登機證。</p>
+  <p>安檢也沒有太多人，於是成功在時間充裕的狀況下進到管制區，還可以去貴賓室待個半小時左右，時間真的是滿夠的。</p>
+  <p>這次從 LAX 飛 HND 的飛機就是我原本買的豪華經濟艙了，長這樣：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*umJxNiKhtlPmISwp2yxMUw.jpeg" />    <figcaption>
+比經濟艙大一點
+    </figcaption>
+  </figure>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/720/1*AC0xtv4crOOVEe4eoGGGlA.jpeg" />    <figcaption>
+側面看起來長這樣
+    </figcaption>
+  </figure>
+  <p>實際體驗覺得比經濟艙舒服一些，至少腳不會頂到前面椅子，其他倒是沒有差太多，然後豪經也幾乎快賣完了，看起來只剩下三四個位子之類的。</p>
+  <p>因為 10 個小時的飛行時間實在太久，所以在機上看了沙丘跟奇異博士 2，最後還看了一半的玩命關頭 9，下次要飛長途的話，如果票價沒有貴真的很多，應該還是會選擇豪華經濟艙，比較舒適一點。</p>
+  <p>到日本以後跟之前一樣，轉機的先留著再一起帶到機場去。</p>
+  <p>下飛機以後一樣去了機場貴賓室，它的開放時間會根據當日的班機而定，我那天是凌晨 1:25 才關（因為最後一班日航班機是這個時間點），於是我就在那邊待到差不多 1 點左右，然後我東看西看都沒看到洗澡間，猜測可能是因為疫情暫時關閉了。</p>
+  <p>從貴賓室出來以後，在機場中尋找安身之所，找滿久才找到一個相對滿意的地方，不會太吵，附近也沒什麼人，就在椅子上面躺了睡覺。說實在的，還真的滿難睡的，根本睡不太著，我大概只能勉強睡個兩小時，然後再爬起來去別區睡一下，這樣醒醒睡睡大概就到了早上五點，開始滑手機到六點貴賓室開門，再進去吃個早餐。</p>
+  <p>前往台北的飛機人比想像中多一點，而且也比較大台，光商務艙好像就有個八排，在機上因為真的很想睡，所以除了吃飯的時間以外都在睡覺。</p>
+  <p>到松山機場之後，因為座位在滿前面的（20 排，商務艙最後一排是 8，經濟艙第一排是 18），所以很早下飛機，下飛機以後就開始闖關。</p>
+  <p>松山跟桃園機場的關卡不太一樣，這邊拿完快篩跟 PCR 檢體罐以後，是先去做唾液 PCR，做完之後才入境拿行李，桃園機場是相反，拿完行李以後才去 PCR。</p>
+  <p>而且桃園機場的 PCR 在戶外，松山機場的在室內，感覺比較高級一點。</p>
+  <p>總之呢，因為我東西都有先準備好，所以很快就過關了，大概是前三個跑完流程的。</p>
+  <p>拿完行李以後就去搭防疫計程車，因為是前幾個出來的所以也不用什麼等待時間，看了看機場的入境清單，似乎同時間就只能這一台班機而已。</p>
+  <p>其他流程就跟桃園機場差不多了，搭防疫計程車抵達要隔離的地方，話說車錢比我想的便宜，大概 300 塊而已（我原本預期個 500 之類的）。</p>
+  <h3 id="section-4">總結</h3>
+  <p>幫系列文做個總結。</p>
+  <p>美國的話，跟上次去的心得感想一樣，沒有特別愛。如果要飛這麼遠的話，我會選擇去歐洲而不是去美國。不過如果是旅遊的話，先不考慮疫情，日韓還是首選就是了。</p>
+  <p>拉斯維加斯的話，其實我覺得如果是在主要市區玩的話，似乎不會特別想要去第二次，就是覺得那邊建築都很猛，看個新鮮感。畢竟美國這麼遠，不會為了這個想要跑一趟，說實在的去縮小版的澳門也可以有類似的感覺，當然沒有美國正版這麼壯觀，但如果是從沒去過拉斯維加斯也沒去過澳門，其實澳門相對起來 CP 值高滿多的。</p>
+  <p>DEF CON 的話，這次沒聽什麼議程，也沒跟太多人聊到。我覺得這種研討會確實跟前人講的一樣，可能最主要的目的是社交，認識一個新朋友以及跟老朋友敘舊之類的。</p>
+  <p>如果只是想聽議程的話我記得滿多可能之後都會釋出，上網看其實就可以了，還可以隨時暫停或是放大畫面，體驗會更好，沒什麼必要跑到現場。</p>
+  <p>DEF CON CTF final 的話，不知道是不是這次特別慘，或是我期待太高（或是期待的方向錯誤），其實跟我想像中落差滿多的。但畢竟 DEF CON CTF final 被稱作是 CTF 的最高殿堂，我的期待應該也是滿合理的。</p>
+  <p>我本來以為會是一個滿正式的比賽？然後弄得滿慎重那樣，不過從壞了三天的 infra 跟各種大小問題，以及可以直接開放自由參觀這點來看，似乎沒我想像中這麼慎重，比起一個很專業很正式的比賽，比較像是更輕鬆一些的活動？</p>
+  <p>飛行的話，之前拿的 JGC 真的超值，有張高卡可以進貴賓室真的很讚，轉機時間拉長都覺得無所謂，反正可以去貴賓室吃東西休息。不過拉斯維加斯沒有 OneWorld 貴賓室就是了，小可惜。</p>
+  <p>其實之前一直在考慮要不要去 DEF CON，因為說實在的跑一趟其實滿麻煩，例如說要轉機很多次、要飛很遠很久、要調時差、回來要隔離之類的，但後來想說這種機會也不常見，就先去再說吧。</p>
+  <p>後見之明覺得這個選擇是正確的，是滿難忘的一次體驗，見到了一直在線上共同打拼的隊友們，也體驗了一次傳說中的 DEF CON CTF final，無論結果本身好或壞，經歷過的過程都是物超所值的。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=e19eeeed8e44" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2022-12-18</time>
+        <a href="https://nodebe4.github.io/oped2/2022-12-18/%E4%BD%A0%E9%81%8E%E5%BE%97%E5%A4%AA%E5%AE%89%E9%80%B8%E4%BA%86/">
+          你過得太安逸了
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-11-08</time>
+        <a href="https://nodebe4.github.io/oped2/2022-11-08/%E8%BF%91%E6%B3%81%E6%9B%B4%E6%96%B0-%E8%BD%89%E8%81%B7%E8%B3%87%E5%AE%89%E7%9A%84%E4%B8%80%E5%B9%B4%E5%BE%8C/">
+          近況更新：轉職資安的一年後
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-16</time>
+        <a href="https://nodebe4.github.io/oped2/2022-08-16/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%AD/">
+          DEF CON 30 CTF final 遊記（中）
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-16</time>
+        <a href="https://nodebe4.github.io/oped2/2022-08-16/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%8A/">
+          DEF CON 30 CTF final 遊記（上）
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-08-16/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%AD/">
+            前一篇：DEF CON 30 CTF final 遊記（中）
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-08-17/Hong-Kong-from-the-Inside/">
+            後一篇：Hong Kong from the Inside
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-08-16/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%AD/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-08-17/Hong-Kong-from-the-Inside/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-11-08/%E8%BF%91%E6%B3%81%E6%9B%B4%E6%96%B0-%E8%BD%89%E8%81%B7%E8%B3%87%E5%AE%89%E7%9A%84%E4%B8%80%E5%B9%B4%E5%BE%8C/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-08-16/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%AD/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-08-16/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%AD/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-08-17/Hong-Kong-from-the-Inside/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-11-08/%E8%BF%91%E6%B3%81%E6%9B%B4%E6%96%B0-%E8%BD%89%E8%81%B7%E8%B3%87%E5%AE%89%E7%9A%84%E4%B8%80%E5%B9%B4%E5%BE%8C/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-08-16/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%AD/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

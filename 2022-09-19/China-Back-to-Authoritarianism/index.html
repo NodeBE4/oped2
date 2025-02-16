@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>China: Back to Authoritarianism – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+China: Back to Authoritarianism
+——
+" />
+    <meta property="og:description" content="
+China: Back to Authoritarianism
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="China: Back to Authoritarianism" />
+    <meta property="twitter:title" content="China: Back to Authoritarianism" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Flibrary%2Fnyrb-china-archive%2Fchina-back-authoritarianism" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism&text=China: Back to Authoritarianism&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism&title=China: Back to Authoritarianism" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism&title=China: Back to Authoritarianism" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=China: Back to Authoritarianism&body=
+China: Back to Authoritarianism
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism&title=China: Back to Authoritarianism&caption=
+China: Back to Authoritarianism
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=China: Back to Authoritarianism&url=https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>China: Back to Authoritarianism</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-09-19
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Ian Johnson</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1663632000000-->
+<p><a href="https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism">China: Back to Authoritarianism</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-e5279d8b671f52df1367fda191ffe442">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54366_sm.jpg" title="China: Back to Authoritarianism" class="colorbox" data-colorbox-gallery="gallery-node-54366-V1ggH_JEkUQ" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54366_sm.jpg?itok=5ffoJbAn" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Wang Zhao—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>President Xi Jinping (left) walks with (second-left to right) Li Qiang, Li Xi, Zhao Leji, Ding Xuexiang, Wang Huning, and Cai Qi, members of the Chinese Communist Party’s new Politburo Standing Committee, as they meet the media in the Great Hall of the People in Beijing, October 23, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">Ten years ago, China was in the midst of what was being touted as a remarkably predictable and peaceful transfer of power—proof that its authoritarian system of government was capable of implementing term limits and an orderly succession from one top leader to another. Chinese President and Communist Party Secretary Hu Jintao and Premier Wen Jiabao were about to step down after two terms, just as Jiang Zemin and Zhu Rongji had done a decade earlier. Stable leadership—the elusive goal of Chinese politics for the past century—seemed to have arrived.</p>
+      <p>Beneath the surface, however, China was facing its biggest political crisis since the 1989 Tiananmen massacre. As the year unfolded, senior officials were purged and their families’ debauchery and corruption exposed. Within five years, seemingly secure institutions had broken down as the new top leader, Xi Jinping, turned out to be an ambitious strongman who sought to remake the political system and expand his power. At the Chinese Communist Party Congress in mid-October, he will almost certainly be reelected to a third term as head of the Party.</p>
+      <p>Over the past decade, Xi has become a transformational figure on a par with the two other giants of Chinese Communist Party rule: Mao Zedong and Deng Xiaoping. Like them, he has reversed earlier policies, in Xi’s case the relative openness that his predecessors had fostered. In its place, he has implemented firmer control of almost every facet of life, from politics and religion to the economy and foreign affairs. Now 69, he is likely to be China’s leader into old age and is presiding over what may become a less predictable era of Chinese politics, one with troubling implications for countries around the world.</p>
+      <p>How Chinese leaders are selected is the focus of two books by political scientists who use newly opened archives or data-driven research to reinterpret recent events, better understand Xi’s China, and imagine a possible post-Xi future. In <em>Coalitions of the Weak</em>, Victor C. Shih of the University of California at San Diego looks at how top leaders from Mao to Deng to Xi have eliminated their peers and surrounded themselves with weaker leaders who help them run the country. This ensures that the strongman remains unchallenged, but it doesn’t bode well for policy in his lifetime or for his legacy. In <em>Prestige, Manipulation, and Coercion</em>, Joseph Torigian of American University is less interested in coalitions than the mechanics of transfers. Challenging conventional analyses of how authoritarian leaders are chosen, he argues that factors such as ideology and patronage matter less than brass-knuckle tactics.</p>
+      <p class="dropcap">What people today often forget is how few analysts predicted that Xi would become an authoritarian leader like Mao. He was hardly unknown when he came to power in 2012; in fact, in the relatively dull world of Chinese officialdom, he was a celebrity. His father, Xi Zhongxun, was a well-known reformer, giving young Xi the sort of bloodline that many Pekingologists (at home and abroad) have traditionally considered useful in predicting a leader’s actions.</p>
+      <p>He had also had a colorful career as a provincial administrator. When he was 30, he astutely volunteered for a hardship post in Zhengding county, which was known for being “chaotic, dirty, and backward.” There, he established a tourism industry by building a set for a television series and refurbishing a Zen temple popular with Japanese visitors. He also tried to jump-start market-oriented reforms that local conservatives had resisted. The Chinese writer Ke Yunlu used Xi and two other up-and-coming officials as models for the reform-minded hero of his best-selling novel <em>New Star</em>, which later was serialized on Chinese television.<sup id="fnr1"><a href="https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism#fn1" rel="nofollow">1</a></sup></p>
+      <p>That reformist reputation followed Xi for the next 25 years. In 1985, he was sent to Fujian province, where he spent 17 years, followed by stints in Zhejiang and Shanghai. In these coastal areas with strong export-oriented private and foreign enterprises, he polished his reputation for pragmatism. When he was brought back to Beijing in 2007, it was as Hu’s heir apparent—a welcome sign that a savvy reformer would guide China through the second decade of the 21st century. He spent five years quietly apprenticing with Hu before taking over, as planned, at the 2012 Communist Party Congress, which meets every five years to choose top leaders and set national priorities.</p>
+      <p>What followed was a series of <em>Art of War</em> master strokes that seemed to come out of nowhere. Xi used well-founded concerns about corruption to detain more than one hundred thousand people, deftly arresting both the obviously corrupt and those who stood in his way. He made highly scripted yet popular visits to folksy restaurants. And he cultivated the image of a strong leader, with his wife, a glamorous pop star, at his side.</p>
+      <p>But his policies seemed like a throwback. He scaled down market-oriented reforms, put tight limits on nongovernmental organizations, closed most foreign charities, locked up critics (he let the Nobel Peace Prize winner Liu Xiaobo die of cancer in prison), shuttered independent bookstores, harassed churches, and launched a violent campaign of forced cultural assimilation against Uyghur Muslims in western China. To cap it all off, he lifted term limits at the 2017 Party Congress, paving the way for his third term.</p>
+      <p>It was a stunning about-face. How had he changed so quickly? Or perhaps more accurately, how had almost everyone gotten him so wrong?</p>
+      <p class="dropcap">To understand Xi’s career, it’s worth remembering how deceptive China’s apparent calm a decade ago was. At the time, a series of scandals seemed little more than salacious gossip. But in hindsight, it’s clear that they were the death throes of a system meant to keep China from descending once again into authoritarian rule.</p>
+      <p>The scandals started in November 2011, when the British businessman Neil Heywood was found dead in his hotel room in the western metropolis of Chongqing. In early 2012, Gu Kailai, the wife of Bo Xilai, one of China’s most powerful leaders, was implicated in poisoning Heywood. Soon the rest of the story emerged: the two had been close business contacts, engaging in a series of shady deals and influence-peddling. Heywood had gotten the family’s son into an elite private school and channeled contracts to Gu’s law firm in Beijing. When their relationship soured, Gu asked Heywood to visit her in Chongqing, where Bo served as Party secretary. She ensconced him in a secluded villa at the government-run Lucky Holiday Hotel, then had him poisoned and quickly cremated.</p>
+      <p>The revelation jarred China’s political system. Like Xi, Bo was the son of a famous revolutionary and was in some ways a rival. He championed the poor, promoted Mao-style culture, and advocated populist policies. But he ran Chongqing like a fiefdom: his police chief whitewashed the investigation into Heywood’s death, while a local Communist Party official furnished the cyanide used to poison him. Bo was removed from office and eventually stood trial, but he was so popular that online commentators rallied around him. The uproar only abated when several websites were shut down. Bo and Gu were convicted of corruption and murder and sent to prison.</p>
+      <p>Next up was Ling Jihua, one of Party Secretary Hu’s right-hand men. Ling’s career was destroyed when his son died in a salacious car crash: the young man and two women were found in the wreckage in various stages of undress. That raised further questions about the secretive lifestyles of China’s top leaders and their families—not only the dissoluteness but the corruption implied in Ling’s 23-year-old son driving a Ferrari 458 Spider.</p>
+      <p>Later that year, it was Premier Wen’s turn. <em>The New York Times</em> published (in English and on its Chinese-language site) an <a href="https://www.nytimes.com/2012/10/26/business/global/family-of-wen-jiabao-holds-a-hidden-fortune-in-china.html" target="_blank" rel="nofollow">extensive report</a> based on Chinese public records showing that his family had engaged in dubious business deals. Wen was not directly implicated but family members, including his wife and mother, reportedly had controlled assets worth at least $2.7 billion.</p>
+      <p>The Communist Party’s annus horribilis ended with Xi bizarrely disappearing from view for two weeks that September. According to some rumors he had thrown out his back, but more credible reports suggested that the string of scandals had forced him to hold a series of backroom meetings to solidify the agenda for the Party Congress in November. The congress did confirm him as the new top leader, but the political system he inherited was in tatters.</p>
+      <p>What was this system? It had been shaped by Deng in the 1990s to prevent another strongman like Mao from running China. Deng’s idea was to create a collective leadership with one person—first Jiang, then Hu—who would hold three positions guaranteeing political, military, and symbolic power: general secretary of the Party, chair of the Central Military Commission, and head of state with the honorific title of president. Next to the top leader was to stand a more technocratic person—Jiang’s ace premiers, Li Peng and Zhu Rongji, and Hu’s capable if compromised premier Wen—who would run the government, handling things like economic reforms, central bank interest rates, and policies toward social groups.</p>
+      <p>In the background were other Party leaders of significant stature. They jockeyed among themselves, turning a blind eye to one another’s corruption or their families’ dissolute lifestyles. The system of governance seemed wildly successful, but only because China’s economy roared ahead for 30 years, diverting attention from its ramshackle political structure.</p>
+      <p>In reality, Deng undermined his own system from the start. He had taken over in the late 1970s after forcing his predecessor from office. He installed two general secretaries to run the Party, dumped them when he disliked their policies, and finally settled on Jiang after the 1989 Tiananmen uprising. He also elevated Hu, making him Jiang’s likely successor. From the outset, it was one man’s vision.</p>
+      <p>Deng died in 1997, leaving Jiang to rule for five years before he had to retire in 2002. That went as planned, though Jiang tried to cling to power, only reluctantly relinquishing the title of chairman of the Central Military Commission in 2004, two years late. Still, Deng had picked both Jiang and Hu, each had served out his full term, and each had retired on time. Xi was something new. He rose through Deng’s system, but just five years after taking office he had already destroyed it.</p>
+      <p class="dropcap">Shih’s and Torigian’s books help explain these momentous changes and China’s prospects for the future. Both challenge existing ways of explaining how leaders in China are chosen and take power. And both argue that China’s current system is inherently unstable.</p>
+      <p>Shih, a scholar of Chinese political coalitions, wrote a definitive book on how interest groups drove economic policy in the 1990s, <em>Factions and Finance in China: Elite Conflict and Inflation</em> (2007). <em>Coalitions of the Weak</em> gives a counterintuitive explanation for how China’s reform era began. Like his earlier book, it is data-driven, drawing on detailed analyses of promotion lists and even including a complex (and, to this liberal arts major, incomprehensible) use of an algebraic formula to calculate the probability of various factions achieving promotions. Primarily it seeks to demonstrate in Spenglerian fashion how strongmen rise and fall in Communist China.</p>
+      <p>Shih takes us back to the 1950s, when Mao was surrounded by battle-hardened veterans, many of them experienced administrators. They would have been his ideal successors, helping to secure the revolution as he entered old age in the 1960s. Instead, events of the 1950s caused Mao to gut this tested team. He had engineered economic experiments that led to a disastrous famine, and by the early 1960s his peers had partially sidelined him. But in 1966, he unleashed the Cultural Revolution, using impressionable youths who had grown up under his rule to overthrow the old guard. Mao’s designated successor, Liu Shaoqi, was tortured and died in prison in 1969. His next successor, the Korean War general Lin Biao, came under suspicion for trying to amass power and died in an airplane crash in 1971 while trying to flee to the Soviet Union.</p>
+      <p>As Mao’s health declined, he wanted more malleable officials in positions of power, hence the purges during the Cultural Revolution and the rise of what became known as the Gang of Four—Mao’s wife, Jiang Qing, and three younger officials. For years, people have seen them as examples of how Mao was obsessed with perpetuating his extreme positions, such as “class struggle” against anyone with wealth or education. According to this interpretation, he considered his peers too moderate and likely to revert to capitalism, so he marginalized them and elevated young radicals.</p>
+      <p>Shih’s interpretation adds more realpolitik calculations to this explanation. While ideology was involved, Mao mainly wanted to clear-cut the forest around him to avoid rivals. To accomplish this he formed “coalitions of the weak” to run the country, “thus shaping elite politics in China for decades to come.” In the military, for example, he promoted veterans of an army group, the Fourth Front Army, that had actually split with him during the 1930s. Because their reputations were so damaged, they were ideal for Mao’s purposes: military officers who would never challenge him because he could easily bring up their past mistakes and crush them.</p>
+      <p>As for the Gang of Four, Mao promoted people with strong ideological convictions but no power base. Jiang Qing was a credible revolutionary veteran but was maligned for being a woman and was unable to make allies. The other three were mainly writers—known dismissively as “scribblers”—who were despised by the revolutionary veterans they replaced.</p>
+      <p>Mao’s stratagem enabled him to rule and keep his opponents at bay until his death in 1976, at which point this weak coalition crumbled. “Instead of a failed gamble, this book argues that placing clueless junior officials in positions of great authority was a deliberate strategy by Mao to enhance his personal power while he still lived,” Shih writes. “Postmortem legacy or even the long-term rule of the party likely was not a high priority for Mao.” Mao’s coalition was initially sidelined by his successor, Hua Guofeng, and then by Deng when he tossed out Hua. This pattern replicated itself in the Deng era, when he appointed weak proxy leaders to run the Party.</p>
+      <p>These stratagems also help explain Xi’s rise. In the 1970s and 1980s, China’s best-educated and best-connected young officials were the children of senior leaders—people like Xi. But most stayed in Beijing, where they were blocked by higher-ups who did not want to be challenged by them. None achieved real power, so many eventually went into finance, using their family ties to make fortunes.</p>
+      <p>Xi and his rival who imploded in 2012, Bo Xilai, were the exceptions. They deliberately decided to work in the provinces, away from the machinations of Beijing. By the time Hu’s successor was being chosen in the early 2000s, Xi was one of the few remaining princelings whose political capital was still intact. Once in power, he used his connections to rule with an iron fist—his personal ties as a member of the “red nobility” gave him levers of influence that his predecessors never possessed. But this rise hasn’t made Xi immune to the same temptation of weak coalitions that once attracted Mao and Deng. He has already jailed most of his serious competitors and after the upcoming Party Congress will be surrounded by younger leaders who are less likely to challenge him.</p>
+      <p>Shih sees broader lessons for the growing number of authoritarian regimes around the world. One-party states, he writes, operate in information deficits. Their leaders often do not know who their opponents are and so are often toppled by people close to them. They also do not know how strong their potential challengers are, leading them to surround themselves with obviously weak people. That leads not only to poor policy execution but to the leader’s isolation and eventual tumultuous end.</p>
+      <p class="dropcap">While Shih focuses on how coalitions shape China’s power struggles, Torigian sees power transfers more as a “settling of scores.” Like Shih, he views the Mao era as crucial for understanding China’s political evolution under Xi. But he casts a wider analytical net in comparing two of the most important transfers of power of the 20th century: the post-Stalin and the post-Mao periods. For Torigian, grabbing power—and holding on to it—are about the mechanics and mechanisms of rule. Building and maintaining coalitions is not nearly as critical as control over institutions—especially the security forces and the military.</p>
+      <p>Like Shih’s, Torigian’s book disputes the idea that authoritarian states can institutionalize in any meaningful way. Using the example of Stalin’s successors, he describes how Lavrentii Beria, the secret police chief who became part of the troika that ruled the Soviet Union after Stalin’s death, was toppled not because of policy differences with his peers or a lack of patronage, which is what some models of authoritarian power posit. On the contrary, Beria instituted popular policies, such as releasing people from the Gulag, canceling expensive projects, and trying to improve relations with ethnic minorities. He fell from power after just three months because a group of senior officials around Nikita Khrushchev who feared him contravened Party rules and engineered a coup. Beria was arrested and spirited out of the Kremlin in the trunk of a car. Six months later, he was convicted of treason, terrorism, and counterrevolutionary activity and executed.</p>
+      <p>Mao’s successors, the Gang of Four, were toppled by similar methods. Torigian gives a portrait of them that many students of Chinese history will find contrarian. Instead of being leftist zealots, they come across as much more pragmatic. They were ousted by another of Mao’s successors, Hua Guofeng, who also bypassed Party rules to have them seized and tried.</p>
+      <p>Torigian identifies three reasons why the Gang of Four were vulnerable. First, they were so obviously second-rate—chosen, as Shih shows, precisely because they were weak. Second, Hua had them arrested not because he had overwhelming support but because he feared that if he took his case against them to the Central Committee—the top decision-making body in the Party—he would lose. Finally, the Gang lacked the support of the military and secret police.</p>
+      <p>Ironically, the same thing happened to Hua between 1978 and 1981, although he was not imprisoned. Instead, Deng engineered a backdoor coup to have him removed and his own people installed. Again, ideology did not seriously divide Hua and the “reformers” around Deng; Hua was willing to try limited capitalist-style reforms and modernize the economy. Instead, it was mostly about power. This contradicts how most people see the Deng era. Torigian writes:</p>
+      <blockquote>
+        <p>The current consensus in historiography on China during the Deng era depicts a golden era of political and economic progress, with the notable exception of the 1989 events in Tiananmen Square. In particular, Deng is credited with creating institutions to prevent the rise of any future Mao-like figure and ruling in conjunction with other powerful figures.</p>
+      </blockquote>
+      <p>That assessment has been used to attack Xi. But in some ways, it shows how his bare-knuckle style is the rule and the 15 years of consensus that preceded him—the period between Deng’s death in 1997 and Xi’s rise in 2012—were the exception.</p>
+      <p class="dropcap">What can we learn from this to anticipate China’s future? We generally have little idea of what really is going on behind the closed doors of the Zhongnanhai leadership compound. When eruptions do occur—in the fateful year 2012, for example—we see glimpses of the tensions and signals of future directions. These allow us to draw useful lessons.</p>
+      <p>One is that leaders like Mao, Deng, and Xi are relatively impervious to those with different views. For how this might play out in foreign policy, consider Taiwan: this past summer, a crisis in U.S.-China relations was provoked when House Speaker Nancy Pelosi visited Taiwan. China vigorously opposed the visit because it implied stronger U.S. support for an island state that China views as part of its territory. Large-scale Chinese military exercises took place around Taiwan for the first time in a quarter-century, and China canceled numerous bilateral exchanges with the U.S., most notably cooperation on climate change and military-to-military meetings that are useful in defusing tension.</p>
+      <p>But—at least as of this writing—China’s response was precisely calibrated and has not spun out of control. A decade ago, a similar crisis might have played out quite differently. Hu Jintao was a weak leader. Failing to stand up to the United States would have made him look even weaker and possibly pushed the military to act. Fear of that might have caused Hu to engage in more open-ended military provocations, which could have increased the likelihood of war. Xi, though, has purged the military and is in firm control. That has allowed him to keep his response firm but measured.</p>
+      <p>Less optimistic, however, is what it implies for a post-Xi world. Xi has decimated his opposition, leaving him with two choices at the upcoming Party Congress: risk a gerontocracy by keeping on older officials, such as the 70-year-old economics czar, Liu He, or turn to younger men. That would help rejuvenate the leadership but leave Xi surrounded by weaker officials.</p>
+      <p>What this could mean is seen in China’s response to COVID-19. After its political leaders first tried to cover up the outbreak, they then pushed through countermeasures that allowed China to avoid the mass deaths that have affected many countries, while keeping its society and economy running. About a year ago, however, that formula of tight lockdowns and strict tracing began to fall apart. The solution would have been to use foreign vaccines more effective than its own and slowly reopen society. Instead, China continued to follow a “zero-COVID” policy, which is apparently Xi’s preference.</p>
+      <p>China has relaxed some of its policies, especially draconian quarantine laws. Perhaps this is because some senior officials have convinced Xi that the measures were harming the economy. But in the future, will the more junior officials at the top have the guts to speak up? That’s doubtful. In the twilight of Xi’s reign he is more likely to be isolated, surrounded by fewer and fewer people who dare to tell him the truth.<span class="cube"></span></p>
+      <hr />
+      <ol id="footnotes">
+        <li id="fn1">See my interview with Ke, “<a href="https://www.chinafile.com/library/nyrb-china-archive/liberating-chinas-past" target="_blank" rel="nofollow">Liberating China’s Past</a>,” nybooks.com, March 29, 2017.<a title="Jump back to footnote 1 in the text" href="https://www.chinafile.com/library/nyrb-china-archive/china-back-authoritarianism#fnr1" rel="nofollow">↩</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-10-03</time>
+        <a href="https://nodebe4.github.io/oped2/2022-10-03/Thanks-to-a-County-in-Utah,-Same-Sex-Couples-Can-G/">
+          Thanks to a County in Utah, Same-Sex Couples Can Get Married—In China
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-29</time>
+        <a href="https://nodebe4.github.io/oped2/2022-09-29/Elections-No-Thank-You.-Performance-Reviews-Mayb/">
+          Elections? No Thank You. Performance Reviews? Maybe.
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-16</time>
+        <a href="https://nodebe4.github.io/oped2/2022-09-16/New-Export-Controls-on-Chinese-Semiconductors-May/">
+          New Export Controls on Chinese Semiconductors May Prove Self-Defeating
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-15</time>
+        <a href="https://nodebe4.github.io/oped2/2022-09-15/ChinaFile-Presents-Surveillance-State-Inside-Chin/">
+          ChinaFile Presents: Surveillance State—Inside China’s Quest to Launch a New Era of Social Control
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-09-16/New-Export-Controls-on-Chinese-Semiconductors-May/">
+            前一篇：New Export Controls on Chinese Semiconductors May Prove Self-Defeating
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-09-29/Elections-No-Thank-You.-Performance-Reviews-Mayb/">
+            後一篇：Elections? No Thank You. Performance Reviews? Maybe.
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-09-16/New-Export-Controls-on-Chinese-Semiconductors-May/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-09-29/Elections-No-Thank-You.-Performance-Reviews-Mayb/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-09-29/Elections-No-Thank-You.-Performance-Reviews-Mayb/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-09-16/New-Export-Controls-on-Chinese-Semiconductors-May/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-09-16/New-Export-Controls-on-Chinese-Semiconductors-May/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-09-29/Elections-No-Thank-You.-Performance-Reviews-Mayb/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-09-29/Elections-No-Thank-You.-Performance-Reviews-Mayb/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-09-16/New-Export-Controls-on-Chinese-Semiconductors-May/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

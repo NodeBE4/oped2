@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈
+——
+" />
+    <meta property="og:description" content="
+沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈" />
+    <meta property="twitter:title" content="沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F611ca67aefa7ce3e3869aefc" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/611ca67aefa7ce3e3869aefc" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/611ca67aefa7ce3e3869aefc&text=沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/611ca67aefa7ce3e3869aefc&title=沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/611ca67aefa7ce3e3869aefc&title=沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈&body=
+沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/611ca67aefa7ce3e3869aefc" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/611ca67aefa7ce3e3869aefc&title=沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈&caption=
+沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈&url=https://www.allnow.com/post/611ca67aefa7ce3e3869aefc" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-08-18
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 杨涛</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/611ca67aefa7ce3e3869aefc" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/611ca67aefa7ce3e3869aefc">沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈</a>
+——</p>
+
+<div>
+  <p>北美中国史研究受内亚学、民族主义、后现代主义的影响，逐渐发生了中国史研究的“族群转向”，转而从非汉民族的视角分析元、清等王朝。北美学者对“汉化论”的质疑，引起了国内学者的警惕与批评。另一方面，无论是班固笔下的“夷狄之人贪而好利……人而兽心”（《汉书·匈奴传下》），还是欧阳修笔下的“夷狄资悍贪，人外而兽内，惟剽夺是视”（《新唐书·回鹘上》）都显示出，在传统的汉文历史书写中，存在着对非汉族群的文化偏见。这种书写传统，对于理解当代中国的身份认同，显然是负面的。历史上各族之间的联系与互动，缔造了中国多元一体的民族结构。因此，如何从文化多元的角度正确审视中国历史上的非汉族群，成为了当代历史学家正在努力的工作。如何克服国外学界“族群转向”与汉族中心主义视角的种种弊端？如何重建古代中国族群关系的历史叙事？沈卫荣教授从藏学研究的角度，给出了自己的见解。</p>
+  <p>藏学研究是沈卫荣的本业之一。无论是早期对元、明时代的西藏地方与中央政治关系的研究，还是纯粹的藏传佛教文献与历史研究，亦或近二十年利用黑水城出土的藏传密教文献，研究其在西夏、元、明时代各民族间传播的历史，都显示出沈卫荣幅员辽阔的学术疆域。</p>
+  <p>受萨义德影响，沈卫荣将东方主义的理论纳入了自身对藏学研究的思考中。从西方世界对西藏“香格里拉式”的想象，到近些年文青和小资们将西藏视为逃离城市压迫的净土，沈卫荣都进行了严肃的批评。他指出“想象西藏”给西藏带来的一定不仅仅是益处，它同时也会带来很多负面的影响。真实的西藏已经足够好、足够美、足够奇特、足够有魅力，我们根本不需要按照我们的想望，再去想象出一个比这更美、更好的西藏来。</p>
+  <p>就沈卫荣的藏学研究、汉族中心主义视角、东西话语之争背景下的学术对话，以及重建中国的多民族语文研究等议题，《燕京书评》专访了沈卫荣教授。昨天刊出的是第一篇，今天刊出的是第二篇。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-18/611ca6a64cd55d54dd5dc72b+L.png" data-id="611ca6b39b2d825085c26ee5" alt="沈卫荣，江苏无锡人，现为清华大学人文与社会科学高等研究所教授、学术委员会主任、清华大学中文系教授、博士生导师、中国少数民族语言文学专业学科带头人。主要研究领域为西域语文、历史，特别是西藏历史、藏传佛教和汉藏佛学的比较研究。著有《西藏佛教历史的语文学研究》、《寻找香格里拉》、《想像西藏：跨文化视野中的藏传佛教及其形象研究》、《文本与历史：藏传佛教历史叙事的形成和汉藏佛学研究的建构》等。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+沈卫荣，江苏无锡人，现为清华大学人文与社会科学高等研究所教授、学术委员会主任、清华大学中文系教授、博士生导师、中国少数民族语言文学专业学科带头人。主要研究领域为西域语文、历史，特别是西藏历史、藏传佛教和汉藏佛学的比较研究。著有《西藏佛教历史的语文学研究》、《寻找香格里拉》、《想像西藏：跨文化视野中的藏传佛教及其形象研究》、《文本与历史：藏传佛教历史叙事的形成和汉藏佛学研究的建构》等。
+    </figcaption>
+  </figure>
+  <p><strong>想象西藏：对现实西藏的误解和漠视</strong></p>
+  <p><strong>燕京书评：在多年以前，一些城市青年燃起了对西藏的兴趣，认为那里是逃离城市压迫的净土。伴随着这种“西藏热”的，是市面上随处可见的仓央嘉措情歌集，以及有关西藏的旅行文学。这种将西藏想象为逃离城市压迫的“净土”的热情，是新一轮的“想象西藏”吗？文青的想象与詹姆斯·希尔顿《失落的地平线》所构建的“香格里拉”，异同之处在哪里？作为心灵寄托的西藏，不论真实与否，在治愈青年精神危机的同时，能够带动地方经济。是否可以理解为，“想象西藏”也是有诸多现实益处的？</strong></p>
+  <p><strong>沈卫荣：</strong>这个题目，我这十多年来讲过太多次了，但时常还会被人问起，说明它依然没有被很好地解决，“西藏热”也还一直延续着。“想象西藏”历史悠久，从西方到东方，稀奇古怪，花样百出，且不断翻新。简单说来，“想象西藏”，不过就是人们将自己美好的人生理想和生命期待统统投射到西藏这个他者身上，在它身上设计出一个绚丽多彩的，与现实完全不一样的，甚至是对立的理想世界，一个完美无暇的乌托邦；然后，将自己全部的热血和激情都投入进去，直至可以生死相许。我曾在1990年代的欧美，切身体验了巅峰期“想象西藏”的盛况；没想到近三十年之后，我又在自己的国家里，再次经历了这样火热的场面。二十年前，Lopez教授曾将这类西藏发烧友称为“香格里拉的囚徒”，如今眼见得西方的发烧友们日见减少，可中国超级发烧友的数量却与日俱增，“香格里拉的囚徒”越变越多，真的是“长江后浪推前浪，一浪高过一浪”。</p>
+  <p>公平地说，当下中国“城市小资产阶级”想象中的西藏，是不能与詹姆斯·希尔顿（James Hilton）于《失落的地平线》<em>（Lost Horizon）</em>中所构建的“香格里拉”同日而语的。除了对地理面貌的描写容易让人联想到西藏以外，其实希尔顿笔下的“香格里拉”和西藏没有任何关系。香格里拉，纯粹是一个想象出来的西方式的世外桃源，其中充满了帝国主义和殖民主义的腐臭。它是希尔顿专门为受困于两次世界大战之间的西方政治精英和精神贵族们设计和量身打造出来的一个人间乐园。香格里拉的居民，绝大部分是西方人，他们在此所享受的物质文明和精神文化也大都来自西方，它是一个由西方基督教神权严格控制和统治下的迷你型欧洲小王国。</p>
+  <p>当下中国的文青和都市小资们所想象的西藏这块“净土”，则仅仅是无垠的虚空下一片壮丽和宁静的乐土，天高云淡、山清水秀；于此，人们不但可以闲适地享受高原纯净、奇伟的自然风貌，可以在淳朴、温良的人文环境中和谐欢喜地生活，每天早上迎接你的都将是丁真欢快和俊美的笑脸，而且还可以彻底地放下躺平，让自己的精神无所挂碍，自由自在地去憧憬只属于自己的诗和远方，“不负如来不负卿”。对这样的一块“净土”的热望，无非是表达了当下生活在快速实现了工业化和现代化之后的中国社会，特别是大城市中的文青和小资们对自己目前生存状态的焦虑和不满，需要有想象中的西藏这样一块可供选择的乐土，需要每天像丁真一样自在地欢笑和歌唱。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-18/611ca6ce9c232e01c17d316d+L.jpg" data-id="611ca6e8904b8c02a16a424b" alt="丁真在仓央嘉措博物馆" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+丁真在仓央嘉措博物馆
+    </figcaption>
+  </figure>
+  <p>以前我曾写过一些文章，想要去解构这个“想象中的西藏”，去解构“香格里拉”，因此亦曾引起过一些青年藏族读者们的误解和批评。不得不承认，在今天的现实生活中，我们确实已经很难将现实的西藏和想象的西藏截然地区分开来，也没有足够的能力将一个原本的藏传佛教和一个被神话化了的藏传佛教严格地区分开来。所以，当我去解构这个“想象西藏”时，别人或就会误解你是要去解构现实的西藏和藏传佛教。而且，正如你所说，“作为心灵寄托的西藏，不论真实与否，在治愈青年精神危机的同时，能够带动地方经济”，“想象西藏”显然已为西藏带来了很多看得见的现实利益。在这样的情况下，你若再要去解构这个“想象西藏”，这好像已经不再是一个学术的问题了，别人有可能要怀疑你做人是否厚道。但是，我依然要强调的是，“想象西藏”给西藏带来的一定不仅仅是益处，它同时也会带来很多负面的影响。与对“想象西藏”的热衷同时发生的，一定是对现实西藏的误解和漠视。习惯了“想象西藏”，人们一定会对现实的西藏产生困惑，或想要把他们想象的东西强加给现实的西藏，希望把他们的乌托邦理想转化成西藏的现实，而不幸的是，这样的理想是永远都不可能实现的。</p>
+  <p>几年前，我曾经在一篇文章中指出，眼下世界范围的对藏传佛教的热爱，极有可能将藏传佛教引入歧途，很多人对此不理解，以为我这是在批判藏传佛教。其实，我想表达的意思很明白，无非是说那些表面上醉心于藏传佛教的洋大人们，不过就是一群热爱“似龙而非龙者也”的叶公子高式的人物，他们或者把藏传佛教简单化为“爱与慈悲”和“和平与非暴力”类的鸡汤式教条，或者把藏传佛教神秘化为专门显现神通、赐予加持的现代魔术，他们并不是真的理解、信仰和实修藏传佛教。如果我们真的相信了他们表面上所说的这一套，或者为了满足他们的想象和期待，有意地去改变藏传佛教的教法和修行，那么藏传佛教岂不就是已经走上歧途了吗？我坚持认为，“想象西藏”给西藏带来的坏处一定远多于益处，所以，我还是会继续做解构“想象西藏”的工作。</p>
+  <p>你提到“市面上到处可见的仓央嘉措情歌”，这确实是国内的文青和小资们近年来制作的“想象西藏”的经典产品。去年夏天，我和十多名清华、人大的博士生们团结抗疫，联合组织了一个网上读书班，用语文学的方法一字字、一句句、一首首地重读了仓央嘉措（1683-1706）的情歌集，希望我们很快能够把我们对仓央嘉措情歌的语文学解读发表出来，将他的真实面貌揭示给广大读者，把他情歌中隐藏的真实密义揭露出来，以去掉人们强加给他的那些当今文青和小资们最钟情的小调调和小情感。其实，真实的西藏已经足够好、足够美、足够奇特、足够有魅力，我们根本不需要按照我们的想望，再去想象出一个比这更美、更好的西藏来，让我们痴情地去顶礼、歌咏和赞叹它。有一天，当我们的梦想幻灭的时候，长久笼罩着我们的，必将是无尽的失望、沮丧和愤懑。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-18/611ca7034cd55d54dd5dc72c+L.png" data-id="611ca7119b2d825085c26ee7" alt="想象西藏：从“消失的地平线”到 “丁真的世界”" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+想象西藏：从“消失的地平线”到 “丁真的世界”
+    </figcaption>
+  </figure>
+  <p><strong>明朝保留了很多典型的蒙古政治、制度和生活、文化习俗和传统</strong></p>
+  <p><strong>燕京书评：你的藏学研究有很多是对国际学术热点议题的回应，无论是解读西方对西藏的复杂想象，还是追寻元明清宗教制度、治藏政策连续性的线束，这些研究的国际反响如何？柯盖德大学鲁大维教授对元明清宫廷文化与边疆政策继承性的研究，与你的旨趣是否存在相似之处？</strong></p>
+  <p><strong>沈卫荣：</strong>事实上，我迄今所做的藏学研究，并不是完全如你所说的那样的。我自己的藏学研究有以下几个重点：第一个是元、明时代的西藏研究，早期比较重视政治关系史的研究，后期则更主要是做宗教文化史的研究；第二个是比较纯粹的藏传佛教文献和历史研究，从我做博士论文时研究第一世达赖喇嘛的生平和活佛转世制度的建立开始，到后来翻译、研究宁玛派、萨迦派的密教文献和教法，大都属于这第二个类别；第三个则是我近二十年来的研究重点，即从发现和整理黑水城出土藏传密教文献出发，深入研究藏传佛教后弘期初期所传密法，以及它们在西夏、元、明时代各民族间传播的历史。海外藏学界应该主要是通过我以上这三个方面的学术成果而对我有所了解的。</p>
+  <p>我的博士论文，是用德文由德国华裔学志社正式出版的 <em>Leben und historische Bedeutung des ersten Dalai Lama dGe 'dun grub pa dpal bzang po （1391-1474）：ein Beitrag zur Geschichte und der Institution der Dalai Lamas</em>（Sankt Augustin： Institut Monumenta Serica，2002）；我于其他两个研究领域的主要论文，先后也都用英文发表过。所以，西方的学术同行们对我的研究，或许是不陌生的。</p>
+  <p>还有，西方藏学界和佛教学界对我的了解，或是因为近二十年来，我不断地在倡导和建构一个名叫“汉藏佛学”（Sino-Tibetan Buddhist Studies）的新学术领域，就像我在国内学界倡导和宣传“语文学”一样，我的学术关键词里面排在前几位的一定是“汉藏佛学”。很令人高兴的是，现在越来越多的西方学术同行接受了“汉藏佛学”这个概念，我和意大利学者Ester Bianchi教授联合主编的一部英文的汉藏佛学论文集，由西方多国佛教学者提供论文，很快就会由荷兰的博睿出版社（Brill）出版了。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-18/611ca7244cd55d54dd5dc72d+L.jpg" data-id="611ca728904b8c02a16a424d" alt="沈卫荣教授近年来具有影响力的学术专著" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+沈卫荣教授近年来具有影响力的学术专著
+    </figcaption>
+  </figure>
+  <p>你提到我写的一些看起来“是对国际学术热点议题的回应”的文章，严格说来，它们不属于我的专业技术范围（expertise），它们更多是我写给国人们自己看的。例如，我写过一些“解读西方对西藏的复杂想象”的文章，其中很多具体的内容和细节，我都是借鉴了Donald Lopez（1952- ）先生等西方学者们的研究成果。我相信，西方人自己对西方之东方主义和帝国主义思想影响下的西藏想象的反思和批判，要比像我这样的东方学者做得深刻和切中要害得多；而我的贡献或在于借助他们的研究成果进一步地向国人们说明西方人的“西藏热”，或者所谓“西藏问题”到底是怎么一回事？它的本质是什么？当然，我也借用了他们的这种后殖民主义文化批评方法，对汉人文化传统中的西藏和藏传佛教想象，做过一系列的反思和研究，这些文章亦曾用英文在西方发表过，受到了西方学术同行们的注意。</p>
+  <p>至于我写过的“追寻元明清宗教制度、治藏政策连续性的线束”的文章，是我早年从事蒙元史研究的余波，也是为了回应“大元史”和“新清史”的说法而写的。如果说在这些问题上我的观点比西方学者，例如已故的Elliot Sperling（1951-2017）教授等藏学家的观点，更加客观和有说服力的话，那是因为我本来是学习中国历史出身的，而且从事的是蒙元史研究，不像他们仅仅是从藏学或者满族史的角度出发，来谈论这些属于整个中国历史的问题的。</p>
+  <p>柯盖德大学鲁大维（David M. Robinson，1965- ）教授开始研究“元明清宫廷文化与边疆政策继承性”的时候，我正好和他同住在位于京都修学院的京都大学国际会馆中，当时他的关注点是明代宫廷文化中对蒙古因素的继承，对此我们有过多次的讨论。我完全同意他的观察，明朝取代元朝后并没有如过去人们习惯以为的那样，完全排斥和去除了前朝蒙古人留下的影响；相反，明朝保留了很多典型的蒙古政治、制度和生活、文化习俗和传统。后来，鲁大维教授还就这个题目在我主编的《西域历史语言研究集刊》上发表过长篇的论文（David M. Robinson，“The Ming Court and Inner Eurasia”，《西域历史语言研究集刊》第二辑，科学出版社，2008年，351-374页）。</p>
+  <p>至于我个人在这个领域的研究，与鲁大维重视收集和观察政治、制度、社会、风俗和物质文明方面的史料不同，我主要依靠对西夏、元、明三代汉译藏传密教文献的发现和研究，构建西夏、元、明三代宗教文化和制度上的继承性和连续性。尽管如傅斯年所说史学和语（文）学是一体的，但严格说来，我做的研究更多是佛教语文学研究，所谓“从文本批评中建构历史” （history through textual criticism）；鲁大维的研究，则更是很传统的史学研究，然殊途同归，结论十分类似。</p>
+  <p><strong>法政、王权与供施关系：蒙元王朝与西藏地方关系历史的真实面貌</strong></p>
+  <p><strong>燕京书评：教法（精神权威）与王政（世俗权力）的关系一直是藏学、蒙藏史研究的重要议题。对lugs gnyis的翻译与解释五花八门，例如“两种制度”、“两种法律”、“政教二道”、“政教合一”等，韩国学者金成修与日本学者石滨裕美子对“政教二道”有专门的论述</strong>（你对后者的观点有过回应）<strong>。从不同学者的研究来看，“政教二道”在各个历史时期的表现是极为不同的，例如明清之际蒙藏世界的“政教二道”，强调“王政”与“教法”平等的合作关系，以及各自在不同维度的权威；到了清代，“教法”从属于“王政”。您能不能简单介绍下lugs gnyis的源流，以及蒙古王公、西藏喇嘛精英、清代君主如何从各自角度理解lugs gnyis? 清代君主在接受lugs gnyis的过程中，如何淡化其对君权的约束力？例如五世达赖在进京途中，评价顺治帝“此汗很傲慢”</strong>（参见咱雅班第达与五世达赖在青海的对话，《咱雅班第达传》，内蒙古人民出版社1999年第二版第104-108页）<strong>，这是否从侧面反映了清代“王政”高于“教法”？</strong></p>
+  <p><strong>沈卫荣：</strong>我觉得，这个问题你最好请专门从事明清蒙古史和清史的专家们来回答。我是藏学家，我懂的只是“政教二道”或者“政教合一”在西藏佛教和历史视阈中是什么意思。如你所说，“对lugs gnyis的翻译与解释五花八门”，实际上与这概念对应的藏语词汇本来就并非只有lugs gnyis一个，例如还有 khrims gnyis、gtsug lag gnyis或者chos srid zung ’brel等。我想，在我们要衡量清代“王权/王政”与“教法/法政”孰轻孰重、孰高孰低之前，最好先来解释一下“政教二道”于西藏历史的佛教化叙事中到底是个什么意思？</p>
+  <p>简单说来，“政教合一”是藏传佛教后弘期佛教思想家们创造出来的一种佛教政治理念。吐蕃王朝灭亡以后，西藏再没有出现一个能够统一西藏的世俗政治力量，地方贵族的影响力也日趋式微，而佛教寺院和宗派势力则不断壮大，各宗派领袖在地方世俗政治中的影响力迅速提升。在这样的历史条件下，西藏的佛教思想家们开始构建和宣传“政教合一”理念，鼓吹西藏是观音菩萨的化土，而转世活佛是观音菩萨的化身；他们不但是悲智双运的佛教领袖，而且还是雄才大略的转轮圣王，同时引领世俗政治和佛教事业，是西藏政教合一的领袖。为了有效地宣传这样的佛教政治理念，他们首先把吐蕃王国的第一代赞普松赞干布（617-650）塑定为观音菩萨化身，把他打造成一位集“法王”和“转轮王”于一身的理想型的“菩萨皇帝”；然后，按照这个被制造出来的松赞干布形象来塑造和认定达赖喇嘛等转世活佛，同样赋予他们以“政教合一”的合法统治权力。</p>
+  <p>不得不说，“政教合一”理念和与它相关联的转世活佛制度是藏传佛教的一个天才的创造，它是藏传佛教区别于其他任何佛教传统自主创新的一个标志性特点。但是，“政教合一”的理念，就是在西藏也从来没有得到过全面和充分的实现，西藏历史上再也没有出现过另一位像松赞干布一样的“雄强丈夫”。西藏宗教社会，或确实可以被认为是一个“政教合一”的社会，因为各个佛教教派和寺院，以及他们各自的转世活佛，都在其所居住的地域范围内，实施了一定程度的“政教合一”的统治。但是，于整个西藏而言，也大概只有五世达赖喇嘛（1617-1682）一人或可算得上是一位可与松赞干布的理想形象相匹配的西藏“政教合一”领袖。</p>
+  <p>总而言之，就是在西藏，“政教合一”也并没有按照其设想的那样，成为一个行之有效的，可以贯彻和统治整个西藏的主流意识形态。“政教二道”理念，无疑曾经传到了蒙古和满族人中间，但他们对它的接受和理解，不但和西藏佛教思想家设想的本来意义并不一致，而且作为王公贵族或者佛教上师的蒙古人，和作为大清帝国统治者的满洲人，他们对这种西藏佛教政治理念的理解和接受，同样也是有很大的区别的。我曾经批评石滨裕美子教授的相关论著，认为她仅仅从纸面上的记载，或者说仅仅从文本语文学研究的角度出发，来设计清朝建立的什么“佛教政府”，而完全不考察清朝统治的具体历史实践，这不是历史研究的正道，她的结论是没有说服力的。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-18/611ca7519c232e01c17d316e+L.jpg" data-id="611ca755904b8c02a16a424e" alt="乌云毕力格" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+乌云毕力格
+    </figcaption>
+  </figure>
+  <p>此外，我在以前回应“新清史”的那篇文章中，曾引用过中国人民大学国学院乌云毕力格教授对蒙文史著《白史》的精彩研究成果（《王政者，文武二治也——释〈白史〉中的ANKKA与KILBAR （ČINK、IIQ-A）》，《西域历史语言研究集刊》第六辑，科学出版社，2013年）。《白史》是蒙古文史书中最早出现和讨论“政教合一”这一概念的文献，但它所解释的“政教二道”，却已经与藏传佛教中最早提出的那个政治理念南辕北辙了，它再把“政”和“教”各又细分为二，“教”分显密，“政”分文武，显然它已经参杂和吸收了汉地宗教和政治理念的影响。而对于清代皇帝来说，我觉得根本就不存在一个“法政”和“王政”孰重孰轻的问题，即使还真有一个“法政”存在，那么这和以达赖喇嘛为代表的藏传佛教的参与也并无直接的关联，雍正皇帝（1678-1735）说“朕即释主”，乾隆皇帝（1711-1799）说“朕即法王”，而西藏喇嘛也称他们为文殊菩萨的化身，他们于宗教上的地位本来就与作为观音菩萨转世的西藏转世活佛们平等无二，清朝皇帝自己或才真的是包括西藏在内的大清帝国的政教合一的领袖，而蒙古王公、西藏喇嘛则统统都是他统治下的臣民，二者孰重孰轻，不言而喻。当然，到底清朝皇帝的“法政”是否仅仅只是纸面上的东西，或者说清代还真的有过“法政”和“王政”的对立，这应该请研究清史的专家们来回答。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-18/611ca7664cd55d54dd5dc72e+L.jpg" data-id="611ca7692114416715c3e674" alt="乾隆皇帝佛装唐卡像" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+乾隆皇帝佛装唐卡像
+    </figcaption>
+  </figure>
+  <p><strong>燕京书评：你对“供施关系”</strong>（yon mchod）<strong>内涵与外延也进行过精彩的阐释</strong>（《大元史与新清史》第二章《中世纪西藏史家笔下的蒙元王朝及其与西藏的关系》）<strong>，认为“供施关系”是藏传佛教史学书写的一种“技巧”，萨思迦僧侣通过创造与蒙古大汗关系密切的宗教术语，将蒙元朝廷对西藏的彻底经营，上升为萨思迦帝师与蒙古大汗的个人关系，从而利用蒙元王朝的政治、军事资源和宗教话语塑造的合法性，压制藏地盘根错节的反对派与地方贵族。美国学者欧杨</strong>（Max Oidtmann）<strong>对金瓶掣签的研究与你殊途同归</strong>（Max Oidtmann，<em>Forging the Golden Urm：The Qing Empire and the Politics of Reincarnation in Tibet，</em>Columbia University Press，2018）<strong>，欧氏通过对有关金瓶掣签制定、实施的满、藏、汉文献档案的分析，指出清代的君主用法律而不是信仰强化了对西藏的管理。清代统治者似乎并没有像格鲁派高层那样理解“供施关系”，也没有将自己的政治议程服务于格鲁派的宗教目标</strong>[欧杨注意到，清朝的统治者在与格鲁派上层喇嘛的信件中巧妙地颠倒了藏语文本中“教法”与“王政”（Dharma and statecraft）的关系，在满蒙文本中将世俗统治者的“王政”明确地置于格鲁派的“教法”之上（statecraft and the Dharma），第36页]<strong>。但充满悖论的是，在六世班禅来访北京之际，乾隆皇帝一方面蠲除了前者所有作为臣子的礼仪义务</strong>（显示了前者高于普通臣民的地位）<strong>。而另一方面，（十多年后）乾隆命令和琳、松筠不得瞻礼</strong>（跪拜）<strong>达赖喇嘛，以显示驻藏大臣与达赖、班禅平等。无论是“精神导师”亦或“工具论”，似乎都无法解释清代主权、信仰之间的复杂关系。我们该如何理解清代君主对于边疆治理与宗教信仰之间的平衡？</strong></p>
+  <p><strong>沈卫荣：</strong>你问的这个问题，让我有点感动！这是我发表的一篇不太起眼的文章，你作为一名非藏学专业的读者，却读得那么细致，还从中引发进一步的思考，实在难能可贵，真希望我的那些学术同行们也能像你一样理解我写这篇小文章的良苦用心。</p>
+  <p>半个多世纪以来，“供施关系”是西藏佛教史上的一种具有特殊意义的历史叙事，它是国际藏学界普遍认可的一种“宏大的政治和宗教架构中的历史话语”。上个世纪六十年代，流亡海外的藏族学者孜本·夏格巴旺秋德丹（Rtsis dpon Zhwa sgab pa dBang phyug bde ldan，1907-1989）先生出版了一部《西藏政治史》（<em>Tibet：A Political History</em>，New Haven：Yale University Press，1967），其中一章明确地用西藏佛教史家所描述的萨思迦帝师与蒙古大汗之间缔结的所谓“供施关系”，来解读元代中国与西藏地方的关系，强调这是喇嘛和大汗之间建立的一种于政教二途互利互惠的宗教关系，而不是中央和地方之间的政治上的从属和依附关系。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-18/611ca7819c232e01c17d316f+L.jpg" data-id="611ca7859b2d825085c26eea" alt="夏格巴《西藏政治史》充满了片面与非客观的“宏大叙事”，却在西方影响深远巨大" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+夏格巴《西藏政治史》充满了片面与非客观的“宏大叙事”，却在西方影响深远巨大
+    </figcaption>
+  </figure>
+  <p>按西方的学术标准，夏格巴的《西藏政治史》不能算是一部高质量的学术著作，但它是迄止当时出现的第一部通史型的西藏政治史著作，故而引起了很大的反响。特别是他在书中提出的“供施关系说”，很快就成为西方藏学界广泛流行的一种西藏历史叙事。大家似乎都很乐意接受这种对元代中国与西藏地方关系的纯粹宗教化的解释，甚至连当时的国际佛教协会主席、著名的印藏佛学大家David Seyfort Ruegg （1931-2020）先生，亦还曾很用心地探讨过“供施关系”这个宗教/社会概念在印藏佛教语境中可能的意义，他无法在现代西方政治、宗教学术体系中找到一个与其相对应的词汇和概念，所以不得不将它归结为西藏佛教史家们专门创造出来的一个特殊的政治/外交概念（David Seyfort Ruegg，“mChod yon， yon mchod and mchod gnas/yon gnas：On the Historiography and Semantics of a Tibetan Religio-social and Religio-political Concept”，in E. Steinkellner ed. <em>Tibetan History and Language，Studies Dedicated to Uray Geza on His Seventieth Birthday</em>. Universitat Wien： Arbeitskreis fur Tibetische und Buddhistische Studien，1991，pp. 441-453）。于是，“供施关系”和“政教合一”一样，成为藏传佛教自主创新的标志性成就之一。</p>
+  <p>毋庸讳言，夏格巴提出这种“供施关系说”和它在西方学界被广泛接受，背后都有明显的政治因素在起作用。它直接与“自元朝以来，西藏成为中国领土之不可分割的一个组成部分”的说法背道而弛，是故很早就引起了中国学者们的注意和批判。不幸的是，由于中国学者们对“供施关系说”的批判，更多是以政治论诤的面目出现的，故它们很少能够得到西方学者们的重视和正面回应，而“供施关系说”则一直是近几十年来西方流行的“西藏话语”的重要组成部分。</p>
+  <p>如前所说，我的学术生涯是从学习蒙元史开始的，我学习西藏语文的初心就是要研究元代西藏史，我自认为我是研究元代中国与西藏地方之关系历史的权威之一。可是，在我于西方求学的十余年间，不知有多少次我曾经试图与我的西方同学和同行们就这段历史做理性的讨论，可每次都是不欢而散，他们想不通平常似乎挺开明的我怎么在这个问题上竟然如此冥顽不化。深信“供施关系说”的西方藏学家们，根本听不进我这个中国西藏历史学家对这段历史的任何权威解释，反而怀疑我这位平常看起来好像很西化的、很理性的藏学家是否也肩负着特殊的政治使命。</p>
+  <p>我写这篇《中世纪西藏史家笔下的蒙元王朝及其与西藏的关系》，就是想通过阅读元明时代西藏喇嘛们留下的藏文文献资料，来考察他们是如何认识和理解他们与蒙古大汗之间的这种“供施关系”的，以此为我们今天正确地理解蒙元王朝与西藏地方关系历史的真实面貌提供更多的一手资料。事实上，对元代如何切实统治和管理西藏地方的历史，曾担任过国际藏学会主席的意大利著名藏学家Luciano Petech（1914-2010）先生，早已经做了非常精湛和权威的研究（Luciano Petech，Central Tibet and the Mongols：the Yüan-Sa-skya Period of Tibetan History. Rome：Istituto Italiano per il Medio ed Estremo Oriente，Istituto Universitario Orientale，1990）；而对八思巴帝师（1235-1280）和忽必烈汗（1215-1294）之间实际的君臣关系，上个世纪八十年代英年早逝的匈牙利藏学家János Szerb（1951-1988）先生也曾发表过多篇精彩的论文，他依靠八思巴在其文集中透露出的信息，说明即使身处帝师高位，但依然还是臣下的地位[János Szerb，“Glosses on the oeuvre of Blama 'Phags Pa：On the activity of the Sa Skya Pandita”，in Michael Aris and Aung San Suu Kyi eds. Tibetan Studies in Honor of Hugh Richardson. Warminster：Aris and Phillips，1979，pp.290-300; “Glosses On the Oeuvre of Bla-ma 'Phags- pa：II. Some Notes On the Events of the Years 1251-1254”，Acta Orientalia Academiae Scientiarum Hungaricae，Vol.34，No.1/3 （1980），pp. 263-285]。</p>
+  <p>遗憾的是，西方人依然更相信他们自己愿意相信的历史，坚持要把“供施关系”当做解释这段历史的不二法门。而我这篇迟到的研究文章则揭示了所谓“供施关系说“，不过是萨思迦派喇嘛们为了抬高他们自己于西藏地方政治和宗教社会中的特殊地位，并为他们担任蒙古大汗于西藏地方的官方代理人寻找合法的理由，而精心制造出来的一种方便说法。它是萨思迦喇嘛玩弄的一种政治伎俩，在表面的宗教化说辞背后，其潜藏的政治动机和意义昭然若揭。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-18/611ca7a59c232e01c17d3170+L.jpg" data-id="611ca7aa904b8c02a16a4250" alt="欧洲著名印藏、西域语文学家：David Ruegg， Luciano Petech， János Szerb" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+欧洲著名印藏、西域语文学家：David Ruegg， Luciano Petech， János Szerb
+    </figcaption>
+  </figure>
+  <p>基于以上这种认识，当我们继续考察元以后西藏宗教领袖试图效法八思巴帝师与忽必烈汗建立“供施关系”的榜样，寻求与世俗政治和军事领袖结盟的历史时，例如，第三世达赖喇嘛索南嘉措（1543-1588）寻求与俺答汗（1507-1582）、五世达赖寻求与固始汗（1582-1655）和清朝顺治皇帝（1638-1661）建立“供施关系”等，则不难发现他们的出发点其实都是首先要与后者建立政治和军事的同盟，其宗教的目的明显是次要的。我还没有细读Max Oidtmann教授的大作，但对他的结论没有丝毫的疑问，“供施关系”是西藏佛教史家创造出来的一个政治/宗教概念。不管是元朝皇帝，还是清朝皇帝，他们是不可能按照西藏喇嘛们自己一厢情愿设计出来的这种政教关系模式，来处理他们和西藏喇嘛之间的政教关系的。虽然，忽必烈汗和乾隆皇帝或对藏传佛教都有很深刻的信仰，但这不会影响他们对西藏的政治、军事和经济统治策略；相反，他们个人对藏传佛教的信仰或才是他们用以更好地政治控制西藏的一种方便法门，这至少是乾隆皇帝在他的“喇嘛说”中竭力想要向读者表达的一种说法。</p>
+  <p>总而言之，“供施关系”论从头到尾都充满了政治意义，就是今天海外藏族史家和他们的西方支持者蓄意夸大“供施关系”的宗教意义，以此来解释元代中国与西藏地方关系史的性质，其背后的政治动机亦同样是不言而喻的。</p>
+  <p><strong>更包容、更多元的民族史叙事</strong></p>
+  <p><strong>燕京书评：一些学者主张从边缘看中心，从边疆看中国，从而消解汉族中心主义的不利影响。值得注意的是，非汉族的史料也存在着固化汉人形象的记载，以及明显的建构成分。例如，你曾经指出的，在蒙藏的历史书写传统中，往往将其祖先追溯为释迦王族的后裔。在这样的背景下，如何平衡各方视角的差异？如何重建出更为包容、更具多元性的民族史叙事？</strong></p>
+  <p><strong>沈卫荣：</strong>我试试换一个角度来回答你的问题：眼下举国上下正在开展的一场运动叫做“铸牢中华民族共同体意识”，全国已有十五所高校正式建立了“铸牢中华民族共同体意识研究基地”，还有更多的学校亦蜂拥而起，建立了同名的学院，许多民族院校则把原来的民族研究院改名为“铸牢中华民族共同体研究院”。铸牢中华民族共同体意识，确立中国是一个由五十六个民族组成的共同体，中华民族是作为一个民族国家的当代中国的身份认同，这无疑是非常必要和十分正确的。</p>
+  <p>我理解，在这样的一个“中华民族”，或者“中华民族共同体”中，五十六个民族都是中华民族大家庭的一份子，他们之间应该互相平等，没有大小和多数、少数之分别。所以，铸牢中华民族共同体意识，应该不仅仅是涉及边疆和“少数民族”的事情，而是事关全国各族人民的一件大事。从这个认知出发，我相信坚定不移地批判和破除汉族中心主义，对于铸牢中华民族共同体意识的重要意义，当丝毫不亚于我们在边疆和民族地区加强对中华民族共同体意识的树立和培养。于当下的中国，各地区、各民族之间的政治、经济、社会和文化联系已经是如此的紧密和统一，再在它们之间硬作边缘与中心、内地与边疆的划分，已经没有太大的实际意义了。</p>
+  <p>所谓“从边缘看中心，从边疆看中国”，谈论的或都是历史上的中国和边疆的问题；对此，我们首先需要对中国有一个明确的定义，不能把历史上的中国和当下的中国混为一谈。如果不把这二者区分清楚，那么，我们就很难笼统地谈“边疆”和“中国”。在这方面，西方学者常常会用Tang China、Ming China 和Qing China，即“唐中国”、“明中国”和“清中国”这样相对明确的概念定义，比我们笼统地称“中国”要清楚明白的多。我们可以具体讨论“唐中国”或者“清中国”的“边疆”，也可以从“边疆”或者“边缘”的角度来看“唐中国”或者“清中国”，但很难泛泛地“从边疆看中国”，并依此来消解汉族中心主义。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-18/611ca7c89c232e01c17d3171+L.jpg" data-id="611ca7d09b2d825085c26eec" alt="2021年1月30-31日，由清华大学铸牢中华民族共同体意识培育基地主办的“千江共月——藏传佛教的身份认同与中国化”学术会议" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+2021年1月30-31日，由清华大学铸牢中华民族共同体意识培育基地主办的“千江共月——藏传佛教的身份认同与中国化”学术会议
+    </figcaption>
+  </figure>
+  <p>你提出的“如何平衡各方视角的差异？如何重建出更为包容、更具多元性的民族史叙事”这个问题非常重要，也非常及时，这是我最近常常在考虑的一个问题。如何建构一个包含五十六个民族的、能被全国各族人民普遍接受的中华民族的身份认同，这不是一件容易做到的事情。中华民族共同体应该就是如费孝通（1910-2005）先生所说的那样，是一个五十六个民族各美其美、美美与共的多元一体的社会。与此相应，确立中华民族的身份认同，应该不是要去除各个民族的语文、历史和文化传统，让大家全部统一到某一个主体民族或者主流文化之中，而是在大家都认同中华民族这一身份认同，都承认我们都是中国人的前提下，应该尽可能地维护各民族传统的语言、文化和生活习惯，保留他们与众不同的文化特征和历史传统。</p>
+  <p>在全球化势将消灭一切差别的背景下，唯有以包容和多元的态度，积极地维护各民族的语言和文化传统，百花齐放，建立起一个兼容并蓄、丰富多彩的中华民族身份认同，才更能彰显出中华民族的强大和伟大。只有这样，我们才能相对客观和公平地对待各个民族自己的历史和文化传统，亦不难重构一个包容的和多元的民族叙事。像“往往将其祖先追溯为释迦王族的后裔”的蒙藏历史书写传统，这是西藏和蒙古完全佛教化以后佛教史家建构出来的一种非历史的历史叙事，它早就应该被解构掉了，不应该成为中华民族历史叙事的组成部分。但是，成吉思汗和他的子孙们所创立的大蒙古国和元朝的历史，则毫无疑问应当是中华民族历史叙事的组成部分，我们对成吉思汗的历史功德的肯定和赞扬绝不是什么不可言说的狭隘的民族历史叙事。</p>
+  <p><strong>燕京书评：你曾经提到，汉族中心主义对正确理解今日中国的国家身份认同，维护当今中国的社会稳定和领土完整可能造成的损害，（相比新清史）一定有过之而无不及，将少数民族语言文学纳入中国语言文学的视野</strong>（而不是只有汉语言文学）<strong>，增加对汉语言文学与少数民族语言文学的比较研究，能够消解汉族中心主义的不利影响吗？你在清华大学中国语言文学系从事的工作是这方面的努力吗？</strong></p>
+  <p><strong>沈卫荣：</strong>就像我前面已经说过的那样，汉族中心主义，或者大汉族主义，一定是我们今天铸牢中华民族共同体意识的一大障碍。不言而喻，仅以汉族为中心的中国历史书写，是没有办法解释清楚“何为中国”的，今天的中国是中国各民族共同创造的，今日中国的版图不是仅仅依靠汉族的大一统理念建立和维持的。如果我们非要坚持以汉族为中心来建构中华民族的历史叙事，那么，我们就很难说清楚中华民族是什么？为何今天的中国是由五十六个民族共同组成的？</p>
+  <p>实话实说，“将少数民族语言文学纳入中国语言文学的视野（而不是只有汉语言文学）”，这并不是我个人努力的结果，我能进入清华中文系工作，是因为它一直下设有一个二级学科，叫“中国少数民族语文”，但在我来清华工作之前，这个学科一直空缺着。事实上，很多大学中文系都应该有这个二级学科的，但大都空缺着，包括北大中文系。让我颇为吃惊的是，直到去年秋天我才知道，在中国现有的学科体系中，中文系只有“中国语言文学”一个一级学科，不像历史系，同时包括中国历史、世界历史和考古学三个一级学科。目前，中国大学中的中文系绝大部分只有“汉语言文学专业”，所以，“中国少数民族语文”很容易被人认为它应该属于民族语文或者民族学专业。在此，我衷心感谢清华大学中文系接受我这个从事藏学的学者加盟，也期待今后中文系的学科定位最终能得到相应的改变，它至少应该和铸牢中华民族共同体意识相适应，不再把“中文”仅仅理解为“汉文”。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-18/611ca7f94cd55d54dd5dc72f+L.jpg" data-id="611ca8002114416715c3e676" alt="中国人民大学国学院" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+中国人民大学国学院
+    </figcaption>
+  </figure>
+  <p>至于你问“增加对汉语言文学与少数民族语言文学的比较研究，（是否）能够消解汉族中心主义的不利影响”，或许我应该重提前面我们已经谈到过的中国人民大学国学院西域历史语言研究所。在国学院建立一个“西域历史语言研究所”，当时很多人不理解，国学院内部甚至也有老师公然要求我们搬迁到民族大学去。但是，在今天看来，人大国学院要不是有这么一个一直被“作为重点和亮点”来建设的西域历史语言研究所，它又何以能够在国内如此众多的国学院之中鹤立鸡群、脱颖而出呢？</p>
+  <p>“西域历史语言研究所”建立的背后，是人大国学院创院院长冯其庸先生（1924-2017）率先倡导的“大国学”理念，冯先生主张国学不是汉族一家的传统文化，更不是四书五经，而是中国各民族的优秀文化传统。西域文明是中华民族传统文化的一个重要组成部分，所以，值得在国学院设立一个专门的研究机构来学习和研究西域文明。冯先生的大国学理念在当时是超越时代的创见，也是今天全社会倡导铸牢中华民族共同体意识的先声。西域历史语言研究是实践“大国学”理念的具体学术行动，它的成功充分证明将民族语文和民族历史文化的研究作为国学研究的重要内容，对于消解汉族中心主义的消极影响，铸牢中华民族共同体意识，都具有十分现实和远大的意义。</p>
+  <blockquote>
+    <p>姚霜博士对本文图文的整理提供诸多帮助，特此致谢！原文标题为“沈卫荣：想象西藏、供施关系与更具多元性的中国语言文学”。</p>
+  </blockquote>
+  <p>———</p>
+  <p>微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-08-18</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-18/%E5%88%98%E6%93%8EX%E8%AE%B8%E7%BA%AA%E9%9C%96-%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93%E6%97%B6%E4%BB%A3%E7%9A%84%E7%9F%A5%E8%AF%86%E5%88%86%E5%AD%90%E4%B8%8E%E5%8F%8D%E6%99%BA%E4%B8%BB%E4%B9%89-%E7%87%95%E4%BA%AC%E8%AE%B2%E7%A8%BF/">
+          刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-18</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-18/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA-%E4%BD%9C%E8%80%85%E8%83%A1%E8%B5%9B%E5%B0%BC-%E4%B8%96%E7%95%8C%E5%BF%85%E9%A1%BB%E4%B8%8E%E9%98%BF%E5%AF%8C%E6%B1%97%E5%B9%B3%E6%B0%91%E7%AB%99%E5%9C%A8%E4%B8%80%E8%B5%B7/">
+          《追风筝的人》作者胡赛尼：世界必须与阿富汗平民站在一起
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-17</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-17/%E6%B2%88%E5%8D%AB%E8%8D%A3-%E9%99%88%E5%AF%85%E6%81%AA-%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B8%8E%E7%8E%B0%E4%BB%A3%E4%BA%BA%E6%96%87%E5%AD%A6%E7%A7%91-%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+          沈卫荣：陈寅恪、语文学与现代人文学科｜燕京访谈
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-16</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-16/%E7%88%B1%E7%84%A6%E8%99%91%E4%B8%8E%E6%80%A7%E5%8D%B1%E6%9C%BA-%E4%BC%97%E7%A5%9E%E7%9A%86%E6%AD%BB-%E6%97%B6%E4%BB%A3%E7%9A%84%E7%BA%AF%E7%88%B1%E8%80%BD%E7%BE%8E%E5%89%A7/">
+          爱焦虑与性危机：“众神皆死”时代的纯爱耽美剧
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-08-17/%E4%BB%BB%E4%BD%95%E4%BA%BA%E9%83%BD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%BC%BA%E5%A4%A7%E7%9A%84%E9%9D%A2%E9%83%A8%E8%AF%86%E5%88%AB%E5%B7%A5%E5%85%B7-iYouPort/">
+            前一篇：任何人都可以使用这个功能强大的面部识别工具 - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-08-18/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA-%E4%BD%9C%E8%80%85%E8%83%A1%E8%B5%9B%E5%B0%BC-%E4%B8%96%E7%95%8C%E5%BF%85%E9%A1%BB%E4%B8%8E%E9%98%BF%E5%AF%8C%E6%B1%97%E5%B9%B3%E6%B0%91%E7%AB%99%E5%9C%A8%E4%B8%80%E8%B5%B7/">
+            後一篇：《追风筝的人》作者胡赛尼：世界必须与阿富汗平民站在一起
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-08-17/%E4%BB%BB%E4%BD%95%E4%BA%BA%E9%83%BD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%BC%BA%E5%A4%A7%E7%9A%84%E9%9D%A2%E9%83%A8%E8%AF%86%E5%88%AB%E5%B7%A5%E5%85%B7-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-08-18/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA-%E4%BD%9C%E8%80%85%E8%83%A1%E8%B5%9B%E5%B0%BC-%E4%B8%96%E7%95%8C%E5%BF%85%E9%A1%BB%E4%B8%8E%E9%98%BF%E5%AF%8C%E6%B1%97%E5%B9%B3%E6%B0%91%E7%AB%99%E5%9C%A8%E4%B8%80%E8%B5%B7/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-08-18/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA-%E4%BD%9C%E8%80%85%E8%83%A1%E8%B5%9B%E5%B0%BC-%E4%B8%96%E7%95%8C%E5%BF%85%E9%A1%BB%E4%B8%8E%E9%98%BF%E5%AF%8C%E6%B1%97%E5%B9%B3%E6%B0%91%E7%AB%99%E5%9C%A8%E4%B8%80%E8%B5%B7/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-08-17/%E6%B2%88%E5%8D%AB%E8%8D%A3-%E9%99%88%E5%AF%85%E6%81%AA-%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B8%8E%E7%8E%B0%E4%BB%A3%E4%BA%BA%E6%96%87%E5%AD%A6%E7%A7%91-%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-08-17/%E4%BB%BB%E4%BD%95%E4%BA%BA%E9%83%BD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%BC%BA%E5%A4%A7%E7%9A%84%E9%9D%A2%E9%83%A8%E8%AF%86%E5%88%AB%E5%B7%A5%E5%85%B7-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-08-18/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA-%E4%BD%9C%E8%80%85%E8%83%A1%E8%B5%9B%E5%B0%BC-%E4%B8%96%E7%95%8C%E5%BF%85%E9%A1%BB%E4%B8%8E%E9%98%BF%E5%AF%8C%E6%B1%97%E5%B9%B3%E6%B0%91%E7%AB%99%E5%9C%A8%E4%B8%80%E8%B5%B7/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-08-18/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA-%E4%BD%9C%E8%80%85%E8%83%A1%E8%B5%9B%E5%B0%BC-%E4%B8%96%E7%95%8C%E5%BF%85%E9%A1%BB%E4%B8%8E%E9%98%BF%E5%AF%8C%E6%B1%97%E5%B9%B3%E6%B0%91%E7%AB%99%E5%9C%A8%E4%B8%80%E8%B5%B7/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-08-17/%E6%B2%88%E5%8D%AB%E8%8D%A3-%E9%99%88%E5%AF%85%E6%81%AA-%E8%AF%AD%E6%96%87%E5%AD%A6%E4%B8%8E%E7%8E%B0%E4%BB%A3%E4%BA%BA%E6%96%87%E5%AD%A6%E7%A7%91-%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

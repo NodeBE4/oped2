@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>為什麼我們從 Medium 搬到自建部落格？ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+為什麼我們從 Medium 搬到自建部落格？
+——
+" />
+    <meta property="og:description" content="
+為什麼我們從 Medium 搬到自建部落格？
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="為什麼我們從 Medium 搬到自建部落格？" />
+    <meta property="twitter:title" content="為什麼我們從 Medium 搬到自建部落格？" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmedium.com%2Fcymetrics%2Fwhy-we-left-medium-512b14207cdf%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://medium.com/cymetrics/why-we-left-medium-512b14207cdf?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://medium.com/cymetrics/why-we-left-medium-512b14207cdf?source=rss-f1fb3e40dc37------2&text=為什麼我們從 Medium 搬到自建部落格？&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://medium.com/cymetrics/why-we-left-medium-512b14207cdf?source=rss-f1fb3e40dc37------2&title=為什麼我們從 Medium 搬到自建部落格？" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://medium.com/cymetrics/why-we-left-medium-512b14207cdf?source=rss-f1fb3e40dc37------2&title=為什麼我們從 Medium 搬到自建部落格？" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=為什麼我們從 Medium 搬到自建部落格？&body=
+為什麼我們從 Medium 搬到自建部落格？
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://medium.com/cymetrics/why-we-left-medium-512b14207cdf?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://medium.com/cymetrics/why-we-left-medium-512b14207cdf?source=rss-f1fb3e40dc37------2&title=為什麼我們從 Medium 搬到自建部落格？&caption=
+為什麼我們從 Medium 搬到自建部落格？
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=為什麼我們從 Medium 搬到自建部落格？&url=https://medium.com/cymetrics/why-we-left-medium-512b14207cdf?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>為什麼我們從 Medium 搬到自建部落格？</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-07-30
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://medium.com/cymetrics/why-we-left-medium-512b14207cdf?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1627630537000-->
+<p><a href="https://medium.com/cymetrics/why-we-left-medium-512b14207cdf?source=rss-f1fb3e40dc37------2">為什麼我們從 Medium 搬到自建部落格？</a>
+——</p>
+
+<div>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*D1X9-iGituYfmjTr" />    <figcaption>
+Photo by <a href="https://unsplash.com/@capyvara?utm_source=medium&amp;utm_medium=referral">Hama Haki</a> on <a href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral">Unsplash</a>
+    </figcaption>
+  </figure>
+  <p>今年四月份的時候，我們 Cymetrics 技術團隊在 Medium 上面開設了一個 publication，名為 Cymetrics Tech Blog，裡面放著我們團隊成員寫的技術文章。</p>
+  <p>而三個多月過後，我們正式從 Medium 遷出，轉移到了自己架的部落格上面。</p>
+  <p>為什麼做出這樣子的決定？就讓我從頭說起。</p>
+  <h3 id="medium">為什麼是 Medium？</h3>
+  <p>對於一開始沒有想投入太多資源在 blog 上面，只是想做一點新嘗試的團隊來說，Medium 在當時是再好不過的選擇，優點有：</p>
+  <ol>
+    <li>SEO，Medium 的 SEO 比自己從頭開始架一個網站好</li>
+    <li>編輯文章容易，插入圖片也很容易</li>
+    <li>共同編輯容易，publication 讓每個人都可以用自己帳號發文</li>
+    <li>快速上手，只需要點幾個按鈕註冊個帳號，部落格就建好了</li>
+    <li>其他人都在用，像是 <a href="https://tech.hahow.in/">Hahow</a>、<a href="https://medium.com/carousell-insider">Carousell</a> 或是 <a href="https://netflixtechblog.com/">Netflix</a>，他們也都在用</li>
+  </ol>
+  <p>而對於工程師來說，也有一個顯而易見的缺點，那就是對於程式碼很不友善。要嘛就是要用截圖的方式，要嘛就是弄成 gist 再引入，雖然說有一些小工具可以自動轉換，但比起工程師們熟悉的 Markdown，Medium 的編輯器更偏向給一般使用者。</p>
+  <p>不過就算是這樣，依然是優點大過於缺點，簡單方便，沒有什麼比這更好的了。我自己的部落格也是放在 Medium 上面，只要沒有需要用到太多程式碼，基本上都沒什麼問題，使用起來還算順利。</p>
+  <p>在 2021 年 4 月到 2021 年 7 月這段時間，我們團隊一共 7 個人，在上面發表了 25 篇文章。</p>
+  <h3 id="medium-1">為什麼又不是 Medium？</h3>
+  <p>其實從 Medium 搬家並不是什麼新鮮事，Star Rocket 在 2020 年就發表了搬家宣言：<a href="https://blog.starrocket.io/posts/the-reason-why-we-build-our-own-blog-website-by-using-wordpress/">我們把文章搬到自己架設的網站了</a>，從 Medium 搬到 WordPress。若是在 Google 上搜尋：「Medium 搬家」，也會出現一大堆教學跟你說要怎麼做。</p>
+  <p>而有些人雖然選擇自架部落格，但還是同時在 Medium 上面發文，例如說這一篇：<a href="https://blog.kyomind.tw/my-own-blog-part-one/">不離開 Medium，我自架 blog 的理由與選擇（上）：理由篇</a></p>
+  <p>會從 Medium 離開的理由，有些正是因為我上面所說的優點，畢竟有些優點同時也是缺點。</p>
+  <p>例如說簡單方便容易設置，換個角度想就變成沒辦法客製化，我一直認為 Medium 對於客製化要求不多的人是個很棒的選擇，什麼都不用調整就有了一個還不錯的版面，基本功能也都有。</p>
+  <p>但若是想做更多客製化，當然還是自己架一個最合適，想調什麼就調什麼。</p>
+  <p>不過真正讓我們開始思考要不要搬離 Medium，是因為前陣子 Medium 做的一個改版：「內部篩選機制」。</p>
+  <p>簡單來說呢，如果文章不符合 Medium 內部篩選機制（用什麼來篩選不知道），那就沒有辦法被 Google 搜尋到。你的文章會多了一個 noindex 的屬性，不讓搜尋引擎建立索引。</p>
+  <p>許多人選擇 Medium 都是因為 SEO 好的關係，然而在這個改版之後，這個優勢完全消失了，尤其是對那些剛起步沒多久的人來說。以我前面提到的 Cymetrics Tech Blog 為例，就有一堆文章沒有辦法被搜尋到。</p>
+  <p>那這件事情影響有多大呢？</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/752/1*oOUBF-m8idMi2pSHJ6s_XQ.png" />    <figcaption>
+我的部落格的來源
+    </figcaption>
+  </figure>
+  <p>上圖是我自己的技術部落格的流量來源，有 4 成是來自於搜尋，搜尋引擎對於網站來說是很重要的管道，除非主動推廣文章，否則流量大多數都是從搜尋引擎來的。</p>
+  <p>若是發在 Medium 上的文章沒辦法被搜尋到，那它還剩下什麼優點？再者，若是沒有看到底下這篇文章，我是不會知道這件事情的。這個新政策應該要告知所有創作者才對，但他似乎沒有。</p>
+  <p>更詳細的政策說明可以參考：<a href="https://medium.com/kung-%E7%9A%84%E6%97%A5%E5%B8%B8/medium-%E6%96%87%E7%AB%A0%E5%9C%A8-google-%E4%B8%8A%E6%B6%88%E5%A4%B1%E4%BA%86-%E9%97%9C%E6%96%BC-medium-%E7%9A%84-seo-%E6%96%B0%E6%94%BF%E7%AD%96-b05f99b2f372?sk=68d4599717077ab2fd625f265bb70832">Medium 文章在 Google 上消失了？關於 Medium 的 SEO 新政策</a></p>
+  <h3 id="section">為什麼是自架部落格？</h3>
+  <p>貼 code 不方便這個已知的缺點，再加上沒辦法搜尋到這個超大缺點，讓我們開始思考起自架部落格的可能性。</p>
+  <p>自架部落格之所以不會在一開始就是個選項，是因為它需要時間，需要投入更多成本，才能把整個網站上線。而且上線之後網站本身需要維護，這也需要投入時間跟人力。</p>
+  <p>而正好我最近自己在弄的另一個東西也是自架部落格，而且支援了多個作者發文，已經有個雛形可以直接拿來改。於是我花了一點時間加上一些功能跟調整版面，很快就做出了一個 MVP。</p>
+  <p>在技術部分，我是採用 <a href="https://github.com/google/eleventy-high-performance-blog">eleventy-high-performance-blog</a> 當作基底進行改造，調整了版面以及加上一些功能。</p>
+  <p>部署的部分採用 GitHub Actions + GitHub Pages，因為大家都是工程師，所以對於用 markdown 寫文章還有 Git 的基本操作都很熟悉，在發文上都沒什麼問題。</p>
+  <p>自架部落格之後，什麼東西都可以自己掌握在手中。</p>
+  <p>Google Analytics 可以設置了，可以知道流量到底多少，讀者到底從哪裡來；Search console 可以設置了，看看到底讀者用了什麼關鍵字；顏色跟版面都可以隨意改了，可以改一個跟公司配色比較搭的主題。</p>
+  <p>重點是，搜尋引擎可以正常索引了，而且 performance 變好許多，lighthouse 的分數突破天際：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/849/1*TC-RLwLTqp-vtPPRtYKApg.png" />    <figcaption>
+雖然說是靜態網站，但要跑到這種分數也不太容易，滿分還會幫你放煙火
+    </figcaption>
+  </figure>
+  <h3 id="section-1">結語</h3>
+  <p>就像前面貼的 Star Rocket 那篇所說的，「每個時期都有自己最適合的方式」，做為初期的嘗試，我認為 Medium 仍然是一個可以考慮的地方，等到團隊確認願意花更多心力在這一塊時，再搬家到其他地方。</p>
+  <p>未來有沒有可能再搬？確實有可能，但若是真的到那時候，搬家的成本也會少很多，因為舊的網址都是我們自己的 domain，所以可以自己設置重新導向，在盡量不影響 SEO 的狀況下搬家。</p>
+  <p>我們在 Medium 上的文章會繼續留著，但未來新的文章都只會更新在我們自己架的部落格上面：<a href="https://tech-blog.cymetrics.io/">https://tech-blog.cymetrics.io/</a></p>
+  <p><a href="https://tech-blog.cymetrics.io/">Cymetrics Tech Blog</a></p>
+  <p>新的部落格提供了 RSS 訂閱，若是不習慣用 RSS，也可以在<a href="https://www.facebook.com/Cymetrics-100957872049641">臉書</a>上面追蹤我們，有新文章時就能看到。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=512b14207cdf" width="1" height="1" alt="" />  <hr />
+  <p><a href="https://medium.com/cymetrics/why-we-left-medium-512b14207cdf">為什麼我們從 Medium 搬到自建部落格？</a> was originally published in <a href="https://medium.com/cymetrics">Cymetrics Tech Blog</a> on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2021-09-03</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-03/%E4%BE%86%E8%AB%87%E8%AB%87%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E7%9F%A5%E8%AD%98%E7%84%A6%E6%85%AE/">
+          來談談工程師的知識焦慮
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-09</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-09/%E6%88%91%E6%8A%8A%E6%88%91%E7%9A%84%E9%9D%92%E6%98%A5%E7%B5%A6%E4%BD%A0-%E5%9C%A8-TechBridge-%E7%9A%84%E9%80%99%E5%85%AD%E5%B9%B4/">
+          我把我的青春給你——在 TechBridge 的這六年
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-09</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-09/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%BF%98%E8%A8%98%E5%AF%86%E7%A2%BC%E6%99%82%E5%8F%AA%E8%83%BD%E9%87%8D%E8%A8%AD-%E4%B8%8D%E6%8A%8A%E8%88%8A%E5%AF%86%E7%A2%BC%E5%91%8A%E8%A8%B4%E6%88%91/">
+          為什麼忘記密碼時只能重設，不把舊密碼告訴我？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-06-25</time>
+        <a href="https://nodebe4.github.io/oped2/2021-06-25/%E7%B0%A1%E5%96%AE%E4%BB%8B%E7%B4%B9%E7%99%BC%E5%B8%83-Medium-%E6%96%87%E7%AB%A0%E5%89%8D%E5%8F%AF%E4%BB%A5%E6%94%B9%E7%9A%84%E6%9D%B1%E8%A5%BF/">
+          簡單介紹發布 Medium 文章前可以改的東西
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-07-29/%E4%BF%9D%E5%AD%98%E7%9B%B4%E6%92%AD%E8%A7%86%E9%A2%91%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95-%E4%BF%A1%E6%81%AF%E8%A1%8C%E5%8A%A8%E4%B8%BB%E4%B9%89-%E8%A7%86%E9%A2%91%E8%A1%8C%E5%8A%A8-10-iYouPort/">
+            前一篇：保存直播视频的四种方法：信息行动主义 - 视频行动（10） - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-07-30/%E6%8A%8A%E4%B8%9C%E4%BA%AC%E5%A5%A5%E8%BF%90%E4%BD%9C%E4%B8%BA%E6%96%B9%E6%B3%95-%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83-%E5%A4%A7%E5%9E%8B%E6%B4%BB%E5%8A%A8-%E7%9A%84%E6%84%8F%E4%B9%89/">
+            後一篇：把东京奥运作为方法：重新思考“大型活动”的意义
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-07-29/%E4%BF%9D%E5%AD%98%E7%9B%B4%E6%92%AD%E8%A7%86%E9%A2%91%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95-%E4%BF%A1%E6%81%AF%E8%A1%8C%E5%8A%A8%E4%B8%BB%E4%B9%89-%E8%A7%86%E9%A2%91%E8%A1%8C%E5%8A%A8-10-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-07-30/%E6%8A%8A%E4%B8%9C%E4%BA%AC%E5%A5%A5%E8%BF%90%E4%BD%9C%E4%B8%BA%E6%96%B9%E6%B3%95-%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83-%E5%A4%A7%E5%9E%8B%E6%B4%BB%E5%8A%A8-%E7%9A%84%E6%84%8F%E4%B9%89/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-08-09/%E6%88%91%E6%8A%8A%E6%88%91%E7%9A%84%E9%9D%92%E6%98%A5%E7%B5%A6%E4%BD%A0-%E5%9C%A8-TechBridge-%E7%9A%84%E9%80%99%E5%85%AD%E5%B9%B4/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-07-09/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%BF%98%E8%A8%98%E5%AF%86%E7%A2%BC%E6%99%82%E5%8F%AA%E8%83%BD%E9%87%8D%E8%A8%AD-%E4%B8%8D%E6%8A%8A%E8%88%8A%E5%AF%86%E7%A2%BC%E5%91%8A%E8%A8%B4%E6%88%91/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-07-29/%E4%BF%9D%E5%AD%98%E7%9B%B4%E6%92%AD%E8%A7%86%E9%A2%91%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95-%E4%BF%A1%E6%81%AF%E8%A1%8C%E5%8A%A8%E4%B8%BB%E4%B9%89-%E8%A7%86%E9%A2%91%E8%A1%8C%E5%8A%A8-10-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-07-30/%E6%8A%8A%E4%B8%9C%E4%BA%AC%E5%A5%A5%E8%BF%90%E4%BD%9C%E4%B8%BA%E6%96%B9%E6%B3%95-%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83-%E5%A4%A7%E5%9E%8B%E6%B4%BB%E5%8A%A8-%E7%9A%84%E6%84%8F%E4%B9%89/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-08-09/%E6%88%91%E6%8A%8A%E6%88%91%E7%9A%84%E9%9D%92%E6%98%A5%E7%B5%A6%E4%BD%A0-%E5%9C%A8-TechBridge-%E7%9A%84%E9%80%99%E5%85%AD%E5%B9%B4/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-07-09/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%BF%98%E8%A8%98%E5%AF%86%E7%A2%BC%E6%99%82%E5%8F%AA%E8%83%BD%E9%87%8D%E8%A8%AD-%E4%B8%8D%E6%8A%8A%E8%88%8A%E5%AF%86%E7%A2%BC%E5%91%8A%E8%A8%B4%E6%88%91/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

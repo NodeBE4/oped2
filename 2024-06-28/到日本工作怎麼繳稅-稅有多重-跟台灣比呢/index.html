@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>到日本工作怎麼繳稅？稅有多重？跟台灣比呢？ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+到日本工作怎麼繳稅？稅有多重？跟台灣比呢？
+——
+" />
+    <meta property="og:description" content="
+到日本工作怎麼繳稅？稅有多重？跟台灣比呢？
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="到日本工作怎麼繳稅？稅有多重？跟台灣比呢？" />
+    <meta property="twitter:title" content="到日本工作怎麼繳稅？稅有多重？跟台灣比呢？" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2Fcompare-japan-tax-and-taiwan-tax-9b8608b878ff%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/compare-japan-tax-and-taiwan-tax-9b8608b878ff?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/compare-japan-tax-and-taiwan-tax-9b8608b878ff?source=rss-f1fb3e40dc37------2&text=到日本工作怎麼繳稅？稅有多重？跟台灣比呢？&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/compare-japan-tax-and-taiwan-tax-9b8608b878ff?source=rss-f1fb3e40dc37------2&title=到日本工作怎麼繳稅？稅有多重？跟台灣比呢？" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/compare-japan-tax-and-taiwan-tax-9b8608b878ff?source=rss-f1fb3e40dc37------2&title=到日本工作怎麼繳稅？稅有多重？跟台灣比呢？" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=到日本工作怎麼繳稅？稅有多重？跟台灣比呢？&body=
+到日本工作怎麼繳稅？稅有多重？跟台灣比呢？
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/compare-japan-tax-and-taiwan-tax-9b8608b878ff?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/compare-japan-tax-and-taiwan-tax-9b8608b878ff?source=rss-f1fb3e40dc37------2&title=到日本工作怎麼繳稅？稅有多重？跟台灣比呢？&caption=
+到日本工作怎麼繳稅？稅有多重？跟台灣比呢？
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=到日本工作怎麼繳稅？稅有多重？跟台灣比呢？&url=https://hulitw.medium.com/compare-japan-tax-and-taiwan-tax-9b8608b878ff?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>到日本工作怎麼繳稅？稅有多重？跟台灣比呢？</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-06-28
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/compare-japan-tax-and-taiwan-tax-9b8608b878ff?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1719624950000-->
+<p><a href="https://hulitw.medium.com/compare-japan-tax-and-taiwan-tax-9b8608b878ff?source=rss-f1fb3e40dc37------2">到日本工作怎麼繳稅？稅有多重？跟台灣比呢？</a>
+——</p>
+
+<div>
+  <p>其實我想寫一篇關於繳稅的文章已經很久了，就算沒有來日本工作，也會寫一篇台灣的繳稅文章。我在 20 歲的時候進入職場工作，但卻有很長一段時間沒有自己報過稅，都直接當媽寶靠我媽幫我報，也沒什麼留意過薪資單上的健保跟勞保還有預扣的稅，完全都不管。</p>
+  <p>那時的我甚至認為「所得稅 20%」代表的就是薪水的 20%，例如說收入 5 萬，繳的稅就是 1 萬塊，對扣除額還有累進稅率完全沒有概念。可能對有些人來說會覺得不可思議，想說怎麼連這個都不知道，但對當時的我來說可能也沒必要知道吧，反正到了報稅的時候上網按個按鈕就好，我也懶得去看細項有哪些。</p>
+  <p>是一直到最近兩三年，因為興趣的緣故，突然好奇稅金的組成是什麼，我才開始比較認真研究稅金到底包含哪些東西，又是怎麼計算的，話說我的繳稅入門影片應該是這支影片：<a href="https://www.youtube.com/watch?v=8UYn6sj8PAw&amp;ab_channel=%E6%9F%B4%E9%BC%A0%E5%85%84%E5%BC%9FZRBros">報稅起跑！2023綜合所得稅扣除額&amp;級距全圖解 上班族存股ETF配息節稅攻略 | 夯翻鼠FQ76</a>，看了之後對所得稅的概念清楚很多。</p>
+  <p>來日本工作之後，覺得對於外國人來說有很多新的概念要學習，例如說厚生年金、源泉徵收、確定申告以及住民稅等等，要不要自己申請？該怎麼申請？什麼時候繳？要繳多少？有什麼方法可以節稅？因此打算寫一篇整理一下，給未來的自己看。</p>
+  <p>雖然這篇主要想談的是在日本工作的繳稅，但因為稅金的組成在台灣與日本有很多類似之處，因此我會先從台灣開始談起，會對繳稅這件事情有更深的理解。如果你沒興趣的話，可以直接跳到日本的段落。</p>
+  <p>這篇想解決的問題有：</p>
+  <ol>
+    <li>台灣稅金與保險構成</li>
+    <li>日本稅金與保險構成</li>
+    <li>台灣與日本的稅金比較</li>
+    <li>日本工作該怎麼報稅、繳稅？</li>
+    <li>日本的所得稅該怎麼計算？</li>
+    <li>是不是申請永住之後海外收入就會被課稅？</li>
+    <li>該怎麼合法節稅？</li>
+    <li>故鄉納稅什麼時候要開始準備？</li>
+    <li>要離開日本時，有哪些錢可以拿回來？</li>
+  </ol>
+  <p>由於我研究過後，發現有些東西跟之前聽說的不太一樣，所以我會盡可能附上官方的資料來源，讓想查證的人自行查證。</p>
+  <h3 id="section">台灣的稅與保險</h3>
+  <p>台灣是在每年的 5/1~5/31，申報去年一整年的收入。依照法規，如果月薪高於 8.8 萬的話，公司每個月就會先預扣 5% 起來，報稅的時候就會多退少補。</p>
+  <p>另外，雖然我們平常都習慣說繳稅繳稅，但其實除了所得稅以外，還有另一個大部分人都一定會繳的，那就是勞保（勞工保險）與健保（健康保險），這兩種嚴格來講似乎不算稅金，但因為通常也是個固定支出，所以我會把這兩個加在一起談。</p>
+  <h3 id="section-1">台灣的勞保與健保</h3>
+  <p>我們先從勞保跟健保開始談起好了，健保的話大家應該滿熟悉的了，全名為「全民健康保險」，那健保費又是怎麼算的呢？這邊有衛福部提供的<a href="https://www.nhi.gov.tw/ch/cp-13134-43e43-2569-1.html">投保金額分級表</a>，總共分了 50 級，最低的是月收入 27,470 以下，最高的是 212,001 以上。</p>
+  <p>假設小明年薪是 201.5 萬，薪資組成為每個月的收入 155,000 元再加上一個月的年終獎金。那根據投保金額分級表，會被分到第 41 級，月投保金額為 156,400 元。</p>
+  <p>而目前健保的費率為 5.17%，其中 30% 員工自己付，60% 公司付，10% 政府付。所以自己每個月要繳的錢就是 156400 * 5.17% * 30% = 2425 元，公司的話則是 4851 元。</p>
+  <p>接著我們來看勞保，勞保一樣有分級，最高級是月薪 43,901 元以上，投保金額為 45,800 元。而勞保的費率為 12%，其中 20% 自己付，70% 公司付，10% 政府付。</p>
+  <p>所以每個月要繳的錢是 1099 元，而公司則是 3847 元。</p>
+  <p>因此呢，以每個月薪水 15.5 萬來講，健保要繳 2425 元，勞保則是 1099 元，健保佔了薪水的 1.56%，勞保佔了 0.7%，都是滿小的數字。</p>
+  <p>公司的話則是繳了將近 8700 元，差不多是 5.5% 的薪資。</p>
+  <p>不過公司還要額外繳一筆費用，叫做勞工退休金，也就是俗稱的勞退，是 6% 的薪水，因此加起來除了你的月薪以外，公司還要額外付出 11.5% 的隱藏成本。</p>
+  <p>而員工自己也可以提撥最多 6% 的薪水到勞退的帳戶，叫做勞退自提，好處是這部分不列入所得稅的計算，因此可以作為一個節稅的手段，但缺點就是放到勞退帳戶裡面的錢要 60 歲之後才能領。</p>
+  <h3 id="section-2">台灣的所得稅計算方式</h3>
+  <p>接著我們來看看所得稅，所得稅的全名為「個人綜合所得稅」，白話文就是你的收入當中，有一定比例的錢要繳給政府。而這個收入除了每個月的薪水之外，年終獎金也算是收入。</p>
+  <p>不過如果你有看過薪資單，會發現裡面通常有個項目叫做「伙食津貼」，2024 年的免稅額是每個月 3000，因此假設我談好的月薪是 50,000 塊，通常實際的項目會是薪水 47,000 加上伙食津貼 3000，需要繳稅的只有 47,000 元。不過這就屬於比較細節的部分了，這邊就先不列入計算。</p>
+  <p>同樣是剛剛的例子，年薪 201.5 萬的小明，所得稅該怎麼計算呢？</p>
+  <p>在計算稅金之前，有幾項可以扣除：</p>
+  <ol>
+    <li>薪資所得特別扣除額（每人為 207,000 元）</li>
+    <li>免稅額（每人 92,000 元）</li>
+    <li>標準扣除額跟列舉扣除額擇一，通常是用標準扣除額 124,000 元</li>
+    <li>特別扣除額（幼兒以及長照相關，我沒扣過）</li>
+  </ol>
+  <p>除此之外其實還有一個「基本生活費差額」，意思就是基本生活會用的錢是不會扣稅的，每個人的基本生活費是 202,000 元，如果前面那堆扣完之後（不含薪資所得特別扣除額）還有剩，就可以再拿來扣除。</p>
+  <p>不過以單身人士來說，免稅額加上標準扣除額就超過 20 萬了，因此是沒辦法扣的。話說所得稅的部分，台灣的<a href="https://www.gov.tw/News_Content_26_534742">官方懶人包</a>寫得很清楚，十分推薦閱讀。</p>
+  <p>總之呢，扣一扣之後，可以得到一個綜合所得稅淨額：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*Jzg7FWwaqByJGo6r-joWFQ.png" />    <figcaption>
+綜合所得稅淨額
+    </figcaption>
+  </figure>
+  <p>200 萬的薪水，東扣西扣之後，真正要拿來計算所得稅的總額是 159 萬元，而這些錢該繳多少稅，可以參考底下的表格：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*7RC0bEiR9AIqIhJdy8C_Tw.png" />    <figcaption>
+所得稅淨額與稅率
+    </figcaption>
+  </figure>
+  <p>由於所得稅是採累進稅率，並不是說我到那個級距就直接乘以稅率，而是 56 萬元以下的部分，稅率就是 5%，而 56 萬 ~ 126 萬的部分，稅率是 12%。</p>
+  <p>假設收入是 70 萬，那就是 56 萬 * 5% 再加上 14 萬 * 12%，總共就是 44,800 元。不過要這樣加加減減的話很麻煩，因此表格旁邊有一個「累積差額」可以使用。</p>
+  <p>我們直接把 70 萬 * 12%，再扣掉 39,200 元，一樣會得到 44,800 元。簡單來講就是先把所有錢都用 12% 來算，再扣掉 56 萬的 7% 啦，換個方式算而已，但容易很多。</p>
+  <p>因此呢，159 萬元要繳的稅就是 1,592,000 * 20% 再扣掉 14 萬，也就是 178,400 元。</p>
+  <h3 id="section-3">台灣稅收結論</h3>
+  <p>根據上面的計算，我們可以得出底下的表格：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*fmqu7E-XV6YrfbH-1_7M2w.png" />    <figcaption>
+台灣年收 200 萬的可支配所得
+    </figcaption>
+  </figure>
+  <p>年收入 200 萬，扣完稅金、健保跟勞保以後，最後實拿為 179 萬，大約是原本的九成。</p>
+  <p>比對一下我之前寫過的文章，拿了 <a href="https://tw.talent.com/tax-calculator?salary=2015000&amp;from=year&amp;region=Taiwan">talent</a> 的薪資計算器，算出來實拿為 170 萬而已，要嘛是我上面算錯，要嘛就是 talent 算錯，上面我驗算過兩三遍了，因此應該是它算錯了。</p>
+  <p>這樣一看，台灣的勞健保跟所得稅確實滿低的，年薪 200 萬在台灣已經是薪資收入的 PR98 左右了，稅跟健保勞保扣完只要 10%。</p>
+  <p>話說為了方便計算，都是先用單身來計算，如果是夫妻申報或是要報撫養的話，計算公式就會不太一樣了，因此先不考慮這個，也不考慮勞退自提。</p>
+  <h3 id="section-4">日本的稅與保險</h3>
+  <p>跟台灣有所得稅以及勞健保類似，在日本工作也有分幾種要繳納的項目，包含：</p>
+  <ol>
+    <li>所得稅</li>
+    <li>住民稅</li>
+    <li>健保</li>
+    <li>厚生年金（類似於台灣的國民年金）</li>
+  </ol>
+  <p>不過與台灣不管怎樣都要自己報稅不同，日本的話有分兩種方式，如果是一般上班族的話，大多數人都是全部交給公司就好，每個月會直接從薪水預扣，稱為「源泉徵收」，而到年底的時候則會進行「年末調整」，看一看這一整年的稅有沒有多或少，一樣是多退少補。</p>
+  <p>另外一種叫做「確定申告」，在每年的 2/16 ~ 3/15，一樣是報去年一整年的稅，如果有副業或是年收超過 2000 萬日幣的話，就要選擇這個。</p>
+  <p>這兩個選一種就好，以源泉徵收居多。</p>
+  <p>接著我們一樣從保險開始，來看看日本的各種細項。</p>
+  <h3 id="section-5">日本的健保與厚生年金</h3>
+  <p>日本的健康保險分兩種，一種是跟台灣健保類似的國民健康保險，而另外一種則是給上班族的社會保險，兩者能享受到的權益差不多，都可以拿到健保卡，但是保費不太一樣。</p>
+  <p>而厚生年金就與台灣的勞保類似，基本上是給我們這種上班族保的，如果沒有上班或者是自由工作者的話，保的就會是國民年金。</p>
+  <p>日本的健保與厚生年金跟台灣類似，一樣有分成不同級距，但不同的是還會根據所在區域有所不同，可以在官網上查到詳細資訊：<a href="https://www.kyoukaikenpo.or.jp/g3/cat330/sb3150/">都道府県毎の保険料額表</a>，底下是東京都的表格：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*euGVrMbmpM5GtSZH.png" />
+  </figure>
+  <p>在這個表格中，所謂的「介護保險第 2 號被保險者」指的是 40 歲 ~ 65 歲的人，因此我們該看的是左邊那一欄 9.98% 的。為了跟台灣比較，這次我們用年薪 1000 萬日幣，月薪 83.3 萬來做計算。</p>
+  <p>月薪 83.3 萬的話，健保會落在第 40 級，保費全額是 82,834 元，公司跟個人分別負擔一半，因此每月就是 41,417 元。</p>
+  <p>厚生年金的話直接到了上限，每月大約 12 萬日幣，一樣對半分，每個月是 59,475 元。</p>
+  <p>再來還有一個雇用保險，是失業的時候可以得到補償用的，每個月是 0.5%，也就是 4615 元。</p>
+  <p>總結下來，每年要繳的保險費用是：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*-9maFoJsEIcYjMsuLEenUQ.png" />    <figcaption>
+日本保險費用
+    </figcaption>
+  </figure>
+  <h3 id="section-6">日本的所得稅與住民稅</h3>
+  <p>在計算所得稅以前，要先知道自己是什麼身份，有分成底下三種：</p>
+  <ol>
+    <li>永久居民</li>
+    <li>非永久居民</li>
+    <li>非居民</li>
+  </ol>
+  <p>第一種永久居民的話無論是日本收入還是海外收入，都會課稅。之前聽人講過申請永住通過之後，海外的收入也會被課稅，因此對有些人來說會是一個考量是否申請的點，不過我查了一下，這應該是錯誤的說法。</p>
+  <p>因為這裡的永久居民定義是稅務上的，並不是身份上的，<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2010.htm">國稅廳</a>官網給了這個表格：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/718/0*UZwIwHAoRQ1bhY8h.png" />
+  </figure>
+  <p>如果你不是日本人，而且過去 10 年內待在日本的時間是 5 年以內，那就會被歸類在非永久居民。由於永久居留許可並不是歸化，所以不會有日本國籍。因此，不管有沒有去申請永住，只要 10 年內待滿 5 年，你的海外收入就是要被課稅，中文版的說明可以參考：<a href="https://www.jetro.go.jp/tc/invest/setting_up/section3/page7.html">3.7 自然人的稅收制度的概要</a></p>
+  <p>總之呢，剛去日本工作的人都會是第二種非永久居民，只有在日本的收入會被課稅（除非你把海外收入也匯到日本）。</p>
+  <p>然後所得稅的計算方法跟台灣類似，先扣東扣西之後，再按照累進稅率來計算。</p>
+  <p>假設年薪是 1000 萬日幣，會先扣掉所謂的<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1410.htm">給与所得控除</a>，超過 850 萬以上都是扣 195 萬，這是上限了。</p>
+  <p>接著再扣掉各種項目，包括：</p>
+  <ol>
+    <li>社會保險（包含健保跟厚生年金還有雇用保險）</li>
+    <li>扶養</li>
+    <li>配偶</li>
+    <li>基礎扣除（年收入 2400 萬以下的話，固定 48 萬）</li>
+  </ol>
+  <p>一樣以單身來算的話，這邊會扣掉社會保險的 126 萬外加基礎扣除 48 萬：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*sXeY6X8cTI-q67UyGDeyVQ.png" />    <figcaption>
+日本年收千萬的扣除結果
+    </figcaption>
+  </figure>
+  <p>接著再搭配這個累進稅率的表格：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*wjE36QBPiMdBurmc3_yBKQ.png" />    <figcaption>
+日本所得税累進稅率表格
+    </figcaption>
+  </figure>
+  <p>630 萬所對應到的是第三個範圍，所以是 6303916 * 20% — 427500 = 833,283，這就是所得稅的部分。</p>
+  <p>除了要繳給日本政府的所得稅（國稅）以外，還有另外一個要繳給地方的住民稅（地方稅），這兩個是分開的，可以視為完全不同的東西。</p>
+  <p>住民稅有分兩種繳納方式：</p>
+  <ol>
+    <li>特別徵收（從薪水裡面直接扣）</li>
+    <li>普通徵收（每年 6 月自己繳）</li>
+  </ol>
+  <p>而住民稅跟所得稅類似，課稅的金額都跟前一年一整年（1/1~12/31）的收入有關。話說之前我有聽過「第二年開始要繳住民稅」或是「來日本第一年不用繳住民稅」之類的說法，但這種說法非常不精確而且容易誤導，怎樣算是一年？是完整的一年還是以年度來計算？</p>
+  <p>我猜測之所以會有這種說法，是因為假設你三月來日本，要一直到隔年的六月才需要繳住民稅，所以才會說：「第一年不用繳」。但如果你是十月來日本，那一樣是隔年六月要繳住民稅。</p>
+  <p>只是就像所得稅一樣，課的是前一年整年的收入，但該年只有十月到十二月這幾個月的收入，很有可能達到免稅的門檻。</p>
+  <p>總之呢，住民稅就跟所得稅沒兩樣，課稅的金額都是去年一整年的收入，只要這樣想就好。</p>
+  <p>除此之外，住民稅的計算方式也比所得稅再更複雜一些，住民稅底下其實包含兩種：</p>
+  <ol>
+    <li>都民稅（都道府県民税）</li>
+    <li>區民稅（区市町村民税）</li>
+  </ol>
+  <p>簡單來講就是第一種繳給新北市，第二種繳給中和區。</p>
+  <p>而住民稅的計算方式是兩個細項加起來，一個叫做均等割，意思就是每個人都繳一樣的錢，東京都的均等割是 1000 日幣，區民稅的均等割則是 3000日幣。</p>
+  <p>另一個則叫做所得割，就是按照所得的比例去計算，東京的都民稅是 4%，區民稅是 6%。</p>
+  <p>而這邊的所得就跟所得稅一樣，是扣掉各種扣除額之後剩餘的數字，唯一的差別是基礎控除的部分，所得稅是 48 萬，而住民稅只有 43 萬，兩者的比較可以參考<a href="https://www.tax.metro.tokyo.lg.jp/kazei/kojin_ju.html">東京都主稅局的說明</a>，寫得很詳細。</p>
+  <p>因此，可以直接拿剛剛的數字來用，加上 5 萬之後變成 6,353,916，底下是詳細表格：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*oGY8301KJqyliLMX3yIrdg.png" />    <figcaption>
+日本住民稅試算
+    </figcaption>
+  </figure>
+  <p>其實還有一個「稅額控除額」可以扣，但那個比較複雜，而且以這個年收來說似乎只有 2500 日圓而已，所以先不仔細算了，有興趣可以參考：<a href="https://www.city.musashino.lg.jp.c.ad.hp.transer.com/kurashi_tetsuzuki/zeikin/kojinjuminzei/keisan/zeigakukoujo/1032619.html">调整扣除</a></p>
+  <p>總之呢，最後算出來的住民稅是 636,890 元。</p>
+  <h3 id="section-7">日本稅收結論</h3>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*IHWwC7B7q7ExS8n8XUNSdA.png" />    <figcaption>
+日本稅收結論
+    </figcaption>
+  </figure>
+  <p>保險加年金總共佔了 12.66%，比所得稅還要高，而住民稅也不可小覷，如果把所得稅跟住民稅加起來，也有 14.7%。</p>
+  <p>這裡的數字跟我在<a href="https://life.huli.tw/2024/02/12/japan-software-engineer-salary/">日本軟體工程師的薪水如何？到底值不值得去？</a>一文中，得到的數字差不多，稅跟保險佔了 27% 左右，最後實拿只有 73%。不過當時我一直以為所謂的「日本工作稅很重」，是所得稅重，但這篇算下來以後，發現所得稅本身根本不重，甚至比台灣還要低一點。</p>
+  <p>算完日本跟台灣以後，就可以來比較一下了：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*mNrtgpeT6t75FUcKGzenww.png" />    <figcaption>
+台灣與日本繳稅比較
+    </figcaption>
+  </figure>
+  <p>其實在我寫上一篇日本薪水的文章時，我只注意到會少三成，但沒注意到這三成的比例是如何分配的，但現在這樣列下來就很清楚了。</p>
+  <p>事實上，日本的所得稅跟台灣差不多，就算年收 200 萬，都只有不到 10% 而已，但在保險這塊要繳的比台灣多很多，台灣加起來大概是 2%，日本則是 12%，是台灣的六倍。</p>
+  <p>除此之外，住民稅佔了總收入的 6%，也是一筆不小的負擔。</p>
+  <p>因此，同樣收入底下，日本之所以拿得比台灣少，並不是因為所得稅很重，而是因為保險貴很多，外加日本還多一個住民稅。</p>
+  <h3 id="section-8">日本工作的節稅手段</h3>
+  <h3 id="section-9">報撫養</h3>
+  <p>其實這跟台灣一樣，是最常見的節稅手段之一，在日本要報海外撫養的話要滿足幾個資格，包括：</p>
+  <ol>
+    <li>六等親以內</li>
+    <li>被撫養人的年收不能超過 48 萬日幣</li>
+    <li>需要有匯款 38 萬日幣以上的證明</li>
+  </ol>
+  <p>扣除額的話會根據撫養對象的年齡而有所不同，最常見的 23–70 歲區間的話，報一個人所得稅的扣除額可以多 38 萬，住民稅則是 33 萬。</p>
+  <p>我們來計算一下報撫養之後，稅金會差多少：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*8UF9ZXpK8Ie4y6ot5p9alA.png" />    <figcaption>
+報撫養的差別
+    </figcaption>
+  </figure>
+  <p>算出來之後得出撫養一個人，可以少 11 萬日幣的稅金，也就是薪水的 1.1%，其實還滿多的。</p>
+  <p>不過要注意的是如果撫養太多人的話，可能會影響到永住的申請。畢竟永住審查時會需要你有一定的謀生能力，你的薪水必須能夠支撐你自己以及撫養人的生活，不過如果薪水夠高的話，影響似乎沒這麼大。</p>
+  <h3 id="section-10">故鄉納稅（ふるさと納税制度）</h3>
+  <p>住民稅是一種地方稅，繳給地方政府的，不過除了繳給居住地以外，其實你也可以選擇繳給其他地方（其實是捐款的一種），例如說北海道或是沖繩之類的，算是一種宣傳地方特色以及平均城鄉差距的手段。</p>
+  <p>如果選擇繳給其他地方的話，還會拿到價值大約是稅金 30% 的禮品，不過由於這個故鄉納稅制度並沒有減少你繳的稅，所以有些人不覺得這是一種節稅手段。</p>
+  <p>但重點是有那個禮品，如果沒有用故鄉納稅的話，你就是什麼也拿不到，用了之後還可以換一些有價值的禮品回來，所以我認為這就是一種節稅沒錯，有賺到禮品。</p>
+  <p>而故鄉納稅是有額度限制的，想知道大約的限制，可以到各個故鄉納稅的專門網站去計算：</p>
+  <ol>
+    <li><a href="https://furunavi.jp/deduction.aspx">https://furunavi.jp/deduction.aspx</a></li>
+    <li><a href="https://furusato-nouzei.event.rakuten.co.jp/mypage/deductions/">https://furusato-nouzei.event.rakuten.co.jp/mypage/deductions/</a></li>
+    <li><a href="https://mogufull.jp/info/003/#DEDUCTIBLELIST">https://mogufull.jp/info/003/#DEDUCTIBLELIST</a></li>
+  </ol>
+  <p>以小明單身年薪一千萬日幣來說，最多的扣除額大約是 18 萬日幣左右，以 30% 的價值來說，就是 5.4 萬日幣的禮品，不無小補。</p>
+  <p>詳細的流程可以參考這兩篇：</p>
+  <ol>
+    <li><a href="https://mogufull.jp/info/002/">从申请到确定申告的流程</a></li>
+    <li><a href="http://www.jpchinapress.com/static/content/QW/2022-12-12/1051822022071959552.html">众说纷纭的故乡纳税到底是什么？图图是道，详解一站式特例制度故乡纳税全流程</a></li>
+  </ol>
+  <p>基本上就是上網選擇要捐款給誰，接著付錢，然後就會收到禮品跟一個申請書，把申請書填完寄回去就好了，滿方便的。至於時間點的話，要看收入，有可能來的第一年就可以開始準備了。</p>
+  <p>舉例來說，如果是 9 月才來日本工作，四個月的薪資算 300 萬日幣好了，隔年六月要繳住民稅的時候，就會用這 300 萬來算。而 300 萬收入的故鄉稅最大金額大約是 28,000 日幣，30% 是 8400 日幣，也是不無小補。</p>
+  <p>總之呢，不管你什麼時候來日本，只要該年度的年收會大於 300 萬，就可以在該年開始準備買禮品了，你看看這些禮品多誘人：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*9FZ11u3IAp38GnE6.png" />
+  </figure>
+  <h3 id="nisa">NISA（少額投資非課税制度）</h3>
+  <p>這個節稅手段跟前面講的不同，前面都是基於所得稅或是住民稅的節稅手段，對所有人都適用，但現在要講的這個不太一樣。</p>
+  <p>在日本如果你有在做投資，例如說買賣股票的話，賺到的錢會直接被扣 20% 的稅金！例如說我賺個 10 萬，最後拿到手的只剩下 8 萬塊而已。</p>
+  <p>而日本政府為了鼓勵大家投資，因此就有了 NISA 這個制度，NISA 的全名為 Nippon Individual Saving Account，可以去開立一個 NISA 的戶頭，在這個戶頭下的投資賺了錢也不用課稅。</p>
+  <p>NISA 戶頭底下還有分兩種，一種是積立（定期定額）投資，另外一種是成長投資，前者一年有 120 萬日元的免稅額，後者則是 240 萬日元，這兩者可以買的股票不太一樣。</p>
+  <p>這裡的免稅指的是成本而非獲利，意思就是如果我今年花 120 萬買了某個股票，半年後漲到 500 萬，中間賺的 380 萬是不需要扣稅的。</p>
+  <p>總之呢，如果本來就有在投資的，記得利用 NISA 戶頭降低資本利得稅，在一定額度內可以直接少掉 20%。</p>
+  <p>更詳細的資訊可以參考：</p>
+  <ol>
+    <li><a href="https://mssinsin.com/biztrend2/">《懶人投資+節稅的好方法：日本 NISA 制度》</a></li>
+    <li><a href="https://tubakiinjapan.com/new-nisa/">【投資】還是不了解 新NISA 嗎？使用舊NISA的各位看過來～</a></li>
+    <li><a href="https://www.fsa.go.jp/policy/nisa2/know/">日本金融廳官方說明</a></li>
+  </ol>
+  <h3 id="section-11">離開日本時的注意事項 — 脱退一時金</h3>
+  <p>之前在計算的時候有說到保險佔了滿大一部分，其中厚生年金更是佔了薪資的 7% 左右。由於繳交的年金其實是給未來老了的自己用的，因此如果沒有打算長期待在日本，在離開日本時可以申請所謂的「脱退一時金」，把之前繳的厚生年金拿回來。</p>
+  <p>這是日本年金機構的官方說明，我覺得寫得滿清楚的：<a href="https://www.nenkin.go.jp/service/jukyu/sonota-kyufu/dattai-ichiji/20150406.html">https://www.nenkin.go.jp/service/jukyu/sonota-kyufu/dattai-ichiji/20150406.html</a></p>
+  <p>要注意的是年金最多只能拿五年份的回來，超過了就不列入計算了，例如說在日本待了七年要離開，也只能拿最近五年的。</p>
+  <p>假設來日本工作三年的小明要退出厚生年金，可以拿到的錢會是 650,000（厚生年金的標準報酬上限） * 3.3 = 2,145,000，我算了一下，這跟小明這三年自己繳的厚生年金其實差不多，因此是可以全數拿回來的。</p>
+  <p>因此，如果沒有想要長期待在日本的話，在離開時可以拿 7% 的錢回來，其實還滿不錯的。之前算的在日本的實拿薪水大概 72.6%，若是一開始就沒有打算長期待著，就可以把脫退一時金加上，就會變成大概 80%。</p>
+  <h3 id="section-12">結語</h3>
+  <p>這篇的主要目的其實是紀錄外加研究一下日本的稅務，因為自己也很快就會用到，有研究過的話會心安不少，日後有朋友問起也可以有憑有據的跟他說明。</p>
+  <p>有很多東西都是點到為止，沒有講得很詳細，但關鍵字應該給的很足，有興趣的朋友們可以自己照著關鍵字去找，反正都脫離不了節稅三天王：撫養、故鄉納稅還有 NISA。</p>
+  <p>話說還有另一個叫做 <a href="https://tubakiinjapan.com/ideco-index/">iDeCo</a> 的東西，有點類似台灣的勞退自提那種感覺，都是把薪水的一部分提到固定帳戶，而且老了才能領出來，但因為我應該不會用這個，所以就沒有研究了。</p>
+  <p>參考資料：</p>
+  <ol>
+    <li><a href="https://www.gov.tw/News_Content_26_534742">申報112年度個人綜合所得稅懶人包，幫您搞懂怎麼報！</a></li>
+    <li><a href="https://www.swingvy.com/blog-tw/salary-slip-example">符合勞基法的薪資單格式怎麼做？跟著範本放上這幾個薪資明細就搞定！</a></li>
+    <li><a href="https://www.swingvy.com/blog-tw/labor-insurance-and-nhi">2024年（113年）勞健保、勞退級距三合一對照表 + 勞健保負擔費用等常見問題一次看</a></li>
+    <li><a href="https://www.swingvy.com/blog-tw/monthly-insurance-salary">投保薪資是什麼？只用本薪投保勞健保可以嗎？一次搞懂月投保薪資眉角！</a></li>
+    <li><a href="https://www.yourator.co/articles/356">勞健保扣多少？2024 勞健保費用與勞工退休金試算總整理！</a></li>
+    <li><a href="https://thetravellernotes.com/income-tax-in-japan/">日本工作稅金知多少？萬萬稅後的實領薪水</a></li>
+    <li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1199.htm">№1199 基礎控除</a></li>
+    <li><a href="https://www.cr.mufg.jp/mycard/beginner/23091/index.html">社会保険料控除とは？年末調整と確定申告での手続きを解説</a></li>
+    <li><a href="https://www.jetro.go.jp/tc/invest/setting_up/section4/page9.html">4.9 日本的社會保障制度</a></li>
+    <li><a href="https://www.cr.mufg.jp/mycard/beginner/23081/index.html">所得税の計算方法は？税率や控除などをわかりやすく解説</a></li>
+    <li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1410.htm">№1410 給与所得控除</a></li>
+    <li><a href="https://www.zeikin5.com/info/">所得税・住民税の計算方法</a></li>
+    <li><a href="https://www.freee.co.jp/kb/kb-payroll/the-deduction-for-employment-income/">給与所得控除とは？給与所得の計算方法や所得控除との違いついてわかりやすく解説</a></li>
+    <li><a href="https://www.city.taito.lg.jp/kurashi/zeikin/zeikin/shurui/093722836.html">1.所得控除</a></li>
+    <li><a href="https://www.freee.co.jp/kb/kb-kakuteishinkoku/resident_tax_deduction/">住民税の控除とは？ 種類と控除金額を解説</a></li>
+    <li><a href="https://www.nenkin.go.jp/service/jukyu/sonota-kyufu/dattai-ichiji/20150406.html">脱退一時金の制度</a></li>
+    <li><a href="https://tubakiinjapan.com/taxdeduction-dependents/">【稅金】日本工作一定要報的 海外扶養 ～幫你省下來回機票錢～（2023年最新）</a></li>
+  </ol>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=9b8608b878ff" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2024-09-23</time>
+        <a href="https://nodebe4.github.io/oped2/2024-09-23/%E6%84%9B%E6%B2%99%E5%B0%BC%E4%BA%9E%E6%95%B8%E4%BD%8D%E5%B1%85%E6%B0%91%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+          愛沙尼亞數位居民申請心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-07-11</time>
+        <a href="https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/">
+          1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-06-10</time>
+        <a href="https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+          2024 年日本家族滯在簽證申請心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-05-11</time>
+        <a href="https://nodebe4.github.io/oped2/2024-05-11/2024-%E5%B9%B4-5-%E6%9C%88%E9%A6%96%E7%88%BE%E5%9B%9B%E5%A4%A9%E4%B8%89%E5%A4%9C%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+          2024 年 5 月首爾四天三夜旅遊心得
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+            前一篇：2024 年日本家族滯在簽證申請心得
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/">
+            後一篇：1.5 本書的誕生 — — 《Beyond XSS：探索網頁前端資安宇宙》的幕後故事
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2024-07-11/1.5-%E6%9C%AC%E6%9B%B8%E7%9A%84%E8%AA%95%E7%94%9F-Beyond-XSS-%E6%8E%A2%E7%B4%A2%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E8%B3%87%E5%AE%89%E5%AE%87%E5%AE%99-%E7%9A%84%E5%B9%95%E5%BE%8C%E6%95%85%E4%BA%8B/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

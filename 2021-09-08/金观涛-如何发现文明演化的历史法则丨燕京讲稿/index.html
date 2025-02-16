@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>金观涛：如何发现文明演化的历史法则丨燕京讲稿 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+金观涛：如何发现文明演化的历史法则丨燕京讲稿
+——
+" />
+    <meta property="og:description" content="
+金观涛：如何发现文明演化的历史法则丨燕京讲稿
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="金观涛：如何发现文明演化的历史法则丨燕京讲稿" />
+    <meta property="twitter:title" content="金观涛：如何发现文明演化的历史法则丨燕京讲稿" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F61396d06f4f9725a198ea7bc" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/61396d06f4f9725a198ea7bc" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/61396d06f4f9725a198ea7bc&text=金观涛：如何发现文明演化的历史法则丨燕京讲稿&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/61396d06f4f9725a198ea7bc&title=金观涛：如何发现文明演化的历史法则丨燕京讲稿" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/61396d06f4f9725a198ea7bc&title=金观涛：如何发现文明演化的历史法则丨燕京讲稿" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=金观涛：如何发现文明演化的历史法则丨燕京讲稿&body=
+金观涛：如何发现文明演化的历史法则丨燕京讲稿
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/61396d06f4f9725a198ea7bc" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/61396d06f4f9725a198ea7bc&title=金观涛：如何发现文明演化的历史法则丨燕京讲稿&caption=
+金观涛：如何发现文明演化的历史法则丨燕京讲稿
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=金观涛：如何发现文明演化的历史法则丨燕京讲稿&url=https://www.allnow.com/post/61396d06f4f9725a198ea7bc" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>金观涛：如何发现文明演化的历史法则丨燕京讲稿</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-09-08
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 张弘</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/61396d06f4f9725a198ea7bc" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/61396d06f4f9725a198ea7bc">金观涛：如何发现文明演化的历史法则丨燕京讲稿</a>
+——</p>
+
+<div>
+  <p>讲者︱金观涛；整理︱张弘</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-09/61396d309c232e01c17d33f0+L.jpg" data-id="61396d34904b8c02a16a4419" alt="金观涛教授认为，历史法则处于“应然”和“实然”之间。图为故宫午门。（图源：视觉中国）" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+金观涛教授认为，历史法则处于“应然”和“实然”之间。图为故宫午门。（图源：视觉中国）
+    </figcaption>
+  </figure>
+  <p>本文源自于2021年7月金观涛教授在一次线上读书会的讲座，经《燕京书评》整理成文字稿后，由金观涛教授进一步修订而成。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-09/61396e289c232e01c17d33f1+L.jpg" data-id="61396e2d9b2d825085c270c2" alt="金观涛，生于1947年，现任中国美术学院南山讲座教授、香港中文大学中国文化研究所高级名誉研究员。1970年毕业于北京大学化学系，曾在郑州大学任教；1978年到中国科学院工作，曾任《自然辩证法通讯》杂志社编辑部主任，科学哲学研究室主任、研究员；20世纪80年代创办“走向未来”丛书；90年代以来，先后担任香港中文大学当代中国文化研究中心主任、研究讲座教授、台湾政治大学讲座教授。 主要著作有《系统的哲学》《历史的巨镜》。与刘青峰长期合作研究，合著代表作有《兴盛与危机》《开放中的变迁》《中国思想史十讲》等。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+金观涛，生于1947年，现任中国美术学院南山讲座教授、香港中文大学中国文化研究所高级名誉研究员。1970年毕业于北京大学化学系，曾在郑州大学任教；1978年到中国科学院工作，曾任《自然辩证法通讯》杂志社编辑部主任，科学哲学研究室主任、研究员；20世纪80年代创办“走向未来”丛书；90年代以来，先后担任香港中文大学当代中国文化研究中心主任、研究讲座教授、台湾政治大学讲座教授。 主要著作有《系统的哲学》《历史的巨镜》。与刘青峰长期合作研究，合著代表作有《兴盛与危机》《开放中的变迁》《中国思想史十讲》等。
+    </figcaption>
+  </figure>
+  <h2 id="section"><strong>历史法则存在吗？</strong></h2>
+  <p>今天大历史研究正在兴起，寻找历史法则应该是大历史研究的重要组成部分。自从二十世纪下半叶以来，历史目的论和历史决定论受到了批判，历史学家不敢讲历史法则，因为它和人有主体性、可以通过历史学习之间存在矛盾。然而，“历史法则存在吗”，却是今天历史学家不能回避的问题。为什么？近十年来历史学家突然发现：人会忘记或漠视历史教训，以至于过去会以某种方式重演。新冠疫情的爆发，是一个最明显的例子。正如我在此前的一本书中所说：</p>
+  <p>新冠病毒并没有对人类的生存构成威胁，和历史上发生过的传染病相比，它是微不足道的。但奇怪的是，其对人类思想的冲击犹如滔天巨浪，并成为压垮骆驼的最后一根稻草。从此，人们不再珍惜二十世纪两次世界大战的教训，民族主义和反全球化思潮不可阻挡，许多人的心态似乎回到了十九世纪，仿佛二十世纪的灾难从未出现过。</p>
+  <p>今天人类社会的种种进步，建立在对二十世纪历史教训的汲取之上。正因为如此，历史学家否定了曾一度相信的历史决定论。然而，回到十九世纪的民族主义，使历史呈现出怪异的面貌：当你承认历史被某种法则支配时，会否定人的自由，看不到人可以在历史中学习；但一旦否定历史法则的存在，将发现过去明明是会导致灾难的东西，正在那里重演，历史法则似乎是不可抗拒的。</p>
+  <p>研究历史法则，还有另一个更深层的原因，就是历史学家必须面对当代科学的宇宙观。无论是宇宙在大爆炸中起源，还是星系的形成以及生命的产生和进化，都可以归为系统演化中稳态的形成和复杂化。系统演化论已经证明：稳态的变迁不存在目的，也不一定是进步。今天越来越多的学者，试图应用系统演化来解释人类历史的发展。哈佛大学天体物理学家蔡森认为：诱发整个宇宙变迁的关键是能量，能量倾向于选择更善于利用密集能量的系统，并同时引发其他系统的灭亡；其遵从的规律，大致是广为人知的达尔文主义自然选择，而生物大脑的能率密度值稳居最高位。尽管从绝对数量上看，人类及人类社会的能量值远低于宇宙星系，但前者的能率密度却高出恒星和星系100 多万倍；人类社会及其发明的机器，是迄今为止人们所知的消耗能量最大的系统。如果把系统演化投射到人类历史，历史进程完全是偶然的。正如已故物理学家史蒂文·温伯格所说，我们对宇宙了解越多，它越是显得毫无意义。其实，一个人真正拥有的只是他经历过的事情。如果历史没有意义，人生还有意义吗？</p>
+  <p>人是一种独特的存在，生活在思考“我是谁”、生命意义和死亡的焦虑之中，而历史意识就是用来克服这一焦虑的。在某种意义上，历史意识是现代人进入不死意义世界的重要通道，但这一通道，因对历史法则的定位困难，处于堵塞状态。否定历史法则，是价值虚无主义的根源。那么，历史法则真的存在吗？如果存在，它又是什么呢？最近，我围绕“历史法则是什么”做了一些理论上探索。但相关论述较为抽象，今天，我简单概括一下这方面的讨论。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-09/61396e4a4cd55d54dd5dc997+L.jpg" data-id="61396e4d2114416715c3e835" alt="《轴心文明与现代社会》，金观涛著，东方出版社2021年6月版。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《轴心文明与现代社会》，金观涛著，东方出版社2021年6月版。
+    </figcaption>
+  </figure>
+  <h2 id="section-1"><strong>因果律不是历史法则</strong></h2>
+  <p>我要首先强调：作为自然法则的因果律不可能是历史法则。1942年，亨佩尔在《历史中普遍定理的功能》中指出：在历史研究中，解释事件E为甚么发生时，通常是去追溯促使事件E发生的另一事件C（或条件组C1、C2、C3…），然后阐明C和E之间联系L的普遍有效性，这样才算解释了历史事件E。这里，C相当于原因，L即为因果律，而E则可被视为C和L带来的结果。亨佩尔认为，这种对E之所以发生的解释方法与自然科学中的因果分析完全一致。 20世纪50年代后，亨佩尔又把概率解释补充到他的历史解释模式中来。如果亨佩尔定律正确，事件之间的因果关系就是历史法则，它和自然规律或因果律没有本质不同。</p>
+  <p>一开始，历史学家拒绝接受亨佩尔定律，因为将因果律作为历史法则和人具有自由意志之间存在矛盾。在自然科学领域，承认自然规律并不妨碍人类的自由。社会科学领域亦是如此，法律和道德规范不都是普遍法则吗？它们作为人的自由意志的产物，当然不会对人的自由意志构成否定。为什么历史法则会妨碍人类的自由呢？关键在于，历史法则既然是从历史事实中得到的，属于实然领域，但如果它存在，立即会将应然领域（人的价值追求）包含在其中，人类的未来也就被过去决定了。这时，人的价值追求还有意义吗？我们还是自由的吗？但是，历史学家知晓研究史进程，就是寻找事件的因果关系。随着社会研究的科学化，使用因果律研究大历史似乎是不可避免的。但主体性和因果性的不相容，这一切构成大历史研究的巨大困境。</p>
+  <p>20世纪70年代发现混沌的原理，一度使得历史学家认为，调和个人自主性和亨佩尔定律之间的矛盾是可能的。混沌是指一个由因果律规定的决定系统中，只要初始条件出现非常微小的变化，都可能导致最终结果的巨大差别。由于混沌的存在，即使存在历史法则，历史进程亦不可能具有科学法则的确定性和完全可预见性。这样一来，历史解释一方面可以符合因果律，另一方面又避免了决定论，保证了人有选择的自由。这方面的典型例子，是20世纪90年代历史学出现一个类别叫虚拟历史。这是对传统历史研究的一次革新。</p>
+  <p>借用奥克肖特的说法，传统史学“从来不去关心什么事情必然发生或什么事情原本可能会发生，而只是关心那些有事实证据证明的确发生了的事情”。而想象事件可能会怎样发展是“一个纯粹的神话，一种肆意过度的想象”。虚拟历史则主张：任何社会事件的发生需要一系列普遍前提，如果设想这些普遍前提受到扰动，即某些因素和真实发生的事件不同，历史还会这样展开吗？虚拟历史的理论根据，正是混沌原理。在一个由因果律规定的历史过程中，主体选择的自由只是对因果链的扰动，而混沌的存在使得因果律不能变成历史决定论。它保证了未来不可预见性。这样一来，历史进程一方面是被因果律支配，但又不否定人的主体性。美国哈佛大学历史学教授尼尔·弗格森主编了一本书叫《虚拟的历史》。这本书对一系列重大历史事件进行了一系列“反事实”的推演，其中包括假定没有发生美国独立战争会怎样？假如希特勒在1940年入侵英国会怎样？假如纳粹德国打败了苏联会怎样？在以往大历史研究中，这样的研究是设有意义的。而虚拟历史认为，“反事实”分析有助于揭示大历史展开中的因果律。</p>
+  <p>很多人认为，虚拟历史已经解决了历史法则和个人自由之间的矛盾：一方面，历史是沿着因果链展开；另一方面，人有自由意志，人的自由选择使历史因果性结果是混沌现象。也就是说，历史法则就是因果律，但它和人有自由意志不矛盾。正因为如此，科学宇宙观和历史法则是一致的，这是今天很多人接受的答案。但我认为：这是一个让思想沉睡的答案，是人的精神被泯灭的答案，也是人的主体性完全被取消的答案。为什么这样说？如果历史法则就是因果律，“主体性”只对个人有意义，对历史发展来说则是可有可无的。这也意味着对“应然社会”的追求和人类历史进程无关，或“应然社会”一旦出现便永不改变，这显然不符合事实。人如果不去追求“应然社会”，人类又如何从历史研究中学习呢？历史研究的意义何在？因此，将混沌理论直接应用于历史研究，看似合理，实际是将大历史研究引入歧途。它是科学乌托邦泛滥的结果。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-09/61396e694cd55d54dd5dc998+L.jpg" data-id="61396e6c9b2d825085c270c4" alt="尼尔·弗格森。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+尼尔·弗格森。
+    </figcaption>
+  </figure>
+  <h2 id="section-2"><strong>历史法则存在于社会组织蓝图和社会行动的互动之间</strong></h2>
+  <p>为什么我认为用混沌来解释历史展开是错误的呢？如果大历史展开是混沌，那我们根本不能理解为什么会存在社会秩序。哈耶克对自发秩序（市场经济）研究有一个重要发现：社会秩序来自人对自己行为结果的可预见性。只有这样，才有社会组织不断复杂化。混沌讲的却是人对自己行为后果的不可预见性。如果历史展开的后果是混沌，那社会秩序根本不会存在。众所周知，在人类历史进程中，虽然会有短暂的社会脱序，但在绝大多数情况，社会秩序是存在的。历史的进程的主线，是社会秩序形态的改变和复杂化，而不是混沌。</p>
+  <p>大历史研究首先要回答什么是社会秩序，然后才能讨论社会秩序是怎样形成的，分析其变迁是否受着普遍法则支配。我认为：历史上社会秩序形形色色，但它们在宏观上都可以归为不同时期人对“应然社会”的想象。所谓“应然社会”，是指人认为社会组织应该是什么样的，它由终极关怀和道德规定。落实到每一个主体，“应然社会”就是组成某一个社会的成员认为自己应该做什么，即它是人对自己应该如何行动的规定，以及对他人会如何行动的想象。每个人在进入社会、参与社会行动前，都对其他人是否会和自己合作及自己行动的后果存在预期，正是这一切构成了社会秩序。如果历史展开处于混沌状态，也就是他人行动总是不能预期，人还会参与社会行动吗？请想象一下，当你在上班之前，你无法预知自己是否能平安回家，这种社会比丛林法则支配的世界更可怕。当所有人处于社会行动完全不可预期的状态时，社会早己灭亡了。</p>
+  <p>既然未来预期在整体上取决于每个人应该做什么，“应然社会”的想象也可以称为社会组织蓝图，它由该社会成员终极关怀和道德原则规定。我认为：大历史的展开不是亨佩尔所说的事件因果链，而是社会组织蓝图和人的社会行动之间的互动。换言之，如果存在历史法则，它一定是社会组织蓝图和社会行动的某种关系。社会组织蓝图规定人应该做什么，发生的社会行动是人实际做了什么。这样，社会组织蓝图和社会行动的关系，就是“实然”和“应然”的关系。从来，人们把“实然”和“应然”分成两个不相干的领域。“实然世界”是由事实组成的，研究事实之间的关系就是寻找因果律。而“应然”领域是一个价值和道德的世界，它由终极关怀和相应的道德律组成。这两个领域的分离，是人有自由意志的体现。</p>
+  <p>我认为，“实然”和“应然”的分离是人类精神世界发生超越突破的结果。它是轴心文明的现象。什么是轴心文明？德国哲学家卡尔·雅斯贝尔斯（Karl Jaspers）最早注意到，公元前数百年间出现了与消逝的古文明（如古埃及和两河流域的文明）截然不同的不死的文化。 此后，西方学术界用超越突破的概念来深化这一发现。我认为，“超越突破”的本质是人从社会中走出来，寻找不依赖于社会的生命终极意义。一种非社会的主体性从此起源。我把经过超越突破的文明则称作“轴心文明”。因为人是面对死亡的存在，为了克服死亡，人必须去寻找能够超越死亡的意义，即“终极关怀”。我证明：超越突破只存在四种不同的类型。它们分别是：（1）希伯来救赎宗教；（2）印度解脱宗教；（3）古希腊、罗马认知理性；（4）中国以道德为终极关怀。四种超越突破，亦称为四种超越视野，任何一种超越视野都包含了相应的终极关怀及其规定的道德和价值，它们回答了生死问题并给出了应然社会的组织蓝图。</p>
+  <p>简而言之，人类社会进入轴心文明后，社会组织蓝图产生了，人的心中出现了“应然世界”。自由意志必须服从终极关怀规定的道德律，也就是“应然”和“实然”互相分离。然而，虽然两者处于分离状态，即“实然”不能规定“应然”，但随着超越视野的不同，“实然”和“应然”的分离的方式是不同的。这一切表现为终极关怀如何规定道德之上，其后果是不同轴心文明社会组织蓝图大相庭径，它们和社会行动的互动方式亦不同。也就是说，不同轴心文明的历史存在着不同的展开方式。这就是历史法则！</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-09/61396e8d9c232e01c17d33f2+L.jpg" data-id="61396e91904b8c02a16a441b" alt="金观涛与夫人刘青峰。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+金观涛与夫人刘青峰。
+    </figcaption>
+  </figure>
+  <h2 id="section-3"><strong>中国文明演化的历史法则</strong></h2>
+  <p>我认为，历史法则存在于“实然”和“应然”之间，就是对上述观点的概括。这个想法之所以前人没有人讲过，是因为“实然”和“应然”的分离一直来只是道德哲学研究对象。实际上，作为“应然”之道德是由超越视野中终极关怀规定，“实然”和“应然”之关系在不同轴心文明中是不同的。历史学家从来没有将其放到大历史、特别是比较文明史研究中去。只有大历史研究才能发现：对不同的轴心文明，“实然世界”和“应然世界”的关系是不一样的。也就是说，当历史学家去研究超越突破如何发生，探讨支配轴心文明的演化和融合，以及现代社会在轴心文明融合中起源机制时，才可能发现历史法则的存在。</p>
+  <p>以中国文明为例，中国文明以道德为终极关怀，其社会组织蓝图是“家”“国”同构的道德共同体。“家”“国”同构体正当性的根据是儒家伦理，因为“实然”和“应然”的分离，一般说来“家”“国”同构体在实施过程中带来的社会问题不会质疑儒家伦理，社会组织蓝图是不变的。这样，一旦“家”“国”同构体在社会危机中解体，社会组织蓝图会根据儒家伦理重建“家”“国”同构体，这就是中国传统社会的“一治一乱”，即王朝周期性更替。在中国文明以道德为终极关怀的结构中，当发生道德原则做不到即不可欲时，会出现道德价值逆反对新道德的塑造。也就是说，当出现某种特殊的历史条件，社会组织蓝图不可欲，这时会发生“家”“国”同构体建立的障碍，这时大一统帝国解体，我们看到中国文明对外来文化的亲和与文化融合。事实上，一治一乱的王朝更替和魏晋南北朝对印度佛教的吸收，都是中国历史展开的宏观面貌，其由中国文明社会组织蓝图和社会行动独特关系规定，它是中国文明演化的历史法则。</p>
+  <p>我用社会组织蓝图和社会行动不同的互动类型，概括出四种传统社会大历史展开法则。除了中国传统社会遵循的超稳定系统模式外，它们分别是：印度文明静态“停滞”模式、伊斯兰和东正教文明“飘变”模式，以及古希腊罗马文明在演化中发生超越视野转向进入具有两种超越视野天主教文明模式。由于天主教文明具有两种互相结合的超越视野（古希腊和希伯来超越视野），其在演化过程中会发生两种超越视野的分离，使得工具理性和个人权利这些现代价值得以形成，契约社会成为新的社会组织蓝图。也就是说，现代社会在天主教文明中起源，也是轴心文明演化的历史法则。</p>
+  <p>我还指出，由于超越视野不相交，当各轴心文明互相隔离时，每个轴心文明的历史结构都由其独特的社会组织蓝图与社会行动互动模式决定。随着历史研究的时空尺度不同，同一轴心文明支配其历史展开的法则会在不同时空尺度出现，表现出自相似性。这就如同几何学中的“分形”（Fractal），即任何一个图形部分的结构与整体相同（即所谓“自相似”），原因则是整体与部分的结构遵循了相同的生成原则。此外，当各个轴心文明沿着自己历史轨道展开时，必定会发碰撞和文明融合，现代社会在文明融合中起源并通过全球化把所有轴心文明都包容进来是不可抗拒的。也能是说，传统社会组织蓝图向现代社会组织蓝图的转化也是历史法则。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-09/61396eab4cd55d54dd5dc999+L.jpg" data-id="61396eae9b2d825085c270c5" alt="德国哲学家雅斯贝斯。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+德国哲学家雅斯贝斯。
+    </figcaption>
+  </figure>
+  <h2 id="section-4"><strong>否定历史法则，反而会使人类丧失自由</strong></h2>
+  <p>既然历史法则处于“实然”和“应然”之间，它不仅不会和人的主体性矛盾，相反其本质上是拥有自由意志的自我在寻找应然世界和建立更为理想社会时所碰到的约束。也就是说，寻找历史法则是人通过历史教训自我学习能力的表现。我们可以得到一个重要结论。这就是否定历史法则反而使人类失去自由，变成“实然”世界的奴隶。如果没有历史法则研究，人类以为自己在选择未来时是自由的，其实这正在为堕入历史上出现过的灾难准备前提。错误的历史教育以及不让人研究历史真相后果更是可怕，因为隐藏在历史结构深处、曾被我们克服的历史法则正在复活，它虽不能持久，但会再一次出现告诉新一代人自己的存在。</p>
+  <p>基于“实然”和“应然”之间关系的研究，我发现在轴心文明起源至今的历史进程中，存在四个层次的历史法则。这四个层次如下：</p>
+  <p>1. 古文明的灭绝。</p>
+  <p>2. 超越突破发生，轴心文明形成。</p>
+  <p>3. 轴心文明的演化、融合。</p>
+  <p>4. 现代社会在文明融合中起源和自我改进。</p>
+  <p>关于轴心文明演化的理论，这里无法展开讨论。我只强调历史法则有两个特征：层次性和累积性。一方面，“实然世界”和“应然世界”分离的方式，会随着时间的流逝发生变化，出现不同层次的历史法则；另一方面，这种分离方式的变化和人在历史中学习有关，每一个层次的历史法则都以前一个层次存在为前提。在前一个层次内容被肯定前提下，才会发展出更复杂的内容。换言之，历史法则的层次对应着应然社会进步之树。</p>
+  <p>既然历史法则作为应然世界（如社会组织蓝图）在实现过程中主体对碰到问题（实然世界）的响应，它当然亦包括了人类通过记取历史教训在历史中学习。这样，我们可以得到一个结论：如果在某一时期人类拒绝或遗忘了新一层次的历史法则，该社会演化只能被前一层次的历史法则所支配。上面这些观点可能有些抽象，我可以借助一个社会俗语来解释它，这就是“忘记历史教训就会重蹈覆辙”。</p>
+  <p>———</p>
+  <p>微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-09-11</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-11/%E5%8C%97%E5%AE%8B%E6%96%87%E6%AD%A6-%E6%96%87%E4%BA%BA%E5%9C%B0%E4%BD%8D%E7%9A%84%E6%8F%90%E9%AB%98%E4%B8%8E%E7%A4%BE%E4%BC%9A%E5%AF%B9%E6%AD%A6%E4%BA%BA%E7%9A%84%E8%BD%BB%E8%A7%86/">
+          北宋文武：文人地位的提高与社会对武人的轻视
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-10</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-10/%E9%B9%A4%E8%A7%81%E4%BF%8A%E8%BE%85-%E5%9C%A8%E6%88%98%E4%BA%89%E4%B8%8E%E9%9D%A9%E5%91%BD%E7%9A%84-%E7%9F%AD20%E4%B8%96%E7%BA%AA-%E4%BB%96%E7%9A%84%E6%80%9D%E6%83%B3%E4%B8%8E%E8%A1%8C%E5%8A%A8%E5%A1%91%E9%80%A0%E4%BA%86%E6%88%98%E5%90%8E%E6%97%A5%E6%9C%AC/">
+          鹤见俊辅：在战争与革命的“短20世纪”，他的思想与行动塑造了战后日本
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-07</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-07/%E5%80%AA%E5%9F%B9%E6%B0%91-%E5%84%92%E5%AE%B6%E6%98%AF%E7%BB%B4%E6%8A%A4%E5%90%9B%E4%B8%BB%E4%B8%93%E5%88%B6%E7%9A%84%E5%B7%A5%E5%85%B7%E5%90%97-%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+          倪培民：儒家是维护君主专制的工具吗？丨燕京访谈
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-06</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-06/%E5%80%AA%E5%9F%B9%E6%B0%91-%E7%A4%BE%E4%BC%9A%E4%B8%8A%E6%B5%81%E8%A1%8C%E7%9A%84%E6%89%80%E8%B0%93%E5%84%92%E5%AE%B6%E8%A7%82%E5%BF%B5-%E5%BE%80%E5%BE%80%E4%B8%8D%E7%AC%A6%E5%90%88%E7%BB%8F%E5%85%B8%E5%84%92%E5%AD%A6%E7%B2%BE%E7%A5%9E%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+          倪培民：社会上流行的所谓儒家观念，往往不符合经典儒学精神丨燕京访谈
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-08/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%A1%94%E5%88%A9%E7%8F%AD%E8%B5%A2%E4%BA%86-%E4%BB%A5%E9%98%BF%E5%AF%8C%E6%B1%97%E4%B8%BA%E9%95%9C-%E5%85%A8%E7%90%83%E8%83%8C%E6%99%AF%E4%B8%8B%E7%9A%84%E5%A1%94%E5%88%A9%E7%8F%AD%E8%83%9C%E5%88%A9-iYouPort/">
+            前一篇：为什么是塔利班赢了？：以阿富汗为镜，全球背景下的塔利班胜利 - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-09/A-Farewell-to-My-Students/">
+            後一篇：A Farewell to My Students
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-09-08/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%A1%94%E5%88%A9%E7%8F%AD%E8%B5%A2%E4%BA%86-%E4%BB%A5%E9%98%BF%E5%AF%8C%E6%B1%97%E4%B8%BA%E9%95%9C-%E5%85%A8%E7%90%83%E8%83%8C%E6%99%AF%E4%B8%8B%E7%9A%84%E5%A1%94%E5%88%A9%E7%8F%AD%E8%83%9C%E5%88%A9-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-09-09/A-Farewell-to-My-Students/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-09-10/%E9%B9%A4%E8%A7%81%E4%BF%8A%E8%BE%85-%E5%9C%A8%E6%88%98%E4%BA%89%E4%B8%8E%E9%9D%A9%E5%91%BD%E7%9A%84-%E7%9F%AD20%E4%B8%96%E7%BA%AA-%E4%BB%96%E7%9A%84%E6%80%9D%E6%83%B3%E4%B8%8E%E8%A1%8C%E5%8A%A8%E5%A1%91%E9%80%A0%E4%BA%86%E6%88%98%E5%90%8E%E6%97%A5%E6%9C%AC/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-09-07/%E5%80%AA%E5%9F%B9%E6%B0%91-%E5%84%92%E5%AE%B6%E6%98%AF%E7%BB%B4%E6%8A%A4%E5%90%9B%E4%B8%BB%E4%B8%93%E5%88%B6%E7%9A%84%E5%B7%A5%E5%85%B7%E5%90%97-%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-09-08/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%A1%94%E5%88%A9%E7%8F%AD%E8%B5%A2%E4%BA%86-%E4%BB%A5%E9%98%BF%E5%AF%8C%E6%B1%97%E4%B8%BA%E9%95%9C-%E5%85%A8%E7%90%83%E8%83%8C%E6%99%AF%E4%B8%8B%E7%9A%84%E5%A1%94%E5%88%A9%E7%8F%AD%E8%83%9C%E5%88%A9-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-09-09/A-Farewell-to-My-Students/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-09-10/%E9%B9%A4%E8%A7%81%E4%BF%8A%E8%BE%85-%E5%9C%A8%E6%88%98%E4%BA%89%E4%B8%8E%E9%9D%A9%E5%91%BD%E7%9A%84-%E7%9F%AD20%E4%B8%96%E7%BA%AA-%E4%BB%96%E7%9A%84%E6%80%9D%E6%83%B3%E4%B8%8E%E8%A1%8C%E5%8A%A8%E5%A1%91%E9%80%A0%E4%BA%86%E6%88%98%E5%90%8E%E6%97%A5%E6%9C%AC/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-09-07/%E5%80%AA%E5%9F%B9%E6%B0%91-%E5%84%92%E5%AE%B6%E6%98%AF%E7%BB%B4%E6%8A%A4%E5%90%9B%E4%B8%BB%E4%B8%93%E5%88%B6%E7%9A%84%E5%B7%A5%E5%85%B7%E5%90%97-%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

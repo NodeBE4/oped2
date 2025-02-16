@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事
+——
+" />
+    <meta property="og:description" content="
+島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事" />
+    <meta property="twitter:title" content="島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fmatters.news%2F%40islander%2F%25E5%25B3%25B6%25E5%25B6%25BC%25E7%25AD%2586%25E8%25A8%2598-%25E4%25B8%2580%25E5%25A0%25B4%25E5%25A7%2590%25E5%25A6%25B9%25E8%2581%259A%25E6%259C%2583-%25E8%2598%25AD%25E5%25B6%25BC%25E5%25A5%25B3%25E4%25BA%25BA%25E6%2595%2599%25E6%2588%2591%25E7%259A%2584%25E4%25BA%258B-zdpuB1ybooqoJUiqPBBEyrDEUFKwT22maTBuqMPpx2xZmbc3R" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://matters.news/@islander/%E5%B3%B6%E5%B6%BC%E7%AD%86%E8%A8%98-%E4%B8%80%E5%A0%B4%E5%A7%90%E5%A6%B9%E8%81%9A%E6%9C%83-%E8%98%AD%E5%B6%BC%E5%A5%B3%E4%BA%BA%E6%95%99%E6%88%91%E7%9A%84%E4%BA%8B-zdpuB1ybooqoJUiqPBBEyrDEUFKwT22maTBuqMPpx2xZmbc3R" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://matters.news/@islander/%E5%B3%B6%E5%B6%BC%E7%AD%86%E8%A8%98-%E4%B8%80%E5%A0%B4%E5%A7%90%E5%A6%B9%E8%81%9A%E6%9C%83-%E8%98%AD%E5%B6%BC%E5%A5%B3%E4%BA%BA%E6%95%99%E6%88%91%E7%9A%84%E4%BA%8B-zdpuB1ybooqoJUiqPBBEyrDEUFKwT22maTBuqMPpx2xZmbc3R&text=島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://matters.news/@islander/%E5%B3%B6%E5%B6%BC%E7%AD%86%E8%A8%98-%E4%B8%80%E5%A0%B4%E5%A7%90%E5%A6%B9%E8%81%9A%E6%9C%83-%E8%98%AD%E5%B6%BC%E5%A5%B3%E4%BA%BA%E6%95%99%E6%88%91%E7%9A%84%E4%BA%8B-zdpuB1ybooqoJUiqPBBEyrDEUFKwT22maTBuqMPpx2xZmbc3R&title=島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://matters.news/@islander/%E5%B3%B6%E5%B6%BC%E7%AD%86%E8%A8%98-%E4%B8%80%E5%A0%B4%E5%A7%90%E5%A6%B9%E8%81%9A%E6%9C%83-%E8%98%AD%E5%B6%BC%E5%A5%B3%E4%BA%BA%E6%95%99%E6%88%91%E7%9A%84%E4%BA%8B-zdpuB1ybooqoJUiqPBBEyrDEUFKwT22maTBuqMPpx2xZmbc3R&title=島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事&body=
+島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://matters.news/@islander/%E5%B3%B6%E5%B6%BC%E7%AD%86%E8%A8%98-%E4%B8%80%E5%A0%B4%E5%A7%90%E5%A6%B9%E8%81%9A%E6%9C%83-%E8%98%AD%E5%B6%BC%E5%A5%B3%E4%BA%BA%E6%95%99%E6%88%91%E7%9A%84%E4%BA%8B-zdpuB1ybooqoJUiqPBBEyrDEUFKwT22maTBuqMPpx2xZmbc3R" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://matters.news/@islander/%E5%B3%B6%E5%B6%BC%E7%AD%86%E8%A8%98-%E4%B8%80%E5%A0%B4%E5%A7%90%E5%A6%B9%E8%81%9A%E6%9C%83-%E8%98%AD%E5%B6%BC%E5%A5%B3%E4%BA%BA%E6%95%99%E6%88%91%E7%9A%84%E4%BA%8B-zdpuB1ybooqoJUiqPBBEyrDEUFKwT22maTBuqMPpx2xZmbc3R&title=島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事&caption=
+島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事&url=https://matters.news/@islander/%E5%B3%B6%E5%B6%BC%E7%AD%86%E8%A8%98-%E4%B8%80%E5%A0%B4%E5%A7%90%E5%A6%B9%E8%81%9A%E6%9C%83-%E8%98%AD%E5%B6%BC%E5%A5%B3%E4%BA%BA%E6%95%99%E6%88%91%E7%9A%84%E4%BA%8B-zdpuB1ybooqoJUiqPBBEyrDEUFKwT22maTBuqMPpx2xZmbc3R" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2019-06-04
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 島民</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#Matters">
+          Matters
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://matters.news/@islander/%E5%B3%B6%E5%B6%BC%E7%AD%86%E8%A8%98-%E4%B8%80%E5%A0%B4%E5%A7%90%E5%A6%B9%E8%81%9A%E6%9C%83-%E8%98%AD%E5%B6%BC%E5%A5%B3%E4%BA%BA%E6%95%99%E6%88%91%E7%9A%84%E4%BA%8B-zdpuB1ybooqoJUiqPBBEyrDEUFKwT22maTBuqMPpx2xZmbc3R" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="Matters的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#Matters 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1559706873000-->
+<p><a href="https://matters.news/@islander/%E5%B3%B6%E5%B6%BC%E7%AD%86%E8%A8%98-%E4%B8%80%E5%A0%B4%E5%A7%90%E5%A6%B9%E8%81%9A%E6%9C%83-%E8%98%AD%E5%B6%BC%E5%A5%B3%E4%BA%BA%E6%95%99%E6%88%91%E7%9A%84%E4%BA%8B-zdpuB1ybooqoJUiqPBBEyrDEUFKwT22maTBuqMPpx2xZmbc3R">島嶼筆記：一場姐妹聚會，蘭嶼女人教我的事</a>
+——</p>
+
+<div>
+  <p>（上週去了matters台北見面/吃喝大會，受到點撥，接下來會開始陸續把一些之前的文章放上來，還有 podcast 和詩、散文、田野筆記、合作民族誌，等等。這是第一篇，上學期末的田野筆記，關於旅北的都市原住民達悟族女性。歡迎追蹤我的medium看更多文章喔！<a href="https://medium.com/@gillianjin" target="_blank">https://medium.com/@gillianjin</a>）</p>
+  <p>2018年12月16日，星期天的晚上，我正和一群朋友在台北的家中吃著魚湯火鍋。羊肉、牛肉、蝦仁、魷魚、凍豆腐，配上梅酒和汽水，搖擺的背景音樂卻突然被電話鈴聲打斷。</p>
+  <p>我接起電話，一個女聲傳來：「你好，我們是船購網，請問你是不是訂了我們的船票？」一種奇妙的興奮感從我的脊背迅速竄上頭頂，我簡直快要笑出聲來：「噢！你就是最近蘭嶼那個詐騙集團對不對？」我還想問下去，對方立刻掛斷了電話。</p>
+  <p>我雀躍極了，轉過身對朋友們大喊：「天哪！我接到了蘭嶼人才會接到的詐騙電話！」朋友們為我歡呼大笑。</p>
+  <p>前一晚，同樣是一場聚會，我剛跟六個生活在台北與新北市的蘭嶼女人吃了同樣豐盛的一餐，地點是新北市的樹林區，距離台北市中心三十分鐘火車的小縣城。</p>
+  <p>過去兩年來，從最初作為觀光客到訪蘭嶼，到作為當地人的朋友，再到作為記者，我一直在嘗試接近蘭嶼。半年前，我的身份轉化成一個人類學研究者，以蘭嶼女性作為研究對象。這個距離台東90公里，離菲律賓巴丹群島99公里的小島，是在台灣東海岸以外，屬於達悟族人的小島。達悟人是南島民族、海洋民族，依海而居，過去，男人們潛水射魚，女人們上山耕種。直到1895年之後，日本人、西洋傳教士和來自台灣本島以及國軍部隊的漢人，才一步步進入並改變這座小島。</p>
+  <p>台北到蘭嶼的距離超過400公里，要先搭火車到達台東，再從台東搭三小時的船或16座的小飛機，才能到達。秋冬季節，黑潮大浪與東北季風常導致停航，裡面的人出不來，外面的人進不去，正所謂來蘭嶼，送關島。我的主要生活場合都在台北，無法承擔這樣的交通風險。礙於這樣的不便，我常苦惱自己很難融入研究的田野。</p>
+  <p>不過，那通詐騙電話似乎改變了些什麼。</p>
+  <p>我一直在社交媒體上追蹤蘭嶼的信息，早在半個月前，就聽說了這個詐騙集團的事。這個詐騙集團似乎盜取了台東往返蘭嶼的主要船公司「綠島之星」的客戶名單，打電話給曾經訂票的村民謊稱訂票資訊遺失，要村民再次匯款。蘭嶼不大，人口不過三千，各家常互通有無，幾乎人人都沾親帶故，消息很快傳遍全島。接到詐騙電話後，我迫不及待地在社交媒體上分享，一位嫁到蘭嶼近十年的台北朋友酸溜溜地留言道，連她都沒有接到。我又把這件事和防詐騙信息傳給了我訪問過的所有蘭嶼女人，收到大家回覆的時候，突然有一種邁進之感，我是不是終於要開始進入這座小島了呢？</p>
+  <p>又或許，回想前一晚的那場姐妹聚會，也許我早已經比自己想的，要更加接近蘭嶼。</p>
+  <h3 id="sisi-">最後一堂族語課，芋頭、sisi 與麻油雞</h3>
+  <p>9月開始，我每週六都會坐一個多小時的地鐵，去台北市原住民族部落大學見顏姐。蘭嶼有六個部落，分別為靠台灣本島一側的椰油、漁人、紅頭，和後山的東清、野銀、朗島。四十多年前，顏姐離開她的野銀部落，來到台北工作、讀書，漸漸成為部落大學的族語老師。我是她今年的第三個學生。</p>
+  <p>學達悟語的人很少，不少學生本身是出生在都市的蘭二代，通過族語考試，考高中、大學就能加分，也因此考完就散去了。因為人少，我們的課程總是在聊天，我會藉課程內容問顏姐許多蘭嶼的事，顏姐也總問我，一個人在台北，會不會孤單？怎麼煮飯？她就這樣成了我在台北的第一個受訪者。</p>
+  <p>12月15日是我們這學期的最後一堂族語課，課上，顏姐說課後要帶我去一場聚會。於是我們先搭地鐵，再搭火車，一路自南港穿過台北市區向西南而行，經過萬華、板橋、浮洲，終於抵達新北市的樹林。在一間小小的鐵皮貨倉裡，一個溫暖的小房間，顏姐的親戚莉莉姐正等待著我們。</p>
+  <p>這是一個堆滿貨物的小房間，牆邊一張狹窄的雙人床，一半用來堆放雜物，一半用粉紅色的布簾子罩住，用來睡覺。報紙糊住了房間的窗，確保一些隱私。這就是莉莉姐和丈夫共同經營酒水飲料批發的生活空間。</p>
+  <p>我們圍坐在茶几旁，桌上食物之豐盛，簡直像是廚藝大賽。來自漁人部落的丹姐帶來了蘭嶼的飛魚、芋頭、螺貝類 sisi 和類似山藥的 batan，還有客家風味的滷肉、滷豆乾、滷雞腳。椰油部落的欣姐帶來了宜蘭草蝦和辣炒東風螺。野銀部落的莉莉姐和于姐則一起煮了一大鍋麻油雞，還準備了各種蔬菜、水果、花生米和酒。我和顏姐帶去了核桃桂圓蛋糕，作為飯後甜點。</p>
+  <p>顏姐已經二十多年沒有參加這樣的聚會了。雖然大家都叫她姐，但其實她的年紀比我母親還要大，按輩分算，她也是在座所有蘭嶼姐妹的長輩了。她在1960年代就離開蘭嶼，初中一畢業就登上貨船，在甲板上空著肚子捱七八個小時，抵達台東。那是台灣原住民勞工大量進入工廠的年代，主要在台北、新北、桃園和台中，大多是學姐帶學妹，同學帶同學，老鄉帶老鄉，大家一起在工廠吃住生活。但她偏偏是最優秀的那個女學生，有一個保送名額去台東師專，卻因為老師覺得培養女生風險大，而讓給了一個男同學。不甘心的她在工廠做了沒多久，就去讀夜校，白天則找幼兒園工作，一心想要當老師。十年夜校生活，她終於拿到曾經唾手可得的教師文憑，可是和族人姐妹們共同打拼的時光，她卻錯過了。</p>
+  <p>人生邁入六字頭，當晚這樣的姐妹會裡，凈是她的小輩，生活年代不同，交集更少。還是我提起想認識她的蘭嶼朋友們，她才到處問一問，剛巧，撞上了這次聚會。年輕一輩的蘭嶼人，出來工作、讀書、結婚的比顏姐的年代更多，也更容易聚在一起。比如莉莉姐和其他幾位，年紀都在四十歲上下，因為蘭嶼只有一所高中，所以她們通通是高中同學，每一兩個月都會這樣聚一次。</p>
+  <p>不過，蘭嶼的食物帶到北部不容易，即使是用快遞，也有食物保鮮的問題。因為顏姐是稀客，我又是新客人，當晚才有飛魚、sisi 、batan 和芋頭這種「蘭嶼特供」。飛魚，達悟語叫 libangbang，是達悟人最重要的食物之一。每年春夏季節，黑潮會帶來大量的飛魚，達悟男人製造拼板舟，就是為了在飛魚季出海。一艘可坐10人的拼板舟要用5種樹材、27塊木板拼成，男人們在夜間出海，飛魚會因為躲避鬼頭刀魚的追趕而飛上水面，落入拼板舟中。捕獲的飛魚可以直接水煮，佐以少量海水作為鹽巴調味，也可以從魚肚中央剖開，抹上鹽巴曬成魚乾。我們當晚吃到的，就是丹姐從蘭嶼帶來的飛魚魚乾，魚身畫了漂亮的三刀。</p>
+  <p>而芋頭、sisi 和 batan，則是蘭嶼女人生產的食物。不管在旅遊宣傳還是學術研究、文學創作中，蘭嶼總是以最吸引人眼球的飛魚和拼板舟文化示於人前，男性的角色很受注目，女性則隱匿在山林和海灘。但其實，蘭嶼人不種植水稻或小麥，女性種植的芋頭就是他們最重要的澱粉來源。蘭嶼的芋頭是水芋，達悟語叫 soli 或 sosoli，還可細分為許多種，不同於台灣本島種植的旱芋。傳統達悟女性在水芋田的勞作是全年無休的，每天都要上山，芋頭的產量、外觀，田裡是否有雜草、蟲子，是否有淤泥堵塞灌溉水源等等，都事關一個女性的榮耀。顏姐小時候就 跟著母親上山，種過芋頭。她記得母親就算生完孩子也不會坐月子，第二天就上山勞動，但這不僅是因為對食物的需求，也因為蘭嶼人覺得勤勞是種美德。不過，貨幣經濟和學校教育進入蘭嶼，不管是711和超市販賣的大米、麵條，還是學校供餐的米飯、饅頭，都從小塑造起新一代蘭嶼人的飲食習慣，也讓年輕一輩越來越不看重芋頭的價值，但堅持耕種的老人家也還大有人在。</p>
+  <p>用手掰一口飛魚乾，一口芋頭，是丹姐教我的吃法。水煮的芋頭平淡無味，飛魚乾則鹹味頗重，正好中和。丹姐見我一直用手剝 sisi，叫我先吃主食，因為她們通常把 sisi 當做零食。sisi 是女人們在海灘的潮間帶採集的一種貝殼類，外殼粗糙，上面還附著一些乾掉的海藻，肉質棕黃色。除了 sisi 之外，傳統的蘭嶼女人還會在潮間帶採集海菜、螃蟹、龍蝦和其他貝類、螺貝，螃蟹爪子串一串，就是孩子最愛的玩具。只是如今，會的人已經不多了。</p>
+  <p>丹姐把 sisi 和蔥、辣椒一起炒，吃起來鹹、腥、辣，顯然不是蘭嶼原本的口味。再看她煮的滷味，也是濃油赤醬，倒像是客家風味。原來她的夫家是客家人，她吃著莉莉姐煮的麻油雞，想起自己坐月子的時候，婆婆照顧她，煮的麻油雞味特別重，她每天都要吃一碗，雖然不習慣，也吃下去了。久而久之，她學了客家人的口味，做菜也像客家人。顏姐的妹妹曾告訴我，她們少時離家便很少回去，母親本身不會，也沒有人教她們漢人的煮菜方法，漢人用的油、鹽、醬、醋，什麼清蒸、紅燒、滷味，甚至包餃子、包粽子，都要自己從頭開始學起。到今日，她們能夠煮出這一大桌子美食，背後是每一個女人在遠離蘭嶼的婚姻和家庭中，漫長的適應與學習過程。</p>
+  <h3 id="batan">農場回憶：牛與 Batan 的故事</h3>
+  <p>桌上還有一樣我沒見過的蘭嶼食物，我起初以為是山藥，沒有在意，但顏姐告訴我說，那是水煮 batan。batan 和芋頭一樣，是山上的根莖類作物，口感卻是黏口、綿軟，既不是脆脆的，也不是沙沙的，和我至今吃過的所有山藥都不相同，感覺像是山藥界的年糕似的，天然有點微甜，特別好吃。她們都不知道 batan 的漢名是什麼，不過莉莉姐說，batan 這個名字，曾在她的部落差點惹出大事。</p>
+  <p>莉莉姐記得，在她小時候，她們野銀部落曾有一個族人採了 batan 下山。正巧，這個族人遇上了從海邊回來的「阿兵哥」，阿兵哥就問：「這是什麼？」族人說：「batan。」阿兵哥聞言暴怒：「你敢說我是王八蛋！你再說一次，這是什麼？」族人堅持說：「這就是 batan。」阿兵哥就對族人大打出手，族人還手，兩人打成一團，驚動兩邊的人都來幫忙，就這樣引起了一場鬥毆。</p>
+  <p>這竟是在座每個蘭嶼人都聽過的事，她們只當成是席間的笑話，我卻無法釋懷。蘭嶼的阿兵哥，是誰呢？莉莉姐繼續說下去，她三杯酒下肚，醉得開心，開始講起童年的故事。她先是說顏姐家在她家上面的山坡，自己有一次背著很重的東西跌倒，被顏姐的爸爸看到，老人家立刻擊打胸膛怒目而視，做出驅趕惡靈的姿勢。蘭嶼人篤信惡靈 anito 是一切厄運的來源和象徵，莉莉姐說，她知道老人家是在「幫我趕走那個鬼」。說著說著，她又說起自己小學的時候，因為太頑皮，總受部落的其他孩子討厭。她頑皮的方式別的部落還真學不來，因為她的頑皮，與牛有關。</p>
+  <p>蘭嶼本沒有牛，也沒有「阿兵哥」。直到1958年，國軍為了淘汰軍中過剩的人員，推動「靖民專案」，在東台灣的荒地建立多個農場，派這些人力去開墾，蘭嶼農場就在這一年成立了。因為地處偏遠外島，被派到蘭嶼農場的總是最差的阿兵哥，不少人曾經違反法紀。國軍派了一個連的兵力來管理蘭嶼的農場，最多時有七八百人在此服役，多是外省老兵。除了農場外，還有關押重刑犯的勵德班，人數曾經多達一千。多個農場中，就數野銀部落的永興農場最大，也就是莉莉姐所在的部落，自然也有最多的牛。農場帶來的牛，一度繁殖到800多隻，蘭嶼人沒見過，只道那是「一批好大好大的動物」，牛群在部落裡周圍亂走，在族人的芋頭田裡吃草、喝水，踩壞作物，吃族人的地瓜，族人憤怒，曾為此和農場的軍人發生嚴重的鬥毆。</p>
+  <p>莉莉姐當年還小，只覺得牛又大又蠢真好玩，總在上學的路上逗牛玩。那時野銀部落還沒有小學，大家都要走一個多小時的路到東清部落去上學，總是結伴出發。路上總有大黃牛晃來晃去，她就跑到隊伍的最前，然後撿起小石子丟到牛的身上，拔腿就跑，害得一整隊上學的小朋友都要被牛追。「怪不得你跑步那麼快！」丹姐哈哈大笑，「原來都是被牛追出來的！」莉莉姐一邊覺得好笑，又有點得意：「對啊，我後來可是校隊的呢！」</p>
+  <p>同樣是關於農場，顏姐的童年記憶就沒有那麼快樂了。她記得小時候上學總是要趕緊出門，生怕落在人後，不能跟大家一起走。「因為路上都有那些犯人啊，有時候在田裡，我們女孩子見到真的是怕死了。」她說。農場和勵德班因為工作量大，不時有人逃脫，更曾有全島動員搜捕逃犯的事發生。也有農場人員言語調戲乃至於性侵女性族人的事發生，更在野銀和東清部落引發過鬥毆。</p>
+  <p>這些事，年紀稍大的丹姐還有些印象，曾聽長輩說過，但其餘的幾人都已經不知道了。蘭嶼農場直到1991年撤出蘭嶼，這些阿兵哥中，有四人留在蘭嶼，其餘都回到台灣本島，當中更有不少人娶了比自己年輕幾十歲的蘭嶼姑娘。這段歷史少有人提起，不論是蘭嶼人，還是當年的阿兵哥，都不太願意談論農場的事，比起日治時期留下的調查報告，以及後來的學者們對蘭嶼海洋文化、語言、經濟、社會組織、醫療、宗教等等進行的巨細靡遺的研究，這段不愉快的歷史，就像是消失的三十年一般。</p>
+  <p>在餐桌上，這個話題也很快被帶過了，只剩微醺的莉莉姐一遍一遍重複自己追牛的好笑故事。吃得差不多，我開始沉浸於荔枝味的果酒，那邊廂，終於來到欣姐的主場，蘭嶼式的家庭卡拉OK，開唱了。</p>
+  <h3 id="section">涼山情歌與飛魚之歌</h3>
+  <p>我是90年代生人，記憶中只在很小的時候，很可能是小學之前，見過這種家庭式的卡拉OK。然而這在蘭嶼很常見，蘭嶼沒有 KTV，但有蘭嶼卡拉OK，設備就是這種背投式的方盒子小電視點唱機，附帶一個可以升降音調的遙控器，和一本厚厚的歌曲編號本。任何歌曲的背景音樂聽起來都是同一種樂器演奏的，像是手風琴，歌詞當然會滾動出現，但背景畫面永遠是一些外國的風景，山、樹林、草原，或是歐式的教堂、穿風衣的金髮女子等。莉莉姐家的點唱機還有兩個高聳的黑色大音箱，聲音十分洪亮，話筒也有三隻，可以說是姐妹聚會的最佳配備了。</p>
+  <p>眾人中打扮最俏麗的正是最會唱歌的欣姐。她熟練地掏出莉莉姐放在點唱機上的編號本，一口氣點了五首歌。可惜的是，大多她唱的歌我都沒有聽過，但聽得出，都是早年間在台灣流行的普通話歌曲。莉莉姐的歌本我熟悉一些，她手抄了兩頁常唱的歌，註明是「莉歌」，當中有《追風的女兒》、《容易受傷的人》、《南屏晚鐘》、《一萬個捨不得》、《夢醒時分》、《我是一片雲》，還有一首註明「輕快」，是鳳飛飛的《夏艷》。顏姐說，她已經二十多年沒有這樣唱過歌了，好不容易找到一首會唱的，是葉倩文的《選擇》。她的唱法和欣姐不同，不是很現代、流行音樂的唱腔，更像是一種吟唱。她一開口，莉莉姐就微紅了眼眶，「她唱歌就像我媽媽一樣」。</p>
+  <p>也正是顏姐的吟唱和清唱，那幾首點唱機中沒有的歌，才是我那一晚最愛的。她唱：「遙遠的故鄉高高的月亮，請你抬起頭來看看那個星月光。」這是《涼山情歌》，台灣著名的林班歌，原住民勞工歌曲。五六十年代，大量原住民勞工離開家鄉，到深山中從事林業相關工作，例如造林、開路等，工人們在山中住在一次，幾個月才能回一次家，思鄉之際，便唱歌抒發心情。這一批林班歌曲，是最早一批以漢語填詞的原住民創作歌曲，因為各族語言不通，所以才用漢語填詞，方便合唱，但曲調又拮取了各族傳統歌謠的旋律。除了《涼山情歌》之外，這些林班歌還包括《牽牛哥》、《小米酒》、《情人的眼淚》、《可憐落魄人》等。顏姐會唱，是因為她也曾短暫地做過林班，吃過那個苦，所以也記得那個歌。</p>
+  <p>林班歌中也有不同族語的歌曲，達悟語也有，顏姐也唱了一首。族語歌一出，在座的大家都開始拍手，顏姐也一首接著一首，有的歌詞忘了，莉莉姐和丹姐就拿起話筒加入。最後一首族語童謠《飛魚之歌》，流傳最久，全場都會唱，連我也能學會。</p>
+  <p>歌詞是：</p>
+  <p>tay yaro libangbang （收穫滿載的飛魚啊）</p>
+  <p>nani tawaz ni yama （都是我爸爸捕的）</p>
+  <p>ko tey masarey （我是多麼興奮）</p>
+  <p>inawey no mangdey doa raraw （願每一天都如此美好）</p>
+  <p>「這裡是小蘭嶼噢！」丹姐笑著說。</p>
+  <h3 id="section-1">我是彌飛浪</h3>
+  <p>很快，夜就深了。我和顏姐還要搭火車回台北，不能再留。離開之前，我唱了整本歌本上我唯一會唱的歌，《夢醒時分》，也算稍微對得起姐姐們的招待。忙著吃喝聊天，關於我的名字怎麼寫，我來做什麼，我對蘭嶼有多少認識，我都是在離開前才逮著空隙告訴姐姐們的。</p>
+  <p>當我說起想研究蘭嶼女性的原因時，丹姐聽得很認真，聽罷，她頗認真地望著我說：「我們啊，是原住民啊。」這一句，意思太多，太沉。也許她要說的是，她們在台北生活這麼多年，命運改變了太多，但骨子裡，仍然是蘭嶼人。又也許，她要說的是她們吃了太多苦，背負了許多，無論她們怎麼努力生活，還是被這座都市看作不一樣的人。</p>
+  <p>在這場聚會之外，我還訪問了蘭嶼的一位女紀錄片導演和一位女咖啡師。我希望把這樣的田野調查一直繼續下去，希望了解她們的生命史，看到她們的困境、適應和生活之創造。顏姐沒有孩子，像對待自己的孩子一樣對待我，每次見面都給我帶水果、餅乾。下課後，她若是要去見朋友，總會要我陪她去忠孝復興站的順成蛋糕店買桂圓蛋糕，也總買給我吃。那是她初來台北時，最愛的蛋糕店。「甜甜的，以前在蘭嶼沒有麵包吃，就很喜歡呀。」她回憶著。只是現在她不能吃太多了，怕太甜太油，像每個都市白領女性一樣。</p>
+  <p>顏姐還給我起了一個達悟語名字，叫 Si mivilang，希·彌飛浪，意思是會讀書的人。我的族語學得不好，要成為真正的彌飛浪，路還很長。</p>
+  <p>（文中人物皆為化名）</p>
+  <p>（原文刊於南方人物週刊，此為初版，與刊出版略有不同）</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#Matters 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2023-04-04/%E7%AA%B8%E7%AA%B8-%E7%AA%A3%E7%AA%A3/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2018-10-29/%E5%88%9D%E5%85%A5%E4%BA%BA%E9%A1%9E%E5%AD%B8%E7%9A%84%E6%96%B0%E8%81%9E%E5%AD%B8%E5%BE%92%E8%A9%B2%E5%A6%82%E4%BD%95%E9%81%A9%E6%87%89%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%B8%E7%A7%91%E5%80%AB%E7%90%86/">最早</a>--</span>
+    
+      <li>
+        <time>2019-06-04</time>
+        <a href="https://nodebe4.github.io/oped2/2019-06-04/%E4%B9%9D%E9%BE%8D%E5%9F%8E%E8%A1%97%E4%B8%8A%E7%9A%84%E5%A4%A7%E6%B4%9E/">
+          九龍城街上的大洞
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2019-06-04</time>
+        <a href="https://nodebe4.github.io/oped2/2019-06-04/%E6%A9%AB%E6%BC%82%E9%81%8E%E5%B9%B4/">
+          橫漂過年
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2018-10-29</time>
+        <a href="https://nodebe4.github.io/oped2/2018-10-29/%E5%88%9D%E5%85%A5%E4%BA%BA%E9%A1%9E%E5%AD%B8%E7%9A%84%E6%96%B0%E8%81%9E%E5%AD%B8%E5%BE%92%E8%A9%B2%E5%A6%82%E4%BD%95%E9%81%A9%E6%87%89%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%B8%E7%A7%91%E5%80%AB%E7%90%86/">
+          初入人類學的新聞學徒該如何適應不同的學科倫理？
+        </a>
+      </li>
+    
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2019-05-30/%E6%8E%A2%E7%B4%A2%E6%9B%BF%E4%BB%A3%E4%BA%92%E8%81%94%E7%BD%91%E5%92%8C%E4%B8%8D%E5%AF%BB%E5%B8%B8%E7%9A%84%E7%BD%91%E7%BB%9C%E5%BD%A2%E5%BC%8F-%E5%9C%A8%E5%93%88%E7%93%A6%E9%82%A3%E6%8C%91%E6%88%98%E6%81%B6%E5%8A%A3%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E7%94%9F%E6%80%81-iYouPort/">
+            前一篇：探索替代互联网和不寻常的网络形式: 在哈瓦那挑战恶劣的互联网生态 - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2019-06-04/%E6%A9%AB%E6%BC%82%E9%81%8E%E5%B9%B4/">
+            後一篇：橫漂過年
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2019-05-30/%E6%8E%A2%E7%B4%A2%E6%9B%BF%E4%BB%A3%E4%BA%92%E8%81%94%E7%BD%91%E5%92%8C%E4%B8%8D%E5%AF%BB%E5%B8%B8%E7%9A%84%E7%BD%91%E7%BB%9C%E5%BD%A2%E5%BC%8F-%E5%9C%A8%E5%93%88%E7%93%A6%E9%82%A3%E6%8C%91%E6%88%98%E6%81%B6%E5%8A%A3%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E7%94%9F%E6%80%81-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2019-06-04/%E6%A9%AB%E6%BC%82%E9%81%8E%E5%B9%B4/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2019-06-04/%E6%A9%AB%E6%BC%82%E9%81%8E%E5%B9%B4/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2018-10-29/%E5%88%9D%E5%85%A5%E4%BA%BA%E9%A1%9E%E5%AD%B8%E7%9A%84%E6%96%B0%E8%81%9E%E5%AD%B8%E5%BE%92%E8%A9%B2%E5%A6%82%E4%BD%95%E9%81%A9%E6%87%89%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%B8%E7%A7%91%E5%80%AB%E7%90%86/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2019-05-30/%E6%8E%A2%E7%B4%A2%E6%9B%BF%E4%BB%A3%E4%BA%92%E8%81%94%E7%BD%91%E5%92%8C%E4%B8%8D%E5%AF%BB%E5%B8%B8%E7%9A%84%E7%BD%91%E7%BB%9C%E5%BD%A2%E5%BC%8F-%E5%9C%A8%E5%93%88%E7%93%A6%E9%82%A3%E6%8C%91%E6%88%98%E6%81%B6%E5%8A%A3%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E7%94%9F%E6%80%81-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2019-06-04/%E6%A9%AB%E6%BC%82%E9%81%8E%E5%B9%B4/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<Matters>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2019-06-04/%E6%A9%AB%E6%BC%82%E9%81%8E%E5%B9%B4/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<Matters>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2018-10-29/%E5%88%9D%E5%85%A5%E4%BA%BA%E9%A1%9E%E5%AD%B8%E7%9A%84%E6%96%B0%E8%81%9E%E5%AD%B8%E5%BE%92%E8%A9%B2%E5%A6%82%E4%BD%95%E9%81%A9%E6%87%89%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%B8%E7%A7%91%E5%80%AB%E7%90%86/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

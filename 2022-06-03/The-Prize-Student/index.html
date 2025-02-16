@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>The Prize Student – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+The Prize Student
+——
+" />
+    <meta property="og:description" content="
+The Prize Student
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="The Prize Student" />
+    <meta property="twitter:title" content="The Prize Student" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Ffeatures%2Fprize-student" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/features/prize-student" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/features/prize-student&text=The Prize Student&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/features/prize-student&title=The Prize Student" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/features/prize-student&title=The Prize Student" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=The Prize Student&body=
+The Prize Student
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/features/prize-student" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/features/prize-student&title=The Prize Student&caption=
+The Prize Student
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=The Prize Student&url=https://www.chinafile.com/reporting-opinion/features/prize-student" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>The Prize Student</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-06-03
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Zha Jianying</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/features/prize-student" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1654254300000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/features/prize-student">The Prize Student</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-a8e65524873b3b3ec9d19080cef01365">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54026_sm.jpg" title="The Prize Student" class="colorbox" data-colorbox-gallery="gallery-node-54026-PTVEdEWwITQ" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54026_sm.jpg?itok=N_ry3edh" width="1500" height="1000" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Noel Celis—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A man walks past photographs of the cultural revolution, ahead of the 100th anniversary of the foundation of the Communist Party, in the Wangfujing shopping district in Beijing, June 12, 2021.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p><em>This short story, written in 2000 by Zha Jianying, is ChinaFile’s second foray into original fiction. —The Editors</em></p>
+      <p align="center">* * *</p>
+      <p class="dropcap">I was in Nanjing for two days, accepting a fiction award and signing some copies of a new book of mine that had just come out. When the hubbub was finally over, I set out to visit an old schoolteacher. She had moved to Nanjing a few years earlier upon retiring, apparently to be near some relatives. Tracking her down hadn’t been easy—the circle of people in touch with her seemed tiny—but my determination prevailed. I got ahold of her address just before the trip. With my plane leaving very early the following morning, this was my last chance to make the visit.</p>
+      <p>When <em>Zhongshan</em> magazine informed me two weeks earlier that “One Fine Summer Day” had won their annual award for best novella, I’d been pleased but not that surprised. I was beginning to get used to winning awards. For 10 years I'd been writing chiefly for the desk drawer, and then one day a Beijing critic read and praised a short story I published in a small magazine. Suddenly everything changed. My career took off; editors were knocking one another down for my every new piece. Just the other day, someone had described my “meteoric rise on the literary scene” and joked that I was becoming an “awards specialist.”</p>
+      <p>To be frank, this all made me a little dizzy. I had worked very hard to get here, but lately I’d been feeling stressed out. I wondered about other famous writers. How did they cope with their fame? Pressure can really distort your life.</p>
+      <p>Still, the book signing and the award ceremony had both gone well. At the signing, some college kids had gazed at me with such reverence I could tell they were awed by my achievements. One boy, an editor of a campus paper and a budding poet, told me I was his role model, not just for writing but also for life.</p>
+      <p>My acceptance speech, entitled “Conscience of the Pen,” received a standing ovation. Little Ye, a pretty conference staffer, was so choked up she couldn’t say a word when she came to shake my hand. At the banquet afterwards, Old Zhou, <em>Zhongshan</em>’s chief editor, said my speech was so eloquent that when the day comes for me to address the Nobel Prize audience no doubt I’ll draw a flood of foreign tears. That old flatterer. My work had begun to be translated into foreign languages, true; but that didn’t mean I was anywhere near the caliber of a Nobel Prize winner. I never will be. A man ought to know his own limits. However, having downed a few cups of Confucius House Wine, I had to confess I felt my speech wasn’t half bad and thought I should consider writing more essays in the future.</p>
+      <p>Old Zhou told me if I wanted to catch some sightseeing before leaving, Little Ye was eager to be my guide. Nanjing is a marvelous historical city. I could have had a nice stroll atop the ancient Ming city walls or row a boat around charming Xuanwu Lake. Or maybe check out the famous Sun Yat-sen Mausoleum. But I said no. “Give Little Ye my sincere thanks,” I told Old Zhou, “but I’ve already made an appointment with an old acquaintance here. I must keep it.”</p>
+      <p>“Well,” Old Zhou had replied, “in that case you are on your own.”</p>
+      <p>It was almost 4:00 in the afternoon when I finally set out. I had expected—hoped, perhaps—that Teacher Liu’s place would be hard to find, but it wasn’t. It was on Liberation Road, in one of those nondescript, well-organized prefab apartment complexes not far from downtown. A sign on the gate identified the complex as belonging to the Nanjing Institute of Graphic Design. At the mention of Teacher Liu’s name, the guard, a scrawny, red-nosed youth in a faded green army coat, blinked. “That’s Liu Quanqiang’s aunt in Unit 3, right?” I didn’t know her relative’s name, I told him, “I’m here only to see her.” The guard asked if I was expected and I hesitated for a moment. “No,” I said. “I’m not expected.” So he pushed over a greasy visitor’s registry for me to fill out, and he called the apartment.</p>
+      <p>All of a sudden I tensed up. With my head bent over the registry, I was so nervous I put Teacher Liu’s name into the space for visitor’s names and my name into the space for the apartment number. I heard the guard announce my name, and then a pause ensued. It wasn’t very long—10 seconds, maybe even less—but my heart skipped a beat. Then the guard turned to me and waved a hand. “Go,” he said with a bored look.</p>
+      <p>She lived on the fourth floor of a walkup building, the last in a long row. The complex yard was common enough: a basketball court, a few clotheslines strung with children’s garments between the tall sycamores, some stone benches. Two workmen were digging a ditch at the far end by the brick walls. All of this I noticed in a blur. As I climbed the stairs, I wondered if Teacher Liu knew about my being in town. The <em>Zhongshan</em> award was a fairly big event in literary circles. The day before, Nanjing’s evening paper had carried a front-page report about it, and I was quoted at some length. It was quite likely Teacher Liu had read it. She might even have read “One Fine Summer Day” when it first appeared. After all, she had taught literature all her life, and <em>Zhongshan</em> wasn’t just the biggest literary magazine in Nanjing, it was nationally famous. She could be a subscriber. Who knew.</p>
+      <p>I let myself speculate on this minor point to avoid thinking about the meeting ahead. It was too late for that. Nor did I think about it earlier because, to be completely honest, until that guard waved me in, I was never sure I would actually be able to go through with it.</p>
+      <p>I hadn’t seen Teacher Liu since I left Red Star Middle School for the countryside, and that had been 17 years ago. She was the best teacher I’d ever had, and I was her prize student, her pet of pets. The entire school knew this because Teacher Liu was Red Star’s highest-paid, most-respected teacher, and students competed fiercely for her attention. Still, if I didn’t look her up now, if I didn’t see her again before she died, nobody would have a problem with that. A middle school teacher is treated differently from a university professor. A professor, if she is special, enjoys a student’s lifelong gratitude; but how many pupils stay in touch with their favorite middle school teacher? Not many. Unfair, definitely; but that’s how the custom works. In brief, nobody was expecting me to make this visit. Least of all Teacher Liu. And, to be frank, even when the guard called the apartment, I was secretly hoping Teacher Liu might not be home, or maybe had fallen ill—too ill to receive visitors. After all, she was in her 60s. I would have been relieved if she’d just hung up or asked the guard to tell me to go to hell.</p>
+      <p>“Tell that bastard to go to hell!” These words had run through my head many times over the years, whenever the thought of Teacher Liu appeared.</p>
+      <p>But now, she asked me to come up. So, there I was, standing at her door, trying to collect my thoughts. Except not a single thought came to my head. I rang the bell.</p>
+      <p>Immediately the door flung open. A stocky, gray-haired little woman in a blue sweater stood facing me. Was this Teacher Liu? For a moment I gaped down at her face like a dumb giant. Then the familiar features returned: those eyes—wrinkled, yet still fierce; the square jaw—the jaw I adored and feared, so majestic, so arrogant; and the brown mole on her left cheek—it had turned ink black. Her skin had shriveled and a deep groove, like a stubby wedge, lay between her eyebrows. Despite all this, she looked as strong as an old mountain goat.</p>
+      <p>“Teacher Liu,” I greeted her, my voice suddenly very dry.</p>
+      <p>“Come in,” she said in a flat, commanding tone, and headed towards the living room without giving me another look.</p>
+      <p>Seventeen years vanished. I was the pupil; she was the teacher.</p>
+      <p>The moment I sat on the couch, she brought me tea and plopped a plate of White Rabbit candies on the small wood table. I didn’t touch any of this. She reached over for the pack of Great Gate lying on the table. “Smoke?” she asked, and without waiting for my reply lit one for herself straightaway. I swear, it was almost like she had been expecting me.</p>
+      <p>She took a good draw on the cigarette, held it in her lungs, then slowly breathed out a thin blue ring. “So, why are you here?”</p>
+      <p>“I . . .” I shifted in my seat. “I’m in town on some business and thought I would drop by to say hello.”</p>
+      <p>“I think we can do without the garbage,” she cut in calmly.</p>
+      <p>I cleared my throat, but she was already on a tear. “The nerve you have,” she said, “showing up like this. 17 years. The boy is a grown man, and he wants to drop by just to say hello. Ha! I suppose I’m lucky you aren’t here to spit and slap my face again! I should probably thank my ancestors for this!”</p>
+      <p>She took another puff on the Great Gate. “Where’s your Red Guard armband? Must be a collector’s item by now. And your famous Big Character Poster denouncing your teacher? That bitch played such cunning tricks to poison your mind and stifle your spirit, didn’t she? Oh, what a sneaky viper she was, or did you call her a sly wolf in human skin? She spent all those extra hours on you just to lay a trap, didn’t she? So you’d fall into it and get buried alive under those bourgeois values. Such a shame your brilliant poster stayed on the wall for only a couple of weeks.”</p>
+      <p>She flicked off the pale tip of her cigarette. “Too bad no one ever asked my opinion. I didn’t know the first thing about human character—oh no, I was quite clueless on that. But I did know a thing or two about composition. I’d have been the first to admit that was a first-rate essay. I’d have even thought up a better title for it. How does ‘A Pen without a Conscience’ sound to you? Not bad, eh? Should’ve won a grand prize for betrayal, too, if they had asked me. Such high-quality work shouldn’t be overlooked and forgotten. It was too good just to go up on a school wall. They should print it, put it in some fancy volume, distribute it to millions.”</p>
+      <p>She narrowed her eyes at me. I looked at my hands.</p>
+      <p>“Come on, this isn’t like you. You haven’t come all this way to sit here playing deaf and mute. Speak up.”</p>
+      <p>“I don’t know how . . . where to start,” I said, looking up. I tried to hold her eyes, but had to drop mine after a few seconds.</p>
+      <p>“Well, how about starting with that one fine summer day?”</p>
+      <p>So she had read my novella!</p>
+      <p>“And tell me first: wasn’t that a little gem? I don’t mean the mature work everyone is praising now. No, let’s go a bit further back, let’s turn to the grooming stage of your illustrious career, see how you were bursting with talent even then. I’m talking about that exposé of yours. Who else, at age 15, could compose such a beautiful Big Character Poster? The prose was so simple and clear, the argument so well-built, and the Tang poetry quotations, the rhymed humor, a little rhetorical flourish here and there . . . just brilliant. Everything I had taught you was in that essay, and more. I stood there before the wall admiring it until my neck hurt. I almost memorized the whole piece, I was so stunned and impressed. I’m still stunned and impressed. My prize student had finally produced a masterpiece, and the joke was on me!”</p>
+      <p>She laughed. There was scratchy metal in that husky, caustic laugh and it sent a cold shiver down my spine. But for some odd reason I laughed too. So, for a moment there we were, teacher and pupil, sitting face to face in a small, cluttered room, laughing together. It was as if the two of us were sharing a joke on someone else.</p>
+      <p>“You know the problem with kids these days?” she resumed after a moment, in a less heated tone. “They can’t compose a decent essay and they’re too timid in the classroom. Don’t dare challenge their teachers. Don’t even know how to ask questions. They just sit there like dumb statues. Copy and obey. That’s what they do best. It’s like the Cultural Revolution never happened. Some teachers love it; but I’ve lost interest. I’d rather be retired than teach a flock of sheep.” She reached over to the cigarette pack and lit up another one.</p>
+      <p>A wave of memory engulfed me. This was how she used to talk to me in her after-school office hours. Following our usual conversation about poetry or composition, she’d enjoyed imparting some of her sharp opinions about other students, or the education system in general, to me, in the privacy of her office. Oh, those quivering, intense evenings of my youth. The soft yellow ring of light from the overhead lamp, the gentle dusk outside, the unforgettable feeling of being singled out by your idol as the worthy disciple, the chosen one.</p>
+      <p>She puffed out of her reverie, her eyes becoming focused on my face, and the hatred returning. “But you could teach these kids something, couldn’t you? Oh, sure, they look up to you now, the famous writer! The one so talented and brave with his pen! Tell them you’re even more talented and brave than they know. Tell them besides welding a pen, you also know how to toss out a nice frothy spit, give someone a good sharp slap on the face, and shove a woman—she’ll go straight down, eating mud on the ground!”</p>
+      <p>“Teacher Liu,” I began, trembling all over in shame. “I want to apologize for all . . .”</p>
+      <p>“Don’t interrupt me,” she snarled, glaring fiercely at me. Her voice was tinged with chilly pride. “I’ve had it bottled up for 17 years, and now you’ve brought the demons out. Don’t think you can put the lid back on so quick and easy. Not with your cheap apology. Other people might be grateful—thousands wait and wait and it never comes. No one will even apologize to your dead body! That’s how it is in this country. No confessions, no apologies. It’s considered finished business. One day the murderer will show up at your funeral with a cheap bouquet and saunter off after a good feast. But that won’t work with me. You know what I’d like to do? I’d like to leave a note in my will. So my nephew—he lives one floor up with his family—will know what to do if you dare poke your traitor’s face in at my funeral. I’ll tell him to give you a good beating and kick you out! He’s a bigger guy than you, and he’ll do whatever I ask him. That’s right, you are dealing with a stubborn mule here. You called me many names that day at the rally, but that’s the one I like best. Yes, I was a stubborn mule and I will die a stubborn mule. You hear me? Don’t even think about it.”</p>
+      <p>She pulled out a fresh cigarette, but then tossed it onto the table. Standing up from the sofa she folded her arms across her chest, trying to restrain its heaving. The room was growing dark fast. Lights were being switched on in the apartments across the street. For some time, we had been sitting in the spreading shade. Now it had swallowed the entire room.</p>
+      <p>A voice inside me said: “Do it. Do it this minute.” Hearing this voice, the blood slowed in my veins and my limbs went soft. What happened in the next half minute seemed like a hallucination; I was watching someone else from a distance. I saw my body rise up and move forward; and then I heard a thud.</p>
+      <p>I was on the floor, my knees about three inches from Teacher Liu’s feet, and my hands, too, cupped on the floor on each side of my crouched body.</p>
+      <p>I could feel she did not see this coming. She was already moving away angrily to pace the room. Now she froze. “What is this?” she demanded finally, sounding a bit flustered for the first time since I’d entered the room.</p>
+      <p>“Teacher Liu, please spit on me and slap my face. I deserve it.”</p>
+      <p>Silence. Then, from way above my head, she said: “You deserve it alright, but what sort of stupid monkey show is this, eh?”</p>
+      <p>“Please, Teacher Liu, I beg you. Just give me a few slaps and spit on me. I’ve thought about it for a long time. I don’t know what else I can do to . . .” At these words I felt a clutch in my chest, but I managed to batten it down. “You can give me a good beating, too, Teacher Liu, if that would make you feel a little better.”</p>
+      <p>She gave a snort. “Me beating you? Ever seen a hen trying to scratch a bear?”</p>
+      <p>But I insisted, crouched on the floor as I was. “Well, you can go get a rolling-pin, or a broom, or anything you like. I’ll wait right here. I won’t budge.”</p>
+      <p>She had to laugh at this. Then she appeared to be giving the situation a moment’s consideration. “You really want me to beat you up, don’t you? That’s why you came all the way here, wasn’t it?” She said finally. But this time her tone was a tad softer.</p>
+      <p>“Yes, please. It will make me feel a little better, after everything I’ve done.”</p>
+      <p>She moved away from my knees. “Alright, get up. That’s enough. What if I don’t want to be dragged down to your level?”</p>
+      <p>She sat back on her sofa across from me, examined me on the floor for another moment, then heaved out a sigh. “Get up. It’s ok now. I’ve already given you a good lashing and I do feel better now that’s off my chest. Come on, kid, really, you’re not waiting for me to personally get you off that floor, are you? There, that’s it. Now sit back down. I have something else I want you to hear.” The phone rang. It was an old push-button sitting on an end table stacked with some magazines. “Will you turn on the light, please?” she said, reaching over to pick up the receiver. I switched on a lamp, and returned to my chair.</p>
+      <p>“Yes,” Teacher Liu was saying, “rice and eggplant sound fine. I don’t have much of an appetite tonight. I have a guest here, yes. I need about half an hour and I’ll come as soon as it’s over. Good, see you all in a while.”</p>
+      <p>She put the receiver back. “That was my nephew. They’re expecting me for dinner. I don’t think I can invite you to join us tonight.”</p>
+      <p>“Of course not.”</p>
+      <p>“I mean after all . . .” She trailed off. For a moment, she sat there lost in her own thoughts. She was absently tugging a few tendrils of her gray hair behind her ears, pressing her cheeks a bit, and for a moment her eyelids drooped as if she were catnapping.</p>
+      <p>I waited patiently. These small gestures, her way of concentrating on a line of thought, were familiar to me: They are among the thousand little things about a person that remain unchanged and unchangeable no matter what they’ve been through. But there, with the light on—and it was a florescent beam casting rather jarring bright rays at us—I saw, suddenly and with a tug at my heart, how much Teacher Liu had really aged.</p>
+      <p>Earlier she had been pumped up, but the outburst had drained her. She looked old and frail wrapped up in her blue woolen sweater. She had never been beautiful, even in her more youthful days; but she had always dressed with style and care, and carried herself assuredly. There was an elegance about her, a radiance that made prettiness seem trivial. That had all gone. I noticed her hair had thinned out considerably, and a small white layer of dandruff was spread over the shoulders of her sweater. An air of an old bag lady hung about her. I averted my eyes.</p>
+      <p>“Ok, here is what I want to say,” she reopened her eyes and began. “For many years, I hated you. Just pure hatred. And my hatred, my loathing for a traitor, kept me going. Well, reading “One Fine Summer Day” made me feel a little better. Watching you confess your betrayal and eat your own heart out in print made me feel somewhat vindicated, I guess. You were still hiding behind a fictional character, but that character, that young Red Guard who spits on and slaps his teacher, shows more contrition than a lot of them—all of them, as far as I know. That much credit I’ll give you. What’s more, you didn’t put too much emphasis on the pressure you were under at the time: The pressure to behave like a wolf so the other wolves wouldn’t turn on you and tear you apart. But that part I already knew. I knew it. And still, I expected you to be heroic. You know why?”</p>
+      <p>I looked up at her face, my own face stained with tears. “Because I was your prize student.”</p>
+      <p>She regarded me severely for a moment, then sighed. “The boy has grown up, hasn’t he? Yes, that’s why: It was out of pride. I expected you to sacrifice yourself, to be a hero for my pride and standards. I wanted you to prove to everyone that I was right in choosing you, even if this made you an outcast, even if it killed you. And I was furious you failed the test.”</p>
+      <p>“Not only that I failed; I betrayed and denounced you.”</p>
+      <p>“Yes, yes,” she said irritably, putting up a hand with the palm facing me as if shielding herself from any further apology. “You’ve discussed all that in your novella, and now that you’ve plopped yourself down there”—she pointed at the floor I knelt on earlier—“I think we’ve covered that business. What I’m trying to tell you now is that your old teacher has also had time to do some thinking about herself. I’ve had all these years to sort it all out, right? Did you think I’d be stuck on just one angle? Are you interested in hearing my conclusion?”</p>
+      <p>With all the intensity of anticipation, I gazed into her eyes. It was what I had done a long time ago, when I was a teenager.</p>
+      <p>She said: “I have concluded that it was I who drove you to denounce me.”</p>
+      <p>My jaw must have dropped. A flicker of a smile, triumphant, knowing, and sad, crossed her face. I sat there, speechless and confused.</p>
+      <p>“Yes, it’s easy to blame it all on you, your weakness of character, your ungratefulness. You caved to political pressure because you lacked courage and moral integrity. But gradually I realized even if that were true it wasn’t the whole picture. You were also reacting to another pressure, a deeper, invisible one that had been there for some time before it erupted. How did I realize this? Because the more I chewed over the lines in that exposé of yours, the more I came to see the portrait you drew of me was actually not all crazy distortions. Yes, it was cartoonish and you used a lot of jargon, but it <em>was</em> me underneath it all: the hard-nosed, arrogant, self-centered authority figure who was bent on molding an eager, bright kid into what she wanted of him, completely oblivious to how he felt, what he might want to become.”</p>
+      <p>“But Teacher Liu,” I protested.</p>
+      <p>“Don’t interrupt me, I’m coming to the end of it. What was I saying just now? Oh, let’s try a simile. Imagine someone close to you, say, your mother. Your mother does everything for you and assumes you will win the Nobel Prize one day. Now how does that make you feel? It makes you feel you must win it for her or else. Am I not right? So one day someone tells you: hey, kid, wake up, the Nobel Prize is just a pile of bull, and you can throw it all in your mother’s face; as a matter of fact, if you don’t throw it in her face that proves you are just a pile of bull yourself. Well, if the kid throws it in his mother’s face, can we really blame him? I mean, do we just say the kid is a scoundrel and the mother a saint?”</p>
+      <p>This time, it was my turn to use that phrase she had used earlier on about my supposedly “brilliant” essay: I was stunned and impressed. And also moved. As a mentor, she had always been impressive: a charismatic lecturer, knew three foreign languages, had a book of poetry published before she even finished university. All in all, an awe-inspiring figure. But these words of hers touched some spot deep down; they made me feel a tenderness toward her. “Teacher Liu, you are the best teacher I have ever had,” I said, my voice heavy with emotion. “You are the best teacher any student could ever hope for.”</p>
+      <p>“No,” she shook her head softly. “That’s what I used to think. And that’s why I held my head high and was full of contempt even after you denounced me and they kept dragging me through all those rallies. But I’m not that proud of myself anymore. Maybe I was a gifted teacher, and I was certainly devoted, but I wasn’t a very sensitive one. You have taught me that.”</p>
+      <p>She tried to stop me again with her hand, seeing my mouth opening. But this time I pressed ahead. “Teacher Liu,” I said, “for good or ill, you have been behind almost everything I have done in my life. Maybe you are right, at least in part, in saying I felt pressure from you and that had something to do with my betrayal. I’m not sure. But one thing I’m certain of is that I wouldn’t have come this far as a writer if I hadn’t had you for a teacher. I would have tried, yes; but I’d probably have given it up halfway when I felt I was no good, or when nobody wanted to print any of my stuff. It was your early faith in me, and later your silent reproach, that kept me going. I’m stating only a fact here. All these years, and the years I labored away in the countryside, I could feel your stern eyes on my back, and the eyes said: you’ve made a fine mess of what I taught you, now the least you can do is to pick yourself up where you fell and make something out of your life. Teacher Liu, that’s the truth: I have become a writer because of you.”</p>
+      <p>She listened to all this quietly, her lips slightly parted. When I finished, she took a breath, and I knew she was glad to hear what I said. But she said simply: “Well, if some good has come out of all this, fine.” She shrugged her shoulders. “I might as well tell you something else while we are at it. I missed my chance of marriage and children because I was so obsessed with being the best teacher of all time. When you can be the great engineer of human soul—so many young souls—why waste your time doing dishes and diapers and pleasing your in-laws? I looked down on all that mundane stuff. Can you believe I was that warped?” She shook her head with rueful self-mockery. “It’s just too bad the lesson came to me so late, and got mixed up with everything else, that by the time you get through it all you are already too old for anything. Yes, I am old.”</p>
+      <p>“No, Teacher Liu, you are still healthy and at your . . .” I didn’t finish. It didn’t seem to matter.</p>
+      <p>She smoothed her thin, gray hair, and wrapped the blue sweater a bit tighter around her body. Again, I thought how frail and tired she appeared. She leaned back on the sofa. “No, I take it easy now. What’s done is done; none of us are sages. First, I got tired of condemning you, then I got tired of condemning myself. Condemnation is not going to bring back what we have lost. The important thing is living through the day and carrying ourselves with humility, so we won’t make the same mistakes again.” Then she brought out slowly: “To have doubted one’s own first principles is the mark of a civilized person.”</p>
+      <p>I nodded. “You are so wise, Teacher Liu.”</p>
+      <p>She looked at me gently. “No, those aren’t my words. I once read them in a foreign book. I can’t recall the author’s name, but he is a wise person. A better teacher than me.”</p>
+      <p>Again a wave of tenderness rushed through me. I looked away. My eyes fell on a piece of knitting and a ball of wool on top of a side bureau: It looked like a half-finished kid’s vest. It was practically the only colorful, soft item in this plain, austere room.</p>
+      <p>Teacher Liu’s eyes twinkled. “That’s a present for my grand-niece. I won’t tell you how long it took me to get this far. Good thing she isn’t depending on it for this winter.”</p>
+      <p>“It’s hard for me to picture you knitting,” I said.</p>
+      <p>“Because you only picture me lecturing,” she said. “To tell you the truth, aging is not such a bad thing for a stubborn character like me. I simply don’t have the energy to be a slave driver anymore. And now I’m retired, if an old student stops by, why, I let the kid do most of the talking so he doesn’t feel I’m still lecturing him on what he should or shouldn’t do.” She paused, and threw me a quick, ironic smile. “Of course, you walk in here and unleash an oracle from me. I suppose you <em>are</em> my prize student after all.”</p>
+      <p>We both laughed at this, but there were tears in our laughter.</p>
+      <p>After that, she asked me a few questions about my marriage and my daughter; I inquired after her health. Then I said I should let her go to her dinner.</p>
+      <p>She walked me to the door. Before we parted, she said, carefully as though a lot was depending on what words she chose to use, “I don’t know if we will meet again, so take these few last words from an old teacher. You are a famous writer now. A lot of people must be boasting about you and pushing you on—I can just imagine their pride. Enjoy it, but don’t let it distort your life too much. Don’t lose sight of your own family and your life with them. Because in the final analysis, that’s what matters the most, don’t you think?”</p>
+      <p>I took her hand into mine—a small, weathered hand with bulging veins. I had to restrain the urge to kneel down once again and kiss that hand. Words failed me completely, so I just held her hand in my palm for as long as it wouldn’t seem odd. Then I let it go. She smiled faintly, her face catching the light from the room as she turned aside to close the door.</p>
+      <p>The hallway lights were all broken. I had to grope my way down the dark stairs, knocking at and scraping by various objects—winter cabbages, old furniture, bicycles—that protruded at every landing. I burst into the street like a mad man. If I couldn’t get a chest full of the chilly night air, I thought I would pass out.</p>
+      <p align="right"><em>August 23, 2000, Pokfulam Road, Hong Kong</em></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-06-16</time>
+        <a href="https://nodebe4.github.io/oped2/2022-06-16/China-s-Record-Urban-Youth-Unemployment/">
+          China’s Record Urban Youth Unemployment
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-06-15</time>
+        <a href="https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/">
+          List of De-Registered Representative Offices
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-05-23</time>
+        <a href="https://nodebe4.github.io/oped2/2022-05-23/Public-Security-Minister-s-Speech-Describes-Xi-Jin/">
+          Public Security Minister’s Speech Describes Xi Jinping’s Direction of Mass Detentions in Xinjiang
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-05-19</time>
+        <a href="https://nodebe4.github.io/oped2/2022-05-19/Is-Beijing-Changing-Tack-on-Big-Tech/">
+          Is Beijing Changing Tack on Big Tech?
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-05-23/Public-Security-Minister-s-Speech-Describes-Xi-Jin/">
+            前一篇：Public Security Minister’s Speech Describes Xi Jinping’s Direction of Mass Detentions in Xinjiang
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/">
+            後一篇：List of De-Registered Representative Offices
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-05-23/Public-Security-Minister-s-Speech-Describes-Xi-Jin/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-05-23/Public-Security-Minister-s-Speech-Describes-Xi-Jin/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-05-23/Public-Security-Minister-s-Speech-Describes-Xi-Jin/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-05-23/Public-Security-Minister-s-Speech-Describes-Xi-Jin/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

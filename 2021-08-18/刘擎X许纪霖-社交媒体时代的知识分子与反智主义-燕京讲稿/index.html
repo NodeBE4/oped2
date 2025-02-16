@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿
+——
+" />
+    <meta property="og:description" content="
+刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿" />
+    <meta property="twitter:title" content="刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F611d984df4f9725a198e92fd" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/611d984df4f9725a198e92fd" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/611d984df4f9725a198e92fd&text=刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/611d984df4f9725a198e92fd&title=刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/611d984df4f9725a198e92fd&title=刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿&body=
+刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/611d984df4f9725a198e92fd" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/611d984df4f9725a198e92fd&title=刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿&caption=
+刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿&url=https://www.allnow.com/post/611d984df4f9725a198e92fd" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-08-18
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/611d984df4f9725a198e92fd" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/611d984df4f9725a198e92fd">刘擎X许纪霖：社交媒体时代的知识分子与反智主义｜燕京讲稿</a>
+——</p>
+
+<div>
+  <p>反智主义将人群分为两部分：知识分子的和非知识分子的；反过来，也同样成立：大众的和非大众的。自法国大革命开始的平等、民主等思潮，将知识分子推到了一个尴尬的位置；互联网技术的去中心化，使得大众走上舞台。我们应当如何理解这种对立？是渊源已久的精英视角而导致的大众反叛，还是知识分子自身的要求而与大众疏离？</p>
+  <p>近日，译林出版社邀请了华东师范大学政治学系教授刘擎、历史学系教授许纪霖，以及自由撰稿人陶小路，围绕《美国生活中的反智主义》一书，以“智识是一种特权吗？——知识分子和他们的时代”为主题展开对谈。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d9c559c232e01c17d3194+L.jpg" data-id="611d9c579b2d825085c26f04" alt="《美国生活中的反智主义》，[美]理查德·霍夫施塔特著，何博超译，译林出版社2021年3月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《美国生活中的反智主义》，[美]理查德·霍夫施塔特著，何博超译，译林出版社2021年3月版
+    </figcaption>
+  </figure>
+  <p>刘擎认为，反智主义有其内在的历史性和现代性。在美国的语境下，历史性在于反智主义的传统，自建国开始便有显现；现代性，则是话语权和政治权力下放的结果。知识分子自身的专业性、疏离性和反思性，必然导致大众对其不满进而抵触。</p>
+  <p>许纪霖则从中国历史出发，认为反智主义并不是现代的东西，而是伴随着知识同时产生，只是在当下表现得更加明显。在近代以来的知识专业化和规范性话语权丢失的情形下，知识界内部的变化同样促成了反智主义。</p>
+  <p>但同样不能忽视的现象是，有的知识分子在当今大众媒介环境下不仅没有受到排挤，反而受到追捧。许纪霖认为，这是“卡里斯马式”的现象，某些知识人在价值真空的时期提供了规范性的价值。刘擎则回应称，大众的价值和想法并没有处在真空转态，只是多样和分化了，所以不同的人各自寻找符合自己期待的知识话语。如果知识人不只是迎合期待，而是通过专业和表达邀请大众一起思考和讨论，可能帮助大众更好开展公共言说。</p>
+  <p>刘擎在沙龙的最后引用霍夫施塔特的学生艾瑞克·方纳（Eric Foner）的观点，后者认为霍夫施塔特《美国生活中的反智主义》一书对当下最重要的启示之一就是“介入性的脱离”（engaged detachment）这一说法，这不仅对于职业意义上的知识分子，甚至对当代的每个人都是一个重要的提醒：“在权力与市场这么强大的冲击下，一定要有介入性的脱离，要既能够进入也能够退出。否则完全淹没在无论是权力的还是商业的游戏里面，终究是不能过一种智识生活的。”</p>
+  <p>经刘擎、许纪霖教授审定，译林出版社授权，《燕京书评》发布此次活动的讲稿。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d9c1b4cd55d54dd5dc75c+L.jpeg" data-id="611d9c1d904b8c02a16a4269" alt="活动现场" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+活动现场
+    </figcaption>
+  </figure>
+  <h2 id="section"><strong>反智主义存在于所有现代社会？</strong></h2>
+  <p><strong>陶小路：首先，我想问一下刘擎老师，《美国生活中的反智主义》出版于1963年，到现在已经有很多年的历史了，以你的阅读体验来看，大家为什么还在读这本书？</strong></p>
+  <p><strong>刘擎：</strong>《美国生活中的反智主义》出版时间特别早，它在1963年出版，跟我年纪一样大，有58年的历史。我在美国读硕士的时候，关心后现代和政治现象，曾经在硕士论文中引用过这本书。这本书在当年就非常火，但出版时间又比较久远，可在美国的知识界也出现过多次重复谈论这本书的现象。</p>
+  <p>上一次有人在谈到这本书，大概是小布什当政时期，也就是2001年后其发动伊拉克战争的时候。最近一次是在2020年，美国图书馆要出霍夫施塔特四卷本著作。最有意思的是，这本书在时序上不是第一卷，但他们先出了这本书。</p>
+  <p>从2016年特朗普在总统大选中胜出，不少学者和知识分子又回到了霍夫施塔特的主题。因为他早在50多年前就已经提到了“大众民主跟反智主义的关系”，以及“民粹跟反智主义的关系”等议题，这是一些反复出现的议题。去年美国有一个学者论坛，要出四卷的编辑解释了为什么会把这一本先出版出来，当时这位编辑就解释道：《美国生活中的反智主义》与当下这个时代有特别大的相关性。</p>
+  <p>这本书其实有两个论题，一个叫美国史的论题，或者历史的论题。跟其他西方国家相比，美国有一个蛮强的反智主义传统，这就是为什么美国具有知识分子倾向的政治家不太容易成功。霍夫施塔特在1952年积极支持阿德莱·斯蒂文森竞选总统，他是个学者型的政治家，但他败给了艾森豪威尔。更早的时候，1948年哲学家杜威也竞选总统，当时很多民调预测杜威会获胜，但他败给了杜鲁门。美国总统大选这些状况，也构成了霍夫施塔特问题意识的背景。</p>
+  <p>美国人喜欢那种特别亲民的、说话不那么书生气的、不讲术语的政客：小布什是一个，说大白话的特朗普更明显。霍夫施塔特发现，在美国历史上，从建国到大觉醒、宗教运动和政治运动的过程中，大众对知识分子和智识生活抱有一种鄙夷和怨恨，或至少是怀疑。这是一个美国历史的现象。</p>
+  <p>另外一个主题是现代性的问题。反智主义的现象或趋势，可能存在于所有的大众民主社会，这是一个现代问题。</p>
+  <p>这两条线都值得深思，霍夫施塔特这本书在1963年刚刚出版的时候，读者只是关注它对于美国历史的论述；但后来发现，这本书有更丰富的意义，有其时代性和历史性，但又超越时代和历史。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d9bb69c232e01c17d3193+L.jpeg" data-id="611d9bb92114416715c3e68b" alt="刘擎" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+刘擎
+    </figcaption>
+  </figure>
+  <h2 id="section-1"><strong>反智主义是不是现代才有的现象？</strong></h2>
+  <p><strong>陶小路：请许老师谈一下霍夫施塔特的思想在中国语境下的回应，尤其是余英时先生对它的介绍。</strong></p>
+  <p><strong>许纪霖：</strong>刘老师说反智主义是个现代性的现象，我同意。但我想补充一句，反智主义不仅是现代性现象，也是个古老的思想现象。中国算轴心文明，其他轴心文明我不敢说，古希腊、古罗马、基督教、印度教这都不是我的专长，我想说说中国。</p>
+  <p>反智主义作为一种思想倾向的话，在中国思想传统中古已有之。今天我们所看到的只是几千年前的精神外貌的一个延续而已。如果从春秋战国说起，最大的反智主义者是谁？是老子。老子是中国反智主义的鼻祖，他提出了最早的愚民政策：“虚其心，实其腹，弱其志，强其骨，常使民无知无欲。”所以，从中国轴心文明一开始，反智主义就开始了。反智主义一定是伴随着知识的开始而开始，且同时并存的。所以，它不仅是一个现代性的现象，也是传统的现象。</p>
+  <p>到了战国，法家也是反智的。法家韩非说“以法为教，以吏为师”，背后是以君权为核心，读书人在法家里是没有地位的。法家尊重的“君”当然是核心，最尊重的是“以吏为师”，真正的老师是那些没有学问、没有知识的小吏。法家还强调“以法为教”，法家的法条在法家看来是老百姓必须遵守的“教”。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d9b984cd55d54dd5dc75b+L.jpeg" data-id="611d9b9b9b2d825085c26f01" alt="许纪霖" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+许纪霖
+    </figcaption>
+  </figure>
+  <p>到了明代，朱熹是比较注重知识的，所以要格物，要考察各种各样小的“理”，来了解至上的“天理”。所以，朱熹是个知识主义者，知识是很渊博的。但是，王阳明跟着朱熹去格物，格了三个月看竹子怎么长，差点格出神经病来。后来，终于到了龙场大悟时发现：何必有这么多知识呢？</p>
+  <p>理学认为，最后要能够有获得自己良知的醒悟，而良知不是知识，最重要的是要致良，要指向实践，这才是最重要的。特别是阳明学的后人特别注重实践，不能说他们完全反智，但知识在阳明学里不是第一等重要。</p>
+  <p>所以，余英时先生在《士与中国文化》里说，宋明理学明清只有两条脉络：一条是“道问学”，朱熹讲的知识；还有一条是王阳明的“遵德性”，道德的实践最重要，而不是知识，所以这又是另一种意义上的反智。到了清代，颜李学派问：孔子之前的知识是从哪里来的？孔子之前的学问是实践来的，所以在颜元看来，实践最重要。</p>
+  <p>所以，反智主义不仅是一个现代的现象，而且是和轴心文明伴随而来，源远流长，现代性依然在轴心文明传统的延长线上发展。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d9aa39c232e01c17d3190+L.jpg" data-id="611d9aa62114416715c3e688" alt="《士与中国文化》，余英时著，上海人民出版社2013年8月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《士与中国文化》，余英时著，上海人民出版社2013年8月版
+    </figcaption>
+  </figure>
+  <h2 id="section-2"><strong>大众为什么会反知识分子？</strong></h2>
+  <p><strong>陶小路：我想再请刘擎老师对于大家可能会比较困惑的一个概念——智识</strong>（intellect）<strong>，以及所谓反智主义与反理性主义这几个概念做一个区分。</strong></p>
+  <p><strong>刘擎：</strong>许纪霖老师刚刚讲老子、王阳明，都是在知识传统内。但他所说的反智话语，我认为应该叫反理主义、反唯理论。他们反对极端崇尚理性的知识，反对形而上的知识。在西方思想中也有这种分歧，当过大学教授的尼采就是代表人物之一。我仍然认为，反智主义是个特定的现代现象。我们要澄清知识传统内部的分歧：有一派比较强调知识的、理性的、理智的生活，另一派则强调实践智慧。这是知识界内部的争论，这与霍夫施塔特讲的反智主义有区别。</p>
+  <p>霍夫施塔特对智识（intellect）和智力（intelligence）做出了区别。intelligence是指智力、智商，一般性的一个人的活动能力，通俗话来讲就是聪明，做什么事情聪明，判断、分析、证据、推论等；你是一个聪明人，就是在描述intelligence。intellect是一种特定的智性活动，特别强调批判性、创造性、想象力和沉思，这种方式也未必是“唯理主义”的。实践智识的这些人，好像在过双重生活：他生活在我们时代的洪流中，同时有能够抽身而出，保持反思性，反思自身所处的环境和自己的生活。所以，这是一种具有反思和批判性的哲学气质。这种特定类型的精神生活形态，以及承担这种精神生活的人的形态，使他们和大众区分开来。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d9a7c9c232e01c17d318f+L.jpg" data-id="611d9a7e9b2d825085c26eff" alt="《2000年以来的西方》， 刘擎著， 一頁丨当代世界出版社2021年4月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《2000年以来的西方》， 刘擎著， 一頁丨当代世界出版社2021年4月版
+    </figcaption>
+  </figure>
+  <p>所以，在这个意义上，老子可以说是狭义上反唯理主义者，他本身也是知识分子，因为他对自己生活实在的表象具有一种怀疑的、反思的、沉思的气质和态度。拥有智识的那些人生活在我们中间，但他们又不是我们的同道，他们有另一个自己和心思，似乎是普通人琢磨不透的。</p>
+  <p>为什么它是个现代性现象呢？在古代，只有官和学两个阶层是有话语权的，老百姓的智慧只有被这群人发现才能够被留下来。但在民主化的大众化时代，老百姓有更多方式表达自己的看法，而且大众的看法具有不可忽视的社会、政治和文化的影响力。这当然不是说大众的想法和意见就是反智的，而是说大众和知识分子之间的张力，在古代不是问题，因为大众的声音不那么重要，而在现代就不可忽视了。所以，反智主义是特定的现代现象，并且在今天更加显著。在互联网出现以前，所有的作者都是知识分子，他们发表文章、出版著作是有门槛的，要先看学历，进而经过层层审查才能发表。在现在的网络时代，门槛很低，仅仅需要一个互联网账号。</p>
+  <p>知识分子跟大众的关系是复杂的：首先，知识分子对现代生活的反思，不一定要透过现象看本质，也未必采取形而上学的方式。知识分子们会说，生活的现象背后有一些其他的动力，或者更底层的、让大多数人看不见的逻辑，但未必是哲学的本质主义。他们看待世界的方式和眼光跟大众是不同的，有时候大众会产生抵触，大概有三种情况：</p>
+  <p>第一种是大众觉得知识分子的说法好高骛远，脱离实际。知识分子们有一套自己的思维，包括在宗教中，天主教或者是美国的长老会的牧师相当有学识，他们能解释世界为什么是这样。</p>
+  <p>宗教里有“神正论”的问题：上帝是全知全能全善的，世人却会遇到非常悲惨且不可逆的事情。比如说，在瑞典导演伯格曼的《处女泉》中，女孩在夜晚独自出行，被三个男人奸杀。深爱着女儿的父亲就会在震惊中疑惑，如果上帝是全知全能全善的存在，怎么会允许这样的事发生？对于这类问题，基督教发展出“神正论”的解释，论证上帝仍然是全知、全能、全善的，这需要非常深奥的知识，通过复杂的推理告诉众人。比如，上帝要给人类自由意志，所以不得不允许罪恶发生。这些神职人员有特定的知识，看待世界的眼光比大众深刻，这就有可能造成了大众认为他们是脱离实际的、是高高在上的。这是第一重跟大众之间的紧张。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d9a684cd55d54dd5dc759+L.jpg" data-id="611d9a6b9b2d825085c26efe" alt="《处女泉》" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《处女泉》
+    </figcaption>
+  </figure>
+  <p>第二种是大众认为知识分子只讲道理，不注重情感。在许多知识分子看来，人们的情感体验都是个别的、暂时的和偶然的，这是不重要的；重要的问题在于人类深层的理性结构，这就造成了知识分子（特别是强调理性作用的知识分子）与大众之间的认知差异。</p>
+  <p>第三种是许多时候知识分子被认为脱离群众，对共同体不够忠诚，特别是在政治极化的时代。比如，霍夫施塔特在书中提到，1939年苏联与纳粹德国秘密签订《苏德互不侵犯条约》，当时美国民众已经有非常强的反苏倾向。但美国仍然有400名自由派知识分子在 <em>The Nation</em> 发表联合声明，反对把苏联视为极权主义，这跟美国公众的感知相当抵触。后来，麦卡锡主义者将这类证据断言，自由派和左派的知识分子不忠于美国，甚至是叛国的。</p>
+  <p>在古希腊时代，苏格拉底对城邦主流的意见保持批判性的距离，有时会特别奇怪地赢得民心；有时和大众主导意识有分歧，甚至相悖，遭到打压。同样，在麦卡锡时代，美国对许多知识分子，比如作家、演员进行清算，很多人其实并不是苏联的同盟，也被看做不爱国，不忠诚于美国。</p>
+  <p>总结起来说，理论脱离实际、理性不顾情感、知识分子在道德上的“可疑”和“败坏”，三种情况构成了知识分子和大众之间反复出现的矛盾和冲突。</p>
+  <h2 id="section-3"><strong>学术黑话诱发了大众的反智主义？</strong></h2>
+  <p><strong>陶小路：在霍夫施塔特的这本书里面，对知识分子的定义是有两个传统。我想问一下许纪霖老师，你常年做中国的知识分子研究，既然谈到智识的话，怎么来定义知识分子？</strong></p>
+  <p><strong>许纪霖：</strong>我虽然是研究知识分子，但我现在暂时不谈知识分子。因为今天主题是反智，我还是想多谈点反智。</p>
+  <p>我开头讲在中国思想史内部和脉络内部就有一种反智主义，刘老师试图把话题引到思想界外部。当刘老师说反智主义是一种现代性现象的时候，隐含了现代社会是一个民主社会的假设。</p>
+  <p>当然，这个“民主”不是政治意义上的民主，是托克维尔意义上的：社会可以自由地上下流动，甚至出现了这样一种空间和可能，每一个人都可以就社会公共问题发表意见，提出自己的看法，这和过去等级化的社会是不一样的。因此，知识分子和精英不再是话语和意识形态的垄断者，因此出现了另一种反智主义。</p>
+  <p>反智是大众的行为，但反智主义是知识分子独有的。一旦反智被主义化了，一定是知识分子在做这件事，只有知识分子才会发明主义。到了五四的时候，中国的反智主义已经开始流行了。</p>
+  <p>过去中国是一个士农工商社会，农、工、商是平民，士是拥有知识的唯一特权阶层。但到了五四以后，“士民皆士”，农、工、商也有自己的知识，他们也有独特的专业知识，都是有知识的。后来又演化成“士民皆工”，就是说连读书人也不过是一个脑力劳动者而已，“工”的地位上升了，“知”的地位下降了。</p>
+  <p>王汎森教授做过一个专门的研究，他的老师余英时先生说“20世纪中国知识分子被边缘化了”，但王教授论证的结论是：读书人不是被别人打倒的，是自己打倒了自己。读书人自己发明了“反智主义”这个词，把反智这件事主义化与意识形态化了，出现了这样一个潮流。这才使得社会上那些不自觉的、盲目的反智具有了在价值上和知识上的正当性。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d9a4a4cd55d54dd5dc758+L.jpg" data-id="611d9a4d2114416715c3e686" alt="《天才为何成群地来》，王汎森，启微书社会科学文献出版社2019年8月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《天才为何成群地来》，王汎森，启微书社会科学文献出版社2019年8月版
+    </figcaption>
+  </figure>
+  <p>反智主义本来就是一个大箩筐，本来就有各种各样的形态。据我观察，知识人自己打倒自己，可以称之为“反智的知识主义”，或者“知识的反智主义”。</p>
+  <p>因为过去的传统中国士大夫是“博雅之学”，是没有用的知识。到了近代以后，西方传来的大部分知识都是有用的知识。所以，费孝通先生认为，是自然的知识替代了规范的知识，由工具理性主宰的科学知识成为主流，而古典人文价值性的知识被边缘化了。五四以后所出现的“反智的知识主义”，一部分表现是用一套自然的知识、客观的知识来试图反对过去人文的、规范的知识。</p>
+  <p>到了民国以后，知识越来越学科化与规范化，此后知识越来越宽泛化：作为一个专家必须用严谨、精准的表述来表达自己的思想和观点。随着学科化越来越深入，学术语言就成为了行业黑话。不要说一般人，哪怕对专家来说，要听懂别的领域的行业黑话也很难。</p>
+  <p>因为行业黑话的出现，专家所拥有的知识越来越不接地气，与日常生活越来越遥远。当面对一些日常生活问题时，专家只会用学术黑话进行表达，民众因为听不懂而出现反弹，觉得专家们不接地气，不说人话，知识高高在上，孤芳自赏，这也诱发了大众的反智主义。</p>
+  <p>大众需要的是常识，用常识思考行不行？用常识来说话行不行？用今天的话说：“你说人话行不行？”不要说黑话似乎成为了一种共识，进而助长了反智主义，大家相信常识是可以“明辨是非”的。</p>
+  <p>王小波在一篇杂文里面讲了一个故事：欧洲一个父亲让儿子出去学知识，儿子学了两年以后回来了，父亲问他学的什么知识？儿子说：“我学会了一种明辨是非的知识。”父亲非常生气，因为他非常清楚，世界上有各种各样的知识，偏偏没有一种知识是专门用来明辨是非的。</p>
+  <p>王小波通过好多故事告诉我们一个道理：比起做一个道德精英，做一个思维精英更重要！“明辨是非”，是自以为拥有了道德的制高点和上帝的眼睛。实际上，最重要的是要有知识，用知识来评判，这些知识是真实的。</p>
+  <p>今天的知识分子和过去是不一样的，儒家过去的确讲“博雅之学”，当然里面也具有知识性，但是更多指向一种明辨是非的能力。有些简单的案例可以用常识判断，但今天这个社会太复杂了，各种各样的问题都具有某种专业性，仅仅用常识是无法进行判断的。在权力的背后，一定有一套知识的合法性在论证，而想要解决复杂的问题就必须要有专业知识。福柯是不承认有普遍知识分子存在的，这里指的是掌握了明辨是非能力、代表普遍正义的知识分子；他更愿意承认特殊的知识分子，即具有专业能力、能够洞晓知识与权力隐秘关系的专家。</p>
+  <p>对现代知识分子来说，应该如何面对知识专业主义和反智主义这两种潮流？我的看法是：知识分子需要从特殊走向普遍。从自己的专业立场出发，上升到普遍的维度来思考和回应复杂的现实世界。如果没有专业的知识作为依托，对任何事情都可以发言和评论，那只是“知道分子”。知识分子在现代社会只有从特殊到普遍，才能走出知识专业主义和反智主义的悖论。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d9a1f9c232e01c17d318e+L.jpeg" data-id="611d9a222114416715c3e685" alt="米歇尔·福柯" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+米歇尔·福柯
+    </figcaption>
+  </figure>
+  <h2 id="section-4"><strong>知识分子的焦虑：为什么总处于尴尬的命运？</strong></h2>
+  <p><strong>陶小路：刘老师对我来讲一直还存在于他的文本里面，还是比较经典的知识分子形象，所以我不了解你的大众参与。近年来，你做了很多与更多意义上的大众群体沟通、交流的工作，你觉得你在跟他们讲授知识，还是在跟他们讲授一种智识生活呢？在这个时代，智识有什么样的意义呢？</strong></p>
+  <p><strong>刘擎：</strong>霍夫施塔特关心的一个问题是，知识分子和大众的关系。他最深刻的洞见，也对当代的处境具有启发，就是他在《第十五章 知识分子：疏离与顺从（Alienation and Conformity）》中表达的洞见，看到了知识分子同时面对着两种现代趋势的压力：一是大众民主与平等主义的压力，一是大众文化和消费主义的压力。他发现，知识人在应对这两种压力时，身陷难以抉择的困境和矛盾，以及分裂。</p>
+  <p>许多知识分子认为，这个时代已经越来越大众化了，所以他们被拒斥、被公众嘲笑，然后就习惯了。他们变得孤芳自赏和冷漠、孤立，习惯于自己被抛弃，形成了一种疏离（alienation）的应对策略。最终，他们相信，疏离是他们唯一可以采取的、合适而又高贵的立场，这是自己应有的命运。知识分子的疏离态度，是一种久远的传统。</p>
+  <p>但有些时期，会有一些知识分子，往往是更年轻的一代，在大众文化中被承认、被吸收或被利用，总之，受到了大众的欢迎。比如，在美国的进步主义时代、新政时期、二战刚刚结束的时候，美国知识分子突然觉得国家改变了，对国家也更认同了。当时的知识分子和国家主流之间发生了妥协，这时候公众就比较接受知识分子。比如，二战之后，许多知识分子有一种对于美国的自豪感。这里可能两个因素：第一，在二战之后，是美国拯救了欧洲；第二，美国扭转了文化上的自卑感——欧洲文化是高雅的，美国文化是粗鄙的。从海明威那一代开始，他们去过欧洲又回来，欧洲最先进文化已经被美国吸收，因此在精神上、在文化学识的意义上，美国与欧洲似乎有同等高度了。那时候，许多美国的知识分子只有对民族和国家的自豪感，这一点跟大众是契合的，进而受到了欢迎。这让我想起，在1980年代中期，中国知识分子曾经也有类似的状况，许多学者是聚光灯下的明星。那时候，不只是科学家，许多人文知识分子也受到大众的尊重和推崇。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d99839c232e01c17d318c+L.jpeg" data-id="611d9987904b8c02a16a4262" alt="理查德·霍夫施塔特" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+理查德·霍夫施塔特
+    </figcaption>
+  </figure>
+  <p>但霍夫施塔特指出，这种受欢迎的知识分子也会有一种焦虑，他们担心自己变得太过顺从了（就是他说的conformity），因此不再具有创造力和批判性，也就失去了真正的知识分子的作用。于是，就出现了一种惶恐感，好像我们知识分子是应该被孤立的，这是高贵的使命，太受欢迎反而产生了惶恐。</p>
+  <p>用他在书里的话说，这造成立场上的基本悖论：“一方面，他们的确怨恨反智主义现象，视其为我们社会之严重缺陷的标志；另一方面，对他们的认可，以更深重的方式困扰着他们，并将之分化。也许，在今日知识分子界，所出现的、最能造成分裂的争议，就围绕着分别确立在旧的疏离和新的认可之上的价值。”这可能不只是两种知识分子的选择，也是知识人自身内部的矛盾：如果说高冷的疏离是自己的命运，这有点悲情；那么被认可是否就意味着顺从，屈服于大众标准呢？</p>
+  <p>我特别关注霍夫施塔特说的“命运的尴尬”。你选择孤芳自赏，其实失去了知识分子的使命感。但如果你被抛在大众欢迎的环境中，你可能丧失了挑战性也就失去了自己的作用。这是知识分子永恒的困境，需要去处理。</p>
+  <p>反省地说，我也不知道自己是不是开始变得顺从了。我的专业是治哲学，现在谈的更多的是人生哲学问题，这当然有许多原因。另外一方面，我坚持不用迎合的态度去做公共讨论。我必须坚持尽可能地表达自己真实的、哪怕不成熟的思考。谦逊和真诚是值得追求的品格，但迎合或取悦不是，无论对象是谁。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d98f04cd55d54dd5dc757+L.png" data-id="611d99029b2d825085c26efb" alt="在《奇葩说》上的刘擎" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+在《奇葩说》上的刘擎
+    </figcaption>
+  </figure>
+  <p>然后，回应一下许老师刚才的话：知识分子内部的反唯理主义的传统和知识分子之间不是不相关的。在狭义的意义上，霍夫施塔特往往使用intellectual的概念。他说的知识分子或智识生活，并不是一种固定的身份，而是一种社会角色，一种精神气质。神职人员，学者，作家和记者，都会可能扮演着类似的角色。但他相信，一个人如果丧失了反思和批判的精神气质，就不是他定义的intellectual。</p>
+  <p>的确，在许多情况下，表面上反智主义的想法也必须是由某种知识来表达的话语。比如说“卑贱者最聪明，高贵者最愚蠢”，其实是一种论述，或者说话语（discourse）。反智主义者如果要展开论述，如果使用论证和逻辑，在宽泛意义上也是一种智识活动。但在霍夫施塔特的狭隘意义上，它们依旧缺乏足够的反思性、批判性和沉思，因而没有达到intellectual的品质。</p>
+  <p>为什么反智主义是现代的现象呢？因为，如果存在以平民大众的名义发言的“反智主义的知识分子”，那么在前现代社会他们的话语是无足轻重的；在现代性之前，所有政治论述和文化论述，都是少数精英的游戏。但现代不同了，在现代的大众民主与大众文化的时代，反智主义的声音具有重要性，因为他们声称代表大众，你需要重视，需要认真对待。</p>
+  <p>如果你不重视的话，你是政治家可能就会在竞选中落败，你是作家就可能没有市场。于是，当一个人以反知识分子的名义、以大众的名义发言，这种声音就不容忽视。因为大众的感受、看法和意愿在现代社会足具份量，迫使传统的知识分子不得不认真对待。虽然许多声称反知识分子的发言者，仍然在用智识化的论述来表达，因此也仍然属于宽泛意义的知识分子阶层。</p>
+  <p>在专业知识和公共知识的问题上，我们一方面讨厌专业都在说术语黑话，但依旧逃不掉科学和专业术语。比如医生昨天跟我说：“你的甘油三酯太高了”，我如果反驳说：“这是你的看法，我认为不是”，这是不行的；医务检测人员对你说：“核酸检查是阳性”，你说：“我觉得我不是阳性”，这也是不行的。这时候，专业知识仍然具有权威，大众对一般的医学和科学的权威是信奉的。但也有例外，比如在美国，有一些民众就不相信气候变暖，也不相信疫苗的作用，其中就有反智主义的倾向。</p>
+  <p>但是，事关道德、价值方面，由于现代工具理性、价值理性的分裂，事实判断和价值判断的分裂，应然和实然的分裂，很多人可能认为，知识分子绝对未必有比我高的见解。而且知识分子有堕落的嫌疑，因为他们读书太多了，“读书读傻了”。</p>
+  <p>知识分子对公众常常有一种爱恨交织的矛盾情绪，而公众对知识分子也是这样。美国的反智主义比较强，但大多数父母还是希望孩子去好的学校读书，要去常春藤或其他名牌大学。父母希望孩子变得更聪明、更有能力，但美国许多大学注重学生的通识教育和批判性思考，读完回来，家长可能会觉得好像孩子“读书读傻了”。</p>
+  <p>这里面有蛮复杂的问题，公众对知识分子和学术机构一方面是相信的，对他们提供的科学实证和技术常常深信不疑；另一方面，对霍夫施塔特所界定的intellectual，又常常是有所怀疑的，不够信任的。这个张力一直存在。</p>
+  <h2 id="section-5"><strong>价值虚无主义的时代，人人希望有导师和上帝？</strong></h2>
+  <p><strong>许纪霖：</strong>过去传统的知识分子，多多少少是带有某种神谕和启示性的，西方来说是这样，中国来说也是这样。当然中国没有上帝，儒家士大夫也不是用神谕的方式，但他们自以为代表天命。天命的解释权在士大夫和读书人手里，民众是他们教化的对象，将人分成先知先觉、后知后觉、不知不觉三种。</p>
+  <p>现代的知识分子脱胎于过去的教士和“教化者”，内在有一种我称之为知识和心灵的“等级结构”，一种上和下的区别、主体与客体的区别。现代知识分子毕竟在欧洲脱胎于教士，在中国脱胎于传统士大夫，这种心智等级的残余到今天还存在。</p>
+  <p>在上世纪八九十年代，中国知识分子普遍地自以为是，自以为是可以启蒙民众，因为多读了点书，多掌握了点真理，所以有使命和担当。今天还有不少知识分子说需要第二次文艺复兴和第二次启蒙，幻想回到上个世纪末知识分子启蒙大众的黄金年代。</p>
+  <p>比较接近真理的理是公众讨论的结果，而非单向的等级性教化或者神谕。但，理是一种专门的技艺和能力，对大部分人来说，想获得这种能力比较有难度。很多年轻人处于这样一个焦虑和困惑的时代，特别是价值虚无主义的时代，希望有导师作为心灵的上帝为自己指明方向。在以前的讲座里，我经常被问到的问题，是“你认为应该怎么办”的问题，他希望的是听到一个解决问题的方案。然而，作为具有反思和批判性的知识分子，与传统的传教士不同，他的专长并非是给出现成的答案，而是通过说理，告诉你问题的复杂性、各种可能性的选项，他自己也是矛盾的、游移在多种合理性的冲突之间，因为他对各种现成的方案都保持警惕的距离，以怀疑的、反思的姿态去打量它们。这便与大众渴望真理、渴望确定性的需求产生了疏离。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d98d19c232e01c17d318b+L.jpg" data-id="611d98d3904b8c02a16a4261" alt="《脉动中国：许纪霖的50堂传统文化课》，许纪霖著，理想国丨上海三联书店2021年3月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《脉动中国：许纪霖的50堂传统文化课》，许纪霖著，理想国丨上海三联书店2021年3月版
+    </figcaption>
+  </figure>
+  <p>五四的时候，有一场发生在《东方杂志》的杜亚泉和《新青年》的陈独秀之间的著名争论。在那场争论里面，杜亚泉是说理的、intellect的，但陈独秀是一种传教士的姿态，以一种非常决断的、不容置疑的态度，宣示自己的态度与立场。结果，年轻人没有跟着杜亚泉，都随陈独秀去了。这不一定是因为陈独秀的知识新，从对新知识的了解程度而言，杜亚泉完全不在陈独秀之下，他们两人的区别，只是话语方式的不同。</p>
+  <p>当时，杜亚泉办《东方杂志》、梁启超为首的研究系办《学灯》、《改造》，介绍公众各种各样西方的新思潮，但并没有特意指出孰是孰非，只是提供给公众，让他们自己在各种新思潮当中，通过自己的理性思考，自由选择。但陈独秀敏锐地注意到“新思潮杀人”，所谓杀人，是指年轻人迷惑于各种思潮，无从选择，最终更加苦闷，甚至有为之而自杀的。因此， 陈独秀在公众面前要扮演的，是一个传教士的角色，告诉你何为新时代的福音、何为救国救民的真理。</p>
+  <p>今天的思想市场，大致也是这个状况。许多有内在精神焦虑的年轻人，有很高的智力（intelligence），但缺乏智识（intellect），他们渴望心灵的导师，渴望能够指点迷津的“卡里斯马式”神魅人物，这就是为什么即使在思想市场也会出现明星和网红。</p>
+  <p>今天这个市场，是流量为王的时代。什么样的人有流量？不一定是媚俗的、取悦于市场的人，因为在市场上最有流量的，是产品的稀缺性，是独一无二的声音。有时候，反市场的声音反而会拥有更多的流量。当市场的主流是尊重知识的时候，反智主义会拥有与众不同的吸引力；当市场风向转为反智的时候，相反的声音反而会赢取更多的流量。</p>
+  <p>反潮流，则是市场的另类取胜之道。一个崇尚流量的市场，在价值观上是中性的、虚无主义的，它信奉的永远是独一无二的稀缺性。美国的公共知识分子乔姆斯基是一个反体制的人，结果他在美国的媒体是永远的宠儿，哪怕他的声音再极端。市场也需要反体制的声音。他的存在，既能证明民主政治的包容性，也能适合市场的另类需求。</p>
+  <p>于是，思想市场的吊诡性由此而生：越是想迎合市场的，反而在大众面前失去了陌生感，失去了产品的稀缺性，而以反潮流、反市场姿态出现的声音，倒拥有了更多的市场流量。在这个多元化、异质化的时代，不同的思想内涵都有其小众。坚守自我，反而成为了知识分子获得公共性的独门法道。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d98bc9c232e01c17d318a+L.jpeg" data-id="611d98bf2114416715c3e683" alt="杜亚泉" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+杜亚泉
+    </figcaption>
+  </figure>
+  <h2 id="section-6"><strong>流量时代：“双向异化的伪公共领域”？</strong></h2>
+  <p><strong>刘擎：</strong>我并不认为大家都在很惶恐，都在等着一个先知指导自己。其实，我们担心出现一种“双向异化的伪公共领域”。身在其中的人，并不是没有自己的想法，没有自己的观点和立场，被动地等待观点的灌输。他们并不愿意直接接受任何冒充为偶像、导师的人。</p>
+  <p>其实，大家心里都有一个倾向和情绪，主动寻找那些吻合自己的倾向和情绪的言说者，你迎合我，说得比我凝练、比我漂亮，我就喜欢你、跟随你，但如果你和我原来的倾向和期待不一致，我就不会理你。于是，在网络时代，我们可以观察到观念市场供应侧和需求侧的合谋：所谓的网红或意见领袖，他们明白市场上存在的大量需求，不断迎合这些需求，而这可能会导致了一种伪公共领域。为什么这是个“伪公共领域”？因为它没有真正的讨论，没有真正意义上的批判性对话和反思，是相互迎合而造成的。</p>
+  <p>但是，并不是所有人都如此。许多人有自己的想法，但保持开放性，他们需要的不仅仅是指南意见，更期待好的论述和证据。马克斯·韦伯在他生活的年代告诫德国年轻人，要警惕“假先知”。“假先知”就是以一种狂热的、好像振振有词的方式对公众发言的人，但没有真正的洞见与深刻的思想，特别是缺乏复杂性，但因为言论明确而极端，可以俘获年轻人，因为许多年轻人需要确定的东西。</p>
+  <p>但是，在一个复杂的时代，对于许多复杂问题给出简单明确的正确答案，都是一个不可能的任务。在我看来，现在作为知识人的责任，就是发出一份邀请：让我们共同面对这个复杂的时代。让大家一起来认真面对、思考和讨论这些困难的、复杂的问题。一个大国，至少需要有一部分公众来一起认真对待这些问题。霍夫施塔特提醒我们，知识人的伦理底线，是不去迎合那个盲从的世界。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d989e4cd55d54dd5dc756+L.jpg" data-id="611d98a19b2d825085c26ef9" alt="马克斯·韦伯" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+马克斯·韦伯
+    </figcaption>
+  </figure>
+  <h2 id="section-7"><strong>互联网是反智主义的新温床？</strong></h2>
+  <p><strong>许纪霖：</strong>今天已经处于一个网络时代，越来越感觉到强大的反智主义在吞噬和包围着我们。为什么这样说？今天这个时代的问题太复杂了，有些问题很专业，仅仅凭靠心智结构中的常识是无法判断的。所以，这个时候公众就特别希望有一个心灵导师，或者是某一个领域专家出现，只要信任他、跟着他走就OK了。</p>
+  <p>所以，今天又出现了一批网络时代的神魅人物，这也是某种意义上的反智。服从真理，变成了信任某个具有神魅性的先知，将自己的思考权利托福给他，以他大脑、知识和心灵来替代自己。</p>
+  <p>网络的变化日新月异，从最初的BBS、到后来的微博、微信，直到今天最红的短视频，每一次技术的变革，都会随之引起思想样式的革命。反智主义，也因而具有了网络时代的特征，这是霍夫施塔特所无法想象的。</p>
+  <p>最好的时代是BBS时代，那时候公众在世纪沙龙、关天茶舍上，还能自由的、平等地讨论问题，尽管立场是冲突的，但彼此是说理的。在新世纪刚刚开始的时候，真是享受到了新的社交媒体提供的知性快乐。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-19/611d9b274cd55d54dd5dc75a+L.jpeg" data-id="611d9b2a9b2d825085c26f00" alt="在bilibili入驻的许纪霖" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+在bilibili入驻的许纪霖
+    </figcaption>
+  </figure>
+  <p>到微博时代，就变得不一样了：微博最开始时只能写140个字，是不可能说清楚道理的。即使你发一条链接，但微博没人看链接的，只看140个字。网友还嫌140个字也太多了，最好是一个吸引眼球的金句，就会大量吸粉。知识分子的时代已经过去了，微博就是网络意见领袖的天下，这些人不一定是知识分子；头部的那些，不是娱乐界明星，就是商界大佬，他们不需要说理，只需要立场坚定、态度明确。怎么说，比说什么更重要。</p>
+  <p>知识分子的说理，是要将论证的过程展示出来，不仅告诉你结论，而且让你检阅和反思结论得以成立的理性论证过程。但是，140个字是不具备反思的技术和空间条件的，微博滋养了更多的反智者：我拒绝思考，跟对人就行，即使之后微博扩展了空间，但网友的阅读习惯已经养成，越来越对长文字不耐烦，思考、注意力的时间，像小孩子那样，越来越短。</p>
+  <p>如今，在年轻人之中，文字都变得累赘，最直接的就是图像。于是，短视频成为了最流行的媒介。在短视频时代，说理变得日益的不可能。文字毕竟还有一种间离效果，还需要通过你的大脑转化为想象和理解，而图像是直接的，且会形成一个气场，就像牧师的布道，直接镇住观看者。我们的大脑不再运作，不再思考，只是任人摆布。在这个意义上说，新媒体在技术上为反智主义提供了一种新的技术条件和空间条件，乃至心智结构。</p>
+  <p>在大数据出现以后，更可怕的是，无论你今天在今日头条、抖音、快手、或者B站、小红书，当你喜欢上某一类信息的时候，大数据就不断推送给你同类信息。我很喜欢梅西，但后来被每天蜂拥而至的推送，看到梅西都快要吐了！算法的推荐，让每个受众变成了成马尔库塞所说的“单向度的人”，不自觉地直接落入单向的信息之中，从而形成单向的思维，单向的人格和单向的立场，一旦进入到施展所说的“信息茧房”，那么，你就是一个被大数据所操控的井底之蛙。</p>
+  <p>今天对现代人最大的控制，实际上是通过资讯进行的。你要控制一个人是很难的，但要控制一群人极容易。微信上大部分的群聊圈，都是人以群分、物以类聚，接受的信息都是单一的，有异类的声音、异类的人出现，触犯众怒，往往会被踢出群，于是剩下的人越来越同质化，变为一个没有差异的“我们”。没有不同声音的对话，只是相互激化。无须用脑，只须自以为是的意志力，形成鲁迅所说的“合群的自大”，相信自己这个群就是代表民意，代表真理，代表潮流。只要氛围形成了，这群人不用外在的力量，就自我控制住了。操控的手段非常简单，就是信息的单向输送，达到一定阶段，不用外在输送，群的内部就会自动过滤异质信息，自我封闭，自我净化。</p>
+  <p>信息时代是反智主义的新温床。“知识”与“信息”是不同的，我们今天得到的大部分实际都是信息，甚至很多知识都是以碎片化的信息方式传输的。信息通常是碎片化的，知识是有一定体系的，这是知识和信息的区别。</p>
+  <p>但我们今天接受的大部分知识，都是以信息的方式传递的；最后如何理解，实际上取决于我们的心智结构。心智结构是一套语法，一个人的语法结构差不多在20岁左右大学时代就被奠定了，以后读再多的书，恐怕只是一些信息化的知识而已，只能放到特点的心智结构和语法关系里来理解。不要迷信一个书读得多的人，核心是要看他的心智结构中的语法。</p>
+  <p>从这点而言，我们可以看到今天的所谓反智，有时候是以知识的方式出现，更多是以信息方式出现，再加上心智结构背后潜伏的意识形态，恰恰剥夺了知识本身的反思性。</p>
+  <p>当公共领域平等讨论的技术条件、空间条件和体制条件都丧失以后，就会陷入网络时代形形色色的反智主义。说实话，这是今天网络时代令人悲哀的地方。所以，在这个意义上来说，反智不仅是现代性的现象，也是网络社会一种被强化的特殊现象。当我们为网络所提供的民主时代（托克维尔的意义上）欢呼时，同时所要警惕的，正是这种愈演愈烈的“网络反智主义”。</p>
+  <p>———</p>
+  <p>微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-08-21</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-21/%E8%88%8C%E5%B0%96%E4%B8%8A%E7%9A%84%E5%86%A5%E5%BA%9C-%E5%9C%A8%E9%AC%BC%E7%9A%84%E4%B8%96%E7%95%8C-%E4%BB%8D%E6%91%86%E8%84%B1%E4%B8%8D%E4%BA%86-%E9%A3%9F%E8%89%B2%E6%80%A7%E4%B9%9F/">
+          舌尖上的冥府：在鬼的世界，仍摆脱不了“食色性也”？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-20</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-20/%E5%A1%94%E5%88%A9%E7%8F%AD-1997-%E9%80%83%E4%BA%A1-%E5%9C%A8%E6%88%90%E4%B8%BA%E6%96%B0%E5%A8%98%E7%9A%84%E7%AC%AC%E4%BA%8C%E5%A4%A9/">
+          塔利班，1997：逃亡，在成为新娘的第二天
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-18</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-18/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA-%E4%BD%9C%E8%80%85%E8%83%A1%E8%B5%9B%E5%B0%BC-%E4%B8%96%E7%95%8C%E5%BF%85%E9%A1%BB%E4%B8%8E%E9%98%BF%E5%AF%8C%E6%B1%97%E5%B9%B3%E6%B0%91%E7%AB%99%E5%9C%A8%E4%B8%80%E8%B5%B7/">
+          《追风筝的人》作者胡赛尼：世界必须与阿富汗平民站在一起
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-18</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-18/%E6%B2%88%E5%8D%AB%E8%8D%A3-%E8%A5%BF%E8%97%8F%E7%9A%84%E6%96%87%E8%89%BA%E6%83%B3%E8%B1%A1-%E6%B5%B7%E5%A4%96%E7%A0%94%E7%A9%B6%E4%B8%8E%E8%A5%BF%E8%97%8F%E5%8F%B2%E7%9A%84%E7%9C%9F%E5%AE%9E%E9%9D%A2%E8%B2%8C%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+          沈卫荣：西藏的文艺想象、海外研究与西藏史的真实面貌丨燕京访谈
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-08-18/EURICS-Analysis-on-Foreign-NGOs-COVID-Relief-Effo/">
+            前一篇：EURICS Analysis on Foreign NGOs’ COVID Relief Efforts
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-08-19/Homage-to-Richard-Nixon/">
+            後一篇：Homage to Richard Nixon
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-08-18/EURICS-Analysis-on-Foreign-NGOs-COVID-Relief-Effo/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-08-19/Homage-to-Richard-Nixon/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-08-20/%E5%A1%94%E5%88%A9%E7%8F%AD-1997-%E9%80%83%E4%BA%A1-%E5%9C%A8%E6%88%90%E4%B8%BA%E6%96%B0%E5%A8%98%E7%9A%84%E7%AC%AC%E4%BA%8C%E5%A4%A9/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-08-18/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA-%E4%BD%9C%E8%80%85%E8%83%A1%E8%B5%9B%E5%B0%BC-%E4%B8%96%E7%95%8C%E5%BF%85%E9%A1%BB%E4%B8%8E%E9%98%BF%E5%AF%8C%E6%B1%97%E5%B9%B3%E6%B0%91%E7%AB%99%E5%9C%A8%E4%B8%80%E8%B5%B7/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-08-18/EURICS-Analysis-on-Foreign-NGOs-COVID-Relief-Effo/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-08-19/Homage-to-Richard-Nixon/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-08-20/%E5%A1%94%E5%88%A9%E7%8F%AD-1997-%E9%80%83%E4%BA%A1-%E5%9C%A8%E6%88%90%E4%B8%BA%E6%96%B0%E5%A8%98%E7%9A%84%E7%AC%AC%E4%BA%8C%E5%A4%A9/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-08-18/%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA-%E4%BD%9C%E8%80%85%E8%83%A1%E8%B5%9B%E5%B0%BC-%E4%B8%96%E7%95%8C%E5%BF%85%E9%A1%BB%E4%B8%8E%E9%98%BF%E5%AF%8C%E6%B1%97%E5%B9%B3%E6%B0%91%E7%AB%99%E5%9C%A8%E4%B8%80%E8%B5%B7/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>When Will China Get off Coal? – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+When Will China Get off Coal?
+——
+" />
+    <meta property="og:description" content="
+When Will China Get off Coal?
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="When Will China Get off Coal?" />
+    <meta property="twitter:title" content="When Will China Get off Coal?" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fwhen-will-china-get-coal" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/when-will-china-get-coal" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/when-will-china-get-coal&text=When Will China Get off Coal?&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/when-will-china-get-coal&title=When Will China Get off Coal?" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/when-will-china-get-coal&title=When Will China Get off Coal?" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=When Will China Get off Coal?&body=
+When Will China Get off Coal?
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/when-will-china-get-coal" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/when-will-china-get-coal&title=When Will China Get off Coal?&caption=
+When Will China Get off Coal?
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=When Will China Get off Coal?&url=https://www.chinafile.com/conversation/when-will-china-get-coal" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>When Will China Get off Coal?</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-11-08
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Lauri Myllyvirta, Alex Wang &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/when-will-china-get-coal" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1636386480000-->
+<p><a href="https://www.chinafile.com/conversation/when-will-china-get-coal">When Will China Get off Coal?</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-bf44c79bc4a609e4f9f2d87dfe603475">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/gettyimages-1236116350.jpeg" title="When Will China Get off Coal?" class="colorbox" data-colorbox-gallery="gallery-node-53496-Iwc9cNe0Irs" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/gettyimages-1236116350.jpeg?itok=pBJ8Kl60" width="1200" height="800" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+(AFP/Getty Images)
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Coal is loaded onto a cargo ship in Jiujiang, Jiangxi province, October 24, 2021.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">With COP26 entering its second and final week, Xi Jinping has faced <a href="https://www.npr.org/2021/11/08/1053545667/cop26-russia-china-obama" target="_blank" rel="nofollow">criticism</a> for failing to attend the climate conference in person, and for <a href="https://www.theguardian.com/environment/2021/nov/01/cop26-xi-jinping-china-president-sidesteps-videolink-written-statement" target="_blank" rel="nofollow">offering</a> no major new pledges.</p>
+      <p>China’s latest quarterly economic report shows a significant slowing of growth, with GDP <a href="https://www.cnbc.com/2021/10/18/china-economy-third-quarter-gdp-data-grows-4point9percent-missing-expectations.html" target="_blank" rel="nofollow">increasing</a> only 4.9 percent compared with 7.9 percent in the previous period. Among the several factors causing this slowdown, perhaps the most significant in a global context is widespread electricity shortages in key manufacturing areas.</p>
+      <p>As China looks to meet its energy demands, there has been a rush for coal, with prices <a href="https://www.reuters.com/business/energy/china-coal-hits-record-high-amid-tight-supplies-2021-10-19/" target="_blank" rel="nofollow">hitting record</a> highs in October. Despite pledges by Beijing to pull back from fossil fuels, the power crisis has exposed shortfalls in the country’s ability to meet its manufacturing needs. Coal <a href="https://www.cnbc.com/2021/04/29/climate-china-has-no-other-choice-but-to-rely-on-coal-power-for-now.html" target="_blank" rel="nofollow">still supplies</a> more than half the nation’s power. When more than 40 countries last week <a href="https://www.nytimes.com/2021/11/04/climate/cop26-coal-climate.html" target="_blank" rel="nofollow">signed</a> a pledge to phase out coal, China (along with the U.S. and India) was noticeably absent.</p>
+      <p>Can China ever hope to meet its energy needs without relying on dangerous fossil fuels? What are the implications for the global effort to combat climate change? —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9246" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/lauri-myllyvirta"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/lauri_myllyvirta.jpg?itok=vWIbCaek" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="lauri-myllyvirta"><a href="https://www.chinafile.com/contributors/lauri-myllyvirta" title="Lauri Myllyvirta">Lauri Myllyvirta</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The most important reason for China’s weak third-quarter economic numbers is the tightening of credit to the real estate sector to tamp down runaway prices and debt levels. This was a deliberate policy decision, but the economy-wide impacts are probably proving larger than policymakers expected, highlighting the outsize role and speculative nature of real estate in China’s economy.</p>
+        <p>The government’s <a href="https://www.cnn.com/2021/10/20/business/china-coal-production-intl-hnk/index.html" target="_blank" rel="nofollow">efforts</a> to increase domestic coal production are necessary because production fell behind demand over the past year. The prices paid to coal power plants for the electricity that they produce are regulated by the National Development and Reform Commission (NDRC), while the prices plants have to pay for coal are set on the market. The NDRC kept <a href="https://foreignpolicy.com/2021/10/07/china-energy-crisis-electricity-coal-pricing-renewables/" target="_blank" rel="nofollow">electricity prices</a> at a low level, to support industrial recovery, despite the increase in coal prices starting in late 2020. This made it unprofitable for coal plants to purchase coal and generate power. Coal output was additionally affected by supply disruptions resulting from <a href="https://www.argusmedia.com/en/news/2218274-china-issues-flood-precautions-to-coal-producers" target="_blank" rel="nofollow">flooding</a> as well as government safety and anti-corruption <a href="http://www.cinic.org.cn/hy/ny/901628.html" target="_blank" rel="nofollow">campaigns</a>. The current efforts are making up for this earlier shortfall rather than preparing for a future increase in demand. I would not read anything into this crisis management response. Emissions have in fact fallen in recent months due to the dramatic reduction in <a href="http://www.stats.gov.cn/tjsj/zxfb/202110/t20211018_1822963.html" target="_blank" rel="nofollow">heavy industry output</a>, particularly steel and cement for construction.</p>
+        <p>Engineering a “soft landing” for real estate is an essential part of China’s economic transition. Therefore, the real estate slowdown will be a long-term trend. The economic transition, in turn, will enable the low-carbon transition by reducing the demand for steel, cement, and other emissions-intensive commodities which are <a href="https://www.bloomberg.com/graphics/2021-china-climate-change-biggest-carbon-polluters/" target="_blank" rel="nofollow">currently responsible</a> for the lion’s share of China’s emissions.</p>
+        <p>China is already the world’s largest developer of new wind, solar, and nuclear power capacity. The impressive scale of these industries means that powering the country entirely on clean energy by mid-century is eminently achievable. Achieving this goal will <a href="https://www.carbonbrief.org/influential-academics-reveal-how-china-can-achieve-its-carbon-neutrality-goal" target="_blank" rel="nofollow">require</a> a doubling to tripling of the amount of capacity installed annually from levels recorded in recent years. This scale of investment will allow for all electricity needs to be met with clean energy. Moreover, it will be sufficient to allow fossil fuel use in transport, industry, and households to be replaced with electricity, and, to a lesser extent, clean hydrogen or other clean synthetic fuels produced using clean electricity. Given the past growth rates of annual installations, a tripling over the next years can definitely be realized. In general, China’s economic model is very good at mobilizing large-scale projects and investment when desired; the pace of the transition away from coal will be determined by how rapid a downsizing of the country’s coal industry policymakers can tolerate.</p>
+        <p>More concerning is that the State Council’s much-awaited CO2 <a href="http://www.news.cn/english/2021-10/26/c_1310270541.htm" target="_blank" rel="nofollow">peaking action plan</a> turned out to be much less specific than expected, lacking CO2 peaking timelines, peaking levels, or emissions reduction targets for key industries and for provinces, as well as for the economy as a whole. This indicates that the economic slowdown precipitated by the real estate slump, coal crisis, and new COVID-19 control measures is increasing the uncertainty over the future emissions outlook, raising the possibility that China’s government will resort to further emissions-intensive stimulus despite the <a href="http://www.news.cn/english/2021-08/27/c_1310151035.htm" target="_blank" rel="nofollow">policy</a> of curbing “high-emissions” projects. It seems that this has made the leadership hesitant to commit to a specific emission trajectory over this decade, even if the immediate impact of the economic slowdown has been to lower emissions.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9256" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/alex-wang"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/alex_wag_portrait_s.jpeg?itok=bljT1JWJ" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="alex-wang"><a href="https://www.chinafile.com/contributors/alex-wang" title="Alex Wang">Alex Wang</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The short answer is yes, China can someday meet its energy needs without relying on fossil fuels. The critical question, however, is whether China will do it quickly enough. China’s 2060 carbon neutrality <a href="http://english.www.gov.cn/policies/latestreleases/202110/24/content_WS61755fe9c6d0df57f98e3bed.html" target="_blank" rel="nofollow">target</a> is a good start. At the <a href="https://www.spglobal.com/platts/en/market-insights/latest-news/electric-power/042321-china-to-curb-coal-demand-growth-in-14th-5-year-plan-reduce-further-in-15th-plan" target="_blank" rel="nofollow">April 2021 Leaders Climate Summit</a>, Xi Jinping <a href="https://www.reuters.com/world/china/chinas-xi-says-china-will-phase-down-coal-consumption-over-2026-2030-2021-04-22/" target="_blank" rel="nofollow">mentioned</a> China’s intention to “strictly control coal-fired power generation projects, and strictly limit the increase in coal consumption over the 14th Five-Year Plan period [2021-25] and phase it down in the 15th Five-Year Plan period [2026-30].”</p>
+        <p>But for China’s actions to be consistent with the global 1.5 degrees Celsius goal, analysts generally agree that China will need to begin reducing its fossil fuel consumption immediately and engage in rapid CO2 emissions reductions over the next 5-10 years (current targets only call for emissions to peak before 2030). The country certainly should not permit the development of new coal plants and should vigorously expand its support for non-fossil energy.</p>
+        <p>To hit the 1.5 degrees Celsius goal, the world must <a href="https://www.aljazeera.com/opinions/2021/10/31/new-climate-pledges-are-weak-but-it-isnt-too-late-to-catch-up" target="_blank" rel="nofollow">reduce</a> annual emissions by nearly half within the next eight years. To put this in perspective, the 28 gigatonnes of CO2 equivalent needed above current pledges is only slightly less than the <a href="https://www.pbl.nl/en/trends-in-global-co2-emissions" target="_blank" rel="nofollow">total emissions</a> of the G20 in 2019. The world desperately needs China’s help to reach this goal.</p>
+        <p>Can China do this?</p>
+        <p>Talk to regulators, researchers, and businesspeople in clean tech and green finance within China and they suggest that China’s pressurized political environment has now trained its sights on promoting eco-civilization (the overarching “development concept” that ties China’s environmental efforts together). This is a dramatic turn from a decade ago when the environment was simply a much lower political priority. They say that the political will is there now. They say that that commitment is being translated into policy, enforcement, and finance. At ground-level, state and private actors are apparently clamoring to respond to a growing array of environmental requirements.</p>
+        <p>In the run-up to COP26, China released two high-level documents: a working <a href="http://www.news.cn/english/2021-10/24/c_1310265726.htm" target="_blank" rel="nofollow">guidance</a> document on the carbon peaking and neutrality goals, and an <a href="http://www.news.cn/english/2021-10/27/c_1310270985.htm" target="_blank" rel="nofollow">action plan</a> for the 2030 peaking goal. These so-called “1+N” documents begin to spell out China’s future path on climate change and offer some insight into how China plans to meet its future energy needs in a greener way.</p>
+        <p>At the same time, it remains too difficult to determine exactly how China is faring on policy approach and implementation. Even those of us who research China’s climate actions can find it difficult to gather sufficient information to demonstrate how Chinese climate policies are doing in practice. And in the vacuum of information, skeptical voices gain the upper hand. Chinese leaders need to be able to communicate the country’s burgeoning climate program more clearly and in greater detail, and show that that program is actually doing enough.</p>
+        <p>This month’s climate meeting in Glasgow shines a light on the need for faster, more decisive climate action from China <em>and</em> the imperative for China to make its action (or inaction) more legible to the world.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9266" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/ilaria-mazzocco"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/mazzocco_sm.jpg?itok=u2Diy5QE" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="ilaria-mazzocco"><a href="https://www.chinafile.com/contributors/ilaria-mazzocco" title="Ilaria Mazzocco">Ilaria Mazzocco</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Can China ever hope to meet its energy needs without relying on dangerous fossil fuels? What are the implications for the global effort to combat climate change?</p>
+        <p>The real question isn’t whether China can successfully transition away from fossil fuels but whether it can do so quickly and thoroughly enough to mitigate the effects of climate change. The Chinese government’s political commitment to the energy transition is no longer really in doubt, but it has espoused a relatively gradualist approach over the next five years. This year’s energy shortages have complicated the situation further and may have constrained the leadership in its current climate ambition. Such caution, while perhaps warranted by fears of disruption, could also eventually undermine the longer-term goals that the country has set for itself.</p>
+        <p>Most importantly, the <a href="https://www.reuters.com/world/china/chinas-xi-says-china-will-phase-down-coal-consumption-over-2026-2030-2021-04-22/" target="_blank" rel="nofollow">stated decision</a> to continue expanding coal use until the next five-year plan in 2026 will make it even more challenging to lower emissions quickly enough to reach carbon neutrality by 2060. In 2019, China was estimated to <a href="https://rhg.com/research/chinas-emissions-surpass-developed-countries/" target="_blank" rel="nofollow">account for</a> 27 percent of global greenhouse gas emissions. Since coal was <a href="https://ourworldindata.org/grapher/CO2-by-source?stackMode=relative&amp;country=~CHN" target="_blank" rel="nofollow">responsible</a> for 70 percent of the country’s CO2 emissions that same year, tackling its use is key to combating climate change globally. However, the Chinese government has not set a cap on emissions yet, so even though a <a href="https://www.bruegel.org/2021/04/chinas-has-a-grand-carbon-neutrality-target-but-where-is-the-plan/" target="_blank" rel="nofollow">tentative</a> date has been set for peaking CO2 emissions by 2030, it is unclear just how high the peak will be. This creates a challenge in evaluating the country’s approach: Politically, it is headed in the right direction and made welcome commitments last year, but its gradualist method could be bad news for our climate.</p>
+        <p>China’s recent <a href="https://www.reuters.com/business/energy/china-coal-hits-record-high-amid-tight-supplies-2021-10-19/" target="_blank" rel="nofollow">energy shortages</a> have also highlighted the challenges embedded in the country’s still highly inflexible energy system and the difficulties in engineering a rapid pivot away from coal. For most countries, achieving carbon neutrality will require electrifying large swaths of the economy that currently rely on direct combustion (from cars, to factories, to cooking stoves), while, at the same time, replacing fossil fuels with renewables. The additional hurdle is that in China, unlike developed economies like the U.S., the demand for energy continues to grow annually as living standards increase and energy-intensive sectors like construction and heavy industry continue to fuel economic growth. This means that the country will need to expand its alternative energy sources far more quickly, which will put pressure on a power system that is still undergoing much-needed market reforms.</p>
+        <p>Despite the bleak outlook for climate, there are some positive trends, which may catalyze crucial short-term action. This energy shortage may finally dispel the myth that coal is the key to China’s energy security. The leadership has moved quickly to partially liberalize energy prices in October, putting more pressure on energy-intensive industries. And while the Chinese leadership has shied away from committing to a specific date for peaking emissions, more details may emerge in the upcoming sector-specific plans, which President Xi <a href="http://www.news.cn/english/2021-11/01/c_1310284288.htm" target="_blank" rel="nofollow">highlighted</a> in his remarks at the COP26 World Leaders’ Summit.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9271" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/philip-andrews-speed"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/philip_andrews-speed.jpg?itok=TfwFdxb7" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="philip-andrews-speed"><a href="https://www.chinafile.com/contributors/philip-andrews-speed" title="Philip Andrews-Speed">Philip Andrews-Speed</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Recent events in China have highlighted the multiple challenges facing the country as it seeks to move to a low-carbon economy. The dependence of the economy on energy-intensive infrastructure investment and the rest of the world’s reliance on Chinese manufactured goods have continued to underpin rising energy demand. The high, though declining, <a href="https://www.reuters.com/business/energy/what-does-chinas-power-policy-shift-mean-metal-makers-other-energy-hogs-2021-10-13/" target="_blank" rel="nofollow">shares</a> of coal (56.6 percent) and fossil fuels (coal, oil, and natural gas) (84 percent) in China’s <a href="https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html" target="_blank" rel="nofollow">energy mix</a> ensure that its carbon dioxide emissions continue to rise. Further, as we are seeing right now, coal is the back-up fuel during an energy supply crisis.</p>
+        <p>Once the current crisis is past, say by Spring 2022 when the winter heating season is over, the government will need to intensify its stated agenda in three ways: constraining the rate of economic growth, switching the structure of the economy away from its excessive dependence on construction and infrastructure, and further accelerating the deployment and use of renewable energy. The last of these requires not just more wind and solar plants and transmission wires, but also related supporting technologies such as energy storage and responsive power systems. Just as important is the need for regulatory institutions to ensure that low-carbon energy is always the first to be dispatched and used.</p>
+        <p>Steps such as these should ensure that China’s greenhouse gas emissions peak before 2030 as planned. Achieving carbon neutrality by 2060 while sustaining a politically tolerable level of economic growth will be a much tougher challenge. A 2020 Tsinghua University <a href="https://www.efchina.org/News-en/Program-Updates-en/programupdate-lceg-20201020-en" target="_blank" rel="nofollow">study</a> showed that this is technically possible. However, turning this ambition into reality will require bold decisions.</p>
+        <p>The State Council and the Central Committee of the Chinese Communist Party recently announced a <a href="http://english.www.gov.cn/policies/latestreleases/202110/24/content_WS61755fe9c6d0df57f98e3bed.html" target="_blank" rel="nofollow">plan</a> that involves reducing the share of fossil fuels in the primary energy mix to below 20 percent by 2060. The consumption of coal should start declining in 2026. Meanwhile, efforts to exploit unconventional oil and gas resources will be intensified. Security of energy supply remains the top priority, and fossil fuels will continue to occupy a significant share of the energy mix beyond 2060. Presumably, the emissions they produce will be offset by carbon sinks and by carbon capture, usage, and storage (CCUS).</p>
+        <p>What is striking is that China has been relatively slow to deploy CCUS at scale, despite the size of its carbon emissions. At present, there are no large-scale (1 million tonnes per year or greater) CCUS projects operating. The three projects in commercial operation have <a href="https://www.globalccsinstitute.com/resources/global-status-report/" target="_blank" rel="nofollow">capacities</a> of around 100,000 tonnes per year and all use the capture gas for enhanced oil recovery—in other words, to produce more fossil fuels. Six large-scale CCUS projects are due to <a href="https://www.sciencedirect.com/science/article/abs/pii/S1364032119308093" target="_blank" rel="nofollow">go into commission</a> in China in the 2020s, mostly linked to power plants. This contrasts with the 14 large-scale projects that were in operation in other countries by 2020 (in the U.S., Canada, Brazil, Australia, and Norway), five of which involve dedicated storage rather than enhanced oil recovery. Unless China massively scales up its CCUS industry and directs it at storage or at uses that do not involve producing more fossil fuels, the nation’s carbon emissions from fossil fuels may not even be quenched by 2100.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2021-11-30</time>
+        <a href="https://nodebe4.github.io/oped2/2021-11-30/List-of-De-Registered-Representative-Offices/">
+          List of De-Registered Representative Offices
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-11-24</time>
+        <a href="https://nodebe4.github.io/oped2/2021-11-24/What-Future-for-International-NGOs-in-China/">
+          What Future for International NGOs in China?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-11-08</time>
+        <a href="https://nodebe4.github.io/oped2/2021-11-08/When-Will-China-Get-Off-Coal/">
+          When Will China Get Off Coal?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-10-20</time>
+        <a href="https://nodebe4.github.io/oped2/2021-10-20/The-CCP-s-Culture-of-Fear/">
+          The CCP’s Culture of Fear
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-11-08/When-Will-China-Get-Off-Coal/">
+            前一篇：When Will China Get Off Coal?
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-11-08/%E4%B8%80%E4%B8%AA%E8%9C%9C%E7%BD%90-Pixel-4a-%E6%89%8B%E6%9C%BA-iYouPort/">
+            後一篇：一个蜜罐 Pixel 4a 手机 - iYouPort
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-11-08/When-Will-China-Get-Off-Coal/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-11-08/%E4%B8%80%E4%B8%AA%E8%9C%9C%E7%BD%90-Pixel-4a-%E6%89%8B%E6%9C%BA-iYouPort/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-11-24/What-Future-for-International-NGOs-in-China/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-11-08/When-Will-China-Get-Off-Coal/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-11-08/When-Will-China-Get-Off-Coal/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-11-08/%E4%B8%80%E4%B8%AA%E8%9C%9C%E7%BD%90-Pixel-4a-%E6%89%8B%E6%9C%BA-iYouPort/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-11-24/What-Future-for-International-NGOs-in-China/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-11-08/When-Will-China-Get-Off-Coal/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

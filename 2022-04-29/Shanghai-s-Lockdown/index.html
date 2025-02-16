@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Shanghai’s Lockdown – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Shanghai’s Lockdown
+——
+" />
+    <meta property="og:description" content="
+Shanghai’s Lockdown
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Shanghai’s Lockdown" />
+    <meta property="twitter:title" content="Shanghai’s Lockdown" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fshanghais-lockdown" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/shanghais-lockdown" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/shanghais-lockdown&text=Shanghai’s Lockdown&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/shanghais-lockdown&title=Shanghai’s Lockdown" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/shanghais-lockdown&title=Shanghai’s Lockdown" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Shanghai’s Lockdown&body=
+Shanghai’s Lockdown
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/shanghais-lockdown" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/shanghais-lockdown&title=Shanghai’s Lockdown&caption=
+Shanghai’s Lockdown
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Shanghai’s Lockdown&url=https://www.chinafile.com/conversation/shanghais-lockdown" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Shanghai’s Lockdown</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-04-29
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Kenton Thibaut, Guobin Yang &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/shanghais-lockdown" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1651225920000-->
+<p><a href="https://www.chinafile.com/conversation/shanghais-lockdown">Shanghai’s Lockdown</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-d50a02c17908c7eba686c2752294143c">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/53971_sm.jpg" title="Shanghai’s Lockdown" class="colorbox" data-colorbox-gallery="gallery-node-53971-bNTYCnMCa6A" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/53971_sm.jpg?itok=zg383VzL" width="1500" height="998" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Hector Retamal—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>People are tested for COVID-19 in a locked-down neighborhood after the detection of new cases of COVID-19, in the Huangpu district of Shanghai, March 17, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">In late March, China started its largest lockdown in more than two years, with most of Shanghai’s 26 million residents confined to their homes in an effort to battle the rapid spread of Omicron. As of <a href="https://www.npr.org/2022/04/19/1093620434/45-cities-in-china-are-in-some-sort-of-covid-lockdown-heres-the-toll-thats-takin" target="_blank" rel="nofollow">mid-April</a>, 45 cities across the country were under some kind of lockdown. Though China’s overall vaccination rate is around 88 percent, just 80 percent of those over 60 had been <a href="https://www.scmp.com/news/china/science/article/3173891/learning-hong-kong-china-targets-elderly-covid-19-vaccine-drive" target="_blank" rel="nofollow">fully vaccinated</a> as of early April. Only 55 percent had received boosters. With <a href="https://www.nytimes.com/2022/03/23/health/sinovac-coronavirus-booster-hong-kong.html" target="_blank" rel="nofollow">new research</a> showing significant leaps in efficacy of Sinovac among the elderly after a third dose, the country has been <a href="https://english.news.cn/20220412/19ce0757e64346b698e645662c64232a/c.html" target="_blank" rel="nofollow">ramping</a> up its vaccination efforts. In the meantime, it is clear the hard lockdowns have come with costs. Online, Shanghai netizens have been <a href="https://twitter.com/ThisIsWenhao/status/1514377176778432521" target="_blank" rel="nofollow">sharing</a> lockdown horror stories amid a rare showing of widespread public dissent. In agricultural areas, the lockdowns have raised <a href="https://www.scmp.com/economy/china-economy/article/3173149/china-food-security-farmers-jilin-leave-fields-fallow" target="_blank" rel="nofollow">concerns</a> that key crops will go unharvested. In megacities like Shanghai, lockdowns have underscored vast inequality and the unequal distribution of government services—particularly for <a href="https://www.theworldofchinese.com/2022/04/how-are-shanghais-migrant-workers-faring-under-lockdown/" target="_blank" rel="nofollow">migrant</a> workers. How sustainable are current government approaches to the latest wave of infections, and where are they likely to lead? —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9796" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/kenton-thibaut"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/kenton_thibaut.png?itok=j5dYJrme" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="kenton-thibaut"><a href="https://www.chinafile.com/contributors/kenton-thibaut" title="Kenton Thibaut">Kenton Thibaut</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Clear signs of public discontent have appeared both in person and online in China’s social media sphere since the start of the Shanghai lockdown. Videos capturing these scenes of dissent have circulated online, including <a href="https://web.archive.org/web/20220426152423/http:/web.archive.org/screenshot/https:/mp.weixin.qq.com/s?src=11&amp;timestamp=1650986580&amp;ver=3762&amp;signature=YOAXLK3-sEivN87GnbDQxT9JjQ1qAd2UxAWu91wWlKFDqik2Nda4AwR4mssSYiLS22klVUiuD1e-HeBAWmpKN3srh9yTcdwuRgRnjfamnmecErGAMVF5WFbj1fWW4SWI&amp;new=1" target="_blank" rel="nofollow">images</a> of Shanghai residents kicking down <a href="https://twitter.com/chris__pc/status/1518171958742986752" target="_blank" rel="nofollow">barriers</a> erected in front of residential buildings, <a href="https://www.taiwannews.com.tw/en/news/4508425" target="_blank" rel="nofollow">videos</a> of people <a href="https://www.cnn.com/videos/world/2022/04/21/shanghai-residents-push-back-against-covid-measures-culver-dnt-ebof-vpx.cnn" target="_blank" rel="nofollow">confronting</a> police and quarantine enforcers, and a viral <a href="https://www.youtube.com/watch?v=UtJzvJBZZ4M" target="_blank" rel="nofollow">video</a> known as “Voices of April” (“四月之声”) capturing sentiments of helplessness and anger have flooded Chinese social media, despite the efforts of China’s censors to <a href="https://chinadigitaltimes.net/chinese/680139.html" target="_blank" rel="nofollow">remove</a> it.</p>
+        <p>This outpouring of dissent has led to reports <a href="https://www.nytimes.com/2022/04/07/world/asia/shanghai-covid-china.html" target="_blank" rel="nofollow">predicting</a> a coming “<a href="https://www.cnn.com/2022/04/15/china/china-covid-xi-jinping-shanghai-crisis-intl-hnk-mic/index.html" target="_blank" rel="nofollow">crisis</a>” for the Chinese Communist Party (CCP) and <a href="https://www.foreignaffairs.com/articles/united-states/2020-04-03/chinas-coming-upheaval" target="_blank" rel="nofollow">Xi Jinping</a>. However, there is little reason to believe that the unrest in Shanghai will lead to a crisis for the central government.</p>
+        <p>First, there is a tendency among Western observers to assume that the target of protests is the central government. However, protests like these have <a href="https://twitter.com/yilingliu95/status/1517694621106638848?s=20&amp;t=zJB9OowF4e2VKvw2aLtv0g" target="_blank" rel="nofollow">occurred</a> throughout the Party-state’s existence. Sometimes they do rise to the level of <a href="https://www.britannica.com/event/Tiananmen-Square-incident" target="_blank" rel="nofollow">demands</a> for substantial changes, but the vast <a href="https://www.cambridge.org/core/journals/government-and-opposition/article/abs/zerosum-game-repression-and-protest-in-china/13A81B174A7DA24BAA9D6DCF86556F30" target="_blank" rel="nofollow">majority</a> of protests aim to secure immediate objectives. In Shanghai, the targets of criticism are perceived incompetence and corruption at the local level, and concrete issues like the scarcity of food and other key goods. Though these protests are larger in scale, their grievances are similarly specific and their aims limited.</p>
+        <p>China’s internal security apparatus is practiced at containing social unrest. Protests like this are <a href="https://www.cambridge.org/core/journals/government-and-opposition/article/abs/zerosum-game-repression-and-protest-in-china/13A81B174A7DA24BAA9D6DCF86556F30" target="_blank" rel="nofollow">not rare</a> in China; local protests <a href="https://thediplomat.com/2019/07/environmental-protest-breaks-out-in-chinas-wuhan-city/" target="_blank" rel="nofollow">addressing</a> environmental issues or in <a href="https://www.bbc.com/news/world-asia-china-33955963" target="_blank" rel="nofollow">response</a> to public safety incidents occur with relative frequency. Local officials have a <a href="https://books.google.com/books?hl=en&amp;lr=&amp;id=wa5mDwAAQBAJ&amp;oi=fnd&amp;pg=PT4&amp;dq=popular+protest+in+China&amp;ots=pji-HklvJx&amp;sig=qTq73pSgOHPF0H0QMBU8Z6lhIcU#v=onepage&amp;q=popular%20protest%20in%20China&amp;f=false" target="_blank" rel="nofollow">range</a> of options available to <a href="https://library.oapen.org/bitstream/handle/20.500.12657/52393/978-3-030-90221-6.pdf?sequence=1#page=133" target="_blank" rel="nofollow">address</a> even widespread dissent, and often deploy them together—from crushing demonstrations and arresting protest leaders, to hiring local thugs to rough up protesters, to censoring online discussions, to allowing citizens to <a href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.31.1.117" target="_blank" rel="nofollow">vent</a> their frustrations online in a controlled manner, to actually addressing core concerns of protesters.</p>
+        <p>Third, protest events can in some cases serve to strengthen the regime. As mentioned above, the state <a href="https://www.tandfonline.com/doi/full/10.1080/10670564.2020.1852741" target="_blank" rel="nofollow">learns</a> from incidents of social unrest. Protests in authoritarian regimes can actually be helpful in making society <a href="https://journals.sagepub.com/doi/pdf/10.1177/0001839218770456" rel="nofollow">legible</a>—that is, letting the regime know where points of contention are and how to address them to prevent collective mobilization. In addition, the central government has an easy scapegoat in blaming local officials for policy failures. To mollify angry citizens, the Chinese state commonly deploys the tactic of removing local officials, giving the CCP the added boost of being <a href="https://link.springer.com/article/10.1007/s12140-008-9055-y" target="_blank" rel="nofollow">seen</a> as <a href="https://www.jstor.org/stable/10.1086/671339?seq=1" target="_blank" rel="nofollow">responsive</a> to citizens’ concerns.</p>
+        <p>China will likely continue to adopt a conservative approach to COVID, as leaders will be highly risk-averse in the runup to China’s 20th National Party Congress. The more likely outcome of these protests is that some local-level officials may be replaced in the coming weeks, and the state will learn from citizen responses to the lockdown. In sum, we should not expect any major crises of legitimacy to come from the unrest in Shanghai.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9806" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/guobin-yang"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/yang_sm.jpg?itok=wlLGsI8H" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="guobin-yang"><a href="https://www.chinafile.com/contributors/guobin-yang" title="Guobin Yang">Guobin Yang</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">During the Wuhan lockdown in 2020, <a href="https://link.springer.com/article/10.1007/s00146-020-01141-5" target="_blank" rel="nofollow">personal diaries</a> shared on social media were valuable sources of information about what was happening on the ground. Although not as many diaries have been posted during the ongoing Shanghai lockdown, those that have appeared still offer rare glimpses into the plight of Shanghai residents, as well as insights about possible ways to improve the management of lockdowns.</p>
+        <p>In an entry posted on April 9, 2022, a diarist complained about the residential committee in his neighborhood. Grassroots residential committees had played an essential role in delivering services to locked-in residents in Wuhan. How about Shanghai? In his neighborhood at least, the diarist reported, the residential committee had basically given up providing services and was only ordering residents to test twice in one day. The diarist also complained that many families had difficulties shopping for groceries or had to buy food at high prices via online group-buying, even as vegetables and meat donated to Shanghai by other cities spoiled because they were not efficiently distributed or stored.</p>
+        <p>Another diarist enumerated similar cases of mismanagement in an entry dated April 8. The night before, at 12:30 a.m., he had already gone to bed when a staff member from his residential committee called to inform him that his parents had tested positive and a bus would arrive at 2:00 or 3:00 a.m. to take them all into quarantine. Asked why they had to do this so late at night, the person on the phone said they themselves had only just been notified of the test results. The angry diarist decided to ignore the request and returned to bed. The next morning, when the residential committee called to check whether the COVID management authorities had been in touch with him, the diarist realized that those who were managing the lockdown did not even communicate effectively among themselves.</p>
+        <p>The diarist did share a story of success, however. One of the challenges of asking residents to frequently take PCR tests is long lines. If not managed properly, these occasions may become points of exposure. In one case, however, a couple in a high-rise building with only one working elevator designed a simple but efficient plan such that all residents in the building were tested in just one and a half hours.</p>
+        <p>The experiences of the two diarists show that the top-down, one-size-fits-all policies of COVID control and prevention in China do not always work, certainly not across the board. Why? Because as often happens in bureaucracies, the process of policy implementation becomes a matter of formality and appearance—known as “<a href="https://www.theguardian.com/world/2020/mar/06/fake-fake-senior-chinese-leader-heckled-by-residents-on-visit-to-coronavirus-epicentre" target="_blank" rel="nofollow">formalism</a>” (形式主义, <em>xingshizhuyi</em>) in Chinese discourse. The individuals in the bureaucratic system, like the residential committee staff who called the diarist at midnight to move his parents into quarantine, would rather blindly follow instructions than question the irrationality of the procedures. That is the source of the plight of the Shanghai lockdown. A more effective approach would have to be more creative and flexible. To avoid the curse of “formalism” in top-down governance, it would also need to rely more on citizens’ own resourcefulness and self-organizing.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9811" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/mattie-bekink"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/bekink_sm.jpg?itok=NQNhrzeZ" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="mattie-bekink"><a href="https://www.chinafile.com/contributors/mattie-bekink" title="Mattie Bekink">Mattie Bekink</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Two months ago, you could not go 500 meters in this city without running into an oat milk latte or a trendy boutique. Two weeks ago, I traded a slab of pork with a neighbor for imported milk for my children. Shanghai’s extreme, and seemingly endless, lockdown has brought this vibrant city to a standstill.</p>
+        <p>The reality of daily life under this lockdown is surreal, and as anger and frustration rise, queries increase about an exit strategy. Shanghai is also not alone in its misery; in early April, <a href="https://twitter.com/Gavekal/status/1513451678221025282?cxt=HHwWhICqkYyS7oAqAAAA" target="_blank" rel="nofollow">87 of China’s largest 100 cities</a> had some form of lockdown or restrictions in place.</p>
+        <p>In March, Xi Jinping <a href="https://english.news.cn/20220421/0843b6ac530543ea94a25986bfef72f4/c.html" target="_blank" rel="nofollow">called for</a> more effective measures to reduce the impact of COVID-19 on social and economic development as much as possible. Yet instead of looking to new measures to contain Omicron, China continues to utilize 2020 tools of intense lockdowns to control a 2022 variant of the virus which, although highly infectious, could be less severe and less deadly. This is because allowing a serious Omicron wave would be too risky for China.</p>
+        <p>Hong Kong’s and South Korea’s Omicron experiences <a href="https://www.economist.com/graphic-detail/2022/04/09/asias-outbreaks-show-that-omicron-is-deadly-in-unvaccinated-people" target="_blank" rel="nofollow">suggest</a> that immunity through vaccination is crucial. South Korea had a stronger vaccine rollout than Hong Kong, particularly among the elderly population. That difference, alongside the discrepancy in death rates, indicates the importance of vaccination to beating Omicron. This is a challenge for China, which focused on its overall vaccination rate. It stands at an impressive 88 percent. But only about half of people over 80 have been fully vaccinated. Less than a fifth have received a booster shot. Some 52 million people over the age of 60 have <a href="https://www.sixthtone.com/news/1009983/with-fresh-urgency%2C-china-pleads-with-seniors-to-get-vaccinated" target="_blank" rel="nofollow">not received</a> two jabs.</p>
+        <p>For now, it seems the Chinese government will maintain its zero-COVID approach to minimize deaths and ensure a stable political and economic environment before the 20th Party Congress this autumn. But the idea that the zero-COVID strategy sustains a stable political and economic environment is uncertain. The lockdowns are rocking China’s economy. And the censors can barely keep up with the expressions of frustration towards the government’s handling of the situation in Shanghai.</p>
+        <p>The extended lockdown may lead to a recession in Shanghai which will drag China’s growth, limiting real GDP growth by at least 0.4 percentage points. This will complicate China’s ability to achieve its ambitious 5.5 percent GDP growth target for 2022. Leaving aside the damage to local retail, manufacturing, and financial sectors, disruptions to manufacturing and transport are generating regional supply-chain disturbances and will contribute to global inflationary pressure. Business leaders are increasingly vocal about the impossibility of operating effectively in the on/off economy that has resulted from China’s continued adherence to zero-COVID.</p>
+        <p>How does China get out of this bind? In a recent <a href="https://academic.oup.com/nsr/article/9/3/nwac054/6564385?login=true" target="_blank" rel="nofollow">piece</a> in <em>National Science Review</em>, Wei-jie Guan and Nan-shan Zhong consider strategies for China’s reopening, focusing on vaccination, acceleration of R&amp;D in medications, increased rapid antigen testing, more investigations of infectivity of imported cases, and piloting policy adjustment in certain locations.</p>
+        <p>Apart from daily PCR tests, those steps seem far removed from the lived experience of those of us locked in our homes. Beijing has determined that there is too much at stake to allow a serious Omicron wave in China or to shift its zero-COVID policy. But when Shanghai eventually emerges from this severe and clumsily managed lockdown, it is a question as to whether the residents of China’s most economically consequential city will continue to agree.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9816" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/qin-chen"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/qin_chen_sm.jpg?itok=qbfZuvZa" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="qin-chen"><a href="https://www.chinafile.com/contributors/qin-chen" title="Qin Chen">Qin Chen</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Two years ago, in early April, Wuhan reopened after <a href="https://edition.cnn.com/interactive/2020/04/world/wuhan-coronavirus-cnnphotos/" target="_blank" rel="nofollow">76 days</a> of lockdown. Since then, China has largely succeeded in stamping out large-scale COVID outbreaks with non-pharmaceutical tools: face masks, organized testing, large quarantine sites, and lockdowns. For the most part, people have supported the restrictive response, which they see as allowing China to remain a relatively stable and peaceful place while other countries report record cases and deaths.</p>
+        <p>But in March, one city broke this trend.</p>
+        <p>Facing a new wave of Omicron outbreaks, China’s two economic hubs, Shanghai and Shenzhen, made different choices. On March 13, Shenzhen <a href="http://www.gd.gov.cn/gdywdt/zwzt/yqfk/gdzxd/content/post_3882866.html" target="_blank" rel="nofollow">announced</a> a citywide lockdown and <a href="https://www.nytimes.com/live/2022/03/13/world/covid-19-mandates-cases-vaccine" target="_blank" rel="nofollow">three rounds</a> of COVID testing after finding fewer than 100 <a href="http://wjw.sz.gov.cn/yqxx/content/post_9615509.html" target="_blank" rel="nofollow">cases</a>. On March 15, Shanghai officials <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/shanghai-official-rules-out-need-covid-lockdown-moment-2022-03-15/" target="_blank" rel="nofollow">said</a> there was no <a href="https://www.yicai.com/video/101349087.html" target="_blank" rel="nofollow">need</a> for a citywide lockdown. Instead, authorities would carry out only targeted lockdowns of certain areas. The city <a href="https://wsjkw.sh.gov.cn/xwfb/20220316/18a627b694eb471f9a415dfa20b6d0b4.html" target="_blank" rel="nofollow">reported</a> over 200 cases. At that point, the fates of the two diverged. Shenzhen controlled the outbreak and <a href="http://www.gov.cn/xinwen/2022-03/20/content_5680134.htm" target="_blank" rel="nofollow">reopened</a> in two weeks. Shanghai <a href="https://news.cnstock.com/news,bwkx-202203-4852458.htm" target="_blank" rel="nofollow">began</a> a full lockdown in late March after cases <a href="https://www.reuters.com/world/china/shanghai-reports-record-asymptomatic-covid-cases-lockdowns-enter-2nd-day-2022-03-29/" target="_blank" rel="nofollow">topped</a> 4,000. Today, most of Shanghai remains in lockdown with no end in sight. The city’s overall cases in this outbreak have <a href="http://www.xhby.net/index/202204/t20220426_7520136.shtml" target="_blank" rel="nofollow">reached</a> more than 500,000 and growing.</p>
+        <p>It’s unclear why Shanghai chose a different route at first in March. But the city’s experience has mobilized the rest of the country: As cases spread to other parts of China, regional officials are jumping to apply extreme measures. On April 8, Guangzhou <a href="https://china.caixin.com/2022-04-10/101868065.html" target="_blank" rel="nofollow">organized</a> citywide COVID tests after finding two cases. A few days later, the city <a href="https://www.cnbc.com/2022/04/11/china-covid-outbreak-guangzhou-closes-schools-shanghai-record-cases.html" target="_blank" rel="nofollow">closed</a> elementary and middle schools and started to limit outbound travel. The city controlled the outbreak and started <a href="http://wjw.gz.gov.cn/ztzl/xxfyyqfk/yqtb/content/post_8206910.html" target="_blank" rel="nofollow">lifting</a> control measures on April 22. Elsewhere, Beijing, Hebei, Anhui, Zhejiang, Jiangsu, and Fujian provinces are also clamping down on small outbreaks with full force.</p>
+        <p>Since early April, Shanghai’s cases have <a href="http://www.nhc.gov.cn/xcs/yqtb/list_gzbd.shtml" target="_blank" rel="nofollow">made up</a> more than 90 percent of China’s overall case count. The city missed the best window to contain the outbreak quickly and now struggles to contain it despite millions living in a prolonged lockdown. Shanghai’s unique experience is unrelatable to other regions. The city also has long had a reputation for acting like it is superior in China, making other Chinese people unsympathetic to its woes. Since the outbreak, the city has received much hate on Weibo from its fellow countrymen. People have blamed Shanghai for spreading the virus, questioned the city’s competency, and ridiculed Shanghai’s prestige.</p>
+        <p>In Shanghai, the isolation has made many rethink the practicality of fighting a changing virus with an old set of tools. As of April 28, there have been more than 300 deaths among Shanghai's 500,000 cases. In Wuhan, by comparison, <a href="http://wjw.wuhan.gov.cn/ztzl_28/fk/yqtb/202004/t20200430_1197428.shtml" target="_blank" rel="nofollow">more</a> than 2,500 died in 50,000 cases in the first outbreak two years ago. But Shanghai’s experience is unlikely to shift national policy.</p>
+        <p>As an April 13 <em>People’s Daily</em> op-ed <a href="https://tv.cctv.com/2022/04/13/VIDEDwrKfigZK8asGH6hqwHD220413.shtml?spm=C31267.PXDaChrrDGdt.EbD5Beq0unIQ.17" target="_blank" rel="nofollow">put it</a>:</p>
+        <blockquote>
+          <p>In the short term, it is true that pandemic prevention and control affects one place’s local economy, society, and people’s lives. But for the country as a whole, preventing the spread of the epidemic will allow people to return to their normal life and work, and a more relaxed and stable environment for economic and social development.</p>
+        </blockquote>
+        <p>In other words, China isn’t yet ready to change a proven national policy just because one city struggles to make it work. Will the policy change if more places face a similar struggle? We will see.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-05-23</time>
+        <a href="https://nodebe4.github.io/oped2/2022-05-23/Public-Security-Minister-s-Speech-Describes-Xi-Jin/">
+          Public Security Minister’s Speech Describes Xi Jinping’s Direction of Mass Detentions in Xinjiang
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-05-19</time>
+        <a href="https://nodebe4.github.io/oped2/2022-05-19/Is-Beijing-Changing-Tack-on-Big-Tech/">
+          Is Beijing Changing Tack on Big Tech?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-14</time>
+        <a href="https://nodebe4.github.io/oped2/2022-04-14/Europe-s-China-Policy-Has-Taken-a-Sharp-Turn.-Wher/">
+          Europe’s China Policy Has Taken a Sharp Turn. Where Will It Go Next?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-08</time>
+        <a href="https://nodebe4.github.io/oped2/2022-04-08/Closing-the-U.S.-to-Chinese-Biotech-Would-Do-Far-M/">
+          Closing the U.S. to Chinese Biotech Would Do Far More Harm Than Good
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-04-14/Europe-s-China-Policy-Has-Taken-a-Sharp-Turn.-Wher/">
+            前一篇：Europe’s China Policy Has Taken a Sharp Turn. Where Will It Go Next?
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-05-19/Is-Beijing-Changing-Tack-on-Big-Tech/">
+            後一篇：Is Beijing Changing Tack on Big Tech?
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-04-14/Europe-s-China-Policy-Has-Taken-a-Sharp-Turn.-Wher/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-05-19/Is-Beijing-Changing-Tack-on-Big-Tech/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-05-19/Is-Beijing-Changing-Tack-on-Big-Tech/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-04-14/Europe-s-China-Policy-Has-Taken-a-Sharp-Turn.-Wher/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-04-14/Europe-s-China-Policy-Has-Taken-a-Sharp-Turn.-Wher/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-05-19/Is-Beijing-Changing-Tack-on-Big-Tech/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-05-19/Is-Beijing-Changing-Tack-on-Big-Tech/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-04-14/Europe-s-China-Policy-Has-Taken-a-Sharp-Turn.-Wher/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

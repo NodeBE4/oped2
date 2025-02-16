@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Is Beijing Changing Tack on Big Tech? – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Is Beijing Changing Tack on Big Tech?
+——
+" />
+    <meta property="og:description" content="
+Is Beijing Changing Tack on Big Tech?
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Is Beijing Changing Tack on Big Tech?" />
+    <meta property="twitter:title" content="Is Beijing Changing Tack on Big Tech?" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fbeijing-changing-tack-big-tech" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/beijing-changing-tack-big-tech" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/beijing-changing-tack-big-tech&text=Is Beijing Changing Tack on Big Tech?&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/beijing-changing-tack-big-tech&title=Is Beijing Changing Tack on Big Tech?" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/beijing-changing-tack-big-tech&title=Is Beijing Changing Tack on Big Tech?" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Is Beijing Changing Tack on Big Tech?&body=
+Is Beijing Changing Tack on Big Tech?
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/beijing-changing-tack-big-tech" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/beijing-changing-tack-big-tech&title=Is Beijing Changing Tack on Big Tech?&caption=
+Is Beijing Changing Tack on Big Tech?
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Is Beijing Changing Tack on Big Tech?&url=https://www.chinafile.com/conversation/beijing-changing-tack-big-tech" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Is Beijing Changing Tack on Big Tech?</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-05-19
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Rui Ma, Ruihan Huang &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/beijing-changing-tack-big-tech" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1652975580000-->
+<p><a href="https://www.chinafile.com/conversation/beijing-changing-tack-big-tech">Is Beijing Changing Tack on Big Tech?</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-020b13ce7c475f2f10e056d2f0409d92">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54001_sm.jpg" title="Is Beijing Changing Tack on Big Tech?" class="colorbox" data-colorbox-gallery="gallery-node-54001-qFtsBB7ZsB0" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54001_sm.jpg?itok=pdACxxX2" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+(Getty Images)
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A construction worker wearing a mask passes a large outdoor advertisements for the Apple iPhone 13 Pro near Wuhan International Plaza, in Wuhan, Hubei province, April 11, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">In recent weeks, news has emerged that China may be slowing its Big Tech regulations. On Tuesday, the Chinese People’s Political Consultative Congress (CPPCC) held a special meeting on the digital economy, with Vice Premier Liu He <a href="https://digichina.stanford.edu/work/liu-he-tech-platforms-private-businesses-must-be-supported-full-translation/" target="_blank" rel="nofollow">highlighting</a> the need “to support the platform economy.” This followed similar statements in March, <a href="https://www.scmp.com/tech/policy/article/3171023/chinas-regulatory-storm-may-soon-subside-big-tech-firms-after-xi" target="_blank" rel="nofollow">calling</a> for regulators to adopt a “standardized, transparent, and predictable” model. And last month came a <a href="https://www.cnn.com/2022/04/29/investing/china-tech-crackdown-xi-jinping-hnk-intl/index.html" target="_blank" rel="nofollow">Politburo meeting</a> in which leaders vowed support for the Internet economy. With China’s economy reeling amid large-scale COVID lockdowns, a rollback of tech regulations could provide a much-needed boost. But given the vagueness of the language, it’s unclear how such statements will translate on the policy front. We asked experts how they read these statements, whether they anticipated a loosening of regulations, and what that might look like. —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9826" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/rui-ma"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/rui_ma_sm.jpg?itok=KrTV6s09" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="rui-ma"><a href="https://www.chinafile.com/contributors/rui-ma" title="Rui Ma">Rui Ma</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The government is not seeking to roll back regulations that have just been put in place. Rather, it is signaling that most of the rectification has been completed, and supportive policies may be coming down the pipeline.</p>
+        <p>The most recent spate of regulations on antitrust, privacy, and cybersecurity have been <a href="https://www.techbuzzchina.com/extrabuzz/extra-buzz-20-internet-platforms-antitrust-regulations-are-here" target="_blank" rel="nofollow">in the works</a> for years. They are largely meant to update the previously very loose regulatory environment of the platform economy in China to the level of oversight in developed economies. A few of the regulations exceed what the West has instituted but are actually in line with what’s being contemplated in <a href="https://www.shrm.org/resourcesandtools/hr-topics/global-hr/pages/eu-proposed-protections-gig-workers.aspx" target="_blank" rel="nofollow">Europe</a> and the <a href="https://www.ncsl.org/research/labor-and-employment/portable-benefits-for-gig-workers.aspx" target="_blank" rel="nofollow">U.S.</a> The most important thing to understand about the Chinese government is that officials <a href="https://insider.techbuzzchina.com/c/policies-and-regulations/what-has-xi-jinping-really-said-about-the-internet-and-science-technology-d686e45d-47e1-46ff-9f07-72e1a7c08257" target="_blank" rel="nofollow">believe</a> regulations are necessary for the success of the industry, as they have very specific goals for what is considered “<a href="https://www.ndrc.gov.cn/xwdt/tzgg/202201/t20220119_1312327.html?code=&amp;state=123" target="_blank" rel="nofollow">healthy development</a>.” These metrics are rarely tied to financial performance.</p>
+        <p>Nonetheless, it is significant that the Politburo is taking the time to communicate a positive message at a time when markets are weak and platform companies can’t seem to get a break, not just from Chinese regulators but from U.S. regulators as well. For instance, <a href="https://www.reuters.com/business/over-80-firms-including-chinas-jdcom-added-us-sec-list-facing-delisting-risk-2022-05-05/" target="_blank" rel="nofollow">forced delistings</a> from U.S. markets would be very undesirable for shareholders and companies alike; U.S. capital markets remain the most liquid and high-quality in the world, and losing access isn’t necessarily the end of the world for companies but it is nonetheless a large blow.</p>
+        <p>To put it simply, the Chinese government is pushing for growth of the digital economy, in which platform companies perform a large role—but government leaders are intent on doing so on their own terms.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9831" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/ruihan-huang"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/ruihan_huang_sm.jpg?itok=LRKHv1NT" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="ruihan-huang"><a href="https://www.chinafile.com/contributors/ruihan-huang" title="Ruihan Huang">Ruihan Huang</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The crackdown has ended, but regulations are here to stay.</p>
+        <p>Beijing did not decide to punish its tech companies on a whim. It is no coincidence that a series of restrictive policies towards the tech industry were introduced just two years after Beijing <a href="http://m.xinhuanet.com/2018-04/02/c_1122622753.htm" target="_blank" rel="nofollow">consolidated</a> three lower-level agencies into the ministerial-level State Administration for Market Regulation (SAMR) in 2018. While there is no convenient time to execute this regulatory campaign, 2021 offered a relatively stable environment compared to the trade war that began in 2018, the first wave of the pandemic in 2020, and the 20th Party Congress in 2022.</p>
+        <p>Thus, Chinese Vice Premier Liu He’s <a href="https://digichina.stanford.edu/work/liu-he-tech-platforms-private-businesses-must-be-supported-full-translation/" target="_blank" rel="nofollow">speech</a> is not a surprise and implies that China’s wide-ranging crackdown in the tech industry is nearing its end. For the political year 2022, with the 20th Party Congress to be held this fall, a promising growth rate and stability are now Beijing’s top priorities, especially as Beijing is concerned with the impact of the war in Ukraine and the domestic transmission of Omicron. By relaxing restrictive policies toward tech and preventing turbulence from casting a cloud over China’s economic recovery, leaders <a href="https://finance.sina.com.cn/tech/2022-05-17/doc-imcwipik0395604.shtml" target="_blank" rel="nofollow">hope</a> to rebuild market confidence.</p>
+        <p>In fact, even without the 20th Party Congress this year, I would expect Beijing’s tech crackdown to wind down. Although there are many politically-driven explanations for Beijing’s crackdown, its primary objective was to regulate a market run amok with monopolistic and anticompetitive behavior that had sparked <a href="https://www.wsj.com/articles/the-big-tech-monopoly-crackdown-hits-china-11605088715" target="_blank" rel="nofollow">complaints</a> and public discontent against tech giants’ practices. After over a year of regulatory pressure, many of the predatory and anticompetitive practices by China’s tech giants have been <a href="https://www.scmp.com/tech/big-tech/article/3160450/chinas-antitrust-chief-declares-early-victory-taming-one-two-practice" target="_blank" rel="nofollow">rectified</a>, which authorities say <a href="http://www.gov.cn/xinwen/2022-01/14/content_5668240.htm" target="_blank" rel="nofollow">allows</a> more room for small- and medium-sized enterprises to grow. Now, with a more balanced playing field, Beijing does not have the same incentive to continue its regulatory campaign against big tech in China.</p>
+        <p>The curtailments to the monopolistic practices of tech giants are beneficial for the healthy development of China’s tech sector and will likely remain in place, especially since the antitrust bureau within SAMR <a href="https://www.scmp.com/tech/policy/article/3156142/china-appoints-potato-scientist-helm-its-elevated-antitrust-bureau" target="_blank" rel="nofollow">was elevated</a> to the deputy-ministerial level in November 2021 and <a href="https://m.mp.oeeee.com/a/BAAFRD000020211018614219.html" target="_blank" rel="nofollow">increased</a> its staffing demand last year. But as Liu He <a href="http://www.xinhuanet.com/finance/2022-03/16/c_1128475467.htm" target="_blank" rel="nofollow">noted</a>, leaders in Beijing intend to make China’s tech policies more consistent and predictable as to minimize the disruptive impact on capital markets.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9836" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/Graham-Webster"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/webster.graham.headshot.jpeg?itok=PW6p15Tf" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="graham-webster"><a href="https://www.chinafile.com/contributors/Graham-Webster" title="Graham Webster">Graham Webster</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The Chinese government’s recent regulatory actions on tech platforms have broadly taken three forms since the beginning of 2021. First, longstanding legislative efforts to produce a new <a href="https://digichina.stanford.edu/work/translation-data-security-law-of-the-peoples-republic-of-china/" target="_blank" rel="nofollow">Data Security Law</a> and <a href="https://digichina.stanford.edu/work/translation-personal-information-protection-law-of-the-peoples-republic-of-china-effective-nov-1-2021/" target="_blank" rel="nofollow">Personal Information Protection Law</a> came to fruition, with the two broad frameworks taking effect last year. Second, the Party-state took <a href="https://www.reuters.com/technology/exclusive-chinese-state-firms-take-big-stake-ants-credit-scoring-jv-sources-2021-09-01/" target="_blank" rel="nofollow">targeted</a> and seemingly punitive measures against individual companies, such as Ant Group and <a href="https://www.scmp.com/tech/big-tech/article/3151968/chinas-probe-didi-aimed-addressing-national-security-risks-arising" target="_blank" rel="nofollow">Didi Chuxing</a>, that appeared to question or defy central authority. Third, restrictions around specific industries such as <a href="https://www.reuters.com/article/china-sleep/china-to-strengthen-online-education-and-gaming-restrictions-for-minors-idUSL1N2LV0CP#:~:text=BEIJING%2C%20April%202%20(Reuters),streamed%20courses%20after%209%20pm." target="_blank" rel="nofollow">online education</a> and an emerging draft regulatory regime to govern platforms according to their scale and area of business put the market on notice that increased supervision was here to stay. Together, these actions have led to the perception of a crackdown on big tech—or, more properly, on online services.</p>
+        <p>On one hand, Liu He’s <a href="https://digichina.stanford.edu/work/liu-he-tech-platforms-private-businesses-must-be-supported-full-translation/" target="_blank" rel="nofollow">recent statements</a> and the general change in tone from the top signal that, amidst economic uncertainty due to stubbornly recurrent pandemic lockdowns, authorities do not want to unnecessarily depress capital markets and general vitality in tech sectors. A lively market is certainly part of what regulators mean when they seek to promote a “healthy” digital economy.</p>
+        <p>On the other hand, increased regulatory attention is here to stay, even if the details remain uncertain. June marks the five-year anniversary of the 2017 implementation of China’s <a href="https://digichina.stanford.edu/work/translation-cybersecurity-law-of-the-peoples-republic-of-china-effective-june-1-2017/" target="_blank" rel="nofollow">Cybersecurity Law</a>, and major elements of the law are now <a href="https://digichina.stanford.edu/work/after-5-years-chinas-cybersecurity-rules-for-critical-infrastructure-come-into-focus/" target="_blank" rel="nofollow">increasingly</a> fleshed out. Still, key elements have yet to be revealed. A recent U.S.-China Business Council <a href="https://www.uschina.org/reports/how-american-companies-are-approaching-china%E2%80%99s-data-privacy-and-cybersecurity-regimes" target="_blank" rel="nofollow">survey of U.S. companies</a> found that none had yet undergone reviews for moving certain types of data out of China—even though the Cybersecurity Law has required them for years. That part of the years-old law is still, for practical purposes, not finalized. With the data security and personal data laws less than a year old, many details remain to be set regarding regulations and standards, and questions about enforcement are extensive. A sprawling regime to <a href="https://digichina.stanford.edu/work/translation-guidelines-for-internet-platform-categorization-and-grading-draft-for-comment-oct-2021/" target="_blank" rel="nofollow">categorize</a> platforms by size and type and build up regulatory tools customized to those details is now in draft, portending years of further development if implemented. In March, new <a href="https://digichina.stanford.edu/work/translation-internet-information-service-algorithmic-recommendation-management-provisions-effective-march-1-2022/" target="_blank" rel="nofollow">rules</a> governing the use of algorithms took effect, and their enforcement is a <a href="https://digichina.stanford.edu/work/translation-notice-on-conducting-the-clear-2022-comprehensive-governance-of-algorithms-special-action/" target="_blank" rel="nofollow">stated focus</a> for the Cyberspace Administration of China this year. There is no sign that in the medium to long term Chinese government efforts to more thoroughly govern digital technology are losing steam; on the contrary, China is among the world’s most forward-leaning markets in terms of tech regulation, and this is unlikely to change.</p>
+        <p>How should observers interpret the ebb and flow of enforcement signals from top officials while the bureaucracy plows forward, producing increasingly detailed and often burdensome requirements? The example of the five-year-old Cybersecurity Law should be instructive. Just because rules are on the books does not mean they can or will be universally enforced. Their actual effect comes from their role as guidelines shaping how businesses run and the introduction of new tools for regulators to deploy. Even if the campaign-style enforcement messaging quiets, and even if the details remain uncertain or unstated, the effect of an enveloping regulatory framework persists.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9846" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/xibai-xu"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/xu_sm.jpg?itok=F7_-fLdj" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="xibai-xu"><a href="https://www.chinafile.com/contributors/xibai-xu" title="Xibai Xu">Xibai Xu</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">China’s regulation of Big Tech may become more subtle in the future, but the regulatory campaign is far from over, and its underlying doctrine remains unchanged. If the way the country sticks to the “<a href="https://www.cnbc.com/2022/05/06/chinas-xi-jinping-calls-for-sticking-to-zero-covid-policy.html" target="_blank" rel="nofollow">dynamic zero-COVID</a>” policy is any indication, then we are in for a long game.</p>
+        <p>Vice Premier Liu He’s <a href="https://www.atlanticcouncil.org/blogs/econographics/beijings-message-to-financial-markets-were-listening/" target="_blank" rel="nofollow">statement</a> on March 15 was in part a response to the SEC’s <a href="https://www.nytimes.com/2022/03/11/business/chinese-stocks-delisting.html" target="_blank" rel="nofollow">naming</a> of five Chinese companies for potential delisting from U.S. markets under the HFCAA, which triggered a massive sell-off of Chinese shares. Liu’s message was that the government supports Chinese companies’ IPOs in overseas markets and that Chinese and U.S. regulators have made progress toward reaching an <a href="https://www.forbes.com/sites/brendanahern/2022/03/16/vice-premier-liu-hes-speech-sends-stocks-flying/" target="_blank" rel="nofollow">agreement</a> on audit supervision. This sent the Chinese stock market into a week-long rally, pushing the SSE Composite Index up 4.6 percent. But with no long-term bullish signals, investor confidence soon faltered, and the SSE Index tumbled to its <a href="https://www.theguardian.com/business/live/2022/apr/25/stock-markets-oil-china-lockdown-markets-uk-factories-twitter-elon-musk-business-live?page=with:block-62664d5e8f084c98f77b3ad8" target="_blank" rel="nofollow">lowest point</a> since June 2020. Similarly, the <a href="http://quote.eastmoney.com/zs000001.html" target="_blank" rel="nofollow">market</a> <a href="https://www.yicaiglobal.com/news/china-stock-markets-rally-after-politburo-meeting" target="_blank" rel="nofollow">rallied</a> 3.1 percent after the Politburo meeting on April 29, but the rally has also stalled, as no follow-up policies were announced.</p>
+        <p>There is no doubt that top economic officials in China are deeply concerned about the state of the economy, though reassuring the market with regular positive statements has become a staple in the government’s repertoire. In September, Liu He <a href="https://www.reuters.com/world/china/chinas-liu-he-says-support-private-business-has-not-changed-2021-09-06/" target="_blank" rel="nofollow">emphasized</a> that China’s unwavering support for the private sector had not changed and will never change. Those words did not stop tougher regulatory measures on the sector, some of which are necessary and well-overdue, and they are unlikely to stop further regulatory actions in the pipeline, such as the amendment to the <a href="https://npcobserver.com/legislation/anti-monopoly-law/" target="_blank" rel="nofollow">Anti-Monopoly Law</a> later this year. The narratives on capital (a euphemism for the private sector) in Xi Jinping’s speeches from last <a href="http://cpc.people.com.cn/n1/2022/0515/c64094-32421949.html" target="_blank" rel="nofollow">December</a> and this <a href="http://www.news.cn/politics/leaders/2022-04/30/c_1128611985.htm" target="_blank" rel="nofollow">April</a> are remarkably consistent: Both highlight anti-monopoly goals and preventing the expansion of capital in a disorderly fashion, but they also stress encouraging, supporting, and guiding the “healthy development of capital.” To characterize the recent regulatory actions as “crackdown” would be an oversimplification. In essence, the Party intends to use all its tools to maintain comprehensive control over where and how the private sector develops.</p>
+        <p>China’s economic development is always heavily dependent on the government’s industrial policies, and in recent years, Xi Jinping has <a href="http://www.news.cn/english/2021-12/10/c_1310362304.htm" target="_blank" rel="nofollow">repeatedly</a> stressed the importance of preventing a deviation “from the real sector toward the virtual one,” a key policy objective that is often overlooked. Consequently, financializaton and the real-estate sector became the first regulatory targets as financial and human resources are shifted toward manufacturing. The virtual part of Big Tech, i.e. the online industries, is hammered by regulators partly because it requires enormous capital investment and diverts large numbers of engineering talents, while the real, or manufacturing, part of Big Tech, such as AI, robotics, clean energy, semiconductors, and pharmaceuticals, is prioritized under the “<a href="https://thediplomat.com/2019/02/made-in-china-2025-explained/" target="_blank" rel="nofollow">Made in China 2025</a>” plan. In fact, any non-manufacturing sector (or sector that does not support manufacturing) will face an uphill battle in China. Any sector that has the potential to change how people think or how society works, resists the Party’s comprehensive control, or takes too big a portion of the country’s workforce/investment will find itself in the regulator’s way. Private education, entertainment, online financing, social networking, livestreaming, and gaming have been hit hard so far, but more sectors will be affected. The Party may well achieve limitless control over the industries. The question is, can Big Tech, along with the entire Chinese economy, thrive under this heavy-handed approach?</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-06-03</time>
+        <a href="https://nodebe4.github.io/oped2/2022-06-03/The-Prize-Student/">
+          The Prize Student
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-05-23</time>
+        <a href="https://nodebe4.github.io/oped2/2022-05-23/Public-Security-Minister-s-Speech-Describes-Xi-Jin/">
+          Public Security Minister’s Speech Describes Xi Jinping’s Direction of Mass Detentions in Xinjiang
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-29</time>
+        <a href="https://nodebe4.github.io/oped2/2022-04-29/Shanghai-s-Lockdown/">
+          Shanghai’s Lockdown
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-14</time>
+        <a href="https://nodebe4.github.io/oped2/2022-04-14/Europe-s-China-Policy-Has-Taken-a-Sharp-Turn.-Wher/">
+          Europe’s China Policy Has Taken a Sharp Turn. Where Will It Go Next?
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-04-29/Shanghai-s-Lockdown/">
+            前一篇：Shanghai’s Lockdown
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-05-21/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%89%93%E9%96%8B%E6%AA%94%E6%A1%88%E6%99%82%E6%9C%83%E7%9C%8B%E5%88%B0%E4%BA%82%E7%A2%BC-%E8%B7%9F%E8%91%97%E5%B0%8F%E6%98%8E%E4%B8%80%E8%B5%B7%E5%BE%9E%E5%82%B3%E7%B4%99%E6%A2%9D%E5%AD%B8%E7%BF%92%E7%B7%A8%E7%A2%BC/">
+            後一篇：為什麼打開檔案時會看到亂碼？跟著小明一起從傳紙條學習編碼
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-04-29/Shanghai-s-Lockdown/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-05-21/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%89%93%E9%96%8B%E6%AA%94%E6%A1%88%E6%99%82%E6%9C%83%E7%9C%8B%E5%88%B0%E4%BA%82%E7%A2%BC-%E8%B7%9F%E8%91%97%E5%B0%8F%E6%98%8E%E4%B8%80%E8%B5%B7%E5%BE%9E%E5%82%B3%E7%B4%99%E6%A2%9D%E5%AD%B8%E7%BF%92%E7%B7%A8%E7%A2%BC/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-05-23/Public-Security-Minister-s-Speech-Describes-Xi-Jin/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-04-29/Shanghai-s-Lockdown/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-04-29/Shanghai-s-Lockdown/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-05-21/%E7%82%BA%E4%BB%80%E9%BA%BC%E6%89%93%E9%96%8B%E6%AA%94%E6%A1%88%E6%99%82%E6%9C%83%E7%9C%8B%E5%88%B0%E4%BA%82%E7%A2%BC-%E8%B7%9F%E8%91%97%E5%B0%8F%E6%98%8E%E4%B8%80%E8%B5%B7%E5%BE%9E%E5%82%B3%E7%B4%99%E6%A2%9D%E5%AD%B8%E7%BF%92%E7%B7%A8%E7%A2%BC/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-05-23/Public-Security-Minister-s-Speech-Describes-Xi-Jin/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-04-29/Shanghai-s-Lockdown/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

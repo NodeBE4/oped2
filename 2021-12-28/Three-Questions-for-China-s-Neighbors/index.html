@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Three Questions for China’s Neighbors – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Three Questions for China’s Neighbors
+——
+" />
+    <meta property="og:description" content="
+Three Questions for China’s Neighbors
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Three Questions for China’s Neighbors" />
+    <meta property="twitter:title" content="Three Questions for China’s Neighbors" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fthree-questions-chinas-neighbors" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/three-questions-chinas-neighbors" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/three-questions-chinas-neighbors&text=Three Questions for China’s Neighbors&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/three-questions-chinas-neighbors&title=Three Questions for China’s Neighbors" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/three-questions-chinas-neighbors&title=Three Questions for China’s Neighbors" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Three Questions for China’s Neighbors&body=
+Three Questions for China’s Neighbors
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/three-questions-chinas-neighbors" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/three-questions-chinas-neighbors&title=Three Questions for China’s Neighbors&caption=
+Three Questions for China’s Neighbors
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Three Questions for China’s Neighbors&url=https://www.chinafile.com/conversation/three-questions-chinas-neighbors" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Three Questions for China’s Neighbors</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-12-28
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Richard J. Heydarian, Nirupama Rao &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/three-questions-chinas-neighbors" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1640693700000-->
+<p><a href="https://www.chinafile.com/conversation/three-questions-chinas-neighbors">Three Questions for China’s Neighbors</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-6cc25dc5592f41c4f80541debe89927a">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/53546_sm.jpg" title="Three Questions for China’s Neighbors" class="colorbox" data-colorbox-gallery="gallery-node-53546-WaGpzenArFk" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/53546_sm.jpg?itok=FXo2fwrF" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Hakim S. Hayat—AFP via Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Sultan of Brunei Hassanal Bolkiah (center) takes part in a live video conference for the ASEAN-China Summit, on the sidelines of the 2021 Association of Southeast Asian Nations (ASEAN) summits held in Bandar Seri Begawan, Brunei, October 26, 2021.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">“China was, is, and will always be a good neighbor,” China’s leader Xi Jinping <a href="https://www.msn.com/en-us/news/world/xi-tells-southeast-asian-leaders-china-does-not-seek-hegemony/ar-AAQZdOW" target="_blank" rel="nofollow">told</a> ASEAN representatives in a November 2021 virtual meeting, after a series of conflicts over Beijing’s territorial claims in the South China Sea had raised tensions.</p>
+      <p>But China’s neighbors aren’t always so sure, in an era of growing Chinese assertiveness under Xi’s leadership. China remains the top trading partner throughout much of Asia, but many individual Asian states seek to counterbalance China’s influence with stronger relations with the United States and, in some cases, with other regional powers. Some <a href="https://www.brookings.edu/research/dont-make-us-choose-southeast-asia-in-the-throes-of-us-china-rivalry/" target="_blank" rel="nofollow">strive for</a> a balance, and don’t want to be forced to choose one side or another.</p>
+      <p>Against this backdrop, Asia Society’s Center on U.S.-China Relations and the University of California, San Diego’s 21st Century China Center have convened a <a href="https://asiasociety.org/center-us-china-relations/task-force-us-china-policy" target="_blank" rel="nofollow">Task Force on U.S.-China Policy</a>, a group of American scholars and former officials. In November 2021, the task force met with journalists, former diplomats, and former senior government officials from around Asia, initiating  a “transpacific dialogue“ that members hope will be an ongoing forum designed to increase U.S. understanding of Asian perspectives regarding China’s role in the region and around the world.</p>
+      <p>After the meeting, the task force co-chairs, Asia Society’s Orville Schell and UC San Diego’s Susan Shirk, asked participants to write brief responses to these questions: 1. How is China now viewed in your country? 2. How has that view changed since Xi came to power? 3. What is problematic about U.S. policy toward China? —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9316" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/richard-heydarian"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/heydarian_sm.jpg?itok=lA1NJNNf" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="richard-j-heydarian"><a href="https://www.chinafile.com/contributors/richard-heydarian" title="Richard J. Heydarian">Richard J. Heydarian</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">China has consistently suffered poor favorability ratings among average Filipinos as well as the political elite. According to the authoritative Social Weather Stations (SWS) polling agency, China’s <a href="https://newsinfo.inquirer.net/1309563/trust-of-pinoys-in-china-falls-from-poor-to-bad" target="_blank" rel="nofollow">net trust rating</a> in the Philippines was only positive in nine out of 53 total surveys conducted between 1994 and 2020. Last year, China’s net trust rating reached -36 percent, far below the <a href="https://www.bworldonline.com/us-still-at-the-top-of-filipinos-trust-list-china-the-least/" target="_blank" rel="nofollow">majority trust rating</a> enjoyed by traditional allies such as the U.S. as well as Japan and Australia. For sure, there are elements of residual Cold War era bias against Beijing, if not Spanish colonial era prejudice against people of Chinese descent. But Beijing’s ultimate public relations undoing in the Philippines is it’s <a href="https://opinion.inquirer.net/147007/after-duterte-avoiding-chinas-pledge-trap" target="_blank" rel="nofollow">“pledge trap” diplomacy</a>: China has <a href="https://asia.nikkei.com/Opinion/How-Jokowi-bested-China-while-Duterte-ended-up-a-lackey" target="_blank" rel="nofollow">yet to honor</a> its pledges of multi-billion-dollar investments as well as promise of cooperative agreements in the South China Sea to outgoing President Rodrigo Duterte.</p>
+        <p>What’s particularly incredible in the case of the Philippines is that there was actually a window of opportunity for Chinese charm offensive to work, especially under President Xi Jinping. In 2017, just as the Beijing-friendly Duterte came into power, almost half of Filipinos (<a href="https://books.google.com.ph/books?redir_esc=y&amp;id=cvs1DwAAQBAJ&amp;q=Pulse+Asia#v=snippet&amp;q=Pulse%20Asia&amp;f=false" target="_blank" rel="nofollow">47 percent</a>) expressed openness to pursuing warmer relations with China and Russia amid doubts over the U.S.’s commitment to defend the Philippines in the South China Sea. The number of Filipinos supporting growing economic engagement with China over diplomatic confrontation <a href="https://www.pewresearch.org/global/2017/09/21/people-in-the-philippines-still-favor-u-s-over-china-but-gap-is-narrowing/" target="_blank" rel="nofollow">rose</a> from 43 percent in 2015 to 67 percent in 2017. Perceptions of Xi also comparatively improved when President Donald Trump came to power. In a Pew Survey, more than half of Filipinos <a href="https://www.pewresearch.org/global/2017/09/21/people-in-the-philippines-still-favor-u-s-over-china-but-gap-is-narrowing/" target="_blank" rel="nofollow">expressed</a> confidence in Xi’s leadership, a slight improvement compared to a massive drop in confidence in American leadership, 94 percent under Obama (in 2015) to 69 percent under Trump in 2017. Had the Chinese leadership honored its <a href="https://www.cnbc.com/2020/09/08/philippine-president-duterte-fails-to-produce-results-from-pro-china-stance.html" target="_blank" rel="nofollow">investment pledges</a>, and refrained from <a href="https://www.straitstimes.com/opinion/whitsun-reefs-impact-on-dutertes-legacy" target="_blank" rel="nofollow">aggressive moves</a> against Filipino soldiers and <a href="https://amti.csis.org/the-reed-bank-crisis-a-call-for-upgrading-the-philippine-u-s-alliance/" target="_blank" rel="nofollow">fishermen</a>, Xi was in a good position to win over the Philippines, a century-old U.S. ally.</p>
+        <p>While the U.S. has historically enjoyed among the <a href="https://globalnation.inquirer.net/102487/many-filipinos-love-us-survey" target="_blank" rel="nofollow">world’s highest</a> favorability ratings in the Philippines, the Filipino strategic elite as well as broader public have three basic concerns with America’s China strategy: First and foremost, there is no clear economic counter-strategy, especially in the absence of either a new Philippine-U.S. bilateral trade and investment deal or <a href="https://asiatimes.com/2021/07/bidens-china-containment-plan-comes-into-view/" target="_blank" rel="nofollow">a multilateral</a> successor to the Transpacific Partnership Agreement (TPP), not to mention a robust counterpart to the Belt and Road Initiative (BRI). Second, many Filipinos would rather the Biden administration, similar to its predecessor, take a tougher stance against China, including in rhetoric and diplomatic posturing. Finally, Filipinos would like to see greater U.S. clarity in terms of the precise extent of its mutual defense treaty commitment to Manila and, accordingly, provision of advanced weaponries to frontline states such as the Philippines under an “<a href="https://asiatimes.com/2021/10/integrated-deterrence-taking-shape-against-china/" target="_blank" rel="nofollow">integrated deterrence</a>” strategy against a revanchist China.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9321" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/nirupama-rao"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/rao_sm.jpg?itok=xPFi21Rn" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="nirupama-rao"><a href="https://www.chinafile.com/contributors/nirupama-rao" title="Nirupama Rao">Nirupama Rao</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The events of <a href="https://www.nytimes.com/2020/06/16/world/asia/india-china-border.html" target="_blank" rel="nofollow">June 2020</a> on the Line of Actual Control, the disputed border between India and China in Ladakh, have profoundly altered the atmosphere of relations between the two countries. China is <a href="https://www.indiatoday.in/magazine/nation/story/20200817-enemy-number-one-1708698-2020-08-08" target="_blank" rel="nofollow">viewed</a> with a great deal of mistrust and as a strategic adversary, given what a vast majority of Indian citizens see as Chinese “aggression” into Indian territory, and also as a result of China’s close relations with Pakistan. China’s expansion of influence in South Asia, traditionally seen as an Indian sphere of influence, has further heightened apprehensions about China’s encirclement of India. At the level of the Indian public, China is <a href="https://carnegieindia.org/2021/03/10/road-from-galwan-future-of-india-china-relations-pub-84019" target="_blank" rel="nofollow">growingly identified</a> as pursuing policies vis-à-vis India that are inimical to Indian interests.</p>
+        <p>Mistrust of China only deepened after Xi Jinping assumed leadership of China. He is seen as being at the helm of a nation that is much more muscular, confrontational, and aggressive in the pursuit of territorial claims across the Indo-Pacific region, both on land and sea. China, under Xi, is far less ambivalent and much more assertive about the pursuit of power and influence in the region, and far more ready to trigger armed confrontation with its neighbors. As a leader, Xi seems far more willing to squander the gains made in building trust and confidence between India and China through careful steps taken over the last three decades. He seems much less invested in consolidating ties with India than his predecessors.</p>
+        <p>India sees heightened rivalry between China and the U.S. as not conducive to regional stability, economic progress, and the peaceful settlement of disputes. The region is made for multipolarity, rather than a binary confrontation between the U.S. and China. At the same time, the U.S.-India strategic partnership has grown in strength and substance over the last few years, and China’s confrontational attitude towards India over the border has only driven India to seek closer ties with the United States. Simultaneously, the flowering of the Quad and its branching out into various areas of cooperation including health, cyber-security, critical and enabling technologies, climate, and information exchange has tied India more securely to the democracies of Japan, Australia, and the United States. China’s growing and coercive muscularity is a major contributing factor to polarization in the region.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9326" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/yoichi-funabashi"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/funabashi.jpg?itok=y1LS8o_c" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="yoichi-funabashi"><a href="https://www.chinafile.com/contributors/yoichi-funabashi" title="Yoichi Funabashi">Yoichi Funabashi</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Japan’s public perception of China is certainly not positive, and it has not been for some time. Recent <a href="https://www.asahi.com/articles/ASPBN5GR3PBMUHBI026.html" target="_blank" rel="nofollow">polling data</a> found that 90.9 percent of Japanese respondents had a negative perception of China, which is nearly the same as last year. Newer, younger generations of politicians have been more outspoken about China’s human rights issues. The new position of Special Advisor on Human Rights to the Prime Minister is reflective of this shift. More recently, several opposition parties have called to join the diplomatic boycott of the Beijing Olympics; this sentiment seems pervasive throughout the political class and general public.</p>
+        <p>Japan-China relations were already tense before Xi Jinping assumed the presidency. Toward the end of the Hu Jintao administration, from 2010 to 2012, the two countries disputed their respective claims over the Senkaku Islands. Bilateral relations actually improved during the years Xi’s tenure overlapped with the prime ministership of Shinzo Abe. Even when U.S.-China relations remained tense during the Trump administration, Abe and Xi made efforts to focus on cooperation and stability rather than competition.</p>
+        <p>The most problematic aspect of U.S.-China relations, from Japan’s perspective, is the inability of the Biden administration to think strategically about its broader Indo-Pacific policy. The Biden administration must map out a viable trade policy for the region that goes beyond the limited frameworks laid out last month during Commerce Secretary Gina Raimondo and Trade Representative Katherine Tai’s <a href="https://www.japantimes.co.jp/news/2021/11/15/business/economy-business/japan-u-s-ministers-meet-steel-aluminum-tariffs/" target="_blank" rel="nofollow">visit</a> to Japan. China is aware of America’s political immobility when it comes to trade, and it will try to exploit the U.S.’s absence in the creation of a regional economic architecture, such as its bid to participate in the Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP). China is not hiding its ambition, and will eventually work to drive the U.S. out of the region if possible.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9331" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/bilahari-kausikan"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/bilahari_sm.jpg?itok=Rt6oJ-ZB" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="bilahari-kausikan"><a href="https://www.chinafile.com/contributors/bilahari-kausikan" title="Bilahari Kausikan">Bilahari Kausikan</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">While it is acutely aware of China’s economic and geopolitical importance, Singapore’s government nevertheless has concerns about China’s behavior and influence. In particular, the government is <a href="https://jamestown.org/program/a-preliminary-survey-of-ccp-influence-operations-in-singapore/" target="_blank" rel="nofollow">concerned</a> about the People’s Republic of China’s (PRC’s) attempt to impose a Chinese identity on multi-racial Singapore.</p>
+        <p>Xi Jinping’s <a href="http://www.xinhuanet.com/english/2020-10/14/c_139439271.htm" rel="nofollow">insistence</a> that overseas Chinese, or all people of Chinese ancestry, support his China Dream is an existential challenge to the founding principles of independent Singapore, against which we have had to struggle since the 1950s. Since 2017, the government has put into place a raft of new legislative and other measures to deal with it.</p>
+        <p>Outside the government, the <a href="https://www.pewresearch.org/global/2021/06/30/large-majorities-say-china-does-not-respect-the-personal-freedoms-of-its-people/" target="_blank" rel="nofollow">general attitude</a> of ethnic Chinese Singaporeans is generally sympathetic to China, but not without certain undercurrents of concern amongst some segments of the community. Non-ethnic Chinese Singaporeans are generally more skeptical about China, while recognizing its geopolitical and economic importance.</p>
+        <p>But it is important to note that Singaporeans are not necessarily pro-Western or pro-U.S. This is something to bear in mind when interpreting the results of international surveys like the recent Pew Survey in which Singapore stood out as having a favorable view of China. Singaporeans’ view of individual rights, while certainly not identical or even close to Beijing’s view, nevertheless stresses community rights and is in this respect closer to that view than it is to the Western view.</p>
+        <p>Xi Jinping’s assumption of leadership of China has not fundamentally changed the views that I have sketched above, but it has enhanced the skepticism of those segments who were already skeptical. Also, the internal contradictions of China’s economy have become more evident to everyone, without necessarily diminishing China’s overall economic importance.</p>
+        <p>U.S. policy towards China lacks nuance and always has. China is neither an enemy of the U.S., nor is it a natural partner. There is a strong tendency in U.S. foreign policy to look at China in simple binaries: Biden’s democracy vs. authoritarianism <a href="https://www.whitehouse.gov/briefing-room/statements-releases/2021/12/08/fact-sheet-the-biden-harris-administration-is-taking-action-to-restore-and-strengthen-american-democracy/" target="_blank" rel="nofollow">framework</a> being just the latest example. China is just a geopolitical fact that has to be dealt with on its own terms.</p>
+        <p>Economic relations is an important part of U.S. policy towards China. But what has not been sufficiently stressed is that the missing piece is <em>multilateral</em> economic relationships. Bilaterally, the U.S. still is and I think will remain a very important economic partner for almost every country, qualitatively if not quantitatively.</p>
+        <p>There is little prospect of U.S. domestic politics allowing any administration to play a significant multilateral economic role. Therefore, I think Washington should largely just do what little it can on that front (e.g. flesh out an Indo-Pacific economic framework) and leave it to Japan and Australia, and perhaps the Republic of Korea, to take the substantive lead, while the U.S. stresses and enhances bilateral economic relationships.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9336" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/dang-cam-tu"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/dang_cam_tu.jpg?itok=Xq0OYkQa" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="dang-cam-tu"><a href="https://www.chinafile.com/contributors/dang-cam-tu" title="Dang Cam Tu">Dang Cam Tu</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The general perception about China in Vietnam at present is informed by three major realities: First, China is the world’s second-biggest economy, with a high level of interactions and interdependence with the rest of the world. Second, China is a rising power with new global ambitions and greater needs for redefining its status and sphere of influence in the evolving international order. Third, China is Vietnam’s asymmetrically big neighbor, and the two countries have unresolved territorial disputes and a complicated history of bilateral relations. The synergy of these dynamics has brought about the <a href="https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/iseas-perspective-2021-15-southeast-asians-declining-trust-in-china-by-hoang-thi-ha" target="_blank" rel="nofollow">perception</a> in Vietnam, as well as many other countries in Southeast Asia and other regions, of China as a source of both opportunities and challenges.</p>
+        <p>Since Xi Jinping took leadership in China, these challenges have been more prevailing in Vietnam’s view of China. China’s increasingly assertive foreign policies have fueled growing concerns about the negative impacts of a rising power: the geo-political challenges stemming from strategic competition between China and the United States, the former’s efforts to challenge the international rules-based order, and negative aspects of China’s developmental policies such as trade deficits, debt traps, environmental degradation, and competition for resources that all have regional and global dimensions.</p>
+        <p>The problems with the current U.S. policy toward China are continuity, consistency, and commitment, or lack thereof. America should demonstrate its ability to sufficiently and effectively address the nexuses between the short-term and the long-term, cooperation and competition, and economic and strategic objectives, as well as its ability to show its commitment and consistency in implementing the policies. U.S. policy toward China should also take into adequate consideration concerns among smaller partners over the possibility of their interests being compromised by, and the pressure to take sides between, two competing powers.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9341" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/jae-ho-chung"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/jae_ho_chung.jpg?itok=3Ldd8JtH" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="jae-ho-chung"><a href="https://www.chinafile.com/contributors/jae-ho-chung" title="Jae Ho Chung">Jae Ho Chung</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">China is increasingly viewed by Koreans in a negative light, particularly since Beijing’s coercive sanctions against Seoul over the THAAD controversy in 2017. A wide range of surveys—by <a href="https://www.pewresearch.org/global/2020/10/06/unfavorable-views-of-china-reach-historic-highs-in-many-countries/?utm_content=bufferc0664&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer" target="_blank" rel="nofollow">Pew</a>, <em><a href="https://the-japan-news.com/news/article/0007474131" target="_blank" rel="nofollow">The Yomiuri Shimbun</a></em>, <a href="https://ipus.snu.ac.kr/blog/archives/research_cat/unification_perception-survey" target="_blank" rel="nofollow">Seoul National University</a>, and others—suggest that Korean views of China have worsened in recent years and that younger generations’ views (the so-called M/Z generations who take pride in what Korea has accomplished) are <a href="https://www.nytimes.com/2021/08/20/world/asia/korea-china-election-young-voters.html" target="_blank" rel="nofollow">especially</a> more negative. Of course, as perceptions are usually mutual, Chinese <a href="https://supchina.com/2017/03/20/anti-korean-sentiment-china-brief-history-recent-events/" target="_blank" rel="nofollow">views</a> of Korea have also become highly negative lately.</p>
+        <p>It is difficult to determine whether these changes are directly linked to Xi Jinping. But, at least, the turning point of 2017 falls in the middle of Xi’s term as the paramount leader, and coercive diplomacy (aka sharp power) is a signature policy of Xi’s China. Therefore, it is possible that Xi’s assertive diplomacy is a factor in the downturn of Korean views of China in recent years. Another factor may be the Moon Jae-in government’s “<a href="https://en.yna.co.kr/view/AEN20200227001300315" target="_blank" rel="nofollow">overly submissive</a>” diplomacy toward China, which provoked the nationalistic pride harbored by Korea’s younger generations.</p>
+        <p>It may be somewhat premature to comment on the policy of Joe Biden’s government in the U.S. since it is not even one year old. In my view, the current U.S. policy toward China has gone beyond the stage of “<a href="https://www.washingtonpost.com/wp-srv/WPcap/2000-02/13/068r-021300-idx.html" target="_blank" rel="nofollow">strategic hesitation</a>,” “<a href="https://www.casey.senate.gov/news/releases/casey-president-trumps-summit-with-chinas-president-was-all-talk-no-action-on-chinas-trade-cheating" target="_blank" rel="nofollow">all talk no action</a>,” and “it’s all about trade, stupid.” As China’s foreign relations do have aspects of hyper-sensitivity and over-punishment, the U.S. efforts to tame and correct them are deemed sound and desirable. More interesting, however, is the U.S.’s current policy of focusing on enhancing its long-term competitiveness vis-à-vis its real and potential rivals. Just one worry: Can Washington’s schemes and efforts be consistent and durable over time? This is probably the most mindboggling question for its allies and partners who do not wish to get into the danger of being stranded in the air.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9351" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/kavi-chongkittavorn"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/kavi_chongkittavorn.jpeg?itok=iTlS-PP7" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="kavi-chongkittavorn"><a href="https://www.chinafile.com/contributors/kavi-chongkittavorn" title="Kavi Chongkittavorn">Kavi Chongkittavorn</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">In general, Thais view China as a friendly country. A popular mantra in both countries is “China and Thailand are family.” Of course, due to geographic proximity, the Thai public has to deal with China one way or another. The Thai public has generally <a href="https://thediplomat.com/2021/10/thailand-to-cease-using-sinovac-vaccines-after-supplies-are-exhausted/" target="_blank" rel="nofollow">expressed preference</a> for U.S.-made COVID vaccines over China’s Sinovac jab. This was largely due to a widely-reported <a href="https://www.bbc.com/news/world-asia-57801251" target="_blank" rel="nofollow">differential</a> in efficacy. According to a poll conducted by Siam University in June when the massive vaccine campaign kick off, 31.8 percent of 1,035 interviewees preferred Pfizer while 16.5 percent went for Sinovac. Over the past 22 months, Thailand has learned the hard lesson that the country’s economic health cannot rely on the influx of Chinese tourists alone. Before the COVID-19 outbreak, 11 million Chinese tourists <a href="https://www.reuters.com/article/us-thailand-tourism/thailands-2019-foreign-tourists-up-4-china-virus-strong-baht-a-risk-idUSKBN1ZN13G" target="_blank" rel="nofollow">visited</a> Thailand in 2019, <a href="https://www.thailand-business-news.com/tourism/77703-thailands-tourism-at-risk-with-china-virus.html" target="_blank" rel="nofollow">bringing in</a> nearly U.S.$18 billion. China’s pandemic travel restrictions have brought Thailand’s <a href="https://www.mckinsey.com/industries/travel-logistics-and-infrastructure/our-insights/reimagining-travel-thailand-tourism-after-the-covid-19-pandemic" target="_blank" rel="nofollow">tourism industry</a> to the brink of collapse. At the beginning of November, Thailand began allowing visitors from 63 countries to enter without quarantining, a shift away from dependence on China. Thailand is now the most open country in Asia.</p>
+        <p>Since Xi Jinping took power, there have been some changes in attitude toward China in Thailand. Thai youth have been influenced by reports of the crackdown in Hong Kong delivered via social media. The Milk Tea Alliance (a pan-Asian pro-democracy and human rights movement that originated in Taiwan) has been <a href="https://time.com/5904114/milk-tea-alliance/" target="_blank" rel="nofollow">influential</a> in the protests this year in Bangkok, as it was in the early weeks <a href="https://www.reuters.com/article/us-myanmar-protests-asia/milk-tea-alliance-activists-across-asia-hold-rallies-against-myanmar-coup-idUSKCN2AS0HP" target="_blank" rel="nofollow">following</a> the February 1 coup in Myanmar. Younger Thais imitated protesters in Hong Kong. My impression is that older generations of Thais have mixed views of China, viewing it either as a developing country with super economic growth or a superpower that will eclipse the U.S. Older overseas Chinese (first generation) are usually proud to identify with China. In fact, as China gets richer and more powerful, some older local Chinese-Thai are happy to associate with their ancestral home.</p>
+        <p>From the Thai governments’ perspective, America’s main problem is that it cannot accept China as the world’s No. 1 power. Washington today is trying to rally allies and friends to engage in the region, hoping it can curtail the rise of China. The U.S. has highlighted Singapore and Vietnam as <a href="https://www.scmp.com/week-asia/politics/article/3141873/us-defence-chief-visit-security-partners-philippines-singapore" target="_blank" rel="nofollow">preferred</a> security partners, as they have more boldly addressed issues related to the South China Sea conflict and rules-based order. Thai diplomacy toward the U.S. is fairly straightforward: when you are nice to me, I am nicer to you. Indeed, Thailand lacks the kind of strategic thinking of Singapore or Vietnam. Given their longstanding friendship of over two centuries, Thailand is quite sensitive whenever bilateral Thai-U.S. ties play out in the open, especially within the framework of U.S.-China rivalry.</p>
+        <p>While Thailand welcomes China’s generosity and assistance, Thais have been careful in negotiating key infrastructure projects. For instance, an <a href="https://www.globalconstructionreview.com/china-thailand-high-speed-railway-sees-entire-phas/" target="_blank" rel="nofollow">agreement</a> on a high-speed train project has been more than five years in the making—the same period of time in which China successfully <a href="https://www.economist.com/finance-and-economics/2021/12/11/the-economics-of-a-new-china-laos-train-line" target="_blank" rel="nofollow">completed</a> the Yunnan-Vientiane high-speed train line, which went into operation this month. Certainly, it will provide a new impetus for Thailand to recalibrate and accelerate its current high-speed policies.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9356" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/richard-mcgregor"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/mcgregor-richard_0.jpg?itok=HA01hDZK" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="richard-mcgregor"><a href="https://www.chinafile.com/contributors/richard-mcgregor" title="Richard McGregor">Richard McGregor</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">China’s standing with the Australian public has fallen dramatically in recent years, according to Lowy Institute polling, the benchmark survey for local views on foreign policy.</p>
+        <p>China’s military activities in the region, its system of government, and its environmental practices attracted the largest <a href="https://poll.lowyinstitute.org/charts/views-of-china/" target="_blank" rel="nofollow">measures of disapproval</a>, the first two garnering a more than 90 percent disapproval rate in 2021. Australian citizens’ and government’s embrace and now rejection of China both peaked and bottomed out under Xi Jinping. Xi <a href="https://www.straitstimes.com/asia/australianz/full-text-of-chinese-president-xi-jinpings-address-to-australias-parliament" target="_blank" rel="nofollow">addressed</a> both houses of Parliament in 2014, which perhaps marked the best of bi-lateral ties. By contrast, in the last <a href="https://news.cgtn.com/news/2021-11-19/Chinese-envoy-Time-not-conducive-for-ministerial-talks-with-Australia-15jEhf55u00/index.html" target="_blank" rel="nofollow">two years</a>, Chinese ministers have <a href="https://www.abc.net.au/news/2021-11-18/dan-tehan-hopes-australia-and-china-can-have-meaningful-dialogue/100629768" target="_blank" rel="nofollow">declined</a> to take any calls from their Australian counterparts. The downward trend has been hardened by China’s <a href="https://www.business-standard.com/article/international/china-hits-australian-industries-with-economic-sanctions-amid-souring-ties-121070900082_1.html" target="_blank" rel="nofollow">trade sanctions</a>.</p>
+        <p>On U.S. policy, Canberra seeks steadiness and commitment to the region. President Trump provided toughness, but also inconsistency, instability, and a disregard for allies. President Biden has steadied the ship. But Australia is critical of the U.S.’s lack of economic engagement with the region, exemplified by America’s <a href="https://www.scmp.com/week-asia/economics/article/3156405/us-plans-coalition-democracies-trade-wont-join-cptpp-secretary" target="_blank" rel="nofollow">failure to join</a> the Comprehensive and Progressive Agreement for Tans-Pacific Partnership (CPTPP) and other regional agreements. In the longer term, there are natural concerns about America’s ability to pay what are likely to be ever-rising costs to maintain a balance of power in the region.</p>
+        <p>On Taiwan, Australia has begun to take a <a href="https://thediplomat.com/2021/11/moving-toward-sustainable-australia-taiwan-ties/" target="_blank" rel="nofollow">bolder</a> public stance on both Chinese military coercion of the island, and on Canberra’s own interactions with Taipei. The Australian Trade Minister recently held a <a href="https://www.taiwannews.com.tw/en/news/4241269" target="_blank" rel="nofollow">virtual meeting</a> with his Taiwanese counterpart, the first such <a href="https://www.theaustralian.com.au/business/opinion/dont-wipe-taiwan-off-trade-map/news-story/cdbd23f40eefffaf1b1b333e48fab361" target="_blank" rel="nofollow">interaction</a> in about a decade. But Australia is still relatively cautious, moving in tandem with like-minded countries on the issue rather than out ahead of them. Australia’s language in support of Taiwan’s being allowed to negotiate to join the CPTPP was weaker than that of Japan’s. Quietly, the Australian military has begun working more closely with the U.S. and Japan on Taiwanese security issues. Any assessment of the long-term impact of recent statements from Australian government ministers about supporting the U.S. in any war over Taiwan will only be able to be made with clarity after the election, due in the first half of 2022.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-01-11</time>
+        <a href="https://nodebe4.github.io/oped2/2022-01-11/Recent-Articles-about-NGOs-in-China,-Both-Foreign/">
+          Recent Articles about NGOs in China, Both Foreign and Domestic
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-01-04</time>
+        <a href="https://nodebe4.github.io/oped2/2022-01-04/Visually-Understanding-the-Data-on-Foreign-NGO-Rep/">
+          Visually Understanding the Data on Foreign NGO Representative Offices and Temporary Activities
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-12-16</time>
+        <a href="https://nodebe4.github.io/oped2/2021-12-16/Vanishing-Point/">
+          Vanishing Point
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-12-06</time>
+        <a href="https://nodebe4.github.io/oped2/2021-12-06/Hong-Kong-s-National-Security-Law-Made-Amnesty-Int/">
+          Hong Kong’s National Security Law Made Amnesty International’s Departure All But Inevitable
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-12-19/%E7%A8%8B%E5%BC%8F%E5%B0%8E%E5%B8%AB%E5%AF%A6%E9%A9%97%E8%A8%88%E7%95%AB%E7%AC%AC%E4%BA%94%E6%9C%9F%E7%B5%90%E6%A5%AD%E5%BF%83%E5%BE%97/">
+            前一篇：程式導師實驗計畫第五期結業心得
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-12-29/%E7%8B%AC%E7%AB%8B%E5%AA%92%E4%BD%93%E5%88%97%E8%A1%A8-%E4%BB%A5%E5%8F%8A%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E5%88%97%E8%A1%A8-%E6%82%A8%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84%E4%BA%8B-iYouPort/">
+            後一篇：独立媒体列表：以及关于这个列表，您应该知道的事 - iYouPort
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-12-19/%E7%A8%8B%E5%BC%8F%E5%B0%8E%E5%B8%AB%E5%AF%A6%E9%A9%97%E8%A8%88%E7%95%AB%E7%AC%AC%E4%BA%94%E6%9C%9F%E7%B5%90%E6%A5%AD%E5%BF%83%E5%BE%97/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-12-29/%E7%8B%AC%E7%AB%8B%E5%AA%92%E4%BD%93%E5%88%97%E8%A1%A8-%E4%BB%A5%E5%8F%8A%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E5%88%97%E8%A1%A8-%E6%82%A8%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84%E4%BA%8B-iYouPort/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-01-04/Visually-Understanding-the-Data-on-Foreign-NGO-Rep/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-12-16/Vanishing-Point/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-12-19/%E7%A8%8B%E5%BC%8F%E5%B0%8E%E5%B8%AB%E5%AF%A6%E9%A9%97%E8%A8%88%E7%95%AB%E7%AC%AC%E4%BA%94%E6%9C%9F%E7%B5%90%E6%A5%AD%E5%BF%83%E5%BE%97/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-12-29/%E7%8B%AC%E7%AB%8B%E5%AA%92%E4%BD%93%E5%88%97%E8%A1%A8-%E4%BB%A5%E5%8F%8A%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E5%88%97%E8%A1%A8-%E6%82%A8%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84%E4%BA%8B-iYouPort/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-01-04/Visually-Understanding-the-Data-on-Foreign-NGO-Rep/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-12-16/Vanishing-Point/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
