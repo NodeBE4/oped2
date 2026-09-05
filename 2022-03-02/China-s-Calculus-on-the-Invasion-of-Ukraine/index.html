@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>China’s Calculus on the Invasion of Ukraine – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+China’s Calculus on the Invasion of Ukraine
+——
+" />
+    <meta property="og:description" content="
+China’s Calculus on the Invasion of Ukraine
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="China’s Calculus on the Invasion of Ukraine" />
+    <meta property="twitter:title" content="China’s Calculus on the Invasion of Ukraine" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fchinas-calculus-invasion-of-ukraine" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/chinas-calculus-invasion-of-ukraine" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/chinas-calculus-invasion-of-ukraine&text=China’s Calculus on the Invasion of Ukraine&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/chinas-calculus-invasion-of-ukraine&title=China’s Calculus on the Invasion of Ukraine" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/chinas-calculus-invasion-of-ukraine&title=China’s Calculus on the Invasion of Ukraine" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=China’s Calculus on the Invasion of Ukraine&body=
+China’s Calculus on the Invasion of Ukraine
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/chinas-calculus-invasion-of-ukraine" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/chinas-calculus-invasion-of-ukraine&title=China’s Calculus on the Invasion of Ukraine&caption=
+China’s Calculus on the Invasion of Ukraine
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=China’s Calculus on the Invasion of Ukraine&url=https://www.chinafile.com/conversation/chinas-calculus-invasion-of-ukraine" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>China’s Calculus on the Invasion of Ukraine</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-03-02
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Paul Haenle, Bonnie S. Glaser &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/chinas-calculus-invasion-of-ukraine" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1646236920000-->
+<p><a href="https://www.chinafile.com/conversation/chinas-calculus-invasion-of-ukraine">China’s Calculus on the Invasion of Ukraine</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-ebae312c69e781f36ba79152d5f17710">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/53816_sm.jpg" title="China’s Calculus on the Invasion of Ukraine" class="colorbox" data-colorbox-gallery="gallery-node-53816-5lVdlJ6gc3Y" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/53816_sm.jpg?itok=qRjihmmT" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Anastasia Vlasova—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>People cross a destroyed bridge over the Irpin river, in Irpin, just outside of the city of Kyiv, Ukraine, March 1, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">On February 24, Russia invaded Ukraine. In the week since, civilian casualties <a href="https://www.reuters.com/world/un-reports-least-536-civilian-casualties-ukraine-2022-03-01/" target="_blank" rel="nofollow">have topped</a> 500 with bombardments sending <a href="https://www.bbc.com/news/world-60555472" target="_blank" rel="nofollow">hundreds of thousands</a> of Ukrainians fleeing across the border. The response from much of the international community has been swift and coordinated, with sanctions, shipments of armaments, and loud <a href="https://www.npr.org/2022/02/22/1082334172/kenya-security-council-russia" target="_blank" rel="nofollow">condemnation</a>. China, however, has stayed markedly apart. China’s UN ambassador <a href="https://news.un.org/en/story/2022/02/1112802" target="_blank" rel="nofollow">abstained</a> from voting to condemn the invasion, while Chinese media has <a href="https://www.ft.com/content/8d2e9f59-06b2-4e90-aba9-fd32249f67be" target="_blank" rel="nofollow">avoided</a> the word altogether. But China’s government has long made the inviolability of national sovereignty a cornerstone of its foreign policy, and Xi Jinping faces a balancing act in his defense of Vladimir Putin’s actions.</p>
+      <p>One week in, what does Russia’s invasion of Ukraine mean for China? Where are the places to look for a clearer picture of how China’s position on the war is likely to evolve? —<em><a href="https://www.chinafile.com/contributors/abby-seiff" target="_blank" rel="nofollow">Abby Seiff</a></em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9511" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/paul-haenle"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/paul-haenle.jpg?itok=ne2prBiL" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="paul-haenle"><a href="https://www.chinafile.com/contributors/paul-haenle" title="Paul Haenle">Paul Haenle</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The Russia-Ukraine situation has forced China to attempt to balance three mutually incompatible goals: its strategic partnership with Russia; adherence to principles of non-interference and state sovereignty; and avoiding further damage to its relations with the EU and U.S., as my Carnegie colleague Evan Feigenbaum has <a href="https://carnegieendowment.org/2022/02/24/china-faces-irreconcilable-choices-on-ukraine-pub-86515" target="_blank" rel="nofollow">pointed out</a>. Since the beginning of the war, China’s messaging on the intensifying conflict has been somewhat muddled, <a href="https://www.reuters.com/world/europe/china-says-it-respects-ukraines-sovereignty-russias-security-concerns-2022-02-25/" target="_blank" rel="nofollow">emphasizing</a> the importance of Ukrainian sovereignty while also highlighting the importance of addressing Russia’s security concerns.</p>
+        <p>Over the past few days, however, Beijing’s position seems to be solidifying. China continues to back Russia through its comprehensive strategic partnership and to <a href="https://www.politico.eu/article/russia-china-oppose-nato-enlargement-vladimir-putin-xi-jinping-ukraine/" target="_blank" rel="nofollow">oppose</a> NATO expansion and sanctions on Russia. At the same time, it is paying lip service to its principles of non-interference and positive relations with Ukraine. In short, Beijing is trying to straddle what many have identified as an unstraddleable divide.</p>
+        <p>Despite global condemnation of Russia, China appears to be backing its northern neighbor, providing <a href="https://www.reuters.com/world/russia-vetoes-un-security-action-ukraine-china-abstains-2022-02-25/" target="_blank" rel="nofollow">diplomatic cover</a> at the United Nations, and refusing, to date, to participate in <a href="https://www.nytimes.com/2022/02/23/world/europe/china-russia-ukraine-sanctions.html" target="_blank" rel="nofollow">sanctions</a> against Moscow and the Russian elite. Such an approach is bound to further stress China’s ties with the U.S. and the EU. So why has Beijing been reluctant to back away from Moscow?</p>
+        <p>There are at least four possible rationales. First, given China’s rocky relations with the U.S. and Europe, Beijing appreciates the importance of keeping Moscow on its good side. Beijing has <a href="https://www.brookings.edu/essay/the-long-game-chinas-grand-strategy-to-displace-american-order/" target="_blank" rel="nofollow">identified</a> the U.S. as its primary geopolitical adversary, and their relations would likely remain tense even if Xi Jinping were to withdraw his support of Vladimir Putin. It is hard to imagine Xi’s being personally supportive of Putin’s decision to invade Ukraine, as evidenced by his entreaties for Russia to negotiate with Ukraine during a <a href="https://www.aljazeera.com/news/2022/2/25/chinas-xi-speaks-to-putin-calls-for-negotiation-with-ukraine" target="_blank" rel="nofollow">phone call</a> with the Russian president. But Xi’s calculation, at least for now, is likely that it is better to keep Putin as a partner, however problematic, than to give up on him.</p>
+        <p>A second, but related possibility, is that Beijing realizes Moscow’s economic destitution will allow it cheap access to the Russian raw materials that power China’s industrial engine. Moreover, Beijing will have an unprecedented amount of influence on Russian economic affairs.</p>
+        <p>Next, China’s foreign policy establishment is likely thrilled that Russia is soaking up the lion’s share of American and European attention. Moscow’s diversion, the thinking goes, could give China some more breathing room in the Indo-Pacific.</p>
+        <p>Finally, in discussions over recent years, most Chinese scholars point to the importance of Xi’s decision to forge a close personal relationship with Putin as one of the <a href="https://www.atlanticcouncil.org/in-depth-research-reports/report/axis-of-collusion-the-fragile-putin-xi-partnership/" target="_blank" rel="nofollow">main drivers</a> of warming China-Russia relations. Since 2013, the two men have <a href="https://www.fmprc.gov.cn/mfa_eng/zxxx_662805/202112/t20211215_10470186.html" target="_blank" rel="nofollow">met</a> nearly 40 times, celebrating birthdays, enjoying caviar and shots of vodka and, in the process, developing a strong personal bond. This has sent a clear signal to China’s bureaucracy that efforts to improve China-Russia relations have received Xi’s imprimatur. As a result, it is now politically risky for anyone within the Chinese system to suggest that China should reconsider the merits of close strategic alignment with Russia. Such recommendations could be viewed, in the highly charged political atmosphere leading up the 20th Party Congress, as direct criticism of Xi, as well as his relationship with Putin. At this point, any significant shifts China makes regarding its current support of Russia likely need to be made at the very top.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9521" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/bonnie-s-glaser"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/bonnie_s._glaser.jpg?itok=pAmitscm" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="bonnie-s-glaser"><a href="https://www.chinafile.com/contributors/bonnie-s-glaser" title="Bonnie S. Glaser">Bonnie S. Glaser</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">One week after Russia’s invasion of Ukraine, Beijing is struggling to balance its interests in preserving its burgeoning relationship with Moscow, adhering to its principle of upholding state sovereignty and territorial integrity, and limiting damage to its ties with the West. Vladimir Putin’s decision to use large-scale military force against Ukraine was not China’s preferred scenario and has put Xi Jinping in an awkward position. A better outcome for Beijing would have been a diplomatic solution in which NATO pledged not to expand further eastward, Ukraine accepted neutrality, and U.S. alliances were weakened. Instead, innocent civilians are being killed in Ukraine and Beijing is viewed by many in the United States and other countries as an enabler of Putin’s war.</p>
+        <p>Xi Jinping now has to decide whether and to what extent to help the Russian economy and financial system as sanctions begin to take effect. Beijing has long opposed sanctions, which it terms “<a href="https://www.reuters.com/article/china-parliament-law/china-to-push-legislation-to-fight-long-arm-foreign-pressure-idINKBN2B0121" target="_blank" rel="nofollow">long-arm jurisdiction</a>,” based on domestic law. China is likely to find ways to help Moscow mitigate the impact of the sanctions, without blatantly violating them. The playbook it has <a href="https://foreignpolicy.com/2016/03/07/u-n-panel-north-korea-used-chinese-bank-to-evade-nuclear-sanctions/" target="_blank" rel="nofollow">used</a> to assist <a href="https://www.nytimes.com/2021/03/27/world/middleeast/china-iran-deal.html" target="_blank" rel="nofollow">Iran</a> and <a href="https://www.theguardian.com/world/2020/apr/18/north-korea-defies-sanctions-with-chinas-help-un-panel-says" target="_blank" rel="nofollow">North Korea</a> evade sanctions provides possible actions China can take. But will that support be sufficient to enable Russia to weather the consequences of the sanctions? Xi Jinping continues to value his relationship with Putin, and China’s alignment with Moscow, and is unwilling to jettison them. In Xi’s <a href="https://www.brookings.edu/essay/the-long-game-chinas-grand-strategy-to-displace-american-order/" target="_blank" rel="nofollow">assessment</a> of the international situation, the world is undergoing changes unseen in a century, which includes a declining United States and the failure of Western democracies. The events of this past week have not likely led Xi to fundamentally reconsider this assessment.</p>
+        <p>Nevertheless, Xi is unlikely to completely throw in his lot with Russia. China’s diplomatic rhetoric will also provide clues as to whether Xi is doubling down on supporting Moscow or attempting to shift to a more centrist position. So far, China’s statements suggest that Beijing is professing to be neutral, while actually “leaning to one side,” blaming the United States for the crisis and doubling down on an alignment with Russia.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9531" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/ryan-hass"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/ryanhass.jpg?itok=E-0-MAlD" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="ryan-hass"><a href="https://www.chinafile.com/contributors/ryan-hass" title="Ryan Hass">Ryan Hass</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The speed and strength of the international response to Russia’s invasion of Ukraine should be discomforting for China’s leaders. In a matter of days, NATO’s cohesion and sense of purpose has been solidified. Trans-Atlantic coordination has tightened. Every major developed economy has swung into support for unprecedented financial sanctions on Russia. Global public opinion has turned against Russia. And in the United States, there have been growing calls to treat China and Russia as interchangeable foes and to respond to Russia’s attack on Ukraine by <a href="https://www.bloomberg.com/news/articles/2022-03-01/u-s-delegation-shows-support-for-taiwan-after-ukraine-invasion" target="_blank" rel="nofollow">bolstering</a> American support for Taiwan.</p>
+        <p>This is not the first time that Russia’s recklessness has harmed China. Just 70 years ago, several hundred thousand Chinese soldiers died in the Korean War, even though Beijing was not given a vote on the initial decision for North Korea to launch an invasion of South Korea. Soviet and Chinese soldiers fought each other in a border dispute in 1969. In the years that followed, China was forced to maintain a heavy military presence to protect its northern border with the Soviet Union. After the Sino-Soviet split, the Soviet Union backed Vietnam in waging military aggression in Southeast Asia against Chinese interests.</p>
+        <p>Russia’s actions yet again are harming China’s interests. Early indications suggest that Putin’s aggression might spark global economic and financial volatility, make Europe less hospitable for China’s ambitions, and generate growing <a href="https://www.dw.com/en/can-russias-ukraine-invasion-prompt-china-to-attack-taiwan/a-60945073" target="_blank" rel="nofollow">global calls</a> to view <a href="https://www.brookings.edu/blog/order-from-chaos/2022/02/22/learning-the-right-lessons-from-ukraine-for-taiwan/" target="_blank" rel="nofollow">Taiwan</a> as the “<a href="https://www.stripes.com/theaters/asia_pacific/2022-03-01/south-korea-presidential-election-ukraine-of-asia-5184937.html" target="_blank" rel="nofollow">Ukraine of Asia</a>.”</p>
+        <p>This moment will provide a test of whether China’s diplomacy remains nimble enough to reorient in the face of changing circumstances. As I <a href="https://www.brookings.edu/blog/order-from-chaos/2022/03/01/ukraine-presents-opportunity-to-test-chinas-strategic-outlook/" target="_blank" rel="nofollow">wrote</a> recently for Brookings, China’s alignment with Russia will be tested many times in the coming weeks. There will be scrutiny over China’s posture on a United Nations General Assembly vote to condemn Russia’s invasion, and over whether China will shield Russia from future UN investigations into atrocities in Ukraine. China will face decisions on whether to recognize breakaway republics in Ukraine or to recognize a puppet regime that Putin seems to want to implant in Kyiv. There will be scrutiny of whether China softens the impact of global sanctions on Russia by backfilling, and whether it takes meaningful steps to seek to defuse tensions in Ukraine.</p>
+        <p>Beijing’s response to the first week of conflict in Ukraine has been largely reactive, with a default to tilt toward Moscow. If Beijing persists down this path, it risks further aggravating its relations with the United States, the European Union, and most other developed economies. Remaining close with Moscow may be a gamble China’s leaders are willing to take; they may conclude they have no alternative. Whether that gamble produces a payout for China’s strategic interests, though, is an entirely different question.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9541" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/pamela-kyle-crossley"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/pamelacrossley.jpg?itok=Eq6mxNIs" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="pamela-kyle-crossley"><a href="https://www.chinafile.com/contributors/pamela-kyle-crossley" title="Pamela Kyle Crossley">Pamela Kyle Crossley</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Xi Jinping might have noticed that a mortal threat to a vibrant democracy changes everything. Lazy, greedy, ethically casual societies of the “West” may react with surprising unity and determination. And that democracy can be economically negligible, one of the few countries of Europe that can make Russia look rich. But it can still change the world.</p>
+        <p>Fuzzy and negotiable lines demarcating law and justice in relation to authoritarian regimes have clarified quickly. That gray area where principles are perpetually compromised by financial ambitions and a valorized “internationalism”—the area the People’s Republic of China (PRC) is used to navigating—has suddenly contracted. Today (and perhaps tomorrow) there is no cozy gray area. Xi needs to get on the side of sovereignty or the side of savage aggression, and he is not moving particularly fast.</p>
+        <p>Vladimir Putin has already lost the battle that interests Xi: He has been exposed as a coward, a <a href="https://www.wsj.com/articles/ukrainian-capital-rocked-by-explosions-as-russia-intensifies-attack-11645771768" target="_blank" rel="nofollow">child killer</a>, and a thief. The exposure has come from Putin’s intended victims, who have produced an unlikely but shiningly appealing hero and a death-defying popular will to preserve their way of life.</p>
+        <p>Xi may already be much less enthusiastic about being shoulder to shoulder with an international cartoon villain with a hopeless pricked-balloon economy, a heavy-footed ground force, and a talent for uniting his opponents. And to make it even more unappealing, the big enemy “West”—indeed, the world—has proved inaccessible to smug calculations about comfort, economy, or political inertia.</p>
+        <p>Possibly, if Putin is successful in absorbing Ukraine, it may be a model for Xi and may make Putin a valuable ally—though it will prolong “Western” unity. If Putin fails, the Chinese Communist Party Central Committee’s propaganda department will start an assembly line of reasons why history distinguishes Xi’s designs on Taiwan from Putin’s on Ukraine. The <em>People’s Daily</em> will run articles with unfavorable comparisons of Russian military resources to China’s.</p>
+        <p>Or, it may make no difference. Europeans have rushed to support Europeans, with a lot of fist-pumping and cheering from the sidelines; that doesn’t mean, to Xi, that they, or the U.S., or the rest of Asia would rush to support Taiwan. If that is Xi’s calculus, he may miss the point:</p>
+        <p>Taiwan is the fastest rising economy in East Asia, with a per capita GDP expected to surpass Japan and South Korea; all of them leave the PRC living standard in the dust. And “one country two systems” mythology has been exploded. Taiwan sits much closer to the heart of international capitalism—real capitalism, not Chinese Communist Party corporatism masquerading as capitalism—and security than Ukraine (or, indeed, than Hong Kong). For that alone, the calculations would change.</p>
+        <p>More important, Taiwan is the most successful rising democracy in the world. Xi would do best to call off his wolf diplomats. Let that gray area of ethical unaccountability unfold again, and let everybody get richer and more flexible. But he should remember that threatening a democracy these days has special dangers. And sometimes the victims determine the outcome.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9546" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/kenton-thibaut"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/kenton_thibaut.png?itok=j5dYJrme" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="kenton-thibaut"><a href="https://www.chinafile.com/contributors/kenton-thibaut" title="Kenton Thibaut">Kenton Thibaut</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">As the scope of the Russian invasion of Ukraine became clear, China was faced with the awkward position of reconciling its support for Russia with its <a href="https://digitalarchive.wilsoncenter.org/document/121623.pdf?v=e1cd06384e2e67bdff11f809ead78849" target="_blank" rel="nofollow">longstanding</a> principle of <a href="https://www.fmprc.gov.cn/mfa_eng/wjdt_665385/zyjh_665391/201407/t20140701_678184.html#:~:text=Echoing%20this%20historical%20trend%2C%20China,mutual%20benefit%2C%20and%20peaceful%20coexistence." rel="nofollow">non-interference</a>. Beijing sought to redirect the narrative to focus less on Russian actions, and more on how a U.S. history of unilateral sanctions and NATO expansionism essentially <a href="http://www.news.cn/2022-02/24/c_1128413011.htm" target="_blank" rel="nofollow">forced</a> Putin’s hand, with tragic results for the Ukrainian people.</p>
+        <p>Trends from social media show that the Chinese public is paying close attention to China’s role in the issue. For example, the hashtag #俄乌局势对中国有何启示#？(What does the Ukraine situation reveal for China?) has over <a href="https://s.weibo.com/weibo?q=%23%E4%BF%84%E4%B9%8C%E5%B1%80%E5%8A%BF%E5%AF%B9%E4%B8%AD%E5%9B%BD%E6%9C%89%E4%BD%95%E5%90%AF%E7%A4%BA%23" target="_blank" rel="nofollow">1.3 million views</a> on Weibo, with one of the top <a href="https://weibo.com/ttarticle/p/show?id=2309404741811020366232#_loginLayer_1646155327724" target="_blank" rel="nofollow">posts</a> from Sina News garnering around 8,000 comments and 119,000 likes. Some of the most popular posts are those that <a href="https://weibo.com/5170894003?refer_flag=1001030103_" target="_blank" rel="nofollow">criticize</a> the recent <a href="https://www.reuters.com/markets/europe/russia-seeks-halt-investor-stampede-sanctions-hammer-economy-2022-03-01/" target="_blank" rel="nofollow">sanctions</a> on Russia as Western <a href="https://weibo.com/6183820710?refer_flag=1001030103_" target="_blank" rel="nofollow">imperialism</a>. One such <a href="https://baijiahao.baidu.com/s?id=1726022495431337691&amp;wfr=spider&amp;for=pc" target="_blank" rel="nofollow">post</a>—from the <em>Global Times</em>—reached number 4 on the Baidu trending list on February 28, garnering almost 5 million views, with many of the comments praising Putin for his “boldness” in standing up to U.S. aggression. Posts cheering China-Russian friendship and even <a href="https://user.guancha.cn/main/content?id=704949&amp;s=zwyess" target="_blank" rel="nofollow">encouraging</a> Chinese to support Russia’s economy by purchasing from Russian brands have also circulated.</p>
+        <p>Other themes from Chinese social media echo <a href="https://twitter.com/SpokespersonCHN/status/1428725957888647178" target="_blank" rel="nofollow">previous</a> Chinese government criticisms regarding the history of U.S. military interventions. One post points out the “<a href="https://weibo.com/3607218171?refer_flag=1001030103_" target="_blank" rel="nofollow">double standard</a>” of Washington criticizing Russia’s move against Ukraine while having engaged in a number of bombing campaigns. Several <a href="https://v.youku.com/v_show/id_XNTg0MjcyNzk0NA==.html" target="_blank" rel="nofollow">sources</a> took a note from Russian state media, reposting commentary from an <a href="https://mobile.twitter.com/SpokespersonCHN/status/1498346631410102274" target="_blank" rel="nofollow">interview</a> by Fox News host Tucker Carlson of former U.S. representative Tulsi Gabbard, in which she claimed the Russian invasion of Ukraine was <a href="https://theintercept.com/2022/02/24/russian-tv-uses-tucker-carlson-tulsi-gabbard-sell-putins-war/" target="_blank" rel="nofollow">provoked</a> by the U.S. Others, like this <a href="https://weibo.com/1686546714/Lh3Ty3Yza" target="_blank" rel="nofollow">post</a> that garnered 1.36 million likes and over 70,000 comments on Weibo, portrayed Ukrainian President Volodymyr Zelensky as a shill for the United States who abandoned his country.</p>
+        <p>While on the surface it seems that the Chinese public is largely pro-Russian, there are signs that this overwhelming support is partly manufactured. For example, a large proportion of the <a href="https://freewechat.com/" target="_blank" rel="nofollow">censored</a> WeChat posts from the past week are those that use the word “invasion” to describe Russian actions towards Ukraine or otherwise depict Moscow’s actions in a negative light. Similarly, an open letter condemning the invasion by 121 Chinese academics on Weibo was immediately <a href="https://twitter.com/JINGWAN01253680/status/1498082192332931072?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1498154899418275847%7Ctwgr%5E%7Ctwcon%5Es2_&amp;ref_url=https%3A%2F%2Fwww.washingtonpost.com%2Fworld%2F2022%2F02%2F28%2Fchina-russia-uk" target="_blank" rel="nofollow">censored</a>; <a href="https://chinadigitaltimes.net/2022/02/minitrue-keep-weibo-posts-on-ukraine-favorable-to-russia-control-comments/" target="_blank" rel="nofollow">leaked</a> instructions from a Beijing news outlet reveal Chinese state directives to keep Weibo posts on Ukraine favorable to Russia and to control negative comments.</p>
+        <p>As China’s ambitions on the world stage grow, its claims of being a stalwart defender of non-interventionism will come under increasing friction. It is also clear that the Chinese public is active and opinionated when it comes to international issues. Reconciling these two trends will depend on just how adeptly China can manage both its internal and external propaganda machines.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9551" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/rogier-creemers"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/creemers_sm.png?itok=3jfQLSha" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="rogier-creemers"><a href="https://www.chinafile.com/contributors/rogier-creemers" title="Rogier Creemers">Rogier Creemers</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Certainly, the Ukraine crisis presents a lot of potential downsides to China, and little or no upside. Furthermore, the Chinese Communist Party dislikes surprises and is highly allergic to volatility; it prefers predictability and stable surroundings so it can focus on its substantive program. This is the case at any given time, but this year in particular may well carry domestic consequences: The 20th Party Congress is coming.</p>
+        <p>Reflexively, the Party leadership feels considerable affinity with the Putin regime, which it sees as a stalwart partner in the fight against U.S. hegemony and the Western juggernaut flattening everything in its path with a combination of economic power and political instruments such as universal rights. Yet at the same time, the substance of Chinese-Russian relationships is thin. China trades more with the Netherlands, Vietnam, Malaysia, Brazil, and India than it does with Russia. While the two countries do engage in a modicum of military and security cooperation, the extent of their cooperation pales in comparison to the relationships that, for instance, Western militaries have built up through NATO. One might well say that if China and Russia are conjoined, they are fused only at the head.</p>
+        <p>But the head is exactly what the upcoming political year will be about. Whatever happens at the 20th Party Congress, it will likely be of considerable historic significance and require much, if not all, of Xi’s political deftness and sleight-of-hand to pull off. The question therefore is how Xi is going to manage the potential impression that he may have been played by Putin, or that he has made a choice that will result in significant harm to other Chinese interests.</p>
+        <p>We will probably never know whether Xi knew about the planned military operation before it happened, and if yes, if he believed that it would be the walk in the park Putin seemed to expect. Certainly, China seems to not have expected the strong and rapid Western reaction that took place within mere days. None of these options reflects well on the ability of the core leadership to wisely navigate China through the choppy waters of the <a href="https://digichina.stanford.edu/work/translation-xi-jinpings-speech-to-the-politburo-study-session-on-the-digital-economy-oct-2021/" target="_blank" rel="nofollow">changing global order</a>.</p>
+        <p>Beijing, therefore, will want this problem off the table, and the sooner the better. Yet it cannot be solved in such a way that might legitimize the Western sanctions, lest they be targeted against China at some point. In the long run, this will incentivize China to further ensure its economy cannot be strangled in the same way as Russia’s can; at least for now, China’s foreign dependencies remain deeply embedded in its economic structure. A negotiated solution would therefore be preferable. This would allow Beijing to wash its hands of substantive questions, while applauding the fact that a peaceful diplomatic solution had been reached. Unfortunately for Xi, neither Putin nor the Ukrainian government see this as a way forward for the time being.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-03-07</time>
+        <a href="https://nodebe4.github.io/oped2/2022-03-07/Visually-Understanding-the-Data-on-Foreign-NGO-Rep/">
+          Visually Understanding the Data on Foreign NGO Representative Offices and Temporary Activities
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-02</time>
+        <a href="https://nodebe4.github.io/oped2/2022-03-02/Remembering-Jonathan-Spence/">
+          Remembering Jonathan Spence
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-02-28</time>
+        <a href="https://nodebe4.github.io/oped2/2022-02-28/In-Xinjiang-s-Tech-Incubators,-Innovation-Is-Insep/">
+          In Xinjiang’s Tech Incubators, Innovation Is Inseparable from Repression
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-02-22</time>
+        <a href="https://nodebe4.github.io/oped2/2022-02-22/When-Paul-Robeson-Sang-for-China/">
+          When Paul Robeson Sang for China
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-02-28/In-Xinjiang-s-Tech-Incubators,-Innovation-Is-Insep/">
+            前一篇：In Xinjiang’s Tech Incubators, Innovation Is Inseparable from Repression
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-03-02/Remembering-Jonathan-Spence/">
+            後一篇：Remembering Jonathan Spence
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-02-28/In-Xinjiang-s-Tech-Incubators,-Innovation-Is-Insep/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-03-02/Remembering-Jonathan-Spence/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-03-02/Remembering-Jonathan-Spence/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-02-28/In-Xinjiang-s-Tech-Incubators,-Innovation-Is-Insep/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-02-28/In-Xinjiang-s-Tech-Incubators,-Innovation-Is-Insep/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-03-02/Remembering-Jonathan-Spence/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-03-02/Remembering-Jonathan-Spence/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-02-28/In-Xinjiang-s-Tech-Incubators,-Innovation-Is-Insep/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

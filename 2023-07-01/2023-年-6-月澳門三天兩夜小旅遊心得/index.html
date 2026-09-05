@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>2023 年 6 月澳門三天兩夜小旅遊心得 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+2023 年 6 月澳門三天兩夜小旅遊心得
+——
+" />
+    <meta property="og:description" content="
+2023 年 6 月澳門三天兩夜小旅遊心得
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="2023 年 6 月澳門三天兩夜小旅遊心得" />
+    <meta property="twitter:title" content="2023 年 6 月澳門三天兩夜小旅遊心得" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2F2023-06-macau-travel-venetian-21687588b87d%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/2023-06-macau-travel-venetian-21687588b87d?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/2023-06-macau-travel-venetian-21687588b87d?source=rss-f1fb3e40dc37------2&text=2023 年 6 月澳門三天兩夜小旅遊心得&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/2023-06-macau-travel-venetian-21687588b87d?source=rss-f1fb3e40dc37------2&title=2023 年 6 月澳門三天兩夜小旅遊心得" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/2023-06-macau-travel-venetian-21687588b87d?source=rss-f1fb3e40dc37------2&title=2023 年 6 月澳門三天兩夜小旅遊心得" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=2023 年 6 月澳門三天兩夜小旅遊心得&body=
+2023 年 6 月澳門三天兩夜小旅遊心得
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/2023-06-macau-travel-venetian-21687588b87d?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/2023-06-macau-travel-venetian-21687588b87d?source=rss-f1fb3e40dc37------2&title=2023 年 6 月澳門三天兩夜小旅遊心得&caption=
+2023 年 6 月澳門三天兩夜小旅遊心得
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=2023 年 6 月澳門三天兩夜小旅遊心得&url=https://hulitw.medium.com/2023-06-macau-travel-venetian-21687588b87d?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>2023 年 6 月澳門三天兩夜小旅遊心得</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-07-01
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/2023-06-macau-travel-venetian-21687588b87d?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1688216064000-->
+<p><a href="https://hulitw.medium.com/2023-06-macau-travel-venetian-21687588b87d?source=rss-f1fb3e40dc37------2">2023 年 6 月澳門三天兩夜小旅遊心得</a>
+——</p>
+
+<div>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*5mqry9YbM-TOf0Mb70gRgQ.jpeg" />    <figcaption>
+閃亮亮的澳門
+    </figcaption>
+  </figure>
+  <p>因為要保持星宇航空會籍的關係，今年一定要再飛一次來回，而最省錢也最快的航點就非澳門莫屬了。</p>
+  <p>平日早去晚回的機票，兩個人大約 12k，一個人 6k 其實滿便宜的。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*MtdxpUnIUCW3jMNBwFjcpw.jpeg" />    <figcaption>
+星宇航空飛機餐
+    </figcaption>
+  </figure>
+  <p>雖然說飛不到兩小時就到了，但一樣有飛機餐可以吃，菜色如上，主餐漢堡排 + 水果 + 一杯小果汁鋁箔包（沒拍到） + 巧克力米果（沒拍到），味道還不錯，不過我好像已經吃這個漢堡排第三次了。</p>
+  <p>下飛機以後入境的地方不大，但根據時機不同，隊伍長度會有很大的變化。剛好我們是比較空的時段，過了十分鐘以後一堆巴士開進來（因為很多飛機沒有連接航廈，所以旅客是下機之後再搭巴士過來），人瞬間變得超級多。</p>
+  <p>順利入境以後就搭免費接駁車前往這三天的住宿：威尼斯人。</p>
+  <p>當初原本想說要不要一天住威尼斯人，另一天跑去另一個半島住，後來想想覺得好像很麻煩，還是算了。威尼斯人的價錢是兩個晚上 12000 元不含早餐，我覺得小貴。</p>
+  <p>雖然說到達飯店的時候才一點半，不過也可以先去排隊 check-in，排隊的時候會有人來問你要不要辦卡，基本上就是賭場的卡，這個等等再解釋。排到的時候櫃檯說現在就有房，或是也可以等一個半小時可以給我更高樓，就選更高樓了。</p>
+  <p>接著就是去附近商場晃晃等房間。</p>
+  <p>這次我第二次來澳門了，第一次是 2016 年 7 月，公司的員工旅遊，算算也是七年前了。那時候我的心得文上面寫說：</p>
+  <blockquote>
+在這裡親眼見識到澳門的物價，台灣賣 160 的普通餐點，澳門大概賣 80 澳幣，也就是 320 台幣。因此得到這趟旅遊第一個心得：把台灣價格*2，大概就是在澳門要付出的代價  </blockquote>
+  <p>沒想到七年後再去，物價也差不多，一個人吃一餐就差不多 80 澳幣（乘以 4 是台幣），似乎算是好事，並沒有物價飛漲什麼的。</p>
+  <p>我們的房間長這樣，就是經典的威尼斯人房間：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*P8Ug543konKAjR5q1x44PQ.jpeg" />    <figcaption>
+威尼斯人經典雙人房
+    </figcaption>
+  </figure>
+  <p>其實整個環境滿舒服的，浴室很大，房間也很大，而且有工作桌可以工作，所有的插座也都是萬國插座不需要轉接頭，唯一的缺點就是床有點短，我 183 公分睡覺的時候腳會在床外。</p>
+  <p>放完東西以後，就去樓下開始賭博了。</p>
+  <p>這次帶的現金是 300 美金，折合港幣約 2300 左右，這邊去賭場都是收港幣，不是收澳門幣，換錢的時候要注意一下。</p>
+  <p>像我這種小賭怡情的，都是選電子機台為主，因為真人的最小賭注都太高了，以威尼斯人來說最小的就要 500 港幣，我玩個兩三注就有可能輸光了，不適合。</p>
+  <p>電子機台的話最小一注是 100 港幣，還可以玩久一點。</p>
+  <p>然後講回前面的那個會員卡，這邊每一家飯店背後都可能是一個集團，例如說威尼斯人、巴黎人、倫敦人就是金沙集團，這個集團就會有個會員系統，簡單來說就是你賭得越多積分越高，然後「越多」並不是「贏得多」，而是看總共的賭額。</p>
+  <p>例如說你贏 100 又輸 100，連續 10 次，總額就是 (100+100) * 10 = 2000 元，電子機台似乎要三四千才會有一點積分，湊滿點數就可以去換東西。舉例來說，有些賭場可能 30 分就可以換一個平日晚上的房間，或是 8 分讓你換一份簡單的晚餐之類的。</p>
+  <p>我們第一天待在賭場裡面兩三個小時，好像也才打到 5 分左右，什麼都換不到。有些積分是每天結算的，隔天就重新計算了，但也有些可以累積。</p>
+  <p>總之呢，第一天我運氣不錯，1000 的本金最後換回 4500 塊，把機票都賺回來了。</p>
+  <p>話說這邊幫沒有去過賭場的人簡單介紹一下，進賭場如果你看起來沒有很年輕，也不太會檢查證件，直接讓你進去，有帶包包的話可能需要簡單看一下，然後完全免費，不用錢。</p>
+  <p>進去之後有些地方會有飲料吧，都是一些果汁啊，可樂什麼的，都是免費的，直接點下去就對了，路過就可以進去喝個一兩杯。</p>
+  <p>要玩的話也很簡單，電子機台直接投鈔票進去就好，賭完要走的時候按結算，就會吐一張券給你上面寫餘額，這張券你可以再丟進機台當籌碼（例如說等等還想來玩），也可以直接兌現。</p>
+  <p>像我們這種小額的，旁邊都有機器可以自動兌現，把那張券放進去，就會吐現金給你，拿到現金就可以走人了（不過有些零頭我有碰過沒辦法給的，例如說剩下 3 塊再找一張券給你）</p>
+  <p>話說第一天的晚餐是吃商場裡面的 Five Guys，我覺得以澳門物價來說是平價的了，一個普通漢堡大約 70 港幣，小的薯條 40 港幣然後維持一慣的 Five Guys 風格，就是幹你娘加爆，整個紙袋裡面都是薯條。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*BjT2vtzpFIMZuIQhG9ni2g.jpeg" />    <figcaption>
+其實裡面人不多，我以為會更夯的
+    </figcaption>
+  </figure>
+  <h3 id="day2">Day2：跑來跑去</h3>
+  <p>第二天早上先跑去官也街晃一下，看到瑪嘉烈蛋撻店沒什麼人排隊就跑去買（昨天看到威尼斯人的隊伍排超級長，至少有三十個人在排）一個蛋塔 11 塊港幣，其實算很便宜的了。</p>
+  <p>吃完的感想跟七年前一樣：「肯德基就很好吃了」，而且這是有科學根據的，因為台灣肯德基的蛋塔本來就是買瑪嘉烈的配方。</p>
+  <p>接著看附近沒什麼人排隊，順便再點了牛雜，其實味道不錯但是沒白飯配很痛苦，那一碗牛雜超適合配飯的。</p>
+  <p>逛得差不多以後，跑回商場去 LadyM 吃蛋糕，台北一片 270 台幣，這邊一片 80 港幣折合台幣約 320 塊，顯得特別便宜，算是平價美食了。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*AayB1sggU-luMEWdcpinGg.jpeg" />    <figcaption>
+還有蛋糕套餐但太多了
+    </figcaption>
+  </figure>
+  <p>吃完之後再去賭場賭個幾把，然後走去附近的銀河飯店。</p>
+  <p>澳門這邊的特點就是飯店一大堆，然後每個都附設賭場。銀河賭場的特別之處在於有免費的珍珠奶茶可以喝，雖然小小杯的，但味道還行。喝個幾杯然後小賭個幾把，讚讚。</p>
+  <p>再來還有個特點就是這邊的飯店接駁車很方便，想去哪邊都不需要交通費，搭接駁車就對了。不過最近的接駁車反倒比七年前還少了。我上次來的時候有一個接駁車會經過各大飯店，這次去卻發現沒了。</p>
+  <p>以威尼斯人來說，只有去碼頭、機場、關閘跟金沙飯店，沒有去其他非聯盟的飯店。而銀河的話則是有接駁車到另一邊的星際飯店，剛好過去看一看。</p>
+  <p>到星際之後一樣先去附近晃晃，去了永利皇宮順便賭了幾把，然後慘劇就發生了。連續開了六把莊以後我開始下閒，輸 100 下 200，輸 200 下 400，以此類推，經典的馬丁格爾策略，結果我下到 1600 還是開莊，就把第一天贏的都輸回去了，直接血虧 3000 港幣，賭博真滴可怕。</p>
+  <p>補充一點，之前又提到過威尼斯人電子機台最小一注是 100 港幣，像是永利皇宮跟銀河都有更小的，最低一注 50 塊就可以玩，如果不是單純下莊閒的話，10 塊就可以了，對想小賭的小資族來說比較友善。</p>
+  <p>賭場逛的差不多以後，就用走的走去附近大三巴，雖然說是下午四五點不過天氣還是有點熱，可以搭公車的話還是搭公車比較好。在那邊簡單拍個照，順便吃一下義順牛奶公司就又搭接駁車回去了。</p>
+  <p>晚上繼續飯店加賭場閒晃行程：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*lOdtCjVj6S-IIdXQROk-mQ.jpeg" />    <figcaption>
+閃亮亮的道路
+    </figcaption>
+  </figure>
+  <p>話說輸了中午那一筆之後我不知道該怎麼玩了，改成追高，一直不斷下同一邊，想說這樣賭到一個四連不就十倍了嗎？結果當然是沒賭到，繼續輸錢。</p>
+  <h3 id="day3">Day3：賭，都賭</h3>
+  <p>這天的飛機是晚上，只要晚上六點到威尼斯人搭接駁車就好，從 11 點退房到晚上 6 點這中間的空窗，怎麼想都是在賭場打發時間最剛好。</p>
+  <p>退房以後先去吃了午餐，順便逛了一下附近的商店，發現這邊飲料還真不是普通的貴：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/960/1*QeAW9XI4sxbbpfqK8zNduw.jpeg" />    <figcaption>
+昂貴的飲料
+    </figcaption>
+  </figure>
+  <p>台灣 15 塊的飲料，這邊大概 75 塊，大約是 5 倍的價錢。是台灣的飲料太便宜了嗎？還是去賭場喝免費的最實際，反正你賺他也賺，雙贏。</p>
+  <p>雖然說前一天連本帶利輸光了，但其實心態上沒有受到太大影響，畢竟本金總額就是 300 美金，輸光也只輸了不到一萬台幣，賭博的健康心態就是：「拿出你全賠光也不會怎樣的錢來賭」。</p>
+  <p>吃完之後繼續殺到威尼斯人賭博，延續昨天的頹勢，把 1500 又輸到了 500，還去玩了幾把拉霸想改運，結果拉霸又沒轉到東西。</p>
+  <p>在那邊待了兩三個小時之後，決定去附近晃晃，到了傳說中的米高梅飯店，為什麼是傳說中呢，因為那邊的飲料有珍珠奶茶！而且不只有珍奶，還有珍珠鮮奶！</p>
+  <p>沒有拍照，但簡單來說就是小杯的珍珠奶茶，味道很讚，不論是珍奶還是鮮奶，都跟台灣的味道差不多，真的好喝！而為了蹭這三四杯免費的珍奶，我又在那邊輸了 500 塊港幣，不知道可以買幾杯珍奶了。</p>
+  <p>逛到最後又回去威尼斯人，因為我太太說她覺得她在那邊手氣比較好，就這樣一路在那邊待到晚上六點，一度快要凹單凹不回來輸光，但很幸運地最後一把凹成功，最後我太太幫我把我輸的都贏回來了，太神辣！</p>
+  <p>話說澳門機場滿小的，進去之前有麥當勞可以吃，進去之後也有一兩間餐廳，貴賓室的話只有澳門航空跟環亞，環亞的話有一點點自助跟點餐，餐點份量很多，我點了一個港式的魚蛋米粉就很飽了。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/566/1*ATMLYo7b-fL46BjthDAiRQ.jpeg" />    <figcaption>
+很大一碗，一堆料，味道滿清淡的
+    </figcaption>
+  </figure>
+  <p>最後做個簡單總結，其實在澳門還是滿有渡假的感覺，因為不是待在百貨商場就是賭場，有冷氣吹有免費飲料喝，如果不考慮輸錢的話，還是滿爽的。</p>
+  <p>物價的話倒是真的偏高，不過可以不用排隊吃到一些其他地方需要排隊的東西，感覺還是滿不錯的，例如說 Shake Shack 就沒什麼人在排隊。想省錢的話，飯店其實也可以住更便宜的，反正搭接駁車也很方便，班次也滿多的。</p>
+  <p>或是如果覺得自己手氣不錯，吃得住的都可以靠賭博的積分贏來，你甚至最後也不用賺錢，只要一直輸贏輸贏輸贏就可以累積積分，靠積分去換吃的東西或是住宿。不過如果手氣差的，那還是算了，你用真金白銀買還比較划算。</p>
+  <p>這次會想來澳門還有一個原因，那就是我去年去了<a href="https://hulitw.medium.com/def-con-30-ctf-final-1-79220bba7f02">真正的賭城拉斯維加斯</a>，那時才發現原來澳門是縮小版的賭城，而真正的賭城原來這麼壯觀，更多浮誇的東西。所以這次想再來一次澳門，看看是不是跟我印象中的一樣。</p>
+  <p>結果是一樣的，澳門跟拉斯維加斯相比還是遜色不少，沒有這麼多浮誇的東西，賭博機台也沒這麼多，不過以亞洲來說，澳門應該還是最厲害的了。</p>
+  <p>至於賭博的話呢，還是挺可怕的，雖然我前面講過全輸光也不會對經濟有什麼影響，但輸錢心情還是不會太好，而且那種開十二連莊的，你真的會甘願一直加碼下閒，下到沒錢為主。</p>
+  <p>雖然說我也知道這些都是錯覺，是賭徒謬誤，但還是會想照著這個策略去下。而且就算贏錢了也不會想收手，看來設個停損點或是停利點還滿重要的，才是真正的有策略在玩。</p>
+  <p>總而言之呢，如果你想體驗賭場的氛圍，但又沒辦法跑到美國這麼遠，我覺得先來澳門體驗一下「東方拉斯維加斯」還是滿不錯的，就來個三天兩夜渡個假，雖然消費貴了點但因為待的天數短，所以倒也還好。</p>
+  <p>這次兩個人三天兩夜，機票加住宿大概是 24k 左右，吃的話一餐算個 80 港幣，80 * 2 人* 6 餐 * 匯率 4 = 4000 台幣，所以總花費大概在 28k。每人平均一天花費為 5000 台幣左右，以出國來說應該算還行？</p>
+  <p>看了一下跟團價格，機票加住宿一個人也大概是 12k~14k 左右，似乎也相差不遠，不過還是自由行比較彈性一點。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=21687588b87d" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2023-07-27</time>
+        <a href="https://nodebe4.github.io/oped2/2023-07-27/2023-%E5%B9%B4-7-%E6%9C%88%E5%8D%97%E9%9F%93%E5%8D%81%E6%97%A5%E9%81%8A%E5%BF%83%E5%BE%97-%E9%A6%96%E7%88%BE%E7%AF%87/">
+          2023 年 7 月南韓十日遊心得：首爾篇
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-07-27</time>
+        <a href="https://nodebe4.github.io/oped2/2023-07-27/2023-%E5%B9%B4-7-%E6%9C%88%E5%8D%97%E9%9F%93%E5%8D%81%E6%97%A5%E9%81%8A%E5%BF%83%E5%BE%97-%E9%87%9C%E5%B1%B1%E7%AF%87/">
+          2023 年 7 月南韓十日遊心得：釜山篇
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-05-26</time>
+        <a href="https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/">
+          2023 日本北九州 19 天 18 夜遊記之九州怎麼這麼大
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-05-16</time>
+        <a href="https://nodebe4.github.io/oped2/2023-05-16/%E9%A7%AD%E5%AE%A2%E7%9A%84%E7%B7%9A%E4%B8%8A%E9%81%8A%E6%88%B2-CTF-%E9%81%8A%E7%8E%A9%E5%85%A9%E5%B9%B4%E5%BF%83%E5%BE%97/">
+          駭客的線上遊戲 CTF 遊玩兩年心得
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-06-23/What-Kind-of-Wish-Is-This/">
+            前一篇：‘What Kind of Wish Is This?’
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-07-10/For-Beijing,-Putting-People-Back-to-Work-May-Prove/">
+            後一篇：For Beijing, Putting People Back to Work May Prove a Tough Job
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-06-23/What-Kind-of-Wish-Is-This/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-07-10/For-Beijing,-Putting-People-Back-to-Work-May-Prove/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-07-27/2023-%E5%B9%B4-7-%E6%9C%88%E5%8D%97%E9%9F%93%E5%8D%81%E6%97%A5%E9%81%8A%E5%BF%83%E5%BE%97-%E9%87%9C%E5%B1%B1%E7%AF%87/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-06-23/What-Kind-of-Wish-Is-This/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-07-10/For-Beijing,-Putting-People-Back-to-Work-May-Prove/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-07-27/2023-%E5%B9%B4-7-%E6%9C%88%E5%8D%97%E9%9F%93%E5%8D%81%E6%97%A5%E9%81%8A%E5%BF%83%E5%BE%97-%E9%87%9C%E5%B1%B1%E7%AF%87/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>‘They Are Men Who Acted out of Conscience’ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+‘They Are Men Who Acted out of Conscience’
+——
+" />
+    <meta property="og:description" content="
+‘They Are Men Who Acted out of Conscience’
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="‘They Are Men Who Acted out of Conscience’" />
+    <meta property="twitter:title" content="‘They Are Men Who Acted out of Conscience’" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fviewpoint%2Fxu-zhiyong-ding-jiaxi" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/viewpoint/xu-zhiyong-ding-jiaxi" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/viewpoint/xu-zhiyong-ding-jiaxi&text=‘They Are Men Who Acted out of Conscience’&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/viewpoint/xu-zhiyong-ding-jiaxi&title=‘They Are Men Who Acted out of Conscience’" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/viewpoint/xu-zhiyong-ding-jiaxi&title=‘They Are Men Who Acted out of Conscience’" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=‘They Are Men Who Acted out of Conscience’&body=
+‘They Are Men Who Acted out of Conscience’
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/viewpoint/xu-zhiyong-ding-jiaxi" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/viewpoint/xu-zhiyong-ding-jiaxi&title=‘They Are Men Who Acted out of Conscience’&caption=
+‘They Are Men Who Acted out of Conscience’
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=‘They Are Men Who Acted out of Conscience’&url=https://www.chinafile.com/reporting-opinion/viewpoint/xu-zhiyong-ding-jiaxi" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>‘They Are Men Who Acted out of Conscience’</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-05-22
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/viewpoint/xu-zhiyong-ding-jiaxi" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1684761300000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/viewpoint/xu-zhiyong-ding-jiaxi">‘They Are Men Who Acted out of Conscience’</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-413fd82fdb75d0d3cf5c5b9462eff779">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54791_sm.jpg" title="‘They Are Men Who Acted out of Conscience’" class="colorbox" data-colorbox-gallery="gallery-node-54791-lgdWDarzoTs" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54791_sm.jpg?itok=alaQMrbW" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Alex Wong—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A photograph of Xu Zhiyong and Ding Jiaxi on display as subcommittee ranking member Representative Susan Wild (D-PA) listens during a hearing before the Global Health, Global Human Rights, and International Organizations Subcommittee of the House Foreign Affairs Committee at Rayburn House Office Building on Capitol Hill in Washington, D.C., April 20, 2023.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p><em>Last month, a Chinese court sentenced the civil rights activists and lawyers <a href="https://www.chinafile.com/keyword/xu-zhiyong" target="_blank" rel="nofollow">Xu Zhiyong</a> and Ding Jiaxi to fourteen and twelve years in prison for “subverting state power,” a charge arising from an informal gathering of fellow activists the two had put together in 2019 in the southern coastal city of Xiamen.</em></p>
+      <p><em>The following conversation, excerpted and translated by Geremie Barmé, comes from an episode of the podcast <a href="https://www.bumingbai.net/" target="_blank" rel="nofollow"><em>Bu Mingbai</em></a>, of which ChinaFile’s editors are longtime admirers. In it, host and </em>New York Times<em> reporter Li Yuan interviews Ding’s wife, Luo Shengchun, and Xu’s close friend, law school classmate and fellow activist <a href="https://www.chinafile.com/contributors/teng-biao" rel="nofollow">Teng Biao</a>, about who these two men are, how they came to their activism, and why they persisted despite previous imprisonments and amid mounting signs of personal danger. —The Editors</em></p>
+      <hr />
+      <p><strong>Li Yuan:</strong> On April 4, 2023, a regional court in Shandong province <a href="https://www.reuters.com/world/china/china-hands-lengthy-jail-terms-two-rights-lawyers-crackdown-2023-04-10/" target="_blank" rel="nofollow">sentenced</a> Xu Zhiyong, a noted civil rights activist, to 14 years in jail for “subverting state power.” Ding Jiaxi, his fellow accused, was jailed for 12 years. Both men had been held in detention for more than three years. Commentators noted that both of these sentences were longer than the <a href="https://www.theguardian.com/world/2009/dec/25/china-jails-liu-xiaobo" target="_blank" rel="nofollow">11 years</a> given to Liu Xiaobo for his role in drafting <a href="https://www.chinafile.com/library/nyrb-china-archive/chinas-charter-08" target="_blank" rel="nofollow">Charter 08</a> [which was a call for democratic reform].</p>
+      <p>Xu and Ding served previous jail sentences beginning in 2014 for <a href="https://www.washingtonpost.com/world/asia_pacific/chinese-activist-xu-zhiyong-sentenced-to-four-years-in-prison/2014/01/25/42484f12-862b-11e3-801f-e3ff2ca3fab6_story.html" target="_blank" rel="nofollow">four</a> and three-and-a-half years, respectively, on <a href="https://www.cnn.com/2023/04/10/china/china-lawyers-xu-zhiyong-ding-jiaxi-sentences-intl-hnk/index.html" target="_blank" rel="nofollow">charges</a> of having “assembled a crowd to disrupt public order.” Following their releases they continued their activism on behalf of the <a href="https://www.chinafile.com/freedom-justice-and-love" target="_blank" rel="nofollow">New Citizens Movement</a>.</p>
+      <p>In December 2019, Xu and Ding organized a gathering of activists in the coastal city of Xiamen, Fujian province, in south China. Participants discussed the state of Chinese politics and prospects for the country’s future. When authorities began rounding up participants, Xu went underground. Prior to being arrested in Guangzhou in February 2020, he released an <a href="https://www.chinafile.com/reporting-opinion/viewpoint/dear-chairman-xi-its-time-you-go" target="_blank" rel="nofollow">open letter</a> calling on Xi Jinping to step down.</p>
+      <p>The recent sentencing of Xu Zhiyong and Ding Jiaxi attracted international attention. Who are these men and why do the Chinese authorities see them as a threat?</p>
+      <p>As is the case with most political prisoners, the majority of people in China don’t know their names. “Although they are not far from us,” the dissident Guo Yushan <a href="https://cmcn.org/archives/8549" target="_blank" rel="nofollow">wrote</a> in 2013, “they are unknown. Because they have pursued justice they have been subject to constant persecution. . . These people, be they in the past or in the present, invariably ‘disappeared.’ Generally, people regard them as being ‘losers’—naive and simplistic. They are eliminated by the system, rejected by mainstream society, and forgotten by everyone else. The greater their resistance to the system, the more extreme the effort to eliminate all traces of their existence.”</p>
+      <p>I’ve invited Teng Biao, who co-founded the <a href="https://chinachange.org/2014/04/10/who-is-xu-zhiyong/" target="_blank" rel="nofollow">Open Constitution Initiative</a> with Xu Zhiyong in 2003, and Luo Shengchun, Ding Jiaxi’s wife, to tell us who these men are, what they have done, and what inspires their opposition.</p>
+      <p>Teng Biao, both you and Xu Zhiyong became public figures when the <a href="https://content.time.com/time/subscriber/article/0,33009,458835,00.html" target="_blank" rel="nofollow">Sun Zhigang case</a> sparked a major public debate about the Custody and Repatriation system back in 2003. On May 14 of that year, as graduate students, you, Xu Zhiyong, and Yu Jiang submitted an appeal to the Standing Committee of the National People’s Congress calling for the abolition of [the system of extrajudicial detention known as] Custody and Repatriation. A month later, the State Council did actually <a href="https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted" target="_blank" rel="nofollow">abolish</a> the system. In November that same year, Xu Zhiyong was even elected as an unaffiliated people’s representative by voters in the Haidian district of Beijing. In December, Xu, you, and Yu Jiang were named three of the 10 “Outstanding Figures in the Legal World” by China Central Television and the Ministry of Justice National Office to Promote Legal Awareness. How do you feel about all of that now?</p>
+      <p><strong>Teng Biao:</strong> Xu Zhiyong and I have known each other for over 20 years. The Sun Zhigang case that you just mentioned is generally thought of as marking the starting point of a grassroots movement advocating for protecting civil rights in China. At the time, our lobbying proved to be relatively effective. In the years since then, Xu Zhiyong has continued the fight for greater freedom, democracy, and the rule of law. During the Hu Jintao era [2002-2013], there was a tolerance for a certain amount of activism, and a lot happened. But in the years since, all the room for movement has disappeared, so much that even the organizers of the gathering in Xiamen have been given stiff jail sentences. This is further evidence that under Xi Jinping there is zero tolerance for any form of civic activism. Of course, I’m deeply distressed that my dearest friend has been given such a long sentence; I’m distressed and outraged. Having said that, however, I should add that the verdict did not entirely take me by surprise. Ever since Zhiyong was detained in February 2020, many of us have feared the worst.</p>
+      <p><strong>Li Yuan:</strong> Can you tell us about how you two met and perhaps say a few words about Xu Zhiyong himself?</p>
+      <p><strong>Teng Biao:</strong> Since we had the same doctoral advisor at Peking University, we often discussed our work and, over time, we ended up eating, drinking, and debating together. Yu Jiang was also in our little group. We had weekly discussions about pressing legal issues such as the detention system, the reeducation through labor program, and how the authorities dealt with petitioners [who appealed to Beijing to redress local injustices]. We were obsessed with basic social and legal issues. One thing that struck me in particular was Xu Zhiyong’s idealism. All people in their 20s and 30s are idealistic to some extent, but Xu’s idealism was extremely intense and steadfast. He was willing to forego so much, so many of life’s pleasures, in the pursuit of his ideals. This included sacrificing his personal life, his family, and many other things he abandoned or was forced to abandon. For the sake of his ideals, his defense of human rights, his fight for the rule of law, he was repeatedly detained, beaten, held under house arrest, prevented from teaching classes at his university. But he never gave up. The more obstacles they put in his way, the braver he got. The more repression he endured, the more doggedly he persisted. This is what impresses me most deeply.</p>
+      <p><strong>Li Yuan:</strong> Shengchun, Ding Jiaxi had a successful career as a commercial lawyer and in 2011 he was even given an award for being one of the “10 Best IP Lawyers” in Beijing. Can you tell us why he gave up a lucrative practice to become an advocate for human rights?</p>
+      <p><strong>Luo Shengchun:</strong> From the time we got together, I knew his goal wasn’t to make money. He wanted to help change society. Shortly before he was arrested, he reviewed what he had been aiming to do—that is, he wanted to help people understand their rights as citizens under the constitution. He encouraged people to realize that the Party leadership should not have the last word and that even an average citizen could challenge local political leaders when things went awry. As he got to know more people involved in appeals to higher levels of government protesting against local abuses of the law, he realized that despite formal legal statutes, in practice it was still extremely difficult for people to stand up for their rights. After he met Xu Zhiyong, he was further emboldened to speak out in ways he felt could have a practical impact.</p>
+      <p>Although I understood what he was trying to do conceptually, my first real insight into the nature of the Chinese system only came after his first arrest [in 2013]. Originally, I’d thought since your constitutional rights were laid out in black and white, adjudicating right and wrong should have been relatively straightforward. But things become complicated as soon as you try to hold the system itself accountable. When Ding Jiaxi was detained, I still didn’t understand. I thought: How could someone like him be arrested? That’s when I set out on my own journey of discovery; it opened my eyes to what is really going on. Finally, I could see China clearly.</p>
+      <p><strong>Li Yuan:</strong> Teng Biao, you, Xu, and Ding were all activist lawyers involved in advocacy on behalf of citizen’s rights. In recent years, lawyers like you have been subjected to particularly harsh repression. The most prominent example was the “<a href="https://www.chinafile.com/reporting-opinion/postcard/if-we-give-our-husbands-today-tomorrow-our-children-will-be-ashamed-of-us" target="_blank" rel="nofollow">709 Crackdown</a>” on July 9, 2015 [when some 300 participants in the civil rights defense movement were detained for “subverting state power”]. Can you explain why the Party sees the legal profession, and civil right lawyers in particular, as such a threat?</p>
+      <p><strong>Teng Biao:</strong> In China today, there are more than 600,000 lawyers. At the height of our movement, there were about 300,000. At best, only a few hundred were ever engaged in civil rights advocacy, although when we started out, there were only a few dozen of us.</p>
+      <p>The thing about the training of lawyers in China in the past was that, generally speaking, ideas related to freedom, the rule of law, and human rights were part of the university curriculum. Beginning in the 1980s, and right on through until the end of the first decade of this century, there was considerable space for the teaching of liberal ideas. . . There was also room for relatively open discussions in the classroom about social ideals, and in those discussions people often made comparisons between China and the West. These generally highlighted the limitations of the Chinese system. Another thing about the legal profession as a whole is that lawyers travel around the country as a matter of course. They come into contact with the underbelly of society, victims of the system, and marginal groups. They get to see for themselves what is really going on. Invariably, some empathize with the people they encounter and, as lawyers like that became actively involved with social causes, their influence spreads. This, in turn, makes them targets for official repression.</p>
+      <p><strong>Li Yuan:</strong> Apart from his work as a human right lawyer, another reason that the authorities targeted Xu Zhiyong was that he founded the New Citizens Movement [in 2012, which promoted the rule of law, constitutional government, and democratic reform]. What’s your view of lawyers taking a stand on social and political issues?</p>
+      <p><strong>Teng Biao:</strong> Initially, the rights activism of a group of lawyers focused on using the provisions of the Chinese constitution and various legal pathways to defend the basic civil rights of the individual. However, in the long run, people realized that without substantive democratic reforms to the system as a whole, regardless of the struggle there would be little meaningful change. For activists like me, the path from legal advocacy to social and even political activism was an obvious one. Without democracy, basic legal rights could not be protected. During the decade from 2003 to 2013 or so, there was enough space to pursue these ideals. Although it was still risky, the few who led the movement were both able and willing to withstand the pressure. That is to say, back then, they weren’t being threatened with 10 or more years in jail at every turn. Apart from a few who were jailed—and the jail terms were relatively short—state repression was mostly limited to people being stripped of the right to practice law, the imposition of house arrest, and repeated interrogations by the police. Most of us were prepared to put up with things like that.</p>
+      <p>Of course, since China’s courts are not independent, we also advocated for an independent judiciary. . . Given the fact that judges are not able to rule independently, when it came to some more sensitive legal cases we resorted to taking our activism outside the courts by appealing to the media and organizing street protests to pressure the system. We were particularly mindful of the people behind the scenes who manipulated the courts on behalf of the status quo. Given the situation, we had no other recourse.</p>
+      <p><strong>Li Yuan:</strong> Shengchun, Ding Jiaxi only really got involved in these activities in 2011. He was first jailed in 2013 and then was active again for a few years following his release [in late 2016], yet this time the sentence he’s been handed is nearly as long as that of Xu Zhiyong, someone who has been an activist for more than a decade. What are your thoughts?</p>
+      <p><strong>Luo Shengchun:</strong> I have given this a lot of thought. The people in State Security know full well that without Ding Jiaxi’s strategizing, many of Xu Zhiyong’s relatively abstract ideas could not have been put into practice. One of Jiaxi’s strengths is his charisma: He’s extremely personable and he was really good at bringing people together in a way that made Xu Zhiyong’s ideas relevant to people in cities throughout China. He built up a network of contacts in Jiangxi, Hunan, and Hubei provinces. Although he was a relative late-comer to activism, he had an impact because he devoted himself to it tirelessly—as a family member, I can honestly say that he was involved 24/7. He was constantly in touch with people and was always working on cases, offering advice and guidance as to how a plaintiff could engage legal representation. The authorities are very good at picking up on who is effective, and that’s who they go after.</p>
+      <p><strong>Li Yuan:</strong> Zhu Zhengfu, a representative in the National People’s Congress, has long <a href="https://www.theguardian.com/world/2023/feb/28/china-should-scrap-picking-quarrels-says-leading-lawyer" target="_blank" rel="nofollow">advocated</a> for the abolition of the crime of “picking quarrels and provoking trouble.” In February this year, the media outlet <em>Sichuan Observer</em> carried out a poll via Weibo in which over 100,000 participated. Two thirds of those polled were in favor of keeping this crime on the books. Teng Biao, what do you think of that? Does it demonstrate a particular popular attitude toward the law in China today?</p>
+      <p><strong>Teng Biao:</strong> In China today, information control, propaganda, and brainwashing are serious problems, and to a significant extent, they work. Take the case of Xu Zhiyong and Ding Jiaxi: The vast majority of Chinese have never heard of them and are entirely unfamiliar with their activities. The same is true of Liu Xiaobo, as well as the events of 1989. This is the case for most Chinese people and is even more evident among younger people.</p>
+      <p></p>
+      <div class="view view-photo-embed view-id-photo_embed view-display-id-panel_pane_3 visual-box view-dom-id-6694f8a69226bcf5d7d6e9b32f907474 grid-4 photo-object">
+        <div class="views-field views-field-field-common-system-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/photo/system/xu_zhiyong_and_teng_biao_map_photo.png" title="Xu Zhiyong and Teng Biao" class="colorbox" data-colorbox-gallery="gallery-node-54806-lgdWDarzoTs" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/medium/public/assets/images/photo/system/xu_zhiyong_and_teng_biao_map_photo.png?itok=fhN3aPVo" width="620" height="464" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption img-caption">
+            <p>Xu Zhiyong (right) and Teng Biao stand in front of a map of China wearing t-shirts that read “Blind Person, Cheng Guangcheng, Free,” 2006.</p>
+          </div>
+        </div>
+      </div>
+      <p>The charge of “picking quarrels and provoking trouble” is a catchall crime. It’s a crime defined in the vaguest terms that should have been abolished long ago. Nevertheless, it’s very handy for the authorities and they’ve sentenced many rights activists and lawyers on the grounds of “picking quarrels and provoking trouble.” Most Chinese have no idea that this “crime” is used to punish men and women of conscience, nor do they understand why legal scholars in China have long called for its abolition.</p>
+      <p><strong>Li Yuan:</strong> It’s glaringly problematic that just about anyone can be charged with “picking quarrels and provoking trouble.” But, as you say, official propaganda has proven to be pretty effective; most people don’t feel that such laws have anything to do with them. That is, of course, if that straw poll was an accurate reflection of people’s views.</p>
+      <p><strong>Li Yuan:</strong> Shengchun, can you tell us why you decided to leave China?</p>
+      <p><strong>Luo Shengchun:</strong> It was after Jiaxi was arrested.</p>
+      <p><strong>Li Yuan:</strong> You mean the first time he was arrested, back in 2013?</p>
+      <p><strong>Luo Shengchun:</strong> He was taken away the day after we went to pick up our U.S. visas. He planned to return to China once we were settled in the States. I was lucky that my company was sending me here and, for about six months before that, Ding Jiaxi knew that State Security had its eye on him. He told me: “If you can return to your old job then you should go to America. Don’t stay in China.” He added: “The things I’ve been involved in will put you in danger. It’s not worth it.” At the time, I was still quite clueless and I asked what possible danger I could be in.</p>
+      <p>It was only after he’d been “invited to tea” [to be interrogated] twice that I realized what the term “State Security” really meant. Up until then, I was completely oblivious, in a state of innocence. I generally do whatever Jiaxi suggests, so in this case too, I got things ready without further question. It was only after he was taken away, after we’d collected our visas, that I realized how serious the situation was. At that point, I knew I really did have to get out.</p>
+      <p>I’m the kind of person who can’t tolerate bullying. At first, I was planning to stage a sit-in with my daughter and mother-in-law at the police station, but friends talked me out of it. They told me: “Don’t do anything. You need to get out of here as soon as possible.” They told me the story of Liu Xiaobo and Liu Xia [who was kept under house arrest for years]. That’s right: I didn’t even know about them until 2013. I looked them up online.</p>
+      <p><strong>Li Yuan:</strong> Really?</p>
+      <p><strong>Luo Shengchun:</strong> That’s why what you said just now is so resonant for me. How has the Chinese government been so successful in maintaining a strict information blockade around average people like me? You simply have no idea about anything—Liu Xiaobo’s Nobel Peace Prize, the story of the <a href="https://pen.org/press-clip/nobel-goes-to-empty-chair/" target="_blank" rel="nofollow">empty chair</a> [at the Nobel Prize award ceremony in Oslo]. We didn’t have a clue. That’s why I’m not at all surprised that hardly anyone knows what’s happened to Xu Zhiyong and Ding Jiaxi.</p>
+      <p>What I care about most at the moment is spreading news [about Xu and Ding] in China. If ordinary people knew the story, they would understand how truly messed up the Chinese government is. Most people would be completely astonished if they heard the actual ins and outs of their case. The most important aspect of it—and something this case has in common with similar instances of persecution since Xi Jinping got into power—is the way they torment detainees: They lock you up in a dark room and leave you to stew. It’s a form of torture. Only after some time do the police show you the warrant for your arrest.</p>
+      <p>From the “709 crackdown” until today, this pattern has been repeated time and again, not only when it comes to Ding Jiaxi, but also in dealing with young protesters in the White Paper Movement and the people who ran <a href="https://www.scmp.com/news/china/politics/article/3081569/chinese-activists-detained-after-sharing-censored-coronavirus" target="_blank" rel="nofollow">Terminus2049</a>. Then there’s <a href="https://chinadigitaltimes.net/chinese/663628.html" target="_blank" rel="nofollow">Niu Tengyu</a>, <a href="https://www.theguardian.com/world/2023/feb/16/journalist-held-without-trial-china-urgent-medical-attention-huang-xueqin" target="_blank" rel="nofollow">Huang Xueqin, and Wang Jianbing</a>. All of them were first locked up while the authorities set to work fabricating charges against them. It’s legal nonsense. If people really understood what was going on, they would realize that they’re living in a kind of mafia-state: anyone can be picked up and thrown into jail. Only then do they make up charges against them.</p>
+      <p><strong>Li Yuan:</strong> Can you tell us what you know about the situation facing Ding Jiaxi and Xu Zhiyong in jail at the moment?</p>
+      <p><strong>Luo Shengchun:</strong> The worst thing is that they are not allowed to sleep and are being kept underfed. They are also strapped to what’s known as a “<a href="https://www.hrw.org/report/2015/05/13/tiger-chairs-and-cell-bosses/police-torture-criminal-suspects-china" target="_blank" rel="nofollow">tiger chair</a>,” which is used to wear them down physically and mentally. They are hooded whenever they’re transferred from one place to another and they go for months without any daylight or knowing where they are. The authorities really want to push them to the limit of endurance and they only let them wash once every six months. I don’t know how Ding Jiaxi has survived this ordeal. I don’t know as much about Xu Zhiyong’s circumstances as he doesn’t go into the details. I only know about Jiaxi because when I do get to see him I ask about his treatment in detail.</p>
+      <p>As for Zhiyong, I guess his reticence reflects his personality. In the past, he always behaved as though such details were irrelevant; he hasn’t even described them to his own lawyer. I have a different perspective and have been determined to record exactly how they are being treated. I know that’s also what Jiaxi would want. Even if the authorities never have to answer for their actions, at least there’ll be a record of their criminal behavior. That’s how I know so much and why I can speculate about the way that Zhiyong has been treated. The main thing is that they are deprived of sleep and often subjected to long periods in a “tiger chair.”</p>
+      <p>Jiaxi was also subjected to a kind of punishment that I’d never heard of before—“noise torture.” They’ve subjected him to blaring documentary films about Xi Jinping in some kind of attempt to brainwash him. The soundtrack of the documentaries is broadcast from loudspeakers in his cell day-in, day-out for stretches of up to 10 days. I don’t know how they came up with this particular form of <a href="https://ishr.org/torture-methods-in-the-peoples-republic-of-china/" target="_blank" rel="nofollow">torture</a>.</p>
+      <p><strong>Li Yuan:</strong> Even though I know it’s a form of torture, it’s sort of ludicrous as well.</p>
+      <p><strong>Luo Shengchun:</strong> Are they employing aural bombardment because they think they can brainwash him? Who knows what the reasoning is.</p>
+      <p><strong>Li Yuan:</strong> Can you tell us something about your own life as the wife of a political prisoner? Have you ever regretted marrying Ding Jiaxi, if only for a second? Have you thought of trying to regain the kind of carefree existence that you enjoyed before all of this happened?</p>
+      <p><strong>Luo Shengchun:</strong> I’ve quite honestly never had a moment’s regret. I’ve loved him from the start, and my love has never waned, even for a minute. It might sound surprising. Even my daughter thinks it’s pretty odd.</p>
+      <p><strong>Li Yuan:</strong> How old were you when you met?</p>
+      <p><strong>Luo Shengchun:</strong> I would have been 22; we got married when I was 23. You could say that it was love at first sight. My daughter says: “Mommy was born for daddy, she lives for daddy and she speaks out on behalf of daddy.” My elder sister and my relatives all think that it’s unfair. They think my love for Jiaxi is a hundred times stronger than his love for me. But that’s not the way I see it. Jiaxi loves in a particular way, a way that I appreciate. Of course, in our private life there have been any number of ups and downs, the same as everyone else, but our love has remained steady. That’s why I have absolute faith in him. Like when he told me that I should go back to America. I didn’t want to, but I knew that he was right. And so I came back here.</p>
+      <p>This year marks 10 years since he was first taken away. It’s been an agonizing time. But I’ve made it through. This is the way I see the meaning of life: If you are clear in your own mind why you are here and understand what you should do, then your life will have meaning. In that respect, Ding Jiaxi has turned me from being a fairly unthinking and ignorant person into someone who sees the world for just what it is. In the process, I have come to appreciate Ding Jiaxi’s significance and I love him all the more for it. I’ve also become more certain about the path I should take and more aware of the value of life itself.</p>
+      <p><strong>Li Yuan:</strong> Have you seen him since he was jailed in 2013? Have you been back to China?</p>
+      <p><strong>Luo Shengchun:</strong> I haven’t been back to China.</p>
+      <p><strong>Li Yuan:</strong>. . . and you haven’t seen him either?</p>
+      <p><strong>Luo Shengchun:</strong> He visited us here in the U.S. in 2017. He wasn’t preparing to stay and only brought a small bag with him. He thought he’d see what happened. Back then he still hadn’t been blacklisted, so we went crazy with joy when we learned that he could visit. It was like a dream come true. When I heard the news I said: “They really let you out?” None of us could believe it—him, me, my daughter, or any of my friends.</p>
+      <p><strong>Li Yuan:</strong> How long did he stay and why did he decide to go back?</p>
+      <p><strong>Luo Shengchun:</strong> He was here for two months. I begged him to at least stay for six months so he could spend Thanksgiving and Christmas with our daughter. So he could make up for lost time. But he was determined to return. In his mind, there were a number of factors at play: He was confident that the Party-state wouldn’t block him from leaving again. He felt that he hadn’t explained what he’d been through adequately to his friends and colleagues. That left him feeling at a loss. Of course, most of that could have been handled online, but that wasn’t the way he did things. He saw the path forward clearly. He believed that his actions and ideals should be of a piece. “I see what my line of action should be,” he’d say. “All that remains is for me to act.” Each time he decided on a plan of action, I would only gradually come to appreciate his reasoning. When he went back, everyone thought he was being completely unreasonable, inhuman. But we knew that simply wasn’t the case.</p>
+      <p><strong>Teng Biao:</strong> That’s right. Ding Jiaxi was at my place at the time. . .</p>
+      <p><strong>Luo Shengchun:</strong> Teng Biao also tried to persuade him to stay, as did everyone else during the two months he was here. Jiaxi spent that time catching up with friends and talking to people. He didn’t do anything related to the pro-democracy or citizen’s movements.</p>
+      <p><strong>Li Yuan:</strong> Teng Biao, can you tell us what you advised Ding to do?</p>
+      <p><strong>Teng Biao:</strong> When he came to my place, I said something to the effect of “Stay in the U.S. for a while so you can observe how things are going back in China. Apart from spending time with all of us, you’ll also have the space to do a few things that you’re interested in.” That was back in 2017, and the situation in China was quite different from how it is now. The gap between now and before 2013 [Xi Jinping’s first year in power] is even greater. Since the room for movement in China was already severely limited, I told him: “You really should take your time before deciding to go back.” But, as Shengchun just said, he had this overwhelming sense of duty and was determined to go back so he could make a contribution to the place that mattered most to him.</p>
+      <p><strong>Luo Shengchun:</strong> He really thought he should be in constant contact with Chinese people in China, normal citizens. He didn’t usually discuss his reasoning; many people didn’t really understand him, and that includes me. But, in the final analysis, I knew that’s what he was thinking. He felt he needed to work with people on the ground in China.</p>
+      <p><strong>Li Yuan:</strong> I get it. But, to follow up on what Teng Biao said earlier, the Xiamen meeting was really little more than an offline, real-time gathering of citizens’ groups. The legal case mounted against Xu and Ding at the court in Linyi, Shandong, claimed that they had organized activities of the long-banned New Citizens Movement. But the evidence presented related to that relatively innocent gathering in Xiamen in December 2019. As Teng Biao remarked, in the early 2000s such gatherings had been commonplace. Isn’t that so?</p>
+      <p><strong>Teng Biao:</strong> You’re right. There were numerous gatherings of groups devoted to protecting citizens’ rights back then. In my case, for example, I’d choose a place like Shenzhen, Guangzhou, or Zhengzhou and, since I already had something of a reputation among activists, my local contacts would organize a get-together. It was an everyday occurrence.</p>
+      <p><strong>Luo Shengchun:</strong> Completely normal, in fact.</p>
+      <p><strong>Li Yuan:</strong> That was back in the days when people predominantly used Weibo. That was around 2010 to 2012, right? Then you could use Weibo to organize an event. I remember attending quite a few gatherings in Beijing around that time, as well as meetings of people from WeChat groups. Engaged intellectuals would debate all kinds of topics at meetings like that.</p>
+      <p><strong>Teng Biao:</strong> That was where Xu Zhiyong was exceptionally effective. In the first place, his New Citizens Movement was decentralized and without formal leadership. Anyone who shared ideas related to civic engagement was free to regard themselves as part of the movement. It was a precept that Xu repeated constantly, in his writings and in his lectures. Meetings organized around meals were another integral part of the movement. The point wasn’t food, drinking, or having a chat. They were occasions on which people got together and, in keeping with <em><a href="https://robertsrules.com/" target="_blank" rel="nofollow">Robert’s Rules</a></em>, discussed issues of shared concern, be they individual legal cases in which a person’s basic rights had been violated, or larger topics like the future direction of China, the evolution of the practice of law, and so on. These were significant gatherings in themselves.</p>
+      <p>Of course, it wasn’t illegal for people to get together over a meal to discuss things like that, and criminal charges couldn’t be laid against participants. The thing is that Xu Zhiyong disseminated news of the gatherings so that more people could take part. At the height of the movement, people in more than 30 cities were gathering together to eat and talk. The meetings were <a href="https://chinadigitaltimes.net/chinese/321341.html" target="_blank" rel="nofollow">coordinated</a> so that they all took place at the same time every weekend. To meet, eat, and discuss was thus, in itself, a form of democratic practice. During the most lively phase of the movement, participants would share the discussions with each other on Twitter or Weibo so that a kind of feedback loop developed. It was a fantastic way of doing things.</p>
+      <p><strong>Li Yuan:</strong> Though, in reality, it broke the most fundamental taboo of the Communist Party, that of creating autonomous organizations.</p>
+      <p><strong>Teng Biao:</strong> That’s right. At first, however, it was all rather low-risk and no one thought it would necessarily create any problems. Engaging in conversation over a meal—what’s the big deal with that? But the inventiveness of that format really set off alarm bells for the authorities. Xu Zhiyong was engaging in unregulated organizational activities, even though the New Citizens Movement was quite different from the underground political parties formed in the 1990s like the <a href="https://www.hrw.org/reports/2000/china/china009-02.htm" target="_blank" rel="nofollow">China Democracy Party</a> or the <a href="http://cfdpus.org/cn/" target="_blank" rel="nofollow">China Freedom Democratic Party</a>. Xu Zhiyong’s movement was open and above board; it had no fixed organizational structure and no backing from so-called “invidious foreign forces.” It was entirely unencumbered by any of that.</p>
+      <p><strong>Luo Shengchun:</strong> Nor did it have any political program as such. It did everything in accordance with the Chinese Constitution.</p>
+      <p><strong>Teng Biao:</strong> It’s something that Xu Zhiyong repeatedly emphasized in the things he published. Anyone who had a shared view of their civil role and civic duty, upheld truth-telling, did not collaborate with the establishment or engage in nefarious behavior was automatically part of the movement. It was an uncomplicated and perhaps even a naive concept, but it was also one that appealed to a broad swathe of people. This moderate approach was both the source of the movement’s strength and the reason why it struck terror in the heart of the Party.</p>
+      <p><strong>Li Yuan:</strong> I get the impression that Xu Zhiyong is a born politician, someone with both vision and charisma. He certainly had a considerable impact on China’s youth during the last years of the first decade of this century. Now, however, Chinese university students have no idea who he is, or who Ding Jiaxi is for that matter. We’ve already touched on the effects not only of brainwashing but also of the systemic form of censorship that prevents young people from learning about people like them and their ideas. The present generation simply doesn’t have the wherewithal to build on the experiences of the past. That means each generation has to start over from scratch. Could you say a few words about what people can do at a time like the present?</p>
+      <p><strong>Teng Biao:</strong> You’re right; this is the most important yet also the most intractable issue. Back in 2014-15, it was relatively easy for Chinese netizens to use basic software to bypass the Great Firewall and get access to Twitter and Facebook. The software was circulated on USB drives or via email. Even when someone was caught, it was no big deal: at most you were “invited to tea.” It’s nothing like that these days; now it’s even difficult to find VPN software. The authorities have been going after people who develop and sell VPNs. Some have even been jailed. Xu Zhiyong and Ding Jiaxi had employed a different tactic—they had people get together offline, and through discussions they encouraged in them a kind of awakening, to nurture the refusal to forget, to make an effort to see what has really been going on. Both men demonstrated unwavering heroism. They were not daunted by the threat of jail, even though they could never have imagined that they’d end up being jailed for 14 and 12 years respectively for organizing that one gathering in Xiamen.</p>
+      <p><strong>Li Yuan:</strong> When Xu Zhiyong was on the run in early 2020, he released “<a href="https://www.chinafile.com/reporting-opinion/viewpoint/dear-chairman-xi-its-time-you-go" target="_blank" rel="nofollow">It’s Time for You to Go</a>,” an open letter calling for Xi Jinping to resign. In it, he observed that Xi Jinping simply didn’t have what it took to be a political leader and that he lacked the ability to handle crises—remember that letter appeared just as the COVID-19 epidemic was spreading in China. Do you think that letter had any influence on the heavy sentence meted out to Xu Zhiyong?</p>
+      <p><strong>Teng Biao:</strong> As soon as Xu and Ding were released from jail in 2017, they went back to their work on the New Citizens Movement. Of course, their tactics were different from 2012-13, when they had been able to organize street protests and demonstrations. By 2017, the spaces for civic activism had shrunk dramatically. But they persisted regardless. After participants at the Xiamen meeting were detained on December 26 [2019] and Xu was nabbed in February [2020], I had an inkling that they would be given heavy sentences. Eventually, they were arraigned as ringleaders involved in a conspiracy to subvert the state—that meant that they’d be looking at a minimum sentence of 10 years. We might speculate that Xu Zhiyong’s open letter contributed to the length of his sentence although, even without it, I was pretty sure he would have been given 10 or 12 years. The letter probably added a few more years. The Party goes about such things in a pretty formulaic fashion.</p>
+      <p><strong>Li Yuan:</strong> In his <a href="https://chinachange.org/2023/04/09/a-democratic-china-must-be-realized-in-our-time-we-cannot-saddle-the-next-generation-with-this-duty-xu-zhiyongs-court-statement/" target="_blank" rel="nofollow">court statement</a>, Xu Zhiyong declared that he was confident that China will experience fundamental political change in our lifetime. In Ding Jiaxi’s <a href="https://chinachange.org/2023/04/09/authoritarianism-shall-perish-ding-jiaxis-court-statement/" target="_blank" rel="nofollow">statement</a>, he wrote: “I see the day when the people of China wake up from their extreme slavery.” But then there’s no way young people in China can even learn their names. What do you make of such expressions of idealism?</p>
+      <p><strong>Luo Shengchun:</strong> I guess you’d have to class me as an idealist as well. I’ve got lots of DMs from friends saying how inspiring those statements were. I, too, appreciate the idealism, but I’m also very practical. By profession I’m a project manager, and as such I’m interested in outcomes. If the right amount of groundwork has been done I’m confident that I’ll get results. Since I deeply trust these men and I believe that their understanding of the situation is fundamentally accurate, despite the fact that there doesn’t appear to be any sign of change in China itself at the moment, I still believe that things could change rapidly, more so than even the Communist Party can imagine. Of that I am certain. Despite the fact that I have not discerned any practical way to achieve change, I believe that if we are determined to find one then things are bound to happen.</p>
+      <p><strong>Li Yuan:</strong> What about you, Teng Biao?</p>
+      <p><strong>Teng Biao:</strong> Two points: The first is that although I’m an idealist, I’m also a doer. Moreover, I’m a scholar and observer, which means that I try my best to evaluate the future of Chinese politics in an academic and dispassionate fashion. I’ve made the point that the situation in China is highly unpredictable, in particular since the rise of Xi Jinping. The collapse of the Communist Party may prove to be a far more distant prospect than even the most pessimistic assessments. Then again, it could be far sooner than even the most optimistic speculation.</p>
+      <p>The second point is that Xu Zhiyong and Ding Jiaxi are important rights activists whose achievements, spirit, and ideas are already part of the historical record. Their influence on the world and the future, both as heroic figures and as members of the vanguard of change, will be profound and long-lasting. We may not know if someone who does something politically significant will have been influenced by Xu Zhiyong or even what they will have heard about him. You might not see an immediate effect of their long-term activism. After all, events unfold in a far more subtle fashion than that. Take the Tank Man on June 4, 1989, for example, or Peng Lifa’s <a href="https://www.nytimes.com/2022/12/07/briefing/china-protest-peng-lifa.html" target="_blank" rel="nofollow">protest</a> at Sitong Bridge [in Beijing in October 2022].</p>
+      <p>Xu Zhiyong will continue to influence and inspire people. At some point in the future, his influence may affect the choice that someone makes, the plan of action they pursue. The old adage that “you’re only a hero if you’re successful” simply doesn’t apply here. Those two may be in jail now, but there are many other significant historical figures who didn’t live to see the victory of their cause. That isn’t the point. Neither Xu or Ding were working for an immediate result. They are men who acted out of conscience.<span class="cube"></span></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2023-06-07</time>
+        <a href="https://nodebe4.github.io/oped2/2023-06-07/The-U.S.-May-Be-Overstating-China-s-Technological/">
+          The U.S. May Be Overstating China’s Technological Prowess
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-06-02</time>
+        <a href="https://nodebe4.github.io/oped2/2023-06-02/Covering-Tiananmen/">
+          Covering Tiananmen
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-05-19</time>
+        <a href="https://nodebe4.github.io/oped2/2023-05-19/Can-Chinese-Payment-Apps-Gain-Traction-Globally/">
+          Can Chinese Payment Apps Gain Traction Globally?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-05-15</time>
+        <a href="https://nodebe4.github.io/oped2/2023-05-15/Beijing-s-Global-Media-Offensive/">
+          ‘Beijing’s Global Media Offensive’
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-05-19/Can-Chinese-Payment-Apps-Gain-Traction-Globally/">
+            前一篇：Can Chinese Payment Apps Gain Traction Globally?
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/">
+            後一篇：2023 日本北九州 19 天 18 夜遊記之九州怎麼這麼大
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-05-19/Can-Chinese-Payment-Apps-Gain-Traction-Globally/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-06-02/Covering-Tiananmen/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-05-19/Can-Chinese-Payment-Apps-Gain-Traction-Globally/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-05-19/Can-Chinese-Payment-Apps-Gain-Traction-Globally/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-06-02/Covering-Tiananmen/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-05-19/Can-Chinese-Payment-Apps-Gain-Traction-Globally/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
