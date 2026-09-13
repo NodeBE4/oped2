@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>China’s Record Urban Youth Unemployment – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+China’s Record Urban Youth Unemployment
+——
+" />
+    <meta property="og:description" content="
+China’s Record Urban Youth Unemployment
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="China’s Record Urban Youth Unemployment" />
+    <meta property="twitter:title" content="China’s Record Urban Youth Unemployment" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fchinas-record-urban-youth-unemployment" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/chinas-record-urban-youth-unemployment" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/chinas-record-urban-youth-unemployment&text=China’s Record Urban Youth Unemployment&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/chinas-record-urban-youth-unemployment&title=China’s Record Urban Youth Unemployment" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/chinas-record-urban-youth-unemployment&title=China’s Record Urban Youth Unemployment" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=China’s Record Urban Youth Unemployment&body=
+China’s Record Urban Youth Unemployment
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/chinas-record-urban-youth-unemployment" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/chinas-record-urban-youth-unemployment&title=China’s Record Urban Youth Unemployment&caption=
+China’s Record Urban Youth Unemployment
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=China’s Record Urban Youth Unemployment&url=https://www.chinafile.com/conversation/chinas-record-urban-youth-unemployment" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>China’s Record Urban Youth Unemployment</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-06-16
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Qin Chen, Alison Sile Chen &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/chinas-record-urban-youth-unemployment" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1655384220000-->
+<p><a href="https://www.chinafile.com/conversation/chinas-record-urban-youth-unemployment">China’s Record Urban Youth Unemployment</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-22f9c2427d47f0bf336362f25b50ce53">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54031_sm.jpg" title="China’s Record Urban Youth Unemployment" class="colorbox" data-colorbox-gallery="gallery-node-54031-kRaDdfyDu2M" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54031_sm.jpg?itok=u8lGC2Kc" width="1500" height="1037" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Kevin Frayer—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Office workers wait in line to show their health codes and proof of negative COVID testing, outside an office building after some employees returned to in-person work, in the Central Business District in Beijing, May 30, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">China has recorded its highest level of unemployment among urban youth since the country began tracking it in 2018. In March, 16 percent of Chinese city-dwellers aged 16 to 24 were unemployed, <a href="https://supchina.com/2022/05/04/chinas-record-high-number-of-college-graduates-are-facing-a-huge-challenge-to-find-work/" target="_blank" rel="nofollow">compared</a> to 13.6 percent a year earlier. In May, <a href="https://www.caixinglobal.com/2022-06-15/chart-of-the-day-chinas-record-high-youth-unemployment-rate-101899583.html" target="_blank" rel="nofollow">that figure</a> climbed to 18.4 percent. Already struggling with <a href="https://www.reuters.com/article/uk-employment-china/youth-unemployment-rising-in-china-and-brazil-ilo-says-idUKKCN0S22QI20151009" target="_blank" rel="nofollow">high jobless</a> rates before the pandemic, even the most educated of China’s youth face stiff competition for fewer jobs opportunities. How long is this likely to last, and what might its effects be? —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9866" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/qin-chen"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/qin_chen_sm.jpg?itok=qbfZuvZa" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="qin-chen"><a href="https://www.chinafile.com/contributors/qin-chen" title="Qin Chen">Qin Chen</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">This spring, more than 10 million fresh college graduates in China have reluctantly walked into what some news outlets have termed “<a href="https://www.guancha.cn/politics/2022_04_23_636481.shtml" target="_blank" rel="nofollow">the most difficult employment season</a>.” The economy has been battered by three years of the pandemic, top Chinese cities are emerging from months-long lockdowns, and the job market has struggled to keep up with a surplus of college graduates.</p>
+        <p>Although the pandemic has made it more challenging for young people to secure jobs—companies are slowing hiring and <a href="https://36kr.com/p/1762877135747586" target="_blank" rel="nofollow">rescinding</a> offers given to graduates—the problem of China’s youth unemployment began much earlier.</p>
+        <p>In 1999, the Chinese government <a href="https://www.thepaper.cn/newsDetail_forward_6582231" target="_blank" rel="nofollow">started</a> a long-term college enrollment expansion program to stimulate the economy. Economist Tang Min proposed to the government that sending more students to college would help China achieve its then goal of an 8 percent annual economic growth rate. The proposal would also delay the newest crop of jobseekers at a moment when China faced a tight job market; amid reforms, state-owned enterprises had laid off many workers. Since then, China has seen an unprecedented explosion of college graduates driven by top-down policies. In the first year, college admission grew by 47.4 percent, and expanded at 20 percent a year until 2006. It wasn’t until 2011 that the expansion rate fell below 5 percent. By then, China already had a vast base of college students, so even with a single-digit annual increase, at least 5 million graduates have <a href="https://edu.gotohui.com/topic-64" target="_blank" rel="nofollow">entered</a> the job market every year since 2008.</p>
+        <p>Because the rapid and long growth of college students has been driven more by policies than demand, and the country’s economy hasn’t developed enough to accommodate the growing number of knowledge workers, China has long had an imbalanced job market. While Chinese youth face underemployment, unemployment, and delayed entry into the workforce, the country faces shortages in factory workers and other skilled workers. In 2018, delivery workers in Shanghai, one of China’s wealthiest cities, earned on average 6,271 renminbi (U.S.$930) a month, while recent college graduates in the city had an average starting salary of 6,024 renminbi, according to <a href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CMFD&amp;dbname=CMFD201902&amp;filename=1019834773.nh&amp;uniplatform=NZKPT&amp;v=KJ6DrIAZe1MeqKqXuDGoLwx_RdymavmnJeK_3GAqOYvV6hWLx1hs1GWiG0fi559T" target="_blank" rel="nofollow">research</a> by graduate students at East China Normal University. Both groups earned below the city’s average monthly salary of 7,132 renminbi.</p>
+        <p>This year, <a href="http://www.199it.com/archives/1426726.html" target="_blank" rel="nofollow">according to</a> the Chinese job site Zhaopin, 2022 college graduates who found jobs have an average monthly salary of 6,507 renminbi—12 percent less than in 2021. A little over half of the surveyed graduates chose to apply for positions at companies, while 16 percent planned to delay employment. Some 19 percent planned to work freelance and 10 percent are going to graduate schools.</p>
+        <p>For the past few years, the Chinese government has been trying to alleviate its imbalanced job market by diverting more students into vocational programs. In 2019, China launched a new project to <a href="http://www.moe.gov.cn/srcsite/A07/moe_737/s3876_qt/201905/t20190513_381825.html" target="_blank" rel="nofollow">admit</a> more students into vocational schools, resulting in 2 million more admitted to these schools in the past two years. In April, China <a href="http://politics.people.com.cn/n1/2022/0421/c1001-32404321.html" target="_blank" rel="nofollow">revised</a> the country’s Vocational Education Law for the first time in 26 years to promote vocational education at the same level as general education.</p>
+        <p>Government efforts aim to cultivate the talent the country needs while reducing the number of underemployed or unemployed college graduates. But because the problem of youth employment has been building for more than two decades, the fixes will likely take a few years, if not another decade, to take effect.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9871" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/alison-sile-chen"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/chen_sm_0.jpg?itok=CgqqZJ6-" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="alison-sile-chen"><a href="https://www.chinafile.com/contributors/alison-sile-chen" title="Alison Sile Chen">Alison Sile Chen</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The 18.4 percent urban youth <a href="https://www.caixinglobal.com/2022-06-15/chart-of-the-day-chinas-record-high-youth-unemployment-rate-101899583.html" target="_blank" rel="nofollow">unemployment rate</a> is a record high for China since the government started to publish the data in 2018. Nonetheless, the figures are likely to climb still higher in the coming months, given the <a href="https://database.caixin.com/2022-05-16/101885966.html" target="_blank" rel="nofollow">seasonality</a> of the youth unemployment rate. With a vast number of college graduates joining the labor market every summer, July and August usually see the highest youth unemployment rates of the year, and the figure tends to decline in September or October. This year, more than 10 million college students are <a href="https://m.thepaper.cn/newsDetail_forward_17686065" target="_blank" rel="nofollow">expected to graduate</a>—also a new high compared to previous years. It would not be surprising to see the youth unemployment rate hit 20 percent, or even 23 percent, at its annual peak. The increase in youth unemployment well before summer suggests problems beyond regular fluctuation.</p>
+        <p>To contemplate the effects of this trend, it’s important to consider its possible causes. One salient factor is China’s zero-COVID policy. While other parts of the world are gradually easing COVID restrictions, China’s government has continued to partially or entirely close down cities in which cases number in the dozens. With the extremely transmissive Omicron variant, the frequent and contingent lockdowns impose tremendous uncertainties on businesses, putting long-term hiring and investments on hold.</p>
+        <p>Significant policy changes are unlikely to appear before the Communist Party National Congress in October. The meeting is widely expected to grant Xi Jinping his third term as China’s leader, or equivalent power. Maintaining “stability” prior to the meeting is likely seen as critical for the Xi administration. As a result, both the zero-COVID policy and the sole reliance on China’s less effect home-produced vaccines—at the center of the narrative that China successfully handled COVID under Xi’s leadership—would probably last at least until then, further dimming the economy.</p>
+        <p>Another cause of the grim job market may be the sense of insecurity among big companies, especially in the technology industry. Throughout 2021, the Chinese government <a href="https://www.dw.com/zh/%E6%96%B0%E4%B8%80%E6%89%B9%E5%8F%8D%E5%9E%84%E6%96%AD%E7%BD%9A%E5%8D%95%E9%98%BF%E9%87%8C%E8%85%BE%E8%AE%AF%E7%AD%89%E5%8F%88%E4%B8%8A%E6%A6%9C/a-59890516" target="_blank" rel="nofollow">issued</a> anti-monopoly fines to dozens of technology giants. Some fines were as high as billions of dollars. It is unclear whether the <a href="https://www.chinafile.com/conversation/beijing-changing-tack-big-tech" target="_blank" rel="nofollow">intense regulation</a> and profit confiscation will continue in the coming years. Many technology companies have already slowed down expansion and hiring.</p>
+        <p>Both COVID restrictions and punishments against technology companies might change by the end of 2022 or at the beginning of 2023. China may shift away from its zero-COVID policy to preserve the economy, and the government may want to woo big enterprises in the new term. Nevertheless, it is also possible that Xi will decide to double down on these conservative policies once he has secured another five years in power. Whether China is heading into a prolonged period of high youth unemployment or this is a transitory phenomenon remains an open question. If the high youth unemployment rate is transitory, it is unlikely to pose serious threats to the government, given the state’s intense monitoring of society. If youth unemployment continues to soar in the coming years, it is not impossible that the Chinese Communist Party would adopt large-scale campaigns, such as military expansions and giant foreign state-owned enterprise projects, to absorb the political uncertainty jobless youth create.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9876" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/eli-friedman"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/friedman_sm.png?itok=MJeoyeAu" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="eli-friedman"><a href="https://www.chinafile.com/contributors/eli-friedman" title="Eli Friedman">Eli Friedman</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The recent numbers on youth unemployment are startling. China’s economy has been undergoing a structural transformation away from the exceptionally high growth rates of the previous generation, and recent zero-COVID-induced bouts of <a href="https://www.reuters.com/world/china/china-reports-111-new-coronavirus-cases-vs-143-day-earlier-2021-08-11/" target="_blank" rel="nofollow">paralysis</a> in industries from transportation and hospitality to <a href="https://abcnews.go.com/Business/wireStory/china-manufacturing-weakens-lockdowns-continue-84414560" target="_blank" rel="nofollow">manufacturing</a> and <a href="https://www.fitchratings.com/research/corporate-finance/chinese-construction-companies-to-face-profit-pressure-on-covid-19-restrictions-09-06-2022" target="_blank" rel="nofollow">construction</a> have compounded the problem. While some increase in unemployment would be expected, I am surprised by the severity of the situation. Major implications follow from this potential employment crisis, but the consequences will vary for different social groups.</p>
+        <p>We are witnessing the final nail in the coffin of the implicit post-1989 deal between the state and college graduates. Following the violent suppression of democracy activists in Tiananmen Square and beyond, the state demanded political acquiescence. In exchange, highly educated youth could expect nearly boundless opportunity amid perhaps the greatest economic expansion in world history.</p>
+        <p>This bargain has been under intense pressure for several years. China’s commendable expansion of relatively low-cost higher education has produced many more graduates than there are skilled jobs. As real estate has come to play a central role in propping up growth, housing costs have continually risen and purchasing an apartment in one of the megacities is increasingly <a href="https://www.bloomberg.com/news/features/2020-12-20/workers-flocking-to-china-s-silicon-valley-can-t-afford-to-buy-homes" target="_blank" rel="nofollow">out of reach</a> for many. Intense competition in schooling, housing markets, and employment has led to a real sense of frustration, expressed succinctly by the “<a href="https://www.sixthtone.com/news/1006391/how-one-obscure-word-captures-urban-chinas-unhappiness" target="_blank" rel="nofollow">involution</a>” discourse—the idea that no amount of increased effort will allow individuals to attain their goals. With even fewer jobs to come by amid 2022’s economic downturn, these dynamics are only likely to intensify. While this will not automatically translate to political dissent, high levels of youth unemployment mean the generation-long bargain will need to be renegotiated on different terms.</p>
+        <p>The situation for working class migrants differs significantly. This population of hundreds of millions has <a href="https://clb.org.hk/content/migrant-workers-and-their-children" target="_blank" rel="nofollow">occupied</a> the most precarious segment of the labor market, treated as relatively disposable by employers and by the cities that benefit from their work. With employment in manufacturing having peaked years ago, young migrants are increasingly working in the gig economy and low-end service sector, where they are even <a href="https://foreignpolicy.com/2018/09/07/chinas-gig-economy-is-driving-close-to-the-edge/" target="_blank" rel="nofollow">less likely</a> to enjoy social insurance or the basic protection of a labor contract. High rates of unemployment are likely to put greater downward pressure on already extremely low wages. We will have to see how much of this unemployment is cyclical, but in the meantime, it will disproportionally impact the livelihoods of migrants.</p>
+        <p>Employment holds a special significance for migrant workers that it does not for people registered as urban citizens. As I’ve argued in <a href="http://cup.columbia.edu/book/the-urbanization-of-people/9780231205092" target="_blank" rel="nofollow">my recent book</a>, non-locally registered people wishing to access urban social services must first meet state-determined metrics which are heavily tilted toward assessing value in the labor market. For instance, if a migrant parent wishes to enroll their child in public primary school in the city, a non-negotiable first requirement is to demonstrate formal employment (and there are many other requirements in every large city). So, whereas an unemployed urban citizen could maintain access to nominally public services such as education, health care, and the <em>dibao</em> subsistence allowance, a migrant without a job would be categorically excluded. Labor market-mediated access to social services means that young migrants face much greater uncertainty amid higher levels of unemployment. This downturn in employment could precipitate profound livelihood crises for tens of millions of migrants.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9881" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/ho-fung-hung"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/ho-fung_hung_new.jpg?itok=lkgeRM9x" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="ho-fung-hung"><a href="https://www.chinafile.com/contributors/ho-fung-hung" title="Ho-fung Hung">Ho-fung Hung</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Urban unemployment, particularly youth unemployment, could threaten the stability of the regime, and Chinese Communist Party (CCP) leaders know it. China’s countryside is known for its unlimited capacity to absorb surplus labor. From the Ming-Qing period of peasant economy to the Mao period of rural communes, China’s “<a href="https://www.sup.org/books/title/?id=2761" target="_blank" rel="nofollow">involutionary</a>” rice-based agriculture has been able to take up growing rural surplus labor at diminishing labor productivity. The urban economy, however, can hardly absorb surplus labor this way. Unemployed workers could bring turmoil and pose a significant threat to urban centers’ social and political order.</p>
+        <p>Since 1949, the CCP has been vigilant about urban unemployment. In the 1950s, when economic growth failed to keep up with the waves of rural migrants seeking jobs in cities, the CCP developed the draconian household registration (<em><a href="https://www.jstor.org/stable/655134?seq=1" target="_blank" rel="nofollow">hukou</a></em>) system, the primary goal of which was to inhibit rural-urban migration. In the late 1960s, when the urban-industrial economy slowed, the baby boomers came of age, and urban youth unemployment was on the horizon, the CCP initiated the Down to the Countryside Movement to “<a href="https://www.cambridge.org/core/books/across-the-great-divide/D2FC585583E8B5952D7F4D3D31677431" target="_blank" rel="nofollow">send down</a>” a whole generation of young urban graduates to rural collectives. The movement had complicated motivations, including stifling Red Guards’ radicalism in big cities. But preventing young urban unemployment amidst the economic crisis of the 1960s was an important <a href="https://link.springer.com/book/10.1007/978-981-16-0455-3" target="_blank" rel="nofollow">impetus</a> too.</p>
+        <p>When China’s urban economy grew almost uninterruptedly after 1978, urban youth unemployment was no longer a major problem. During the state-owned enterprise reform in the late 1990s, which saw the large-scale layoffs of state-owned industrial workers, urban unemployment fueled <a href="https://www.ucpress.edu/book/9780520250970/against-the-law" target="_blank" rel="nofollow">protests</a> in many rustbelt cities. These protests mostly involved older workers or pensioners and were reactive to the disappearing jobs in the state sectors. This type of reactive protest dissipated and <a href="http://eprints.lse.ac.uk/65141/1/__lse.ac.uk_storage_LIBRARY_Secondary_libfile_shared_repository_Content_Kuruvilla,S_Changing%20nature_Kuruvilla_Changing%20nature_2016.pdf" target="_blank" rel="nofollow">gave way</a> to proactive labor protests seeking better pay and working conditions in the booming new sectors after China’s accession to the WTO in 2001.</p>
+        <p>China’s economy significantly slowed after 2012. Urban unemployment started to catch the attention of Chinese leaders. Attempts to rejuvenate the economy through renewed <a href="https://www.jstor.org/stable/48614267?seq=1" target="_blank" rel="nofollow">urbanization</a> and “supply-side structural <a href="https://www.nytimes.com/2016/03/04/world/asia/xi-jinping-china-economic-policy.html" target="_blank" rel="nofollow">reforms</a>,” among others, during the early years of Xi Jinping’s leadership failed to revive growth. In this context, Beijing started experimenting with a <a href="https://www.cnn.com/2019/05/04/asia/china-youth-policy-intl/index.html" target="_blank" rel="nofollow">program</a> of sending young urban students to the countryside, starting with students’ “volunteer” services to impoverished rural villages during their summer vacations. More recently, Beijing started encouraging college graduates to find jobs in the countryside. But without the reputation of Mao and the ideological fervor that the Party-state inculcated in the youth in the 1960s, this latest attempt to send youth to the countryside has been much smaller in scale. It was also interrupted by the COVID-19 pandemic, which will aggravate urban unemployment in its wake. The first urban youth employment crisis since the end of the Mao period will be a grave challenge to the next Xi Jinping administration.</p>
+        <p>If left to worsen without remedy, the unemployment crisis could lead the Party-state to further tighten surveillance and control of its potentially restive urban population. Amidst the COVID-19 pandemic, the CCP has <a href="https://www.nytimes.com/2022/05/06/business/shanghai-xinjiang-china-covid-zero.html" target="_blank" rel="nofollow">employed</a> surveillance technologies (such as compulsory smartphone <a href="https://merics.org/en/short-analysis/covid-19-contact-tracing-apps-why-they-are-so-popular-china" target="_blank" rel="nofollow">apps</a> that conducted location tracking) and the revitalized grassroots tentacles of the state to monitor and control movements of individual citizens and impose lockdowns. In big cities, many of these draconian control measures are likely to remain even after the pandemic is gone.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9886" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/taylor-loeb"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/taylor_loeb.jpg?itok=_OM3ePyi" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="taylor-loeb"><a href="https://www.chinafile.com/contributors/taylor-loeb" title="Taylor Loeb">Taylor Loeb</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The unemployment numbers from the lockdown-heavy first half of 2022 have been ugly. But zero-COVID policies alone can’t explain away some broader medium- and long-term structural issues.</p>
+        <p>On the blue-collar side, as China continues its move up the value chain, we will continue to see increased pressure on domestic rural-urban migrants who have relied on the largesse of China’s manufacturing and construction sectors for employment. Indeed, industrial employment <a href="https://tradingeconomics.com/china/employment-in-industry-percent-of-total-employment-wb-data.html" target="_blank" rel="nofollow">peaked</a> in 2013 and has been trending steadily downward since. These workers, however, do have some trends in their favor: more and more citizens are going to college, reducing the blue-collar workforce. In the medium term, China’s 55-64-year-old baby boomers are closing in on retirement age. Further, the <a href="https://www.scmp.com/economy/china-economy/article/3179881/china-economy-beijing-unveils-detailed-stimulus-plan-offset" target="_blank" rel="nofollow">stimulus</a> that Beijing will likely <a href="http://www.gov.cn/premier/2022-06/15/content_5695848.htm" target="_blank" rel="nofollow">increase</a> throughout the rest of the year should at least provide a short-term boost for industrial workers.</p>
+        <p>The white-collar side is where things get a little bit dicier. The record 10.76 million college students <a href="https://www.yicai.com/news/101397185.html" target="_blank" rel="nofollow">graduating</a> this year—a figure that doesn’t count the many hundreds of thousands graduating from overseas institutions—are entering the labor market at a particularly bad time. The economy is struggling. Many of China’s highest profile companies are caught up in geopolitical tensions. Tech firms are having a <a href="https://www.business-standard.com/article/international/chinese-tech-firms-forced-into-blood-listings-as-capital-dries-up-122052601743_1.html" target="_blank" rel="nofollow">harder time</a> accessing capital.</p>
+        <p>Perhaps more importantly, some of the hottest sectors for graduate employment have been getting hammered by Beijing. Edtech, a sector that’s been essentially <a href="https://techcrunch.com/2021/09/22/the-casualties-of-chinas-education-crackdown/" target="_blank" rel="nofollow">demolished</a> by <a href="https://www.chinafile.com/conversation/beijing-changing-tack-big-tech" target="_blank" rel="nofollow">regulation</a>, was a highly sought-after landing spot for the past decade. The <a href="https://www.reuters.com/markets/rates-bonds/chinas-property-market-woes-expected-worsen-2022-2022-05-24/" target="_blank" rel="nofollow">property market slowdown</a> has negative implications for all types of roles, from investing to sales to construction. And, of course, the broader tech crackdown is starting to lead to <a href="https://www.caixin.com/2022-06-06/101895451.html?mc_cid=67856b21bf&amp;mc_eid=2cf618f03f" target="_blank" rel="nofollow">substantial layoffs</a>.</p>
+        <p>I expect these problems to get worse. All the students who put off the job market to get a graduate degree as the pandemic started will be queuing up for interviews over the next couple years. The regulatory crackdowns will ease and the economy will improve, but many of the affected industries are never going to be the same, leaving countless students who had studied to enter this precise field with mismatched qualifications.</p>
+        <p>The upshot is more government involvement. We recently saw a top official calling for state-owned enterprises to <a href="https://www.cs.com.cn/sylm/jsbd/202206/t20220608_6275809.html?mc_cid=f37f099e85&amp;mc_eid=252f8810b7" target="_blank" rel="nofollow">increase salaries and benefits</a> to lure talented workers. State firms are upping their involvement in real estate, <a href="https://www.reuters.com/markets/deals/cash-strapped-chinese-developer-shimao-sells-stake-asset-state-owned-partner-2022-01-25/" target="_blank" rel="nofollow">buying up</a> distressed developer assets with the long-term aim of bringing more stability to the sector. Policymakers are promising more cash to fund the types of startups whose business models <a href="http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/47673/47933/wz47935/Document/1720869/1720869.htm?mc_cid=8bf2c9cd4b&amp;mc_eid=2cf618f03f" target="_blank" rel="nofollow">mesh</a> with Beijing’s priorities around scientific innovation, as opposed to platform companies like Alibaba and Tencent.</p>
+        <p>These are economy-wide trends, but ensuring employment will be very much at the center. The extent and persistence of “<em><a href="https://www.forbes.com/sites/china/2010/08/31/guo-jin-min-tui/" target="_blank" rel="nofollow">guojin mintui</a></em>” (“the state advances, the private sector retreats”) during the coming years will have substantial implications for the economy—and, of course, employment. It may ultimately mean that employment numbers get back on track, but graduates won’t end up getting the jobs they expected—or the ones they wanted—when they decided to go to school.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-07-05</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-05/Participation-in-Xinjiang-Surveillance-Program-Can/">
+          Participation in Xinjiang Surveillance Program Can Lead to Smoother Career Enhancement
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-05</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-05/A-Note-on-Notes-From-ChinaFile/">
+          A Note on Notes From ChinaFile
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-06-15</time>
+        <a href="https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/">
+          List of De-Registered Representative Offices
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-06-03</time>
+        <a href="https://nodebe4.github.io/oped2/2022-06-03/The-Prize-Student/">
+          The Prize Student
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/">
+            前一篇：List of De-Registered Representative Offices
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-07-05/A-Note-on-Notes-From-ChinaFile/">
+            後一篇：A Note on Notes From ChinaFile
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-07-05/A-Note-on-Notes-From-ChinaFile/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-07-05/A-Note-on-Notes-From-ChinaFile/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-07-05/A-Note-on-Notes-From-ChinaFile/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-07-05/A-Note-on-Notes-From-ChinaFile/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-06-15/List-of-De-Registered-Representative-Offices/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿
+——
+" />
+    <meta property="og:description" content="
+罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿" />
+    <meta property="twitter:title" content="罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F610a44d0fbcfb8144541e371" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/610a44d0fbcfb8144541e371" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/610a44d0fbcfb8144541e371&text=罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/610a44d0fbcfb8144541e371&title=罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/610a44d0fbcfb8144541e371&title=罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿&body=
+罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/610a44d0fbcfb8144541e371" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/610a44d0fbcfb8144541e371&title=罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿&caption=
+罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿&url=https://www.allnow.com/post/610a44d0fbcfb8144541e371" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-08-04
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/610a44d0fbcfb8144541e371" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/610a44d0fbcfb8144541e371">罗新 止庵 包丽敏 董风云：历史学家如何参与对现实的改造丨燕京讲稿</a>
+——</p>
+
+<div>
+  <p>7月25日19点，“历史的非虚构写作”鸣沙历史嘉年华第三场“走向公共空间：历史非虚构的多元解读”在北京红楼公共藏书馆举行，由社会科学文献出版社历史学分社与《燕京书评》、中国人民大学《中国公共史学集刊》联合主办。北大历史系教授罗新，作家、学者止庵，资深媒体人包丽敏，甲骨文书系创始人董风云围绕主题展开讨论，《燕京书评》编辑徐鹏远主持了当天的活动。以下为现场实录摘要，经嘉宾审阅，讨论的更多内容将刊发于中国人民大学《中国公共史学集刊》：</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-04/610a45189c232e01c17d2e3a+L.png" data-id="610a451e9b2d825085c26c67" alt="活动现场" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+活动现场
+    </figcaption>
+  </figure>
+  <h2 id="section"><strong>读者需求是丰富的，中国历史写作的多样化远远不足</strong></h2>
+  <p><strong>Q：这些年非虚构变得越来越不陌生了，但对于历史非虚构，也许可能没有那么明确的认知或概念。而且，一方面因为历史学本身的学术规范，另一方面我们阅读到的许多优秀非虚构作品，其作者并不是专业的历史学人，这就造成了历史学界也存在着某种对于非虚构的偏见或者说鄙视链。罗新老师对于历史非虚构究竟是如何看待的？我们到底如何去理解历史非虚构，它究竟是历史学的一种新的研究和写作方式，还是只是非虚构范围内的一个主题类别而已？</strong></p>
+  <p><strong>罗新：</strong>很惭愧，我不是回答这个问题的适当人选，因为这个词对我来说是崭新的词，不是我过去熟悉的。非虚构在国外的书店里经常看到，但非虚构跟历史联系起来，我过去没见过。我们现在的意思，是不是在非虚构里面那些讲历史的就叫历史非虚构？我猜是这么个意思。</p>
+  <p>就我此刻浅薄的理解，历史非虚构跟历史学研究的论著之间，还是有一点交叉的。虽然这个词我们刚刚开始提，但过去这一类的著作我们接触得也不很少了。比如我们过去读的《万历十五年》、史景迁的著作，都可以归为历史非虚构，或者说从历史学家的眼光看，大概也算是历史非虚构。它们的确是历史学的书，但不太学院化，不太那么象牙塔，没有大量的注释和考证，但又有历史学价值，作为专业人员读起来也还是受教益的。我过去接触的，主要是这一类。特别是我不太熟悉的领域，比如某些国外史，最理想的是直接读人家最经典的专业著作，但读起来有难度、门槛高，所以读比较通俗一点的难度就小多了，也能读得懂。在这一点上，历史学专业人员跟一般读者其实门槛差不多，大家的读书经验、体验都差不多。</p>
+  <p>有一些重叠的部分，当然也有不重叠的部分。近年随着历史非虚构这个词热起来，我们看到了一些明显不是专业著作、不能用以评职称、学院同事也不认为是科研产品的写得很好的书。国内原创作品我读得很少，最近读过的有北大历史系博士周思成的《隳三都》、《大汗之怒》，这两本书当然不被认为是金元史专著，不过因为我对蒙元史了解很少，读起来就觉得很有趣、很喜欢。我想，这就属于和历史学专著不相重叠的部分。</p>
+  <p>相对而言，我读国外引介的作品稍多些。这些书的作者有历史专业人员，也有非专业人员，比如记者、爱好者、作家。尽管不是职业历史学家，他们写得也挺好，也有非常精彩的内容，我读起来也很受教益。当然，我们能够读到的都是成功的作品，一定还有很多不成功的。</p>
+  <p>国内原创性作品的情况复杂些。经常有人向我推荐，说我们这儿有这样一本书是写历史的，请你看一看。这些书中，有的真是不错，但更多是不太符合我的阅读标准的。我猜，这种情况在国外大概也差不多。</p>
+  <p>有没有一个歧视链呢？从专业眼光来看，当然有某种程度的歧视链。比如我近年来做的东西，我就经常想我的老师——已经去世的田余庆先生——会不会不赞成？我当然希望我做的事情他都赞成，但不会那么容易。他会不会觉得放下专业研究，去走金莲川之路是浪费时间，有点不务正业？其实，我自己都觉得多少有一点，何况他呢？这就是在专业工作者内部的一个歧视链。这个歧视链是存在的，就是你作为专业人员是不是应该把更多的精力放在你的专业工作上。</p>
+  <p>专业人员理应集中精力做自己的专业研究。不过，社会是复杂的，复杂是美好的。对于专业研究者之外，甚至包括部分专业研究者在内的那些有能力、又有热情写的人，还是应该鼓励他们写，因为读者的需求是丰富的，这种丰富的需求也是美好的。在这个意义上，歧视是小圈子的事情；在更大范围内，歧视反映的是歧视者的狭隘。</p>
+  <p><strong>Q：读者对于某一种题材某一种写作的认可，会通过对阅读的选择表现出来。请问董风云老师，以你的出版经验，目前国内对于历史非虚构真正的热情究竟是一个什么程度？其实“甲骨文”的出版序列中，大部分还是国外作品；这是不是在某种程度上，映照着国外和国内的相关写作现状——国外的发展要远远强于国内？</strong></p>
+  <p><strong>董风云：</strong>国外的很多媒体网站会把每年的好书做一个盘点，很多时候你会看到分为两类：fiction和nonfiction。nonfiction对应的，就是我们所谓的非虚构。从字面上来说，除了小说是虚构作品以外，所有的都可以归入非虚构。所以，他们不会说这是一个历史非虚构，历史书也好、社会学也好或者纪实文学也好，就是简单地归到nonfiction里。有时候， nonfiction和历史榜上会同时出现一本书，意味着他们既把它看成历史书，也把它看成一本非虚构的书。所以，很难说历史非虚构这么一个概念是真实存在的，更多的是我们对它的解读。</p>
+  <p>从我的看法来说，虽然这些年我们做了200多本书，很多出版公司出版社都在做这种既popular又academic的写作，越来越多的读者也来读这些东西，但卖得很好的书是非常少的，它的辐射非常有限，总的来说，我们的阅读是非常非常薄弱的。有没有这么一个市场？有。但依然是一个非常小的群体、非常垂直的群体，严肃阅读的变化没有我们想象得那么大。</p>
+  <p>我们会经常跟国外的优秀学者、写作者接触，相对来说他们的作品是比较容易实现商业化的。例如英国人非常注重历史写作的文本，他们的出版、经纪人、作者之间有一个非常好的互动关系、一个非常好的商业模式，好的作者能够很轻易冒出来。中国现在会好一些，但还是有很大空间要挖掘，我们的类型多样化是远远不足的。这个有很多原因，不能一概而论。最重要的一点，国外的多元化有一个很好的商业模式来保障。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-04/610a45684cd55d54dd5dc401+L.png" data-id="610a45712114416715c3e3ee" alt="活动现场" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+活动现场
+    </figcaption>
+  </figure>
+  <h2 id="section-1"><strong>国内的非虚构写作，功夫下得不够也没有什么效果</strong></h2>
+  <p><strong>Q：如果溯源来看的话，非虚构最初是从新闻界诞生的，直到今天我们大量的非虚构阅读应该说也是通过媒体来完成的。对于新闻而言，在某种程度上，它与公众的接触和关联是最为紧密的，尤其在这样一个流量时代，许多非虚构品牌在自媒体环境下不断崛起。但同时，它又会反过来给媒体的新闻非虚构写作带来一种挑战，比如之前以非虚构面貌刷屏的《一个出身寒门的状元之死》，融合了这个时代的痛点和情绪，但最后证实是一篇假的非虚构。请问包丽敏老师，如何看待非虚构写作和公众之间的关系？尤其在我们这个时代，公众为什么会对非虚构产生极大兴趣？在被读者需求又有流量裹挟的情况下，如何在遵守真实的原则下，写出一篇好的非虚构？</strong></p>
+  <p><strong>包丽敏：</strong>如果从广义角度来说，其实所有的新闻写作都算是非虚构。为什么新闻界还要再讲非虚构写作呢？按照我的理解，我们在讲非虚构写作时，强调的是新闻文本的创造性。美国的普利策新闻奖，1979年开始设立了特稿奖，当时他们就有一个评选标准是高度的文学性和创造性。</p>
+  <p>新闻工作者一直努力让新闻事件更好地到达公众，因为这个行业从诞生以来就是跟公众紧密联系的，它不是学院派的，它要追求最大的传播量——现在叫流量。很多时候，非虚构写作引用了小说的创作技巧，这个探索很早就有了。1960年代，《中国青年报》前辈王石的《为了六十一个阶级兄弟》，借鉴了电影的蒙太奇手法，以现在的概念来说也是非虚构；八十年代，中国出现报告文学和纪实文学，如果以现在的新闻标准来看，它里面可能会参杂了一些想象性的、虚构性的东西，但它其实也是用更文学化的手法来写社会现象。</p>
+  <p>非虚构写作跟虚构写作的界限在哪里？从我们新闻界的理解来说，我们在写非虚构作品时是有一个专业标准的，就是你每一句话都要有出处。这个东西可能来自于某一个史料、某个档案或者你的采访对象，而采访对象告诉你的事实，有时候还要推敲一下，可能还要找另外一个采访对象核实，如果两个人说法有出入可能还要找第三个人。如果你对事实不太确认，那么你也需要在行文过程中让读者感知到，你不可以演绎、不可以想象。编辑一般会对这个东西把关，以至于像美国的《纽约客》杂志有事实核查员。人是有局限性的，哪怕《纽约客》经过了核查员，也不能保证没有事实错误和出入，但作为写作者、刊发者就要有这样的职业标准。</p>
+  <p>现在这种自媒体时代，人人都有麦克风，这其实对公众的媒体素养提出了一个挑战。据我所知，像谷雨实验室、《人物》杂志等很多媒体机构都在做一些非虚构写作的尝试，他们还是能遵循新闻界相对严苛的非虚构写作标准，相对靠谱。其他的不好说。</p>
+  <p><strong>Q：应该说，非虚构这十年在中国的普及，始于2010年《人民文学》设立的非虚构专栏。此后像梁鸿的《中国在梁庄》、何伟的《寻路中国》《江城》、袁凌等写作者的一系列写作，让这种类型开始在国内的阅读市场和公众概念中建立起来。想问止庵老师，就个人体验——比如在写《神拳考》时，会面临哪些文学创作之外的困难？对于文学写作和史学写作的结合，您觉得它们之间的结合点以及边界在哪里？</strong></p>
+  <p><strong>止庵：</strong>说句狂妄的话，最大的困难其实还不在于自己的写作，而在对于别人写作的阅读。</p>
+  <p>“非虚构”这个词，本来是虚构以外，翻译过来就变成不能虚构、反对虚构。刚才包老师提了文学性的问题，其实所有问题都发生在这个地方——到底文学是个什么东西、它在什么地方可以被非虚构所利用？因为这个界限不清楚，就导致了我们把非虚构作品写成虚构作品了，或者有些人——特别是学院系统的很多作者——写不好非虚构：一种是文学用多了，另一种人文学用少了。其实在中国，前一方面在中国是自古以来的问题，我们过去的历史和传记写作缺乏一个好的传统，与虚构作品向来没有严格的、非常清楚的区别。咱们现在谈的“非虚构”是现代科学的产物，我们的古代作者没有受过这个教育。我举两个例子。</p>
+  <p>一个古代的例子，《左传》里记载过这么一件事情：晋国有一个大臣，他老向国王进谏，国王烦了，派刺客去杀他。刺客去了大臣家一看，上朝时间还没到，大臣穿着准备上朝的衣服在那儿坐着等，睡着了。刺客就有一段自言自语，就说这人对于上朝这么恭敬，是一个好官员。如果我把他杀了，我是对国家不忠；如果不杀，我是对国王不信；我不忠不信，不如死了，他就撞树自杀了。对此很早就有人质疑，《左传》的作者怎么知道这事的呢？钱钟书写《管锥编》也提到了这个例子。这就是想象，作者替历史人物想象，居然还被称为“合理”。</p>
+  <p>但是，传记、历史里面作者所有的想象都是不合理的，因为一个东西可以引发各种想象，作者写出来的只是其中之一，你要说这个合理，那么别的想象就是不合理的了，凭什么呢？所以，传记写作、历史写作，乃至整个非虚构写作，必须去掉这个东西。只要有一点想象就是虚构。</p>
+  <p>再举一个现代的例子，有一本写周作人的书，说他被捕的时候，迈出大门的时候院子里传出他妻子掏心裂肺的喊叫。我曾说，除非作者是在场的人，譬如周家家属，或者军警之一，或者趴在墙头上的贼，否则就是胡编的。但我们没看见上述人等中有一位记载这个事。这就是所谓“合理想象”，其实就是写小说一般，把读者给骗了。</p>
+  <p>有的作者明明手里捏着一大堆资料不好好写，非得另外编造想。我说本来足够你写非虚构作品的了，为什么要虚构呢？好比你开着一家药铺，却要造假药，真药都卖不完，为什么要造假呢？</p>
+  <p>所以，我们得把文学分成两部分：有一部分是非虚构能用的，有一部分是不能用的。从事非虚构写作的人还是应该读一点文学书，读完之后就知道，哪些文学是不能用的，哪些是能用的。当然，这也要在读者那儿取得共识，为什么我们的作者喜欢编造，喜欢所谓“合理想象”呢？是因为我们的读者需要看热闹。非虚构应该是一个社会共识的概念。比如我自己读传记或者读历史，凡是有对话，有心理描写，又没有注明出处的，我都不看，这种书一定是假的，这就是小说。但在小说里，也是不入流的。</p>
+  <p>非虚构写作的一个最大困难就是材料的搜集，我们很多作者，在这方面都不肯下功夫。举个例子，《雷蒙德·卡佛：一位作家的一生》的作者卡萝尔·斯克莱尼卡说：“在这部传记的写作过程中，我被授予从成百上千位卡佛的亲戚、朋友和同事那里捕捉故事的特权。”又说：“从最初的一九九四年开始，直到本书完稿的二〇〇九年，十几年间，我当面或打电话进行了大量采访。”书中不少信息得自作者一九九八年对时年九十二岁的卡佛岳母艾丽丝·里奇·里德的访问，而她在两年之后就去世了。不能不佩服作者功夫下得深入，而且及时。</p>
+  <p>咱们的材料确实也不好找。我曾经写过一篇《为什么写不成张爱玲传》的文章，老是有人动员我写《张爱玲传》，现在存世的张爱玲生平材料根本不够写一本《张爱玲传》的。比如说张爱玲和胡兰成的关系，现有的只是胡兰成一面之词。当时的知情人，比如说张爱玲的姑姑、炎樱、苏青，没有人采访过他们，现在他们都去世了。你只能用胡兰成的《今生今世》这一个材料，但是，孤证不立。</p>
+  <p>再有，过去的研究者只注重死材料，不注重活材料。比如在1949年以后成立了好几处鲁迅博物馆、纪念馆，当时不少认识鲁迅的人都活着，应该做一系列详细的口头采访，但好像没有怎么做这个事，不少精力只花在注释鲁迅作品之类事情上了，鲁迅的很多部分就完全隐没在黑暗之中了。还有一个问题是，我们那些回忆文章受到时代的限制非常严重，一个人在不同的时候说不同的话，所以已有的材料本来就少，还得甄别，有的材料明显不能用。</p>
+  <p>总而言之，我们的非虚构写作，第一功夫下得不够，第二下功夫也没有什么效果。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-04/610a45e34cd55d54dd5dc402+L.png" data-id="610a45f12114416715c3e3f1" alt="止庵" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+止庵
+    </figcaption>
+  </figure>
+  <h2 id="section-2"><strong>历史学需要在思想、问题意识和精神关怀上实现超越</strong></h2>
+  <p><strong>Q：刚刚提到过《一个出身寒门的状元之死》，它之所以能够在短时间形成刷屏之势，是因为准确地扣住了我们这个时代的情绪。在某种程度上，这其实也解释了为什么非虚构能够在今天流行，就是因为它或许能够更直接地呈现我们真正关心的问题，能够直接呈现众多卑微的生命的真实状态。我们以前常说以史为鉴，但这些年好像提得越来越少了，一个原因就在于历史终究是过去的事情，它可能对于当下的作用没有那么直接；另一方面，以往的历史对普通人的关注确实少一些。想问罗老师，面对新时代的公众，史学界的反应是什么样的？史学界有没有考虑过如何在自己和公众之间建立起一个更紧密的联系，史学如何去回应这个时代？</strong></p>
+  <p><strong>罗新：</strong>我不了解别人的情况。是否史学界有这个需要，是否应该用自己的专业知识去满足这个需要？也许吧。但是，大概不是以这种形式，可能是另外的。就我自己体会，最重要的是解决自己的问题。我们研究的问题和时代、处理的材料，都是跟我们八竿子打不着的遥远时代，不管是研究两百年前还是一百年前，跟我们现在都没什么直接关系。但是，研究者是生活在当下的，和其他人同步生活于此刻。一个研究者每天在图书馆档案馆读过去的材料，面对的是不相干的过去，但回到家刷个微信一看，这儿淹死人了，那儿烧死人了，你要面对的是此刻自己身边的事。</p>
+  <p>我过去没有想过公众历史焦虑的问题，我主要考虑的是我们作为专业工作者有一个时代责任问题，就是作为个体，我研究的是遥远的过去，可我个人是现实生活中的一个人，我有现实焦虑。我和现实之间是什么关系，如何处理这个关系？我称之为历史学家的现实焦虑。我倒不是那么关心大众的需要，我关心的是自己有什么需要，这个需要对我个人来说是非常要紧的。在这个意义上，这种现实焦虑在一定程度上会影响自己阅读那些跟现实无关的、遥远过去的材料，会影响到我们如何解读这些材料，以及从这些解读当中生发出什么问题。对于过去，我应该提什么问题？这些问题和我的时代焦虑有什么关联？</p>
+  <p>我近些年提出一个问题：怎么研究古代那些边缘人、那些弱者、那些在书里找不着或不容易找着的人？为什么？因为我意外地发现我身边的人们都在议论这样的话题，这样的话题会影响到我自己的史学关怀。我相信有些东西在今天的中国如此，在过去更加如此，强度、普遍性比今天不知要高多少倍，可我们的史书里看不到，我们看到的都是抽象的描述，什么民脂民膏、水深火热。如果这样的话，学历史还有什么意义？我们怎么在研究中体现自己的观念、关怀、理想呢？</p>
+  <p>现实应该改变，必须改变。历史学家如何参与对现实的改造？历史学家以改变过去的方式参与改变现实。也许我们的书斋工作是不能直接改变现在的，不过没关系，我们有自己的办法。我们能改变过去，改变人们对历史的了解，知道历史不是教科书讲的那么简单、单线条和机械僵硬，历史本来具有多种可能性，正如今天也具有多种可能性。今天这个样子，并不是必然的、唯一的、不可避免的。改变历史，就是改变对历史的理解，让我们同时代的、后代的人读到的历史不再只是帝王将相、丰功伟绩，还有各种抵抗、各种竞争，还有一些普通人也参与了历史的塑造。回答这些问题，不是因为我感受到了公众的需要，而是我自己的需要。如果不能在这个意义上做一些工作的话，我很怀疑职业生涯的意义。</p>
+  <p>当然，提出问题比较容易，回答起来难度就大多了。对历史学来说，难在要提出有学科意义的问题，不是抽象的口号。具体难在哪里呢？我的体会，不仅是材料的问题，还有被规训的史学思维的问题，我们解读材料的思维惯性改起来很难。史料有所谓潜藏的“密码”，你要能读出来，需要训练，需要很长时间的磨砺，不容易做到。我做得很不好，远远没有达到自己的希望。</p>
+  <p>因此，我觉得这不是一个如何和公众联系的问题，是如何和自己联系的问题。</p>
+  <p><strong>Q：在学院的历史写作和非虚构写作之间，是不是在方法上也会有一些具体的差异？比如历史研究有时候需要经过非常复杂的论证过程，但是非虚构要写得足够精彩，这些东西可能会构成某种阻碍。</strong></p>
+  <p><strong>罗新：</strong>这个问题不好回答。中国的学术出版物，我们翻一翻就可以熟悉大致的形式，再去翻一翻国外比较严肃的著作会发现一些差别。美国的学术著作，哪怕是一些非常严肃非常学院化的，注释也都变成尾注打在最后，一本书可能1/3都是注释，但都搁到后面。为什么呢？不想让读者的阅读被干扰。可是我作为一个专业工作者就非常烦这个，因为我要看注释，我就老去找后边，很麻烦。我希望是脚注，因为注释显示材料来源、逻辑、论证过程，这个是我关注的，我其实不太在乎什么结论，我想知道这个结论怎么来的。但是显然更多的读者是不想看注释的，或者说先不看注释。国内现在也有好多非虚构或者面向公众的史学作品，可以看到注释不多，而且都是放在脚注，方便你能够迅速看到。我认为这两种选项都可行，但是反映了不太一样的倾向，我不知道哪一个更好，因为每个读者的个人立场是不一样的。</p>
+  <p>针对一般性的历史非虚构写作来说，我不敢说我是一个作者，我只敢说我是一个热心的读者。作为这样类型的读者，我有自己的标准，就是我希望它即使不能够成为一个好的历史著作，也应该反映一线的研究者的水平。作者不必是一个学者，不必是历史学家，或者说不必是这个领域、这个课题的前沿研究者，但是你应该在你的书里反映这个水平，你应该有能力去消化那些一线的研究。在我看来，这是一个基本的要求。如果你一写就是四十年前的研究水平，那么即使你的写作能力很高超，可能意思也不会很大。当然最理想的是还能够推进，我相信这在国外的优秀非虚构作品里很多都做到了。</p>
+  <p>如果作者不是一个职业的历史学家，怎么可能把一个学科往前推进？当然是非常难的。但是我觉得，也许最重要的成就不是寻找、处理材料，而是在思想上、在问题意识上、在精神关怀上提出具有时代关怀的问题，关注时代性话题，反映时代的思想水平。一般来说，历史学家不足以代表时代的思想水平，因为历史学科是一个天然滞后的学科。我自己并不以此为耻，这是正常现象。但是我希望我们学科里也能够产生反映时代思想水平的作品，比如我们这个时代的所谓进步思想——追求种族正义、追求性别平等、追求社会公正。在这方面提出问题的，往往不是象牙塔里的人，或者即使关怀到了通常也不知道怎么找题目和材料，不知道怎么讨论相关话题。一个非职业的学者，受过一定的历史学训练，他也许能提出这样的问题，并且能找到一定的材料回答这个问题，因为他跟社会跟时代关联更紧密，这样的话这本书就具有了历史学的很高的价值。</p>
+  <p>所以我对年轻的写作者们还是寄予厚望，也许他们能提出我们这些老朽提不出来的问题。如果那样的话，他的作品不仅对公众有意义，对我们历史学学科也有意义。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-04/610a46374cd55d54dd5dc403+L.png" data-id="610a46732114416715c3e3f2" alt="罗新" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+罗新
+    </figcaption>
+  </figure>
+  <h2 id="section-3"><strong>只有细节能够告诉我们更多的面向、意义和价值</strong></h2>
+  <p><strong>Q：管于国内图书的阅读，因为我们对自身历史、写作者的熟悉程度，包括对文字质感的基本感受，相对容易判断它的质量。但关于于译著，无论对历史本身还是写作者可能都没那么了解，再加上翻译过程实际上经过了二次创作，判断方面会困难许多。董老师和止庵老师能否给大家一些建议，帮助我们在挑选阅读内容时，能做出比较靠谱的判断？</strong></p>
+  <p><strong>董风云：</strong>其实没有必要挑太多，随便拿起一本都有值得看的东西。就目前国内引进的作品而言，我认为太差的没有机会被引进。拿起一本书来看就是一个好事情，拿起一本公认的能够带来一些观念的书来看是更好的事情；如果偶然看中一本对个人有重大影响的书，则是一个很幸运的事情。</p>
+  <p>我们做的这些书，都是我们作为一个普通人关心的议题，而不是说这个书一定有什么学科建设意义。至于它能带给大家什么东西，也完全不是我们能控制的。《非凡抄本寻访录》的作者说给一句有意思的话：“书籍自有其命运。”这个命运是它跟我们相遇之后，我们每个人赋予它的。</p>
+  <p><strong>止庵：</strong>董老师说不挑，我们读者得挑。我个人的基本标准是，首先这个书不能太旧，好多历史书、传记书确实没有新的材料，其次我个人的偏好是那个书得厚、内容得多，好多事情你简单了就说不清楚。</p>
+  <p>顺带说一下。刚才说过，我们自己的这类著作有一个毛病是编，还有一个毛病就是我们的学者太宏观，不注意细节。外国好的传记、历史，它一定很好看，一定有很多细节。</p>
+  <p><strong>罗新：</strong>我完全同意止庵老师这个说法。我写《从大都到上都》时就特别发愁，找不着细节，找到一两条就欣喜若狂，你发现过去的材料里有点意思又想表达点什么的内容不容易找着。</p>
+  <p>因为我很想写长城，将来还想继续写长城，所以有些朋友就把我拉到国内几个重要的长城群里，里面人很多，每天都有很多发言。他们的发言有一个共同特点，就是都为长城的美所迷醉，歌颂长城的伟大。这绝不是我要写的方向，我一定要写另外一面。比如长城好像是保卫自己的一个东西，但我就要找例子来说明不是这样的，我找到长城两边的汉人和蒙古人都有可能为了一时的利益而出卖自己原本效忠的一方；再比如，在建长城、守长城的过程中，有好多哗变。这样的事情多得很，但那些歌颂长城伟大的人就完全没这概念，他不知道有这些事情或者选择不知道这些事情。所以，我就要找细节，只有细节能告诉我们世界更多的面向，揭示更多的意义和价值。</p>
+  <p>虽然我们受职业训练的，整天读书读的都是细节，似乎难点只在于从细节里提炼出认识来。但其实，哪怕书里有很多细节，我们也未必读得出来，就是我们前边说过的，可能因为我们不掌握破解的密码。另外，我们读的材料也是跟我们训练差不多的人写的，他们的思想能力往往把意义丰富的细节过滤成了简单的道理，这也是这个问题。就像将来的历史学家，如果只根据今天的报纸来写中国历史，也充满风险、充满陷阱。写出细节是必须的，但寻找细节其实挺难的，一方面材料本身很少，另一方面我们可能缺乏那种眼光。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-04/610a46b69c232e01c17d2e3e+L.png" data-id="610a46c29b2d825085c26c6b" alt="包丽敏" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+包丽敏
+    </figcaption>
+  </figure>
+  <h2 id="section-4"><strong>非虚构写作是带着锁链跳舞</strong></h2>
+  <p><strong>读者提问：我们一般提到非虚构，可能想到它的对应概念是虚构。刚刚听几位老师的分享，感觉好像历史非虚构好像对应的并不是历史虚构，而是一些别的概念。所以想听听老师的看法。</strong></p>
+  <p><strong>止庵：</strong>我觉得，与“历史非虚构”对应的是演义、报告文学、网文、历史片、历史电视剧之类。我写过《神拳考》，事后有一个当事人叫吴永，是怀来县的县令，以后写过一本《庚子西狩丛谈》，说：“义和拳之乱，所以酿成此大戾者，原因固甚复杂，而根本症结，实不外于二端：一则民智之过陋也。北方人民简单朴质，向乏普通教育，耳目濡染，只有小说与戏剧之两种观感。戏剧仍本于小说，括而言之，即谓之小说教育可也。……” ​今人借助看电视剧、看电影之类了解历史，与此大同小异。分辨历史之虚构与非虚构的区别，其意义正在于此。我们为什么要谈历史非虚构呢？最重要的就是把可供娱乐的东西与可供教育的东西分开：我可以被娱乐，但不能被娱乐所教育；我可以被教育，也可能在教育中获得娱乐。可以看历史片、历史剧，但是不能相信历史就是这样的，不能拿这个当成依据，说跟这个不一样的就不对。</p>
+  <p><strong>读者提问：请问包老师，在以往的采访经历里，怎么能够对材料有更创新更生动性的表征，同时也可以顾及到对被采访人的伦理责任？</strong></p>
+  <p><strong>包丽敏：</strong>新闻界经常会讲一句话：新闻是历史的草稿。不仅是尊重事实，还要尊重历史，你要想到你所写的都是会被存档的，以后的人了解历史时，你的所写提供了一个证据资料，你要是错了不是糊弄了若干年以后的人类吗？所以，非虚构写作是一个艰难的工作，有点类似于带着锁链跳舞，你要跳一支动人的舞，但不能摆脱那个锁链——真实性的要求。</p>
+  <p>你极尽所能去采访了所有能采访到的人，跟他们不停地磨，用各种启发性问题不停地让他们说细节。实在问不出来也没办法，有的时候就是没有，采访对象是有局限的，记者也有局限，所以没有一篇非虚构作品是完美的。但你可以尽量把材料经过不同的组合、排列，让它变得吸引人。</p>
+  <p><strong>读者提问：对于非专业的历史研究者，我们需要建立一个历史学的体系吗？还是说我们随机去读某一段历史或者某一个人物就可以？</strong></p>
+  <p><strong>止庵：</strong>我觉得要有一个大概的通史概念，要是一点都不知道，读完可能也没有用。有一个基本的知识，然后对哪个感兴趣读哪个，我自己就是这么读的。我们是普通读者，不对任何人负责，只对自己负责，想读什么就读什么，想知道什么就知道什么。</p>
+  <p><strong>罗新：</strong>我就跟你一样有这个困惑，我知道的东西也特别少。怎么办？那就瞎读。不知道也没有关系，开卷有益。我特别同意止庵老师，有兴趣的读，没兴趣的别为了建立一个知识框架去读，好玩就读，不好玩就别读，这是最重要的。最重要的东西不是知识，哪怕只留个印象、有一点触动就挺好的。</p>
+  <p>———</p>
+  <p>微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-08-05</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-05/%E6%97%A5%E6%9C%AC%E5%AE%AA%E6%B3%95%E4%B8%8E%E6%97%A5%E6%9C%AC%E4%BA%BA-%E5%AE%AA%E6%B3%95%E6%98%AF%E5%A6%82%E4%BD%95%E4%BF%83%E8%BF%9B%E6%97%A5%E6%9C%AC%E4%BA%BA%E6%8B%A5%E6%9C%89%E4%BB%B7%E5%80%BC%E5%92%8C%E5%B0%8A%E4%B8%A5%E7%9A%84/">
+          日本宪法与日本人：宪法是如何促进日本人拥有价值和尊严的
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-04</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-04/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91004-%E7%BD%97%E6%96%B0%E8%B0%88-%E4%BB%8E%E5%A4%A7%E9%83%BD%E5%88%B0%E4%B8%8A%E9%83%BD-%E6%88%91%E6%83%B3%E6%8A%8A%E7%86%9F%E6%82%89%E5%8F%98%E5%BE%97%E9%99%8C%E7%94%9F/">
+          燕声视频004 | 罗新谈《从大都到上都》： “我想把熟悉变得陌生”
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-03</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-03/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91003-%E7%BD%97%E6%96%B0%E8%B0%88%E5%85%AC%E5%85%B1%E8%A1%A8%E8%BE%BE-%E9%9D%A2%E5%90%91%E5%85%AC%E4%BC%97%E5%8F%91%E8%A8%80%E6%98%AF%E6%88%91%E9%87%8A%E6%94%BE%E5%8E%8B%E5%8A%9B%E7%9A%84%E6%96%B9%E5%BC%8F/">
+          燕声视频003 | 罗新谈公共表达： “面向公众发言是我释放压力的方式”
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-03</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-03/%E6%9D%8E%E7%AD%A0-%E6%9C%B1%E5%85%83%E7%92%8B%E7%9A%84%E5%90%8E%E4%BB%A3%E6%B4%BB%E6%88%90%E4%BA%86%E7%8C%AA-%E8%BF%99%E4%B8%8E%E7%9A%87%E6%9D%83%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%9C%89%E5%85%B3%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+          李筠：朱元璋的后代活成了猪，这与皇权的设计有关丨燕京访谈
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-08-03/%E4%BD%BF%E7%94%A8%E8%B0%B7%E6%AD%8C%E8%A1%A8%E6%A0%BC%E8%BF%9B%E8%A1%8C%E6%94%B6%E6%8D%AE%E6%94%B6%E9%9B%86%E5%92%8C%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E7%9A%84%E6%96%B9%E6%B3%95-%E4%BB%A5%E4%B8%AD%E5%9B%BD%E7%9A%84%E7%A9%BA%E5%86%9B%E5%9F%BA%E5%9C%B0%E4%B8%BA%E4%BE%8B-iYouPort/">
+            前一篇：使用谷歌表格进行收据收集和开源调查的方法：以中国的空军基地为例 - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-08-04/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91004-%E7%BD%97%E6%96%B0%E8%B0%88-%E4%BB%8E%E5%A4%A7%E9%83%BD%E5%88%B0%E4%B8%8A%E9%83%BD-%E6%88%91%E6%83%B3%E6%8A%8A%E7%86%9F%E6%82%89%E5%8F%98%E5%BE%97%E9%99%8C%E7%94%9F/">
+            後一篇：燕声视频004 | 罗新谈《从大都到上都》： “我想把熟悉变得陌生”
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-08-03/%E4%BD%BF%E7%94%A8%E8%B0%B7%E6%AD%8C%E8%A1%A8%E6%A0%BC%E8%BF%9B%E8%A1%8C%E6%94%B6%E6%8D%AE%E6%94%B6%E9%9B%86%E5%92%8C%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E7%9A%84%E6%96%B9%E6%B3%95-%E4%BB%A5%E4%B8%AD%E5%9B%BD%E7%9A%84%E7%A9%BA%E5%86%9B%E5%9F%BA%E5%9C%B0%E4%B8%BA%E4%BE%8B-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-08-04/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91004-%E7%BD%97%E6%96%B0%E8%B0%88-%E4%BB%8E%E5%A4%A7%E9%83%BD%E5%88%B0%E4%B8%8A%E9%83%BD-%E6%88%91%E6%83%B3%E6%8A%8A%E7%86%9F%E6%82%89%E5%8F%98%E5%BE%97%E9%99%8C%E7%94%9F/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-08-04/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91004-%E7%BD%97%E6%96%B0%E8%B0%88-%E4%BB%8E%E5%A4%A7%E9%83%BD%E5%88%B0%E4%B8%8A%E9%83%BD-%E6%88%91%E6%83%B3%E6%8A%8A%E7%86%9F%E6%82%89%E5%8F%98%E5%BE%97%E9%99%8C%E7%94%9F/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-08-03/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91003-%E7%BD%97%E6%96%B0%E8%B0%88%E5%85%AC%E5%85%B1%E8%A1%A8%E8%BE%BE-%E9%9D%A2%E5%90%91%E5%85%AC%E4%BC%97%E5%8F%91%E8%A8%80%E6%98%AF%E6%88%91%E9%87%8A%E6%94%BE%E5%8E%8B%E5%8A%9B%E7%9A%84%E6%96%B9%E5%BC%8F/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-08-03/%E4%BD%BF%E7%94%A8%E8%B0%B7%E6%AD%8C%E8%A1%A8%E6%A0%BC%E8%BF%9B%E8%A1%8C%E6%94%B6%E6%8D%AE%E6%94%B6%E9%9B%86%E5%92%8C%E5%BC%80%E6%BA%90%E8%B0%83%E6%9F%A5%E7%9A%84%E6%96%B9%E6%B3%95-%E4%BB%A5%E4%B8%AD%E5%9B%BD%E7%9A%84%E7%A9%BA%E5%86%9B%E5%9F%BA%E5%9C%B0%E4%B8%BA%E4%BE%8B-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-08-04/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91004-%E7%BD%97%E6%96%B0%E8%B0%88-%E4%BB%8E%E5%A4%A7%E9%83%BD%E5%88%B0%E4%B8%8A%E9%83%BD-%E6%88%91%E6%83%B3%E6%8A%8A%E7%86%9F%E6%82%89%E5%8F%98%E5%BE%97%E9%99%8C%E7%94%9F/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-08-04/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91004-%E7%BD%97%E6%96%B0%E8%B0%88-%E4%BB%8E%E5%A4%A7%E9%83%BD%E5%88%B0%E4%B8%8A%E9%83%BD-%E6%88%91%E6%83%B3%E6%8A%8A%E7%86%9F%E6%82%89%E5%8F%98%E5%BE%97%E9%99%8C%E7%94%9F/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-08-03/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91003-%E7%BD%97%E6%96%B0%E8%B0%88%E5%85%AC%E5%85%B1%E8%A1%A8%E8%BE%BE-%E9%9D%A2%E5%90%91%E5%85%AC%E4%BC%97%E5%8F%91%E8%A8%80%E6%98%AF%E6%88%91%E9%87%8A%E6%94%BE%E5%8E%8B%E5%8A%9B%E7%9A%84%E6%96%B9%E5%BC%8F/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

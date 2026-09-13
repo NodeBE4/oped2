@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>‘What Kind of Wish Is This?’ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+‘What Kind of Wish Is This?’
+——
+" />
+    <meta property="og:description" content="
+‘What Kind of Wish Is This?’
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="‘What Kind of Wish Is This?’" />
+    <meta property="twitter:title" content="‘What Kind of Wish Is This?’" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fnotes-chinafile%2Fwhat-kind-of-wish" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/notes-chinafile/what-kind-of-wish" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/notes-chinafile/what-kind-of-wish&text=‘What Kind of Wish Is This?’&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/notes-chinafile/what-kind-of-wish&title=‘What Kind of Wish Is This?’" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/notes-chinafile/what-kind-of-wish&title=‘What Kind of Wish Is This?’" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=‘What Kind of Wish Is This?’&body=
+‘What Kind of Wish Is This?’
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/notes-chinafile/what-kind-of-wish" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/notes-chinafile/what-kind-of-wish&title=‘What Kind of Wish Is This?’&caption=
+‘What Kind of Wish Is This?’
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=‘What Kind of Wish Is This?’&url=https://www.chinafile.com/reporting-opinion/notes-chinafile/what-kind-of-wish" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>‘What Kind of Wish Is This?’</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-06-23
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Angeli Datt</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/notes-chinafile/what-kind-of-wish" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1687540080000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/notes-chinafile/what-kind-of-wish">‘What Kind of Wish Is This?’</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-8d9eca3282ffaa97d09f67c896e17d98">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54836_sm.jpg" title="‘What kind of Wish is This?’" class="colorbox" data-colorbox-gallery="gallery-node-54836-WDI7tJby1kw" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54836_sm.jpg?itok=0-_gYxCs" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+William West—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Writer Murong Xuecun poses for a photo in Melbourne, Australia, October 6, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p>The writer, Hao Qun, who publishes under the pen name, Murong Xuecun, has spent the past two decades exploring Chinese society through his literature. After studying at Beijing’s prestigious China University of Politics and Law, he worked in the private sector. He <a href="https://publishingperspectives.com/2012/02/chinas-murong-xuecun-balancing-between-censorship-and-dissent/" target="_blank" rel="nofollow">began</a> his writing career in 2002 online, writing a series on gambling, sex, and drugs in China, which he later published as his debut novel <em>Leave Me Alone: A Novel of Chengdu, </em>the English edition of which was <a href="https://web.archive.org/web/20110724150555/http:/www.manasianliteraryprize.org/news/2010/5/19/2008-prize.html" target="_blank" rel="nofollow">longlisted</a> for Man Asian Literary Prize in 2008. In 2010, he won China’s People’s Literature Prize, which is presented by the state-affiliated China Writer’s Association, for his non-fiction book <em><span><a href="https://m.99csw.com/book/11067/index.html" target="_blank" rel="nofollow">The Missing Ingredient</a></span></em><span>. His <a href="https://www.nytimes.com/2011/11/06/world/asia/murong-xuecuns-acceptance-speech-for-the-2010-peoples-literature-prize.html" target="_blank" rel="nofollow">acceptance speech</a> was</span> a critique of censorship in the publishing industry and of his own acquiescence to it, and when he was unable to deliver it at the prize ceremony, he delivered it instead at the Foreign Correspondents Club in Hong Kong. In the years that followed, he faced mounting obstacles to speaking his mind in China. His Weibo account with 8.5 million followers was deleted in 2013. But he <a href="https://www.nytimes.com/topic/person/murong-xuecun" target="_blank" rel="nofollow">wrote frequently for<em> The New York Times</em></a>, on the limits on expression in China. In 2020, Murong traveled to Wuhan and documented the lives of eight ordinary people at the epicenter of the COVID-19 pandemic. He left China in order to safely publish the resulting book, <a href="https://thenewpress.com/books/deadly-quiet-city" target="_blank" rel="nofollow"><em>Deadly Quiet City</em></a>, which was released earlier this year in the United States. He now lives in Australia.</p>
+      <p>Angeli Datt spoke with Murong at the offices of the writers’ advocacy organization, PEN America, in New York City.</p>
+      <p><strong>Angeli Datt: Tell me about your decision to travel to Wuhan at the height of the pandemic. Did you think that going to Wuhan would lead to exile? Were you scared to go, of both the virus and of the police?</strong></p>
+      <p><strong>Murong Xuecun:</strong> Since Xi Jinping came to power, 40 of my friends have been arrested. They are lawyers, professors, and journalists. They have become enemies of the state because they have said or done something the government doesn’t like. Some of them have been released, but many are still in prison. I’ve been a dissident writer for years and have been harassed, threatened, and put under house arrest by the secret police. When Clive [Hamilton, his editor] called me on April 3, for the previous two months I had been like all terrified Chinese—I almost never left my house. One day, I finally went outside and was frightened by what I saw; there was not a single person or car on the streets of Beijing. The whole city of 17 million people was like a ghost town. I couldn’t help wondering what kind of life the people of Wuhan were living at the time. This was when Clive called me. His suggestion that I should be in Wuhan struck a chord with me because I had always wanted to be a writer on the ground, witnessing a disaster firsthand. So I decided I must go. At the time, my biggest concern was not the virus but our government. Several citizen journalists had entered the city before me, like <a href="https://www.bbc.com/news/world-asia-china-65454824" target="_blank" rel="nofollow">Fang Bin</a>, <a href="https://www.wsj.com/articles/chinese-citizen-journalist-who-documented-covid-19-in-wuhan-resurfaces-after-600-days-11633077956" target="_blank" rel="nofollow">Chen Qiushi</a>, and <a href="https://www.bbc.com/news/world-asia-china-52392762" target="_blank" rel="nofollow">Li Zehua</a>, and they had reported on the tragic situation in Wuhan and criticized the government’s policies. It didn’t take long for them to disappear, one by one. So I knew that I might be disappeared or arrested by police like they had been. I was afraid the entire time I was there, always thinking I was being watched, followed, or bugged. Every time I left my room, I left a small piece of paper in the doorway so if anyone entered my room I would know.</p>
+      <p><strong>The stories of the eight people you profile in your book—a doctor, a cleaner, a motorcycle taxi driver, a teacher, a citizen journalist, a writer, an entrepreneur, and a mother—show a snapshot of life in Wuhan for ordinary people during the pandemic. What do these eight stories tell us about China today under Xi Jinping?</strong></p>
+      <p>What happened to them was what happened to all 1.3 billion Chinese people during the pandemic. Not long after Wuhan was locked down, so was Shanghai, Xi’an, even Beijing. So many people across China suffered what the people of Wuhan suffered. I always think about Jin Feng, the cleaner. At the end of my interview with her, I asked what her plans were for the future. She replied that her only hope was to get a disability certificate for her son Xia Lei so he would be able to survive after she dies. This being her only hope tells us a lot of things about China today. What kind of wish is this?</p>
+      <p><strong>What is moving about the book is that sometimes when you talk about 1.3 billion people, each individual is an abstract. But a reader can really get to know these eight characters and witness what they are experiencing, their emotions and anxiety, fear and anger, and sadness, and the devastation of the pandemic. Three years later, we are not as afraid of COVID anymore, but the virus is still circulating.</strong></p>
+      <p>In China, the censorship system is so extensive, with people dedicated to working to block terms like “virus,” “coronavirus,” “epidemic prevention policies,” “zero-COVID policy.” These terms are all gone online. People don’t dare discuss these issues now. When I look online, it seems like many people have forgotten about the painful past three years. People are talking about food, the movies, holidays, and travel, but what about all the people who died not that long ago? A friend of mine was a successful businessman in Shenzhen. During the painful three years, he lost almost everything financially, and his mother and an in-law died. He is so angry, but he won’t say anything [critical of the government]. He keeps silent. When I asked him why, he said, “I still need to live. I have a wife, I have a child, my father is elderly and ill, what should I do?” He knows if he stands up to raise his voice, the government will “deal” with him, and his wife and kid will face repercussions. People have lost so much but cannot say a word against the CCP. It’s worse than being a prisoner.</p>
+      <p><strong>The story of Dr. Lin Qingchun evoked memories of Li Wenliang</strong><strong>, the doctor who raised the alarm on COVID before dying of it. How often did Li</strong><strong>’</strong><strong>s story come up while talking to the residents of Wuhan?</strong></p>
+      <p>Some of the interviewees mentioned Dr. Li Wenliang. Like Dr. Li Qingchun, Dr. Li Wenliang is just a normal person, a normal doctor. But to be a normal person in an abnormal world makes him a hero. Like <a href="https://www.theguardian.com/world/2021/nov/20/un-urges-china-to-free-seriously-ill-journalist-jailed-over-wuhan-covid-reporting" target="_blank" rel="nofollow">Zhang Zhan</a>, a lawyer turned citizen journalist who was detained for reporting from Wuhan about the pandemic, at the time she was maybe the most normal person in Wuhan, but China was so abnormal. Zhang Zhan was reporting the truth from the ground in Wuhan, and now some people in China will realize that she was right even though still very few will openly admit this.</p>
+      <p><strong>Tell me about the process of writing the book.</strong></p>
+      <p>After I had been in Wuhan for one month, I received a mysterious phone call from a person with a Beijing accent who asked, “What are you doing in Wuhan? You should be very careful, you don’t want to be infected with the virus.” It’s hard to describe how I felt at the time. It was an ordinary conversation, but it deeply scared me. The secret police were telling me, “Don’t play dumb. We know where you are, and we know what you are doing.” I worked intensely for a few more days then fled Wuhan. I didn’t go home to Beijing because I was afraid that the police would prevent me from finishing the book. I went to hide in the mountains in Sichuan for eight months to write.</p>
+      <p>I have some beautiful memories of that time. I wanted to live in a temple, but could not due to COVID restrictions. However, it would open daily for tea. So, I went there every day with my laptop and sat under a flowering tree and would order a cup of green tea and write, surrounded by monks and the mountains in the background. Different secret police called me several times while I was in Sichuan, asking me what I was doing. I told them I was writing a science fiction novel, sometimes telling them fake stories from my “science fiction” novel. In some ways, it felt true at the time that I was writing science fiction when writing about Wuhan during the pandemic.</p>
+      <p>I guess writers like me must learn to deal with the fear, and not let the fear control me and stop me from writing. That is what I learned while writing this book. The secret police could come take me away at any time, but I still needed to write. Sometimes we need to unsee the rest of the world and just focus on writing. Maybe they will come in the next minute, but this minute I need to focus on the book.</p>
+      <p><strong>Do you think people in China will ever be able to read your book?</strong></p>
+      <p>Some really want to read it, but it is very difficult to publish a Chinese version of this book. Before, we could try to publish in Taiwan, but that is even more difficult now since the arrest of Fu Cha [editor in chief of Gusa Publishing <a href="https://pen.org/press-release/pen-america-calls-on-china-to-release-taiwan-based-publisher-li-yanhe/" target="_blank" rel="nofollow">arrested</a> in China this past spring]. Now, other publishers in Taiwan may be afraid that publishing a book like this which is critical of the Chinese government may cause them trouble.</p>
+      <p><strong>Do you think the White Paper protests resulted from a buildup of anger over the lockdowns, but since COVID measures have been lifted, people are just going back to ordinary life?</strong></p>
+      <p>Shortly before the White Paper revolution, I saw this video online about a woman surnamed Zhao who was working in a low paying job in Beijing. One day, Ms. Zhao posted some comments in WeChat that were critical of the government’s COVID policies, and the police called and warned her over her posts. Normally people like Ms. Zhao are very obedient and frightened of the police. But the video surprised me. Ms. Zhao was very calm, and then she told the police, “You all have salaries, you all get paid! But what about us? We don’t have money and my father is ill, my children don’t have food. How can I make a living? You get paid!” She was so angry, it made me realize that Ms. Zhao is a person who has nothing to lose. Who are the people who attended the white paper revolution? Many of them are people who have nothing to lose. Xi Jinping’s policies have created this population of people. People with nothing to lose are brave and will take to the streets and fight back.</p>
+      <p><strong>How did you manage to leave China? You were already a very prominent writer, and it</strong><strong>’</strong><strong>s astonishing that you were able to leave.</strong></p>
+      <p>In August 2021, <em>Deadly Quiet City</em> was about to be released. Hardie Grant, the publisher, urged me to leave. They were worried about what would happen to me if it was published while I was still inside China, and they called me every day urging me to leave. I wasn’t sure if the government would allow me to cross the border. I packed only one suitcase, containing two [pairs of] trousers, some jackets, two pairs of shoes, and some books. I went to Beijing International Airport, but officials didn’t ask many questions. I was so relieved when I landed in Hong Kong. It could have been a system mistake or human error, I don’t know, but I was so relieved. About six months later, a friend in Beijing was invited for tea [a euphemism for informal police questioning] with secret police, who asked him, “What happened? How was a person like Murong Xuecun allowed to leave?” Later, on New Year’s Day 2023, I received a phone call from a friend who called to warn me not to return to China because the secret police had interrogated him about our relationship and searched his home.</p>
+      <p><strong>Since the book has been published, have you received any threats? Do you feel safe in Australia?</strong></p>
+      <p>I used to have a Baidu page, about my life and books, but that page was deleted after the book was released. If you search my name on Baidu, the first website is a smear article attacking me. Many “little pinks” [online nationalists] have cursed me on Twitter as a “traitor.” I feel much safer in Australia. But my friends have warned me that when I travel I shouldn’t fly through certain countries and should be very careful.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2023-07-20</time>
+        <a href="https://nodebe4.github.io/oped2/2023-07-20/The-War-in-Ukraine-and-China-Russia-Relations/">
+          The War in Ukraine and China-Russia Relations
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-07-10</time>
+        <a href="https://nodebe4.github.io/oped2/2023-07-10/For-Beijing,-Putting-People-Back-to-Work-May-Prove/">
+          For Beijing, Putting People Back to Work May Prove a Tough Job
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-06-16</time>
+        <a href="https://nodebe4.github.io/oped2/2023-06-16/What-s-at-Stake-as-Antony-Blinken-Heads-to-Beijing/">
+          What’s at Stake as Antony Blinken Heads to Beijing
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-06-16</time>
+        <a href="https://nodebe4.github.io/oped2/2023-06-16/The-Stakes-of-Antony-Blinken-s-Visit-to-Beijing/">
+          The Stakes of Antony Blinken’s Visit to Beijing
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-06-16/What-s-at-Stake-as-Antony-Blinken-Heads-to-Beijing/">
+            前一篇：What’s at Stake as Antony Blinken Heads to Beijing
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-07-01/2023-%E5%B9%B4-6-%E6%9C%88%E6%BE%B3%E9%96%80%E4%B8%89%E5%A4%A9%E5%85%A9%E5%A4%9C%E5%B0%8F%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+            後一篇：2023 年 6 月澳門三天兩夜小旅遊心得
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-06-16/What-s-at-Stake-as-Antony-Blinken-Heads-to-Beijing/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-07-01/2023-%E5%B9%B4-6-%E6%9C%88%E6%BE%B3%E9%96%80%E4%B8%89%E5%A4%A9%E5%85%A9%E5%A4%9C%E5%B0%8F%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-07-10/For-Beijing,-Putting-People-Back-to-Work-May-Prove/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-06-16/What-s-at-Stake-as-Antony-Blinken-Heads-to-Beijing/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-06-16/What-s-at-Stake-as-Antony-Blinken-Heads-to-Beijing/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-07-01/2023-%E5%B9%B4-6-%E6%9C%88%E6%BE%B3%E9%96%80%E4%B8%89%E5%A4%A9%E5%85%A9%E5%A4%9C%E5%B0%8F%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-07-10/For-Beijing,-Putting-People-Back-to-Work-May-Prove/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-06-16/What-s-at-Stake-as-Antony-Blinken-Heads-to-Beijing/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
