@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Pelosi in Taiwan – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Pelosi in Taiwan
+——
+" />
+    <meta property="og:description" content="
+Pelosi in Taiwan
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Pelosi in Taiwan" />
+    <meta property="twitter:title" content="Pelosi in Taiwan" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fpelosi-taiwan" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/pelosi-taiwan" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/pelosi-taiwan&text=Pelosi in Taiwan&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/pelosi-taiwan&title=Pelosi in Taiwan" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/pelosi-taiwan&title=Pelosi in Taiwan" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Pelosi in Taiwan&body=
+Pelosi in Taiwan
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/pelosi-taiwan" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/pelosi-taiwan&title=Pelosi in Taiwan&caption=
+Pelosi in Taiwan
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Pelosi in Taiwan&url=https://www.chinafile.com/conversation/pelosi-taiwan" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Pelosi in Taiwan</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-08-02
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Brian Hioe, Lev Nachman &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/pelosi-taiwan" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1659459480000-->
+<p><a href="https://www.chinafile.com/conversation/pelosi-taiwan">Pelosi in Taiwan</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-d101e17bea78c734f5a3ca8f64722e6a">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54151_sm.jpg" title="Pelosi in Taiwan" class="colorbox" data-colorbox-gallery="gallery-node-54151-67gCKt7WtjE" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54151_sm.jpg?itok=sJjNQQos" width="1500" height="1000" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Annabelle Chih—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A television broadcasts news about Speaker of the U.S. House of Representatives Nancy Pelosi at a restaurant in Taipei, Taiwan, August 2, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">On the evening of August 2, Nancy Pelosi, Speaker of the U.S. House of Representatives, landed in Taipei to begin an official visit. The trip, the first by a U.S. official of comparable rank in <a href="https://www.npr.org/2022/08/02/1114852740/pelosi-is-about-to-land-in-taiwan-heres-why-thats-a-big-deal" target="_blank">25 years</a>, came amid debate about how Beijing would likely respond and what it would mean for Taiwan’s future, its relationship with Beijing, and the U.S. role in both. We asked contributors for thoughts on the trip’s significance ahead of Pelosi’s arrival. —<em>The Editors</em></p>
+      <p align="center"></p>
+      <blockquote class="twitter-tweet" data-width="350" data-height="1000">
+        <p align="center" lang="en" dir="ltr">Our visit reiterates that America stands with Taiwan: a robust, vibrant democracy and our important partner in the Indo-Pacific. <a href="https://t.co/2sSRJXN6ST">pic.twitter.com/2sSRJXN6ST</a></p>
+— Nancy Pelosi (@SpeakerPelosi) <a href="https://twitter.com/SpeakerPelosi/status/1554496902812602370?ref_src=twsrc%5Etfw">August 2, 2022</a>      </blockquote>
+      <p></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9936" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/brian-hioe"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/hioe_sm2.png?itok=VhEQ56QS" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="brian-hioe"><a href="https://www.chinafile.com/contributors/brian-hioe" title="Brian Hioe">Brian Hioe</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The prospect of a Pelosi visit to Taiwan became controversial immediately after news that it might take place broke through a <em><a href="https://www.ft.com/content/09669099-1565-4723-86c9-84e0ca465825" target="_blank" rel="nofollow">Financial Times</a></em> scoop. It’s likely, though, that there would not have been such controversy if the trip had simply taken place and Pelosi’s presence were only announced after she had arrived in Taiwan, minimizing the window for China to react.</p>
+        <p>Visits to Taiwan by U.S. elected officials have generally taken place in a low-key manner under the <a href="https://focustaiwan.tw/politics/202202280014" target="_blank" rel="nofollow">Biden administration</a>, rather than with the <a href="https://thediplomat.com/2022/03/taiwan-welcomes-pompeo-while-watching-ukraine/" target="_blank" rel="nofollow">grandstanding</a> characteristic of the <a href="https://www.reuters.com/article/us-taiwan-usa-diplomacy-factbox/factbox-recent-taiwan-visits-by-top-u-s-officials-idUSKBN29C16B" target="_blank" rel="nofollow">Trump administration</a>.</p>
+        <p>Pelosi may intend the visit as a <a href="https://www.abc.net.au/news/2022-08-02/nancy-pelosi-in-taiwan-could-upset-china-xi-jinping/101288156" target="_blank" rel="nofollow">career capstone</a>. Or it is possible her motivations involve the upcoming U.S. midterm elections; showcasing strong relations with Taiwan may be aimed at making the Democrats appear tough on China.</p>
+        <p>Openly visible <a href="https://www.nytimes.com/2022/07/31/world/asia/pelosi-taiwan-china.html" target="_blank" rel="nofollow">splits</a> between Joe Biden and Pelosi over the visit perhaps illustrate that the Democrats do not have consistent messaging on Taiwan. But since news of the visit broke, Beijing’s <a href="https://www.politico.com/news/2022/08/01/pelosi-taiwan-xi-biden-china-00048940" target="_blank" rel="nofollow">warnings</a> of the possible consequences became so heated that it is probably now obligated to take a strong response, for fear of losing face or appearing weak. This illustrates one way in which rapidly shifting international commentary on Taiwan can, in fact, have tangible consequences. Professed concern that the U.S. also not appear weak has also become one of the main arguments from U.S. politicians, <a href="https://thehill.com/homenews/3577212-gop-lawmakers-are-cheering-on-pelosi-when-it-comes-to-taiwan/" target="_blank" rel="nofollow">often Republicans</a>, as to why such a visit <em>should</em> take place.</p>
+        <p>Either way, there have already been some direct responses from China, including both economic and military threats. Shortly before the visit, China <a href="https://www.bloomberg.com/news/articles/2022-08-02/china-slaps-export-ban-on-100-taiwan-brands-before-pelosi-visit?srnd=economics-vp" target="_blank" rel="nofollow">announced</a> bans on more than 100 food and agricultural <a href="https://udn.com/news/story/7333/6505151" target="_blank" rel="nofollow">products</a> from Taiwan, continuing efforts to economically pressure Taiwan previously seen with import bans on <a href="https://newbloommag.net/2022/06/16/grouper-dispute-tw-china/" target="_blank" rel="nofollow">fish</a> or <a href="https://newbloommag.net/2021/09/27/custard-wax-apple-ban/" target="_blank" rel="nofollow">fruit</a>. Likewise, Chinese naval vessels were <a href="https://focustaiwan.tw/cross-strait/202208020010" target="_blank" rel="nofollow">spotted</a> off the coast of Taiwan’s Orchid (Lanyu) Island, an increasingly common move in China’s repertoire of actions used to militarily intimidate Taiwan, and almost all flights in the coastal province of Fujian–the nearest Chinese province to Taiwan–were <a href="https://www.cna.com.tw/news/acn/202208020095.aspx" target="_blank" rel="nofollow">canceled</a>. <span class="None"><span>Air incursions by </span></span><span class="Hyperlink2"><span><a href="https://twitter.com/MoNDefense/status/1554512799497617408" rel="nofollow"><span>21 Chinese warplanes</span></a></span></span><span class="None"><span> took place the day of Pelosi’s landing. After Pelosi touched down, China announced </span></span><span class="Hyperlink2"><span><a href="https://twitter.com/Nrg8000/status/1554493353789882368" rel="nofollow"><span>military drilling around Taiwan,</span></a></span></span><span class="None"><span> in areas that crossed into Taiwan’s territorial waters. </span></span>For its part, the Taiwanese military has <a href="https://www.cna.com.tw/news/aipl/202208020024.aspx" target="_blank" rel="nofollow">stated</a> that it will step up military readiness in the next three days and <a href="https://focustaiwan.tw/politics/202208010016" target="_blank" rel="nofollow">conduct</a> live-fire drills next week. U.S. naval vessel military aircraft activity has also been <a href="https://www.reuters.com/world/asia-pacific/us-navy-deploys-four-warships-east-taiwan-pelosi-heads-taipei-2022-08-02/" target="_blank" rel="nofollow">interpreted</a> as in response to China’s actions.</p>
+        <p>It remains to be seen whether the Pelosi visit leads to a pattern of tit-for-tat escalation between the U.S., China, and Taiwan. Chinese leader Xi Jinping has much to lose from premature action, particularly given that he is likely to <a href="https://thediplomat.com/2022/07/why-a-xi-jinping-third-term-looks-secure/" target="_blank" rel="nofollow">obtain</a> an unprecedented third term at the upcoming National People’s Congress later this year, and may require stability for this to take place–unless Xi’s position is precarious and risky military action <a href="https://frozengarlic.wordpress.com/2022/07/31/pelosi-visit-what-is-china-thinking/" target="_blank" rel="nofollow">is a gambit</a> aimed at consolidating his position.</p>
+        <p>Either way, as with other incidents in which Taiwan was militarily threatened by China, this did not lead to panic in the streets. Despite much of the world trumpeting about the dangers of the visit, and that it would be Taiwan directly in the line of fire from military reprisals from China, there was little discussion in policy circles of what the viewpoint of Taiwanese were on whether a visit was advisable or inadvisable. Nevertheless, news of Pelosi’s visit broke around the time of <a href="https://thediplomat.com/2022/07/biden-xi-hold-talks-amid-tensions-over-taiwan-tariffs/" target="_blank" rel="nofollow">talks</a> between Biden and Xi, and whenever such talks take place between the U.S. and China there is concern from Taiwan that its fate could be negotiated away as part of a deal between the two superpowers.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9946" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/lev-nachman"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/nachman_sm.png?itok=vIemJTFN" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="lev-nachman"><a href="https://www.chinafile.com/contributors/lev-nachman" title="Lev Nachman">Lev Nachman</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">On paper, Pelosi’s trip should not have been a big deal. Even though someone of her rank has not <a href="https://www.npr.org/2022/08/02/1114852740/pelosi-is-about-to-land-in-taiwan-heres-why-thats-a-big-deal" target="_blank" rel="nofollow">visited</a> Taiwan since the 1990s, U.S. delegations of elected senators have become routine. But when the People’s Republic of China (PRC) chose to take an existential attitude towards this trip, the meaning of her travel changed, and it became something much more than perhaps either side originally bargained for.</p>
+        <p>U.S.-Taiwan relations today are at an all-time high, with clear bipartisan support from Biden, congress, and civil society. At the same time, U.S.-China relations are at an all-time low. The <a href="https://www.pbs.org/newshour/nation/talks-between-biden-and-chinas-xi-raise-hope-for-better-ties-but-strains-remain" target="_blank" rel="nofollow">hope</a> for many is that Biden and Xi can find ways to rekindle the relationship in meaningful ways to make sure that the two powers can return to having a productive relationship.</p>
+        <p>Pelosi in the end chose to prioritize improving an already very strong U.S.-Taiwan relationship, knowing that China might use this as a moment to further resist rebuilding U.S.-China relations and increase threats towards Taiwan. Whether or not she was right to go, Taiwan will likely face retaliations from the PRC in the form of heightened <a href="https://www.dw.com/en/china-announces-military-drills-in-taiwan-strait/a-62656700" target="_blank" rel="nofollow">military threats</a>, <a href="https://www.bloomberg.com/news/articles/2022-08-02/china-slaps-export-ban-on-100-taiwan-brands-before-pelosi-visit?srnd=economics-vp" target="_blank" rel="nofollow">economic coercion</a>, and political punishment. Finding ways to mitigate these retaliatory measures without further escalating tension between the U.S. and China is the difficult balancing act the U.S., Taiwan, and its allies must find going forward.</p>
+        <p>While many want to paint this trip in black and white terms as “good” or “bad,” it is far more complex. Indeed, it is good for Pelosi to visit Taiwan and demonstrate the U.S.’s support in a way that is not dictated by China. But the U.S.-China relationship is critical, especially now, and her trip may further set back relations. This has become a major victory for U.S.-Taiwan relations, but perhaps it was not a victory that was needed at this moment. It also is a victory that comes with the cost of further strain in the Taiwan Strait and between the U.S. and China.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9951" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/margaret-lewis"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/lewis_sm.jpg?itok=9P9UPmk6" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="margaret-lewis"><a href="https://www.chinafile.com/contributors/margaret-lewis" title="Margaret Lewis">Margaret Lewis</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Writing this while inundated with headlines of Nancy Pelosi’s brief visit to Taiwan and a flood of unhelpful takes by many people who have never even set foot there makes one thing clear: If there is any hope of navigating what promises to be at best challenging relations among Taiwan, China, and the U.S., we need a helluva lot more people who have spent serious time in at least two and preferably all three countries.</p>
+        <p>I’m not advocating that Nancy Pelosi should move to Taiwan, and I don’t see her ever getting a visa to China. Nor am I saying that the experience of living in another country for some time gives magical insights into the needs and desires of the people who truly call that place home.</p>
+        <p>Having returned to the U.S. after two years in Taiwan, what concerns me is, first, despite an increasing number of Taiwan-based journalists providing on-the-ground perspectives, voices expressing what people in Taiwan think are still muted in the U.S. We need more Americans to read pieces like <a href="https://ampleroad.substack.com/p/on-pelosis-would-be-visit-to-taiwan" target="_blank" rel="nofollow">this one</a> by <a href="https://substack.com/profile/49521433-albert-wu" target="_blank" rel="nofollow">Albert Wu</a> and <a href="https://www.michellekuo.net/" target="_blank" rel="nofollow">Michelle Kuo</a>.</p>
+        <p>Second, I worry that Taiwan’s role is often relegated to passive object in a center-stage story of U.S.-China relations. The U.S. needs to cultivate a deep bench of Taiwan expertise that can bring texture to policy debates. Strengthening the already robust <a href="https://www.fulbright.org.tw/" target="_blank" rel="nofollow">Taiwan Fulbright Program</a>, increasing expertise across all three branches of the U.S. government through the proposed <a href="https://talkingtaiwan.com/why-you-should-care-about-the-taiwan-fellowship-act-a-discussion-with-richard-pearson-and-shelley-rigger-ep-189/" target="_blank" rel="nofollow">Taiwan Fellowship Program</a>, and supporting Taiwan studies programs at more than the current handful of U.S. universities are all concrete steps to change this.</p>
+        <p>At the same time, we need to get American scholars and students back into China. Hopefully China will start to relax tight visa restrictions after the 20th Party Congress. On the U.S. side, there are certainly reasons to be wary even if borders open, but the blunt <a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/china-travel-advisory.html" target="_blank" rel="nofollow">State Department warning</a> does not address how risks vary among different people or ways to mitigate those risks.</p>
+        <p>Being a student in China during the Third Taiwan Strait crisis in 1995-1996 impressed upon me the depth of emotion connected to Taiwan and gave me an opportunity to probe, and push back on, those views. How many American students are in China today having those conversations?</p>
+        <p>And how many Chinese students are in the U.S. today having those conversations? The U.S. needs not only to make visas available but also to make the country a welcoming place for people of Chinese, and broader Asian, heritage.</p>
+        <p>Investing in deepening human connections among Taiwan, China, and the U.S. will not avoid all conflicts. But it can lessen the chances that simmering tensions erupt into full-blown crises. Right now as I’m toggling to refresh my browser for news updates from the other side of the world, avoiding full-blown crisis sounds pretty good.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9956" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/yu-hua-chen"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/yu-hua_chen.jpg?itok=R0rn_TOI" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="yu-hua-chen"><a href="https://www.chinafile.com/contributors/yu-hua-chen" title="Yu-Hua Chen">Yu-Hua Chen</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Some commentators <a href="https://www.washingtonpost.com/national-security/2022/07/23/biden-pelosi-taiwan-trip/" target="_blank" rel="nofollow">argue</a> that Taiwan, the U.S., and China are sliding into the Fourth Taiwan Strait Crisis. I beg to differ. First of all, it seems misguided to compare the U.S. Speaker of the House of Representatives Nancy Pelosi’s visit to Taiwan with the three past Taiwan Strait crises. The first two crises were a continuation of the Chinese Civil War, fought between the Chinese Communist Party and the Kuomintang on the Chinese mainland, and the third began with Taiwanese President Lee Teng-hui’s visit to Cornell University. None of the previous crises were initiated by the U.S.</p>
+        <p>Second, while Western media tends to depict the People’s Republic of China (PRC) government as saber-rattling, as of August 2, I tend to view China as exercising a degree of restraint on the issue. The news of Pelosi’s visit was <a href="https://www.ft.com/content/09669099-1565-4723-86c9-84e0ca465825" target="_blank" rel="nofollow">revealed</a> by the <em>Financial Times</em> on July 19, and it is hard to argue that the Chinese government has tried to escalate the issue into a diplomatic or military crisis in the past two weeks. Pelosi’s visit to Taiwan has not, in fact, dominated official Chinese news media like the events of the <a href="https://www.bc.edu/content/dam/bc1/schools/mcas/polisci/The%201995-96%20Taiwan%20Strait%20Confrontation%20Coercion,%20Credibility,%20and%20Use%20of%20Force.pdf" target="_blank" rel="nofollow">Third Taiwan Strait Crisis</a> or the <a href="http://www.xinhuanet.com/english/2021-05/08/c_139932614.htm" target="_blank" rel="nofollow">U.S.’s accidental bombing</a> of the Chinese embassy in Belgrade in the ’90s. Furthermore, although spokespersons of the Ministry of Foreign Affairs of China have <a href="https://www.fmprc.gov.cn/mfa_eng/xwfw_665399/s2510_665401/202207/t20220725_10727739.html" target="_blank" rel="nofollow">issued</a> <a href="https://www.fmprc.gov.cn/mfa_eng/xwfw_665399/s2510_665401/2511_665403/202208/t20220801_10731629.html" target="_blank" rel="nofollow">several</a> <a href="https://news.cgtn.com/news/2022-08-02/U-S-would-pay-a-price-for-undermining-China-s-sovereignty-interests-1caB18MoK5i/index.html" target="_blank" rel="nofollow">warnings</a> to the U.S. at press conferences, their rhetoric has followed typical propaganda regarding Taiwanese independence. The Chinese senior leadership at and above the Politburo level has not yet publicly talked about this issue. On the military front, we have not seen Chinese aircraft intrude into Taiwan’s airspace on as large a scale as in the past. China could have flexed its muscles much more to pressure Taiwan or the U.S., but it chose not to.</p>
+        <p>Certainly, this non-confrontational response from China does not mean that it will not retaliate against Taiwan militarily or diplomatically in the future. But the reaction may suggest that China is trying to send a political message to leaders in Washington or other countries that in terms of Pelosi’s visit, the Chinese government does not intend to resort to using force against the U.S. If there is any lesson to be drawn from the military history of the People’s Republic of China, it is that China is rarely interested in challenging the U.S. militarily. Targets of China’s use of force are primarily small countries on its periphery. Therefore, the likelihood that China will punish Taiwan after the visit is high, but in my view, the probability of a U.S.-Chinese military showdown is low.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9961" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/robert-daly"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/daly_robert.jpg?itok=dp7XBVLP" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="robert-daly"><a href="https://www.chinafile.com/contributors/robert-daly" title="Robert Daly">Robert Daly</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p>Several years after his wife died, I had lunch with a friend in a crab shack in Annapolis and noticed that he no longer wore his wedding band.  When I asked why, he said “If I wear the band, it sends a signal to society that I don’t quite intend, and if I take it off, that sends a different signal, which I also don’t intend, but my only options are to wear or not wear the ring.”</p>
+        <p>That’s the problem with enforced binary symbols: no nuance, no evolution, no explanations allowed.</p>
+        <p>The United States and China are now struggling with the results of the most successfully navigated binary in our diplomatic history. Both sides were already set on rapprochement when they wrote the Shanghai Communique in 1972. All they needed was a plausible rationalization for the Opening. China had forced a binary—we must choose either Beijing or Taipei—and we decided to take it, swallowing its inherent contradictions and lurking dishonesty for the sake of countering the Soviet Union.  To borrow a famous phrase from the USSR: China pretended we embraced the One China Principle and we pretended to respect the pretense, sort of.  This kept the peace and enabled the prosperity of Taiwan and China for almost 50 years.</p>
+        <p>It was an extraordinary record, but it couldn’t last.</p>
+        <p>In the wake of the Pelosi visit to Taiwan, America is claiming that its policy toward Taiwan hasn’t changed. This is disingenuous. The One China Policy cannot be reduced to mere technical recognition of Beijing over Taipei as the sole government of Mainland China because One China has also been a set of deeply ingrained practices that guided American diplomacy; it has been a genuine commitment to keeping up the pretense of the Shanghai Communique in the interest of peace. We abandoned that commitment several years ago and entered a period of drift.</p>
+        <p>China is disingenuous too. It is unwise for one country to force another to accept a proposition it doesn’t believe in, and then behave for half a century as if acceptance of the binary choice was sincere and eternal.</p>
+        <p>The deal of ’72 was made untenable, first, by the evolution of China, the U.S., and Taiwan itself and, second, by China’s assertion of prerogatives that it believes should accompany its growing power. China hopes the U.S. will have the wisdom to continue to wear the One China ring and behave like we mean it; American hawks want Washington to have the honesty to pull the damn thing off and throw it away.</p>
+        <p>The challenge now is to lower the temperature by adhering to past agreements as best we can while building a new foundation for U.S.-China relations based on current and emerging conditions. Even at the starting line, this will be nearly impossible. China will not want to compromise over Taiwan and the United States will not want to sanction any extension of CCP influence beyond China’s borders. </p>
+        <p>But the attempt must be made. Theocritus said, "The Greeks got into Troy by trying, my pretties; everything's done by trying."</p>
+        <p>Beijing and Washington aren’t even trying. They’re too busy escalating their rivalry in the Western Pacific and hoping, absurdly, that the other side won’t notice.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-08-04</time>
+        <a href="https://nodebe4.github.io/oped2/2022-08-04/For-Your-Weekend,-August-4,-2022/">
+          For Your Weekend, August 4, 2022
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-04</time>
+        <a href="https://nodebe4.github.io/oped2/2022-08-04/In-What-Purport-to-be-Lifestyle-Videos,-Uyghur-Inf/">
+          In What Purport to be Lifestyle Videos, Uyghur Influencers Promote Beijing’s Narrative on Their Homeland
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-28</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-28/For-Your-Weekend,-July-28,-2022/">
+          For Your Weekend, July 28, 2022
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-27</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-27/Confession-and-Reconciliation-in-the-Cultural-Revo/">
+          Confession and Reconciliation in the Cultural Revolution’s Aftermath
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-07-28/For-Your-Weekend,-July-28,-2022/">
+            前一篇：For Your Weekend, July 28, 2022
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-08-04/In-What-Purport-to-be-Lifestyle-Videos,-Uyghur-Inf/">
+            後一篇：In What Purport to be Lifestyle Videos, Uyghur Influencers Promote Beijing’s Narrative on Their Homeland
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-07-28/For-Your-Weekend,-July-28,-2022/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-08-04/In-What-Purport-to-be-Lifestyle-Videos,-Uyghur-Inf/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-08-04/In-What-Purport-to-be-Lifestyle-Videos,-Uyghur-Inf/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-07-28/For-Your-Weekend,-July-28,-2022/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-07-28/For-Your-Weekend,-July-28,-2022/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-08-04/In-What-Purport-to-be-Lifestyle-Videos,-Uyghur-Inf/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-08-04/In-What-Purport-to-be-Lifestyle-Videos,-Uyghur-Inf/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-07-28/For-Your-Weekend,-July-28,-2022/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

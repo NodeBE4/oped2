@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Nevertheless, Chinese Civil Society Persisted – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Nevertheless, Chinese Civil Society Persisted
+——
+" />
+    <meta property="og:description" content="
+Nevertheless, Chinese Civil Society Persisted
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Nevertheless, Chinese Civil Society Persisted" />
+    <meta property="twitter:title" content="Nevertheless, Chinese Civil Society Persisted" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fngo%2Fanalysis%2Fnevertheless-chinese-civil-society-persisted" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted&text=Nevertheless, Chinese Civil Society Persisted&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted&title=Nevertheless, Chinese Civil Society Persisted" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted&title=Nevertheless, Chinese Civil Society Persisted" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Nevertheless, Chinese Civil Society Persisted&body=
+Nevertheless, Chinese Civil Society Persisted
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted&title=Nevertheless, Chinese Civil Society Persisted&caption=
+Nevertheless, Chinese Civil Society Persisted
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Nevertheless, Chinese Civil Society Persisted&url=https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Nevertheless, Chinese Civil Society Persisted</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-08-08
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Alison Sile Chen</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1659959760000-->
+<p><a href="https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted">Nevertheless, Chinese Civil Society Persisted</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-f647cae7db4c74915893c1732efe9c16">
+    <div class="view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54076_sm.jpg" title="Nevertheless, Chinese Civil Society Persisted" class="colorbox" data-colorbox-gallery="gallery-node-54076-nHdlkMg_9xU" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54076_sm.jpg?itok=7e8luosp" width="1500" height="998" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Hector Retamal—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A resident looking out from a window during a COVID-19 lockdown in Jing’an district, Shanghai, May 10, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <div class="field-items">
+        <div class="field-item even">
+          <h3 id="crickets-unwilling-to-lie-flat">Crickets Unwilling to Lie Flat</h3>
+          <p class="dropcap">In April 2021, less than two months after Chinese leader Xi Jinping <a href="http://www.xinhuanet.com/english/2021-02/26/c_139767705.htm" target="_blank" rel="nofollow">declared</a> the country free of extreme poverty, a Chinese Internet user with the handle “Kind Traveler” <a href="https://gnews.org/zh-hans/1274912/" target="_blank" rel="nofollow">posted</a> on an online forum: “I have not had a formal job for two years. Just having fun. I don’t think there’s anything wrong with this. . . If you keep your spending within 200 renminbi [per month], you don’t have to work more than one or two months a year.” He called this kind of existence—an existence without striving or competition, in which one simply ensures one’s basic needs are met—“lying flat.”</p>
+          <p>“Lying flat-ism” immediately went viral, receiving an especially warm reception among Chinese youth. On Douban, an online gathering place for hipsters, a number of groups bubbled up under the “lying flat” banner. The Chinese government, clearly disapproving of such a dissolute subculture, shut the online groups down overnight. State-owned media <a href="https://www.voachinese.com/a/people-lie-flat-but-the-country-is-still-dreaming-a-warning-sign-of-CCP-20210611/5925034.html" target="_blank" rel="nofollow">published</a> articles <a href="http://www.xinhuanet.com/comments/2021-05/20/c_1127467232.htm" target="_blank" rel="nofollow">urging</a> young people to turn away from lying flat and embrace a life of “continuous struggle.”</p>
+          <p>The expression “continuous struggle” reminded people of another self-mocking phrase trendy among Chinese young people in recent years: “social livestock.” The term refers to people who are no better than farm animals, working themselves to exhaustion only to await slaughter at the hands of a country that offers them nothing more than high housing prices, intense competition, and little public welfare. Yet, the government doesn’t seem alarmed by this term’s popularity and has not banned it.</p>
+          <p>Indeed, it may be citizens’ status as “social livestock” that provides the Chinese Communist Party (CCP) the means to maintain political power. The Cultural Revolution and the Tiananmen Massacre tarnished the Party’s ideological legitimacy. People no longer fight for communist ideals. Government leaders, who have never once won citizens’ mandate through an electoral process, cannot restore the Party’s legitimacy via the ballot box. Instead, legitimacy must come from economic development. It is “social livestock,” toiling without complaint, who have kept the “world’s factory” up and running—and it is “social livestock” who rely on that same factory to earn their living.</p>
+          <p>Young Chinese growing up in the information era may not be willing to live their entire lives as “social livestock,” but in the current political environment, the government does not allow them to organize strikes, hold demonstrations, or even complain publicly. NGOs that have made such efforts in recent years have been <a href="https://www.dw.com/zh/%E5%85%88%E6%8D%95%E5%90%8E%E6%89%B9-%E4%B8%AD%E5%9B%BD%E5%8A%A0%E5%BC%BA%E6%89%93%E5%8E%8B%E5%B7%A5%E8%BF%90%E4%BA%BA%E5%A3%AB/a-18935363" target="_blank" rel="nofollow">forcibly disbanded</a>, or, in the worst cases, seen their leaders imprisoned. As many Chinese social media users <a href="https://tw.appledaily.com/international/20210529/FDMCUFRBRVAKZDMIHEXHXDLKPM/" target="_blank" rel="nofollow">put it</a>, lie flat-ism means, “I do not want to kneel and I cannot stand up, so I can only lie flat.”</p>
+          <p>In an autocracy, atomized individuals, without power or influence, seem to have only two options: willingly serve as “social livestock,” or accept their fate and lie flat. But in a society as large as China’s, with 1.4 billion people, can that really be all there is?</p>
+          <p>In the China presented by the media, the “official” China, yes, that’s all there is. But the strict censorship dictates hide a complex array of feelings and behaviors. Even today, there remains “civil society,” a network formed by individuals who disagree with the regime, with some of the members taking action to uncover injustice and fight against suppression. Some resist passively, committing to operate in a space outside of the mainstream; some earn money in the mainstream but direct that money and their own personal aspirations toward endeavors that run counter to the regime’s goals. What these people have in common: they refuse to be “social livestock,” and yet they also won’t lie flat.</p>
+          <p>Chinese civil society’s vitality shines through in momentary flashes:<sup id="fnr1"><a href="https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted#fn1" rel="nofollow">1</a></sup></p>
+          <p>Hua is a young activist who was imprisoned several years ago for supporting political prisoners. Since her release, she has been traveling throughout China, visiting jails and detention centers to support political prisoners by depositing money into the accounts they use to buy daily necessities.</p>
+          <p>Li, a human rights lawyer, has been avoiding high-stakes political cases in recent years, but he still takes on one or two rights-related cases each year. Late one late night, he received a call from a young feminist activist who was being harassed by the police and in need of his legal advice.</p>
+          <p>Chen, a labor rights activist who studied overseas, was determined to help organize workers in China. In defiance of advice to stay abroad, he returned to China and was soon detained. Although he was released 15 days later, surveillance and harassment by the police continued. Chen found his organizing work largely impossible, but he still sometimes meets with workers over meals to help them individually resolve difficulties they encounter on the job.</p>
+          <p>Li occasionally meets with Hua and Chen. They aren’t part of any formal organization and rarely discuss the details of their work. But as part of the same circle of civil society professionals in their city, their mutual trust and friendship still shows itself in their companionship, the sense they have of being comrades in arms.</p>
+          <p>Xi went overseas to study after the independent media NGO she worked for became the subject of increasing repression. After graduating, she joined an international human rights non-profit, and she recently succeeded in getting the organization to include as part of its major annual campaign a political prisoner case little known outside of China.</p>
+          <p>Xing was banned from leaving the country after his father, a human rights lawyer, was arrested. Barred both from studying abroad and from taking the Chinese college entrance exam, he is now interning at a domestic organization devoted to civic education.</p>
+          <p>Chao, a successful businessman, has pulled back from his business in recent years. With his extra time, he started a WeChat group with hundreds of members and he invites liberal scholars to give virtual talks to group members. His enthusiasm for this effort never wanes, even though the WeChat group has been shut down more than 70 times.</p>
+          <p>Jiang, the founder of an education-related NGO, lives in a large city seldom mentioned in international newspapers. His home serves as a social center for local practitioners of independent education. Some of them focus on general education, some on cultivating creativity, and some on aesthetics. None of their work is directly related to civil rights, but given how tightly China’s government controls education, Jiang and his friends’ efforts provide a rare resource for students and parents seeking alternatives to standard state education.</p>
+          <p>Over the past few years, I have been invited to speak on various panels about the status of civil society in China. I often sum up my talks with a single sentence: China’s civil society grows like moss and sings like crickets.</p>
+          <p>In such a harsh environment, civil society cannot grow tall and strong like a tree. It can’t spread at the speed of wild grass, blanketing everything overnight. Instead, like moss, it forms a network of fragments and patches, fragile yet tenacious, in even the slimmest of cracks.</p>
+          <p>Chinese resistors are like crickets. They raise their voices softly so as not to attract attention from the public, or provoke fear among their predators. They want only for their friends to hear their song, to recognize one another and huddle together for warmth.</p>
+          <p>It is their music, faint but enduring, where the soul of Chinese civil society stubbornly lives on.</p>
+          <p align="center">* * *</p>
+          <h3 id="a-cycle-of-30-years">A Cycle of 30 Years</h3>
+          <p class="dropcap">For veteran activists, the current situation—a weak but tenacious civil society under intense political pressure—is a familiar one, reminiscent of the few years following the 1989 Tiananmen Massacre. People flung themselves into the rising tide of business and investments, as if in one instant they had lost the memory of the tragedy they had endured the instant before.</p>
+          <p>In the 1990s, the Internet had yet to be introduced to Chinese society. Government critics had few ways to recognize and connect with one another beyond the network of people immediately around them. In big cities, they formed groups of three, four, five people; in small towns, they remained isolated. No professionalized resistance network existed. A sprinkling of political prisoners, scattered across the country, languishing in obscurity, could depend only upon family members to call for their release. <a href="https://www.brookings.edu/wp-content/uploads/2016/06/ye2003.pdf" target="_blank" rel="nofollow">Rigid</a> policies <a href="https://journals.sagepub.com/doi/pdf/10.1177/0899764002313001" target="_blank" rel="nofollow">constrained</a> the activities of NGOs, of which the public was barely <a href="https://new.qq.com/omn/20201107/20201107A00KGW00.html" target="_blank" rel="nofollow">cognizant</a>. No NGOs made advocacy for human or civil rights an explicit goal of their work.</p>
+          <p align="center">* * *</p>
+          <p class="dropcap">Liu Xiaobo, who was briefly <a href="https://time.com/4848696/liu-xiaobo-dies-china-nobel-prisoner/" target="_blank" rel="nofollow">released</a> from prison in early 1991 after being detained during the 1989 student movement, relied on phone calls, public buses, and his bicycle to organize joint petitions among his old friends in Beijing. As he later <a href="https://www.epochtimes.com/gb/6/2/20/n1230054.htm" target="_blank" rel="nofollow">wrote</a>, every petition required at least a month’s worth of work. The police arrested Liu again in 1996 and <a href="https://www.rfa.org/mandarin/zhuanlan/butongdeshengyin/jkdv-07142017162411.html" target="_blank" rel="nofollow">detained</a> him for three years under the measure “re-education through labor,” apparently because Liu planned to publish an open letter suggesting how the CCP and the Kuomintang (the then ruling party in Taiwan) should resolve the Taiwan issue. After Liu’s release in 1999, he <a href="http://liuxiaobo.info/blog/archives/10549" target="_blank" rel="nofollow">failed to change</a> his habit of discussing political action plans over the phone, even though the government was almost certainly listening in on his calls.</p>
+          <p>Dissident intellectual and economist Chen Ziming was sentenced to 13 years for his participation in the Tiananmen protests. His health deteriorated during his imprisonment, and during a medical parole he was diagnosed with cancer. Despite this, authorities took him into custody again. His wife, Wang Zhihong, <a href="http://biweeklyarchive.hrichina.org/article/22246.html" target="_blank" rel="nofollow">raced</a> between the prison, old-time friends, and government offices to appeal for help. Her efforts led to Chen’s second medical parole in 1996, and Chen <a href="https://cpj.org/2002/10/chen-ziming-completes-13year-prison-sentence/" target="_blank" rel="nofollow">remained</a> under house arrest for the duration of his sentence.</p>
+          <p>In the latter half of the 1990s, the Chinese government began to allow NGOs to operate in some fields, such as poverty alleviation, women’s rights, and AIDS prevention. Most of these NGOs collaborated with the government, and some of their staff held concurrent positions in government-affiliated institutions. For example, key members of the <a href="https://chinadevelopmentbrief.org/reports/problems-cohabitation-rise-fall-anti-domestic-violence-network/" target="_blank" rel="nofollow">Anti-Domestic Violence Network</a> and <a href="https://chinadevelopmentbrief.org/ngos/the-maple-womens-psychological-counseling-center/" target="_blank" rel="nofollow">Maple Women’s Psychological Counseling Center</a> in Beijing worked at universities and media outlets controlled by the state. The two organizations also had a close relationship with the <a href="https://www.womenofchina.cn/" target="_blank" rel="nofollow">All-China Women’s Federation</a>, a nominally independent organization devoted to women’s rights and issues that is, in fact, governed by Party personnel in accordance with the Party’s priorities.</p>
+          <p>The environment for China’s civil society, which had changed only incrementally in the preceding years, really began to shift at the beginning of the 21st century. In 2001, Beijing won its bid to host the 2008 Olympics and China joined the World Trade Organization. In order to develop an export-oriented economy and demonstrate its <a href="http://www.gov.cn/xinwen/2021-11/06/content_5649297.htm" target="_blank" rel="nofollow">determination</a> to “integrate with the world,” the Chinese government built the foundations for modern administrative, legal, and media systems. It also began to loosen its social controls. For the urban middle class that had grown up during the economic development of the ’90s, this loosening was like rain on fertile ground, and a new crop of public demands for change sprouted all at once.</p>
+          <p>The Sun Zhigang case in 2003 was one of the early signs that Chinese civil society would seize the <a href="https://www.chinafile.com/nyrb-china-archive/people-retreat" target="_blank" rel="nofollow">opportunities</a> offered by this new era. Sun Zhigang, a recent college graduate who had just moved to Guangzhou for work, left his apartment one night to visit an Internet café without bringing his national identity card. Police <a href="https://www.law.cuhk.edu.hk/en/research/crj/download/papers/2013-tb-szg-constitutionalism.pdf" target="_blank" rel="nofollow">detained</a> him under the auspices of a system called “Custody and Repatriation,” which allowed for the extrajudicial detention of people living outside of the location of their household registration. Three days later, Sun, still in the detention center, was found dead. An investigation by <em>Southern Metropolis Daily</em>, a <a href="https://www.southcn.com/aboutus_nfbyjt" target="_blank" rel="nofollow">state-owned</a> newspaper undergoing its own market-oriented reform, found that Sun died at the hands of staff at the custody and repatriation center in which he was being held. The incident <a href="https://link.springer.com/content/pdf/10.1057/9780230623958_13.pdf" target="_blank" rel="nofollow">roiled</a> the Internet. Three law professors, Xu Zhiyong, Teng Biao, and Yu Jiang, wrote a joint letter to the National People’s Congress demanding a review of the constitutionality of custody and repatriation. To everyone’s surprise, China’s State Council <a href="https://link.springer.com/content/pdf/10.1057/9780230623958_13.pdf" target="_blank" rel="nofollow">announced</a> the abolition of the system later that year.</p>
+          <p>This victory, in a case that had been closely watched and championed by the new category of people known as <em>wangmin</em> (“netizens”), as well as leading intellectuals and media outlets, gave civil society a major morale boost. Xu Zhiyong soon <a href="https://chinachange.org/2014/04/10/who-is-xu-zhiyong/" target="_blank" rel="nofollow">founded</a> a legal rights protection nonprofit. Harassed repeatedly by authorities, the organization had to change its name several times (its most well-known moniker was Gongmeng, or “<a href="https://www.hrw.org/news/2020/02/18/china-free-prominent-legal-advocate%20https:/www.nytimes.com/2009/08/19/world/asia/19china.html" target="_blank" rel="nofollow">Open Constitution Initiative</a>”), but it remained the nucleus around which a community of activists, human rights lawyers, and intellectuals (including journalists) gradually formed. Collaboration among these three types of people later featured in significant instances of collective action, including an election in the village of Taishi in 2005, in which residents angry at government malfeasance rejected an official slate of candidates and elected their own leaders.</p>
+          <p>Members of Gongmeng would later go on to found prominent think tanks (like <a href="https://chinachange.org/2014/11/09/just-man-guo-yushan/" target="_blank" rel="nofollow">Guo Yushan</a>’s group the Transition Institute) and civic education institutions (like Li Yingqiang’s Liren Library and Liren University). Other nonprofits established around this time also played a critical role in civil society development, like the anti-discrimination NGO <a href="https://www.wsj.com/articles/meet-lu-jun-one-of-chinas-most-wanted-social-activists-1441521914" target="_blank" rel="nofollow">Yirenping</a>. Still other groups, originally formed in the 1990s, began to transform into rights-focused social movement organizations, including both the <a href="https://exhibits.stanford.edu/chinese-ngos/catalog/vc339tj4249" target="_blank" rel="nofollow">Media Monitor for Women Network</a> and <a href="http://www.aizhi.org/" target="_blank" rel="nofollow">Aizhixing</a>, a group that opposed HIV-related discrimination.</p>
+          <p>During the decade between 2003 and 2013, when civil society’s unleashed energy burst forth, the most prominent and influential organizations and activists were those that either had clear political ideals or an orientation toward social movements. Looking back now, it is hard to imagine that the CCP would have continued to tolerate them. But at the time, members of civil society felt confident and optimistic, believing in the possibility of “<a href="https://www.bbc.com/zhongwen/simp/china/2013/08/130804_xiaoshu_iv" target="_blank" rel="nofollow">forcing reform from the bottom</a>.” Liu Xiaobo was the most wholehearted practitioner of this approach.</p>
+          <p>In 2008, he launched “<a href="https://www.chinafile.com/library/nyrb-china-archive/chinas-charter-08" target="_blank" rel="nofollow">Charter 08</a>,” a petition calling for greater political rights and freedoms in China. Among its signatories were the country’s most famous activists and liberal intellectuals. Liu issued the Charter in December, to take advantage of China’s enhanced international stature after hosting the Beijing Summer Olympics earlier that year. The signatories hoped the Charter 08 movement would jump-start interaction between the government and civil society and lead to political reform. But while the effort helped win Liu a Nobel Peace Prize, it also earned him an 11-year prison sentence, during which he would succumb to cancer. The Party had no intention of interacting with civil society.</p>
+          <p>Liu’s heavy sentence did not extinguish civil society’s fervor for political participation. On Christmas of 2009, when Liu was sentenced, thousands of Chinese netizens <a href="https://www.rfa.org/mandarin/yataibaodao/court-12232009132911.html" target="_blank" rel="nofollow">posted</a> a yellow ribbon, symbolizing their support for him.</p>
+          <p>Beijing, however, seemed to realize it no longer needed to, nor should, tolerate civil society. Two international developments underpinned this realization. China, by this time, had become more deeply integrated into the global economy, and was serving as the engine of recovery from the Global Financial Crisis; under these circumstances, democratic states would have no appetite for organizing human rights boycotts against China. Second, the Arab Spring in 2010 sounded an alarm bell for the CCP: In the information age, even outwardly stable authoritarian regimes could suddenly collapse.</p>
+          <p>Between 2009 and 2011, Chinese authorities came down on <a href="https://www.hrichina.org/en/content/333" target="_blank" rel="nofollow">Gongmeng</a>, the Transition Institute, <a href="https://www.nytimes.com/2010/05/11/world/asia/11beijing.html" target="_blank" rel="nofollow">Aizhixing</a>, and a host of other such nonprofit organizations citing supposed tax irregularities. Police also <a href="https://humanrightshouse.org/articles/china-a-new-wave-of-crackdown-on-dissidents/" target="_blank" rel="nofollow">secretly detained or formally sentenced</a> more than a hundred activists, whereas in previous years only a handful of activists most fiercely challenging the government were sentenced. Activists embedded in social movements—those who had a particularly keen political sense—could already detect the scent of the coming winter.</p>
+          <p>At the same time, however, the advent of Sina Weibo (China’s homegrown version of Twitter) drew many ordinary people into the public discourse. A massive earthquake in Sichuan province in 2008 had <a href="https://chinadevelopmentbrief.org/reports/wenchuan-lushan-overview-disaster-relief-ngo-efforts/" target="_blank" rel="nofollow">spurred</a> the creation of a slew of new NGOs. For college students and for ordinary urban, middle-class Chinese, the spring of Chinese civil society had only just arrived.</p>
+          <p>For the first time, huge numbers of netizens could deluge local officials with public pressure. On Weibo, people were able to “<a href="https://www.harvard-yenching.org/research/hyi-working-paper-series-tang-xiaobing/" target="_blank" rel="nofollow">spectate</a>” as conflicts between citizens and government authorities played out in real time. Protests, government <a href="https://www.chinafile.com/what-wukan-means" target="_blank" rel="nofollow">land requisition</a>, and the <a href="https://www.reuters.com/article/us-china-usa-dissident/chinese-play-cat-and-mouse-with-censor-to-discuss-dissident-escape-idUSBRE83S08O20120429" target="_blank" rel="nofollow">saga</a> of the blind activist lawyer <a href="https://www.chinafile.com/library/nyrb-china-archive/pressure-change-grassroots" target="_blank" rel="nofollow">Chen Guangcheng</a> all garnered rare concessions from authorities after going viral on Weibo. Weibo also provided a platform for new NGOs to attract the public’s attention and promote public welfare projects. The <a href="http://foundation.en.see.org.cn/about/" target="_blank" rel="nofollow">SEE Foundation (Society of Entrepreneurs and Ecology)</a> and Friends of Nature publicized environmental work; Liren University and the Co-China Forum focused on education; and <a href="http://www.mianfeiwucan.org/en/aboutus/" target="_blank" rel="nofollow">Free Lunch for Children</a> and <a href="https://chinadevelopmentbrief.org/reports/here-and-now-guangzhous-skinhead-movement/" target="_blank" rel="nofollow">One Kilogram More</a> advocated for poverty alleviation. For a time, Chinese civil society seemed to be thriving.</p>
+          <p>In reality, a harsh wind was already starting to blow. In mid-2013, authorities <a href="https://www.nytimes.com/2013/09/11/world/asia/china-cracks-down-on-online-opinion-makers.html?pagewanted=all" target="_blank" rel="nofollow">started</a> to “strike down Big Vs,” that is, popular opinion leaders with verified accounts on Weibo. Officials deployed various criminal charges, as well as public smearing in state-owned media outlets, to knock these opinion leaders off their social media pedestals. In 2014, with Hong Kong’s <a href="https://www.chinafile.com/keyword/umbrella-movement" target="_blank" rel="nofollow">Umbrella Movement</a> in full swing, Chinese police detained the leaders of NGOs like the <a href="https://chinachange.org/2014/11/09/just-man-guo-yushan/" target="_blank" rel="nofollow">Transition Institute</a> and Liren University on the (<a href="https://www.nytimes.com/2015/09/16/world/asia/china-releases-scholar-who-helped-activist-gain-asylum-in-us.html" target="_blank" rel="nofollow">unfounded</a>) suspicion that they planned to <a href="https://chinadigitaltimes.net/2014/12/details-emerge-detention-li-jianshu-xu-xiao/" target="_blank" rel="nofollow">spread</a> the movement into mainland China. In 2015, the Chinese government enacted a new <a href="https://www.chinalawtranslate.com/en/2015nsl/" target="_blank" rel="nofollow">National Security Law</a>. Authorities began an extensive campaign to crack down on civil society groups with relatively robust networks and operational capacity. This included feminist activists (the <a href="https://www.dissentmagazine.org/article/china-feminist-five" target="_blank" rel="nofollow">Feminist Five</a>), human rights lawyers (the <a href="https://www.frontlinedefenders.org/en/statement-report/five-years-impunity-709-crackdown-continues" target="_blank" rel="nofollow">709 Crackdown</a>), anti-discrimination activists (the <a href="https://www.washingtonpost.com/world/china-raids-ngo-offices-in-latest-sign-of-crackdown-on-dissent/2015/03/26/4badeaac-d3b0-11e4-ab77-9646eea6a4c7_story.html" target="_blank" rel="nofollow">crackdown</a> on Yirenping), and labor rights activists (the December 3, 2015 <a href="https://www.cecc.gov/publications/commission-analysis/guangdong-authorities-arrest-labor-rights-advocates" target="_blank" rel="nofollow">labor rights case</a> in Guangdong). In 2016, the government passed three more new laws choking Chinese civil society off from <a href="https://www.chinalawtranslate.com/en/2016-charity-law/" target="_blank" rel="nofollow">domestic fundraising</a>, <a href="https://www.chinafile.com/ngo/laws-regulations/law-of-peoples-republic-of-china-administration-of-activities-of-overseas" target="_blank" rel="nofollow">international funding</a>, and <a href="https://digichina.stanford.edu/work/translation-cybersecurity-law-of-the-peoples-republic-of-china-effective-june-1-2017/" target="_blank" rel="nofollow">online communication tools</a>. Both in terms of capital and communication, civil society found itself forced to cook dinner with no rice. In 2017, these three laws were fully implemented, court <a href="https://www.bbc.com/zhongwen/simp/chinese-news-42061672" target="_blank" rel="nofollow">cases</a> against civil society were <a href="https://www.rfa.org/mandarin/yataibaodao/renquanfazhi/yf-12242017100306.html" target="_blank" rel="nofollow">prosecuted</a> one by one, and the Chinese government steadily realized its “clean up” of civil society. In 2018, authorities <a href="https://www.nippon.com/en/in-depth/a05803/" target="_blank" rel="nofollow">amended</a> the People’s Republic of China constitution to include “the leadership of the Chinese Communist Party” as a formal part of state structure, while at the same time <a href="https://www.nytimes.com/2018/02/25/world/asia/china-xi-jinping.html" target="_blank" rel="nofollow">abolishing</a> the term limits for the president. Officials managed to initiate and complete system-wide changes, swiftly centralizing all state power.</p>
+          <p>In these brief five years, China’s social and political spaces underwent a complete and utter transformation. The previous two decades of civil society’s growth and prosperity now seem like a dream. China’s civil society now finds itself rudely awakened, as if back in the 1990s: underground, fragmented, and lost.</p>
+          <p align="center">* * *</p>
+          <h3 id="the-fate-and-future-of-the-crickets">The Fate and Future of the Crickets</h3>
+          <p class="dropcap">The years between 2003 and 2013 were a golden age for the development of Chinese NGOs. Then, between 2014 and 2018, authorities moved with astonishing swiftness to uproot large swathes of civil society, causing the fruits of its previous development to shrivel and wither away.</p>
+          <p>The period of civil society’s flowering in the first decade of the 21st century overlaps neatly with the administration of General Secretary Hu Jintao and Premier Wen Jiabao, while the subsequent four years of severe crackdown coincides with the tenure of Xi Jinping. Many observers, therefore, blame Xi’s autocratic tendencies for civil society’s sharp decline. In actuality, the government had begun to break apart civil society, node by node, as early as 2009. Then, in 2012, the government revised its <a href="https://www.chinalawtranslate.com/en/criminal-procedure-law/" target="_blank" rel="nofollow">Criminal Procedure Law</a> to include an arbitrary, secretive detention system—“residential surveillance in a designated location”—that opened the door for expedited political cases.</p>
+          <p>The collapse of civil society might appear the work of one particularly hardline leader, but it’s better understood as a lagging indicator of the Party’s political agenda.</p>
+          <p>At the turn of the century, still acting in accordance with the West’s expectation that the opening-up of China’s economy would lead to the liberalization of its politics, Beijing took a relatively light hand with civil society. But as the economic dominance of democracies receded after the financial crisis, and events both domestic and international heightened Beijing’s anxiety about the latent power of grassroots movements, authorities began to strategically enhance their legal and forcible ability to clamp down on civil society groups. At this time, however, many relatively moderate, mainstream Chinese groups, not under as much direct pressure as the more critical activists, still felt it possible to continue on with their work. This all changed in the mid-2010s, when Hong Kong’s Umbrella Movement and Taiwan’s Sunflower Movement altered Beijing’s sense of threat and urgency. The ensuing years saw a spate of political arrests and the passing of three new laws meant to rein in civil society.</p>
+          <p>Yet, no matter how its tactics have changed over time, the Party’s ultimate goal hasn’t wavered: to ensure the continued rule of the Party. All the Party’s choices hinge on its assessment of what will best guarantee its long-term reign, whether that is maintaining appearances to suit the democratic community’s expectations or drawing its ire by harshly cracking down on civil society practitioners. These behaviors may seem contradictory but they are, in fact, consistent with the Party’s most immutable goal.</p>
+          <p>Some China observers have <a href="https://law.yale.edu/sites/default/files/documents/pdf/Intellectual_Life/CL-PP-PP_in_the__PRC_FINAL_91609.pdf" target="_blank" rel="nofollow">argued</a> that Beijing’s light-handed approach to civil society in the early 2000s resulted from the Party’s awareness that allowing citizens’ public participation benefits its rule in the long run. If this were true, however, what reasons would the CCP have to discard this belief between 2009 and 2012? Yet the change in the Party’s interaction with civil society arose around this period, when the financial crisis weakened developed democracies.</p>
+          <p>Citizens’ need to participate in public life, even under the suppression of an abiding authoritarian regime, cannot be extinguished. When there is space, there will be connection, there will be expression, and there will be action. The energies of civil society and the regime directly oppose each other; when one ebbs, the other flows.</p>
+          <p>Given this push-pull relationship, it is clear that while Chinese civil society’s current sense of defeat may recall the early 1990s, its next phase will develop into something altogether new.</p>
+          <p>Though international pressure once played a decisive role in shaping China’s civil society, its future effects remain uncertain. During the burgeoning economic globalization of the 1990s and early 2000s, the U.S., as the undisputed leader of the world economy, served as a gatekeeper—if China wanted to join the international trade regime, it had to win approval from the U.S. To earn American support for China’s accession to the WTO, Beijing made a series of promises on improving the rule of law, economic freedom, and administrative transparency. Also, although the Clinton administration <a href="https://www.latimes.com/archives/la-xpm-1994-05-27-mn-62877-story.html" target="_blank" rel="nofollow">de-linked</a> China’s human rights from its most-favored-nation status in 1994, human rights remained one of the most significant factors driving public concerns on trading with China. Therefore, Beijing was mindful about not raising too much controversy. Those promises and considerations shielded Chinese civil society’s development in the early 21st century.</p>
+          <p>Now, however, relations between China and democracies shift as erratically as wind over a churning sea. Some democracies, adopting the consensus view that economic interdependence alone will not bring about political liberalization, have imposed sanctions against China in the hopes of forcing it to improve human rights; thus far, the impact of such sanctions appears limited. At the same time, however, as established democracies in the U.S. and Europe grapple with the COVID pandemic, increasingly urgent transnational concerns such as climate change, as well as intensifying domestic conflict over racial justice issues, they have incentives to de-escalate, or at least not intensify, confrontation with China.</p>
+          <p>Going forward, relations between China and the democratic community will likely oscillate between confrontation and cooperation. But either of these extremes, no matter which is ascendant at any given time, may constitute a double-edge sword for Chinese civil society.</p>
+          <p>If the international community were to take a hard line against China, Beijing could plausibly respond in two very different ways: it could ease domestic repression under the weight of international pressure, or it could assume worsening relations are a foregone conclusion and <em>increase</em> domestic repression. Indeed, Beijing’s approach to Hong Kong in recent years exemplifies the latter kind of reaction.</p>
+          <p>If democracies instead seek to cooperate with China, Chinese civil society might find respite from crackdowns when Beijing reciprocates and international funding resumes. But Beijing might just as easily deepen repression if it senses that democratic states will relatively quickly abandon their stances on human rights.</p>
+          <p>The strength and will of the world’s democracies may well serve as a barometer for Chinese civil society. In the case of confrontation, like-minded states would need to create an alliance of overwhelming strength in order to deter China from an escalation in authoritarian policies. In a more cooperative scenario, the democratic community would need to demonstrate a fierce determination to uphold human rights and democratic values before Beijing might worry about the harm its repressive domestic behavior could have on its international standing. In other words, only when the democratic camp reshapes itself to take full advantage of its strength and value system will Chinese civil society finally have any room to maneuver.</p>
+          <p>Second, in terms of the advantages gained through new communications technologies, the positions of civil society and the regime have completely reversed over the last few decades. In the 1990s, Internet access was a critical means by which Chinese civil society overcame fragmentation and stagnation. While online forums allowed netizens to find one another right away, it took the government almost a decade to expel Google, block Twitter, and build a comprehensive firewall around China’s domestic Internet. This lag resulted from both Beijing’s desire to avoid irritating the international community and from the time government bureaucracies required to develop, purchase, and deploy such digital barricades.</p>
+          <p>Nevertheless, as an authoritarian regime with a strong economy and monopolistic advantages in resource allocation, once Beijing decided to strengthen social controls through science and technology, civil society could hardly compete with its adoption of new technologies.</p>
+          <p>Even though Chinese activists can still learn about the latest community news on WeChat, use VPNs to access Twitter and Facebook, and communicate through encrypted applications, the government has the upper hand when it comes to technology. China is likely the country most widely <a href="https://www.chinafile.com/state-surveillance-china" target="_blank" rel="nofollow">employing</a> facial recognition technologies; it goes without saying that Beijing will continue on its well-trodden path of online surveillance and censorship. In the future, the government could even adopt measures as drastic as a nation-wide LAN or temporary network shutdowns to eliminate the uncertainty inherent in the Internet.</p>
+          <p>So while the Internet may still facilitate civil society’s internal communications, Beijing’s technological dominance means the Internet will not transform discussions within groups of like-minded people into public consensus or collective action. As soon as signs of such a transformation appear, the regime easily detects and quells them. Unless activists best the government in the race to master a new technology and can successfully deploy it in service of large-scale social movements, once-liberatory digital communications platforms may instead work against the well-being of civil society for the foreseeable future.</p>
+          <p>Finally, the CCP’s largest looming political challenge of maintaining “social stability” as economic growth slows will directly affect civil society’s influence in the coming years. Chinese civil society may need to endure either a prolonged ice age or be prepared to respond to social upheavals.</p>
+          <p>At first glance, the current slowdown in economic growth could be seen as a ray of hope for civil society: The same sorts of intellectual and activist elites so quickly absorbed by the economic opportunities of the 1990s might now refuse to live their lives as mere “social livestock” and choose to direct their ambitions elsewhere. However, the CCP will view this as a political risk and shift its administrative focus from economic development to social control. We can already see this kind of shift in the government’s heavy investment in surveillance technology, the co-opting of non-political communities like online influencers, and enhanced restrictions on the entertainment industry.</p>
+          <p>If the CCP’s control measures succeed in suppressing social unrest to a manageable level, Chinese civil society probably faces a long-lasting ice age. People who are unwilling to kneel, to live as “social livestock,” still have no way to recognize each other and form organizations—they still have no way to stand up and resist. Inevitably, most of them will become more and more isolated and cynical—that is, they will lie flat. Of course, some fragmented civil society communities will continue carrying out some limited activities. And some percentage of these might even radicalize, adopting more political, activist, or even violent tactics. In this case, the government would almost certainly identify and stamp out such groups in short order.</p>
+          <p>Nevertheless, the CCP’s high-pressure social control strategy bears its own risks. Should a perfect storm of events cause a breach in the social control system, the extent of the resulting turmoil is almost impossible to estimate. Would existing civil society networks be able to absorb and respond to such turmoil? Could they transform it into a controlled momentum toward broader political change? Civil society’s capacity in such a scenario would play a large role in determining the country’s political future.</p>
+          <p>And so the international community’s concern and support for Chinese civil society remains critically important, even when the prospects appear grim. If there is a future China that fits into a rule-based liberal world order, it will be found among those Chinese who refused either to kneel down or to lie flat.<span class="cube"></span></p>
+          <hr />
+          <ol id="footnotes">
+            <li id="fn1">Hua, Li, Chen, Xi, Xing, and Chao are all pseudonyms.<a title="Jump back to footnote 1 in the text" href="https://www.chinafile.com/ngo/analysis/nevertheless-chinese-civil-society-persisted#fnr1" rel="nofollow">↩</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-08-10</time>
+        <a href="https://nodebe4.github.io/oped2/2022-08-10/For-Your-Weekend,-August-11,-2022/">
+          For Your Weekend, August 11, 2022
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-10</time>
+        <a href="https://nodebe4.github.io/oped2/2022-08-10/The-Strategic-Importance-of-the-Indo-Pacific/">
+          The Strategic Importance of the Indo-Pacific
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-04</time>
+        <a href="https://nodebe4.github.io/oped2/2022-08-04/For-Your-Weekend,-August-5,-2022/">
+          For Your Weekend, August 5, 2022
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-04</time>
+        <a href="https://nodebe4.github.io/oped2/2022-08-04/For-Your-Weekend,-August-4,-2022/">
+          For Your Weekend, August 4, 2022
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-08-04/For-Your-Weekend,-August-5,-2022/">
+            前一篇：For Your Weekend, August 5, 2022
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-08-10/The-Strategic-Importance-of-the-Indo-Pacific/">
+            後一篇：The Strategic Importance of the Indo-Pacific
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-08-04/For-Your-Weekend,-August-5,-2022/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-08-10/The-Strategic-Importance-of-the-Indo-Pacific/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-08-10/The-Strategic-Importance-of-the-Indo-Pacific/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-08-04/For-Your-Weekend,-August-5,-2022/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-08-04/For-Your-Weekend,-August-5,-2022/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-08-10/The-Strategic-Importance-of-the-Indo-Pacific/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-08-10/The-Strategic-Importance-of-the-Indo-Pacific/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-08-04/For-Your-Weekend,-August-5,-2022/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
