@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>‘A Stone Is Most Precious Where It Belongs’ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+‘A Stone Is Most Precious Where It Belongs’
+——
+" />
+    <meta property="og:description" content="
+‘A Stone Is Most Precious Where It Belongs’
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="‘A Stone Is Most Precious Where It Belongs’" />
+    <meta property="twitter:title" content="‘A Stone Is Most Precious Where It Belongs’" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fnotes-chinafile%2Fstone-most-precious-where-it-belongs" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/notes-chinafile/stone-most-precious-where-it-belongs" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/notes-chinafile/stone-most-precious-where-it-belongs&text=‘A Stone Is Most Precious Where It Belongs’&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/notes-chinafile/stone-most-precious-where-it-belongs&title=‘A Stone Is Most Precious Where It Belongs’" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/notes-chinafile/stone-most-precious-where-it-belongs&title=‘A Stone Is Most Precious Where It Belongs’" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=‘A Stone Is Most Precious Where It Belongs’&body=
+‘A Stone Is Most Precious Where It Belongs’
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/notes-chinafile/stone-most-precious-where-it-belongs" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/notes-chinafile/stone-most-precious-where-it-belongs&title=‘A Stone Is Most Precious Where It Belongs’&caption=
+‘A Stone Is Most Precious Where It Belongs’
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=‘A Stone Is Most Precious Where It Belongs’&url=https://www.chinafile.com/reporting-opinion/notes-chinafile/stone-most-precious-where-it-belongs" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>‘A Stone Is Most Precious Where It Belongs’</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-03-17
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Jessica Batke &#38; Gulchehra Hoja</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/notes-chinafile/stone-most-precious-where-it-belongs" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1679065020000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/notes-chinafile/stone-most-precious-where-it-belongs">‘A Stone Is Most Precious Where It Belongs’</a>
+——</p>
+
+<div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p>Gulchehra Hoja is a longtime broadcaster with Radio Free Asia’s (RFA) Uyghur Service. She grew up in Urumqi, the capital of the Xinjiang Uyghur Autonomous Region, and was a successful TV personality and journalist with Chinese state media there. She later left China to join RFA and provide uncensored news coverage from the United States. ChinaFile’s Jessica Batke spoke recently with Hoja about her new memoir, <em><a href="https://www.hachettebooks.com/titles/gulchehra-hoja/a-stone-is-most-precious-where-it-belongs/9780306828843/" target="_blank" rel="nofollow">A Stone Is Most Precious Where It Belongs</a></em>. The book describes Hoja’s upbringing in a rapidly changing society and political environment, her work as a TV host in China, her decision to leave her homeland, reporting on the ongoing crisis there, and the process of building a new life in a foreign country. Below is an edited transcript of their conversation.</p>
+      <p><strong>Jessica Batke: In some ways, your story is a remarkable one: you come from a long line of cultural luminaries. But in other ways, your story is unfortunately typical for a Uyghur living abroad: you are separated from your loved ones, who are undergoing persecution and oppression back in your homeland. Your book opens with a horrible statistic: 24 members of your family were taken away by the state. Do you have a sense of how common that kind of mass detention within a single family is?</strong></p>
+      <p><strong>Gulchehra Hoja:</strong> I am not the only secondary victim of this genocide. We live in another country, and starting in 2016, [all of us] lost contact with our family members back home. Not only me, but all of us. We didn’t know anything about our family for a year, or two years. Even right now, many Uyghurs still don’t know where their loved ones are. Their homes were destroyed. Phone calls cannot go through. You cannot find your relatives, or your neighbors, or your friends. There’s nobody there. So I am just one example.</p>
+      <p></p>
+      <div class="view view-photo-embed view-id-photo_embed view-display-id-panel_pane_3 visual-box view-dom-id-0b9e93953c48b52f111ff05bab3d81e7 grid-4 photo-object">
+        <div class="views-field views-field-field-common-system-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/photo/system/astoneismostpreciouswhereitbelongs_hc.jpg" title="A Stone Is Most Precious Where It Belongs" class="colorbox" data-colorbox-gallery="gallery-node-54686-AKNYyHxb_F0" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/medium/public/assets/images/photo/system/astoneismostpreciouswhereitbelongs_hc.jpg?itok=NVdHhLuP" width="620" height="936" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+      </div>
+      <p>I was able to learn the news about my family because the Chinese government intentionally wanted me to know and wanted to silence me by using this information to damage me. I think this is the way they want to give journalists a signal: If you don’t stay quiet, your family is going to be in trouble. So it’s not only me. It’s very common, the devastation we’re facing.</p>
+      <p>A few of my coworkers didn’t know what had happened to their families. And then some of them used their contacts with embassies to learn from the Chinese government, four or five years after the fact, that all their family members had been sentenced to 10 or more years because [their relatives] live in a free country. Even if [these relatives abroad] hadn’t said anything against the Chinese government’s policy.</p>
+      <p>It’s unimaginable for people living in a free country. But for the Uyghurs, that’s the situation for all of us.</p>
+      <p><strong>It seems like Chinese authorities are especially targeting anyone they think is good at communicating and getting information out.</strong></p>
+      <p>Yes, you can say I am a special target. Because they didn’t stop after they arrested my family members. In 2021, they <a href="https://www.rfa.org/english/news/uyghur/smear-04132021191322.html" target="_blank" rel="nofollow">accused me</a> openly, saying I’m a terrorist. So they’re still using these kinds of tools and tactics to try and keep us silent. I don’t know what could happen to me or to my family. What can they do? I don’t know.</p>
+      <p>But I want to let them know: We will die proudly. We aren’t afraid of dying. We aren’t. We’re afraid of losing our freedom and our hope and our dignity. We don’t give up. This is all we have right now.</p>
+      <p>I wrote the book specifically for this reason. I just want to say to the world: We are not merely victims. We are so much more than that. We are beautiful people, just like you. Because we are different from the Chinese people, because we don’t obey the Chinese government—that’s why they want to destroy us.</p>
+      <p><strong>In the book, you, and everyone around you, lived in this constant state of choosing, because anything that you did or said could be interpreted as political. Even if you didn’t mean it to be political, even if you just wanted to speak your language, or dance, it could be seen as political.</strong></p>
+      <p>We were very careful, very careful. Even at home, we were raised with warnings from our parents: “Don’t say these kinds of things in school, don’t say those kinds of things when you’re playing with Han Chinese kids.”</p>
+      <p>Hearing that all the time reminded us we were different. And we were constantly facing discrimination in school, and society, and the workplace. We all knew it was because we were Uyghurs that we were facing that kind of pressure. So it was actually training you to be smarter in choosing your words, in communicating with people, in choosing what kind of people you should communicate with.</p>
+      <p><strong>This is actually almost exactly what my next question was about. I feel like in the book you hinted at this sort of duality, in what you knew and how you were allowed to exist. For example, you wrote about the knowledge that you could get from history books, but also a whole other set of knowledge that could only be acquired “in private settings and in low voices.”</strong></p>
+      <p>That’s why one of my professors in the university said, “Do you know how lucky you are?” I said, “Why?” He said, “You just can learn things sitting at the dining table that a lot of other people cannot learn even in university or reading a book. You are just so lucky because you are your father’s daughter, Abdulqeyyum Hoja’s daughter.” [Abdulqeyyum Hoja was a prominent archaeologist focused on the history of the Uyghur region.] Because I was young, I didn’t really understand it. After I grew up and this stuff was happening to us, then I realized . . . all this memory, you know, it comes back to you. So I was so fortunate, a fortunate girl.</p>
+      <p><strong>How much do you think the knowledge from your father contributed to your decision, when you did finally go abroad, to stay abroad? Because that seems like such an extraordinary decision to make, leaving behind your family and your career. Do you think it’s because you had knowledge that other people didn’t have?</strong></p>
+      <p>I dedicated this book to my beloved father, Abdulqeyyum Hoja, who taught me how to love myself, love my people, love my country, and human beings, and dignity, and freedom. So, the hardest part of my life was two decades of time during which I was forbidden to see my father. Conversely, this separation also trained me. It taught me that the love of human beings is unstoppable, regardless of time and space, and that such a misfortune would tighten the bonds of missing hearts.</p>
+      <p>My father used to tell me that even a stone is precious in the place where it drops. That’s the name of my book as well, “<em>Tash chüshkän yeridä äziz</em>.” We said that all the time. I lived through the deep values of this proverb, which is often used among Uyghurs who are separated from their birthplace.</p>
+      <p>When I was in the Uyghur region with my father, I always asked his advice when I had to make a decision. And I strongly believe that afterwards, when I was alone, he was inside of me. It wasn’t only me anymore. It was about my father, about my grandpa. The power coming from what they taught me, that’s why making those decisions was not that hard for me. Actually, it was like a cage opened for me. I was flying, carrying their hope. This is not my decision. I feel that they wanted me to make this decision. The cage opened suddenly, just for me. They stayed for other people, for their people, for the land.</p>
+      <p>You know, all Uyghurs have only one wish: that when they die, they are buried in their birth place. It’s a huge thing. Maybe I still have that hope. But if there’s no chance for me to go back, at least I have the stone from my dad [a rock from his yard he managed to send to her in the U.S.]. I will write to my kids to ask them to bury me with the stone so that I will be with part of my country, my land. This stone is most precious. It is there in my bookcase. I can show you.</p>
+      <p><strong>Please.</strong></p>
+      <p>[Hoja retrieves the stone and holds it up.]</p>
+      <p>This is very special. It smells like home. I don’t know why, but it really smells like home. You know, like after rain touches the soil. It’s the fragrance I love the most. I wish someone could create this fragrance! It’s the most delicious smell in the world. I feel that it heals your soul. How my father found this and sent it to me is magic. And it actually gave me the inspiration to write this book. Yep, this is my treasure. Priceless.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2023-03-30</time>
+        <a href="https://nodebe4.github.io/oped2/2023-03-30/For-China-s-Urban-Residents,-the-Party-State-Is-Cl/">
+          For China’s Urban Residents, the Party-State Is Closer than Ever
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-03-22</time>
+        <a href="https://nodebe4.github.io/oped2/2023-03-22/Xi-Jinping-Goes-to-Moscow/">
+          Xi Jinping Goes to Moscow
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-03-13</time>
+        <a href="https://nodebe4.github.io/oped2/2023-03-13/It-Is-Especially-Scary-to-See-Students/">
+          ‘It Is Especially Scary to See Students’
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-03-10</time>
+        <a href="https://nodebe4.github.io/oped2/2023-03-10/The-Future-of-China-s-Climate-Policy/">
+          The Future of China’s Climate Policy
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-03-13/It-Is-Especially-Scary-to-See-Students/">
+            前一篇：‘It Is Especially Scary to See Students’
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-03-22/Xi-Jinping-Goes-to-Moscow/">
+            後一篇：Xi Jinping Goes to Moscow
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-03-13/It-Is-Especially-Scary-to-See-Students/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-03-22/Xi-Jinping-Goes-to-Moscow/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-03-22/Xi-Jinping-Goes-to-Moscow/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-03-13/It-Is-Especially-Scary-to-See-Students/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-03-13/It-Is-Especially-Scary-to-See-Students/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-03-22/Xi-Jinping-Goes-to-Moscow/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-03-22/Xi-Jinping-Goes-to-Moscow/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-03-13/It-Is-Especially-Scary-to-See-Students/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

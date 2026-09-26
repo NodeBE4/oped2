@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>2023 年 7 月南韓十日遊心得：釜山篇 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+2023 年 7 月南韓十日遊心得：釜山篇
+——
+" />
+    <meta property="og:description" content="
+2023 年 7 月南韓十日遊心得：釜山篇
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="2023 年 7 月南韓十日遊心得：釜山篇" />
+    <meta property="twitter:title" content="2023 年 7 月南韓十日遊心得：釜山篇" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2F2023-july-korea-trip-busan-a475e484e1fc%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/2023-july-korea-trip-busan-a475e484e1fc?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/2023-july-korea-trip-busan-a475e484e1fc?source=rss-f1fb3e40dc37------2&text=2023 年 7 月南韓十日遊心得：釜山篇&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/2023-july-korea-trip-busan-a475e484e1fc?source=rss-f1fb3e40dc37------2&title=2023 年 7 月南韓十日遊心得：釜山篇" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/2023-july-korea-trip-busan-a475e484e1fc?source=rss-f1fb3e40dc37------2&title=2023 年 7 月南韓十日遊心得：釜山篇" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=2023 年 7 月南韓十日遊心得：釜山篇&body=
+2023 年 7 月南韓十日遊心得：釜山篇
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/2023-july-korea-trip-busan-a475e484e1fc?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/2023-july-korea-trip-busan-a475e484e1fc?source=rss-f1fb3e40dc37------2&title=2023 年 7 月南韓十日遊心得：釜山篇&caption=
+2023 年 7 月南韓十日遊心得：釜山篇
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=2023 年 7 月南韓十日遊心得：釜山篇&url=https://hulitw.medium.com/2023-july-korea-trip-busan-a475e484e1fc?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>2023 年 7 月南韓十日遊心得：釜山篇</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-07-27
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/2023-july-korea-trip-busan-a475e484e1fc?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1690462781000-->
+<p><a href="https://hulitw.medium.com/2023-july-korea-trip-busan-a475e484e1fc?source=rss-f1fb3e40dc37------2">2023 年 7 月南韓十日遊心得：釜山篇</a>
+——</p>
+
+<div>
+  <p>事情是這樣的，六月去完澳門之後，想說短期內應該不會再出國了吧，但有天在 YouTube 上看見了這支影片：</p>
+  <iframe src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FLix7UKHADO8%3Ffeature%3Doembed&amp;display_name=YouTube&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DLix7UKHADO8&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLix7UKHADO8%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=youtube" width="854" height="480" frameborder="0" scrolling="no">
+<a href="https://medium.com/media/b72942247bc86766b45cb2b804300cfa/href">https://medium.com/media/b72942247bc86766b45cb2b804300cfa/href</a>
+  </iframe>
+  <p>簡單來說就是她買到了特價的虎航機票來回 4000 元，然後住宿一天一個人大概只要 700 塊，於是六天五夜機加酒就是 7500 塊，聽起來超級便宜。再來，影片裡面出現的東西看起來都滿好吃的，讓我動起了想去韓國的念頭。</p>
+  <p>在疫情之前我去過韓國，而且是一次玩了釜山、大邱跟首爾，在韓國待了兩週，那時沒有寫下太多的心得，只寫了這篇：<a href="https://hulitw.medium.com/travel-part2-818482a90bc9">《旅行的意義（下）：寫在遊阿布達比、歐洲與韓國後》</a>，但我是喜歡去韓國玩的。</p>
+  <p>而我太太也因為員工旅遊的緣故去過首爾幾天，對她來說韓國沒什麼吸引人的地方，去了以後沒什麼感覺。於是我就想說：「好，讓她感受一下釜山跟首爾其實也是好玩又好吃」，這趟旅程就成行了。</p>
+  <p>一共去了韓國十天九夜，前五天在釜山，後五天在首爾，機票的話也是直接買釜山進首爾出，這樣兩個地方都可以玩到。</p>
+  <p>底下一樣以流水帳的形式紀錄每一天的行程跟花費，最後做個總結。因為內容有點長所以會分兩篇，這篇是釜山篇，下一篇是首爾篇。</p>
+  <h3 id="day1">Day1：出師不利，雨雨雨的釜山</h3>
+  <p>我們是搭乘早上大韓航空的飛機前往釜山，大概下午三點的時候抵達，抵達以後先去機場換了釜山必備的 Visit Busan Pass，可以憑這個去多個點免費入場，還可以拿來當作韓國悠遊卡搭乘捷運跟公車。</p>
+  <p>到釜山的時候天氣很差，一直下雨，直接搭捷運到住宿的地方海雲台也是繼續下，而且愈下愈大，絲毫沒有要停的跡象。於是我就直接到便利商店買了一把大傘，不然兩個人只撐一把摺疊傘太苦了。</p>
+  <p>幸好飯店離的跟捷運站很近，走個三分鐘就到了。但儘管只有三分鐘，鞋子還是濕了，褲子下半部也差不多全濕了。沒錯，雨就是這麼大。</p>
+  <p>這三天的住宿在開頭影片中提到的 <a href="https://goo.gl/maps/yZ5nLmL4742fc5vDA">Show hotel</a>，三個晚上的雙人房是 3757 台幣，一個晚上只要 1250 元，真的是很便宜了。但住起來的感覺不太推薦，我自己覺得有點太舊太暗，下次有機會會願意提高個兩三成的預算找更好的房間。</p>
+  <p>放完行李以後雨有變小一點，去附近吃了知名的<a href="https://goo.gl/maps/x8fWGwfK1awtGuMG7">密陽血腸豬肉湯飯</a>，味道還不錯，韓國的這種湯飯基本上沒什麼調味，需要自己去調整，喜歡吃清淡的也可以直接不調。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*zbXhooi9G6-s9ocBCbkaig.jpeg" />    <figcaption>
+那個湯很清淡，可以加左邊那些小菜跟調料一起吃
+    </figcaption>
+  </figure>
+  <p>一碗的價格是 10000 韓元，折合台幣約 245 元。</p>
+  <p>話說這次去韓國，差不多在外面吃飯一餐平均就是一萬韓元，便宜的或許可以到 7000 左右，折合台幣 170 元，跟之前去日本旅遊得到的心得是滿相近的，不過日本有吉野家或是松屋這些可以降低成本，韓國似乎比較沒看到這種類型的連鎖韓食速食店？</p>
+  <p>吃完之後去海邊散步一下，整片都霧濛濛的：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*uBaxsV6DbiffhKmO2pamSA.jpeg" />    <figcaption>
+霧濛濛的海雲台
+    </figcaption>
+  </figure>
+  <p>因為下雨的關係所以之後就先回飯店休息了，晚上的話也沒有再出來，結束了第一天。</p>
+  <h3 id="day2">Day2：一天當兩天用</h3>
+  <p>根據天氣預報，釜山這一週只有今天是陰天，其他天都是雨天。經歷過了昨天的下雨洗禮之後，決定今天趕快把想去的地方都去一去，避免後天因為下雨哪裡都去不了。</p>
+  <p>早上散步到搭乘膠囊列車的地方，已經先在網路上預訂好，不過到現場還是要排個半小時左右：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*cShb7Rb4IXF55esj-Bgf6w.jpeg" />    <figcaption>
+可愛的膠囊列車
+    </figcaption>
+  </figure>
+  <p>這個列車要搭個半小時左右，會夯是因為路線很棒，在搭乘的時候旁邊就直接是海景：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*66Mjvv3SV0UWWGX3WCPn0Q.jpeg" />    <figcaption>
+只是那天天氣不太好而已
+    </figcaption>
+  </figure>
+  <p>兩站的距離大約 20 至 30 分鐘左右，前半段都是無敵海景，後半段會是樹林，體驗還是滿不錯的。到了下一站之後用 VBP(Visit Busan Pass) 換免費的票，搭乘另一種「海岸列車」。</p>
+  <p>海岸列車沒有拍照，但簡單來說膠囊列車是在二樓看海景，海岸列車就是在一樓。一樣看得到海，只是變成是像火車那種車體而已，不過特別的是座椅全部都是面海的。</p>
+  <p>午餐的話吃了網路上找到的釜飯，但重點其實不是釜飯本身，而是一大堆的小菜：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*8akWgrqSFVrKRm0TRS-4QA.jpeg" />    <figcaption>
+看看這滿桌的小菜，來韓國就是這樣
+    </figcaption>
+  </figure>
+  <p>全部這樣配著吃真的滿滿足的，釜飯的話是海鮮的，裡面有鮑魚什麼的，一個人是 18000 韓幣，折合台幣 440 元。</p>
+  <p>吃完之後直接搭公車到附近的 Skyline Luge 玩滑車，會先坐一個像是滑雪場的那種纜車上山，再坐滑車下來，操作簡單滿好玩的，用 VBP 可以免費玩兩次，但我們玩了一次之後就把票給其他台灣人，跑去下一個地方了。</p>
+  <p>下一個點是樂天世界，就在旁邊而已，但是走過去也要個 15 分鐘左右，那天早上雖然陰陰的但是下午直接大太陽，靠北熱，天氣 app 寫說什麼 30 度，但是體感大概跟台北那時候差不多熱了。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*hikp65wvQc0gvXvNLEg_8A.jpeg" />    <figcaption>
+從坐滑車的地方可以看到整個樂天世界
+    </figcaption>
+  </figure>
+  <p>釜山樂天世界是去年才新開的遊樂園，如果你沒有帶小孩，也不敢玩刺激的遊樂設施的話，我建議其實是可以不用去。園區比想像中的再小一點，滿快就可以走完一圈，遊樂設施也不多。</p>
+  <p>那邊主要的幾個遊樂設施都是很刺激的那種，像是雲霄飛車，另外有一兩個是玩水的，從上面衝下來會濕掉的那種，因為我們這兩種都不想玩，所以最後只玩了兒童版的雲霄飛車。</p>
+  <p>在遊樂園大概待一兩個小時以後，原本其實應該是要搭公車回青沙浦，然後搭海岸列車回程，但因為實在是太熱了，所以直接叫計程車回去，到了今天最後一個景點：釜山 X the SKY，是韓國第二高的建築，高度是 411 公尺，而台北 101 高度是 508 公尺，觀景台則在 382 公尺，所以我也不知道以觀景台來說到底哪個比較高。</p>
+  <p>有個很棒的地方是搭電梯上樓時，整個電梯四周都是螢幕，會有精心製作的動畫，例如說上樓的話會是熱氣球上升什麼的，隨著高度變化景色跟內容也會變，就不會覺得搭電梯的時候很無聊。</p>
+  <p>上去以後覺得真的超高，晚上來應該滿漂亮的，但因為晚上有其他行程所以才改成中午來。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*lO22gfya3eOuhPnPvDbciw.jpeg" />    <figcaption>
+100 樓看下去的景色
+    </figcaption>
+  </figure>
+  <p>還有一個沒拍的是他有透明的走廊，說實在的不太敢往下看，100 樓真的太高…</p>
+  <p>逛完之後在 99 樓有全世界最高的星巴克，可以去買杯飲料朝聖一下。</p>
+  <p>看完回飯店休息一下之後，晚餐吃了很期待的味讚王鹽烤肉，是有人幫烤的韓式烤肉，最少要點三人份。不過吃了之後發現其實份量不算多，所以三人份完全沒問題，甚至點到四人五人份我覺得都可以。</p>
+  <p>晚餐的部分點了三份肉外加一個冷麵，花了 5 萬韓元，台幣 1225 元，一個人 600 塊好像也不貴。</p>
+  <p>吃完之後就去今天最後一個行程：鑽石灣遊艇，也是包含在 VBP 的免費景點裡面，就是搭船帶你到海上繞一圈看夜景還有廣安大橋。</p>
+  <p>遊艇比想像中的大，而且人還不少，大概有四十個人左右，整個航程大概一小時多，我覺得滿推薦的，我們是約晚上 8:30 的場次，很漂亮。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*SFHu-IKy1xfODaW1a-tYyw.jpeg" />    <figcaption>
+其中一部分的夜景
+    </figcaption>
+  </figure>
+  <h3 id="day3">Day3：百貨公司逛到飽</h3>
+  <p>第三天跟預期的一樣是個下雨天，中午接近吃飯時間時去了新世界百貨公司逛，不知道要吃什麼的時候發現有間餐廳人特別多，靠近一看才發現是地獄廚房 Gordon Ramsay 開的漢堡店，就進去嚐鮮了。</p>
+  <p>點了凱薩沙拉 + 薯條 + 一個漢堡分著吃，總共是 61000 韓元，約 1500 台幣。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*MfqrBh4njwqtQ2x6Q1We7Q.jpeg" />    <figcaption>
+薯條加凱薩沙拉
+    </figcaption>
+  </figure>
+  <p>凱薩沙拉的菜跟以前吃過的不同，有點苦苦的，不確定是什麼葉子，雞肉的話還不錯。薯條的話很明顯可以吃出馬鈴薯的原味，滿紮實的很有飽足感。</p>
+  <p>至於眾所矚目的漢堡：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*N_xerVd26FX79lhFrKaHSg.jpeg" />    <figcaption>
+漢堡本人
+    </figcaption>
+  </figure>
+  <p>我只能說那個肉是真的好吃，而麵包本身有用奶油之類的去煎過，超級香，整個漢堡的表現都很不錯，難怪這麼多人來吃。</p>
+  <p>下午就繼續在那邊逛，逛完回飯店休息，晚上買了附近的 Egg drop，花了 11000 而已，台幣 270 元，算是這趟旅程吃得最便宜的一餐。</p>
+  <p>這天因為下雨所以整天基本上就是逛百貨公司跟飯店休息睡覺。</p>
+  <h3 id="day4">Day4：換地方囉</h3>
+  <p>這天早上先去附近 Google Maps 找到的自助洗衣店洗衣服，是外國人友善的店，裡面有貼英文的標示，投幣的話沒什麼問題。</p>
+  <p>但如果要用自助機器加信用卡結帳的話，介面是韓文的，剛好店長走進來就順便問了一下怎麼操作，順利用信用卡付錢，洗加烘差不多要個 1 萬韓幣左右，折合台幣 250，是有點小貴。</p>
+  <p>還有碰到一個從丹麥來的外國人也要洗衣服但不會操作，就幫了他一下順便小聊，他說他從首爾下來的，隔天要搭船去九州玩，接著一路往上到京都再到東京。很巧的是他在台灣待過兩年左右，他說他做的是 container shipping，聽的時候不知道是什麼，後來去查才恍然大悟原來 container 就是貨櫃。</p>
+  <p>洗完衣服之後差不多中午了，退房之後先搭車去新的住宿，住的一樣是開頭影片提過的 <a href="https://goo.gl/maps/Ur4385TaudPjhem48">Maron Hotel</a>，兩天是 2757 元，一天 1378 元，也是很划算，而且房間裡面還有超大的電視，可以看 YouTube 跟 Netflix，很適合下雨天。</p>
+  <p>中午隨便吃附近百貨公司的美食街日式拉麵，味道不錯，價格的話是一碗 10000 韓元，約台幣 245 元。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*2Brmrttc6UGfKja3_R2BBw.jpeg" />    <figcaption>
+看起來也是有模有樣的
+    </figcaption>
+  </figure>
+  <p>下午在飯店睡覺滑手機看 YouTube，看看韓國人都在看什麼，發現一直被推薦這個韓國大胃王，有著 800 萬訂閱，超猛：</p>
+  <p><a href="https://www.youtube.com/@tzuyang6145">tzuyang</a></p>
+  <p>晚上的話吃了附近的這個豆腐鍋，小小碗的但是價格也相對便宜，一碗是 7000 韓元，170 台幣：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*I9ugLLJBt2DIJ0Sb3w0TDQ.jpeg" />    <figcaption>
+左邊豆腐鍋，右邊大醬湯
+    </figcaption>
+  </figure>
+  <p>吃完之後去附近散步走走，因為住的地方離釜山塔很近，就順便上去看一下了。入場門票一個人要將近 300 台幣，那邊有自助機器可以直接購票，直接講結論：不推薦。</p>
+  <p>原因是釜山塔的景色普通（可能是不夠高，周遭東西也不夠多），而且有點小，可以待的時間比較少，所以我自己是覺得可以不用特地上去。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*pULljKiFxUjx5X6jThdtsg.jpeg" />    <figcaption>
+釜山塔看出去的夜景
+    </figcaption>
+  </figure>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*EhgHlHjxXczuIinF_BofAQ.jpeg" />    <figcaption>
+釜山塔從八點開始有虛擬煙火，會在玻璃上面投影煙火，但滿假的
+    </figcaption>
+  </figure>
+  <h3 id="day5">Day5：韓國看醫生初體驗</h3>
+  <p>從小的時候開始，我就有異位性皮膚炎，也就是俗稱的濕疹，但狀況就是時好時壞，原本以為長大之後會自己好，沒想到似乎變得越來越糟。在五月離職之後本來想說沒了工作壓力之後應該會好轉，結果不知道為什麼變得更嚴重了，就皮膚紅得很明顯然後會脫屑，還滿麻煩的。</p>
+  <p>吃個一陣子類固醇之後不想繼續吃，轉而投入中醫的懷抱開始吃中藥，就在這樣的狀況下去了韓國旅遊。去旅遊的頭兩天就覺得雙腳大腿靠近膝蓋的位子腫腫痛痛的，但不以為意，想說可能是水腫或是濕疹的關係，直到第三天才察覺到：「靠邀，這該不會就是俗稱的蜂窩性組織炎吧」，因此上網當個鍵盤醫生找了一堆資料。</p>
+  <p>根據我自己的評估，就算是的話狀況應該也不嚴重，原因是：</p>
+  <ol>
+    <li>沒有傷口</li>
+    <li>沒有全身性的症狀</li>
+    <li>似乎有在好轉</li>
+  </ol>
+  <p>但是在前一兩天其實有覺得快要發燒，而且明顯比平常怕冷（不知道是皮膚的關係還是別的原因），為了安全起見，還是決定在韓國看個醫生。</p>
+  <p>直接在網路上搜尋「釜山 外國人 看病」就會出現釜山大學醫院，他們有專門設立一個外國人門診專區，而且有會講中文的護士，於是隔天早上就直接殺去醫院。</p>
+  <p>意外地，外國人專區只有我一個人，簡單說明來意以後就出現了傳說中的會講中文的護士，稍微問了一下我的狀況。等了一些時間之後，她說現在整形科跟感染科的醫生都在罷工（有興趣的可以自己去查新聞，韓國部分醫生最近正在罷工抗議新的醫療法案什麼的），只剩下皮膚科可以看，但要等到下午 1:30（我去的時候是 9:30），請我下午再來。</p>
+  <p>於是我就先回飯店休息一下，時間差不多的時候出來吃個飯，吃完飯散步回醫院。</p>
+  <p>回去之後先在那邊付錢掛號，掛號費大約是 1000 台幣，接著護士帶我到皮膚科抽號碼牌，等的人不多，等了大概十分鐘就進去診間了。進去診間的時候護士一樣都會全程幫忙翻譯，在等待的時候我也有先說明一下自己的狀況以節省時間。</p>
+  <p>總之呢，結論就是應該是輕微的蜂窩性組織炎，要打一針抗生素，皮膚的部分也要打一針類固醇，除此之外還要吃一週的抗生素加類固醇。</p>
+  <p>雖然說一開始我不太想吃類固醇，但醫生說現在皮膚都是急性發炎的狀態，吃一下比較好，我想想也滿有道理，雖然有點擔心停藥之後復發，但如果抗生素起了作用可是皮膚沒好又再次感染就麻煩了。</p>
+  <p>看完之後就先去付錢，打針的部分價錢出乎意料，只要 170 台幣，藥的話一週的類固醇 + 一週的抗生素 + 兩週的抗組織胺 + 一罐低類固醇乳液 = 1070 元。</p>
+  <p>付完錢就去打針了，類固醇是打在接近屁股那裡，護士有先講會痛，還真的滿痛的，而抗生素的話要先打一點確認不會過敏，等了 15 分鐘之後打在手臂的血管上。</p>
+  <p>打完針之後最後一關是拿藥，韓國醫院似乎比較多都是去附近的藥房拿藥，不像台灣是在醫院裡面就可以拿。於是就跑去附近的藥房等了一下，這時候一樣是有護士陪同，拿到藥之後還很貼心地在藥上面幫我用中文寫什麼時候吃，吃幾天之類的，而藥單上面也特別寫下了英文藥名，讓我知道自己吃了什麼。</p>
+  <p>整個體驗都滿不錯的，重點是護士的貼心服務，從頭到尾陪同翻譯，在國外生病的時候有一個能講中文的護士陪同真的很棒，在 Google Maps 上的中文評論也都是在稱讚這個護士，實至名歸。</p>
+  <p>而價格的話看診打針拿藥，總共花了大概 2250 元台幣，在沒有任何醫療保險的狀況下，我覺得是很能接受的價格。</p>
+  <p>以上就是去釜山大學醫院看病的過程，總共花了大約一個小時，如果大家未來去釜山需要看病的話，可以考慮釜山大學醫院。</p>
+  <p>至於後續的話，打了針吃抗生素吃個幾天之後狀況就好多了，大腿也不腫了，一切正常，後續就放心地在韓國繼續玩了，感謝釜山大學醫院的努力，平安度過了一週。</p>
+  <p>最後補一下這天的飲食。</p>
+  <p>這天中午吃的是附近富平豬腳街的弘小豬腳，點了涼拌跟一般各半，再搭配兩碗白飯，總共是 41000 韓元，台幣 1000 塊。會點涼拌是因為網路上的評價都說涼拌比較特別，一般的還好，但我自己吃過之後其實比較喜歡一般的，他是把豬腳切片，那是真的好吃，涼拌的就沒這麼喜歡。</p>
+  <p>傍晚的話就去附近走走，離海邊很近真棒，隨時都可以去海邊或是河邊晃晃：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*TSaZdRsrO7xBh28HzJ1yTw.jpeg" />    <figcaption>
+走路 30 分鐘後可以到的岸邊，都是當地人在這邊運動散步，沒什麼觀光客
+    </figcaption>
+  </figure>
+  <p>回程的時候還買了一根熱狗，每次看韓綜都覺得熱狗很吸引人，實際吃也是覺得好吃，但店家是全韓文的沒有英文菜單，要自己拿翻譯出來翻一下才知道點什麼：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*FKqN7p9gVm6Cs5-1V_0knw.jpeg" />    <figcaption>
+好吃的熱狗
+    </figcaption>
+  </figure>
+  <p>然後那個包裝真的是畫龍點睛，熱狗吃一吃之後可以用包裝把熱狗往前推，就不用自己用嘴巴咬出來。</p>
+  <p>晚餐的話就隨便吃飯店附近的漢堡店，點了一個套餐分著吃，味道還不錯，價格也可以接受，漢堡 + 薯條 + 飲料是 10000 韓元，折合台幣 245 。</p>
+  <p>釜山的部分差不多到這邊就結束了，隔天就會搭韓國高鐵 KTX 從釜山到首爾，進行下一段的旅程，因此這邊先幫釜山做個總結。</p>
+  <p>看起來夏天是個不太適合去釜山玩的天氣，原因是要嘛下雨要嘛很熱，沒辦法感受到海的美麗還有釜山的愜意。</p>
+  <p>我上次去的時候是十月份秋天，天氣涼涼的很舒服又不至於到太冷，而且沒什麼下雨，看來出國旅遊天氣還是個很重要的因素，碰到連續幾天都下大雨的話真的是沒什麼出門玩的心情，會嚴重影響到行程跟開心程度。</p>
+  <p>但整體而言我還是滿喜歡釜山的，而且會願意再次拜訪，無論是那些景點或是食物我都覺得很不錯。雖然說不是每間的泡菜我都喜歡，但是吃飯的時候固定會有不少韓式小菜可以配，我就是很喜歡這個感覺。</p>
+  <p>下集傳送門：<a href="https://medium.com/@hulitw/2023-july-korea-trip-seoul-92ba2d0608ff">2023 年 7 月南韓十日遊心得：首爾篇</a></p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=a475e484e1fc" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2023-07-31</time>
+        <a href="https://nodebe4.github.io/oped2/2023-07-31/%E8%A8%98%E9%8C%84%E4%BD%A0%E7%9A%84%E9%A3%9B%E8%A1%8C%E8%BB%8C%E8%B7%A1-myflightradar24/">
+          記錄你的飛行軌跡：myflightradar24
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-07-27</time>
+        <a href="https://nodebe4.github.io/oped2/2023-07-27/2023-%E5%B9%B4-7-%E6%9C%88%E5%8D%97%E9%9F%93%E5%8D%81%E6%97%A5%E9%81%8A%E5%BF%83%E5%BE%97-%E9%A6%96%E7%88%BE%E7%AF%87/">
+          2023 年 7 月南韓十日遊心得：首爾篇
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-07-01</time>
+        <a href="https://nodebe4.github.io/oped2/2023-07-01/2023-%E5%B9%B4-6-%E6%9C%88%E6%BE%B3%E9%96%80%E4%B8%89%E5%A4%A9%E5%85%A9%E5%A4%9C%E5%B0%8F%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+          2023 年 6 月澳門三天兩夜小旅遊心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-05-26</time>
+        <a href="https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/">
+          2023 日本北九州 19 天 18 夜遊記之九州怎麼這麼大
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-07-24/Xi-Jinping-s-Three-Balancing-Acts/">
+            前一篇：Xi Jinping’s Three Balancing Acts
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-07-27/2023-%E5%B9%B4-7-%E6%9C%88%E5%8D%97%E9%9F%93%E5%8D%81%E6%97%A5%E9%81%8A%E5%BF%83%E5%BE%97-%E9%A6%96%E7%88%BE%E7%AF%87/">
+            後一篇：2023 年 7 月南韓十日遊心得：首爾篇
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-07-24/Xi-Jinping-s-Three-Balancing-Acts/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-07-27/2023-%E5%B9%B4-7-%E6%9C%88%E5%8D%97%E9%9F%93%E5%8D%81%E6%97%A5%E9%81%8A%E5%BF%83%E5%BE%97-%E9%A6%96%E7%88%BE%E7%AF%87/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-07-27/2023-%E5%B9%B4-7-%E6%9C%88%E5%8D%97%E9%9F%93%E5%8D%81%E6%97%A5%E9%81%8A%E5%BF%83%E5%BE%97-%E9%A6%96%E7%88%BE%E7%AF%87/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-07-01/2023-%E5%B9%B4-6-%E6%9C%88%E6%BE%B3%E9%96%80%E4%B8%89%E5%A4%A9%E5%85%A9%E5%A4%9C%E5%B0%8F%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-07-24/Xi-Jinping-s-Three-Balancing-Acts/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-07-27/2023-%E5%B9%B4-7-%E6%9C%88%E5%8D%97%E9%9F%93%E5%8D%81%E6%97%A5%E9%81%8A%E5%BF%83%E5%BE%97-%E9%A6%96%E7%88%BE%E7%AF%87/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-07-27/2023-%E5%B9%B4-7-%E6%9C%88%E5%8D%97%E9%9F%93%E5%8D%81%E6%97%A5%E9%81%8A%E5%BF%83%E5%BE%97-%E9%A6%96%E7%88%BE%E7%AF%87/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-07-01/2023-%E5%B9%B4-6-%E6%9C%88%E6%BE%B3%E9%96%80%E4%B8%89%E5%A4%A9%E5%85%A9%E5%A4%9C%E5%B0%8F%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

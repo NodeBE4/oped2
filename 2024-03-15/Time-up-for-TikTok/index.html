@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Time up for TikTok? – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Time up for TikTok?
+——
+" />
+    <meta property="og:description" content="
+Time up for TikTok?
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Time up for TikTok?" />
+    <meta property="twitter:title" content="Time up for TikTok?" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Ftime-tiktok" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/time-tiktok" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/time-tiktok&text=Time up for TikTok?&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/time-tiktok&title=Time up for TikTok?" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/time-tiktok&title=Time up for TikTok?" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Time up for TikTok?&body=
+Time up for TikTok?
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/time-tiktok" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/time-tiktok&title=Time up for TikTok?&caption=
+Time up for TikTok?
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Time up for TikTok?&url=https://www.chinafile.com/conversation/time-tiktok" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Time up for TikTok?</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-03-15
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Aynne Kokas, Julian G. Ku &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/time-tiktok" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1710524520000-->
+<p><a href="https://www.chinafile.com/conversation/time-tiktok">Time up for TikTok?</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-78ad646f6804b19ae62a32f2baa4e975">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/55261_sm.jpg" title="Time up for TikTok?" class="colorbox" data-colorbox-gallery="gallery-node-55261-eZc8A3HhyU8" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/55261_sm.jpg?itok=HFW1z-Kv" width="1500" height="1000" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Gonzalo Marroquin—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A sign at the TikTok Oscars Viewing Party at Bar Lis in Los Angeles, California, March 10, 2024.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">On March 13, in a rare moment of bipartisanship, the House of Representatives overwhelmingly <a href="https://www.reuters.com/technology/us-house-vote-force-bytedance-divest-tiktok-or-face-ban-2024-03-13/" target="_blank" rel="nofollow">passed</a> a bill that could result in TikTok’s being unable to do business in the U.S.</p>
+      <p>The bill is called the <a href="https://www.congress.gov/bill/118th-congress/house-bill/7521/text" target="_blank" rel="nofollow">Protecting Americans from Foreign Adversary Controlled Applications Act</a>. Its proponents <a href="https://lamalfa.house.gov/media-center/press-releases/congressman-lamalfa-votes-protect-americans-data-foreign-adversaries#:~:text=This%20bill%20addresses%20the%20immediate,or%20other%20adversaries%20do%20not" target="_blank" rel="nofollow">say</a> that it’s <a href="https://x.com/repjeffduncan/status/1768002769313530069?s=46&amp;t=o97I1VQRWdCDqRAIXhBjYQ" target="_blank" rel="nofollow">not a ban</a>, it just requires divestiture by ByteDance and the sale of TikTok within six months to a company that isn’t subject to the control of the Chinese Communist Party, Russia, Iran, or North Korea. But if the Senate passes the bill and it becomes law, TikTok and its parent company ByteDance will be in a very uncomfortable situation. Beijing may not allow ByteDance to sell China’s most successful international Internet service, and six months may not be enough time for a sale.</p>
+      <p>Although President Joe Biden has said he plans to sign the bill, it could very well get bogged down at the Senate, and Donald Trump this week <a href="https://www.cnbc.com/2024/03/11/trump-says-a-tiktok-ban-would-empower-meta-slams-facebook-as-enemy-of-the-people.html" target="_blank" rel="nofollow">said</a> he would not support a TikTok ban (shortly after <a href="https://www.businessinsider.com/trump-tiktok-comments-meeting-with-billionaire-investor-jeff-yass-2024-3" target="_blank" rel="nofollow">meeting with</a> one of the major American investors in ByteDance).</p>
+      <p>What does the rapid passage of the bill in the House say about the state of Washington’s attitude to China? How would a potential sale work? How is Beijing likely to react? Is TikTok really a threat to the U.S.? What does the Act tell us about the state of the world and the global Internet in 2024? —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-10651" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/aynne-kokas"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/kokas.jpg?itok=IRZDoaWo" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="aynne-kokas"><a href="https://www.chinafile.com/contributors/aynne-kokas" title="Aynne Kokas">Aynne Kokas</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">TikTok presents significant challenges to the U.S. as I discuss in my book, <a href="https://www.amazon.com/Trafficking-Data-Winning-Digital-Sovereignty/dp/0197620507" target="_blank" rel="nofollow"><em>Trafficking Data: How China Is Winning the Battle for Digital Sovereignty</em></a>. The challenge individual users most commonly cite is personal surveillance. While the most seemingly creepy, it is actually the least directly risky for the majority of everyday users (although it remains a serious concern for individuals in sensitive political categories, such as activists who focus on issues like Taiwan, Tibet, and Xinjiang, as well as others with access to sensitive information).</p>
+        <p>Collective risks, or capabilities generated by gathering and aggregating large amounts of user data, are more difficult to conceptualize and respond to, and thus easier to ignore. However, TikTok’s gathering of large troves of data can improve consumer targeting, making apps more appealing to users, increasing data traffic, and allowing TikTok to outcompete other apps. Such a practice presents an economic competition concern for U.S. firms unable to gather user data in China to refine their apps, and an economic security concern because of the variety of legal mechanisms the Chinese government has to pressure TikTok’s parent company, ByteDance. Despite the app’s claims of autonomy, the Chinese government has come out loudest against forced divestment of the app.</p>
+        <p>Other collective risks include the possibility that a hostile actor could precisely target mis- and disinformation campaigns based on population-level knowledge gleaned from social data. Perhaps the most prominent of these tactics is to use existing concerns to sow further social discord on issues that already are of great sensitivity in the U.S. population. TikTok obviously is not the only place this happens. Young democratic activists have also <a href="https://www.politico.com/news/2024/03/14/tiktok-ban-biden-young-voters-00147014" target="_blank" rel="nofollow">cautioned</a> the Biden Administration against signing this law into effect because of the app’s powerful ability to target key voting blocs. However, TikTok is the only current major U.S. social media app whose algorithm is subject to export approval by the Chinese government and whose parent company is subject to Chinese national security data audits.</p>
+        <p>The Protecting Americans from Foreign Adversary Controlled Applications Act offers ByteDance divestment of its TikTok U.S. operations as an alternative to banning the app in the United States. Realistically, selling TikTok during a six-month period would be challenging. It took a year to find a suitable buyer following CFIUS’ <a href="https://www.reuters.com/article/us-grindr-m-a-sanvincente-idUSKBN2352PR/#:~:text=China's%20Kunlun%20says%20U.S%20approves%20sale%20of%20Grindr%20to%20investor%20group,-By%20Echo%20Wang&amp;text=(Reuters)%20%2D%20Chinese%20gaming%20company,called%20San%20Vicente%20Acquisition%20LLC." target="_blank" rel="nofollow">decision</a> to force Beijing Kunlun Tech’s divestment of Grindr in 2019. Even if ByteDance found a suitable buyer, it would also have to pass a Federal Trade Commission <a href="https://www.ftc.gov/news-events/topics/competition-enforcement/merger-review" target="_blank" rel="nofollow">antitrust review</a>.</p>
+        <p>In the unlikely event of a successful ByteDance divestment in the U.S., it is equally unlikely that the Chinese government would allow it. China requires a technology export license for the export of the key technologies that allow TikTok to function. Beyond blocking a technology export license, Beijing could potentially respond with a range of different approaches, from ramping up nationalist discourse on social media to asymmetrical trade retaliation to other types of cyber attacks or other flexes of strength not related to the tech sector. The degree and direction of China’s response is unpredictable.</p>
+        <p>Ultimately, what this bill tells us is that the U.S. is still not willing to work toward powerful nationwide data protection regulations that could protect users not just from data exploitation by TikTok, but from data gathering by other firms with ties to China such as <a href="https://www.chinafile.com/library/excerpts/appliances-are-listening" target="_blank" rel="nofollow">appliance companies</a> and health tech firms, to say nothing of the predatory practices of U.S.-based tech firms.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10661" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/julian-g-ku"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/julian-ku-highres.jpg?itok=uzYnyrGB" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="julian-g-ku"><a href="https://www.chinafile.com/contributors/julian-g-ku" title="Julian G. Ku">Julian G. Ku</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Opponents of the Protecting Americans from Foreign Adversary Controlled Applications Act (the “Protect Act”) have argued that the proposed law represents an unprecedented expansion of U.S. government power to censor speech. As one congressional opponent <a href="https://twitter.com/jahimes/status/1767920202304356696?ref_src=twsrc%5Etfw" target="_blank" rel="nofollow">argued</a>, “one of the key differences between us and those adversaries is the fact that they shut down newspapers, broadcast stations, and social media platforms. We do not.” This argument, while superficially appealing, is wrong. For well over one hundred years, U.S. law has blocked foreign (not just Chinese) control of certain crucial U.S. electronic media. The Protect Act fits comfortably within this long tradition.</p>
+        <p>From the dawn of the electronic communications era, the U.S. government has sought to limit foreign ownership of electronic media. The 1912 Radio Act, the first comprehensive effort to regulate electronic communications in U.S. history, imposed foreign ownership limits on holders of radio licenses. Congress passed new legislation in 1927 for radio licenses, and eventually created the modern regulatory system of broadcast and telecommunications regulations with the Federal Communications Act of 1934. Each of these new laws maintained strict limits on foreign ownership of broadcast licenses begun in the 1912 Radio Act, eventually <a href="https://www.fcc.gov/general/foreign-ownership-rules-and-policies-common-carrier-aeronautical-en-route-and-aeronautical#:~:text=Section%20310(b)(3,or%20aeronautical%20radio%20station%20licensee." target="_blank" rel="nofollow">imposing</a> a 20 percent limit on foreign ownership (25 percent for holding companies) that is still in place today. In a famous example of this law’s impact, media mogul Rupert Murdoch <a href="https://www.theguardian.com/media/2003/aug/24/rupertmurdoch.business" target="_blank" rel="nofollow">gave up</a> his Australian citizenship in order to be able to purchase television broadcaster 20th Century Fox.</p>
+        <p>The Protect Act is a continuation of this tradition. It <a href="https://deadline.com/2024/03/tiktok-ban-passes-house-1235857133/" target="_blank" rel="nofollow">addresses</a> the immediate national security risks posed by TikTok and establishes a framework for the Executive Branch to protect Americans from future foreign adversary controlled applications by limiting foreign adversary ownership to the same 20 percent cap imposed on broadcasters. Seen in this historical context, the Protect Act is not a ban, but just another measure to ensure that important U.S. electronic media is no longer controlled by a foreign entity, especially one that has become increasingly hostile. Put another way, current U.S. law would prevent any foreign company from buying ABC, CBS, or Fox. That is not a “ban,” but it is a condition on the operation of those businesses within the U.S. The Protect Act simply extends this approach to social media, which makes sense given that <a href="https://www.cjr.org/the_media_today/democrats_tiktok_news_ban_biden.php" target="_blank" rel="nofollow">studies</a> show an increasingly large percentage of Americans use social media to get news.</p>
+        <p>This long American tradition of limiting foreign ownership over domestic electronic media will also strengthen the Protect Act against First Amendment challenges. Courts will be more likely to recognize a good faith U.S. national security interest in limiting foreign media ownership if it is one that has been part of U.S. law for over a hundred years.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10666" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/jeremy-daum"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/daum_sm.png?itok=LEJOtZ1M" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="jeremy-daum"><a href="https://www.chinafile.com/contributors/jeremy-daum" title="Jeremy Daum">Jeremy Daum</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">There are a lot of reasons people worry about TikTok, so it’s no surprise a bill targeting it would generate so much political support. There are security concerns surrounding the millions of U.S. users’ data that may flow to China. There are concerns about the harmful impact of the app on younger users, and that it may encourage imitation of high-risk behavior, addiction, or suicidal ideation. And there are concerns that the app is a powerful tool for Chinese propaganda, able to censor messages that China’s leaders dislike and boost narratives they prefer.</p>
+        <p>Some of these problems are unique to a company with strong ties to China, others are common to all large social media platforms. Yet in discussing TikTok, these diverse issues are often lumped together as a more amorphous threat inherent to a popular “foreign adversary controlled app,” as Congress’ <a href="https://www.congress.gov/bill/118th-congress/house-bill/7521/text" target="_blank" rel="nofollow">bill</a> describes it. It matters, however, which of these concerns are asserted as the purpose of the law. When the government seeks to limit speech, we need to evaluate the legitimacy of its interests, and how well tailored the law is toward serving those interests.</p>
+        <p>And yes, forcing a sale or banning TikTok limits speech. The app’s curation and arrangement of content is itself a form of protected speech. This is the core of TikTok’s functionality and what makes it unique and popular. It’s not only about TikTok’s or ByteDance’s speech rights, however, but about the rights of the U.S. citizen users to access global content, and have their own content presented through Tiktok’s curation. Users of “X” (Twitter) might be familiar with how much a change in ownership can impact the content one sees.</p>
+        <p>There hasn’t been a clear and unified articulation of the need for this law; moreover, most of the concerns don’t ring true. If the concern is China’s access to data, we should be adopting comprehensive protections for such data, or at least restricting China’s access to it. If the concern is protecting minors, we should keep drafting and better enforcing laws to protect minors on all social media platforms. If the concern is propaganda, well, citizens <a href="https://supreme.justia.com/cases/federal/us/381/301/" target="_blank" rel="nofollow">can decide</a> if they want to read propaganda themselves without the government’s help.</p>
+        <p>The failure to more fully address these problems beyond Tiktok doesn’t just mean that the Protecting Americans from Foreign Adversary Controlled Applications Act will be less effective, it raises the question of whether these motives are the government’s real reasons for embracing the Act at all. I suspect that they are not, which is why seemingly viable solutions to data security concerns, like <a href="https://mashable.com/article/project-texas-tiktok" target="_blank" rel="nofollow">Project Texas</a>, never gained much traction. The real purpose is “to counter China”—that magical “Open Sesame” for bridging the gap across the aisle in U.S. politics.</p>
+        <p>There are of course a lot of things we might wish to change about China. Among these are Chinese law’s censorship requirements, punishment of speech that is deemed illegal, and <a href="https://zh.greatfire.org/search/all/chinalawtranslate.com" target="_blank" rel="nofollow">blocking access</a> to foreign websites and apps. Our consideration of this proposed law, however, is not really a China issue at all, but a question of U.S. law and Constitutional values. Still, our decision will have international consequences. Should we start banning apps based on their foreign ownership, rather than addressing specific provable misconduct, it will be seen by other nations as legitimizing the practice, and by China as confirming that our commitment to freedom of speech only applies when we hold the microphone.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10676" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/rui-zhong"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/profilephoto.jpg?itok=ZVZ-BK-n" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="rui-zhong"><a href="https://www.chinafile.com/contributors/rui-zhong" title="Rui Zhong">Rui Zhong</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Bytedance is a Chinese company. American policymakers believe that this implies, first and foremost, that it competes with American companies, and also that it acts as a de facto propaganda arm of the Chinese government. To Chinese officials, however, Bytedance is more adversary than ally: However much technology firms may comply with laws and official direction, the Chinese state views <a href="https://www.cambridge.org/core/journals/china-quarterly/article/who-not-what-the-logic-of-chinas-information-control-strategy/4DC69883679770CBCDB1F1B87A34F09E" target="_blank" rel="nofollow">influential forces</a> in civil society, such as social media and civic groups, as entities to be monitored. Even entertainment and content creation can host “thought leaders” that distract or dissatisfy state cultural norms and desires.</p>
+        <p>Chinese technology firms operate in a space where government authority over their products is absolute, albeit overly centralized and slow. Douyin and Toutiao, two of the apps that Bytedance operates in the Chinese market, do not have the same lobbying tools that TikTok can use. Compliance with political censorship trends and directives is the default.</p>
+        <p>But that does not mean, as is sometimes argued in U.S. discussions of TikTok, that Douyin is purposefully made to be a “cleaner” platform of moral education than TikTok because it is made for the Chinese market, while ByteDance is happy to miseducate American teenagers. In fact, low-brow comedy, fashion, food, and popular culture are major reasons why Chinese users continue to flock to social media. Rural content creators in particular, long neglected by Chinese social media communities, have found success by <a href="https://www.sixthtone.com/news/1014233" target="_blank" rel="nofollow">video blogging</a> their work and selling products, which has led to controversial business practices and <a href="https://jingdaily.com/posts/douyins-e-commerce-clampdown-platform-cancels-controversial-sales-star-xinba" target="_blank" rel="nofollow">exploitation</a> by and of influencers.</p>
+        <p>As the Senate debates the TikTok sale bill, American pundits insist that Douyin <a href="https://nypost.com/2023/02/25/china-is-hurting-us-kids-with-tiktok-but-protecting-its-own/" target="_blank" rel="nofollow">protects youth</a> and instills good values while TikTok does not. However, Chinese censorship itself disputes the present existence of Douyin as “clean” social media. State censors have deleted content that is subversive, sexual, or otherwise deemed inappropriate. For instance, the app <a href="https://www.theguardian.com/world/2022/jun/06/chinese-star-taken-offline-after-showing-tank-cake-on-tiananmen-anniversary" target="_blank" rel="nofollow">censored</a> one influencer who showed a cake shaped like a tank ahead of June 4. While the censorship of Tiananmen-related historical images is unique to Chinese interests, the Chinese state still prioritizes shaping youth culture and stopping the spread of “unclean” or morally subversive content on social media.</p>
+        <p>China’s goal for a more moral domestic Internet remains a work in progress, even within the great firewall. Young Internet users, however censored they are, will opt to waste time on their phones. Rather than slinging “digital opium” monikers that <a href="https://www.bloomberg.com/view/articles/2020-08-09/tiktok-is-the-superweapon-in-china-s-cultural-warfare?sref=ojq9DljU" target="_blank" rel="nofollow">emerged</a> during prior attempts to ban TikTok, current policy debates have an opportunity to think inclusively and internationally about Bytedance’s portfolio.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10681" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/kaiser-kuo"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/kuo_sm.jpg?itok=HZsqPGHB" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="kaiser-kuo"><a href="https://www.chinafile.com/contributors/kaiser-kuo" title="Kaiser Kuo">Kaiser Kuo</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The bill that got through Congress on Wednesday to effectively ban TikTok—let’s not pretend either that this bill isn’t specifically about TikTok, or that a forced divestiture isn’t tantamount to a ban—is the latest example of a classic pattern of American behavior: In a panicked attempt to preserve the American way of life, we undermine that very way of life. This time, we seem to be falling over one another to sacrifice our openness, a cornerstone of American strength, out of exaggerated fear that a social media app owned by a Chinese company could be our undoing. As usual, this whole episode says much more about us than it does about China. We have a terrible track record of making bad decisions while in the throes of a moral panic, from Prohibition to the Patriot Act. A closer analogy can be found in the Trump administration’s moves to <a href="https://www.nytimes.com/2020/05/28/us/politics/china-hong-kong-trump-student-visas.html" target="_blank" rel="nofollow">restrict</a> Chinese STEM students and researchers from coming and working in the U.S., and the subsequent <a href="https://www.npr.org/2022/02/23/1082593735/justice-department-china-initiative" target="_blank" rel="nofollow">China Initiative</a>. Out of a fear that Chinese industrial espionage would confer an advantage on Beijing, we somehow decided that we were better off if all that prodigious Chinese STEM talent went back to China or just stayed there.</p>
+        <p>If we accept that we ought to take preemptive action against threats to national security, even if they are only latent and potential, any actions should address those potential threats in good faith. In this case, the threats are data harvested by social media falling into the hands of the Chinese, and social media being used by China to advance a hostile agenda. The bill now making its way to the Senate does not address either of these threats. Instead, it takes aim only at one relatively minor potential vector. Not only is the preponderance of valuable data on TikTok out in the open—the content itself, not the metadata—and would be there just the same irrespective of who owned the company, but Beijing can easily either buy valuable data from brokers, vacuum it up from other social media properties, or just acquire it the old fashioned way, through hacking.</p>
+        <p>That the motive behind this bill is not, in fact, data security is driven home by the refusal of legislators to accept ByteDance’s own proposal, Project Texas, which was devised in consultation with the Austin-based tech company Oracle and The Committee on Foreign Investment in the United States (CFIUS) and would see data localized and housed entirely on servers controlled by Oracle with oversight entirely by U.S. citizens vetted and approved by Oracle. Project Texas would make TikTok the most locked-down, secure social media property in the U.S., if not in the world. The notion that even under that plan, Beijing would still decide to squeeze ByteDance just to acquire data it could obtain far more easily, and in ways that wouldn’t seriously imperil the only Chinese social media company to have enjoyed any global success, is just risible.</p>
+        <p>And influence? If TikTok is a potent vector for Chinese propagandists, one has to ask: How’s that working out for you, Beijing? Across its years of popularity, American attitudes toward China have plummeted, not improved. If we’re looking for causation, it is clear enough that, if anything, it’s our low national opinion of China driving D.C.’s animus toward TikTok. In a sense, the threat of TikTok is real: In this crisis of confidence, and in a state of moral panic that we’ll look back on red-faced a decade out, TikTok is causing us to inflict grievous self-harm.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10686" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/louise-matsakis"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/matsakis_sm.jpg?itok=Z4nHQBS3" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="louise-matsakis"><a href="https://www.chinafile.com/contributors/louise-matsakis" title="Louise Matsakis">Louise Matsakis</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">TikTok has become a symbol of two things in Washington that both Democrats and Republicans have come to agree are urgent issues. The first is ensuring China is prevented from controlling critical Internet infrastructure and certain advanced technologies, especially those deemed vital for national security. Banning TikTok, in other words, is part of the same broader policy logic that led to the <a href="https://www.cfr.org/backgrounder/chinas-huawei-threat-us-national-security" target="_blank" rel="nofollow">exclusion</a> of Huawei from 5G networks and <a href="https://www.cnbc.com/2023/10/17/us-bans-export-of-more-ai-chips-including-nvidia-h800-to-china.html" target="_blank" rel="nofollow">bans</a> on Nvidia selling cutting-edge semiconductors to Chinese firms.</p>
+        <p>The second issue could actually be the bigger driver of the proposed ban of TikTok, at least for some lawmakers: Over the last several years, a bipartisan consensus has emerged that unrestricted access to social media is harming children. Both times that TikTok CEO Shou Zi Chew testified before Congress, elected officials asked him more questions about what his company was doing to protect minors than about TikTok’s connections to its Chinese parent company ByteDance. That’s likely a reflection of the fact that voters generally care more about things impacting their kids than about geopolitical competition.</p>
+        <p>If this bill passes, only a very small group of private equity firms and multinational companies could afford to buy TikTok’s U.S. business, which may be <a href="https://www.bloomberg.com/news/articles/2023-03-14/tiktok-considers-divesting-from-bytedance-if-deal-with-us-fails" target="_blank" rel="nofollow">valued</a> at $50 billion. Beijing will likely try to block the sale, citing export restrictions it introduced a few years ago. When former President Donald Trump first tried to ban TikTok in 2020, the Chinese government <a href="https://www.nytimes.com/2020/08/29/technology/china-tiktok-export-controls.html" target="_blank" rel="nofollow">passed</a> rules requiring firms to get permission before they can sell technology like TikTok’s recommendation algorithm to foreign investors.</p>
+        <p>But at the same time, it’s not clear Beijing cares all that much about protecting TikTok. The video app’s user base is starting to age and growth is flatlining, all while it continues to <a href="https://www.theinformation.com/articles/tiktok-ban-bill-spotlights-open-secret-app-loses-money" target="_blank" rel="nofollow">lose billions of dollars</a> annually, according to The Information. Even if TikTok does end up being sold, China has arguably already won. The years-long panic over the app in Washington helped legitimize the Chinese Communist Party’s model for governing the global Internet. Other countries may now try to block American social media platforms the same way China did in the past, and they can cite the U.S. government’s treatment of TikTok as justification.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10696" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/Graham-Webster"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/webster.graham.headshot.jpeg?itok=PW6p15Tf" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="graham-webster"><a href="https://www.chinafile.com/contributors/Graham-Webster" title="Graham Webster">Graham Webster</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">No one should be confident about what will happen to TikTok in the United States. The recently-passed House bill may or may not pass the Senate. If it does, and President Biden signs it into law, a torrent of litigation will almost certainly result, likely offering procedural and First Amendment free speech challenges. Should the law withstand judicial scrutiny long enough for 180 days to elapse—the time allotted for TikTok to sever its ties with ByteDance or face a ban—the company <a href="https://nz.news.yahoo.com/tiktok-plans-full-legal-fight-183013031.html" target="_blank" rel="nofollow">reportedly</a> would pursue divestment only as a last resort. Even if it tries to, it may not get the deal done in time. If divestment is not completed, the Executive Branch will likely order Apple and Google to remove TikTok from their app stores, which will almost certainly result in further high-stakes lawsuits, during which a court may or may not suspend the ban. If it’s not suspended, TikTok will effectively be at least temporarily banned from normal use. If so, U.S. users might become more adept with VPNs or side-loading apps. If, if, if, if.</p>
+        <p>The only thing that is certain, if the bill becomes law, is that millions of dollars will go to expensive law firms, and the issue will remain alive for many months.</p>
+        <p>Any assessment that takes seriously the potential downsides of Chinese intelligence services targeting individuals for recruitment or retaliation, or of pushing a particular message to more than 100 million users, must conclude TikTok poses a non-zero national security risk. This is especially true in some of the darker potential futures of U.S.-China relations. But the size of that risk, how unique it is to TikTok or other China-linked companies, and how best to handle it are difficult questions.</p>
+        <p>There are other approaches. At the most sanguine, one could conclude that U.S. society is transparent enough that TikTok doesn’t offer anything special to Chinese spies, and the public sphere is robust enough to withstand a propaganda play in a crisis. A more cautious stance might require that TikTok verifiably store U.S. user data outside of China and restrict data access and content functions such that relevant control is denied to those that can be pressured by China’s government. This is precisely the point of <a href="https://www.lawfaremedia.org/article/project-texas-the-details-of-tiktok-s-plan-to-remain-operational-in-the-united-states" target="_blank" rel="nofollow">Project Texas</a>, the proposal the company and U.S. officials developed to mitigate risks through operational silos and a system of audits. Rejecting this focused effort to mitigate specific risks, the present bill’s stance is that ownership—specifically 20 percent or more—is tantamount to control, and that changing ownership will remove the risks.</p>
+        <p>Whether you estimate the risks to be dire or mundane, it is a sign of dysfunction that the House and the Biden administration find this ownership proxy appealing, rather than developing legislation or other means to focus on the risks themselves. A company can operate free of the relevant forms of control while investors in a rival country profit. A company can also be domestically owned and compromised. Policymakers are losing focus.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10701" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/yaqiu-wang"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/wangyaqiu.jpeg?itok=b9qqIj2m" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="yaqiu-wang"><a href="https://www.chinafile.com/contributors/yaqiu-wang" title="Yaqiu Wang">Yaqiu Wang</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">America is struggling to agree on what to do about TikTok. A ban will have free speech implications, but maintaining the status quo poses real national security risks. That TikTok represents a conundrum at all, though, is a sign of how difficult it is for Washington to proactively resolve debates about data, freedom, and security.</p>
+        <p>While the United States is a leader in tech innovation, we lag behind some of our democratic peers in rights-respecting regulation. Unfortunately, we still lack a comprehensive set of laws to address how tech companies process user data and moderate content. These laws could have helped us limit the kind of data TikTok could share with the Chinese Communist Party (CCP), including through third-party data brokers. Laws on platform transparency could have provided more insight about how large platforms like TikTok may have censored, suppressed, or promoted content at the request of the CCP, a subject that is increasingly on the minds of observers and elected officials.</p>
+        <p>These laws could have created opportunities for evidence-based policymaking and increased scrutiny from legislators and civil society. And if TikTok failed to fully comply, Washington could have fined the company millions or billions, which could then have been invested in safeguarding digital and national security.</p>
+        <p>Unfortunately, that’s not currently the case.</p>
+        <p>TikTok presents unique national security and human rights concerns. This is because the platform’s parent company, ByteDance, is effectively beholden to the CCP, one of the worst human rights abusers in the world with a record of leveraging Chinese companies to undermine democracy and human rights globally. The risks of TikTok being exploited by the CCP for malign purposes—for instance, to shape the information environment in the United States in the event of a national crisis or a seismic international event—are very real and need to be taken seriously.</p>
+        <p>In recent years, the CCP has ramped up its effort to undermine American security and democracy, by spreading <a href="https://apnews.com/article/disinformation-china-us-xinjiang-global-opinion-c9e033f22622841935a2b1bc1060c01b" target="_blank" rel="nofollow">disinformation</a>, attempting to <a href="https://www.nytimes.com/2024/02/15/business/media/chinese-influence-campaign-division-elections.html" target="_blank" rel="nofollow">influence</a> elections, and initiating <a href="https://apnews.com/article/fbi-china-espionage-hacking-db23dd96cfd825e4988852a34a99d4ea" target="_blank" rel="nofollow">cyberattacks</a> on critical infrastructure, among other things. TikTok could be an effective tool for the CCP to spread disinformation and affect political mobilization in the United States.</p>
+        <p>That being said, we can’t forget that the same TikTok, with 170 million users in the United States, is an important platform for people across the country to express themselves, access information, and connect with loved ones. And America has always prided itself, rightly, on being a champion of free speech and the free flow of information across borders.</p>
+        <p>TikTok is a hard problem to solve, but solving it requires a balance to be struck between legitimate national security needs, human rights, and free expression.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2024-04-29</time>
+        <a href="https://nodebe4.github.io/oped2/2024-04-29/Lessons-from-Tiananmen-for-Today-s-University-Pres/">
+          Lessons from Tiananmen for Today’s University Presidents
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-04-19</time>
+        <a href="https://nodebe4.github.io/oped2/2024-04-19/A-New-Round-of-Restrictions-Further-Constrains-Rel/">
+          A New Round of Restrictions Further Constrains Religious Practice in Xinjiang
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-03-08</time>
+        <a href="https://nodebe4.github.io/oped2/2024-03-08/Xinjiang-Authorities-Are-Retroactively-Applying-La/">
+          Xinjiang Authorities Are Retroactively Applying Laws to Prosecute Religious Leaders as Criminals
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-03-07</time>
+        <a href="https://nodebe4.github.io/oped2/2024-03-07/ChinaFile-Presents-A-Wild-Ride-through-China-s-Ec/">
+          ChinaFile Presents: A Wild Ride through China’s Economy with Author Anne Stevenson-Yang
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2024-03-08/Xinjiang-Authorities-Are-Retroactively-Applying-La/">
+            前一篇：Xinjiang Authorities Are Retroactively Applying Laws to Prosecute Religious Leaders as Criminals
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2024-04-09/%E5%93%A9%E7%A8%8B%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%88%B7%E5%8D%A1%E7%B4%AF%E7%A9%8D%E5%93%A9%E7%A8%8B-%E7%9C%9F%E7%9A%84%E6%9C%89%E6%AF%94%E8%BC%83%E5%88%92%E7%AE%97%E5%97%8E/">
+            後一篇：哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2024-03-08/Xinjiang-Authorities-Are-Retroactively-Applying-La/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2024-04-09/%E5%93%A9%E7%A8%8B%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%88%B7%E5%8D%A1%E7%B4%AF%E7%A9%8D%E5%93%A9%E7%A8%8B-%E7%9C%9F%E7%9A%84%E6%9C%89%E6%AF%94%E8%BC%83%E5%88%92%E7%AE%97%E5%97%8E/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2024-04-19/A-New-Round-of-Restrictions-Further-Constrains-Rel/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2024-03-08/Xinjiang-Authorities-Are-Retroactively-Applying-La/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2024-03-08/Xinjiang-Authorities-Are-Retroactively-Applying-La/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2024-04-09/%E5%93%A9%E7%A8%8B%E6%96%B0%E6%89%8B%E5%85%A5%E9%96%80-%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E5%88%B7%E5%8D%A1%E7%B4%AF%E7%A9%8D%E5%93%A9%E7%A8%8B-%E7%9C%9F%E7%9A%84%E6%9C%89%E6%AF%94%E8%BC%83%E5%88%92%E7%AE%97%E5%97%8E/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2024-04-19/A-New-Round-of-Restrictions-Further-Constrains-Rel/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2024-03-08/Xinjiang-Authorities-Are-Retroactively-Applying-La/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

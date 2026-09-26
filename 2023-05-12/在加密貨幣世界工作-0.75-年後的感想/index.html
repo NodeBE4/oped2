@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>在加密貨幣世界工作 0.75 年後的感想 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+在加密貨幣世界工作 0.75 年後的感想
+——
+" />
+    <meta property="og:description" content="
+在加密貨幣世界工作 0.75 年後的感想
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="在加密貨幣世界工作 0.75 年後的感想" />
+    <meta property="twitter:title" content="在加密貨幣世界工作 0.75 年後的感想" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2Fafter-working-at-web3-industry-for-8-months-60954d84ff0e%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/after-working-at-web3-industry-for-8-months-60954d84ff0e?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/after-working-at-web3-industry-for-8-months-60954d84ff0e?source=rss-f1fb3e40dc37------2&text=在加密貨幣世界工作 0.75 年後的感想&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/after-working-at-web3-industry-for-8-months-60954d84ff0e?source=rss-f1fb3e40dc37------2&title=在加密貨幣世界工作 0.75 年後的感想" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/after-working-at-web3-industry-for-8-months-60954d84ff0e?source=rss-f1fb3e40dc37------2&title=在加密貨幣世界工作 0.75 年後的感想" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=在加密貨幣世界工作 0.75 年後的感想&body=
+在加密貨幣世界工作 0.75 年後的感想
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/after-working-at-web3-industry-for-8-months-60954d84ff0e?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/after-working-at-web3-industry-for-8-months-60954d84ff0e?source=rss-f1fb3e40dc37------2&title=在加密貨幣世界工作 0.75 年後的感想&caption=
+在加密貨幣世界工作 0.75 年後的感想
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=在加密貨幣世界工作 0.75 年後的感想&url=https://hulitw.medium.com/after-working-at-web3-industry-for-8-months-60954d84ff0e?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>在加密貨幣世界工作 0.75 年後的感想</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-05-12
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/after-working-at-web3-industry-for-8-months-60954d84ff0e?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1683894927000-->
+<p><a href="https://hulitw.medium.com/after-working-at-web3-industry-for-8-months-60954d84ff0e?source=rss-f1fb3e40dc37------2">在加密貨幣世界工作 0.75 年後的感想</a>
+——</p>
+
+<div>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*aALCTHDXCeACQg-nbfGT9w.jpeg" />    <figcaption>
+寫這篇的時候我正在日本的由布院，天氣真好
+    </figcaption>
+  </figure>
+  <p>去年十一月的時候我有寫了一篇<a href="https://medium.com/@hulitw/2022-updates-e2a3ae1c9a2e">《近況更新：轉職資安的一年後》</a>，文章最後有提到我換去了一個做 Web3 的團隊，接觸了全新的工作內容。換團隊以後過了大概 9 個月，也就是標題所指的 0.75 年，寫篇心得來幫自己在加密貨幣產業相關業界打滾的職涯做個總結。</p>
+  <h3 id="section">加入前對於加密貨幣的了解</h3>
+  <p>先講一下自己加入前大概知道哪些東西。</p>
+  <p>區塊鏈跟加密貨幣的原理大概理解，也知道智慧合約在幹嘛，有用過交易所入金以及買賣加密貨幣，大概就是這一些。對 DeFi 什麼的完全不清楚，只知道是基於智慧合約開發的東西，但更深一點就不知道了。</p>
+  <p>之前一直對幣圈覺得反感，理由跟 <a href="https://medium.com/u/9d1ba7125c47">Yang Lin</a> 之前寫的《<a href="https://medium.com/@yanglin_68397/%E8%A8%8E%E5%8E%AD%E5%8D%80%E5%A1%8A%E9%8F%88%E7%9A%84%E6%88%91-%E5%8A%A0%E5%85%A5%E4%BA%86%E4%B8%80%E9%96%93%E5%8D%80%E5%A1%8A%E9%8F%88%E5%85%AC%E5%8F%B8-ec907c4f6392">討厭區塊鏈的我，加入了一間區塊鏈公司</a>》講的類似，大概就是覺得這個圈子充滿一堆詐騙，還有一堆公司為了用區塊鏈而用區塊鏈，根本沒有因為用了區塊鏈而解決額外的問題，只是為用而用。</p>
+  <p>也是因為這樣，通常對於工作的產業沒有限制的我，上次在求職時特別說明了：「不要加密貨幣相關產業」，不想跟這一塊扯上關係。</p>
+  <h3 id="section-1">進入團隊的契機</h3>
+  <p>那為什麼之後還是加入了相關的團隊？</p>
+  <p>原因之一是我覺得這樣的「討厭」其實很沒道理，我感性上是討厭沒錯，但理性上會覺得這樣的討厭是不對的。我都還沒真正花時間去理解這個產業在幹嘛，有什麼資格討厭？會不會其實這個產業還有很多東西是我沒看到的？會不會我討厭的理由其實不堪一擊，論點站不住腳？</p>
+  <p>總之呢，最後會選擇換團隊的理由之一是我覺得可以嘗試看看，反正剛好有機會嘗試，試了就知道。如果試完還是不喜歡，我也有更多站得住腳的證據去支持我的論述。</p>
+  <h3 id="section-2">我加入的團隊在幹嘛？</h3>
+  <p>我加入的團隊其實有兩個滿類似卻又不太一樣的工作內容，可以分為以下兩項：</p>
+  <ol>
+    <li>保險</li>
+    <li>DeFi</li>
+  </ol>
+  <p>先講保險那一塊，我們公司會對加密貨幣產業的公司提供保險，保險的內容不一定，要看是什麼險種。</p>
+  <p>假設我們今天要保的是交易所的冷錢包好了，那我需要做的事情就是根據對方提供的資料，去看有哪一些風險，最後統整出一個結果交給其他負責核保的同事。</p>
+  <p>舉例來說，可能會給出以下的評估結果：</p>
+  <ol>
+    <li>在交易轉帳部分權責分離有做好，發起交易跟審核交易是不同人</li>
+    <li>有設置交易白名單，更改白名單需要兩人以上同意</li>
+    <li>冷錢包的規格符合國際標準，密鑰不容易被取出</li>
+    <li>冷錢包存放於保險箱裡面，並且受到 24 小時的監控</li>
+    <li>綜合以上結果，他們的系統相對安全</li>
+  </ol>
+  <p>這部分會看到不少公司的內部文件，因為要看那些文件我們才能做評估，而文件看得多了，自然也就能分出哪些公司不夠完整，安全性可能就沒這麼好。</p>
+  <p>除了這些之外，也需要對一些技術去做研究跟評估，例如說 MPC 當時就花了不少時間去看。畢竟要去評估一項技術的安全性之前，你必須對那項技術有一定的理解。</p>
+  <p>以上是保險那塊在做的事情，就是對想要買保險的公司去做系統跟技術相關的風險評估。</p>
+  <p>而 DeFi 那一塊做的也是風險評估跟研究，但對象是 DeFi 的專案。</p>
+  <p>舉例來說，我們可能會去看以前 DeFi 發生過的所有事件，整理出一個分類的清單，例如說「智慧合約漏洞」可能就是一個分類。但其實更仔細去看的話，智慧合約漏洞也有分很多種，例如說重入攻擊啦，或是權限管理沒做好等等的，這些又可以再去細分。</p>
+  <p>這樣分完之後就可以整理出一些統計的數據，就能知道過往發生過的事件中哪一種 root cause 發生的比例最高。</p>
+  <p>除了針對所有事件做研究跟分類以外，也會針對各個不同類別去做研究，例如說借貸協議好了，什麼是借貸協議？借貸協議通常出事都是因為什麼？</p>
+  <p>要先知道這一些先備知識，才能回答最重要的問題：「在評估一個 DeFi 專案的風險時，我們該關注哪些地方？」</p>
+  <p>因此也研究了很多 DeFi 相關的東西，看了很多以前出事的案例。</p>
+  <p>大概條列式整理一下在工作中學習到的知識：</p>
+  <ol>
+    <li>交易所常見的系統架構以及交易流程</li>
+    <li>HSM 以及 FIPS 140–2/3 標準</li>
+    <li>MPC 原理以及應用</li>
+    <li>DEX 在幹嘛，x*y=k 又是什麼？</li>
+    <li>LP token 是什麼東西，流動性又是什麼？</li>
+    <li>DeFi project 常見漏洞以及原因</li>
+    <li>借貸協議是什麼？閃電貸是什麼？</li>
+    <li>公鏈是什麼？側鏈是什麼？L0 — L3 是哪些東西？</li>
+    <li>Bridge 有哪些實作方式？問題在哪裡？</li>
+    <li>Yield Aggregator 是什麼東西？</li>
+  </ol>
+  <p>雖然說這些東西個別查也可以查到相關資料，但老實說學的時候會發現你要懂 A 必須先懂 B，要懂 B 必須先懂 C，這樣一環扣一環就會需要從頭開始學，其實還滿累的。</p>
+  <h3 id="section-3">接觸後的感想</h3>
+  <p>其實還滿有趣的。</p>
+  <p>評估交易所風險那邊除了交易標的是加密貨幣以外，其他都是 web2 的範疇。而我說的有趣指的是 DeFi 這一塊。</p>
+  <p>DeFi 就是科技加上金融的結合，融合了這兩塊的知識。有許多東西在傳統金融的世界都有，只是經由智慧合約把它變成了 Web3 的樣子。</p>
+  <p>它在技術上絕對是有趣的，例如說 bridge 跨鏈橋好了，兩條不同的鏈沒辦法溝通，那要怎麼解決這個問題？像是這個解法就有很多種，每種都有不同的優缺點以及安全性。</p>
+  <p>智慧合約這個東西本身也很有趣，藉由區塊鏈的技術來執行程式碼，而且確保了不可修改性，能夠真正做到「code 那樣寫，它就真的那樣跑」，這在傳統 web2 裡面是做不到的。不過雖然可以做到這樣，但又衍伸出來一堆問題，這個等等再談。</p>
+  <p>而區塊鏈以及加密貨幣的發展也帶動了一堆密碼學的進步，像是 MPC 雖然以前就有實際應用（丹麥甜菜拍賣跟波士頓薪資調查等等），但目前多數應用還是圍繞在加密貨幣上面，另外像是零知識（Zero Knowledge）的概念也出現在多個 DeFi 相關專案上面。</p>
+  <p>除了技術的部分有趣，另一方面它也強迫你要學習一些金融知識。像是 LP token 這東西好了，要理解之前你得要知道 liquidity provider 是什麼，在這之前又要先知道 liquidity 是什麼，這都是傳統金融世界中本來就有的一些知識，但像我以前就從來沒接觸過。</p>
+  <p>除了有趣以外，第二個感想就是「發展速度很快」，DeFi 一直都有新的東西出現，我這邊指的不是那種一看就炒幣的，而是真的技術相關的發展，也是不斷推陳出新。</p>
+  <p>第三個感想是我發現每個人對區塊鏈以及加密貨幣的願景都不太一樣。</p>
+  <p>有些人自始至終都相信加密貨幣會成為一個法幣的替代品，你可以經由加密貨幣進行交易，也可以透過 DeFi 進行許多操作，它是一個去中心化的美好世界，不會受到第三方的干預，也不會有任何人有權利剝奪你的資產。</p>
+  <p>而有些人則覺得加密貨幣確實是個值得關注的新東西，但最終都會被政府監管，納入管轄的範疇。或許未來會有政府發行的加密貨幣出現，但它不會是去中心化的。加密貨幣的發展不可能脫離政府的管控，它只是一種新的技術而已。</p>
+  <p>這也是我覺得很有趣的一個部分。</p>
+  <p>當加密貨幣剛出現沒多久的時候，有些人覺得這個屌打傳統金融，轉帳超快而且手續費低，出入金也快，在傳統金融跟加密貨幣之間來去自如，傳統金融有朝一日一定會被加密貨幣壓在地上打。</p>
+  <p>但是當各種事件發生時，似乎體現了政府的監管是必要的？例如說 FTX，一堆人把錢放裡面覺得一定沒事，結果出問題掛掉了，錢能拿回來的可能性微乎其微，這時候就會覺得有政府監管真好，至少有人幫你把關。</p>
+  <p>可是一旦被監管就代表有第三方的介入，整個生態就沒這麼去中心化了。我覺得「中心化 vs 去中心化」的這個概念一直都很有趣，而且兩邊都可以有思考的點存在。</p>
+  <p>中心化的話你無法保證你自己的資產，可能哪天銀行帳戶被凍結你就沒錢可以用了。去中心化的幣圈世界雖然你的投資可能會血本無歸，但那是你自己的選擇，為自己的選擇付出代價，這沒什麼。</p>
+  <p>在去中心化的世界中，哪天 DeFi 專案被找到漏洞被駭，你的錢一樣也不見了。事實上有許多 DeFi 專案其實都逐漸導入一些中心化的控制措施，例如說管理員可以暫停交易或是替換 price oracle 之類的，這些都是希望在緊急狀況時能有第三方介入來接管，阻止災情擴大。</p>
+  <p>又或是現在很多合約也都有實作更新的功能，合約如果被發現漏洞可以升級換一個新的合約，這個就跟當初智慧合約主打的「不可竄改」背道而馳了，但應該不少人覺得它是必要的。</p>
+  <p>這樣看起來，一定程度的中心化控制似乎還是必要的。完全去中心化的專案可能只活在理想當中，至少現在的發展方向應該是朝著這邊走。</p>
+  <h3 id="section-4">我自己會繼續投入加密貨幣嗎？</h3>
+  <p>答案是不會。</p>
+  <p>其實本來就沒什麼在投入，只有秉持著「投資用的錢就是你全賠掉都不會讓日子過不下去」的原則偶爾買賣一些垃圾幣當作在買樂透而已。</p>
+  <p>在這個職位上看了這麼多以前 DeFi 發生過的事件，就會覺得目前對這個產業沒有什麼信心，滿容易出事的。就算是經過再大的廠商 audit，合約的程式碼還是有可能出錯，一出錯就直接 gg，一堆錢不見。就算合約沒有事情，也有可能是管理員私鑰被盜什麼的，還有其他的攻擊面。</p>
+  <p>除了這些以外，還有千百種方式能讓你的錢不見。例如說錢放在交易所結果交易所倒了（FTX 事件），好，那不要放交易所總行了吧？我放自己的錢包，結果錢包被盜了，或是被釣魚然後不小心 approve 了惡意合約，又或是錢包本身產生私鑰的方式不夠安全（Profanity 事件），直接私鑰被猜中，這些都是以前發生過的事件。</p>
+  <p>總之呢，我覺得風險還是滿高的，投入一點小錢玩玩當興趣可以，我自己暫時不會想要投入更多資源在裡面。</p>
+  <h3 id="section-5">總結</h3>
+  <p>簡單條列式總結一下：</p>
+  <ol>
+    <li>DeFi 結合了技術以及金融，東西很多變化很多但滿有趣的</li>
+    <li>中心化與去中心化的拉扯很有趣</li>
+    <li>我自己覺得加密貨幣風險還是滿高，不會想投入</li>
+  </ol>
+  <p>以上大概就是這 0.75 年的心得。</p>
+  <p>前幾天我剛從這個團隊畢業，現在處於工作之間的轉換期，目前暫時也沒打算繼續投入加密貨幣相關的產業，所以搞不好這半年是最後一次這麼認真研究相關的東西了。</p>
+  <p>文章開頭我有提到以前滿排斥接觸加密貨幣相關的東西，接觸之後其實有改觀了，但也不確定是什麼影響了我，或許是發現這個圈子還是有很多有技術含量而且好玩的東西吧？</p>
+  <p>最後，我真心覺得要入門加密貨幣而且要有一定的理解程度的話，需要花不少時間補充一堆知識。我有打算把前面提過的那些我這段期間學到的東西整理成系列文，簡單講一下我對那些名詞的理解，幫助大家快速入門相關知識，如果有興趣的話可以留言敲碗，會加速文章的產出。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=60954d84ff0e" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2023-05-26</time>
+        <a href="https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/">
+          2023 日本北九州 19 天 18 夜遊記之九州怎麼這麼大
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-05-16</time>
+        <a href="https://nodebe4.github.io/oped2/2023-05-16/%E9%A7%AD%E5%AE%A2%E7%9A%84%E7%B7%9A%E4%B8%8A%E9%81%8A%E6%88%B2-CTF-%E9%81%8A%E7%8E%A9%E5%85%A9%E5%B9%B4%E5%BF%83%E5%BE%97/">
+          駭客的線上遊戲 CTF 遊玩兩年心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-12-28</time>
+        <a href="https://nodebe4.github.io/oped2/2022-12-28/%E9%95%B7%E6%A6%AE%E5%A4%96%E7%AB%99%E5%87%BA%E7%99%BC%E6%97%A5%E6%9C%AC%E4%BE%BF%E5%AE%9C%E6%A9%9F%E7%A5%A8%E8%B3%BC%E8%B2%B7%E5%BF%83%E5%BE%97/">
+          長榮外站出發日本便宜機票購買心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-12-18</time>
+        <a href="https://nodebe4.github.io/oped2/2022-12-18/%E4%BD%A0%E9%81%8E%E5%BE%97%E5%A4%AA%E5%AE%89%E9%80%B8%E4%BA%86/">
+          你過得太安逸了
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-04-13/Updates-to-Our-Database-of-Arrests-Related-to-the/">
+            前一篇：Updates to Our Database of Arrests Related to the Hong Kong National Security Law
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-05-12/Investing-in-Tourism-in-Xinjiang,-Beijing-Seeks-Ne/">
+            後一篇：Investing in Tourism in Xinjiang, Beijing Seeks New Ways to Control the Region’s Culture
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-04-13/Updates-to-Our-Database-of-Arrests-Related-to-the/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-05-12/Investing-in-Tourism-in-Xinjiang,-Beijing-Seeks-Ne/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-05-16/%E9%A7%AD%E5%AE%A2%E7%9A%84%E7%B7%9A%E4%B8%8A%E9%81%8A%E6%88%B2-CTF-%E9%81%8A%E7%8E%A9%E5%85%A9%E5%B9%B4%E5%BF%83%E5%BE%97/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-12-28/%E9%95%B7%E6%A6%AE%E5%A4%96%E7%AB%99%E5%87%BA%E7%99%BC%E6%97%A5%E6%9C%AC%E4%BE%BF%E5%AE%9C%E6%A9%9F%E7%A5%A8%E8%B3%BC%E8%B2%B7%E5%BF%83%E5%BE%97/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-04-13/Updates-to-Our-Database-of-Arrests-Related-to-the/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-05-12/Investing-in-Tourism-in-Xinjiang,-Beijing-Seeks-Ne/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-05-16/%E9%A7%AD%E5%AE%A2%E7%9A%84%E7%B7%9A%E4%B8%8A%E9%81%8A%E6%88%B2-CTF-%E9%81%8A%E7%8E%A9%E5%85%A9%E5%B9%B4%E5%BF%83%E5%BE%97/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-12-28/%E9%95%B7%E6%A6%AE%E5%A4%96%E7%AB%99%E5%87%BA%E7%99%BC%E6%97%A5%E6%9C%AC%E4%BE%BF%E5%AE%9C%E6%A9%9F%E7%A5%A8%E8%B3%BC%E8%B2%B7%E5%BF%83%E5%BE%97/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
