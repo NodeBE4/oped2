@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿
+——
+" />
+    <meta property="og:description" content="
+梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿" />
+    <meta property="twitter:title" content="梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F610ce931f4f9725a198e7de7" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/610ce931f4f9725a198e7de7" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/610ce931f4f9725a198e7de7&text=梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/610ce931f4f9725a198e7de7&title=梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/610ce931f4f9725a198e7de7&title=梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿&body=
+梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/610ce931f4f9725a198e7de7" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/610ce931f4f9725a198e7de7&title=梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿&caption=
+梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿&url=https://www.allnow.com/post/610ce931f4f9725a198e7de7" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-08-06
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/610ce931f4f9725a198e7de7" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/610ce931f4f9725a198e7de7">梁鸿：生活中的细微之事，恰恰能展示中国社会的内在逻辑丨燕京讲稿</a>
+——</p>
+
+<div>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-06/610ce92a9c232e01c17d2f01+L.jpg" data-id="610ce9302114416715c3e495" alt="第31届香港书展活动现场" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+第31届香港书展活动现场
+    </figcaption>
+  </figure>
+  <p>我现在在山东临淄一个山里的村庄旅馆，旅馆的设施是现代的，但它是按照最古老的方式而建筑的一座石头房子。这个项目希望能够还原中国乡村的特殊建筑，也希望让人感受到古老建筑的美。我之所以来这住，一方面当然因为休假，另一方面想看一看这个地方是怎样进行乡村重建的。对我而言，虽在北京生活，但希望通过写作和行走来感受不同生活方式之下的社会发展样态。</p>
+  <p>我的家乡是梁庄，在河南的一个平原。从13年前开始，我重新返回我的乡村，一方面观察，一方面行走。今天，我想跟大家分享的就是我写的三本书的大致想法和总体宗旨——《中国在梁庄》、《出梁庄记》和《梁庄十年》，这三本书可以说是我自己非常重要的关于乡村的记录。同时，也想跟大家分享一下，我在写梁庄的过程中，关于中国乡村社会的思考，包括对写作的思考。</p>
+  <p><strong>每个人的生活内部，一定有巨大的社会因子参与</strong></p>
+  <p>梁庄是中原一个非常普通的村庄，既没有过于贫穷，也没有非常富裕，没有工业，没有资源，人口也是中等的。我准备写梁庄的最大前提，就是当时的中国乡村正在发生非常大的变化。2007、2008年，我开始在寒暑假回去住下来，每天在村庄里行走与生活，也希望真的重新回到自己家里去，对梁庄重新有一种新的认知。经过5个月时间的调查，最终在2010年出版了《中国在梁庄》。在这本书里，我重点写了梁庄的那些妇女、儿童、老人，以及梁庄的地理环境生态的变化，包括内在精神状态的变化。</p>
+  <p>在这个过程中，我最受震动的就是，看似我是梁庄人，也几乎每年都回家，但梁庄人甚至亲人其实都是熟悉的陌生人，我对他们的内在命运、生命历程，真的不了解或者没有过有意识的了解。当我重新站在村头，重新用观察或者思考的眼光去进入、理解这片土地时，才发现有很多值得我们思考的东西。</p>
+  <p>中国当代社会的大变动，使得农村几乎是一个空心状态，单身男性或夫妻俩到城市打工了，老人和小孩留在农村，造成一个长期的分离状态；而城市那些农民工，以农民的身份在城里打工，没有任何城市的保障。这是当代中国非常大的社会现实。像梁庄这样自身没有资源的村庄，就是非常典型的青少年出门打工，老人小孩留在家里。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-06/610ce9779c232e01c17d2f03+L.png" data-id="610ce9789b2d825085c26d37" alt="商务印书馆（香港）有限公司2011年出版的繁体版《中国在梁庄》" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+商务印书馆（香港）有限公司2011年出版的繁体版《中国在梁庄》
+    </figcaption>
+  </figure>
+  <p>在《中国在梁庄》里，我写了一个五奶奶的故事。回家的时候，我在五奶奶家待得最多，因为她性格比较开朗，像地母一样非常活跃，我每天都在她家聊天吃饭，各种留守妇女都会带着孩子到她家去聊天。有一天，五奶奶跟我讲了她自己的故事：</p>
+  <p>她的小儿子两口子都出门打工，留下一个孩子给五奶奶带着。我们家乡后面有一条河，2003年夏天，五奶奶正在家做饭，突然有人跑来说你孙子在河里淹死了。五奶奶把勺子一扔，跌跌撞撞就往河那边跑。我们的村庄在一个高坡上，往下斜着走可以一路走到河泊，一路上灌木丛的那些刺都扎着她。结果发现，她的孙子已经躺在沙滩上了，就是被人捞上来时已经不行了。五奶奶平时非常乐观，只有在讲这个故事时，她的表情和神态非常飘忽，也非常低沉。其实，这个故事我早就听家人、邻居讲过，之前每年回家也都会到河边转一转。孙子去世之后，五奶奶就一个人搬到河边的茅草屋住了，好像没法见人一样，但我每年都没有找到，也没有用心去找。</p>
+  <p>我就顺着故事的线索，去看村庄后面那条叫湍水的河。这本书的封面就是湍水里的挖沙机，这是中国改革开放之后的一个最大场景——每条河里都有很多挖沙机。挖沙是因为中国要高速发展，需要很多泥沙来烧砖烧瓦；一度高峰的时候，每隔一千米就有一台挖砂机。我采访了我们县水利局的副局长，也采访其他相关人士才知道，挖沙是要取到黄泥层的，这样一来到了夏天汛期，河水一灌满河井就是一个个大的漩涡，孩子们一跳进去就被挤死了。五奶奶的孙子就是这样死掉的，所以他肚子里是没水的。</p>
+  <p>五奶奶是留守老人，她的孙子是留守儿童，这个孩子的死亡又与河流的生态破坏有很大关系。沿着这条线去挖掘，我才意识到很多事情并不是表面的悲惨故事这么简单：个人并非是个人，生活内部一定有巨大的社会因子参与；在某种意义上，其参与的形式和深度决定了生活的状态。这是每个人都了解的，但我们在讲故事时，往往只会讲到家庭，很难去意识到背后的更大成因。</p>
+  <p>所以，我在书里考察了人的生活，也考察了整个生态。小时候村庄有六个池塘，2008年回去时只剩下两个坑塘。而且，那两个坑塘完全发黑发臭，已经完全不能流动了，我在书里称之为“黑色的淤流”；整个村庄是非常荒凉的状态，虽然有很多新房，既崭新又落后，我称之为新生的废墟状态；所谓的废墟，还表现在精神状态上，比如说村上的小学完全关掉，变成猪场了；前段时间回家，梁庄小学已经变成一个家具厂了。</p>
+  <p><strong>生活中的细微之事，恰恰能展示中国社会的内在逻辑</strong></p>
+  <p>在第二本书《出梁庄记》，我写了梁庄在外的打工者，跑了20多个城市，因为他们都是非常零散的分布。我只讲其中一个故事，也是五奶奶的小儿子夫妻（编者注：梁鸿唤其为堂叔堂婶）——被淹死的孩子的父母。我到青岛去找他们，他们在电镀厂打工。电镀需要一种叫氢化物的剧毒中介物，所以电镀是一个高度污染的行当，那些重金属都要融到水里边，氢化物的水蒸气也令人难以呼吸。他们当时已经在那待了十年，我重点讲了他们在工厂的工作，怎么样跟老板做斗争，怎么样到劳动局去争取自己的权利，又怎么样被黑社会打。这是一个非常庞大的社会结构，如果不去做调查，难以知道内部如此复杂。</p>
+  <p>我每天跟婶子住一张床，她非常干净整洁，虽然只是一个打工的人。她又生了一个小儿子。因为她每天前半夜呼吸都非常平稳，我感觉她没有睡着，有一天晚上我忍不住说：“婶子，我们俩聊会儿天”，她跟我讲的第一句话就是：“从宝儿死之后，我12点之前从来没有睡过觉。”实际上，我从来都没有问她去世的儿子，因为那是伤痛，但她好像在等着我问。她非常详细地讲了她在青岛打工时，接到家里电话时的反应，包括后来回到家里，五奶奶什么样子、家里什么样子、怎么埋的孩子。她说，有一天夜里，她看到蚊帐上黑压压落了一层苍蝇，她就感觉家里肯定要出事。包括她坐车回去看到车里很多人，她说她不想活了，觉得这么多人却没有任何人能支持她。那一夜，我们俩都没有睡觉。第二天起来，她的话还印在我脑子里。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-06/610ce99d4cd55d54dd5dc4ba+L.jpg" data-id="610ce9a0904b8c02a16a409c" alt="台湾人间出版社2015年出版的繁体版《中国在梁庄》《出梁庄记》" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+台湾人间出版社2015年出版的繁体版《中国在梁庄》《出梁庄记》
+    </figcaption>
+  </figure>
+  <p>在《出梁庄记》里，我重点写了堂叔堂婶这样的人，他们在外面怎样艰苦地劳动，跟家庭之间又有怎样的苦痛。我花了一年半时间调查，又花了一年多时间来写，希望通过这本书来呈现和挖掘出乡村和城市之间以什么样的方式纠缠在一起。在这过程中，我深刻地了解了中国社会内部的复杂。</p>
+  <p>像我写西安那一章，写了我的两个堂哥，他们是亲兄弟，在西安蹬三轮车，待了一二十年。我去西安找他们，每天早上跟他们一起蹬三轮，下午堂哥就换一身好衣服带着我去到处拜访老乡工友。在跟他们相处的八九天时间里，我每一天都被震惊所环绕。他们讲，从农村来到城市，就像我们早年看港片一样，每天都是在战斗中生活开拓空间的，经常打架，因为农村来的三轮车夫和城市市民有巨大冲突。他们生活的每一天，最大的恐惧就是害怕被抓，因为三轮车上街是非法的，尽管他们工作20年了。堂嫂说她非常幸运，来了这么多年一直没有被抓过，那口气像是一种劫后余生的口气。</p>
+  <p>我是开着车从梁庄出发到西安的，堂哥跟我说到了等他，但怎么也接不上头。我说你在西安待了20年，怎么能找不到这个地方，你蹬三轮不是应该走遍大街小巷吗？他说西安变化太大了，实在找不到那条路。他跟我讲，他刚来西安时住在大雁塔下，随着这一二十年西安城市的不断扩张，他们从西安的大雁塔不断往外搬迁。换句话说，堂哥在西安生活了20年，随着西安城市的发展，他们不但没有融入到城市，反而一步步远离城市。2011年，我到西安的时候，他们住在西安灞桥区的一个城中村里，因为那个地方要拆迁，但还没有谈妥，他们等于是暂居。我们经常说乡村城市化、农民市民化，但在实际过程中，你会发现他们仍然只是暂居者。</p>
+  <p>农民在城市里到底是什么样的？我采访了其中一个老乡，他是我们村里较早去西安的人，据说在2013年之前已经存了有上百万。他可以在西安买房子，但是没有，他在老家盖了一个楼房，装的抽水马桶、空调、电视机，实际上他每年回家就一个月。我反复追问他，为什么不在西安买房。他就反问我说，他每天都提心吊胆的，凭什么要在这个地方生活？在梁庄盖的房子虽然可能一年不去住一次，但那是家。这句话特别打动我，不管农民还是市民，都需要一种身份，在这个地方即使发财，但没有身份就没有尊严。</p>
+  <p>在调查过程中，我发现其实很多话语是矛盾的。我们的政策好像是在不断促使大家往城里走，但制度又在不断往外推，这是一个不断挤压的状态。</p>
+  <p>我去西安的那几天，大堂哥的车刚刚被抓，他给我讲了一个特别完整的故事。现在的三轮车一般都是电动的，有两个电瓶来回换，一个电瓶1000块钱。三轮车看起来很破，但两个电瓶非常贵。大堂哥那天早上蹬三轮被抓了，他是退伍军人，脾气非常火爆，抱着车不放手，还骂交警。最后强行把他的手掰开，胳膊的皮被撸了下来，我去的时候胳膊上还缠着纱布。按照惯例，一个车被抓交500块钱就可以拿回来，这500块钱不是交给交警本人，而是给中介人。堂哥就给了500块钱；第二天中介人说可能还得再加点钱，堂哥就给了他700块钱，第三天又回来说不行，你骂人家了，人家专门就治你这个脾气，然后堂哥就说我给你1000块钱。结果中介人说这个车真的要不回来了，堂哥一听给我二堂哥打了电话，二堂哥又打了好多个电话，然后一群三轮车夫，五六十个人包了两辆面包车，浩浩荡荡地到交警大队门口游行示威去了。而且他们把马甲脱了，不想让人知道是三轮车夫在闹事。这时候一辆小轿车开进来了，那个人摇下车窗看怎么回事，一群三轮车夫围了上来。那个人就是平时带队抓三轮车夫的，吓得满脸苍白，赶紧把车窗摇上，进了院子。过了一会儿有人来请大堂哥二堂哥继续谈判，当然最终谈判成功了，堂哥交了100块钱。交给谁了？三轮车不可能放在交警队的院子里，而是有一个专门的车场来管， 100块钱是交给车场的。从交警到中介人到停车场，这是一个社会链条。</p>
+  <p>车要来了，因为老乡们都帮忙了，所以堂哥就请大家到一个拉面馆，每个人一碗拉面一瓶啤酒，算下来花了1700块钱。我跟他说你还赔了，这1800再加一点钱可以买个新车了。他说，我高兴，我开心。</p>
+  <p>这些虽然是生活中特别细微的事情，但恰恰能够展示中国社会内在的逻辑。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-06/610ce9c29c232e01c17d2f04+L.jpg" data-id="610ce9c69b2d825085c26d38" alt="《梁庄十年》，梁鸿 著，理想国丨上海三联书店2021年1月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+《梁庄十年》，梁鸿 著，理想国丨上海三联书店2021年1月版
+    </figcaption>
+  </figure>
+  <p><strong>在中国的生活内部，进行乡村重建是非常艰难的</strong></p>
+  <p>今年出版的《梁庄十年》，角度相对小一些，因为我想有一种长河式的书写，希望能够把梁庄人的命运做一个相对长时间段的展示。在这本书里，我写了前两本书里大部分人的命运变化，包括我的父亲。在前两本书里，我的父亲是非常重要的角色，他带着我走遍全国各地一起做调查。写《梁庄十年》时，我的父亲已经去世了。</p>
+  <p>这本书里有一个重要的人物叫阳阳。阳阳是五奶奶的小儿子的小儿子。2013年我到青岛时，这个孩子非常孤独，因为我的堂叔在电镀厂工作，非常繁忙，每天加班到晚上十点，这个孩子只能在工厂门卫室待着。到了2021年，这个孩子已经14岁了，回到梁庄在镇上的中学读书。不管是在青岛，还是在梁庄，她都是一个留守儿童。你不知道她的命运往哪发展，但不管怎么样，生命在慢慢成长，就好像梁庄永远都在，但生命也永远都在消失、成长。</p>
+  <p>这三本书，我希望能够把梁庄当座一个样本，把梁庄人的生活持续地呈现出来：他们遭遇的问题、情感状态、家庭状况、空间迁移。虽然是文学著作，但我希望里边的数据和生活的镜像是极其细微而又真实的，读者能够通过这些细微真实的描述来感受生活内部的多维存在。</p>
+  <p>这十年，应该说也是我生命中最好的年华，我的脑子里同时活了那么多人；他们的面容、命运变化、爱恨情仇，极大地滋养了我的思想，也决定了我的思考方向。通过写梁庄，我的思想成长非常大，不管是对中国社会，还是对文学、对人性，我的内心获得了某种更加厚重的东西。我觉得，我的写作可能在内部空间上更大，思想可能会更加驳杂。</p>
+  <p>可能有读者会比较感性地说，说了这么多，到底中国的乡村是什么样子？说实话，非常复杂，我花了三本书还没有写清楚。在中国的生活内部，要进行乡村重建是非常艰难的，不单单在于乡村本身的那些滞后，同时也在于我们的社会话语——我们经常会否定传统文明，过于追捧现代文明，形成一种二元对立。这种二元对立的话语模式，它会形成一种思维，最终导致行为的对立性。这几年，我们看到中国官方一直在提乡村重建、振兴乡村，这些都是好的，但怎么运行怎么操作，实际上是非常专业的事情。只有广阔地去开发各种各样的民间力量，才有可能去重建各种各样的乡村，这种文明形态才有可能真的繁荣。如果说政治让绝对的贫穷脱贫，一个人内在的精神则需要一个持续的努力。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-08-06/610ce9e14cd55d54dd5dc4bb+L.jpg" data-id="610ce9ea9b2d825085c26d3a" alt="梁鸿通过网络视频与香港书展现场的读者进行交流" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+梁鸿通过网络视频与香港书展现场的读者进行交流
+    </figcaption>
+  </figure>
+  <p><strong>占据文坛的大部分都是城市孩子，所以现代书写越来越多</strong></p>
+  <p><strong>读者提问：像沈从文、萧红、池子建，他们也写过一些乡村小说，怎么看待这种乡村叙事的延续性？</strong></p>
+  <p><strong>梁鸿：</strong>首先，“梁庄”是非虚构的写作，基于村庄的真实故事。你刚才说的沈从文，包括现在的莫言、阎连科，他们写的都是小说。</p>
+  <p>其实很多人都说，中国社会高度的发展使乡村渐行渐远。其实，它只是在我们的视野里渐行渐远，我们每个人都视而不见，真实的生活里并没有远。这跟我们的社会话语叙事有很大关系。一个作家的任务，恰恰是提醒这些被遗忘了的存在，因为能够写作、说话的都是有发表言语权利的人，如果这些人也不来写的话，乡村可能就真的不存在了。所以，我们在文学上的建树还不够，不管是非虚构还是小说，我们都在追赶时髦，都在书写城市，但反过来想一想，我们的城市真的就是绝对的城市化吗？中国传统的那些性格、文化、生存形态，真的就没有了吗？</p>
+  <p>稍微多说一句，在大陆你会发现那些有文学能力的人，大部分都是县城出身或者大城市出身，他们本身就没有乡村经验。这里面包含着一个非常残酷的事实，就是很多乡村孩子，在80、90年代以后，通过考试进阶到一个更高阶层的渠道变窄了。虽然我们的生活普遍变好，但阶层更加固化。占据文坛的大部分，都是那些至少是县城的孩子；真正具有乡村生活经验的孩子是没有这种能力的，所以显得文坛上的现代书写越来越多。我觉得，哪怕你是城市出生的作家，作为一个公民、一个具有社会意识的人，我们也不应该对现实视而不见，我们真的有必要去了解一下中国乡村，这样才有可能了解到我们的城市生活为什么是那样子，我们的人格、人性为什么那样？这是生活的一体两面，是民族的一体两面。</p>
+  <p><strong>读者提问：在处理主观和客观的写作上，你是怎么思考的？这十年里的心态或者角度，有没有什么改变？</strong></p>
+  <p><strong>梁鸿：</strong>我在写梁庄之初，有一点是非常清晰的：我是回到自己家了，而不是一个社会学家到了一个陌生的村庄去做调查。回到村庄，我面对的是五奶奶、侄儿、叔叔，主观情感是非常自然的，如果刻意把它抹除，反而是不自然、不客观的。这是我第一个宗旨，它就是我的故乡，它包含了我的记忆、包含了我对这些人过去的理解、包含了我对村庄过去的理解，深深的理解反而达到一种更大的客观。第二，这种情感，并不妨碍客观地描述一个事件。我在记录他们的故事时，在去调查那些工厂时，是非常客观的，对里面的数据、对故事里提到的人物，我都尽可能一步步去追索。</p>
+  <p>这十年的心态变化还挺大的。说实话，一开始有一点点悲壮，因为真的对农村不了解，到现在我是相对放松的，越来越深入地进入了梁庄，越来越如鱼得水。而且，这十来年间，我经历了一个非常大的思想变动。有一段时间我参加乡建是非常多的，去全国各地做志愿者、讲课，觉得既然写梁庄，那为什么不去改变一些事情呢？后来慢慢退出来了，因为我觉得太艰难了，实际上是我的软弱，我好像更适合做一个书写者。要想改变一个地方，真的需要极大的行动力，我特别佩服那些具有行动能力的人。</p>
+  <p><strong>读者提问：在这三本书之间，自己的写作风格或者创作过程有什么变化吗？还有什么梁庄或者农村相关的议题，是想探讨但没有在这三本书里提到的？</strong></p>
+  <p><strong>梁鸿：</strong>相对地，风格还是有变化。比如第一本书情感非常强烈，当时之所以在国内有很大反响，原因之一也是因为这种情感激发了读者的情感。第二本书稍微做了一个疏离，情感相对冷静一些，自我剖析相对多一些，有很多的自我反思。前两本书都有一个大的整体性在里边，第三本书相对切入点小一点，就写梁庄的日常。其实，这三本书里边我都写了关于宗教的问题，但后来都被删掉了。</p>
+  <blockquote>
+    <p>（因篇幅所限，整理时有所节选。小标题为编者所拟。）</p>
+  </blockquote>
+  <p>———</p>
+  <p>微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-08-09</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-09/%E5%8C%97%E4%BA%AC%E7%9A%84-%E7%AC%AC%E4%B8%89%E7%A9%BA%E9%97%B4-%E8%80%81%E5%8C%97%E4%BA%AC%E5%92%8C%E5%A4%96%E5%9C%B0%E4%BA%BA%E7%9A%84%E9%A6%96%E9%83%BD%E8%BE%B9%E7%BC%98%E7%94%9F%E6%B4%BB/">
+          北京的“第三空间”：老北京和外地人的首都边缘生活
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-08</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-08/%E5%AD%90%E5%BC%B9%E4%B8%8E%E5%92%96%E5%95%A1-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%96%E7%95%8C%E5%A4%A7%E6%88%98%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E5%92%96%E5%95%A1%E7%9A%84%E4%B8%96%E7%95%8C%E6%A0%BC%E5%B1%80/">
+          子弹与咖啡：第一次世界大战如何改变咖啡的世界格局？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-05</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-05/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91005-%E7%BD%97%E6%96%B0%E8%B0%88%E5%A4%A7%E5%8E%86%E5%8F%B2%E5%86%99%E4%BD%9C-%E5%A4%A7%E5%8E%86%E5%8F%B2%E6%B7%B1%E6%B7%B1%E5%9C%B0%E5%88%BA%E6%BF%80%E4%BA%86%E8%AF%BB%E8%80%85%E5%92%8C%E5%AD%A6%E7%95%8C/">
+          燕声视频005 | 罗新谈大历史写作： “大历史深深地刺激了读者和学界”
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-08-05</time>
+        <a href="https://nodebe4.github.io/oped2/2021-08-05/%E6%97%A5%E6%9C%AC%E5%AE%AA%E6%B3%95%E4%B8%8E%E6%97%A5%E6%9C%AC%E4%BA%BA-%E5%AE%AA%E6%B3%95%E6%98%AF%E5%A6%82%E4%BD%95%E4%BF%83%E8%BF%9B%E6%97%A5%E6%9C%AC%E4%BA%BA%E6%8B%A5%E6%9C%89%E4%BB%B7%E5%80%BC%E5%92%8C%E5%B0%8A%E4%B8%A5%E7%9A%84/">
+          日本宪法与日本人：宪法是如何促进日本人拥有价值和尊严的
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-08-05/%E6%88%91%E6%9C%89%E4%B8%80%E4%B8%AA%E5%A5%BD%E6%B6%88%E6%81%AF%E5%92%8C%E4%B8%80%E4%B8%AA%E5%9D%8F%E6%B6%88%E6%81%AF-%E4%BD%86%E6%88%91%E5%BF%85%E9%9C%80%E5%90%8C%E6%97%B6%E5%91%8A%E8%AF%89%E6%82%A8-iYouPort/">
+            前一篇：我有一个好消息和一个坏消息 … 但我必需同时告诉您 - iYouPort
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-08-08/%E5%AD%90%E5%BC%B9%E4%B8%8E%E5%92%96%E5%95%A1-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%96%E7%95%8C%E5%A4%A7%E6%88%98%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E5%92%96%E5%95%A1%E7%9A%84%E4%B8%96%E7%95%8C%E6%A0%BC%E5%B1%80/">
+            後一篇：子弹与咖啡：第一次世界大战如何改变咖啡的世界格局？
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-08-05/%E6%88%91%E6%9C%89%E4%B8%80%E4%B8%AA%E5%A5%BD%E6%B6%88%E6%81%AF%E5%92%8C%E4%B8%80%E4%B8%AA%E5%9D%8F%E6%B6%88%E6%81%AF-%E4%BD%86%E6%88%91%E5%BF%85%E9%9C%80%E5%90%8C%E6%97%B6%E5%91%8A%E8%AF%89%E6%82%A8-iYouPort/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-08-08/%E5%AD%90%E5%BC%B9%E4%B8%8E%E5%92%96%E5%95%A1-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%96%E7%95%8C%E5%A4%A7%E6%88%98%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E5%92%96%E5%95%A1%E7%9A%84%E4%B8%96%E7%95%8C%E6%A0%BC%E5%B1%80/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-08-08/%E5%AD%90%E5%BC%B9%E4%B8%8E%E5%92%96%E5%95%A1-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%96%E7%95%8C%E5%A4%A7%E6%88%98%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E5%92%96%E5%95%A1%E7%9A%84%E4%B8%96%E7%95%8C%E6%A0%BC%E5%B1%80/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-08-05/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91005-%E7%BD%97%E6%96%B0%E8%B0%88%E5%A4%A7%E5%8E%86%E5%8F%B2%E5%86%99%E4%BD%9C-%E5%A4%A7%E5%8E%86%E5%8F%B2%E6%B7%B1%E6%B7%B1%E5%9C%B0%E5%88%BA%E6%BF%80%E4%BA%86%E8%AF%BB%E8%80%85%E5%92%8C%E5%AD%A6%E7%95%8C/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-08-05/%E6%88%91%E6%9C%89%E4%B8%80%E4%B8%AA%E5%A5%BD%E6%B6%88%E6%81%AF%E5%92%8C%E4%B8%80%E4%B8%AA%E5%9D%8F%E6%B6%88%E6%81%AF-%E4%BD%86%E6%88%91%E5%BF%85%E9%9C%80%E5%90%8C%E6%97%B6%E5%91%8A%E8%AF%89%E6%82%A8-iYouPort/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-08-08/%E5%AD%90%E5%BC%B9%E4%B8%8E%E5%92%96%E5%95%A1-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%96%E7%95%8C%E5%A4%A7%E6%88%98%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E5%92%96%E5%95%A1%E7%9A%84%E4%B8%96%E7%95%8C%E6%A0%BC%E5%B1%80/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-08-08/%E5%AD%90%E5%BC%B9%E4%B8%8E%E5%92%96%E5%95%A1-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%B8%96%E7%95%8C%E5%A4%A7%E6%88%98%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E5%92%96%E5%95%A1%E7%9A%84%E4%B8%96%E7%95%8C%E6%A0%BC%E5%B1%80/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-08-05/%E7%87%95%E5%A3%B0%E8%A7%86%E9%A2%91005-%E7%BD%97%E6%96%B0%E8%B0%88%E5%A4%A7%E5%8E%86%E5%8F%B2%E5%86%99%E4%BD%9C-%E5%A4%A7%E5%8E%86%E5%8F%B2%E6%B7%B1%E6%B7%B1%E5%9C%B0%E5%88%BA%E6%BF%80%E4%BA%86%E8%AF%BB%E8%80%85%E5%92%8C%E5%AD%A6%E7%95%8C/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

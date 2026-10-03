@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Will China Set Global Tech Standards? – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Will China Set Global Tech Standards?
+——
+" />
+    <meta property="og:description" content="
+Will China Set Global Tech Standards?
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Will China Set Global Tech Standards?" />
+    <meta property="twitter:title" content="Will China Set Global Tech Standards?" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fwill-china-set-global-tech-standards" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/will-china-set-global-tech-standards" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/will-china-set-global-tech-standards&text=Will China Set Global Tech Standards?&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/will-china-set-global-tech-standards&title=Will China Set Global Tech Standards?" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/will-china-set-global-tech-standards&title=Will China Set Global Tech Standards?" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Will China Set Global Tech Standards?&body=
+Will China Set Global Tech Standards?
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/will-china-set-global-tech-standards" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/will-china-set-global-tech-standards&title=Will China Set Global Tech Standards?&caption=
+Will China Set Global Tech Standards?
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Will China Set Global Tech Standards?&url=https://www.chinafile.com/conversation/will-china-set-global-tech-standards" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Will China Set Global Tech Standards?</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-03-22
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Graham Webster, Helen Toner &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/will-china-set-global-tech-standards" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1647943560000-->
+<p><a href="https://www.chinafile.com/conversation/will-china-set-global-tech-standards">Will China Set Global Tech Standards?</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-8f56ae6cdacc8076cc816f93dd8f8254">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/53831_sm.jpg" title="Will China Set Global Tech Standards?" class="colorbox" data-colorbox-gallery="gallery-node-53831-cY6Z_0d1CP4" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/53831_sm.jpg?itok=-TGkDRU3" width="1500" height="1001" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+(AFP/Getty Images)
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A customer looks at a newly launched Huawei P50 mobile phone at a Huawei store in Hangzhou, Zhejiang province, July 30, 2021.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">In early February, the European Commission <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_22_661" target="_blank" rel="nofollow">issued</a> a sweeping strategy for setting global technology standards. Coming on the heels of Beijing’s latest <a href="https://carnegieendowment.org/2021/10/28/three-takeaways-from-china-s-new-standards-strategy-pub-85678" target="_blank" rel="nofollow">standards strategy</a>, released in October, it reflects Europe’s efforts to push back against China’s mounting <a href="https://www.newamerica.org/cybersecurity-initiative/digichina/blog/translation-xi-jinpings-april-20-speech-national-cybersecurity-and-informatization-work-conference/" target="_blank" rel="nofollow">involvement</a> in global standards setting.</p>
+      <p>A <a href="https://www.brookings.edu/wp-content/uploads/2021/04/FP_20210405_china_cyber_power.pdf" target="_blank" rel="nofollow">Brookings report</a> released last year contends that the government’s work behind the scenes to influence and set international technology standards reflects Xi Jinping’s <a href="https://www.brookings.edu/wp-content/uploads/2021/04/FP_20210405_china_cyber_power.pdf" target="_blank" rel="nofollow">aim</a> for China to become a “cyber great power.” The country’s “strategies not only serve China’s commercial interests, but also bolster its push for ‘cyber sovereignty’ instead of the free flow of ideas, information, and data,” notes a recent <a href="https://asiasociety.org/sites/default/files/2021-11/ASPI_StacktheDeckreport_final.pdf" target="_blank" rel="nofollow">Asia Society Policy Institute report</a>. “State control of the internet and the Chinese approach to data governance restrict access to information and curtail free speech and other universal rights.” International tech experts at the Carnegie Endowment for International Peace, however, <a href="https://carnegieendowment.org/2021/10/28/three-takeaways-from-china-s-new-standards-strategy-pub-85678" target="_blank" rel="nofollow">argue</a> that China often utilizes standards as “a lever for upgrading the country’s industrial base.”</p>
+      <p>What are the implications of China becoming the standards bearer for international technology standards? What strategies might the U.S., Japan, EU, and other competing nations pursue to bolster their own interests? —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9626" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/Graham-Webster"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/webster.graham.headshot.jpeg?itok=PW6p15Tf" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="graham-webster"><a href="https://www.chinafile.com/contributors/Graham-Webster" title="Graham Webster">Graham Webster</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The formulation and adoption of standards shape markets and the way technology functions. Yet too much of the recent discussion about China’s role in standards-setting portrays technology as monolithic and national interests as naturally coherent and tidy. The reality requires granular study and strategizing.</p>
+        <p>What is at stake in technical standards? There’s no easy, nationwide answer. Standards may dictate the use of specific intellectual property, the licensing of which means big money for specific firms. The adoption of common standards across divides, whether among computer systems, industries, or jurisdictions can enable interoperability and easier collaboration, whereas fragmented standards can increase operational friction. (Some interests may want to see global interoperability, and some may benefit from a protected niche market or maximal “decoupling.”) Some standards can dictate the way information is gathered and labeled, affecting the ease with which systems can establish trust or states can conduct surveillance. Some standards, such as around food safety, have direct effects on human health, markets, and the environment. Clearly, it matters which aspect of which technology is at issue, and it matters whose interests one is looking out for.</p>
+        <p>What concerns or possibilities stem from Chinese standards efforts? We discussed this question informally in a Stanford DigiChina Project <a href="https://digichina.stanford.edu/work/chinese-involvement-in-international-technical-standards-a-digichina-forum/" target="_blank" rel="nofollow">community discussion</a> in December. From a specific firm or industrial development perspective, there are concerns that standards might give Chinese firms an advantage over incumbents or competitors from other countries, just as U.S. firms such as Qualcomm <a href="https://arstechnica.com/tech-policy/2019/05/how-qualcomm-shook-down-the-cell-phone-industry-for-almost-20-years/" target="_blank" rel="nofollow">have benefitted</a> when standards prescribed the use of technology they controlled. For those seeking to operate around the world, there are concerns that Chinese initiatives could produce non-interoperable standards in some areas, increasing the cost of doing business. From a human rights and governance perspective, there are concerns that Chinese preferences could, for example, ease greater surveillance or censorship through network infrastructure or protocols. Contributions by talented Chinese technical experts, meanwhile, can and do make standards more effective.</p>
+        <p>Given this array of diverse interests and the varied types of standards, what is the role of a government in shaping a standards strategy? Chinese official efforts point to one model, pursuing a larger Chinese role in crucial technology markets globally and decreased reliance on suppliers that might be cut off through measures such as U.S. sanctions on the Chinese network infrastructure firm Huawei. U.S. and allied governments should not simply mirror China, which would entail throwing out the expert-led multistakeholder model that has served many interests well. They instead must adapt with specific attention to specific problems and opportunities.</p>
+        <p>This granular approach means identifying areas of standards-setting and standards-adoption that affect legitimate national government goals, and recognizing that some of those goals may be in tension. For example, the best standards arrangement for some national security goals might not be one that benefits U.S. businesses and workers, or it might erect barriers to infrastructure upgrades. Identifying and hashing out competing priorities through a democratic process and with technical expertise is an important government function. The U.S. government could provide more such support and reinforce resource-limited actors pushing in the right direction in standards forums. Perhaps most of all, however, this means abandoning grand narratives of national competition to dominate technology, and embracing the varied implications of individual systems in specific contexts.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9631" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/helen-toner"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/toner_sm.png?itok=11gY4r6D" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="helen-toner"><a href="https://www.chinafile.com/contributors/helen-toner" title="Helen Toner">Helen Toner</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">For countries seeking to respond to Chinese standards activities, the primary challenge will be to not overreact. Despite an increasingly prevalent <a href="https://thehill.com/opinion/technology/548048-we-cannot-let-china-set-the-standards-for-21st-century-technologies" target="_blank" rel="nofollow">narrative</a> that China has figured out how to “dominate” or “<a href="https://itif.org/publications/2021/11/08/mapping-international-5g-standards-landscape-and-how-it-impacts-us-strategy" target="_blank" rel="nofollow">manipulate</a>” international standards-setting processes, the reality is much more mundane. The primary effect of the Chinese government’s growing emphasis on the importance of standards is that Chinese organizations are more empowered and incentivized to participate in standardization than they have been in the past. The simplest and most effective way for competing nations to keep pace will be to ensure that their own domestic participants are similarly empowered.</p>
+        <p>The coordinated efforts of Chinese companies in the development of 5G standards looms large in discussions of undue Chinese influence on standards, but this case <a href="https://digichina.stanford.edu/work/chinese-involvement-in-international-technical-standards-a-digichina-forum/" target="_blank" rel="nofollow">represents</a> far more the exception than the rule. China’s technical advantage over other countries in 5G, which gave companies such as Huawei and ZTE significant leverage in standards discussions, is not the norm in most technologies. What’s more, the voluntary nature of international standards-setting processes means that in most cases, countries or companies are able to opt out of standards that cause them concern; rarely is interoperability as non-negotiable as it is in telecommunications. Increased Chinese engagement in international standards bodies is certainly a reality; sudden Chinese supremacy in these bodies is not.</p>
+        <p>A recent <a href="https://www.federalregister.gov/documents/2021/11/04/2021-24090/study-on-peoples-republic-of-china-prc-policies-and-influence-in-the-development-of-international" target="_blank" rel="nofollow">study</a> run by the National Institute of Standards and Technology gave U.S. companies and industry organizations the opportunity to weigh in on how concerned the United States should be about Chinese participation in standards development. As the Carnegie Endowment <a href="https://carnegieendowment.org/2021/12/23/how-u.s.-businesses-view-china-s-growing-influence-in-tech-standards-pub-86084" target="_blank" rel="nofollow">summarized</a>, only a small minority of private sector respondents expressed concerns. Far more prevalent than alarm about undue Chinese influence was consensus that the U.S. government could do more to support U.S. engagement. Relevant measures could include subsidizing the participation of companies or industry organizations in standards development processes—an <a href="https://www.washingtonpost.com/technology/2020/12/01/us-policy-china-technology/" target="_blank" rel="nofollow">expensive undertaking</a> for which the Chinese government provides significant support. At least as important is to remove barriers to participation that currently prevent or deter some U.S. organizations from participating in standards development processes, for instance export control-related restrictions that prevent U.S. companies from engaging in any discussions where blacklisted foreign companies are present.</p>
+        <p>China is sure to continue pursuing its own interests in international standards bodies, and other countries should stand ready to counter this. But a productive response needs to be based on an understanding of how standards processes work and in what ways they can be skewed, not on a kneejerk reaction to fears that China is suddenly pulling all the marionette strings. Many of the ways in which China could unduly benefit from standards are continuous with long-standing concerns about Chinese involvement on the international stage, such as Chinese domestic regulatory structures that <a href="https://www.regulations.gov/comment/NIST-2021-0006-0019" target="_blank" rel="nofollow">hinder</a> international firms’ market access. Others are only outgrowths of other trends, such as China’s increasing sophistication in scientific and technological research and development. A holistic approach to technology competition must recognize and address how these challenges are interconnected, not overestimate how important (or susceptible to influence) standards development processes are on their own.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9636" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/jeffrey-ding"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/jeffrey_ding_0.png?itok=gc-Ganyo" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="jeffrey-ding"><a href="https://www.chinafile.com/contributors/jeffrey-ding" title="Jeffrey Ding">Jeffrey Ding</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">In 2020, China laid out <a href="https://www.cnbc.com/2020/06/22/china-standards-2035-tech-plan-could-face-challenges-to-live-up-to-hype.html" target="_blank" rel="nofollow">ambitious benchmarks</a> for Chinese firms to increase their influence in international standards bodies under the China Standards 2035 plan. China’s increasing participation in technical standards development work has <a href="https://asiasociety.org/policy-institute/stacking-deck-chinas-influence-international-technology-standards-setting" target="_blank" rel="nofollow">raised concerns</a> related to the Chinese government’s undue influence in the standards-setting process and its ambitions to rewrite the international rules of the road. Experts have deftly <a href="https://www.cfr.org/blog/china-standards-2035-and-plan-world-domination-dont-believe-chinas-hype" target="_blank" rel="nofollow">argued</a> that there is no need to panic that China will dominate the international standards process, citing inflated measures of Chinese standards contributions and the over-hyped bluster of government plans like China Standards 2035. To comprehensively understand the implications of China’s growing influence in standards-setting, I highlight three neglected areas of the standards development process.</p>
+        <p>First, engineers set standards. This means that standards-setting is a social process that involves individuals who are sensitive to their social capital amongst other engineers—a personal interest that can depart from national or company priorities. This is meaningful when assessing the possibility that Chinese firms, such as Huawei, can gain an undue competitive advantage in standards bodies by getting their employees into leadership positions. Justus Baron and Olia Kanevskaia <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3818143" target="_blank" rel="nofollow">have studied</a> this question by collecting data on about 45,000 individuals involved in nearly 350,000 standards development meetings in the information and communications technology sector. They present evidence that Huawei’s leadership positions in working groups tend to be held by Western nationals, despite the fact that almost all Huawei-affiliated attendees of standards development meetings are Chinese. Baron and Kanevskaia point out that if firms like Huawei must recruit established members of standards bodies to gain chair positions, these individuals’ incentives to maintain their social capital could balance against Huawei’s efforts to sway standardization outcomes.</p>
+        <p>Second, the functions of international standards-setting are not solely defined by U.S.-China competition and great-power machinations over international influence. Currently, international standards in many industries with safety-critical applications, including nuclear power, detail requirements for <a href="https://www.nbr.org/publication/balancing-standards-u-s-and-chinese-strategies-for-developing-technical-standards-in-ai/" target="_blank" rel="nofollow">audit trails</a> as a mechanism to incentivize companies to meet safety regulations. Therefore, standards development organizations can also play an important role in preventing accidents associated with emerging technologies, and increased engagement by Chinese firms in these forums could improve the quality and reach of the governance of such technologies. While recognizing that China will push narrow techno-nationalist standards in some areas, it is important to also note that there are areas where China’s increased involvement in standards-setting could contribute to public goods and global regulatory benefits.</p>
+        <p>Lastly, increased participation in international standards-setting forums also bears on domestic standardization processes. A better sense of state-of-the-art methods at the global frontier can guide a state in its <a href="https://www.press.jhu.edu/books/title/11653/engineering-rules" target="_blank" rel="nofollow">internal-facing standardization work</a>, which plays an important role in the diffusion of emerging technologies. Having a stable benchmark for judging the efficacy of a chatbot, for instance, could facilitate the widespread diffusion of natural language processing techniques throughout an economy. The greatest benefits of China’s growing presence in global standards bodies, therefore, could materialize in its domestic innovation system.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9641" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/blake-berger"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/berger_sm.jpg?itok=_Xmcndgz" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="blake-berger"><a href="https://www.chinafile.com/contributors/blake-berger" title="Blake Berger">Blake Berger</a></h3>
+      </div>
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/daniel-r-russel"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/daniel_russel.jpg?itok=uK3ToFCu" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="daniel-r-russel"><a href="https://www.chinafile.com/contributors/daniel-r-russel" title="Daniel R. Russel">Daniel R. Russel</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">While President Xi Jinping and the Chinese Communist Party have framed their engagement in international technical standards-setting as a mutually beneficial “win-win” endeavor that promotes a shared future in cyberspace, the reality is far different. The <a href="https://asiasociety.org/sites/default/files/2021-11/ASPI_StacktheDeckreport_final.pdf" target="_blank" rel="nofollow">domestic messaging</a> from the Party casts standard setting not only as a zero-sum contest but as an instrument of national power competition. For Xi and the Party, formulating international technical standards is a critical component in their on-going effort to gain strategic and structural advantages over their competitors. Since 2013, China has sought to transition from being a standards taker to a standards maker by providing support to Chinese technology companies and has embarked on a two-track approach to promote Chinese standards through both international standards development organizations and the Digital Silk Road. China’s top-down, state-centric approach towards technical standards setting directly not only contrasts with the approach of the U.S., the European Union, and other likeminded states, but also risks upending the status quo and further politicizing the standards development process.</p>
+        <p>Numerous U.S. government officials have raised concerns about how the adoption of Chinese standards could cause potential compromises to national and personal security and bolster Beijing’s influence in the technology sector and among recipient state elites. Nevertheless, the U.S. government has largely maintained its longstanding hands-off approach, leaving standard setting to the private sector and experts. While American policymakers are right to be concerned with China’s activities, it’s critical that the U.S. not replicate Beijing’s state-centric approach by dictating what the private sector should or should not do. Instead, the U.S. government would do better to play a supporting role, facilitating private sector, non-governmental actors’ participation in multistakeholder standards development bodies and developing mechanisms that increase communication and cooperation between the relevant government agencies and actors involved in standards setting. Specifically, the establishment of an annual convening of American representatives at standardization bodies and with relevant U.S. government officials could lay the foundation for a more coordinated approach. To boost American participation in international standards-setting bodies and meetings (which are often prohibitively expensive) the U.S. government could provide grants, subsidies, and tax breaks to small and medium enterprises to increase their participation and activities in these critical fora.</p>
+        <p>Despite significant differences in the approaches to standard setting of the U.S., Europe, Japan, and other likeminded states, there exists tremendous opportunity for cooperation and collaboration. The U.S. and likeminded states have an interest in ensuring that the playing field isn’t tilted towards Beijing and Chinese firms, that human rights and other shared values are incorporated into technical standards, and in preventing a bifurcated technological landscape. While China’s actions are a source of alarm, it doesn’t mean that engagement with China should be abandoned. With China’s emergence as a technological leader and growing role in this space, it’s understandable that Beijing wants to shape technological governance. Diplomacy should not be brushed aside but bolstered. Outreach to encourage or incentivize China to play by the rules is still worth trying.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9646" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/patrick-lozada"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/patrick_lozada.jpg?itok=oEIZ60_Q" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="patrick-lozada"><a href="https://www.chinafile.com/contributors/patrick-lozada" title="Patrick Lozada">Patrick Lozada</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Technical standards are foundational to telecommunications. Telecom devices and networks need to be able to speak the same language and operate within common parameters in order to function. This is why a system of globally-harmonized standards is so important for the sector—the functioning of the products themselves suffers when politics and industrial policy overtake an innovation-driven, industry-led processes.</p>
+        <p>China’s influence in standards development has grown as companies have developed better technologies (albeit with help along the way because of forced technology transfer and IP theft) and as individual participants have grown to better understand how to operate within the standards system. As the U.S.-China Commission 2020 report <a href="https://www.uscc.gov/sites/default/files/2020-12/Chapter_1_Section_2--The_China_Model-Return_of_the_Middle_Kingdom.pdf" target="_blank" rel="nofollow">notes</a>, the Chinese government has also played a role by aggressively subsidizing participation, putting “bounties” on standards contributions, and strong-arming participants into supporting political favorites over best technologies.</p>
+        <p><em>However</em>, China is not in a position where it can dictate terms in the context of these consensus-driven processes. Even setting aside the fact that these international standards development organizations operate on the principles of voluntary adoption and consensus where no one party can drive technical solutions, large quantitative studies have <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3818143" target="_blank" rel="nofollow">persuasively demonstrated</a> that China is not overrepresented in leadership positions at global tech standards forums. And Chinese participation—even with its flaws—is a net positive. The alternative would be a fractured ecosystem which would raise costs and erect technical barriers to global trade.</p>
+        <p>China’s <a href="https://carnegieendowment.org/2021/10/28/three-takeaways-from-china-s-new-standards-strategy-pub-85678#:~:text=The%20Chinese%20government's%20plan%20focuses,to%20upgrade%20their%20processes%20whether" target="_blank" rel="nofollow">recent standards strategy</a> sends mixed signals on standards policy. On the one hand, it continues a broader trend of devolving standards development to the private sector by emphasizing voluntary standards over mandatory ones and highlighting the role that non-state groups can play in developing standards. On the other, <a href="http://www.sac.gov.cn/sxxgk/zcwj/202202/P020220217365230098593.pdf" target="_blank" rel="nofollow">government planning documents</a>, as well as China’s broader technology <a href="https://www.lawfareblog.com/chinas-tech-crackdown-year-review" target="_blank" rel="nofollow">crackdown</a>, make it apparent that the Chinese government will continue to influence standards development with specific policy objectives in mind.</p>
+        <p>Meanwhile, Europe’s <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_22_661" target="_blank" rel="nofollow">standards strategy</a> actually moves its system incrementally toward a more state-led approach. The recently released strategy frames standards using the lens of how it supports EU policy and legislation, shifts the emphasis from more market-driven non-government standards organizations toward national standardization bodies, and creates a new government “High-Level Forum” and EU excellence hub to guide EU standardization.</p>
+        <p>The U.S.’s approach to standards development is led by the private sector, but it is increasingly inflected by the narrative of American competition with China. In the last few years, the government has expanded the <a href="https://www.wiley.law/alert-US-Commerce-Department-Authorizes-the-Release-of-Technology-to-Huawei-in-the-Standards-Setting-Context" target="_blank" rel="nofollow">application of</a> export controls to cover standards development and is considering <a href="https://science.house.gov/imo/media/doc/Posey%204609%20080%20Revised.pdf" target="_blank" rel="nofollow">new limits</a> on the ability of the National Institutes of Standards and Technology (NIST) to engage in certain global standards forums when Chinese entities are also able to participate. While China and Europe are both seeking to expand their influence in standards development, the U.S. government has taken some measures to limit participation.</p>
+        <p>Instead, the U.S. should be focused on providing incentives for more companies to participate in standards development. While the <a href="https://www.congress.gov/bill/117th-congress/house-bill/4521" target="_blank" rel="nofollow">America COMPETES Act</a> includes a promising pilot grant program, it is limited and could be expanded to support standards development organizations and companies at the forefront of standards innovation. Finally, Congress should move quickly to confirm Laurie Locascio—a scientist and long-time NIST employee—to lead the agency. Her confirmation is <a href="https://www.fedscoop.com/white-house-sends-nist-leader-nomination-to-senate/" target="_blank" rel="nofollow">long overdue</a>, and the agency needs political leadership to adequately support the public-private partnerships underlying standards development.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9651" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/tim-ruhlig"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/ruhlig_sm.jpg?itok=WDnQV7Zf" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="tim-rhlig"><a href="https://www.chinafile.com/contributors/tim-ruhlig" title="Tim Rühlig">Tim Rühlig</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Growing innovativeness explains China’s increasing success in standards setting. While this is a normal process, China’s role is special. The United States, the European Union, Japan, and others need to act for two reasons. First, the ability to shape technical standards is politically impactful. Technical standards shape competitiveness. Standards can create technological lock-in effects resulting in political dependencies. For example, the maintenance of railways based on Chinese standards in Belt and Road Initiative (BRI) countries can only be carried out by Chinese state-owned rail companies. Since railways are critical infrastructure, governments of BRI states may consider twice whether to go against core interests of China. They are also relevant for IT and cybersecurity and inscribe political values to the technology that we use every day. China is not a democracy that defends universal values nor a security ally nor a free market economy. This is why growing Chinese standardization power should concern us.</p>
+        <p>Second, competition with China is not just over influence. China’s growing footprint contests the way technical standards are developed in the West, but also internationally. Despite reforms in the wake of China’s 2018 <a href="https://www.cfstc.org/en/2932583/2968817/index.html" target="_blank" rel="nofollow">standardization law</a>, China’s technical standardization approach remains state-centric. Divergences in standardization systems are normal; the European and U.S. approaches differ significantly. However, both approaches are privately driven. Technical standardization was never primarily a tool of a state’s industrial or foreign policy.</p>
+        <p>The success of China’s state-centric approach poses a dilemma to European and U.S. policymakers. On the one hand, we want to preserve our strength rooted in privately driven standardization. This serves interoperability and innovation and establishes a basis for fair competition. On the other hand, China’s growing footprint requires engagement of public actors in support of private actors. In a nutshell, the strength of privately driven standardization requires public actors’ help.</p>
+        <p>The EU’s recently published <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_22_661" target="_blank" rel="nofollow">standardization strategy</a> is a promising blueprint, but only a first step. The strategy preserves privately driven standardization and suggests complementing it with a high-level strategic forum facilitating exchange between private standardizers, the European Commission, and the EU member states. This adds a layer of top-down strategic coordination. The EU further proposes a mechanism protecting European standardization from the influence of non-European companies when standards are linked to European legislation and regulation. Most importantly, the EU acknowledges the need to strengthen European capabilities. Public actors will need to provide more conducive ecosystems for innovation and incentivize the transmission of innovation in standard proposals. The EU will also promote academic and vocational training of technical standard-setting.</p>
+        <p>The European Commission has taken the first step, and now it is the turn of the EU member states. Strategic preferences need to be identified and coordinated across Europe and with like-minded partners such as those in the United States. The Trade and Technology Council offers a platform that should be complemented by other forums. Beyond coordination, financial support (for example, tax breaks) will be necessary to preserve the West’s stronghold. Firms shaping international standard-setting profit, but so do national economies.</p>
+        <p>Technical standardization is essentially cooperative. Neither China nor the West profits from a decoupling of standards and a fragmentation into distinct technological spheres. At the same time, standardization comes with far-reaching implications. Hence, the West should not blindly cooperate with China. The transatlantic partners and their allies should share intelligence and improve their own capabilities. Our own strength is the most promising strategy to counter China’s increasing standardization power.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9656" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/john-seaman"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/seaman_sm.jpg?itok=fpfWFSIf" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="john-seaman"><a href="https://www.chinafile.com/contributors/john-seaman" title="John Seaman">John Seaman</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The strategies that China, the U.S., Europe, and others pursue in the standard-setting field are ultimately determined by a range of broader issues that standard setting influences.</p>
+        <p>A useful entry point into this space is the importance of standards to the process of globalization. Common standards allow for interoperability between various components and products as well as within and across markets. As economic globalization took off in the 1990s, it was facilitated by an exponential growth in the number of (voluntarily) harmonized international standards.</p>
+        <p>At the same time, standards help to shape the development of products and markets in a very real way, with major implications for who reaps the economic benefits, and who sets the economic and technological baseline.</p>
+        <p>Finally, the way in which a technical standard is defined can in some cases determine whether it will facilitate or hinder political control, or reinforce or undermine privacy protection, for instance. In this sense, standards help set up the pathways for the development of future technologies and their uses.</p>
+        <p>The debates in China, the U.S., Europe, and elsewhere over the best way to manage the process of developing standards all reflect how these broader debates are playing out within each society. With such high stakes and competing priorities, we’re quickly arriving at a critical stage where a broader fragmentation of standards regimes is becoming a distinct possibility. This would effectively mean a major rolling back of the levels of global economic connectivity achieved through globalization and the onset of a much more fragmented global marketplace, facilitating the development of more clearly delineated spheres of economic influence.</p>
+        <p>One key dividing line is on the governance of standards: what type of standard-setting regime is optimal, and what is the right balance between open, multistakeholder interaction and political intervention and oversight. China favors a much more state-centered standardization system than the U.S. and Europe are used to, and standard setting is ultimately subject to clear political oversight. Moreover, while pressing for China’s increased integration into international standardization, Beijing is also exploring the development of more China-centered forums, such as the Belt and Road Initiative or, perhaps in the near future, the Regional Comprehensive Economic Partnership (RCEP) or the emergence of China-based international standards associations. This is troubling for both Americans and Europeans, but as in so many other domains, neither can agree on the best course of action. The U.S. and EU partners each seek to uphold the principles of open, multistakeholder participation. However, the American system holds steadfastly to free-market fundamentals while Europe favors a more hierarchical standards regime organized around the ISO/IEC (International Standards Organization and International Electrotechnical Commission) ecosystem, which calls for more structured representation and an (albeit very limited) level of political oversight. When competing with China, where the state and the Party set clear goals and boundaries for technical-level discussions, the European model may provide a more appropriate dose of political interaction with standards setting than the purely laissez-faire American model.</p>
+        <p>While transatlantic divergences are troublesome, we’re not at the breaking point yet. The failure of the U.S. and the EU to come to terms within the <a href="https://www.cfr.org/blog/can-us-eu-trade-and-technology-council-succeed" target="_blank" rel="nofollow">Trade and Technology Council</a> last year is a worrying sign of the difficulties that lie ahead, but that such a forum exists at all is already a sign of hope. Rendez-vous in France this May for round two.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-04-05</time>
+        <a href="https://nodebe4.github.io/oped2/2022-04-05/Tracking-the-Impact-of-Hong-Kong-s-National-Securi/">
+          Tracking the Impact of Hong Kong’s National Security Law
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-04-05</time>
+        <a href="https://nodebe4.github.io/oped2/2022-04-05/Arrest-Data-Show-National-Security-Law-Has-Dealt-a/">
+          Arrest Data Show National Security Law Has Dealt a Hard Blow to Free Expression in Hong Kong
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-21</time>
+        <a href="https://nodebe4.github.io/oped2/2022-03-21/I-ve-Forgotten-How-to-Kneel-in-Front-of-You!/">
+          ‘I’ve Forgotten How to Kneel in Front of You!’
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-03-12</time>
+        <a href="https://nodebe4.github.io/oped2/2022-03-12/Wang-Jixian-A-Voice-from-The-Other-China,-but-in/">
+          Wang Jixian: A Voice from The Other China, but in Odessa
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-03-21/I-ve-Forgotten-How-to-Kneel-in-Front-of-You!/">
+            前一篇：‘I’ve Forgotten How to Kneel in Front of You!’
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-04-05/Arrest-Data-Show-National-Security-Law-Has-Dealt-a/">
+            後一篇：Arrest Data Show National Security Law Has Dealt a Hard Blow to Free Expression in Hong Kong
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-03-21/I-ve-Forgotten-How-to-Kneel-in-Front-of-You!/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-04-05/Arrest-Data-Show-National-Security-Law-Has-Dealt-a/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-04-05/Arrest-Data-Show-National-Security-Law-Has-Dealt-a/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-03-21/I-ve-Forgotten-How-to-Kneel-in-Front-of-You!/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-03-21/I-ve-Forgotten-How-to-Kneel-in-Front-of-You!/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-04-05/Arrest-Data-Show-National-Security-Law-Has-Dealt-a/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-04-05/Arrest-Data-Show-National-Security-Law-Has-Dealt-a/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-03-21/I-ve-Forgotten-How-to-Kneel-in-Front-of-You!/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
