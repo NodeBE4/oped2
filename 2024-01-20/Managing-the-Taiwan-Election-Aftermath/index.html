@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Managing the Taiwan Election Aftermath – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Managing the Taiwan Election Aftermath
+——
+" />
+    <meta property="og:description" content="
+Managing the Taiwan Election Aftermath
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Managing the Taiwan Election Aftermath" />
+    <meta property="twitter:title" content="Managing the Taiwan Election Aftermath" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fmanaging-taiwan-election-aftermath" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/managing-taiwan-election-aftermath" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/managing-taiwan-election-aftermath&text=Managing the Taiwan Election Aftermath&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/managing-taiwan-election-aftermath&title=Managing the Taiwan Election Aftermath" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/managing-taiwan-election-aftermath&title=Managing the Taiwan Election Aftermath" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Managing the Taiwan Election Aftermath&body=
+Managing the Taiwan Election Aftermath
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/managing-taiwan-election-aftermath" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/managing-taiwan-election-aftermath&title=Managing the Taiwan Election Aftermath&caption=
+Managing the Taiwan Election Aftermath
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Managing the Taiwan Election Aftermath&url=https://www.chinafile.com/conversation/managing-taiwan-election-aftermath" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Managing the Taiwan Election Aftermath</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-01-20
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Ryan Hass, Yu-Jie Chen &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/managing-taiwan-election-aftermath" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1705734240000-->
+<p><a href="https://www.chinafile.com/conversation/managing-taiwan-election-aftermath">Managing the Taiwan Election Aftermath</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-821b51d36ded575fb4fb0a86bdcd9b63">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/55151_sm.jpg" title="Managing the Taiwan Election Aftermath" class="colorbox" data-colorbox-gallery="gallery-node-55151-r71ENgD80pc" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/55151_sm.jpg?itok=NMHM3Wb8" width="1500" height="1000" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Annabelle Chih—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Confetti flies over the stage and crowd as Taiwan’s Vice President and Presidential-elect Lai Ching-te (left) and his running mate Hsiao Bi-khim speak to supporters at a rally at Democratic Progressive Party headquarters in Taipei, Taiwan, January 13, 2024.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">Lai Ching-te is now president-elect of Taiwan, after a hard-fought race in which Beijing made its preference for his opponents clear. Lai is an outspoken advocate for Taiwan’s sovereignty, though he has <a href="https://focustaiwan.tw/cross-strait/202401140001" target="_blank" rel="nofollow">said</a> he wants to keep the status quo with China and that there is no need to declare independence since it is already a de facto reality.</p>
+      <p>How can Taipei best negotiate another rocky period with China? What role should Washington play—and what should it avoid? —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-10561" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/ryan-hass"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/ryanhass.jpg?itok=E-0-MAlD" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="ryan-hass"><a href="https://www.chinafile.com/contributors/ryan-hass" title="Ryan Hass">Ryan Hass</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Taiwan’s voters yet again proved their pragmatism, electing incumbent vice president Lai Ching-te as president-elect and <a href="https://focustaiwan.tw/politics/202401130014" target="_blank" rel="nofollow">delivering</a> the most seats in the legislative yuan to the opposition Kuomintang Party. This outcome is a vote for continuity and a call for Taiwan’s leaders to forge compromise. It reflects Taiwan voters’ overwhelming support for preserving the cross-Strait status quo, protecting democratic governance and individual liberties, and promoting economic opportunity.</p>
+        <p>This election outcome offers ample opportunity for the United States and Taiwan to advance relations, provided both sides adhere to the <a href="https://www.csis.org/analysis/toward-stronger-us-taiwan-relationship" target="_blank" rel="nofollow">unwritten rules</a> for managing the relationship. These include maintaining open and frequent private communication between Washington and Taipei; avoiding any surprises on issues that implicate each other’s vital interests; maintaining transparency with each other on interactions with the mainland that touch upon cross-Strait issues; and respecting the golden rule of preserving bipartisan support in both directions for the relationship.</p>
+        <p>The coming year will not be a period for bold creativity in reimaging U.S.-Taiwan relations. The Lai administration will be busy developing patterns of compromise with other political parties in Taiwan. Lai also will be interested in proving his consistency, predictability, and stewardship of the cross-Strait status quo. Similarly, members of the Biden administration will be focused on America’s elections. They will approach re-election as an existential issue for the future of democracy in America. Even as they will be unflinchingly firm in pushing back on Chinese pressure against Taiwan, they will have limited bandwidth for major new foreign policy initiatives.</p>
+        <p>In this environment, there are still important steps Washington and Taipei could take to sustain momentum in advancing U.S.-Taiwan relations. These include working to <a href="https://www.wsj.com/world/delayed-u-s-weapons-raise-taiwans-vulnerability-to-invasion-d98c6635" target="_blank" rel="nofollow">accelerate</a> delivery of defense equipment to Taiwan and strengthening stockpiles of critical medicines, food, munitions, and energy in Taiwan. Both these steps would help disabuse any hope in Beijing that it could compel Taiwan to capitulate under pressure.</p>
+        <p>The U.S. and Taiwan also should push forward their economic agenda, including by finalizing a double taxation agreement and locking in the next phase of the <a href="https://ustr.gov/about-us/policy-offices/press-office/press-releases/2023/august/united-states-and-taiwan-hold-second-negotiating-round-us-taiwan-initiative-21st-century-trade-1" target="_blank" rel="nofollow">21st Century trade agreement</a> around labor and environmental standards. Taiwan also could take further steps to develop relations with American governors and mayors, who will play increasingly important roles while Washington remains gridlocked.</p>
+        <p>If Washington and Taipei focus on these practical, concrete steps over the coming months, they will put the relationship on an even stronger footing heading into 2025.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10566" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/yu-jie-chen"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/yujiechen.jpg?itok=MWrFv4me" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="yu-jie-chen"><a href="https://www.chinafile.com/contributors/yu-jie-chen" title="Yu-Jie Chen">Yu-Jie Chen</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">President-elect Lai Ching-te will step into an immediate dual challenge: responding to domestic dissatisfaction with the ruling party and navigating China’s ever-mounting pressures. Lai’s slim victory, achieved with a mere plurality in a three-way presidential race and coinciding with a loss of legislative majority, reflects a popular desire for change after the Democratic Progressive Party’s (DPP’s) eight-year rule. Lai must tackle the domestic issues that have alienated young voters from the DPP, notably stagnant wages, high housing prices, and a perception of governmental complacency. This task will be further complicated by a now-divided legislature.</p>
+        <p>The challenge from Beijing is even more pressing. Having dealt with previous DPP presidents Chen Shui-bian and Tsai Ing-wen, Beijing sees Lai as a continuation of Taiwan’s steady move towards independence and thus will likely waste no time launching a new round of economic and diplomatic offensives, including further <a href="https://focustaiwan.tw/cross-strait/202312210011" target="_blank" rel="nofollow">suspension</a> of tariff concessions under the Economic Cooperation Framework Agreement (ECFA) and tightening restrictions on Taiwan’s already limited international space, as demonstrated by Nauru’s <a href="https://www.bbc.com/news/world-asia-67978185" target="_blank" rel="nofollow">severing ties</a> with Taiwan to ally with the People’s Republic of China (PRC) shortly after the election. Additionally, China will persist in normalizing its <a href="https://chinapower.csis.org/tracking-the-fourth-taiwan-strait-crisis/" target="_blank" rel="nofollow">military presence</a> around Taiwan, crossing the median line of the Taiwan Strait and penetrating Taiwan’s Air Defense Identification Zone (ADIZ). While no full-blown conflicts are anticipated in the near future, these coercive tactics dangerously escalate tensions.</p>
+        <p>The most prudent approach for Lai would be to maintain a readiness for dialogue with Beijing, while simultaneously standing firm against any preconditions that contradict the interests of the Taiwanese populace. While Lai <a href="https://www.taiwannews.com.tw/en/news/4903344" target="_blank" rel="nofollow">rejects</a> China’s sovereignty assertion over Taiwan, to reinforce his commitment to maintaining the status quo he is expected to reaffirm his government’s adherence to the Republic of China’s Constitution. This would signal an avoidance of any radical moves towards formal independence, such as constitutional amendments. Lai must carefully avoid actions or rhetoric that could cause him to be labeled a provocateur, especially as he aims for re-election in four years to extend the DPP’s rule for another term.</p>
+        <p>A sensible approach for Beijing might entail reassessing its position towards a DPP government, given that Taiwanese voters have increasingly favored DPP candidates over Kuomintang (KMT) since the island’s inaugural direct presidential election in 1996. However, it appears unlikely that Xi Jinping will adopt such a stance. To counter Beijing’s increasing pressure, Lai plans to <a href="https://www.cfr.org/blog/taiwans-2024-presidential-election-analyzing-william-lais-foreign-policy-positions" target="_blank" rel="nofollow">follow</a> Tsai Ing-wen’s approach by strengthening ties with the United States and other democratic nations. The DPP views Taiwan-U.S. relations as stronger than ever, and Lai is committed to maintaining this robust partnership.</p>
+        <p>The wildcard, however, is the forthcoming U.S. presidential election. A continued Biden administration would sustain a high level of predictability in the trilateral U.S.-China-Taiwan relationship. Yet, a change in the White House could disrupt or dismantle the delicate balance. Many in Taiwan see Trump as tough on China, but Trump’s isolationist tendencies, shaky relations with allies, and transactional view of Taiwan were unsettling for Taiwan’s security. A return to such an erratic foreign policy stance would not only embolden Beijing and leave Taiwan vulnerable, but would also compromise America’s influence and credibility in a strategically vital region.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10571" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/rorry-daniels"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/rorry_daniels_sm_0.jpg?itok=2tjX6Tt-" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="rorry-daniels"><a href="https://www.chinafile.com/contributors/rorry-daniels" title="Rorry Daniels">Rorry Daniels</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Taipei is facing two challenges: first, a <a href="https://www.cnbc.com/2024/01/15/taiwan-election-new-president-lai-ching-te-to-face-divided-parliament.html#:~:text=TAIPEI%20%E2%80%94%20Taiwan's%20president%2Delect%20Lai,the%20113%2Dseat%20Legislative%20Yuan." target="_blank" rel="nofollow">divided government</a> in which the DPP holds the executive branch but an opposition coalition will likely control the legislature; second, Beijing’s deep distrust of Lai Ching-te precludes any possibility of credible dialogue between authorities on both sides of the Taiwan Strait. Lai is in a tough position ahead of his inauguration, because the legislature <a href="https://www.ly.gov.tw/EngPages/Detail.aspx?nodeid=333&amp;pid=43230" target="_blank" rel="nofollow">takes office</a> February 1 and can start setting the public debate and conditions under which he will assume office in May.</p>
+        <p>Lai needs to navigate a domestic environment that is likely to highlight political partisanship without stepping outside the bounds of what the majority of Taiwan people want in cross-Strait relations—namely, <a href="https://www.wilsoncenter.org/blog-post/taipei-beijing-and-status-quo" target="_blank" rel="nofollow">the status quo</a> of preserving Taiwan’s democratic system without getting into a war with the well-armed and aggressive People’s Republic of China. Lai should consider how to promote effective governance under these circumstances through his cabinet choices. He could bring in some centrists or politicians affiliated with the opposition parties, to preemptively deflect partisan criticism and fulfill his promise to work in <a href="https://focustaiwan.tw/cross-strait/202401140001#:~:text=ELECTION%202024%2FPresident%2Delect%20Lai,maintain%20cross%2Dstrait%20status%20quo&amp;text=Taipei%2C%20Jan.%2013%20(CNA,Taipei%20in%20this%20%22new%20situation." target="_blank" rel="nofollow">consultation and cooperation</a> with his political opponents.</p>
+        <p>Lai, and Vice President-elect Hsiao Bi-khim, will also need to reassure the United States that they can manage the cross-Strait relationship prudently and work on an unofficial basis to coordinate on joint priorities and initiatives. Hsiao is in a favorable position to do just that, <a href="https://www.theguardian.com/world/2024/jan/03/taiwans-cat-warrior-former-us-envoy-hsiao-bi-khim-hopes-to-be-next-vice-president" target="_blank" rel="nofollow">having worked</a> in Washington for the past several years as Taiwan’s envoy to the U.S., forging strong relationships with key U.S. players on Taiwan policy.</p>
+        <p>The good news in the immediate period ahead is that all three sides—Washington, Beijing, and Taipei—have reasons to avoid a cross-Strait crisis. Beijing is still sailing into <a href="https://www.cnbc.com/2024/01/17/china-2024-gdp-forecasts-by-jpmorgan-goldman-citi-morgan-stanley.html" target="_blank" rel="nofollow">economic headwinds</a> and focused on combatting corruption at high-levels and <a href="https://www.economist.com/china/2024/01/11/xi-jinping-is-struggling-to-stamp-out-graft-in-the-pla" target="_blank" rel="nofollow">throughout the People’s Liberation Army (PLA)</a>. The U.S. is gearing up for yet another divisive election season in which neither the Biden administration nor the Chinese Communist Party (CCP) want Taiwan to be a focal point of public attention. Taipei needs a quiet period to bridge administrations, receive <a href="https://www.wsj.com/world/delayed-u-s-weapons-raise-taiwans-vulnerability-to-invasion-d98c6635" target="_blank" rel="nofollow">defense deliveries</a> from the U.S., and regroup from losing yet another diplomatic ally after Nauru <a href="https://www.bbc.com/news/world-asia-67978185" target="_blank" rel="nofollow">switched recognition</a> earlier this week.</p>
+        <p>This unofficial (and likely temporary) détente gives Lai time to prove he is not a firebrand and explore how far he can go in extending an olive branch to Beijing in his inaugural speech. And though the two sides of the Strait are not talking, Washington can be an important bridge between Taipei and Beijing, working to ensure that messages are accurately conveyed and understood.</p>
+        <p>Of course, it’s best to do so quietly and at extremely high—and therefore, authoritative—levels, such as the <a href="https://www.state.gov/secretary-blinkens-meeting-with-prc-minister-of-the-international-liaison-department-of-the-ccp-central-committee-liu/" target="_blank" rel="nofollow">meeting</a> just before the election between Secretary Antony Blinken and Minister Liu Jianchao, head of the CCP’s International Liaison Department. The exchange may not have staved off Beijing’s <a href="https://asia.nikkei.com/Politics/Taiwan-elections/China-says-DPP-cannot-represent-Taiwan-after-Lai-s-election-win" target="_blank" rel="nofollow">harshly worded statements</a> about Lai and the DPP, stopped its <a href="https://www.ft.com/content/36b6cf89-0b37-482d-9de1-0f269a01ed6b" target="_blank" rel="nofollow">military exercises</a> in the Taiwan Strait, nor kept Washington from <a href="https://www.state.gov/on-taiwans-election/" target="_blank" rel="nofollow">publicly expressing</a> support for Taiwan’s democratic election. But it seems to have contributed to clarifying intentions and reducing misperceptions, all of which is good for Taiwan, the U.S., and the world.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10576" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/brian-hioe"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/hioe_sm2.png?itok=VhEQ56QS" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="brian-hioe"><a href="https://www.chinafile.com/contributors/brian-hioe" title="Brian Hioe">Brian Hioe</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">In the immediate aftermath of his election victory, Lai Ching-te is best served keeping his head down and emphasizing that he will maintain continuity with the Tsai administration. In essence, though it probably worked against him in electioneering, it makes the most sense for him to come off as politically colorless as possible at the start of his term.</p>
+        <p>Lai’s past history of <a href="https://www.nytimes.com/2024/01/14/world/asia/taiwan-election-lai.html#:~:text=Facing%20questions%20from%20Taiwanese%20lawmakers,his%20reckless%20pursuit%20of%20independence." target="_blank" rel="nofollow">pro-independence statements</a> will forever haunt him. China will likely try to amplify it in order to alarm U.S. critics of the pan-Green coalition of parties Lai’s Democratic Progressive Party (DPP) leads and undermine the strengthening U.S.-Taiwan relationship.</p>
+        <p>This does not mean that Lai cannot gradually try to expand the amount of international space Taiwan has. There will be opportunities to take a strong stance against China on actions such as its <a href="https://focustaiwan.tw/politics/202401150008" target="_blank" rel="nofollow">poaching</a> of Nauru as a diplomatic ally a mere two days after his election victory. However, Lai needs to play it safe, wait for the right political opportunities to open up, and emphasize that his actions will not be unilateral but will be taken in coordination with allies.</p>
+        <p>Lai may have his work cut out for him in that the domestic opposition of the Kuomintang (KMT) will also attempt to play up the perception of him as always secretly harboring pro-independence views in his heart of hearts. But neither can Lai overcompensate, as occurred when he tried to shift too much in the other direction with comments in 2017 about how it was possible to “<a href="https://news.ltn.com.tw/news/politics/paper/1113791" target="_blank" rel="nofollow">Love Taiwan while being pro-China</a>” and calling for unity on the basis of such views. This was part of what appeared to be a poorly thought-out attempt to modulate his image as his profile for a presidential run rose, but such comments alienated his base.</p>
+        <p>Indeed, the KMT has increasingly leaned into political attacks, casting doubt on the reliability of the U.S. as an ally against China. <a href="https://globaltaiwan.org/wp-content/uploads/2023/08/OR_ASTAW0807FINAL.pdf" target="_blank" rel="nofollow">U.S.-skeptic</a> views are likely to continue to hold sway as a refrain of the pan-Blue (KMT-aligned) camp going forward. Even if Lai can coast on the Tsai administration’s accomplishments in this regard, this will not be a magic bullet for him that shores him up electorally.</p>
+        <p>Indeed, though Lai had a decisive lead over his opponents in the election, it is also clear that he had a weak position relative to Tsai Ing-wen’s in 2020, when she won reelection by <a href="https://www.theguardian.com/world/2020/jan/11/taiwan-re-elects-tsai-ing-wen-as-president-in-clear-message-to-china" target="_blank" rel="nofollow">historically large margins</a>. If the pan-Blue camp had managed a joint ticket against him, he would almost certainly have been defeated.</p>
+        <p>Questions are already being asked about whom the KMT <a href="https://udn.com/vote2024/story/123886/7709154?from=udn_ch2_menu_v2_main_index" target="_blank" rel="nofollow">will field</a> against him in 2028 and whether pan-Blue political parties will manage to unite against the DPP. Or if pan-Blue parties will <a href="https://www.taipeitimes.com/News/taiwan/archives/2024/01/12/2003811994" target="_blank" rel="nofollow">split</a> over the question of whether to engage in scorched earth tactics versus selective opposition to the DPP on an issue-by-issue basis. But even if the present may be a time for moderation on his part, eventually Lai will need a compelling political narrative of his own if he hopes to maintain power beyond just one term. Coasting off of the Tsai administration’s laurels will not suffice for this.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2024-02-01</time>
+        <a href="https://nodebe4.github.io/oped2/2024-02-01/It-s-Too-Convenient-to-Say-That-Xi-Jinping-Is-a-S/">
+          “It’s Too Convenient to Say That Xi Jinping Is a Second Mao”
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-01-22</time>
+        <a href="https://nodebe4.github.io/oped2/2024-01-22/Beijing-Is-Pouring-Resources-into-Its-UN-Human-Rig/">
+          Beijing Is Pouring Resources into Its UN Human Rights Review—All to Prevent Any Real Review from Taking Place
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-01-09</time>
+        <a href="https://nodebe4.github.io/oped2/2024-01-09/Updates-to-Our-Database-of-Arrests-under-the-Hong/">
+          Updates to Our Database of Arrests under the Hong Kong National Security Law
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-12-21</time>
+        <a href="https://nodebe4.github.io/oped2/2023-12-21/What-Does-It-Really-Mean-for-Europe-to-De-Risk-I/">
+          What Does It Really Mean for Europe to ‘De-Risk’ Its Relationship with China?
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2024-01-09/Updates-to-Our-Database-of-Arrests-under-the-Hong/">
+            前一篇：Updates to Our Database of Arrests under the Hong Kong National Security Law
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2024-01-22/Beijing-Is-Pouring-Resources-into-Its-UN-Human-Rig/">
+            後一篇：Beijing Is Pouring Resources into Its UN Human Rights Review—All to Prevent Any Real Review from Taking Place
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2024-01-09/Updates-to-Our-Database-of-Arrests-under-the-Hong/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2024-01-22/Beijing-Is-Pouring-Resources-into-Its-UN-Human-Rig/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2024-01-22/Beijing-Is-Pouring-Resources-into-Its-UN-Human-Rig/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2024-01-09/Updates-to-Our-Database-of-Arrests-under-the-Hong/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2024-01-09/Updates-to-Our-Database-of-Arrests-under-the-Hong/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2024-01-22/Beijing-Is-Pouring-Resources-into-Its-UN-Human-Rig/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2024-01-22/Beijing-Is-Pouring-Resources-into-Its-UN-Human-Rig/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2024-01-09/Updates-to-Our-Database-of-Arrests-under-the-Hong/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

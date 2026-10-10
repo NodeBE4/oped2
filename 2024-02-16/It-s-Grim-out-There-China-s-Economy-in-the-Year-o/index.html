@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>It’s Grim out There: China’s Economy in the Year of the Dragon – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+It’s Grim out There: China’s Economy in the Year of the Dragon
+——
+" />
+    <meta property="og:description" content="
+It’s Grim out There: China’s Economy in the Year of the Dragon
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="It’s Grim out There: China’s Economy in the Year of the Dragon" />
+    <meta property="twitter:title" content="It’s Grim out There: China’s Economy in the Year of the Dragon" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fits-grim-out-there-chinas-economy-year-of-dragon" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/its-grim-out-there-chinas-economy-year-of-dragon" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/its-grim-out-there-chinas-economy-year-of-dragon&text=It’s Grim out There: China’s Economy in the Year of the Dragon&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/its-grim-out-there-chinas-economy-year-of-dragon&title=It’s Grim out There: China’s Economy in the Year of the Dragon" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/its-grim-out-there-chinas-economy-year-of-dragon&title=It’s Grim out There: China’s Economy in the Year of the Dragon" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=It’s Grim out There: China’s Economy in the Year of the Dragon&body=
+It’s Grim out There: China’s Economy in the Year of the Dragon
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/its-grim-out-there-chinas-economy-year-of-dragon" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/its-grim-out-there-chinas-economy-year-of-dragon&title=It’s Grim out There: China’s Economy in the Year of the Dragon&caption=
+It’s Grim out There: China’s Economy in the Year of the Dragon
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=It’s Grim out There: China’s Economy in the Year of the Dragon&url=https://www.chinafile.com/conversation/its-grim-out-there-chinas-economy-year-of-dragon" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>It’s Grim out There: China’s Economy in the Year of the Dragon</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-02-16
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Anne Stevenson-Yang, Zongyuan Zoe Liu &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/its-grim-out-there-chinas-economy-year-of-dragon" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1708101300000-->
+<p><a href="https://www.chinafile.com/conversation/its-grim-out-there-chinas-economy-year-of-dragon">It’s Grim out There: China’s Economy in the Year of the Dragon</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-c738fc49dc1cb26d8cfa2d43844f0b6d">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/55196_sm.jpg" title="It’s Grim out There: China’s Economy in the Year of the Dragon" class="colorbox" data-colorbox-gallery="gallery-node-55196-j3J2mfRkD0o" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/55196_sm.jpg?itok=ZTbsTwPk" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+(AFP/Getty Images)
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>An employee works on engines at a factory in Qingzhou, in eastern Shandong province, November 30, 2023.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">At the end of January, a Hong Kong judge <a href="https://www.reuters.com/business/embattled-china-evergrande-back-court-liquidation-hearing-2024-01-28/#:~:text=Justice%20Linda%20Chan%20decided%20to,and%20following%20several%20court%20hearings." target="_blank" rel="nofollow">ordered</a> the liquidation of the heavily-indebted Chinese real estate giant Evergrande. It was just the latest piece of bad news for China’s economy, after a year of disappointing growth, high youth unemployment, and various surveys and media reports that show a lack of confidence amongst China’s entrepreneurs and consumers.</p>
+      <p>Some observers have been predicting an economic collapse in China for decades. Others have long predicted that China would be stuck in a middle-income trap or some other type of economic stagnation. Might some of these predictions come true this time? What does the Year of the Dragon have in store for consumers, companies, and markets? What should we look out for this year to understand both China’s real economy and its financial sector? —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-10616" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/anne-stevenson-yang"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/annestevensonyang.png?itok=G4zVhjGd" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="anne-stevenson-yang"><a href="https://www.chinafile.com/contributors/anne-stevenson-yang" title="Anne Stevenson-Yang">Anne Stevenson-Yang</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">I think we can all agree that China has followed an investment-driven growth model for over 40 years. It is never easy for a country to wean itself off this model, but instead of trying to do that, a few years back, China doubled down.</p>
+        <p>After the 2008 Global Financial Crisis, fearing a bank contagion and declining exports, leaders put the investment model on steroids. Under instruction from Beijing, banks threw caution to the winds. In five short years, Chinese banks added loans worth the entire value of the U.S. banking system—which had taken 150 years to create, in a country with a much larger economy. Those loans went to industrial schemes and much more infrastructure than the country actually could justify, but very largely, to real estate.</p>
+        <p>The property mania that followed, with years of rising prices that helped encourage consumers to keep buying, created Ozymandian blights on the landscape: replica cities including at least three “Little Manhattans,” three “Little Hong Kongs,” a mini-Paris, an “English village” complete with little red phone booths, replicas of Red Square, and many, many other toy cities, almost entirely unoccupied, as if re-creating the physical structures might magically bring to life the real thing, and Chinese people would find themselves living not in the dusty streets of Anhui or Hubei or Henan but among palm trees and burbling fountains in wealthy, leisured communities.</p>
+        <p>Not only did the construction fail to create wealthy communities, but the money invested in these projects has trickled away. Loans created deposits, and the stimulus generated cash. That cash, coursing through the economy, surged to crazy levels after 2009. People who had been farming barley or tending cows and seeing $10,000 a year in cash income suddenly had money to spend on cars and casinos and investment products.</p>
+        <p>But underneath the sudden wealth, basic incomes were not rising much, and investment in the intangibles that strengthen a population was neglected. China’s population, particularly in rural areas, has not benefited from the improvements in health and education that would have prepared them for a modernizing economy.</p>
+        <p>The illusion of property values that would rise forever was burst in 2021, and since then, China’s economy has weakened. What to do? The whole Chinese economy has kited atop property speculation, and no official dared allow it to stop. Now, banks say that 70 percent of assets are invested in the property sector. Bloomberg Economics <a href="https://www.bloomberg.com/news/articles/2023-12-17/china-s-shrinking-household-wealth-families-strive-to-save-nest-eggs" target="_blank" rel="nofollow">calculates</a> that a 5 percent fall in housing prices would equate a loss of 19 trillion renminbi (U.S.$2.7 trillion) in wealth.</p>
+        <p>Already, dozens of property developers have defaulted. Bank deposit rates have been pushed down, and the investment schemes that once offered better returns were swept away by regulators who want cash to return to the banks. Chinese consumers are becoming poorer.</p>
+        <p>To revive the old model and save the defaulting assets, the government would need to hose trillions on the economy. But all that cash would break the renminbi’s peg to the U.S. dollar, and that is a consequence the Chinese Communist Party cannot accept: It would mean massive capital flight, an angry populace, and the end of the dream of great wealth.</p>
+        <p>So, China’s leaders pace like caged tigers, lunging at half measures like new bond issues and a “stock market stabilization fund,” as if these efforts might bring back the glory days. But half measures will not work.</p>
+        <p>China has a huge economy, much of which is functional. Debt can be spread around for some time, and it is hard to say when the banks will demand massive cash injections to survive. But once that happens, the currency will deflate like an old party balloon, and the government will do its best to suppress dissent and close the borders. Those processes have already begun, and they foretell nothing good for 2024.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10621" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/zongyuan-zoe-liu"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/liu_sm.jpg?itok=PUGQYhsp" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="zongyuan-zoe-liu"><a href="https://www.chinafile.com/contributors/zongyuan-zoe-liu" title="Zongyuan Zoe Liu">Zongyuan Zoe Liu</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">In the short run, China’s economic recovery in 2024 hinges upon four interrelated factors: property market stabilization, household consumption recovery, external environment improvement, and confidence in the economy restored.</p>
+        <p>The <a href="https://english.www.gov.cn/news/202311/02/content_WS65430bb8c6d0868f4e8e0e33.html" target="_blank" rel="nofollow">Central Financial Work Conference in October 2023</a> and the <a href="https://english.www.gov.cn/news/202312/12/content_WS657860aec6d0868f4e8e21c2.html" target="_blank" rel="nofollow">Central Economic Work Conference in December</a> underscored the importance of risk prevention and resolution in three key areas: the property market, local government debt, and small- and medium-sized financial institutions. A necessary first step is stabilizing the property market by easing credit conditions to meet reasonable financing needs without fueling a new round of excessive borrowing.</p>
+        <p>Property market stabilization directly contributes to strengthening household balance sheets, creating a favorable environment to boost household consumption and expand domestic aggregate demand, all necessary to lift the Chinese economy out of the deflationary trap. Moreover, the property sector intricately links with local government off-balance sheet financing and small- and medium-sized banks’ lending. While the fall of <a href="https://www.cfr.org/in-brief/does-evergrandes-collapse-threaten-chinas-economy" target="_blank" rel="nofollow">Evergrande</a> is not China’s Lehman moment and is unlikely to immediately spark a contagious wave of bank failures, its negative shock on the entire supply chain of the property sector, corporate creditors, and the small banks involved adds to the challenges facing China’s economic recovery.</p>
+        <p>Tensions with the United States are the top external challenge for China’s economic recovery in 2024, but not the only one. Complex global supply chain disruptions pose risks to Chinese exporters that are already operating on thin profit margins. The Red Sea crisis has <a href="https://www.reuters.com/business/autos-transportation/impact-commodities-due-chaos-red-sea-2024-01-29/" target="_blank" rel="nofollow">disrupted</a> the main shipping route between Asia and Europe, causing delays and raising shipping costs, lowering the profitability of Chinese exporters. The Suez Canal is a primary route for China’s westward goods shipments, including around <a href="https://www.shs-conferences.org/articles/shsconf/pdf/2022/04/shsconf_eac-law2021_00135.pdf" target="_blank" rel="nofollow">60 percent</a> of its exports to Europe. A prolonged Red Sea shipping crisis would pile pressure on Chinese exporters and challenge the Chinese economy that is already battered by a looming property sector crisis, weak consumer demand, a shrinking population, and sluggish global growth.</p>
+        <p>Additionally, over 70 countries and over 4.2 billion people worldwide will hold elections this year, including major economies such as the United States, Russia, and India. The election results may affect and change the global business environment and market landscape in which Chinese companies operate.</p>
+        <p>In the long run, Chinese economic growth faces the challenges of the “<a href="https://foreignpolicy.com/2022/11/01/zero-covid-china-economic-problems-demographics/" target="_blank" rel="nofollow">4 Ds</a>”: debt, demand, demographics, and decoupling (which some prefer to call “<a href="https://www.chinafile.com/conversation/what-does-it-really-mean-europe-de-risk-its-relationship-china" target="_blank" rel="nofollow">de-risking</a>”). The first three Ds suggest that the Chinese economy is exposed to the risk of a Japan-style stagnation: Debt is soaring while growth is slowing down, and sluggish demand cannot catch up to overextended supply and adverse demographic trends. However, these risk factors do not necessarily suggest that the decline of the Chinese economy is inevitable. An improvement in the external environment combined with domestic structural reform can still boost the growth of the Chinese economy.</p>
+        <p>However, structural reform takes more than fiscal and monetary stimulus; it requires political incentive alignment that is hard to obtain.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10626" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/arthur-r-kroeber"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/arthur_kroeber_photo_0.jpg?itok=lwL8ZHxt" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="arthur-r-kroeber"><a href="https://www.chinafile.com/contributors/arthur-r-kroeber" title="Arthur R. Kroeber">Arthur R. Kroeber</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">China’s economic malaise results from a combination of political decisions, structural factors, and policy mistakes. The central reason for it is that Xi Jinping has decided to make national security and technological upgrading—not economic growth—his <a href="https://merics.org/en/report/comprehensive-national-security-unleashed-how-xis-approach-shapes-chinas-policies-home-and" target="_blank" rel="nofollow">policy priorities</a>.</p>
+        <p>The broadening definition of national security, and the increased influence of security interests in economic policy, have soured private investor confidence. The focus on technological upgrading has led to an economic strategy that relies almost exclusively on industrial policy. This means that the government devotes most of its attention to the supply side of the economy: boosting production of semiconductors, clean energy equipment, electric vehicles, industrial machinery, ships, and other products seen as needed to increase the country’s technological capability and self-sufficiency. Virtually no serious effort goes into figuring out how to unlock domestic demand—especially from households, which now <a href="https://www.bloomberg.com/opinion/articles/2023-01-11/chinese-consumers-where-will-they-splash-their-extra-827-billion" target="_blank" rel="nofollow">save</a> about a third of their income, one of the highest savings rates in the world.</p>
+        <p>These policies mean that China’s economy will have two faces in the coming years. The chronic shortage of demand will mean disappointing GDP growth—probably 3-4 percent on average over the rest of the decade—and a constant struggle to shake off deflation. But at the same time, its technology-intensive sectors will thrive, thanks to both government support and China’s uniquely competitive manufacturing ecosystem. The result will be persistent high trade surpluses and, probably, a strong wave of protectionism from countries that want to preserve their own industrial capacity.</p>
+        <p>This policy stance also makes it very hard for China to solve two of its biggest structural problems: the collapsing property market and the huge and growing debt burdens of local governments. The last time China faced a challenge of this scale was the late 1990s, when <a href="https://www.economist.com/sites/default/files/20160507_finance_china.pdf" target="_blank" rel="nofollow">nearly half</a> of all bank loans went bad. At that time, it responded with a combination of financial engineering to postpone the reckoning of bad debts, well-targeted infrastructure stimulus, and aggressive deregulation of manufacturing and housing which unlocked huge new sources of entrepreneurship and household demand. As a result, China grew out of its problems and by 2010 became the world’s second-biggest economy.</p>
+        <p>A similar approach today would recognize that deregulation of services—which account for more than half the economy, and all net new employment—is the main path to boosting consumer demand and accelerating economic growth. Too much of the service economy is either in state hands, or burdened by stunting regulations. But such a policy would conflict directly with Xi’s desire to keep the state’s finger on all economic levers. So we need to brace for the consequences of the Xi model: slower growth in China, a big rise in Chinese technology exports, and more protectionism in the rest of the world.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10631" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/bill-bishop"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/bill_bishop.2_0.jpg?itok=49RmOGfM" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="bill-bishop"><a href="https://www.chinafile.com/contributors/bill-bishop" title="Bill Bishop">Bill Bishop</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The zodiac animal may have changed, but the Year of the Dragon is likely to be another Year of the Grind for the PRC economy.</p>
+        <p>In spite of the exhortation from the <a href="http://www.news.cn/politics/leaders/2023-12/12/c_1130022917.htm" target="_blank" rel="nofollow">December Central Economic Work Conference</a> (planning for 2024) to “strengthen economic propaganda and public opinion guidance, and promote a positive narrative about the bright prospects for the Chinese economy,” it is very hard to build a case that the economy is doing well or that 2024 is going to be a smooth year for the economy and consumers.</p>
+        <p>Xi and the leadership are very serious about transitioning from the old growth model to the “<a href="https://merics.org/en/2-xis-policies-serve-strategic-national-goals-beyond-growth" target="_blank" rel="nofollow">New Development Concept</a>” with high-quality growth. That transition would be painful even in the best of times, but it is now more difficult in the wake of the pandemic hangover, the huge debt problems throughout the economy, employment challenges, the recent stock market meltdown, and a growing loss of confidence in the economy and the competence of policymakers.</p>
+        <p>Those hoping for more robust “stimulus” and a return to more “pragmatic” policymaking will likely be disappointed again in 2024. There has been lots of targeted stimulus, but the goal has been to manage the debt crises and prevent a sharp decline in economic activity and employment, rather than massive, indiscriminate 2008-like stimulus. As for a return to “pragmatism,” Xi Jinping Economic Thought is the chart for navigating the rough economic seas to higher-quality growth, and so far we have no indication that the top leadership, or at least the top leader, believes there is any need to deviate from that.</p>
+        <p>Other hopeful events for change we often hear about are the March National People’s Congress (NPC) and the oft-rumored but so far not convened Third Plenum. The hope is that Premier Li Qiang, in his work report to the NPC, will outline more stimulative policies and that the Plenum perhaps will shift back to a more “pragmatic” approach to economic policy. I am skeptical. The policies for 2024 were likely set at the Central Economic Work Conference in December, and other than the stock market decline over the last several weeks it is not clear anything else in the economy has materially worsened since then, so why would they suddenly shift policies so soon after?</p>
+        <p>Both the Central Economic Work Conference and the <a href="https://english.www.gov.cn/news/202311/02/content_WS65430bb8c6d0868f4e8e0e33.html" target="_blank" rel="nofollow">October Central Financial Work Conference</a>, the first held in several years, raised <a href="https://www.fitchratings.com/research/banks/chinas-central-financial-work-conference-maintains-focus-on-systemic-risks-03-11-2023" target="_blank" rel="nofollow">hopes</a> of more comprehensive <a href="https://www.reuters.com/world/china/china-step-up-financial-supervision-cut-risks-2023-10-31/" target="_blank" rel="nofollow">measures</a> to resolve some of the massive debt problems. Meaningful and credible steps to materially resolve the real estate and local government debt crises would be very positive, and also very painful.</p>
+        <p>It makes sense that so many inside and outside the People’s Republic of China want more robust stimulus. I believe the top leadership, however, is willing to endure much more pain than investors and citizens expect, and that it will continue to harden the system to be able to withstand significantly more difficult times.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10641" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/lizzi-c-lee"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/lizzi_lee_sm.jpg?itok=Hs-23Lff" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="lizzi-c-lee"><a href="https://www.chinafile.com/contributors/lizzi-c-lee" title="Lizzi C. Lee">Lizzi C. Lee</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Two competing extreme views of China’s economy historically have vied for dominance. Not too long ago we witnessed a plethora of “<a href="https://www.foreignaffairs.com/china/end-china-economic-miracle-beijing-washington" target="_blank" rel="nofollow">China miracle</a>” theories. Now we find ourselves in the era of its antithesis: the narrative of <a href="https://www.heritage.org/asia/commentary/chinas-economic-collapse-carries-warning-about-our-own-future" target="_blank" rel="nofollow">China’s economic collapse</a>, which casts the country as “<a href="https://www.ft.com/content/88c027d2-bda6-4e52-97f3-127197aef1bd" target="_blank" rel="nofollow">uninvestable</a>.”</p>
+        <p>Leading this story are the systemic issues plaguing the <a href="https://www.imf.org/en/News/Articles/2024/02/02/cf-chinas-real-estate-sector-managing-the-medium-term-slowdown" target="_blank" rel="nofollow">property market</a>, intricately intertwined with <a href="https://rhg.com/research/tapped-out/" target="_blank" rel="nofollow">local debt</a>. The immediate impact of the property sector’s decline is undeniably severe. Analysts highlight the looming specter of <a href="https://www.reuters.com/world/china/chinas-troubled-property-sector-face-more-debt-defaults-2023-10-20/" target="_blank" rel="nofollow">defaults</a> on property developer debt, the staggering sum of which threatens to unsettle economic actors from homeowners to local governments. But it’s crucial to differentiate between “policy failure” and “policy choice.” In the context of China’s real estate market, Beijing’s leadership <a href="https://www.wsj.com/articles/in-tackling-chinas-real-estate-bubble-xi-jinping-faces-resistance-to-property-tax-plan-11634650751" target="_blank" rel="nofollow">views</a> the market’s downturn not as an oversight but as the result of a deliberate decision to curb an <a href="https://www.bloomberg.com/news/articles/2022-12-28/-1-3-trillion-china-housing-crackdown-hasn-t-fixed-unaffordable-property-market" target="_blank" rel="nofollow">unsustainable surge</a> in property prices and overdevelopment. This <a href="https://www.wsj.com/articles/evergrande-china-crisis-real-estate-developers-11636552507" target="_blank" rel="nofollow">strategic pullback</a> aims to stabilize the market after decades of <a href="https://www.imf.org/en/Publications/fandd/issues/2023/12/China-bumpy-path-Eswar-Prasad" target="_blank" rel="nofollow">rampant growth</a>. However, several analysts and rating agencies <a href="https://www.cnbc.com/2023/12/07/chinas-big-property-market-problem-will-take-years-to-resolve.html" target="_blank" rel="nofollow">expect</a> that stabilizing the property market’s decline and restoring a new equilibrium will be a <a href="https://fortune.com/asia/2023/09/26/china-economist-hao-hong-real-estate-crisis-decade-to-fix-social-media-censorship/" target="_blank" rel="nofollow">lengthy process</a>, possibly stretching to the decade’s end. Any misstep in management threatens to transform this calculated choice into a considerable failure.</p>
+        <p>Adding to the malaise of its property market, the dismal <a href="https://www.bloomberg.com/news/articles/2024-01-08/china-stocks-slump-to-5-year-low-as-2024-starts-on-a-dismal-note" target="_blank" rel="nofollow">performance</a> of China’s stock market and the alarming <a href="https://www.forbes.com/sites/miltonezrati/2023/11/23/more-money-is-leaving-china/?sh=6d64dcf03acf" target="_blank" rel="nofollow">outflow</a> of funds underscore investors’ waning confidence. Recently, Beijing has embarked on active measures, ranging from personnel <a href="https://www.wsj.com/finance/stocks/china-battling-a-stock-market-rout-replaces-its-top-securities-regulator-0c3abadc" target="_blank" rel="nofollow">reshuffles</a> to market-stabilizing <a href="https://www.bloomberg.com/news/articles/2024-02-04/china-vows-to-prevent-abnormal-market-fluctuations-csrc-says" target="_blank" rel="nofollow">interventions</a>, in a bid to avert further decline.</p>
+        <p>In contrast to the <a href="https://www.afr.com/world/asia/why-we-ve-reached-peak-pessimism-on-china-20231001-p5e8yy" target="_blank" rel="nofollow">widespread pessimism</a>, an alternative narrative celebrates China’s burgeoning economy, spotlighting its prowess in <a href="https://www.scmp.com/economy/china-economy/article/3246040/china-targets-industries-future-2024-humanoid-robots-and-biomedicines-drive-high-quality-economic" target="_blank" rel="nofollow">advanced manufacturing</a> across sectors such as <a href="https://www.cnbc.com/2023/09/28/chinas-chip-firms-see-revenue-surge-as-beijing-seeks-self-reliance.html" target="_blank" rel="nofollow">domestic chip production</a>, <a href="https://www.theguardian.com/world/2024/jan/09/in-the-race-for-ai-supremacy-china-and-the-us-are-travelling-on-entirely-different-tracks" target="_blank" rel="nofollow">artificial intelligence</a>, <a href="https://hbr.org/2024/01/3-drivers-of-chinas-booming-electric-vehicle-market" target="_blank" rel="nofollow">electric vehicle manufacturing</a>, and the expansion of <a href="https://www.scmp.com/news/china/science/article/3243314/55g-china-rolling-out-next-big-thing-communications-technology" target="_blank" rel="nofollow">5.5G networks</a> and <a href="https://asia.nikkei.com/Politics/International-relations/China-deepens-ties-with-Global-South-to-counter-U.S.-led-order" target="_blank" rel="nofollow">infrastructure projects</a> in the Global South. These sectors are the pillars of Xi Jinping’s <a href="https://merics.org/en/report/made-china-2025" target="_blank" rel="nofollow">economic strategy</a>, designed to secure China’s position as a global economic juggernaut over the long term.</p>
+        <p>Xi’s faith in this <a href="https://www.brookings.edu/articles/the-long-game-chinas-grand-strategy-to-displace-american-order/ame-chinas-grand-strategy-to-displace-american-order/" target="_blank" rel="nofollow">strategy</a> might stem from a conception that China has a unique capacity for <a href="https://www.brookings.edu/articles/the-long-game-chinas-grand-strategy-to-displace-american-order/" target="_blank" rel="nofollow">long-term planning</a> and is willing to invest heavily in <a href="http://english.scio.gov.cn/in-depth/2022-05/12/content_78213763.htm" target="_blank" rel="nofollow">future-oriented projects</a>. This approach positions itself in contrast to what Xi reportedly perceives as the <a href="https://www.wsj.com/articles/xi-jinping-aims-to-rein-in-chinese-capitalism-hew-to-maos-socialist-vision-11632150725" target="_blank" rel="nofollow">short-sightedness</a> of capitalist societies, where the focus often skews towards immediate gains rather than sustainable growth. Furthermore, Xi argues the cycle of elections in such societies tends to <a href="http://www.dangjian.com/shouye/sixianglilun/lilunqiangdang/202401/t20240129_6733318.shtml" target="_blank" rel="nofollow">prioritize</a> voters’ short-term desires at the expense of long-term strategic imperatives.</p>
+        <p>Considering both viewpoints, what is my prediction for 2024? The answer largely depends on the ability of Beijing’s policymakers to precisely calibrate and modify their policy approaches.</p>
+        <p>It’s imperative that Xi recognizes that the current <a href="https://www.bloomberg.com/news/articles/2024-02-05/china-stocks-languish-despite-renewed-vow-to-stabilize-markets" rel="nofollow">instability</a> in Chinese markets extends beyond transient fluctuations driven by capricious investor sentiment or alleged “<a href="https://china.caixin.com/m/2023-11-03/102124204.html" target="_blank" rel="nofollow">malicious external forces</a>” seeking to sow discord. The market unrest reflects more profound systemic challenges. The recent downturn is a vivid warning of the risks posed by <a href="https://www.cnbc.com/2024/01/10/is-chinas-consumption-story-over-heres-what-experts-are-saying.html#:~:text=Consumer%20confidence%20in%20China%20has,have%20weighed%20on%20consumer%20spending." target="_blank" rel="nofollow">declining</a> consumer confidence and <a href="https://www.bloomberg.com/news/articles/2024-02-08/quant-hedge-funds-trounce-rivals-amid-china-rout" target="_blank" rel="nofollow">eroding</a> investor trust, the consequences of Beijing’s overly aggressive <a href="https://www.foreignaffairs.com/united-states/xis-security-obsession#:~:text=He%20emphasized%20that%20%E2%80%9Cexternal%20suppression,of%20China.%E2%80%9D%20His%20remarks%20echoed" target="_blank" rel="nofollow">emphasis</a> on security, ambiguous <a href="https://www.reuters.com/technology/beijings-regulatory-crackdown-wipes-11-trln-off-chinese-big-tech-2023-07-12/" target="_blank" rel="nofollow">regulatory measures</a>, and the economic strain caused by stringent <a href="https://www.foreignaffairs.com/china/china-epidemic-mistrust-xi-jinping-covid-19" target="_blank" rel="nofollow">pandemic lockdowns</a>.</p>
+        <p>Furthermore, the leadership in Beijing must recognize and address the intrinsic <a href="https://www.reuters.com/technology/china-launch-new-40-bln-state-fund-boost-chip-industry-sources-say-2023-09-05/" target="_blank" rel="nofollow">risks</a> in state-led investment initiatives. Ostensibly designed to catalyze economic vitality, these initiatives frequently precipitate <a href="https://www.bloomberg.com/news/articles/2022-08-09/china-corruption-probes-stem-from-anger-over-failed-chip-plans" target="_blank" rel="nofollow">inefficiencies and misallocate resources</a>, thereby intensifying <a href="https://www.scmp.com/economy/china-economy/article/3244959/chinas-involuted-new-energy-industry-awash-overcapacity-could-stall-new-economic-driver" target="_blank" rel="nofollow">predicaments</a> such as overcapacity and the erosion of profit margins. Additionally, these state-driven investments have proved unable to tackle one of China’s most urgent challenges: <a href="https://www.cfr.org/blog/root-chinas-growing-youth-unemployment-crisis" target="_blank" rel="nofollow">escalating unemployment</a>. Absent a recalibration toward solving these critical issues, the robustness and prospects of China’s economic framework remain uncertain.</p>
+        <p>Investors are eagerly anticipating fiscal and structural <a href="https://www.reuters.com/world/china/chinas-economic-woes-embolden-calls-deeper-reforms-2023-09-21/" target="_blank" rel="nofollow">reforms</a> from Beijing, with a particular interest in measures that support households. They may be disappointed. Xi appears resolved not to “<a href="https://rmt.eol.cn/2023/07/13/9928783.html" target="_blank" rel="nofollow">hollow out</a>” the Chinese economy through excessive financial stimulus, a pitfall Beijing views as a fundamental flaw in the U.S. economic paradigm. Instead, the Chinese leadership is placing its faith in strengthening the economy’s foundations through non-financial means, <a href="https://www.wsj.com/articles/chinas-xi-stacks-government-with-science-and-tech-experts-amid-rivalry-with-u-s-11668772682" target="_blank" rel="nofollow">such as</a> advanced manufacturing and technological breakthroughs.</p>
+        <p>The critical challenge for Xi in 2024 will be his capacity to manage the equilibrium among divergent perspectives and to <a href="https://www.wsj.com/world/china/xis-tight-control-hampers-stronger-response-to-chinas-slowdown-868ab454" target="_blank" rel="nofollow">incorporate</a> feedback promptly. Unfortunately, Xi does not have a good <a href="https://www.reuters.com/world/china/how-chinas-xi-accumulated-power-why-it-matters-third-term-2022-10-10/" target="_blank" rel="nofollow">track record</a> at this.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-10646" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/diana-choyleva"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/choyleva_sm.jpg?itok=Z7umCvgW" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="diana-choyleva"><a href="https://www.chinafile.com/contributors/diana-choyleva" title="Diana Choyleva">Diana Choyleva</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">2024 is shaping up to be another challenging year for China as the economy stutters under the burden of mounting debt and deepening deflation. My firm, Enodo Economics, <a href="https://enodoeconomics.com/view_publication/vhT6FV/trial" target="_blank" rel="nofollow">estimates</a> that the likely overall credit losses amount to between 37 percent and 42 percent of GDP while deflation is the worst it has been since the 1997 Asian Financial Crisis.</p>
+        <p>In the mid-to-late 1990s, China had to deal with a serious debt problem, much like now. But then it was on the cusp of entry into the World Trade Organization, and the subsequent exploding growth helped the debt shrink away rapidly. This time around, China is in the midst of the “<a href="https://foreignpolicy.com/2020/05/14/china-us-pandemic-economy-tensions-trump-coronavirus-covid-new-cold-war-economics-the-great-decoupling/" target="_blank" rel="nofollow">Great Decoupling</a>,” with foreign capital <a href="https://markets.businessinsider.com/news/stocks/china-economy-chinese-stock-market-foreign-investor-cash-flow-money-2023-12#:~:text=Foreign%20investors%20have%20pulled%20about,and%20slow%20growth%20post%2DCOVID." target="_blank" rel="nofollow">pulling out</a> of the country, U.S. tech restrictions <a href="https://www.theguardian.com/world/2023/aug/09/biden-executive-order-us-investment-chinese-technology" target="_blank" rel="nofollow">impeding</a> China’s technological development, and Chinese exports and capital less welcome in the West. Deflation is set to persist this year, and strong growth is unlikely to help shrink China’s bad debt away.</p>
+        <p>Premier Li Qiang <a href="https://www.theguardian.com/world/2024/jan/23/chinese-markets-rally-on-report-beijing-considering-222bn-state-rescue-plan" target="_blank" rel="nofollow">praised</a> the government for not having sought “short-term growth while accumulating long-term risk.” True, just throwing money at the economy without structural change would not have been beneficial. Xi Jinping and his economic team are focused on pouring much more resources on “<a href="https://www.gov.cn/yaowen/liebiao/202402/content_6929446.htm" rel="nofollow">high-grade growth</a>,” a reference to technology-intensive industrial sectors dominated by state-owned enterprises. Xi said in a <a href="https://wb.beijing.gov.cn/home/index/rdgz/202402/t20240206_3557887.html" target="_blank" rel="nofollow">lecture</a> to the Politburo on January 31 that “we must keep in mind that high-quality development is the absolute principle of the new era, fully implement the new development concept, accelerate the construction of a modern economic system, [and] promote self-reliance and self-reliance in high-level science and technology.”</p>
+        <p>But while China has been transforming the production side of its economy, it has neglected the demand side. The leadership seems incapable of instituting the structural changes that would help it fuel a consumer-led recovery. Instead, Beijing appears more amenable now to a credit-fueled stimulus, although this is unlikely to yield the results it hopes to achieve.</p>
+        <p>Both fiscal and monetary support are in the cards, and with government debt at <a href="https://www.imf.org/external/datamapper/GG_DEBT_GDP@GDD/CHN/FRA/DEU/ITA/JPN/GBR/USA/FADGDWORLD" target="_blank" rel="nofollow">around 80 percent of GDP</a>, China has the scope to ramp up central government borrowing. But this model for growth only doubles down on the issues that have dogged the economy for years: overcapacity, low returns on investment, and ballooning debt.</p>
+        <p>Meanwhile, Beijing has proven far less adept at stimulating more demand from its 1.4 billion people, the true engine of growth for the vast country, and remains committed to “<a href="https://www.chinafile.com/conversation/common-prosperity-China-wealth-redistribution" target="_blank" rel="nofollow">common prosperity</a>.” Xi’s redistribution drive and focus on frugality have <a href="https://asiasociety.org/policy-institute/end-experimentation-and-aspiration-xi-jinpings-china" target="_blank" rel="nofollow">depressed</a> consumer sentiment among the urban middle classes. It’s difficult to see consumption turning into a growth engine. Exports remain the only viable route to access genuine demand, but slowing global growth is set to be another headwind for China’s battered economy.</p>
+        <p>So far, all these are China’s problems, or at least a problem for companies trying to sell into the China market. But deflation in China will soon become a problem for other key markets—which the U.S. will have to address multilaterally, or suffer a bruising race to the bottom that will damage America’s biggest corporations and American workers.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2024-03-01</time>
+        <a href="https://nodebe4.github.io/oped2/2024-03-01/There-Is-No-CPEC-in-Gwadar,-Except-Security-Check/">
+          “There Is No CPEC in Gwadar, Except Security Check Posts”
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-02-21</time>
+        <a href="https://nodebe4.github.io/oped2/2024-02-21/When-It-All-Comes-down-to-It,-China-Has-No-Real/">
+          “When It All Comes down to It, China Has No Real ‘New Year’”
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-02-05</time>
+        <a href="https://nodebe4.github.io/oped2/2024-02-05/What-Will-Newly-Increased-Party-Control-Mean-for-C/">
+          What Will Newly Increased Party Control Mean for China’s Universities?
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-02-02</time>
+        <a href="https://nodebe4.github.io/oped2/2024-02-02/New-Security-Measures-Curtailing-the-Study-of-Chin/">
+          New Security Measures Curtailing the Study of China Alarm Educators
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2024-02-05/What-Will-Newly-Increased-Party-Control-Mean-for-C/">
+            前一篇：What Will Newly Increased Party Control Mean for China’s Universities?
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2024-02-21/When-It-All-Comes-down-to-It,-China-Has-No-Real/">
+            後一篇：“When It All Comes down to It, China Has No Real ‘New Year’”
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2024-02-05/What-Will-Newly-Increased-Party-Control-Mean-for-C/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2024-02-21/When-It-All-Comes-down-to-It,-China-Has-No-Real/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2024-02-21/When-It-All-Comes-down-to-It,-China-Has-No-Real/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2024-02-05/What-Will-Newly-Increased-Party-Control-Mean-for-C/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2024-02-05/What-Will-Newly-Increased-Party-Control-Mean-for-C/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2024-02-21/When-It-All-Comes-down-to-It,-China-Has-No-Real/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2024-02-21/When-It-All-Comes-down-to-It,-China-Has-No-Real/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2024-02-05/What-Will-Newly-Increased-Party-Control-Mean-for-C/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
