@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>猫咪哲学：为什么猫不为幸福而斗争？ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+猫咪哲学：为什么猫不为幸福而斗争？
+——
+" />
+    <meta property="og:description" content="
+猫咪哲学：为什么猫不为幸福而斗争？
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="猫咪哲学：为什么猫不为幸福而斗争？" />
+    <meta property="twitter:title" content="猫咪哲学：为什么猫不为幸福而斗争？" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F60f3ba39fc1063151ac8b78c" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/60f3ba39fc1063151ac8b78c" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/60f3ba39fc1063151ac8b78c&text=猫咪哲学：为什么猫不为幸福而斗争？&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/60f3ba39fc1063151ac8b78c&title=猫咪哲学：为什么猫不为幸福而斗争？" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/60f3ba39fc1063151ac8b78c&title=猫咪哲学：为什么猫不为幸福而斗争？" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=猫咪哲学：为什么猫不为幸福而斗争？&body=
+猫咪哲学：为什么猫不为幸福而斗争？
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/60f3ba39fc1063151ac8b78c" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/60f3ba39fc1063151ac8b78c&title=猫咪哲学：为什么猫不为幸福而斗争？&caption=
+猫咪哲学：为什么猫不为幸福而斗争？
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=猫咪哲学：为什么猫不为幸福而斗争？&url=https://www.allnow.com/post/60f3ba39fc1063151ac8b78c" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>猫咪哲学：为什么猫不为幸福而斗争？</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-07-18
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 德安博</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/60f3ba39fc1063151ac8b78c" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/60f3ba39fc1063151ac8b78c">猫咪哲学：为什么猫不为幸福而斗争？</a>
+——</p>
+
+<div>
+  <p><strong>作者丨德安博（美国汉学家）；翻译丨王立秋（哈工程讲师）</strong></p>
+  <p>学术界让学者受尽磨难。从学界混出来后，还想、甚或还能用吸引非学院人士的方式来表达复杂观念的人不多；事实上，很少。约翰·格雷，就是这些罕见知识分子中的一位。</p>
+  <p>教授往往会嘲笑那写给更一般读者的著作。什么东西火了，就难免被认为是不严肃。可真相是，大多数教授不过是自身在写作、说话甚至思考时，无法吸引学院以外的人士而已。在经历多年的严格、专业化训练之后，学者发现要向自己狭隘领域外的任何人传达自己的看法都很难。格雷则不然。《猫咪哲学：猫和生命的意义》就有着广泛的吸引力。甚至，更令人印象深刻的是，它还让读者严肃地思考激进的观念。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-18/60f3ba599c232e01c17d273e+L.jpeg" data-id="60f3ba602114416715c3de54" alt="约翰·格雷（John Gray）：《猫咪哲学：猫和生命的意义》（Feline Philosophy：Cats and the Meaning of Life）， Penguin Books2020年10月版" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+约翰·格雷（John Gray）：《猫咪哲学：猫和生命的意义》（Feline Philosophy：Cats and the Meaning of Life）， Penguin Books2020年10月版
+    </figcaption>
+  </figure>
+  <p><strong>好生活是你已经有的生活，猫不会去想不曾拥有的生活</strong></p>
+  <p>谈论这些议题是非常困难的：人类进步的神话、自主与理性一根筋的愚蠢、义人自负的态度和相关的道德的矛盾性质，接受爱和死实际都不是什么大事，以及生命的意义其实没有意义（生命意义的无意义性是这本书真正的要点）。格雷就这么做了，但在这个过程中，他没有使用强有力的论证、合乎逻辑的推理或其他常规的哲学工具。他提到了一些鼎鼎大名的哲学家，但在大多数情况下把这些名字放在了各种关于猫的小说背后。通过把关于猫的故事与事实，与哲学交织在一起，格雷在不告诉读者要怎样推理或要思考什么的情况下，邀请读者来进行严肃的反思。</p>
+  <p>在第一章，《猫与哲学》中，格雷直言：“猫的性质，以及我们可以从中学到什么，是这本书的主题。”在第一章和第二章《为什么猫不为幸福而斗争》中，格雷把哲学呈现为一种不安的结果：在一个混乱而不可预言的世界中，哲学生来就是努力安抚生活的焦虑。因此，幸福也就变成了一个在我们不觉得不安时才能完成的未来计划。不幸的是，当我们在心里揣着一个清晰计划时去努力，往往只会让事情变得更糟。“我们的生活是被偶然塑造的，我们的感情是被身体塑造的。大部分人的生活——大部分哲学——都在努力使我们分心，让我们看不到这个事实。”而另一方面，对猫来说，幸福可能只是它们的自然状态而已。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-18/60f3ba754cd55d54dd5dbd22+L.jpeg" data-id="60f3ba7b904b8c02a16a3aa7" alt="哲学家与猫" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+哲学家与猫
+    </figcaption>
+  </figure>
+  <p>在下一章中，格雷重新谈论了他更加独特的立场。在讨论《猫咪伦理学》时，格雷提醒读者注意，道德价值、道德标准和一切思考什么是好什么是坏的方式，都是相对的和偶然的，它们与具体的历史及地域有关。“在人们谈论道德的时候，他们并不知道自己在谈论什么。同时，他们又坚定不移地确信自己说的东西。这看似矛盾，实则不然，因为他们其实是在表达自己的感情。”通过大量地借鉴斯宾诺莎、道家（《道德经》）和禅宗，格雷在各种对道德、理性主义、能动性和自我的攻击中游刃有余。</p>
+  <p>第四章提供了一个舒缓严肃哲学讨论的喘息之机。在这里，格雷通过总结各种关于猫的小说，讨论了《人之爱 vs 猫之爱》。很难说，格雷试图具体论证的点是什么——如果他真在试图论证什么的话。这没有批评的意思。和许多伟大的思想家一样，格雷只是在邀请读者反思和琢磨特定的视角而已。第五章《时间、死亡与猫咪的灵魂》的风格也差不多。统领这个章节的，是这样一个简单的想法：看起来，猫“把生命当做礼物来接受”，而人，则焦虑地在生命的每一个方面劳作，并经常陷入关于死亡的无尽思索。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-18/60f3bac34cd55d54dd5dbd23+L.jpeg" data-id="60f3bac69b2d825085c26713" alt="猫“把生命当做礼物来接受”，人则焦虑地在生命的每一个方面劳作，并经常陷入关于死亡的无尽思索。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+猫“把生命当做礼物来接受”，人则焦虑地在生命的每一个方面劳作，并经常陷入关于死亡的无尽思索。
+    </figcaption>
+  </figure>
+  <p>在最后一章《猫和生命的意义》中，格雷提出了一个具有挑战性的想法：“对于我们每个人来说，好生活不是被选择的，而是被发现的。”他让我们想想道家的观念，即“我们必须遵循我们内心的道”。要是我们做到了那个，那么，我们的生活就会“比任何完美的观念更丰富”。他继续说道，“好生活不是你本可能过或还可以过的生活，而是你已经拥有的生活。在这里，猫可能是我们的老师，因为它们不会想它们不曾有过的生活。”</p>
+  <p>最后，格雷给了我们“十个猫咪关于怎样活好的窍门”。通过思考“猫咪哲学”或诚实地反思生活，我们就会学到这简明扼要的十课。在内容和风格上，最后一句话总结了全书：“生命的意义是一次触摸、一个气味，它们的出现是偶然的；并且，在你意识到之前，它们就没了。”</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-18/60f3bb164cd55d54dd5dbd24+L.jpeg" data-id="60f3bb1b904b8c02a16a3aa9" alt="“好生活不是你本可能过或还可以过的生活，而是你已经拥有的生活。”" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+“好生活不是你本可能过或还可以过的生活，而是你已经拥有的生活。”
+    </figcaption>
+  </figure>
+  <p><strong>“游”：在各种狂妄添油加醋的世界中，不要动辄就非黑即白</strong></p>
+  <p>读者可能会为此而感到奇怪：这十课都没有提到“游”（play）。进一步用理智来思考，这甚至会变得更加令人困惑。要知道，这位英国知识分子极其迷恋道家和禅宗；他的著作《刍狗》（<em>Staw Dogs</em>， 2002）的书名，就出自《道德经》的第五章。</p>
+  <p>但《猫咪哲学》，明显没有提到道家第二重要的文本，也即在推动道家和佛教的哲学交流（这个交流最终促成了禅宗）上起重要作用的《庄子》。这部道家经典，不但充满了笑话、动物之间的谈话、从树得出的建议，它还引入了作为哲学之道的“游”，并把它倡导为一种可能的生活之道。读者会认真地想，为什么格雷在《猫咪哲学》中不谈“游”；关于《庄子》，他怎么看？</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-18/60f3bb514cd55d54dd5dbd25+L.jpeg" data-id="60f3bb599b2d825085c26714" alt="在各种狂妄添油加醋的世界中，不要动辄就非黑即白" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+在各种狂妄添油加醋的世界中，不要动辄就非黑即白
+    </figcaption>
+  </figure>
+  <p>与此相关的是，格雷的书也没提到夏目漱石那部伟大的猫咪小说《我是猫》。漱石的故事，是从猫的角度戏写的。在小说中的好几个地方，猫及其周围的人，都在不断挖苦西方的进步、理性和实证主义理论——这显然与格雷自己的偏好重叠。不过，比起关于哲学的闲谈，更重要的是《我是猫》的游戏元素。不奇怪，总的来说，《我是猫》以及漱石的作品，在很大程度上借鉴了《庄子》。</p>
+  <p>《猫咪哲学：猫和生命的意义》的一些评论者总结说，约翰·格雷主张要把猫咪的冷漠和道家的沉思结合起来。这与其说是对这本书本身的评论，不如说是在评论书中的评论。《猫咪哲学》的真正乐趣，来自于阅读它的经验本身。这本书不试图“证明”什么。在学界的磨难后，格雷幸存了下来；现在，他老练地玩弄他的哲学反思。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-07-18/60f3bbba4cd55d54dd5dbd26+L.jpeg" data-id="60f3bbbe9b2d825085c26715" alt="在生活里，要是再加上一点游戏性的话，那样甚至会更好。" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+在生活里，要是再加上一点游戏性的话，那样甚至会更好。
+    </figcaption>
+  </figure>
+  <p>和在格雷经常引用的道家经典《道德经》那里一样，读者若要在《猫咪哲学》中寻找评价性的判断、真理甚或论证，便会错失重点。《道德经》记录的（很可能）是不同人在几个世纪里写下、重写、编辑、重编的话。两千多年来，从统治者、士大夫、道士到农民和隐士，每个人都在以相似的方式阅读这个文本。他们重复那些简短的话，并反思自己的生活。他们使用其中有用的东西，无视其中无用的东西。仅此，而已。</p>
+  <p>也许，我们今天也能，甚或也该对我们的哲学讨论采取类似的做法。无疑，格雷有他自己的哲学观。但他肯定也从猫那里学到了东西，他的反思是诚实、谦逊的。在一个各种狂妄给客观困境添油加醋的世界中，也许，不会动辄非黑即白，也是一个不错的想法。的确，要是再加上一点游戏性的话，那样甚至会更好。</p>
+  <blockquote>
+    <p>Paul J. D’Ambrosio， “Cats and the Good Life”， <em>LARB</em>， June 22， 2021， <a href="https://lareviewofbooks.org/article/cats-and-the-good-life/">https://lareviewofbooks.org/article/cats-and-the-good-life/</a>。经作者许可翻译。</p>
+    <p>德安博（Paul J. D’Ambrosio），美国哲学家，汉学家，华东师范大学哲学系中国哲学副教授，中国现代思想文化研究所研究员，跨文化中心主任，著有《游心之路：〈庄子〉与现代西方哲学》（<em>Genuine Pretending: On the Philosophy of the Zhuang Zi</em>）。</p>
+    <p>王立秋，云南弥勒人，北京大学国际关系比较政治学博士，哈尔滨工程大学人文社会科学学院讲师。</p>
+  </blockquote>
+  <p>———</p>
+  <p>微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+      <li>
+        <time>2021-07-21</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-21/%E6%99%9A%E6%98%8E%E6%96%87%E4%BA%BA%E7%9A%84%E7%94%B0%E9%87%8E%E8%B0%83%E6%9F%A5-%E6%97%85%E8%A1%8C%E9%9D%9E%E8%99%9A%E6%9E%84%E5%9C%A8%E6%99%9A%E6%98%8E%E6%97%B6%E6%9C%9F%E7%9A%84%E5%B4%9B%E8%B5%B7/">
+          晚明文人的田野调查：旅行非虚构在晚明时期的崛起
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-20</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-20/%E7%A4%BE%E7%A7%91%E7%83%AD-%E7%9A%84%E9%99%B7%E9%98%B1-%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%83%AD%E8%A1%B7%E7%A4%BE%E7%A7%91-%E6%98%AF%E7%A0%B4%E5%9C%88%E7%9A%84%E5%81%87%E8%B1%A1%E8%BF%98%E6%98%AF%E5%8F%A6%E7%B1%BB%E7%9A%84%E9%B8%A1%E6%B1%A4/">
+          “社科热”的陷阱：年轻人热衷社科，是破圈的假象还是另类的鸡汤？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-17</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-17/%E5%A7%9C%E8%90%8C-%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%B2%E5%AD%A6%E4%BB%8E%E4%B8%9A%E8%80%85-%E7%BB%9D%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%9A%84%E5%8F%99%E4%BA%8B%E8%83%BD%E5%8A%9B%E5%B7%B2%E5%BF%AB%E9%80%9F%E6%B6%88%E9%80%80%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+          姜萌：中国的史学从业者，绝大多数的叙事能力已快速消退丨燕京访谈
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-07-16</time>
+        <a href="https://nodebe4.github.io/oped2/2021-07-16/%E5%BC%A0%E7%AC%91%E5%AE%87-%E5%85%AC%E5%85%B1%E7%B2%BE%E7%A5%9E%E7%9A%84%E8%A1%B0%E8%90%BD%E6%98%AF%E4%B8%AA%E5%A5%BD%E4%BA%8B-%E6%88%91%E8%A6%81%E4%B8%BA%E6%AD%A4%E5%94%B1%E8%B5%9E%E6%AD%8C%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+          张笑宇：公共精神的衰落是个好事，我要为此唱赞歌丨燕京访谈
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-07-17/%E5%A7%9C%E8%90%8C-%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%B2%E5%AD%A6%E4%BB%8E%E4%B8%9A%E8%80%85-%E7%BB%9D%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%9A%84%E5%8F%99%E4%BA%8B%E8%83%BD%E5%8A%9B%E5%B7%B2%E5%BF%AB%E9%80%9F%E6%B6%88%E9%80%80%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+            前一篇：姜萌：中国的史学从业者，绝大多数的叙事能力已快速消退丨燕京访谈
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-07-19/%E5%9C%A8%E6%8A%97%E8%AE%AE%E6%B4%BB%E5%8A%A8%E4%B8%AD-%E5%AA%92%E4%BD%93%E4%BD%9C%E4%B8%BA%E5%8F%99%E4%BA%8B%E7%9F%A9%E9%98%B5%E7%9A%84%E6%93%8D%E7%BA%B5%E8%80%85-iYouPort/">
+            後一篇：在抗议活动中，媒体作为叙事矩阵的操纵者 - iYouPort
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-07-17/%E5%A7%9C%E8%90%8C-%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%B2%E5%AD%A6%E4%BB%8E%E4%B8%9A%E8%80%85-%E7%BB%9D%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%9A%84%E5%8F%99%E4%BA%8B%E8%83%BD%E5%8A%9B%E5%B7%B2%E5%BF%AB%E9%80%9F%E6%B6%88%E9%80%80%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-07-19/%E5%9C%A8%E6%8A%97%E8%AE%AE%E6%B4%BB%E5%8A%A8%E4%B8%AD-%E5%AA%92%E4%BD%93%E4%BD%9C%E4%B8%BA%E5%8F%99%E4%BA%8B%E7%9F%A9%E9%98%B5%E7%9A%84%E6%93%8D%E7%BA%B5%E8%80%85-iYouPort/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-07-20/%E7%A4%BE%E7%A7%91%E7%83%AD-%E7%9A%84%E9%99%B7%E9%98%B1-%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%83%AD%E8%A1%B7%E7%A4%BE%E7%A7%91-%E6%98%AF%E7%A0%B4%E5%9C%88%E7%9A%84%E5%81%87%E8%B1%A1%E8%BF%98%E6%98%AF%E5%8F%A6%E7%B1%BB%E7%9A%84%E9%B8%A1%E6%B1%A4/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-07-17/%E5%A7%9C%E8%90%8C-%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%B2%E5%AD%A6%E4%BB%8E%E4%B8%9A%E8%80%85-%E7%BB%9D%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%9A%84%E5%8F%99%E4%BA%8B%E8%83%BD%E5%8A%9B%E5%B7%B2%E5%BF%AB%E9%80%9F%E6%B6%88%E9%80%80%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-07-17/%E5%A7%9C%E8%90%8C-%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%B2%E5%AD%A6%E4%BB%8E%E4%B8%9A%E8%80%85-%E7%BB%9D%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%9A%84%E5%8F%99%E4%BA%8B%E8%83%BD%E5%8A%9B%E5%B7%B2%E5%BF%AB%E9%80%9F%E6%B6%88%E9%80%80%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-07-19/%E5%9C%A8%E6%8A%97%E8%AE%AE%E6%B4%BB%E5%8A%A8%E4%B8%AD-%E5%AA%92%E4%BD%93%E4%BD%9C%E4%B8%BA%E5%8F%99%E4%BA%8B%E7%9F%A9%E9%98%B5%E7%9A%84%E6%93%8D%E7%BA%B5%E8%80%85-iYouPort/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-07-20/%E7%A4%BE%E7%A7%91%E7%83%AD-%E7%9A%84%E9%99%B7%E9%98%B1-%E5%B9%B4%E8%BD%BB%E4%BA%BA%E7%83%AD%E8%A1%B7%E7%A4%BE%E7%A7%91-%E6%98%AF%E7%A0%B4%E5%9C%88%E7%9A%84%E5%81%87%E8%B1%A1%E8%BF%98%E6%98%AF%E5%8F%A6%E7%B1%BB%E7%9A%84%E9%B8%A1%E6%B1%A4/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-07-17/%E5%A7%9C%E8%90%8C-%E4%B8%AD%E5%9B%BD%E7%9A%84%E5%8F%B2%E5%AD%A6%E4%BB%8E%E4%B8%9A%E8%80%85-%E7%BB%9D%E5%A4%A7%E5%A4%9A%E6%95%B0%E7%9A%84%E5%8F%99%E4%BA%8B%E8%83%BD%E5%8A%9B%E5%B7%B2%E5%BF%AB%E9%80%9F%E6%B6%88%E9%80%80%E4%B8%A8%E7%87%95%E4%BA%AC%E8%AE%BF%E8%B0%88/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
