@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Forbidden Writer – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Forbidden Writer
+——
+" />
+    <meta property="og:description" content="
+Forbidden Writer
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Forbidden Writer" />
+    <meta property="twitter:title" content="Forbidden Writer" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fculture%2Fforbidden-writer" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/culture/forbidden-writer" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/culture/forbidden-writer&text=Forbidden Writer&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/culture/forbidden-writer&title=Forbidden Writer" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/culture/forbidden-writer&title=Forbidden Writer" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Forbidden Writer&body=
+Forbidden Writer
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/culture/forbidden-writer" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/culture/forbidden-writer&title=Forbidden Writer&caption=
+Forbidden Writer
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Forbidden Writer&url=https://www.chinafile.com/reporting-opinion/culture/forbidden-writer" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Forbidden Writer</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-09-12
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Brian Haman</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/culture/forbidden-writer" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1662981000000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/culture/forbidden-writer">Forbidden Writer</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-bd69793cae178bd9fc051fcaf6e9cbfc">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/forbidden-writer.jpg" title="Forbidden Writer" class="colorbox" data-colorbox-gallery="gallery-node-54181-4nM7MSPU8IA" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/forbidden-writer.jpg?itok=7VY3ptgz" width="1000" height="1400" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Olufemi Lawal
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>A portrait of Yan Lianke.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">The Chinese writer Yan Lianke was born in Song County, Henan province, in 1958. At twenty he joined the army. He graduated from Henan University with a degree in politics and education in 1985 and six years later left the People’s Liberation Army Art Institute with a degree in literature. From his humble beginnings as a propaganda writer, Yan has gone on to become among China’s most controversial writers—one whose work is frequently censored for its focus on the lives of those devastated by Beijing’s policies. “When people are dreamwalking,” he writes in <a href="https://www.penguin.co.uk/books/435264/the-day-the-sun-died-by-yan-lianke/9781784706036" target="_blank" rel="nofollow"><em>The Day the Sun Died</em></a> (2015), “they see only the people and things they care about, and it is as if nothing else exists.”</p>
+      <p>Exceptionally prolific across a range of genres, including the novel, short story, and essay, he has been described as having a preternatural gift for metaphor, but his writing remains exquisitely rooted in the earthiness of the natural world. But it is his persistent sociopolitical commentaries within his mythorealist narratives that have drawn the government’s ire.</p>
+      <p>Published in Taiwan, <em>The Day the Sun Died</em> has been read as a political critique of the Chinese Communist Party and contemporary Chinese society, although Yan maintains in an <a href="https://www.theguardian.com/books/2018/sep/22/yan-lianke-writers-in-china-day-the-sun-died-interview" target="_blank" rel="nofollow">interview</a> with <em>The Guardian</em> that it’s more an exploration of the “basic and fundamental truths about the human heart.” The circumstance echoes that of most of his books. <a href="https://www.google.com/books/edition/The_Four_Books/xXQkBQAAQBAJ?hl=en&amp;gbpv=0" target="_blank" rel="nofollow"><em>The Four Books</em></a> (2011) was rejected by about 20 mainland publishers because it dealt with the Great Leap Forward. <a href="https://www.google.com/books/edition/Dream_of_Ding_Village/RMITq5cmJ_0C?hl=en&amp;gbpv=0" target="_blank" rel="nofollow"><em>Dream of Ding Village</em></a> (2006) was equally controversial because of its focus on an AIDS epidemic in a rural Chinese village. Outside China, his work is widely translated and has gone on to receive a slew of international literary honors. He’s been shortlisted and longlisted for the Man Booker International Prize; shortlisted for the Man Asian Literary Prize; and received the Franz Kafka Prize and the Newman Prize for Chinese Literature. Yan himself is skeptical about such prestige. As he noted during our conversation, “The world’s literary prizes are like delicacies for writers who have grown weary of writing.”</p>
+      <p>Among the many contemporary Chinese writers deserving of a wider readership both within and beyond the borders of China, Yan’s name is frequently mentioned. Among Sinologists and the literary cognoscenti, he is also considered a prime candidate for the Nobel Prize for Literature.</p>
+      <p>I first wrote about Yan’s work in 2017. At the time, I had been living in Suzhou for a number of years and found myself returning to his texts, with their formal inventiveness, poetic registers, and moral purposeness. As I wrote then in a review of <a href="https://www.google.com/books/edition/The_Explosion_Chronicles/idsbDQAAQBAJ?hl=en&amp;gbpv=0" target="_blank" rel="nofollow"><em>The Explosion Chronicles</em></a> (2016), “Despite his stated aim of chronicling the reality of contemporary China, Yan has managed that rare feat—he has written a novel inescapably rooted in history but unmistakably of our time.”</p>
+      <p>Years later and half a world away, I’ve had the privilege of corresponding with him via WeChat, which is how this interview was conducted. I would intermittently send questions at night and wake up to his written replies, beginning and ending days with thoughts on things like the importance of memory and the nature of language.</p>
+      <hr />
+      <p><strong>Brian Haman: Do you consider yourself an influential writer?</strong></p>
+      <p><strong>Yan Lianke:</strong> In China, I’m a “negative example” of a writer, a writer lacking the right type of energy. I do understand and respect those who criticize me. Only when there is criticism can there be room for tolerance, and only inclusive and tolerant societies can make progress.</p>
+      <p>I have no influence whatsoever [in China]. Chinese people can’t even read many of my works because they aren’t available, so what influence can I possibly have?</p>
+      <p><strong>And your influence outside of China?</strong></p>
+      <p>I really don’t speak any foreign language. I can’t speak any English at all, so I really don’t know what sort of concrete influence or impact I have. However, once, when I was attending a book festival in Paris and was signing books, an old lady in her 70s bought two sets of my books, with each set containing a dozen books, and, as I was signing them, she told me that her husband had been a faithful reader of mine, so she bought two sets of books for signing: one to bring to the cemetery for her husband, and the other set was for herself. She told me that after reading my books, she will read them to her deceased husband. I suddenly burst into tears.</p>
+      <p>More than two years ago, when I went to Kyoto University, I was giving a lecture and an 80-year-old Japanese woman stood up and spoke very politely to me in Chinese, saying that she started learning Chinese in her 70s because she had read my novels, which have been translated into Japanese. Her point was that she wanted to meet me in this lifetime and be able to talk to me in Chinese. She said that now that she had met me in Kyoto and talked to me in Chinese, her wish had come true and the couple of years that she dedicated to learning Chinese had been worth it.</p>
+      <p><strong>Do you wish that you had learned other languages?</strong></p>
+      <p>I have an inferiority complex for not being able to speak or read other languages, which feels like a person who eats vegetables every day without knowing that those vegetables come from the land. My inability . . . makes me often feel incompetent and resentful because I know that language is tied up to me like a rope, and eventually I will die strangled by this rope.</p>
+      <p><strong>Do you write with a particular audience or reader in mind?</strong></p>
+      <p>No, I don’t think of my readers—only of my writing. In other words, before and during the writing process, I only have language, narrative, structure, characters, stories, plots. Sometimes these things are like a wild field, sometimes like a garden, but they can also seem like a neglected cemetery or even a garbage dump. And I just sift through the rubbish, a scavenger in a wasteland. It’s just me alone in this uncultivated expanse or trash heap, without any onlookers—the readers. Even after the work has been published and is being read, I still don’t feel that I’ve established any fundamental connection with the reader. I am a distant person, and I doubt the existence of the reader like I doubt the meaning of my writing.</p>
+      <p><strong>Which books have influenced you the most?</strong></p>
+      <p>Back in the 1970s when I was around 15 or 16, I was desperately thinking about fleeing from the countryside and becoming a city boy. At the time, my most beautiful dream was to think of the day when I would eat a whole plate of scrambled eggs and an entire plate of meat by myself.</p>
+      <p>Around that time, I came across an early novel about class struggle by the Chinese writer Zhang Kangkang called <em>The Watershed</em>. In addition to her book, I eventually found out that Zhang Kangkang was an educated youth from Hangzhou, southern China, who had gone to the countryside to work on a remote farm in Qiqihar in northwest China. And because she had written this novel, she had been transferred to Harbin, the capital of Heilongjiang province. So I thought to myself, “If writing a novel could get one transferred to the capital of the province, then I should write a novel, too.”</p>
+      <p>And this is how I took up writing. Obviously, what I wrote at the time was also a revolutionary story about class struggle. Today Zhang Kangkang is a very famous writer in China, with significant literary achievements. I always refer to her as “big sister” and introduce her as the writer with the biggest influence on me.</p>
+      <p><strong>Any other unexpected authors?</strong></p>
+      <p>Another writer who had a big influence on my work will come as a surprise. It’s the American writer Margaret Mitchell and her novel <em>Gone with the Wind</em>. I was 20 when I left a small mountain village in central China, and that was the first time I saw a train or a TV set; the first time I realized there are novels, novellas, and short stories; the first time I saw a library, which was something I had only heard of. The first time I walked into the library, standing there in front of all those rows of books and bookshelves, I felt like a lamb that had never seen grass entering the grassland. I was like a sparrow in the wilderness seeing the immensity of the forest for the first time. I stayed transfixed in the library, moving in slow motion, and I saw an actress on the cover of <em>Gone with the Wind</em>. I was enchanted by the beauty of this actress, who was of course Vivien Leigh. That was also the first time that I realized that foreigners look completely different from the Chinese.</p>
+      <p><strong>Did you end up borrowing it?</strong></p>
+      <p>Yes, <em>Gone with the Wind</em> was the first book I ever borrowed from the library. It was also the first foreign novel that I ever read, and the only reason I read it was because Vivien Leigh was on the cover. <em>Gone with the Wind</em> is a three-volume book, which I borrowed and took back to my camp dormitory. I hid it under the blanket and read every single word of it at night with a flashlight. From then on, I started to read foreign novels. I started by reading classic 19th-century works. Obviously, I will never forget the impact and the dreamlike atmosphere that those classic works had on me. When I read <em>Anna Karenina</em>, I tried to imagine what her life would be like and what the ending of the book would be if Anna had married me. When I read Stendhal’s <em>The Red and the Black</em>, I came to identify with Julien. I didn’t know why my palms would start to sweat while reading <em>Madame Bovary</em>, but I would wake up in the middle of the night and trudge through the snow to the playground just to have a walk and cool down.</p>
+      <p><strong>How important is memory for you?</strong></p>
+      <p>A writer is an animal that exists expressly for the sake of memories. To be more precise, one can say that a writer is a person who specializes in the discovery and preservation of memories. Since our memories are often too numerous and too complex, newer memories tend to overshadow older ones. In China’s Forbidden City, it is said that there are countless calligraphy scrolls and paintings from various Chinese dynasties stored in underground warehouses—boxes upon boxes covered in dust. Many precious calligraphy paintings themselves have already turned into dust, the paper so fragile that it crumbles from a single touch, along with works of art that fade and disappear when exposed to sunlight. Scores of people specialized in discovering and restoring art are needed each day to unearth and preserve the past. Writers are similar. They can discover and restore memories hidden under layers of dust. And this work of discovery and restoration can also be regarded as a creative act, a process in which memory becomes art. All of this, of course, presupposes the preservation of memory in the first place. Without rich inventories of memories, the imaginative writer would be at a loss.</p>
+      <p><strong>Do certain subjects lend themselves better to certain genres of writing?</strong></p>
+      <p>Yes, exactly. Just because one piece of land is suitable for cultivating certain crops and plants doesn’t mean that the same piece of land is suitable for cultivating just anything. Certain ideas lend themselves more to novels, whereas others are more appropriate for literary essays and theories, while others still are better expressed though nonfiction. In this way, a writer is like a vast stretch of land—perhaps not as big as the earth itself, but nonetheless wide enough to accommodate different species of plants. If, however, this parcel of land is too small, then these plants may grow, but they will appear monotonous and uninteresting.</p>
+      <p><strong>You worked as an army propaganda writer before becoming a novelist. Many of your works are banned on the mainland but you hold a university position. You live in Beijing but maintain deep ties with your ancestral village in rural Henan province. How do you account for these contrasts?</strong></p>
+      <p>The biggest difference between Chinese people and those from other countries is our awareness of the many personas that people can have. Sometimes they’re humans, sometimes ghosts. Sometimes they’re noble heroes, and sometimes they’re cowardly and submissive. The local opera in China’s Sichuan province is called Sichuan Opera, its most famous art being “face-changing.” One minute an actor can have a human face, but almost instantaneously it can morph into a monkey’s face, a bear’s face, a pig’s face, the face of a hero or that of a traitor—all on display for the audience in the blink of an eye.</p>
+      <p>Assuming different guises is an art as well as a type of schizophrenia, and it’s the same with me. When I was a propaganda officer in the army, I would spend my days writing speeches for various Party leaders, but would go back to writing my novels at night, which meant that I was both a national cadre and a novelist. But I am glad that I became a professional writer, which has meant no longer having to live a life in which I am one person by day and another person by night.</p>
+      <p></p>
+      <div class="pullquote">
+Whether it’s a matter of country, nation, or land, there are people for whom there is only love or only hate. I’m the type of person who can’t talk about love without also mentioning hate. I don’t mean by this that I feel more hate than love, but that my love for that land has been constructed entirely on a foundation of my hate for it. It isn’t so much a mysterious relationship as it is entangled and chaotic.         <div class="pullquote-share">
+<span class="st_facebook_large" st_title="Whether it’s a matter of country, nation, or land, there are people for whom there is only love or only hate. I’m the type of person who can’t talk about love without also mentioning hate. I don’t mean by this that I feel more hate than love, but that my love for that land has been constructed entirely on a foundation of my hate for it. It isn’t so much a mysterious relationship as it is entangled and chaotic." displaytext="Facebook"></span><span class="st_twitter_large" st_title="Whether it’s a matter of country, nation, or land, there are people for whom there is only love or only hate. I’m the type of person who can’t talk about love without also mentioning hate. I don’t mean by this that I feel more hate than love, but that my love for that land has been constructed entirely on a foundation of my hate for it. It isn’t so much a mysterious relationship as it is entangled and chaotic." st_via="chinafile" displaytext="Tweet"></span><span class="st_email_large" st_title="Whether it’s a matter of country, nation, or land, there are people for whom there is only love or only hate. I’m the type of person who can’t talk about love without also mentioning hate. I don’t mean by this that I feel more hate than love, but that my love for that land has been constructed entirely on a foundation of my hate for it. It isn’t so much a mysterious relationship as it is entangled and chaotic." displaytext="Email"></span>
+        </div>
+      </div>
+      <p><strong>Your ancestral village, and the countryside in general, seems to be an important source of inspiration.</strong></p>
+      <p>I will always be one of its sons, one descendant among countless sons and daughters. But it’s a love-hate relationship. The more one hates, the more one loves, and vice versa. Whether it’s a matter of country, nation, or land, there are people for whom there is only love or only hate. I’m the type of person who can’t talk about love without also mentioning hate. I don’t mean by this that I feel more hate than love, but that my love for that land has been constructed entirely on a foundation of my hate for it. It isn’t so much a mysterious relationship as it is entangled and chaotic.</p>
+      <p><strong>Mythorealism—what do you mean by the term?</strong></p>
+      <p>To put it simply, realism has been unable to reflect the reality and culture of today’s China, in part because it is bound by traditions and rules. The result is a discrepancy between the realities of everyday people and how those realities are being represented by Chinese authors. So you have basically three kinds of realities: reality that can’t be perceived by other writers; realities concealed by reality; and realities that “don’t exist.” From a literary perspective, these three layers of realities are, to a certain extent, the deepest and most genuine realities in contemporary China. When confronted by these realities, however, realism has proven ineffectual and one-dimensional, which is why I’ve put forward the notion of mythorealism. The reality of life that can be seen and felt is not the true reality. Rather, the imperceptible spirit and soul of life constitute the real logic, foundation, and reality of literature.</p>
+      <p><strong>From the Cultural Revolution to industrial pollution and even AIDS in rural China, you write about controversial topics, often from a surrealist or absurdist perspective.</strong></p>
+      <p>No, this is not the case. I don’t think of myself as absurdist or surrealist. I consider myself a realist, but mine is a realism that digs deeper. If everyone were mute, with only a few people capable of uttering real sounds, then every sound that these people make would be met with suspicion and questioned. It’s not that I always focus on controversial topics, but rather topics that should have received attention. And when overlooked or ignored people and conditions are brought to light, then the person necessarily drawing attention to such things will stir up controversy and be subjected to criticism.</p>
+      <p><strong>Do you think that one can or should separate art from politics, aesthetics from ethics?</strong></p>
+      <p>Yes, one can and should. But you must realize that your life is not controlled and over-determined by politics and power. The real problem is when the president of the Literary Federation, the president of the Writers’ Association, the president of the Artists’ Association, the president of the Motion Picture Association call on the arts not to care about real life and the existential hardships that people face, all while they themselves enjoy the benefits of power. One must readily acknowledge that all human experiences should be sources of inspiration for a writer, especially when politics has a direct impact on people’s lives. When it infiltrates almost everyone’s soul, when it stains the depths of almost every aspect of life, should the writer turn a blind eye? Or should one ignore all these things in the name of art and aesthetics?</p>
+      <p>In China today, daily life is deeply political. There is political power behind every grain of rice that you eat. It is precisely during such times that the depth, complexity, and richness of a writer must be revealed. In other words, a writer can write without caring about politics. But what should you do when politics has become inseparable from daily life?</p>
+      <p><strong>What is your writing life like?</strong></p>
+      <p>When I was young, people would tell me, “It takes a night to write a short story, a week to write a novella, and a year to write a novel.” Back then, my writing wasn’t influenced at all by the environment or by the period of time. Years later, though, I developed problems with my lumbar area and spine due to long periods of writing, so much so that I became sick and couldn’t even walk. For a couple of years I would just lie in bed or on a writing frame, whose height and angle I could adjust with ease so that I could write. The frame was designed specifically for me by the factory of the China Disabled Persons’ Federation. For instance, I wrote <a href="https://www.google.com/books/edition/The_Years_Months_Days/NAM-DgAAQBAJ?hl=en&amp;gbpv=0" target="_blank" rel="nofollow"><em>The Years, Months, Days</em></a> and <em>The Passage of Time</em> lying down on that metal frame. I always write by hand and only use a computer to communicate with people, especially when I read the news.</p>
+      <p>For 30 years now, I really haven’t known what it feels like to run. I don’t dare feel the excitement and passion of people who jump up in the air and then fall back down to the ground. Since 1995 or so, I’ve stayed mostly at home. I wake up every day around 7:00, I walk my dog, I eat, have a cup of coffee then a cup of tea, and around 8:00 I start writing. To avoid having to lower my head, I have a wooden board on my desk with an adjustable tilt designed specifically for this purpose in order not to aggravate my lumbar condition. With my head raised like that and my arms hung up in the air, I manage to write about 2,000 words. Then I walk out of the study, lie down on the sofa, turn on the TV, and watch an NBA game. That’s when I feel most relaxed and happiest—when I write 2,000 words each day and find out that there’s still the second half of the NBA game to watch. I feel a sort of satisfaction that is hard to put into words.</p>
+      <p>The NBA has accompanied my writing and my life for the past 20 years. I always try to schedule my novels to coincide with the beginning of the NBA season. When the novel reaches its climax, it happens to be the NBA playoffs. If the playoffs are over, but my novel still doesn’t have an ending, I start feeling very restless. When I walk out of the study after I’ve written 2,000 words, I feel empty and meaningless and I even doubt that the day’s writing was any good. After I spend my morning this way, I usually read books or meet people. I schedule all my chores to be taken care of in the afternoon. In the evening, I either go to a Chinese-style dinner and have a chat, or I stay home and have dinner and chat together with my family, and by 10:00 I’m in bed. This is basically my life each day, as boring and monotonous as a wheel turning around and around.<span class="cube"></span></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-09-15</time>
+        <a href="https://nodebe4.github.io/oped2/2022-09-15/ChinaFile-Presents-Surveillance-State-Inside-Chin/">
+          ChinaFile Presents: Surveillance State—Inside China’s Quest to Launch a New Era of Social Control
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-14</time>
+        <a href="https://nodebe4.github.io/oped2/2022-09-14/International-Order-and-Disorder/">
+          International Order and Disorder
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-09</time>
+        <a href="https://nodebe4.github.io/oped2/2022-09-09/For-Your-Weekend,-September-9,-2022/">
+          For Your Weekend, September 9, 2022
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-09-09</time>
+        <a href="https://nodebe4.github.io/oped2/2022-09-09/Online-Posts-Purport-to-Show-Severe-Lockdown-Condi/">
+          Online Posts Purport to Show Severe Lockdown Conditions in Xinjiang
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-09-09/For-Your-Weekend,-September-9,-2022/">
+            前一篇：For Your Weekend, September 9, 2022
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-09-14/International-Order-and-Disorder/">
+            後一篇：International Order and Disorder
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-09-09/For-Your-Weekend,-September-9,-2022/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-09-14/International-Order-and-Disorder/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-09-14/International-Order-and-Disorder/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-09-09/For-Your-Weekend,-September-9,-2022/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-09-09/For-Your-Weekend,-September-9,-2022/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-09-14/International-Order-and-Disorder/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-09-14/International-Order-and-Disorder/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-09-09/For-Your-Weekend,-September-9,-2022/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

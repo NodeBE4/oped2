@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>駭客的線上遊戲 CTF 遊玩兩年心得 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+駭客的線上遊戲 CTF 遊玩兩年心得
+——
+" />
+    <meta property="og:description" content="
+駭客的線上遊戲 CTF 遊玩兩年心得
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="駭客的線上遊戲 CTF 遊玩兩年心得" />
+    <meta property="twitter:title" content="駭客的線上遊戲 CTF 遊玩兩年心得" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2Fafter-playing-hacker-game-ctf-for-two-years-12dbfb6a3adb%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/after-playing-hacker-game-ctf-for-two-years-12dbfb6a3adb?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/after-playing-hacker-game-ctf-for-two-years-12dbfb6a3adb?source=rss-f1fb3e40dc37------2&text=駭客的線上遊戲 CTF 遊玩兩年心得&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/after-playing-hacker-game-ctf-for-two-years-12dbfb6a3adb?source=rss-f1fb3e40dc37------2&title=駭客的線上遊戲 CTF 遊玩兩年心得" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/after-playing-hacker-game-ctf-for-two-years-12dbfb6a3adb?source=rss-f1fb3e40dc37------2&title=駭客的線上遊戲 CTF 遊玩兩年心得" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=駭客的線上遊戲 CTF 遊玩兩年心得&body=
+駭客的線上遊戲 CTF 遊玩兩年心得
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/after-playing-hacker-game-ctf-for-two-years-12dbfb6a3adb?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/after-playing-hacker-game-ctf-for-two-years-12dbfb6a3adb?source=rss-f1fb3e40dc37------2&title=駭客的線上遊戲 CTF 遊玩兩年心得&caption=
+駭客的線上遊戲 CTF 遊玩兩年心得
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=駭客的線上遊戲 CTF 遊玩兩年心得&url=https://hulitw.medium.com/after-playing-hacker-game-ctf-for-two-years-12dbfb6a3adb?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>駭客的線上遊戲 CTF 遊玩兩年心得</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-05-16
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/after-playing-hacker-game-ctf-for-two-years-12dbfb6a3adb?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1684241774000-->
+<p><a href="https://hulitw.medium.com/after-playing-hacker-game-ctf-for-two-years-12dbfb6a3adb?source=rss-f1fb3e40dc37------2">駭客的線上遊戲 CTF 遊玩兩年心得</a>
+——</p>
+
+<div>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*qaaGL9RZh2kPOQ4Y1cYntQ.jpeg" />    <figcaption>
+在別府的世界之塔照的，入場費只要 300 yen 真的很超值，推推
+    </figcaption>
+  </figure>
+  <p>CTF，全名為 Capture the flag，直翻的話就是「奪旗」，是一種考驗資安技術的比賽。雖然說是比賽，但我更喜歡當作是一款線上遊戲在玩就是了（因為許多元素真的滿類似的）。</p>
+  <p>這個名為 CTF 的比賽誰都可以舉辦，你可以，我可以，獨眼龍也可以。基本上也是任何人都可以參加，沒有三百萬美金也可以。</p>
+  <p>那這個比賽比的是什麼？畢竟名字叫做奪旗嘛，就是要想辦法拿到這個「旗子」，那要怎麼拿到呢？這就有不同的方式了，先講最簡單的一種。例如說題目會給你一個網站的連結，跟你說旗子藏在網站主機的根目錄，你只要找到漏洞並且駭入這個網站，就可以拿到旗子了。</p>
+  <p>而這個「旗子」通常是一串文字，例如說 CTF{I_am_Flag} 之類的東西，把這串文字輸入到比賽網站後就可以拿到相對應的分數，這就是奪旗。</p>
+  <p>決定勝負的方式很簡單，跟籃球一樣，分數多的贏。如果一樣多，沒有延長賽可以打，而是看誰先到達那個分數。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*UevEP4A2KHBRodCj7A5zrg.png" />    <figcaption>
+一場比賽的記分板長這個樣子，圖中為 2023 年 5 月的 <a href="https://ctf.m0lecon.it/">m0leCon Teaser 2023</a>
+    </figcaption>
+  </figure>
+  <p>可以注意到上面的記分板中有五個分類，代表的是不同種類的題目，每個分類的意義如下：</p>
+  <ol>
+    <li>misc：不能分在其他幾類的都分在這，有可能把 flag 藏在音檔或圖片裡面要你找出來，也有可能要你還原一個壞掉的 QRcode 等等，題目五花八門千奇百怪</li>
+    <li>web：就是剛剛的舉例，給你一個網站要你找到漏洞</li>
+    <li>pwn：給你一個 binary 的檔案要找到漏洞</li>
+    <li>reverse：逆向工程，只給你執行檔，你要試著逆向以後還原邏輯</li>
+    <li>crypto：密碼學相關題目，例如說給你加密過的檔案跟一些線索，你要還原出明文等等</li>
+  </ol>
+  <p>（這個分類並不是固定的，有些比賽會分出其他類別，例如說數位鑑識 forensic 或是區塊鏈 blockchain 等等）</p>
+  <p>有沒有覺得滿像線上遊戲的，還有分不同的職業可以選擇。</p>
+  <p>大多數玩家都是偏向某一個類別很強，但也有玩家是每個類別都強的。而且類別裡面的題目其實也超級廣，以 Web 來說光是不同程式語言就有不同的點可以考，JavaScript 跟 PHP 需要注意的點就滿不一樣，題目類別有些是考 server side 的漏洞，有些是考 client side 的，簡單來說就是廣到爆炸。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/600/1*AB6sM4RcM20QreMckoz5Bw.png" />    <figcaption>
+原本想要用 AI 畫一個有不同職業的線上遊戲角色圖，但懶得註冊畫圖的服務了，有人有推薦好用又免費的嗎？
+    </figcaption>
+  </figure>
+  <p>玩家有了，職業也有了，再來還缺什麼？沒錯，就是公會。</p>
+  <p>大多數 CTF 都是組隊參加的，以線上遊戲來比喻的話就是公會了。前面有提過 CTF 比賽任何人都可以舉辦，而這些比賽通常會註冊在一個叫做 <a href="https://ctftime.org/">CTF Time</a> 的非官方網站（畢竟這不是一個真正的線上遊戲，沒有所謂的「官方」，等等，那乾脆叫它「去中心化線上遊戲」好了，潮度++）。</p>
+  <p>每一場比賽都會有權重，透過一個統一的計算公式，可以算出每一支參賽隊伍在該比賽的得分，而這些得分就會顯示在這個網站上。每支隊伍取成績最好的前十場比賽加總，就會得到一個照總分來排名的排行榜。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*x8s9lcZpGC1YML5MqF7Kfg.png" />    <figcaption>
+2023 年 5 月的隊伍排行榜，5 月還很早，跟年底的排名通常會差很多
+    </figcaption>
+  </figure>
+  <p>可以把上圖理解為「全伺服器前十大公會」這種感覺，是不是越來越像線上遊戲了？</p>
+  <p>CTF 的主力玩家應該是學生，因為學生時間比較多而且剛接觸比較有熱情（？）。所以這個圈子裡很多人都超級年輕，甚至不少人在 20 歲以下，可能有點像電競圈的那種感覺？像我這種 29.5 歲的年紀算是滿老的了。</p>
+  <p>一場 CTF 比賽大多會進行 24~48 個小時，而且都在假日。有些重度玩家會打到天昏地暗，直接熬夜解題，但我年紀到了不太行，都是打到晚上十點十一點就去乖乖睡覺，隔天醒來看隊友花式 carry。</p>
+  <p>而很多公會也是以學校為單位的，例如說上圖中第十名的 Plaid Parliament of Pwning 就是 CMU 的隊伍。不過有些公會的分界也沒這麼明確啦，不一定真的都要是那個學校的人才可以加入。</p>
+  <p>除了這些學校戰隊以外，其實更多的是「以興趣為導向的公會」，也就是跟一般線上遊戲一樣，由志同道合的人所組成的。而且 CTF 這個遊戲預設就是沒有分伺服器的，全世界的人都在同一個伺服器遊玩，因此公會的成員通常也是來自世界各地（當然，你也可以因為溝通方便或是各種因素組一個地緣的公會）。</p>
+  <p>有些厲害的公會要加入還需要投履歷甚至是面試等等，而有些較為稀缺的職業則是熱門的招募對象，以線上遊戲來說就是「缺補缺範圍缺坦」之類的，像是密碼學就是一個相對稀缺的職業。</p>
+  <p>而且許多公會都會弄一個自己的形象網站，裡面放著公會以前的戰績或是成員名單等等，藉此試著招募到更多志同道合的人。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*6UD7zi5gyAfP0T6CxQsmUA.png" />    <figcaption>
+圖中為 Project Sekai 戰隊的網站：<a href="https://sekai.team/">https://sekai.team/</a>
+    </figcaption>
+  </figure>
+  <p>當然，你也可以跟桐人一樣當個 solo player，不進任何的公會。現實生活中也有一個像桐人般開掛的人物存在，叫做 geohot，曾經破解過 iOS 跟 PS3，單槍匹馬參加 CTF 還打贏一堆戰隊，更多事蹟可以參考：<a href="https://ithelp.ithome.com.tw/articles/10221093">CTF 的三十道陰影 — Day11: [Pwn] Tom Cruise of CTF</a>。</p>
+  <p>我一開始就是個 solo player，後來才被找進公會裡面。自己一個人打跟一群人一起打的感覺差很多，有人可以討論除了能夠互相切磋進步以外，也可以一起卡關一起崩潰，感覺真好。</p>
+  <p>CTF 對於公會的唯一限制就是一場比賽你只能選擇一支隊伍，不能同時橫跨兩個隊伍不然就算是作弊了。而我自己目前在兩個國際公會裡面，可以邊玩 CTF 邊練英文，聽起來很不錯對吧？雖然文法沒什麼進步，英文簡寫倒是學了不少。</p>
+  <p>如果你是 solo 玩家想進入公會的話，通常每個比賽都會用 Discord 頻道進行交流，有些會特別開一個招攬人才的 channel，可以在那邊逛逛，看一下有沒有自己喜歡的公會。</p>
+  <p>若是你想要讓公會自己來找你，還有一個方法就是想辦法增加能見度跟知名度，讓公會看到你。</p>
+  <p>在這個圈子裡面，所謂的辦法指的就是：</p>
+  <ol>
+    <li>解開別人解不開的題目（難題）</li>
+    <li>寫 writeup</li>
+  </ol>
+  <p>許多人去餐廳吃完飯不一定會寫 Google 評論，買完東西除非有優惠不然不會給評價，去旅遊也不會寫遊記，平時也不會寫技術文章；但是身為一個 CTF 玩家，大多數的人都會寫解題的心得筆記，稱之為 writeup（或是 write-up 或是乾脆簡寫成 wu 或 wp）</p>
+  <p>這是我自己滿喜歡 CTF 的一點，因為可以從其他玩家的 writeup 裡面學到一大堆新的技巧跟想法。像我自己的話因為本來就很愛寫東西，所以也是有空的話就會寫寫解題心得，最近一兩年部落格一大堆文章：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*oRUM6PR5K4CGBd0CKlwy3Q.png" />    <figcaption>
+一堆 CTF 筆記文
+    </figcaption>
+  </figure>
+  <p>以前剛開始的時候其實都寫英文的，畢竟這個圈子是國際性的，英文還是能見度最高的語言：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*bbi2B20AoCqOJKH0CfXZOg.png" />    <figcaption>
+以前的英文 writeup，現在搞不好用 chatGPT 翻譯還比較快
+    </figcaption>
+  </figure>
+  <p>除了為了自我的成長跟學習寫心得以外，許多比賽會要求前幾名的戰隊提交解題心得，以此證明真的有把題目解開。而有些比賽甚至會舉辦心得會外賽，只要心得寫得好，一樣能拿獎金。</p>
+  <p>我去年有為了 Google CTF 認真寫了一篇心得去投稿：<a href="https://blog.huli.tw/2022/07/11/en/googlectf-2022-horkos-writeup/">Insecure Deserialization in JavaScript: GoogleCTF 2022 Web/HORKOS Writeup</a>，最後拿到了 200 美金的獎金以及很有質感的紀念品：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/705/1*lAfqmtF7c8ATKPYmexGxQw.jpeg" />    <figcaption>
+一個很像獎牌的東西，質量滿不錯的（是那個質量不是那個質量），沉沉的
+    </figcaption>
+  </figure>
+  <p>講到錢錢，CTF 的比賽是有獎金跟獎品的，越大的公司辦的比賽獎品越好。以 Google CTF 2022 來說，第一名有大約台幣 40 萬，第二名 20 萬，第三名 10 萬。</p>
+  <p>LINE CTF 2023 前三名也依序有台幣 15 萬、10 萬跟 6 萬。</p>
+  <p>不過這些錢雖然看起來很多，但戰隊人數也不少（少則 10 人起跳，多可以多到 30 人甚至是 50 人或更多），分下來也沒有多少錢。而且比起分下來，更多的做法是作為戰隊基金，贊助之後出國比賽的費用。</p>
+  <p>有些 CTF 比賽都是跟隨著資安研討會一起舉辦的，而這些比賽通常都會有預賽，取前幾名進入決賽，才是正式拿到了 on-site 參加比賽的門票。</p>
+  <p>講到出國比賽，就不得不提 CTF 圈中的重頭戲：DEF CON CTF。</p>
+  <p>DEF CON 是一個每年都會在美國舉辦的資安研討會，許多最新的攻擊手法都會在那邊發表，而 DEF CON CTF 是其中的一個活動，也可以視為是 CTF 比賽中的最高殿堂。</p>
+  <p>有聽過資訊奧林匹亞競賽或是數學奧林匹亞競賽嗎？把 DEF CON CTF 想成是每年一度的 CTF 奧林匹亞競賽就對了，差不多是那種感覺。</p>
+  <p>不過雖然聽起來很盛大，但主辦單位還是民間團體，所以只會贊助基本的住宿（而且有限人數，我記得是 8 個），機票要自己負責。</p>
+  <p>因此有些戰隊就會把打比賽拿來的獎金存著當作公積金，贊助戰隊成員出國比賽，或有些戰隊會找贊助商來贊助，例如說台灣每年都會有至少一隊出去比賽，由政府單位以及其他公司贊助（延伸閱讀：<a href="https://www.ithome.com.tw/news/151209">DEF CON CTF資格賽，臺灣聯隊攜手獲得第二名，八月進軍賭城實體較勁</a>）</p>
+  <p>DEF CON CTF 的比賽方式也不是我開頭講的那種，而是另一種叫做 Attack &amp; Defense 的玩法，除了攻擊別人以外，你也要修復自己的服務，把漏洞修掉。這個模式更有競賽的感覺而且戰況瞬息萬變，除了考驗找出漏洞的能力以外，也更考驗選手們自行準備的 infrastructure。</p>
+  <p>我去年有幸參加了 DEF CON CTF，有寫了幾篇心得，結論是我好像想的太盛大了，實際參與就覺得有點失望，更詳細的心得可以參考這篇：<a href="https://hulitw.medium.com/def-con-30-ctf-final-2-4444cf3645e">DEF CON 30 CTF final 遊記（中）</a></p>
+  <p>比起 CTF Time 的排行榜，各個戰隊最想拿到的應該還是 DEF CON CTF 的冠軍。</p>
+  <p>喔對了，因為 DEF CON CTF 決賽只取預賽的前十六名參加，機會很少，再加上每個隊伍都想要盡可能增加競爭力，所以最近一兩年 CTF 圈開始吹起了抱團的風氣。</p>
+  <p>下圖是 2022 年參賽隊伍的組成，紅色是最後的隊伍名稱，藍色跟綠色是隊伍的組成：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*irTl0khBwVEL0D1PsaBKeQ.png" />    <figcaption>
+圖片來源：<a href="https://github.com/HanEmile/ctf_clusters">https://github.com/HanEmile/ctf_clusters</a>
+    </figcaption>
+  </figure>
+  <p>像左下角的 Balsn.217@TSJ.tw，就是由 217 + Balsn + HITCON + TSJ 這四個隊伍組成，而 TSJ 又是由另外五支隊伍組成，可以說是全部台灣的隊伍都組成一隊來打 DEF CON CTF 了。而其他隊伍也不遑多讓，基本上都是由好幾個戰隊組成。</p>
+  <p>今年的話也有聽到各種風聲，許多小隊伍合併成一個大團，試圖增加自己的競爭力，才有能力與那些傳統老牌戰隊一決高下。預賽即將在五月底開打，到時候就可以知道有多少戰隊併在一塊了。</p>
+  <p>每個人看待 CTF 的方式都不同，有些人很認真當作一個比賽在對待，就算是熬夜通宵也要解出題目；有些人把 CTF 當成是一種學習資安技術的方式；也有些人覺得 CTF 中的題目與現實脫節，還是去找真的漏洞比較實在，不想花時間在 CTF 上面。</p>
+  <p>而我的話是把 CTF 當成是一款遊戲在玩，別人玩薩爾達王國之淚，我玩 CTF，為什麼呢？因為我還在國外旅遊所以沒時間玩王國之淚，等我回台灣就會立刻買來玩了。</p>
+  <p>我自己是把 CTF 當成遊戲，抱持著一種比較輕鬆的方式去看待勝負，壓力會小很多，碰到不喜歡或是胃口不對的題目就先跳關，先選自己喜歡的來解。而有時候雖然也會玩到深夜，但並不是因為想要拿冠軍，而是因為想把題目解出來，覺得自己真的很接近了，殊不知這也是人生四大錯覺之一，這個接近就跟「再五分鐘就到了」一樣，有好多個五分鐘。</p>
+  <p>而且這樣的態度或許也能讓自己的電競生涯持續更久一點，畢竟有很多人都是工作或家庭忙了，就開始慢慢淡出這個圈子，或更多的其實是畢業以後就慢慢不玩了。當作遊戲在玩代表玩了是會開心的，是會感到放鬆的，應該就能細水長流。</p>
+  <p>話說比起 CTF 競賽本身，我更喜歡的是這整個生態系，可以透過 CTF 找到許多志同道合的朋友。例如說前端安全，這個偏冷門的領域就可以在 CTF 圈中找到幾個同好，都研究著類似的議題。</p>
+  <p>我也喜歡這整個文化，大多數人都會分享自己的解題心得，大家可以一起討論有沒有更好的解法，教學相長。同時也能讓自己的眼界更為開闊，許多攻擊手法都令人歎為觀止，從沒想過還可以這樣用。</p>
+  <p>而有時候也會有額外的好處，例如說當你進了知名的戰隊以後，許多隊友其實都已經在資安公司工作，有機會獲得相關的工作機會以及推薦，就算最後沒有合作機會，至少也多出了許多人脈。</p>
+  <p>以上就是我接觸 CTF 這兩年以來的心得。</p>
+  <p>如果你有資安基礎又對 CTF 有興趣，可以先問問看自己學校有沒有相關的資源。若是沒有或者你根本不是學生的話，可以考慮先自己打個一陣子，同時在 Discord 群組裡面找找看有沒有相關的戰隊可以加入。</p>
+  <p>如果你不是技術背景，但看了文章以後對 CTF 很感興趣，可以參考這一系列的文章，作者的經驗比我豐富，文章也寫得比我精彩，寫了很多有趣的 CTF 故事：<a href="https://ithelp.ithome.com.tw/users/20121059/ironman/2810?sc=hot">CTF 的三十道陰影</a>。</p>
+  <p>也可以留言在文章底下，告訴我你對哪些細節有興趣想知道更多，或是有哪些想問的問題。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=12dbfb6a3adb" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2023-07-01</time>
+        <a href="https://nodebe4.github.io/oped2/2023-07-01/2023-%E5%B9%B4-6-%E6%9C%88%E6%BE%B3%E9%96%80%E4%B8%89%E5%A4%A9%E5%85%A9%E5%A4%9C%E5%B0%8F%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+          2023 年 6 月澳門三天兩夜小旅遊心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-05-26</time>
+        <a href="https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/">
+          2023 日本北九州 19 天 18 夜遊記之九州怎麼這麼大
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-05-12</time>
+        <a href="https://nodebe4.github.io/oped2/2023-05-12/%E5%9C%A8%E5%8A%A0%E5%AF%86%E8%B2%A8%E5%B9%A3%E4%B8%96%E7%95%8C%E5%B7%A5%E4%BD%9C-0.75-%E5%B9%B4%E5%BE%8C%E7%9A%84%E6%84%9F%E6%83%B3/">
+          在加密貨幣世界工作 0.75 年後的感想
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-12-28</time>
+        <a href="https://nodebe4.github.io/oped2/2022-12-28/%E9%95%B7%E6%A6%AE%E5%A4%96%E7%AB%99%E5%87%BA%E7%99%BC%E6%97%A5%E6%9C%AC%E4%BE%BF%E5%AE%9C%E6%A9%9F%E7%A5%A8%E8%B3%BC%E8%B2%B7%E5%BF%83%E5%BE%97/">
+          長榮外站出發日本便宜機票購買心得
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-05-15/Beijing-s-Global-Media-Offensive/">
+            前一篇：‘Beijing’s Global Media Offensive’
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-05-19/Can-Chinese-Payment-Apps-Gain-Traction-Globally/">
+            後一篇：Can Chinese Payment Apps Gain Traction Globally?
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-05-15/Beijing-s-Global-Media-Offensive/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-05-19/Can-Chinese-Payment-Apps-Gain-Traction-Globally/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-05-12/%E5%9C%A8%E5%8A%A0%E5%AF%86%E8%B2%A8%E5%B9%A3%E4%B8%96%E7%95%8C%E5%B7%A5%E4%BD%9C-0.75-%E5%B9%B4%E5%BE%8C%E7%9A%84%E6%84%9F%E6%83%B3/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-05-15/Beijing-s-Global-Media-Offensive/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-05-19/Can-Chinese-Payment-Apps-Gain-Traction-Globally/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-05-26/2023-%E6%97%A5%E6%9C%AC%E5%8C%97%E4%B9%9D%E5%B7%9E-19-%E5%A4%A9-18-%E5%A4%9C%E9%81%8A%E8%A8%98%E4%B9%8B%E4%B9%9D%E5%B7%9E%E6%80%8E%E9%BA%BC%E9%80%99%E9%BA%BC%E5%A4%A7/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-05-12/%E5%9C%A8%E5%8A%A0%E5%AF%86%E8%B2%A8%E5%B9%A3%E4%B8%96%E7%95%8C%E5%B7%A5%E4%BD%9C-0.75-%E5%B9%B4%E5%BE%8C%E7%9A%84%E6%84%9F%E6%83%B3/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
