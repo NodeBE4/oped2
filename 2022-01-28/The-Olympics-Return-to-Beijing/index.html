@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>The Olympics Return to Beijing – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+The Olympics Return to Beijing
+——
+" />
+    <meta property="og:description" content="
+The Olympics Return to Beijing
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="The Olympics Return to Beijing" />
+    <meta property="twitter:title" content="The Olympics Return to Beijing" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Folympics-return-beijing" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/olympics-return-beijing" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/olympics-return-beijing&text=The Olympics Return to Beijing&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/olympics-return-beijing&title=The Olympics Return to Beijing" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/olympics-return-beijing&title=The Olympics Return to Beijing" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=The Olympics Return to Beijing&body=
+The Olympics Return to Beijing
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/olympics-return-beijing" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/olympics-return-beijing&title=The Olympics Return to Beijing&caption=
+The Olympics Return to Beijing
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=The Olympics Return to Beijing&url=https://www.chinafile.com/conversation/olympics-return-beijing" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>The Olympics Return to Beijing</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-01-28
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Sam Crane, Maya Wang &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/olympics-return-beijing" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1643373120000-->
+<p><a href="https://www.chinafile.com/conversation/olympics-return-beijing">The Olympics Return to Beijing</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-206374fae9cea049fa9c86d717723382">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/53661_sm.jpg" title="The Olympics Return to Beijing" class="colorbox" data-colorbox-gallery="gallery-node-53661-5gvvtFNXjXM" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/53661_sm.jpg?itok=4kpXRoCr" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Greg Baker—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>People take photos of the Olympic flame and rings in the Olympic Tower, in Beijing, January 3, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">In 2008, when China first hosted the Olympics, the event was often described as a “<a href="https://www.economist.com/news/2006/11/16/chinas-coming-out-party" target="_blank" rel="nofollow">coming out party</a>” for the country. It was an awkward fit for a country nearing 60 which had been “opening up” for the past three decades. Besides, Beijing was hosting the party, not just getting dressed up to attend it.</p>
+      <p>And yet, as preparations for the Games ramped up, the metaphor didn’t feel wholly inapt. Across the capital, service-workers practiced their English and took <a href="http://www.chinadaily.com.cn/2008/2007-06/29/content_905857.htm" target="_blank" rel="nofollow">lessons on etiquette</a>, neighborhood committees donned fresh-pressed athletic garb and <a href="https://www.economist.com/prospero/2011/09/01/the-q-and-a-tom-scocca-author" target="_blank" rel="nofollow">lines appeared</a> down the middle of escalator stairs to encourage orderly ascent. Certain aspects of the national toilette—<a href="https://www.hrw.org/news/2008/08/06/china-olympics-harm-key-human-rights" target="_blank" rel="nofollow">silencing</a> government critics, <a href="https://www.reuters.com/article/us-olympics-migrants/beijing-olympic-clean-up-sweeps-out-migrant-workers-idUSSP26521520080721" target="_blank" rel="nofollow">removing</a> migrant workers from the streets, <a href="http://en.people.cn/english/200102/22/eng20010222_63078.html" target="_blank" rel="nofollow">spray-painting</a> dead grass green—may have bespoken discomfort with outside scrutiny, yet the country seemed largely unified in readying itself for a grand entrance. “Beijing Welcomes You,” the Games’ cheerful mascots intoned. They might as well have been saying, “Please Welcome Us.”</p>
+      <p>Neither motto seems suitable for 2022. In February Beijing will host the Games again, this time amid a surging pandemic, a new wave of lockdowns, at least 10 <a href="https://www.newsweek.com/every-country-staging-diplomatic-boycott-chinas-winter-olympics-1657177" target="_blank" rel="nofollow">diplomatic boycotts</a>, and international alarm at the disappearance of one of the country’s top athletes. “Together for a Shared Future,” read the words beneath the interlocking rings this year. But what will be shared and how and with whom seems infinitely more vexed a question than at any time since the Olympic torch last blazed down the Avenue of Eternal Peace.</p>
+      <p>We asked contributors to comment on what the Beijing Games mean this year and to what extent they mark a significant juncture in China’s relations with the world. —<em><a href="https://www.chinafile.com/contributors/susan-jakes" target="_blank" rel="nofollow">Susan Jakes</a></em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9366" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/Sam-Crane"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/crane_sm.jpg?itok=6K52brag" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="sam-crane"><a href="https://www.chinafile.com/contributors/Sam-Crane" title="Sam Crane">Sam Crane</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The 2022 Olympics will not be as significant as the 2008 Games for the People’s Republic of China (PRC).</p>
+        <p>The 2008 Olympics served to ratify the rise of the PRC to a new level of modernity and power, similar to the experiences of Japan in 1964 and South Korea in 1988. The embarrassment of the torch relay in 2008, marred by <a href="https://www.nytimes.com/2008/04/07/world/europe/07torch.html" target="_blank" rel="nofollow">anti-PRC protests</a> around the world, was ultimately drowned out by the drumming pageantry of the opening ceremony and the excitement of the games themselves. The global financial crisis, which began three weeks after the last marathoner crossed the finish line, magnified the message of the PRC’s rise. Indeed, looking back, we can now date the emergence of a more assertive PRC foreign policy in the region to about 2008. That shift was not caused by the Olympics, but the symbolic success of the Games added to the narrative of self-confident PRC accomplishment.</p>
+        <p>Much has changed since then. The PRC’s rise is no longer a novel achievement but, rather, an increasingly stale meme. It is now less interesting to marvel at how quickly the PRC has risen than to inquire about how it is using its power and whether its growth model is starting to falter. Beijing’s move <a href="https://www.brookings.edu/articles/hus-to-blame-for-chinas-foreign-assertiveness/" target="_blank" rel="nofollow">away from</a> the Dengist “hide and bide” strategy to an <a href="https://thediplomat.com/2020/05/interpreting-chinas-wolf-warrior-diplomacy/" target="_blank" rel="nofollow">embrace</a> of “wolf warrior” diplomacy has soured relations with countries in the region and around the world. The <a href="https://www.insidehighered.com/quicktakes/2021/09/01/valparaiso-latest-close-confucius-institute" target="_blank" rel="nofollow">demise</a> of Confucius Institutes in the U.S. and elsewhere suggests the PRC’s soft power strategy has hit its limits. Hostage diplomacy toward Canada and economic harassment of Australia will not be easily forgotten.</p>
+        <p>Furthermore, Xinjiang looms larger today as an international political problem for the PRC than did Tibet in 2008. The prospect of an athlete making some sort of gesture in solidarity with Uyghurs is likely keeping Beijing planners up late at night.</p>
+        <p>Add to all of this the persistent global pandemic and the Olympics seem to be less of a grand celebration and more of an equivocal afterthought. The world will not converge on Beijing. The television cameras will be there, but the failure of even the strictest zero-COVID policy to contain Omicron robs the moment of its usual delight. Although some of the athletic performances will no doubt be remarkable, participants and spectators alike will be distracted by the possibility that they are witnessing a super-spreader event.</p>
+        <p>The PRC Party-state, of course, will work hard to make the most of this fraught situation. The message to the domestic audience will be one of global recognition of the “<a href="https://news.cgtn.com/news/3441544f31597a6333566d54/share_p.html" target="_blank" rel="nofollow">new era of socialism with Chinese characteristics</a>.” For those looking closely, however, the youthful promise of the moment will be dulled by the aging men controlling the spectacle for political ends. Apparatchiks will ensure that the Games fit snugly into discursive preparations for the extension of Xi Jinping’s rule at the 20th Party Congress later this year. Instead of foregrounding young, up-and-coming creative artists, organizers have turned again to the ideologically reliable 71-year-old Zhang Yimou to <a href="https://www.scmp.com/sport/china/article/3163068/beijing-2022-chinese-director-zhang-yimou-hopes-lift-spirits-pandemic" target="_blank" rel="nofollow">orchestrate</a> the opening ceremony—an apt prelude to Xi’s imminent contravention of leadership <a href="https://supchina.com/2021/12/08/what-role-will-age-limits-play-at-chinas-2022-party-congress/" target="_blank" rel="nofollow">retirement norms</a> in pursuit of personal power.</p>
+        <p>Ultimately, then, the greatest significance of the 2022 Winter Olympics could be the extent to which they facilitate a collection of old men as they struggle to define a “new era” that is, in fact, a sclerotic reproduction of archaic autocracy.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9376" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/maya-wang"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/default_images/chop-dark.png?itok=Xgh4UJzo" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="maya-wang"><a href="https://www.chinafile.com/contributors/maya-wang" title="Maya Wang">Maya Wang</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">In some ways, the 2008 and 2022 Olympic Games could not be more different. The 2008 Games were Beijing’s “coming out party,” while the 2022 Games face diplomatic boycotts. The 2008 torch relay went through major Western capitals, but a similar relay would be unimaginable today given growing international discomfort with Beijing’s propaganda exercises as well as COVID-19.</p>
+        <p>And yet, the Chinese government has been deeply authoritarian all along. The year 2008 was marked by the Chinese authorities’ repression of <a href="https://www.nytimes.com/2008/03/15/world/asia/15tibet.html" target="_blank" rel="nofollow">Tibetans</a> and of those seeking accountability for schoolchildren who died in the Sichuan <a href="https://www.theguardian.com/world/2008/aug/26/chinaearthquake.china" target="_blank" rel="nofollow">earthquake</a>, and by Beijing’s failure to live up to human rights <a href="https://www.cnn.com/2008/WORLD/asiapcf/08/12/china.promises/" target="_blank" rel="nofollow">commitments</a> made to get the Games. Instead of holding Beijing accountable, other governments and the International Olympics Committee (IOC) looked the other way.</p>
+        <p>Now, as Beijing’s abuses deepen and as Xi Jinping seeks to assert the Chinese government’s power and influence beyond the country’s borders, some governments have demonstrated that they recognize the Chinese Communist Party as an ambitious force aspiring to remake the world in a manner more friendly to itself—and less friendly to human rights and democracy.</p>
+        <p>At least 10 governments have <a href="https://www.politico.eu/article/boycott-winter-olympics-beijing-2022/" target="_blank" rel="nofollow">declined</a> to send diplomats to the 2022 Beijing Olympics specifically in response to Beijing’s human rights violations, while five others said they made the decision due to COVID concerns.</p>
+        <p>More striking is the range of governments and officials who will show up for Beijing’s party even as the authorities commit crimes against humanity in Xinjiang and crush freedoms in Hong Kong. The 2022 Olympics opening ceremony will include the usual suspects, such as Russian President Vladimir Putin, who says he will attend in a <a href="https://www.theguardian.com/sport/2021/dec/15/vladimir-putin-to-attend-opening-of-winter-olympics-in-beijing" target="_blank" rel="nofollow">display of unity</a>. But it will also feature senior diplomats from democratic governments, such as <a href="https://www.nettavisen.no/nyheter/fire-partier-mener-regjeringen-bor-droppe-ol-reise-ma-ha-ryggrad-nok/s/12-95-3424234586" target="_blank" rel="nofollow">Norway</a>, which seems to be prioritizing major business interests over human rights.</p>
+        <p>Official attendees will most likely also feature Muslim-majority governments that have cooperated with Beijing on its global hunt for Xinjiang’s Uyghurs, persecuted precisely because of their faith. Finally, United Nations Secretary General Antonio Guterres—whose tenure has been marked by a <a href="https://www.hrw.org/news/2021/06/08/un-promoting-rights-key-un-chief-guterres-2nd-term" target="_blank" rel="nofollow">lackluster</a> performance on human rights—will attend to <a href="https://www.reuters.com/lifestyle/sports/un-chief-attend-opening-beijing-winter-olympics-2022-01-13/" target="_blank" rel="nofollow">promote</a> “peace in the world.”</p>
+        <p>But the gold medal for spectacular complicity in human rights abuses should go to the IOC. After the tennis star Peng Shuai accused a retired top Chinese government official of sexual abuse, the IOC <a href="https://www.hrw.org/news/2021/11/22/olympics-dont-promote-chinese-state-propaganda" target="_blank" rel="nofollow">participated</a> in the Chinese government-directed drama of covering up these abuses. When the respected digital rights organization Citizen Lab revealed “devastating” privacy vulnerabilities in an app for Olympic attendees, the IOC <a href="https://www.zdnet.com/article/ioc-disputes-citizen-lab-assessment-of-security-concerns-around-chinese-olympics-app/" target="_blank" rel="nofollow">dismissed</a> them. Whatever allegations there are against the Chinese government, the IOC seems determined to pretend that everything is on track as long as the Games keep the dollars pouring in.</p>
+        <p>Instead of a celebration of the human spirit, the 2022 Beijing Games seem destined to go down in history as a display of an endless capacity from some governments and institutions for abuses and hypocrisy.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9381" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/zha-daojiong"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/zha-daojiong.jpg?itok=4AvwyMhi" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="zha-daojiong"><a href="https://www.chinafile.com/contributors/zha-daojiong" title="Zha Daojiong">Zha Daojiong</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The 2022 Winter Olympics is quite likely going to be recorded as an anticlimactic event in the annals of China’s interactions with the rest of the world in organized sports. Held on schedule but under strict COVID quarantine, the “bubble” leaves virtually no participation by non-athletes, meaning the games will be isolated from the rest of the society. With the 2022 Winter Olympics, Chinese society is likely looking forward to the two-week event coming to an uneventful end.</p>
+        <p>For Beijing residents, tangible changes from when the city hosted the 2008 Summer Games, which are both directly and indirectly associated with hosting the 2022 Games, included a brand-new airport, an expansion of the subway system, an upgrade of the taxi fleets, and improved city road systems. The government’s investments in these projects was in part motivated by a desire to win a positive impression of the country among visitors. But there can be no doubt that Beijing locals and China’s economy benefited from the boost in infrastructure.</p>
+        <p>For residents in Beijing and Zhangjiakou, where the competition takes place in 2022, the most tangible correlation is the <a href="http://www.xinhuanet.com/english/20220106/f1050e0f7e0f4d55bcfa7ed289f8f757/c.html" target="_blank" rel="nofollow">high-speed rail</a> connecting the two cities. Construction of the new line began in 2016, months after the International Olympic Committee announced Beijing to be the host. In terms of the government’s political signaling, there is little coincidence: The new line is a massive improvement on a line constructed in 1905, which was the first built in China without foreign assistance.</p>
+        <p>If each hosting of a major international sports event brings lasting benefits to the city, which in turn can help impress the outside world about China’s progress, what makes the 2022 Winter Olympics anticlimactic?</p>
+        <p>For Chinese athletes to score in an Olympics competition is gradually becoming less important. A case in point is the women’s volleyball team, which became a national sensation by winning the gold medal at the 1984 Summer Olympics in Los Angeles. The government wasted no chance to promote the team as a national asset and the players as inspiration for the country’s youth. Over the years, the commercial aspects of sports competition became more broadly acknowledged and the government’s <a href="https://www.tandfonline.com/doi/full/10.1080/19406940.2017.1413585" target="_blank" rel="nofollow">sports policies</a> have evolved to include promotion of mass sports as well. When the Chinese women’s volleyball team lost out in the qualifying round at the Summer Olympics in Tokyo in 2021, it no longer attracted much commentary in the official media one way or another. There are now many other references of excellence on the international stage to point to.</p>
+        <p>Ever since its hosting of the Asian Games in 1990, China has had its share of complexities associated broadly with sports and international relations and more narrowly with diplomatic relations between China and specific countries. As is true with other manifestations of international relations, establishing causality is a matter of philosophy, goal, method, and evidence. Viewed as a part of the international politics of sports, controversies—those over the 2022 Winter Olympics included—are unavoidable as actors and interests over organized international sports events have diversified. In aggregate terms, the world has come out of treating sports as an arena of geopolitical context characteristic of the Cold War era. On this basis, what’s truly impactful is a given party’s willingness to perform introspection and self-change.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9386" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/orville-schell"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/schell_0.jpg?itok=NBzs9L40" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="orville-schell"><a href="https://www.chinafile.com/contributors/orville-schell" title="Orville Schell">Orville Schell</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Long before finally being granted their first Olympic Games in 2008, China’s leaders had for years sought the privilege of serving as host. Having been shut out for decades, they believed that being anointed with the honor of an Olympic Games slot would help their erstwhile “People’s Republic” gain some of the luster and global respectability that their Leninist one-party system kept denying them.</p>
+        <p>For these leaders, being awarded an Olympic Games was like having People’s Republic of China citizens win a Nobel Prize. They became so obsessed with their quest to be selected as hosts that they overlooked the lofty, and admittedly somewhat vague, goals of the Games themselves. These included traditional humanistic values such as bringing nations together in a spirit of friendship, fairness, openness, tolerance, and respect for the individual.</p>
+        <p>For the ancient Greeks, the Games were a time when city-states ceased their hostilities so that “free” individuals (as distinguished from slaves) could come together and peacefully demonstrate their skill and prowess in physical culture by competing in sporting events governed by fair rules and just laws.</p>
+        <p>As the International Olympic Committee’s (IOC’s) values statement <a href="https://olympics.com/ioc/olympic-values" target="_blank" rel="nofollow">says</a>, “Blending sport with culture and education, Olympism seeks to create a way of life based on the joy found in effort, the educational value of good example and respect for universal fundamental ethical principles.”</p>
+        <p>And while the IOC has not always lived up to its own high aspiration, China never had any intention of subjecting itself to the kind of openness to the media or to outside ideas that others viewed as an innate part of the broader Olympic spirit. And so the Chinese Communist Party found itself impaled on what Mao would have called “an antagonistic contradiction,” namely one in which the conflicting sides cannot be reconciled peacefully, and can only be remedied through struggle, even violence where one side prevails over the other. Beijing wanted one aspect of the Olympic equation, namely, the glory and global admiration of being host. It did not want the other that required it to open itself up and welcome the world.</p>
+        <p>In this sense, the COVID pandemic is a metaphor for China’s Olympic Games dilemma: It wants the ongoing benefits of global trade that requires an openness to the world, but it also wants to protect itself against infection of a virus that, despite the fact that China was its natal place, it now views as a toxic malediction from the outside world that must be kept outside its borders. Likewise, it wants the prestige of the Games, but not the exposure to outside scrutiny that hosting invariably brings.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9391" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/stanley-rosen"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/rosen_2_0.jpg?itok=NFVNOmrA" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="stanley-rosen"><a href="https://www.chinafile.com/contributors/stanley-rosen" title="Stanley Rosen">Stanley Rosen</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">While the International Olympic Committee and the Chinese Party-state insist the Olympic spirit requires sport to remain separate from politics, everyone is aware of the “soft power” benefits that accrue from athletic success and a successful hosting of the Games. The 2022 Winter Olympics are no exception to this rule and are even more politicized than usual—as will always be the case when China or Russia hosts. Far more important than the individual competition or the medal count (particularly since China is very weak in winter sports) will be the political competition. This will be measured by the international assessment of China’s success in putting on the Games under the challenges posed by COVID and its omicron variant, in a world that has become increasingly polarized. It is therefore not surprising that Xi Jinping has been actively involved in monitoring the preparations and has linked the success of the Games with “<a href="https://www.nytimes.com/2022/01/22/world/asia/china-is-staging-the-winter-olympics-on-its-own-terms.html" target="_blank" rel="nofollow">the great rejuvenation of the Chinese nation</a>.”</p>
+        <p>The official slogan of these Olympics is “Together for a Shared Future,” emphasizing China’s efforts in aiding the world to overcome global challenges as a community, with a shared future for humankind. This is not unlike the slogan for the 2008 Beijing Olympics, which was “One World, One Dream.” But the world and the dream in 2008 was very different from the world and the dream today, when the Chinese and American Dreams are in direct competition with each other. Unlike 2008, when China was still seeking acceptance as a rising power and the Olympics were widely seen as China’s coming out party, China is now taking a victory lap. Going back even earlier, when China was competing with Sydney, Australia to hold the 2000 Summer Olympics, it was common to see the <a href="https://archive.org/stream/InternationalHeraldTribune1993FranceEnglish/Jun%2007%201993%2C%20International%20Herald%20Tribune%2C%20%2334297%2C%20France%20%28en%29_djvu.txt" target="_blank" rel="nofollow">slogan</a>, “A More Open China Awaits Olympics 2000,” on many Chinese streets. This was often interpreted in the West as an indication that the Olympic experience would help open China further to Western values. After this direct appeal for Western votes failed to secure the Games for China (China <a href="https://www.nytimes.com/1993/09/24/sports/olympics-2000-olympics-go-to-sydney-in-surprise-setback-for-china.html" target="_blank" rel="nofollow">lost</a> by two votes in 1993), this approach was abandoned. In 2022, no one has any illusions about China becoming more “Western” in terms of its value system; indeed, the official slogan can be seen as an implicit critique of the United States, and Western individualistic values more generally, in favor of China’s collective values and collective responsibility.</p>
+        <p>From the Chinese perspective, despite the difficulties and the uncertainty surrounding COVID, we should expect a successful Olympic Games. Given the <a href="https://www.nytimes.com/2021/12/23/world/asia/china-winter-olympic-spectators.html" target="_blank" rel="nofollow">extensive preparations</a>, a very limited and carefully chosen local audience, and the ban on cheering and shouting, it will be a quiet Olympics. It is intended primarily for television audiences in China and abroad, and China has long had experience in controlling such broadcasted messages.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9396" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/alec-ash"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/headshot-small.jpg?itok=gpDykvZa" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="alec-ash"><a href="https://www.chinafile.com/contributors/alec-ash" title="Alec Ash">Alec Ash</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">In August 2008, I arrived in Beijing to live in China for the first time, a fresh graduate about to learn Mandarin, totally clueless that I would still be here 14 years later. It was the middle of the summer Olympics, and the first thing my host did was take me to the (now demolished) Worker’s Stadium to watch a boxing match. A few days later, I went to the <a href="https://stufish.com/project/beijing-olympics-closing-ceremony/" target="_blank" rel="nofollow">closing ceremony</a> of the Games, and sat jet-lagged in the Bird’s Nest as acrobats ziplined down from the rafters around the ribboned <a href="https://thinksix.net/archives/84" target="_blank" rel="nofollow">tower of memory</a>, while other high fliers rose into the air beating giant drums. Those Olympics supposedly marked China’s “<a href="https://www.economist.com/news/2006/11/16/chinas-coming-out-party" target="_blank" rel="nofollow">coming out party</a>” as a major global power. The rest is . . . present.</p>
+        <p>Now Beijing is again hosting the (winter) Olympics, and again the process has been marked by protests and boycotts, splitting opinions across the sports field. But in other ways these Games—and China itself—feel different 14 years on.</p>
+        <p>The first divergence—the view from the inside—is that China’s leaders and populace feel the country has less to prove. In 2008, successfully hosting the Olympics was a major point of pride: it was arrival, it was face, and it was a demonstration of China’s capabilities to a doubting international audience. Now, there is next to no buzz around the Winter Games, and it seems taken for granted that they will go off without major hitch. Part of that is due to a freshly confident <a href="https://www.thewirechina.com/2021/08/08/chinas-new-nationalism/" target="_blank" rel="nofollow">new nationalism</a>, and a general rallying-around-the-flag for China’s policies, COVID and otherwise. It is also an effect of China’s ever-growing wealth and power, where the nation at large feels it doesn’t need to <em>show</em> the rest of the world that it can host a major sporting event in the middle of a pandemic: Of course it can, and other countries should learn a thing or two from them this time.</p>
+        <p>The second change, the view from the outside, is that international opinion of China has fundamentally changed, for the worse. That is in part due to the nation’s over-confidence, exemplified in Xi Jinping’s imperial assurance of his ascension to a third term. It is also due to the objective reality that China has become more illiberal, with its policies in Xinjiang and Hong Kong as glaring examples. In 2008, the Games were viewed as an usher for what was shaping up to be a relatively liberal new era, and the world was excited to see what might happen next. In 2022, the Games are widely seen by <a href="https://www.nytimes.com/2022/01/22/world/asia/winter-olympics-china-beijing-xi-jinping.html" target="_blank" rel="nofollow">commentators</a> as a tokenistic cap on the authoritarian Xi era that happened instead.</p>
+        <p>In short, these Games matter less than the 2008 ones, and not just because everyone prefers watching summer sports. For both Chinese at home and observers abroad, all parties are less <em>interested</em> in what the event might portend. We are in our camps now, and like international athletes in the Olympic bubble, never the twain shall meet.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9401" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/maura-cunningham"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/maura_cunningham_1_0.jpg?itok=56pxMbO8" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="maura-cunningham"><a href="https://www.chinafile.com/contributors/maura-cunningham" title="Maura Cunningham">Maura Cunningham</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The 2008 Summer Olympics were big and splashy, repeatedly touted as “China’s coming-out party” on the world stage. What I find striking about this year’s Winter Olympics in Beijing is how small and insular the Games feel—truly an event for our pandemic times.</p>
+        <p>The Winter Olympics are always a smaller show than their summer counterpart, given that relatively fewer countries compete in winter sports. But current conditions and ongoing crises have resulted in the 2022 Games shrinking further, in terms of audience size as well as overall attention given to them. Foreign entry into China is difficult, and domestic ticket sales have been <a href="https://apnews.com/article/coronavirus-pandemic-winter-olympics-sports-health-2020-tokyo-olympics-810929752bfb1f743c5b01f215e673a2" target="_blank" rel="nofollow">suspended</a>; athletes have been living <a href="https://www.nytimes.com/2022/01/23/sports/covid-olympics-athletes.html" target="_blank" rel="nofollow">in isolation</a> from friends and family for weeks or even months, attempting to prevent a positive COVID test that would end their Olympics before the competitions begin. A diplomatic boycott led by the United States has <a href="https://thehill.com/policy/international/587092-allies-are-split-on-bidens-diplomatic-boycott-of-beijing-olympics" target="_blank" rel="nofollow">gained support</a> from only a few allies, but is still enough to send a message and reduce the number of foreign dignitaries in attendance. Sponsors, <a href="https://www.wsj.com/articles/winter-olympics-sponsors-caught-between-beijing-u-s-11642939203" target="_blank" rel="nofollow">weary of criticism</a>, seemingly want the Games to be over as quickly as possible so they can distance themselves from the event. Even the torch relay has been <a href="https://www.nytimes.com/2022/01/22/world/olympic-torch-relay-covid-safety.html" target="_blank" rel="nofollow">diminished</a> to a three-day, invitation-only affair.</p>
+        <p>This contraction means that the Winter Olympics won’t be the gala celebration of China’s growth that we saw in 2008—but they don’t need to be. China has already been there, done that, and made an impression on the world. Instead, these Beijing Olympics provide the Chinese government with the opportunity to impress its own domestic population and stage a well-organized, well-managed event while other countries (first and foremost, the United States) struggle to put their houses in some semblance of order. Indeed, a small and insular Olympics almost guarantees success for the Chinese government in this respect, with few foreign reporters or protesters around to throw a wrench in the works. For Xi Jinping and the Chinese Communist Party, small and insular means easier to control and manage—and there won’t be much to clean up after the party’s over.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9406" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/susan-brownell"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/susan_brownell.jpg?itok=6C4H6udN" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="susan-brownell"><a href="https://www.chinafile.com/contributors/susan-brownell" title="Susan Brownell">Susan Brownell</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">In 2008, the Chinese leadership saw the country’s hosting of its first Olympic Games as a marker of China’s emergence on the world stage, and the outside world accepted that interpretation. By contrast, the significance of the 2022 Olympics was never that clear. China has already arrived as a superpower, but the political furor in the lead-up to the games shows that its presence has not yet been fully accepted. So these games will not be a turning point in China’s relationship with the community of nations, but it is a good moment to reflect on how far it has come since 2008.</p>
+        <p>The political pressure on China was possibly more intense in 2008 than 2022. Now, the treatment of Uyghurs in Xinjiang is the hot-button issue; then, the controversy centered around Tibet. The <a href="https://www.nytimes.com/2008/04/07/world/europe/07torch.html" target="_blank" rel="nofollow">demonstrations</a> by pro-Tibetan groups at the international torch relay provided a global audience with powerful images of anti-China vitriol. Meanwhile, Taiwan had <a href="https://www.reuters.com/article/us-olympics-taiwan/taiwan-says-wont-host-torch-decision-final-idUSTP12038720070921" target="_blank" rel="nofollow">withdrawn</a> from the international torch relay; it had its first pro-independence president, and relations with the mainland were tense.</p>
+        <p>In 2008, activist groups pressured heads of state <a href="https://www.theguardian.com/world/2008/mar/29/germany.olympicgames2008" target="_blank" rel="nofollow">to boycott</a> and not attend the opening ceremony. More than a dozen heads of state, plus the UN Secretary General, <a href="https://www.reuters.com/article/us-olympics-leaders/factbox-world-leaders-to-attend-olympics-opening-in-beijing-idUST30989220080806" target="_blank" rel="nofollow">did not attend</a>, some stating openly that it was an act of protest, others offering other excuses. Some, including U.S. President Bush, provoked Beijing by receiving the Dalai Lama in the months before the games.</p>
+        <p>In 2022, U.S. President Joe Biden has led a “diplomatic boycott,” refusing to send official government representatives to the games. At least ten countries have <a href="https://www.newsweek.com/every-country-staging-diplomatic-boycott-chinas-winter-olympics-1657177" target="_blank" rel="nofollow">joined it</a>, and another five have stated that they are not sending government representatives because of the pandemic. The U.S. and Australia were represented by their presidents in 2008, but declared a diplomatic boycott in 2022. Most of the other countries that explicitly announced support for this year’s diplomatic boycott did not send their heads of state to the opening ceremony in 2008, either. However, some notable no-shows in 2008 have not repeated the boycott this year.</p>
+        <p>Overall, the level of international censure seems weaker in 2022 than it was in 2008, and some key EU members have been less inclined to take a clear oppositional stance. Reflecting China’s growing presence in Africa, in November 2021 the Forum on China-Africa Cooperation (FOCAC) issued a statement in support of the Beijing Olympics—although most African nations do not send athletes to the winter Olympics.</p>
+        <p>Today, no one seems to remember the movement to boycott the opening ceremony in 2008; the politics faded into the background once the sports began, and the fantastic opening ceremony provided perhaps the most-remembered facet of the games. After the political furor in the lead-up to the Beijing 2022 Olympics has subsided, we might find that China is actually closer to peaceful integration into the global order than we had realized.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-02-01</time>
+        <a href="https://nodebe4.github.io/oped2/2022-02-01/Verdicts-from-China-s-Courts-Used-to-Be-Accessible/">
+          Verdicts from China’s Courts Used to Be Accessible Online. Now They’re Disappearing.
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-01-31</time>
+        <a href="https://nodebe4.github.io/oped2/2022-01-31/A-Vast-Network-of-New-Era-Civilization-Practice-C/">
+          A Vast Network of ‘New Era Civilization Practice Centers’ Is Beijing’s Latest Bid to Reclaim Hearts and Minds
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-01-24</time>
+        <a href="https://nodebe4.github.io/oped2/2022-01-24/Tribute-to-an-Ordinary-Chinese-Activist/">
+          Tribute to an ‘Ordinary Chinese Activist’
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-01-11</time>
+        <a href="https://nodebe4.github.io/oped2/2022-01-11/Recent-Articles-about-NGOs-in-China,-Both-Foreign/">
+          Recent Articles about NGOs in China, Both Foreign and Domestic
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-01-24/Tribute-to-an-Ordinary-Chinese-Activist/">
+            前一篇：Tribute to an ‘Ordinary Chinese Activist’
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-01-31/A-Vast-Network-of-New-Era-Civilization-Practice-C/">
+            後一篇：A Vast Network of ‘New Era Civilization Practice Centers’ Is Beijing’s Latest Bid to Reclaim Hearts and Minds
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-01-24/Tribute-to-an-Ordinary-Chinese-Activist/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-01-31/A-Vast-Network-of-New-Era-Civilization-Practice-C/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-01-31/A-Vast-Network-of-New-Era-Civilization-Practice-C/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-01-24/Tribute-to-an-Ordinary-Chinese-Activist/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-01-24/Tribute-to-an-Ordinary-Chinese-Activist/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-01-31/A-Vast-Network-of-New-Era-Civilization-Practice-C/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-01-31/A-Vast-Network-of-New-Era-Civilization-Practice-C/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-01-24/Tribute-to-an-Ordinary-Chinese-Activist/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

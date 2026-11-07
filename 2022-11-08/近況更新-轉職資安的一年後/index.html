@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>近況更新：轉職資安的一年後 – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+近況更新：轉職資安的一年後
+——
+" />
+    <meta property="og:description" content="
+近況更新：轉職資安的一年後
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="近況更新：轉職資安的一年後" />
+    <meta property="twitter:title" content="近況更新：轉職資安的一年後" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2F2022-updates-e2a3ae1c9a2e%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/2022-updates-e2a3ae1c9a2e?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/2022-updates-e2a3ae1c9a2e?source=rss-f1fb3e40dc37------2&text=近況更新：轉職資安的一年後&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/2022-updates-e2a3ae1c9a2e?source=rss-f1fb3e40dc37------2&title=近況更新：轉職資安的一年後" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/2022-updates-e2a3ae1c9a2e?source=rss-f1fb3e40dc37------2&title=近況更新：轉職資安的一年後" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=近況更新：轉職資安的一年後&body=
+近況更新：轉職資安的一年後
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/2022-updates-e2a3ae1c9a2e?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/2022-updates-e2a3ae1c9a2e?source=rss-f1fb3e40dc37------2&title=近況更新：轉職資安的一年後&caption=
+近況更新：轉職資安的一年後
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=近況更新：轉職資安的一年後&url=https://hulitw.medium.com/2022-updates-e2a3ae1c9a2e?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>近況更新：轉職資安的一年後</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-11-08
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/2022-updates-e2a3ae1c9a2e?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1667911788000-->
+<p><a href="https://hulitw.medium.com/2022-updates-e2a3ae1c9a2e?source=rss-f1fb3e40dc37------2">近況更新：轉職資安的一年後</a>
+——</p>
+
+<div>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*KbaEPsqjRGFtp_tr" />    <figcaption>
+Photo by <a href="https://unsplash.com/@jezar?utm_source=medium&amp;utm_medium=referral">Jezael Melgoza</a> on <a href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral">Unsplash</a>
+    </figcaption>
+  </figure>
+  <p>去年的 6 月 5 號，我在 Medium 發了這篇文章：<a href="https://hulitw.medium.com/byebye-front-end-hi-security-fda6be0cb7ce">暫別前端，重新開始</a>，裡面提到了我從 2021 年 5 月份開始在公司內轉成資安工程師，暫時不寫前端了。</p>
+  <p>過了一年半之後，我過得還好嗎？我做得還好嗎？想說來寫篇文章更新一下近況，也順便記錄我這一年之間到底做了哪些事情。</p>
+  <h3 id="section">工作與團隊</h3>
+  <p>因為公司內部團隊轉調都是同等級轉調居多，而我之前在公司內部是 Principal Engineer，所以轉過去資安團隊以後也是這個身份，成為了空降的小主管。</p>
+  <p>說實在的，如果要論在資安業界的經歷的話，我是絕對比不上其他團隊成員，而且剛轉去的時候有許多名詞我根本沒聽過。既然這邊需要時間磨練，一時半刻沒辦法給什麼幫助，就只能想辦法從其他地方下手。</p>
+  <p>例如說帶進一些我親身經歷過以後覺得不錯的制度，像是每週開個半小時至一小時的分享會，讓團隊成員彼此分享一下這週看到的新東西或是工作上發現的有趣之處，對整個團隊其實滿有幫助的，可以互相交流一些想法與知識。</p>
+  <p>同時，也希望能利用這個 team lead 的身份解決團隊對外溝通的一些問題，例如說管道統一，盡量不再讓其他團隊直接去對到團隊成員，而是先有個統一的窗口（但這個很難做好就是了）。</p>
+  <p>除此之外，當進入到一個新團隊的時候，其實有不少事情可以做，例如說：</p>
+  <ol>
+    <li>盤點目前有的資源與文件</li>
+    <li>整理並撰寫出缺少的文件（例如說 on-boarding guide 或是一些流程的制定）</li>
+    <li>協助找出團隊目前碰到的問題，以及想個解法</li>
+  </ol>
+  <p>團隊要有目標，而且成員要知道這個目標，才能往同樣的方向前進。在當時我有訂了幾個目標，例如說有部分時間可以做自己的研究，想做什麼都可以，然後也鼓勵大家複習一下現有的東西並寫寫心得之類的。</p>
+  <p>不過在團隊管理這一塊，我一直覺得在「管事」這一塊還行，「管人」就真的很難，管人我指的是你可能需要給他建議，需要幫助他在職涯上能夠成長，這一塊真的難，尤其是你沒有很熟悉這個領域的時候。</p>
+  <p>接著來談一下這年在技術上有關的進展好了。</p>
+  <h3 id="bug-bounty">Bug Bounty</h3>
+  <p>有不少公司有 Bug Bounty Program，簡單來說就是找到漏洞就能夠拿獎金，獎金多寡通常都取決於公司的規模以及漏洞的嚴重程度，例如說一個 Chrome 的高風險漏洞可能就值個幾十萬台幣之類的。</p>
+  <p>因為自覺能力不足，所以在選擇目標的時候我先選比較冷門的，感覺機會比較多。因緣際會之下選了 <a href="https://matters.news/">Matters</a> 這個平台，除了冷門以外，它的原始碼都有公開，對我來說會比較擅長一點。</p>
+  <p>補充一下，我覺得有當過工程師的如果轉去做資安，優勢之一大概就是看 code 可能會比較快，也比較知道整體在幹嘛。例如說我看 React 專案就知道哪邊是在做什麼，然後哪邊可能比較會有漏洞之類的，算是一個小優勢。</p>
+  <p>在 Matters 上面總共找到了 5 個洞，拿到了大概 16k 台幣的獎金 ：</p>
+  <ol>
+    <li>CORS 設定錯誤</li>
+    <li>文章 XSS</li>
+    <li>登入頁面 XSS</li>
+    <li>GraphQL DoS</li>
+    <li>Account Takeover（重設密碼機制有問題）</li>
+  </ol>
+  <p>也根據這些洞寫了一些心得：</p>
+  <ol>
+    <li><a href="https://blog.huli.tw/2021/05/25/prevent-xss-is-not-that-easy/">防止 XSS 可能比想像中困難</a></li>
+    <li><a href="https://blog.huli.tw/2021/09/26/what-is-open-redirect/">在做跳轉功能時應該注意的問題：Open Redirect</a></li>
+    <li><a href="https://blog.huli.tw/2022/01/04/reset-password-vulnerability/">有缺陷的重設密碼機制如何演變成帳號奪取漏洞？以 Matters 為例</a></li>
+  </ol>
+  <p>另一個我有在打的 Bug Bounty 是徵才網站 <a href="https://glints.com/tw">Glints</a>，會發現他們有 bug bounty 是因為看了別人的 write-up。在 Glints 上面也找到了幾個漏洞，都是跟權限管理有關的，拿到了大概 30k 台幣的獎金，也寫了一篇心得：</p>
+  <ol>
+    <li><a href="https://tech-blog.cymetrics.io/posts/huli/how-i-hacked-glints-and-your-resume/">關於我在 Glints 找到的高風險漏洞</a></li>
+  </ol>
+  <p>至於其他在 HackerOne 或是 Intigriti 之類的 program，因為競爭者很多，我就沒有花太多心力下去看。</p>
+  <p>話說回來，「比較大的目標洞都被找完了」其實是個不健康的想法，因為大家都這樣想，所以你只要真的去找，就能領先別人一步。再者，有些網站就是因為太大，所以洞才比較好找，有些太小的網站因為功能太少反而沒有洞。</p>
+  <p>打 bug bounty 其實滿好玩的，不過比起黑箱測試，我還是比較喜歡白箱一點。黑箱測試很多地方就是去嘗試各種可能性，看會不會有一個中。例如說推特或是 Medium 每天都有一堆人在分享 bug bounty tips，說實在的有很多可能都是剛好某個網站有那個洞，而且站在開發者的角度來看，有些你真的會很懷疑背後是怎麼設計的，怎麼可以設計成這樣。</p>
+  <p>不過話又說回來，我覺得這些算是「必要的苦工」就是了，畢竟黑箱你也不知道背後怎麼寫的，只能每種可能性都試過一遍，說不定你參數裡面隨便帶個 ` ls` 就真的 command injection 了。</p>
+  <h3 id="wordpress-">WordPress 套件漏洞</h3>
+  <p>忘記從什麼時間點開始了，我突然注意到 <a href="https://wpscan.com/wordpress-security-scanner">WPScan</a> 這個由官方經營的網站也可以回報漏洞，而 WordPress 的套件超級多，如果不限制使用人數的話，真的是隨便找都可以有洞。</p>
+  <p>而且，如同我前面說的，我比較喜歡在有 source code 的狀況下開始找洞，而 WordPress 每個套件你都可以找到 source code。</p>
+  <p>於是那陣子就花了大概兩三週的時間找一些洞，我專注的是一些跟 booking 相關的套件，例如說民宿的訂房套件啦，或是餐廳的訂位套件之類的，最後也認識了這整個生態系，覺得真的滿厲害的。</p>
+  <p>WordPress 的使用人數超多，套件也一大堆，成為了一整個生態系，例如說有些公司就是專門靠賣 WordPress 套件來賺錢，也有公司專門做 WordPress 的防禦，例如說：</p>
+  <ol>
+    <li><a href="https://wpscan.com/wordpress-security-scanner">WPScan</a></li>
+    <li><a href="https://www.wordfence.com/">Wordfence</a></li>
+    <li><a href="https://patchstack.com/">patchstack</a></li>
+  </ol>
+  <p>而這些網站也提供漏洞回報的服務，例如說 WPScan，你在網站上填入相關資訊以後，他們就會幫你聯絡廠商並申請 CVE 編號，也會在網站上留下紀錄。</p>
+  <p>另一間 patchstack 也是類似，而且為了搶先別人一步知道漏洞，還提供漏洞回報者一些獎勵。體驗過就會發現滿有趣的，光是 WordPress 就能養活不少公司。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/1*zv4CQFcUkOEDVzoyZGEh9Q.png" />    <figcaption>
+patchstack 的介面
+    </figcaption>
+  </figure>
+  <p>在這段期間找到的洞基本上都是直接從 source code review 的角度下去看，畢竟 WordPress 跑起來很方便，套件要改也很方便，還滿好追蹤的，也有寫幾篇文章記錄一下細節：</p>
+  <ol>
+    <li><a href="https://tech-blog.cymetrics.io/posts/huli/wordpress-plugin-vikbooking-unauth-rce/">WordPress Plugin VikBooking &lt;= 1.5.3 Unauthorized RCE 漏洞細節</a></li>
+    <li><a href="https://tech-blog.cymetrics.io/posts/huli/wordpress-plugin-amelia-sensitive-information-disclosure/">WordPress Plugin Amelia &lt; 1.0.49 敏感資訊洩露漏洞細節</a></li>
+  </ol>
+  <p>然後剛開始找的時候我有看到這篇很帥：<a href="https://kazet.cc/2022/02/03/fuzzing-wordpress-plugins.html">A technique to semi-automatically discover new vulnerabilities in WordPress plugins</a>，用半自動的方式去找出像是 XSS 或是 SQL injection 這樣的漏洞。</p>
+  <p>我本來想說可以試試看用 CodeQL 來做，但後來發現還不支援 PHP，殘念。</p>
+  <p>不過說實在的，我覺得用人工的方式去找這些小套件的洞其實不太划算，只是因為我很菜所以才這樣做，鍛鍊一下經歷。比較理想的方式應該是自動化或是半自動化去找，大一點的套件（一百萬個安裝以上的那種）才用人工去找，應該會是效益較高的做法。</p>
+  <h3 id="section-1">工作上碰到的漏洞</h3>
+  <p>除了上面這些，因為工作內容之一是滲透測試，所以也有找了不少洞，但畢竟工作上的東西都需要保密，細節就不多講了。</p>
+  <p>在工作上做這些也還是滿有趣的，畢竟面對的是真實世界的網站以及服務，打到洞的時候也滿有成就感的。</p>
+  <h3 id="ctf">CTF</h3>
+  <p>在這一年間玩得最認真也進步最快的，應該就是 CTF 了。不熟悉什麼是 CTF 的話，可以參考我之前寫過的：<a href="https://blog.techbridge.cc/2021/02/20/web-ctf-is-fun/">該如何入門 CTF 中的 Web 題？</a></p>
+  <p>之前本來打 CTF 都是自己當作興趣打打，反正也拿不了名次，只打自己喜歡的題目，想不出來就果斷放棄。</p>
+  <p>然而，在 2022 年 2 月的時候加入了一個國際戰隊叫做 Water Paddler，裡面有來自世界各地的好手，也跟著他們打了一些重大的賽事，像是 PlaidCTF 或是 GoogleCTF 之類的，以及最重要的 DEF CON CTF，也順利打進了決賽，去了拉斯維加斯一趟，心得可參考：<a href="https://hulitw.medium.com/def-con-30-ctf-final-1-79220bba7f02">DEF CON 30 CTF final 遊記（上）</a></p>
+  <p>以前一直聽說 DEF CON CTF 是 CTF 的最高殿堂，我就自動腦補成像是 IOI 或是 ICPC World Finals 之於打資訊競賽的人那樣。直到打了今年的 DEF CON CTF 以後，對它的想像有點破滅，理想很美好，現實很…tick 196。希望今年只是意外，明年會更好。</p>
+  <p>一個人打跟一群人打的感覺差滿多的，主要是會更有動力一點，例如說以前可能卡住就放棄，因為解出來也無關緊要，現在因為隊裡每個角色都有，所以解出一題就可能影響名次，變得更重要了。</p>
+  <p>再者，因為有隊友一起解，所以也可以一起討論或是一起卡關（？），就不會這麼容易放棄，而是會想要把它解開。不過伴隨而來的就是花更多時間在上面了，很多時候週末兩天就完全耗在 CTF 上面，所以我其實滿喜歡 24 小時的 CTF，因為可以留給我一天假日。</p>
+  <p>在 CTF 裡面也鍛鍊了不少技能，學到很多奇怪的知識。雖然說有些 CTF 中學到的東西在現實生活中打滲透測試時沒什麼幫助，因為要嘛觸發條件很複雜，要嘛攻擊手法比較不切實際，但我自己認為還是滿有趣的。</p>
+  <p>這連帶也影響到我的部落格中與 JavaScript 或是網頁相關的內容幾乎都停止更新了，取而代之的是一堆 CTF 的心得文章跟各種奇怪的知識。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/641/1*2VkUOoaZY9F0f63nW8dR7Q.png" />    <figcaption>
+部落格截圖，一堆 CTF 的心得文
+    </figcaption>
+  </figure>
+  <p>但我認為有時候真的重要的反而不是那個洞，而是你找洞的過程。例如說有些洞你一定要去看原始碼才能找到，就間接培養了看原始碼的能力。像現在如果有些題目卡住，真的沒其他線索的話，我都會盡可能去找一下原始碼來看，看能不能找到一些蛛絲馬跡。</p>
+  <p>話說我在 Web 題中最有興趣的就是我的老本行了，與前端相關的，像是 XSS 或是 XSLeaks 相關的題目，都是我會花很多心力去解的題目。在這個領域的收穫很多，從另外一個角度認識了原本自以為熟悉的東西，真的可以看到很多不同的地方。</p>
+  <p>另外，被我認為的這領域的高手們追蹤成為了我的生活小確幸之一，會覺得自己好像又往前邁進了一步。若是想要再往前邁進一步的話，就是要能夠解出他們所出的難題，這個真的難。</p>
+  <h3 id="section-2">感想</h3>
+  <p>對自己轉職後這一年間的表現，大概打個 80 分，滲透測試也做了，bug bounty 也打了，找一些真實世界的漏洞也找了，CTF 也打出不錯的成績。</p>
+  <p>不過說實在的，似乎可以再更好一點，例如說找到一個比較多人使用的套件或軟體的洞，或是比較複雜、需要串來串去的洞，又或者是比較知名的網站的 bug bounty 之類的。</p>
+  <p>總覺得有點不上不下的，你要說表現得不好也沒有到不好，但要說表現得超好，也沒有到那種程度。</p>
+  <p>有些人會問我，是怎麼從前端工程師跨到資安領域去的，需要學習什麼額外的技能嗎？我只能說有很大一部分真的是天時地利人和，是因為我在的部門剛好做的比較多都是網站相關的服務，而網站相關的漏洞我本來就熟悉，所以沒有太多額外的東西需要學，基礎本來就不差，再加上也確實有透過<a href="https://github.com/splitline/How-to-Hack-Websites">一些課程</a>或是 CTF 補足了一些相關知識。</p>
+  <p>如果今天我們公司做的是什麼 binary 相關的資安或是防毒軟體之類的，那我可能真的就要從頭開始學了，也很有可能因為技能組不符合而轉不過去。</p>
+  <p>而且在資安的領域上，我自己覺得目前也還沒踏出舒適圈，比較多都是停留在自己本來就熟悉的 Web，而且就算是 Web，也還是停在偏網頁前端的地方，那些原本就不熟的還是很不熟。</p>
+  <p>再者，資安這領域本來就很大，如果是攻擊的話，還有內網滲透也是很大的一塊，但這一塊我就幾乎是零知識。</p>
+  <p>理想狀態的話大概是每樣都要會一點，但某一個領域要鑽得特別深。可能就像是我在網站開發上的技能樹一樣，每個都會一點，但是前端鑽得特別深。</p>
+  <p>以上大概就是這一年間的近況，接下來更新一下最近發生的事情（其實原本八九月就把這篇寫完，但一直還沒發，所以現在回頭看也沒有這麼最近了）。</p>
+  <h3 id="section-3">再次轉換團隊</h3>
+  <p>在大概五月底的時候，我就跟公司提了我八月底要離職。就像以前我待過的每間公司一樣，要離職的話都會盡量提早，讓他們有多點時間能夠找人。當時提離職的原因，是因為我想去 D 社，一間專門做攻擊的頂尖公司。如果 D 社進不去，那我可能就會回去寫前端，然後找國外的工作。</p>
+  <p>會做這個決定，是因為我覺得比起當時的工作內容，我更喜歡專心做研究跟攻擊，而且既然都決定要這樣做了，就要去我覺得頂尖的公司，想去看看那邊的風景有什麼不同。而第二順位是想去日本工作，以我的資歷來說要去日本工作，找前端相關職缺的機會是最大的，所以才會說要跑回去寫前端。</p>
+  <p>後來也有跟 D 社稍微聊了一下，得到了許多回饋，也知道自己哪些技能還要補足，才能滿足入社的門檻（例如說考個 OSCP 之類的，補一些基礎技能跟內網滲透的東西）。原本是想照著這個學習路徑去補技能，但公司內部有另一個團隊對我有興趣，想跟我聊聊看。</p>
+  <p>原本我其實是沒什麼興趣的，因為那邊做的雖然也是資安，但並不是那種純粹攻擊的，而且面向差滿多的，但陸續聊了幾次以後，我開始覺得這是一個滿有趣的機會。</p>
+  <p>先講一下那個團隊是做什麼的，簡單來說就是做加密貨幣相關公司的保險，例如說交易所的保險。所以以我來說，平常的工作內容大概就是要去看每個客戶的系統架構以及針對錢包的解決方案，有沒有哪些技術上的問題，看一下在技術這一端的風險為何。</p>
+  <p>除此之外，也需要去研究一些技術相關的議題，並且在內部分享讓其他成員聽懂，例如說什麼是 HSM 啦，什麼是 MPC 啦，以及冷熱錢包的差異等等。</p>
+  <p>在保險知識上面也需要略懂略懂，因為風險可能會與保險的種類有關，例如說你保的是 A，就沒有涵蓋到 B 類型的風險，就可以整個不看。</p>
+  <p>雖然我打從一開始進的就是 OneDegree 這間保險公司，但在保險方面的知識其實沒有增加太多，充其量就是對不少專有名詞以及理賠的細節有更多認識，反倒是進去了這個 team 以後，才開始慢慢瞭解保險真正的核心。</p>
+  <p>除了保險以外，畢竟是與 web3 相關的研究，所以也會接觸到 smart contract 相關的東西，也有在看一些智慧合約相關的風險以及資安問題。</p>
+  <p>最後呢，在認真考慮了一週以及找了幾個同事聊聊之後，我在九月初已經正式轉入這個新成立的團隊：<a href="https://oneinfinity.global/">OneInfinity</a>。</p>
+  <p>咦？怎麼前面才說我想去專門做攻擊與研究的公司，到了這邊又不是這麼一回事了？對，因為「<a href="https://hulitw.medium.com/i-dont-know-what-i-want-about-career-383bee0be733">關於求職，連我自己都不知道我要什麼</a>」，我以為我要的是 A，結果聊一聊發現 B 其實也不錯，滿有趣的，也可以是一個選項，我一直以來都是這個樣子的。</p>
+  <p>其實我自己也對這個轉換猶豫了一陣子，以興趣來說我覺得是符合的，也覺得可以學到不少新東西，但我擔心的是：「這樣是不是把職涯走歪了？」，換個方式問：「如果我離開這邊，我下一份工作該找什麼？」</p>
+  <p>前端的話，應該機會比較大，但可能已經一兩年沒寫了；資安的話，也才轉職一年，沒有什麼太大的成果。轉到這個新團隊以後，我自己覺得我的職涯就有了斷層。</p>
+  <p>但往好處想的話，可能就是證明了自己是那種「有能力解決問題」的人，前端也好，資安也好，保險或是做系統的技術評估也好，無論是什麼領域，反正球來就打，我都能做好。</p>
+  <p>不過，也要未來的公司懂得欣賞而且需要這種能力就是了，畢竟有的職位就是要找「某一項技能專精就好」，有的則是要找「有能力解決問題」的人。當然，如果能兩種加在一起是最好的。</p>
+  <p>總之呢，我後來還是選擇換團隊了，也就代表這些職涯規劃的東西我暫時沒那麼在乎，反正還年輕，跟著當時的興趣走就好了。就算未來想回前端或是資安，重新再磨練就是了。而且我本來就對自己的職涯沒有什麼明確規劃，一直都是抱持著且戰且走的心態，沒有想這麼多。</p>
+  <p>我沒有不喜歡前端，也沒有不喜歡資安，我到現在還是每個月至少會打一場 CTF，你看我上面貼的部落格截圖就知道了，也還是會關注前端的話題，關注各種社群。我不是那種「我終身的志向就是要做 ____」的人，我是隨著自己興趣所浮動的人，我是能在各種領域都能找到樂趣並投入的人，但儘管如此，我依然有著能把當前的工作內容做好的自信。</p>
+  <p>以上就是近況更新，大概就是轉換跑道到資安的這一年間做的東西，以及又換了一個新團隊的消息，或許半年或一年後，再來更新一下近況吧。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=e2a3ae1c9a2e" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2022-12-28</time>
+        <a href="https://nodebe4.github.io/oped2/2022-12-28/%E9%95%B7%E6%A6%AE%E5%A4%96%E7%AB%99%E5%87%BA%E7%99%BC%E6%97%A5%E6%9C%AC%E4%BE%BF%E5%AE%9C%E6%A9%9F%E7%A5%A8%E8%B3%BC%E8%B2%B7%E5%BF%83%E5%BE%97/">
+          長榮外站出發日本便宜機票購買心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-12-18</time>
+        <a href="https://nodebe4.github.io/oped2/2022-12-18/%E4%BD%A0%E9%81%8E%E5%BE%97%E5%A4%AA%E5%AE%89%E9%80%B8%E4%BA%86/">
+          你過得太安逸了
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-17</time>
+        <a href="https://nodebe4.github.io/oped2/2022-08-17/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%8B/">
+          DEF CON 30 CTF final 遊記（下）
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-08-16</time>
+        <a href="https://nodebe4.github.io/oped2/2022-08-16/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%AD/">
+          DEF CON 30 CTF final 遊記（中）
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-11-07/ChinaFile-Presents-Nury-Turkel,-No-Escape/">
+            前一篇：ChinaFile Presents: Nury Turkel, No Escape
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-11-11/The-Beginning-of-the-End-for-Zero-COVID/">
+            後一篇：The Beginning of the End for Zero COVID?
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-11-07/ChinaFile-Presents-Nury-Turkel,-No-Escape/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-11-11/The-Beginning-of-the-End-for-Zero-COVID/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-12-18/%E4%BD%A0%E9%81%8E%E5%BE%97%E5%A4%AA%E5%AE%89%E9%80%B8%E4%BA%86/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-08-17/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%8B/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-11-07/ChinaFile-Presents-Nury-Turkel,-No-Escape/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-11-11/The-Beginning-of-the-End-for-Zero-COVID/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-12-18/%E4%BD%A0%E9%81%8E%E5%BE%97%E5%A4%AA%E5%AE%89%E9%80%B8%E4%BA%86/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-08-17/DEF-CON-30-CTF-final-%E9%81%8A%E8%A8%98-%E4%B8%8B/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

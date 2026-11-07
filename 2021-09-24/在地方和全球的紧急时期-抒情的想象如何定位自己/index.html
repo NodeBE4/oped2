@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>在地方和全球的紧急时期，抒情的想象如何定位自己？ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+在地方和全球的紧急时期，抒情的想象如何定位自己？
+——
+" />
+    <meta property="og:description" content="
+在地方和全球的紧急时期，抒情的想象如何定位自己？
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="在地方和全球的紧急时期，抒情的想象如何定位自己？" />
+    <meta property="twitter:title" content="在地方和全球的紧急时期，抒情的想象如何定位自己？" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.allnow.com%2Fpost%2F614d623efbcfb81445420eca" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.allnow.com/post/614d623efbcfb81445420eca" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.allnow.com/post/614d623efbcfb81445420eca&text=在地方和全球的紧急时期，抒情的想象如何定位自己？&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.allnow.com/post/614d623efbcfb81445420eca&title=在地方和全球的紧急时期，抒情的想象如何定位自己？" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.allnow.com/post/614d623efbcfb81445420eca&title=在地方和全球的紧急时期，抒情的想象如何定位自己？" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=在地方和全球的紧急时期，抒情的想象如何定位自己？&body=
+在地方和全球的紧急时期，抒情的想象如何定位自己？
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.allnow.com/post/614d623efbcfb81445420eca" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.allnow.com/post/614d623efbcfb81445420eca&title=在地方和全球的紧急时期，抒情的想象如何定位自己？&caption=
+在地方和全球的紧急时期，抒情的想象如何定位自己？
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=在地方和全球的紧急时期，抒情的想象如何定位自己？&url=https://www.allnow.com/post/614d623efbcfb81445420eca" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>在地方和全球的紧急时期，抒情的想象如何定位自己？</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2021-09-24
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: 维吉尼亚·康昌</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#燕京书评">
+          燕京书评
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.allnow.com/post/614d623efbcfb81445420eca" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="燕京书评的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#燕京书评 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--NaN-->
+<p><a href="https://www.allnow.com/post/614d623efbcfb81445420eca">在地方和全球的紧急时期，抒情的想象如何定位自己？</a>
+——</p>
+
+<div>
+  <p>作者丨维吉尼亚·康昌；翻译丨王立秋</p>
+  <p>罗兰·巴特在母亲亡故后那天开始记的《哀悼日记》在10月29日那天是这样写的，“哀悼的度……哀悼父、母，十八个月。”虽然在抒情理论中，“度”经常被当作掂量、筛选思想和情感的隐喻，但巴特日记的记录表明，他为这样一个想法所冒犯：哀悼可能有一个规定的时限。那么，挽歌是无尽的吗？若非通过哀悼的、语言的悲伤工作，怎样化解丧失？</p>
+  <p>去年出版的三部诗集，维多利亚·张的《奠》、娜塔莉·迪亚兹的《后殖民情诗》和卡罗琳·佛雪的《世迟之际》看起来又激活了这些问题。这些诗人都关心我们挽悼所爱之人的不同方式、美国和世界的历史、神圣的土地和语言的变异与演化。她们切入这些问题的角度，则各不相同。张通过修正讣告的形式和我们哀悼的抒情仪式；迪亚兹通过与命名、他者性、意义-形成和隐喻的非二元关系；而佛雪则是通过对人类文化和二十一世纪破坏的后果进行先知预言般的审视。</p>
+  <p>放到一起来看，这些诗人都反对殖民主义的各种力、历史的健忘和技术资本主义的消遣文化。她们的诗集给所爱之人的特殊性以声音、空间和呼吸，也表明何以虽然无数力量在生成悲伤、剥夺、疏远和无力偿还的债务，但我们还是可以在诗中找到和解和了断。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-24/614d637b4cd55d54dd5dcacc+L.png" data-id="614d63839b2d825085c27170" alt="本文评论的三部诗集" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+本文评论的三部诗集
+    </figcaption>
+  </figure>
+  <p><strong>《奠》：只有通过努力表达死，才会知道死是什么意思</strong></p>
+  <p>在维多利亚·张的《奠》中，诗人的母亲因肺部纤维化而去世、父亲身体每况愈下引发的悲伤提供了一个入口，使我们得以进入其他形式的文化的、公开的哀悼：从结构上说，书中的诗大多是由垂直对齐的诗段组成的讣告，开篇的“讣告”通告了诗人父亲的前额叶的死亡，它“于2009年6月24日不平静地”死于“中风”。</p>
+  <p>《奠》中的许多诗，纪念了张的父母的身体、心智和存在的具体维度（从他们的肺到他们的牙齿、步态、胃口和氧气）的丧失。同时，诗集还用“讣告”的形式，列出了一个其他看似不关联的丧失的清单：友谊、逻辑、乐观、眼泪、记忆、托马斯·特朗斯特罗姆、理性、手、形式、控制的丧失，甚至题材和语言本身。在《题材》一诗中，张想知道，她还能不能把意义的形成与哀悼分开：“我不是我母亲的故事，不是我父亲的故事。但有一个隐藏的集合地，所有通向冷漠的地图都在那里”，她写道。“能把痛苦和题材分开吗？题材能否飞走并迷路，吻上另一棵树？”</p>
+  <p>随着父母的年老和死去，张研究了语言随题材瓦解而死去的过程。张把语言和能指的物质性关联起来，聚焦于词（the word）作为具身之物写、压留下的文字和印记：在《客气》中，她这样描述双肺失灵的母亲，说她“像用木头一样用自己的身体”发出烟雾信号，而不是词。在以《语言》为题的三首诗中的第一首中，张写道：“文字经常划过我父亲的大脑，直到它们放手。如今他的词瞎了。打了褶。是调度者，被调度者和接收者。”言语行为理论告诉我们，对沟通来说，说话者和听话者之间的关系，和信息的内容一样重要。张的父亲的失语的词变成“调度者、被调度者和接收者”这个事实表明，身体垮了，使沟通得以可能的人际关系也垮了。</p>
+  <p>张的《讣告》和后面的那首抒情长诗之间，还穿插着二十四首短歌。短歌是日本和歌的一种，以五行、5/7/5/7/7音节分布形式而著称：张的短歌是“加倍的”，这么说的意思是，每页两首五行和歌。这些和歌经常以带引号的“我的孩子，孩子”开始，与讣告形式对位，探索了希望、爱、种族主义、谋杀、神和“在帮助某人/成长的同时帮助某人死去”等主题。倒数第二首和歌是这样写的：“我准备好了/承认我爱我的孩子/承认这是在/承认他们会死。/死：没人知道这个除了词。”最后一行表明，死在语言内部发生，或者说，可能只有通过努力表达死，我们才会知道死是什么意思。这句诗浓缩了张的《奠》，这部诗集巧妙地从语言内部闯入了生命、希望和爱。哪怕死夺走了生命和语言，语言还是给了生命意义。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-24/614d639e9c232e01c17d34ed+L.png" data-id="614d63a4904b8c02a16a44db" alt="维多利亚·张的《奠》" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+维多利亚·张的《奠》
+    </figcaption>
+  </figure>
+  <p>《奠》非常严肃地考虑了巴特提到的“哀悼的度”。拒绝标示丧失的文化试图给哀悼划界，巴特抗拒这种划界。在全球化的世界中，巴特的抵抗给张提供了一种方式，使她能够把悲伤的不同疆域和招魂的大众景观分开。在没有标点符号的长诗《我是采矿者。变蓝的光》中，张解构了父母对子女的养育、抱负和美，她宣告了她公开和私下的哀悼仪式：“一个男人/说你应该幸福看看你有的孩子可如果幸福在于孩子那么幸福也会跑”；“土壤没有选择/因为土壤也被强奸了”；“花不代表美”；“一切雄性之物和无数瓶欢乐的/终点”。张的诗集的最后一则讣告，反思了玛乔丽·斯通曼·道格拉斯高中的枪击事件，该事件致使17人死亡，70人受伤。通过一个不同寻常的富于想象力的同情之举，她的说话者在自己的个人悲剧中为大规模枪击事件的受害者留出了空间：“我过去常想死亡是一种健忘。现在我会想象长长的队伍，母亲接受了所有的孩子。我会想象她抚摸他们的头发。”</p>
+  <p>张也在诗集中为维多利亚·张，巴特式的“死了的”作者而作的四则讣告中解构了她自己的生命和自我。这四则讣告的第一则说，作者2017年在从父亲养老院归来途中“不情愿地”死去。这首诗描述了隐喻本身的文字伪装（男高音和车辆），然后进入一系列隐喻性的描述；其中，诗人描述了自己是怎样试图“像打字员”一样翻译父亲的问题，把“文字串联起来形成句子”，用小马拉的车逐一拉动它们，直到“小马不肯再走”，文字“陷入玉米地”被警察打死。在下一则作者的讣告中，作者死于2011年，虽然“她的想象活过了那天”：这首诗描述了她和父亲去商场的经历。父亲发现篮球机，投了几个篮。“就好像他在探访狱中过去的自我，触摸自己模样的透明玻璃。在玻璃另一边，活着像堤、不堪入目的和异质的那样的词。”在回忆这些损耗和死亡（或像人们委婉地说的那样——逝世）的时候，诗人不由得又想到，自我和关系性都以语言为中介，并为语言的无效和不足而感到退缩。</p>
+  <p>与另两部诗集摆到一起看，张的《奠》以模范的方式，展示了诗人给予挽歌形式上的深度——在诗人那里，挽歌既是我们所处时代的诗歌隐喻，又记录了对她所爱之人和被所有还在世间的人珍视的人的见证。“在从泪中回归的时候，每一次，第一人称我都会再分解一点”，她在为“情感”——一个指向更大的作者的丧失，或者，也可能是自我与他者之间的更大的综合的姿势——而作的讣告中如是说。她在为“情况”写的讣告中写道，“很多东西没法放进盒子”，响应了特伦斯·海耶斯诗集《盒子里的风》中在抑制中为自由而展开的斗争：“风，奇迹，时间，苦。我没有答案。我不再有问题。因为何时？意味着情况会结束。”张给挽歌的庄严，不是规范的纪念和安慰的庄严：通过拒绝假装作者无所不知，她在挽歌这种经常被我们想象为仪式性的和严肃的形式中，为关爱留出了空间。</p>
+  <p>和所有伟大的诗人一样，张也异常精确地把个人的和政治的、特殊的和普遍的结合到了一起。她提醒我们注意，关于我们所爱之人、我们所爱之存在元素，我们最伤痛的地方是哪里，我们最思念和将最思念的是什么。但《奠》不只是当代挽歌的目录或分类学；相反，它是一部高度哲学的、紧迫的、必要的诗集，它说明了何以“悲伤实际上关乎”被我们集体的现在的脆弱加剧的“未来之失”。“死亡不是敌人”，她写道。“知道死亡才是”。她指出，就悲伤和哀悼不可度量那样，不知道死亡，也是不可能的。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-24/614d64919c232e01c17d34ef+L.jpeg" data-id="614d64a4904b8c02a16a44de" alt="Victoria Chang" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+Victoria Chang
+    </figcaption>
+  </figure>
+  <p><strong>《后殖民情诗》：患病的帝国与死亡的危机</strong></p>
+  <p>娜塔莉·迪亚兹的第二部诗集《后殖民情诗》，也跨越了各种度量挽歌的语域和形式——家族的、民族的和圣经的。诗集分四部分，包含关于美国认同、制度种族主义、上瘾和环境破坏的诗和像与诗集同题的诗那样的酷儿情诗，其对爱欲和语言游戏的惠特曼式表达令人陶醉：“我的嘴——可怕的天使，永恒的连祷，/迷狂的吞噬者”，《爱人之臀颂》的说话者，在话语、场所、星系、本体论间令人目眩、发出迷人请求的远行中，“使我进入天堂”。</p>
+  <p>《后殖民情诗》，不但说到了作者的美洲原住民祖先（迪亚兹是莫哈维人，也是希拉河印第安社区的在册成员），也说到了这个认同是怎样塑造她看待过去和当下的种族灭绝和殖民主义美洲史视角的。在《美国算术》中，迪亚兹破除了社会责任保护的统一的民族认同概念：“我们是美国人，我们是不到百分之一的/美国人……当我们死去，我们该给谁打电话？/警察？还是我们的议员？/拜托，请打给我妈妈。”说话者害怕变成“自己的/博物馆”，数个世纪的压迫破坏了她最基本的对身体的认同和抒情的“我”的要求：“在有一百个人的美国房间里，/我是美洲原住民——不到一个人，不够/完整——连自己都不是。”</p>
+  <p>诗集众多惊心动魄的诗歌中的另一首，《最初的水是身体》从打破隐喻开始：“我承载着一条河。它是我之所是：‘Aha Makav。这不是隐喻。/当莫哈维人说，Inyech ‘Aha Makavch ithuum，我们是在说我们的名字。我们是在讲我们存在的故事。河流过我身体的中间。”这首诗，在美国把土著故事错译为“超现实主义或魔幻现实主义”的倾向，和美国人想象中对莫哈维人的丑化之间划了一条线。“美国人更喜欢有魔力的红发印第安人，或萨满，或穿红裙子的假印第安人，而不喜欢真的原住民……对白人构成威胁的东西经常被斥为神话。在美国，我从来不是真实的。美国是我的神话。”要是悬置这种隐喻式的思想，我们和语言及历史的关系会发生什么变化？</p>
+  <p>在描述莫哈维人的思维方式的时候，迪亚兹写道，“除非你知道谈话的语境，否则你不会知道我们是在说我们的身体还是我们的土地……你不会知道我们同时在说二者。”迪亚兹诗集中的这个时刻和其他时刻让人想起宝拉·冈恩·艾伦1986年的《神圣环圈：恢复美洲印第安人传统中的女性》。艾伦是这样定义部落的神圣环圈传统的：它把生命理解为“动态的和有意识的，切实地分有万灵的生命，并切实地对那同一个大神秘做出贡献”。这个宇宙一体的概念也包括部落系统共享的讲故事、慷慨、尊重长者和大地的价值。在迪亚兹的诗集的语境中，神圣环圈及其对女性权力的收复，起到了一个统一的知觉场的作用，这个知觉场是共生的、流动的、非时序的和和谐化的。迪亚兹断言，这个场域是一种非西方的、非父权的实在，它拒斥分离字面和隐喻的二元对立。</p>
+  <p>迪亚兹的说话者说，这个“前-语言的”语言、心智和身体之间关联点，是“当身体不只是身体和可能性的时候。”在这里，张的诗集和迪亚兹的诗集在这个文本的身体之间的交叉点上产生了碰撞（特别是就它们与伤口、悲伤和哀悼的关系而言）。迪亚兹引用了德里达：“在被翻译之前，一切文本都处在哀悼中”——这可能与具身的创伤和文本对这种创伤的升华有关，而文本的升华又解锁了新的，超出字面意义的回音。张援引让-吕克·南希的《独一之多》这个凸显关系（同-在）首要性的文本，认为物质的“初体”（我们的身体和感官便源于这个最初的身体）先于自我与他者、相同与他异的文化两分。在一个以表演、物化和多重决定创伤为标志的时代，在一种拒绝语言内部激进变革可能性的文化中，这些诗人转向抒情的主体性以在美学上超越创伤、让他者性发声的努力特别能够引起共鸣。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-24/614d63c84cd55d54dd5dcacd+L.png" data-id="614d63ce2114416715c3e8f6" alt="娜塔莉·迪亚兹的第二部诗集《后殖民情诗》" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+娜塔莉·迪亚兹的第二部诗集《后殖民情诗》
+    </figcaption>
+  </figure>
+  <p>在探索文本、身体和主体性之间的空隙的时候，张谴责了外部世界中形式的缺失，这种缺失也可被看做仪式性的缺失：“多少次我看向天空，到那里寻找某种信息，却只找到内容却非形式”，她写道。在哀悼日记中，巴特也面临类似的危机，埃德加·莫兰所谓的“死亡的危机”，即始于十九世纪的那个过程，在这个过程中，死亡被剥去了宗教的意义。这个“仪式的退却”，给我们留下了一种“宗教外的、仪式外的非象征性的死亡。”根据朱利安·库珀，当死亡不再成为一个意义的场所，它也就变成“纯粹字面的（字面得可怕）了，生死之间的二元对立也随之而固化，就好像它们不内在于彼此那样。”</p>
+  <p>所有这三部诗集，都拒绝美国式哀悼过程特有的二元对立和健忘。对张来说，死亡与其说是主题，不如说是象征秩序核心空缺的那个洞，而我们的人性和《奠》，就是围绕那个洞建构起来的。虽然抑郁抗拒象征化，但张的作品通过拒绝以沉默、愤怒或否定面对消耗一切的死亡幽灵，恢复了哀悼的过程。同时，迪亚兹意识到她的用词，是她必须小心保护的自然资源：“至此，我在每个诗节都说到了河这个词。我不想浪费水……//在未来的诗节中，我会试着更加保守。”放进美洲原住民为水权而进行的斗争的语境看，迪亚兹对“河”这个词的看管变成了一个复原的行动，一个恢复被驱逐的意义的姿势。她的诗集把“河”这个词变成一个神圣的地方，使人想起拉科塔人的用语和抗议之歌“Mní wičhóni”或“水就是生命”。</p>
+  <p>对迪亚兹来说，水不只代表一种不容置疑的、救赎性的好，它本身就是那种好——把水商品化、污染水将危及我们。在《美国水博物馆展品》中（这首诗把密歇根弗林特的一幅透景画、一个题为“河”的互动表演作品、出自BIA水贩国会记录的旁注等拼贴到一起），迪亚兹写道“被抽进美国城市的水叫死水。”虽然这个“死水”可以取代“河和它的血管”，说话者在总结全诗的时候回忆了那个水还是“与世界不可分离的联系的”活的“记录”的时代，“可现在”，她问，“水在哪里？世界在哪里？”关于物质和语言之间的相互关联的非二元的宗教哲学观念很多——在斯宾诺莎主义、浪漫主义的泛神论和东西方的创世故事中，都有这样的思想——关于动物和大地的社会生活与意识的新学术研究，也在不断涌现。迪亚兹迷狂的诗歌写作应该让我们琢磨，我们是不是进入了一个新的纪元，在这个纪元里，事实终将证明，我们的帝国主义的、人类中心的世界观不但是专横的，事实上（也即，从环境的角度来看）也是落后的。</p>
+  <p>迪亚兹的诗的说话者，感觉到帝国令人痛苦的范式的全部种类。“我感觉不好”，《从欲望的田野》的说话者说，“我伤心”；《如果我要一个人到你在西德克萨斯沙漠里的房子》的说话者说：“我骑着加/满油的夜我的前灯/在搜寻什么。”在诗集的最后一首诗《悲伤工作》中，那个“什么”变成了一匹“发光的吞噬之马”。说话者说，“我用她的身体/做我的悲伤工作”。“我们去有爱的地方，/去河那里，跪进甜/水。我把她往水里拉了四次，/直到我们被河流过。”</p>
+  <p>换言之，直到说话者和她的马回到、变成生命之源本身。迪亚兹拆解了今天虚假的事实与虚构、历史与神话之间的二元对立，流畅而优雅地揭示了帝国患病的基础。《后殖民情诗》的诗学，向我们展示了何以语言、身体和土地可以被占领和殖民，也可以被解放。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-24/614d64ed9c232e01c17d34f0+L.jpeg" data-id="614d64f22114416715c3e8f9" alt="Natalie Diaz" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+Natalie Diaz
+    </figcaption>
+  </figure>
+  <p><strong>《世迟之际》：死去的你，低语路在何方？</strong></p>
+  <p>卡罗琳·佛雪的第五部诗集《世迟之际》，就其回忆、神话化和哀悼的行动而言，也就其对水和死亡的变形而言，与迪亚兹和张的诗集密切相关。但在一部花了十七年心血来准备的诗集中，佛雪的视角，与其说是个人的或民族的，不如说更多是世界史的和地缘政治的。和张的诗集一样，佛雪的诗集也让人想到死亡，是为历史和文明而作的深刻挽歌。和迪亚兹一样，她也用自然世界、艺术、人造物和希腊神话来对当代生活的麻痹说话。</p>
+  <p>诗集开篇是一首题为《石头博物馆》的设定地点的诗，它用一个咒语般的清单把坚固的石头描述为“又盲又冷又聋的，凝结的身体/大地是采石场，生命是一个劳工，他板着脸，被酒砸晕/希望这堆碎石，放到一起，将成为/神庙或圣地，不能移动的神圣骨瓮。”接下来是《船夫》，诗中诗人通过一个女性主义的修正主义行动，把哈迪斯的船工卡戎变成了在世界尽头开出租车的自己：“我会看着你安全抵达，我的朋友，我会把你送到那里。”诗集后面的内容是全球生态灾难的导览，在葬礼的肃穆中，或者说，因为生命变成了对其自身的摹仿——就像《为萨尔科耶·塞洛的伊利亚而作》的说话者说的那样，“世界坠/入了一场梦的爱河”——灾难的歌，静默无声。</p>
+  <p>就像在迪亚兹的诗集和张的诗集那里那样，《世迟之际》把语言面临的生存威胁，和大地与全球的“公地”面临的威胁关联起来。《水危机》一诗开头就说“他们切断了沉没的都市里的水”，强调和有钱人的脱离。后者可以用他们房顶上的水池来打水，“唱着歌用更好的房子的管道来输送”水。然后是安静：“像黑夜。我们在等待再次呼吸。”诗进而描述了斗鸡的苦境，“被迫用被绑在脚上的刀片打斗”，把被武器化、被化约为消遣的动物，和语言的萎缩关联起来：“最后的云是空的。最初的死足够合理。”</p>
+  <p>在佛雪的许多诗里，历史的和环境的危机是串通的，比如说，《来自一个岛的报告》描述了一个垃圾岛、一次空难和一场地震，地震迫使一些人逃到家族墓地避难，而另一些幸存者则“靠垃圾城市里的垃圾堆生活，在那里干着把/塑料、金属、玻璃、钽和手机与珍贵的泥土分开的工作。”《最后的傀儡》使人想起“傀儡国家”或傀儡政府这个短语，但也有腹语的意思：没有人的激活，傀儡将是沉默的。说话者说，傀儡“让它说/一种它不会再说的语言，它的影子在/没有别人的墙上找到影子……把这个傀儡带到美国。把它放到光前”，出色地把输送声音的抒情转喻，和历史、再现、挪用及持续的环境危机等问题交织在一起。</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-24/614d63ee9c232e01c17d34ee+L.png" data-id="614d63f22114416715c3e8f7" alt="卡罗琳·佛雪的第五部诗集《世迟之际》" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+卡罗琳·佛雪的第五部诗集《世迟之际》
+    </figcaption>
+  </figure>
+  <p>某种主题-象征的引力场，维系着这些诗集中的每一部。在《奠》中，引力来自母亲、记忆、语言和死亡；在《后殖民情诗》中，引力来自酷儿的欲望、祖先的知识和修复。统一《世迟之际》的，则是那个神谕般的人声，它既是历史的、又是美学的、更是哲学的——与其说是不懂感情只管记录的天使，不如说是指引我们走出资本主义废墟的指导灵。在1972年的论文《声音的纹理》中，巴特对说或唱出的声音中固有的“纹理”进行了理论化的思考：“‘纹理’是声音在歌唱时的身体，在书写时的手，在表演时的肢体”。丽贝卡·伦杰斯（Rebecca Lentjes）解释说，“‘纹理’不只是音质，它是增补感官语言的音响语言；不但是身体的，也是某种与语言的可说性绑定的不可说本质的召唤。”</p>
+  <p>我们可以把张、迪亚兹和佛雪那里的被爱者的女性形象看做历史的见证者，她没有声音，为寻找一个声音而以人、动物和无生命之物的形象从遗忘中归来。佛雪在《失去的手提箱》中把被爱者表现为一个“亲爱的人，甚至在说话时她也是沉默的”，她一直提着手提箱，“无限的手册，/你的不再说的东西的词典，/偶尔被造成的伤口的老生常谈，/和记录真正英雄之举的长账簿。”巴特写过，“（‘纹理’是：）说母语的身体的物质性，几乎肯定是意义”，也许，这也指出了一种对佛雪的更加深入的解读：意指——命名、指定意义或给予声音——事件就是被爱者、他者、你的回归。《失去的手提箱》的结尾说，“现在，靠近并醒来，告诉我你是谁”。如此，挽歌也就被定义为这样一种形式，它不但是回忆，也是被召唤出来的在场。</p>
+  <p>这个诗集中的许多诗提到了地理场所（罗马、伴侣岛、底特律、庇里牛斯山、波尔特沃、俄罗斯），但又给人这样一种感觉，那就是，佛雪说的“城市”也是某种被召唤出来的东西，是想象中的空间——都会，或希腊的城邦或城市国家，它们是心智发展的基础。说话者反复描述对一个幽灵般的人或文本的寻找，这个人或文本的特殊性（穿过“众多灵魂和/饥饿、无花果、恶魔、想象的沉默和隐藏的短语”）不太能定位或命名，就像在《失去的诗》中那样：“我在找我几年前读过的一首诗。它是卡瓦菲写的，我想……在一个版本中，橄榄树化为乌有但桥幸存了下来。在另一个版本中，城市本身没了，/路也没了。当它是一首战争诗。”在这个诗集中，“战争”和“城市”的功能相似，它们都是代表众多战争和城市的占位符，但也是一个还在失踪的更大梦境的一部分，后者在《失去的手提箱》中的说话者那里得到了生动的描述。</p>
+  <p>也许“城市本身没了，/路也没了”是因为资本主义的抽象，而资本主义的终局，就是全球化、外包、离岸和自动化；也许，也是因为，通往未来的“路”已经数字化，认不出来了。在后工业战后废墟的碎石间，大地变成了一个“骨窟”，在《旅行文件》中，说话人想起了她在“英仙座流星雨/下”与被爱者的最后一次拥抱。说话者说，“死去的你低语路在何方？/在那里，穿过最后的句子，就在那里——/穿过最后的句子，路——”</p>
+  <figure class="image-box dls-image-block dls-media-image">
+&lt;img src="https://img.allhistory.com/now/2021-09-24/614d657f4cd55d54dd5dcace+L.jpeg" data-id="614d6591904b8c02a16a44e0" alt="Carolyn Forché" ; referrerpolicy="no-referrer"&gt;    <figcaption class="dls-image-capture">
+Carolyn Forché
+    </figcaption>
+  </figure>
+  <p><strong>把灵魂安然护送至终点</strong></p>
+  <p>把这三部诗集放到一起考虑，我们会看到，在地方和全球的紧急时期，抒情的想象是怎样定位自己的。《奠》从仪式的角度，通过讣告的形式，来度量个人的和集体的哀悼；《后现代情诗》通过分解隐喻和赞美自然中多维度的“前语言的”身体实现这点；《世迟之际》的做法可以说是自述，但不是家长式的、犹太-基督教意义上的自述，而是一种既是宇宙的、又是诗的自述：“会有人问你你是谁。/最终会有人问我们我们是谁……所有入世的人都被派出去了。揭开你的精神帷幕。”</p>
+  <p>英文中的“幽灵”一词，有鬼或阴魂的意思，但这次来自古英文的gāst一词，后者有“精神”或“灵魂”之意。在佛雪的诗《苦》中，她写道“之后，你是纸上的乳液，是在地下/听火车经过云的照片……随幽灵回顾它仅有的生命的尸体”。在我们所处的这个史无前例的历史时刻，这几行诗读起来就像是祝祷，尤其是因为，诗集的《哀悼》一诗的结尾，不是顺从而是一个激励的姿势：“因为如果大地是营地或海洋/魂瓮，点亮你的信号弹/无论你身处何处。/晨光来了，发舟吧。”和张的诗集以及迪亚兹的诗集——它们都在它们被种植的地方，在后帝国生态灾难和二十一世纪技术统治的废墟中盛放，它们的“信号弹”包括对意指系统本身的解构和变革——放到一起，这个段落读起来尤其深刻。</p>
+  <p>在所有这三部诗集中，诗的想象和诗的语言都起到了把自我、他者塑造为见证——这种见证甚至能够恢复最大的全球的、个人的丧失——的形式的作用。在几乎不可理解的世界灾难中，这些诗集提醒我们注意，人格（personhood）和他者的承认，是只有诗及其联想的、非线性的思想形式和具身的认知形式才能给我们的礼物。因此，在这里，以佛雪最后的那首诗《到终点去》作结是合适的。这首诗实现了她在《船夫》中许下的，把灵魂安然护送至其终点的承诺：“在这思想的群岛降下一片雾……充满了呼喊的幽灵……你能一下子/看到一切：所有的岛屿，你生活的每一个时刻或你/待过的每一个地方，/没有混乱或障碍，你将是一个人。你将/再度成为一个人。”</p>
+  <blockquote>
+    <p>这是一篇书评论文，评的是维多利亚·张（Victoria Chang）：《奠》（Obit），Copper Canyon Press， $17 （Paper）；娜塔莉·迪亚兹（Natalie Diaz）：《后殖民情诗》（Postcolonial Love Poem），Graywolf Press， $16 （paper）；卡罗琳·佛雪（Carolyn Forché）：《世迟之际》（In the Lateness of the World）， Penguin Books， $16 （paper）。</p>
+    <p>Virginia Konchan， “Elegies for Empire”， Boston Review， July 08， 2021， <a href="http://bostonreview.net/arts-society/virginia-konchan-elegies-empire">http://bostonreview.net/arts-society/virginia-konchan-elegies-empire</a>。经作者和《波士顿评论》授权翻译。</p>
+    <p>维吉尼亚·康昌（Virginia Konchan），加拿大诗人，作家，诗歌与政治评论期刊《Matter》合作创始人，《蓝果树季刊》（Tupelo Quarterly）编辑。</p>
+    <p>王立秋，云南弥勒人，北京大学比较政治学博士，哈尔滨工程大学人文社会科学学院讲师。</p>
+  </blockquote>
+  <p>———</p>
+  <p>微信搜索“<strong>燕京书评</strong>”（Pekingbooks）：重申文化想象，重塑文字力量。</p>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#燕京书评 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-05-16/%E4%B9%A6%E8%AF%84-%E6%80%9D%E6%83%B3%E5%B8%82%E5%9C%BA-%E9%82%A3%E4%BA%9B%E4%BC%81%E5%9B%BE%E5%BD%B1%E5%93%8D%E4%BD%A0%E7%9A%84%E4%BA%BA%E5%92%8C%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E6%89%8B/">最早</a>--</span>
+    
+    
+      <li>
+        <time>2021-09-24</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">
+          爱德华·萨义德及其反对者：《东方学》引发的学界战争
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-19</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-19/%E7%8B%84%E5%BE%B7%E7%BD%97%E4%B8%8E%E5%90%AF%E8%92%99%E6%97%B6%E4%BB%A3%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%A3%8E%E8%B2%8C-%E5%9C%A8%E6%80%9D%E6%83%B3%E5%AE%B6-%E6%96%87%E5%AD%A6%E5%AE%B6%E4%B8%8E%E6%88%8F%E5%89%A7%E5%AE%B6%E4%B9%8B%E9%97%B4/">
+          狄德罗与启蒙时代的精神风貌：在思想家、文学家与戏剧家之间
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2021-09-17</time>
+        <a href="https://nodebe4.github.io/oped2/2021-09-17/%E4%B9%9D-%E4%B8%80%E5%85%AB-%E6%BB%A1%E6%B4%B2-%E4%B8%8A%E6%B5%B7%E5%92%8C%E4%B8%8D%E6%8A%B5%E6%8A%97/">
+          “九·一八”：满洲、上海和不抵抗
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-23/China-s-Search-for-a-Modern-Identity-Has-Entered/">
+            前一篇：‘China’s Search for a Modern Identity Has Entered a New and Perilous Phase’
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">
+            後一篇：爱德华·萨义德及其反对者：《东方学》引发的学界战争
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2021-09-23/China-s-Search-for-a-Modern-Identity-Has-Entered/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2021-09-19/%E7%8B%84%E5%BE%B7%E7%BD%97%E4%B8%8E%E5%90%AF%E8%92%99%E6%97%B6%E4%BB%A3%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%A3%8E%E8%B2%8C-%E5%9C%A8%E6%80%9D%E6%83%B3%E5%AE%B6-%E6%96%87%E5%AD%A6%E5%AE%B6%E4%B8%8E%E6%88%8F%E5%89%A7%E5%AE%B6%E4%B9%8B%E9%97%B4/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2021-09-23/China-s-Search-for-a-Modern-Identity-Has-Entered/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<燕京书评>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2021-09-24/%E7%88%B1%E5%BE%B7%E5%8D%8E-%E8%90%A8%E4%B9%89%E5%BE%B7%E5%8F%8A%E5%85%B6%E5%8F%8D%E5%AF%B9%E8%80%85-%E4%B8%9C%E6%96%B9%E5%AD%A6-%E5%BC%95%E5%8F%91%E7%9A%84%E5%AD%A6%E7%95%8C%E6%88%98%E4%BA%89/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<燕京书评>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2021-09-19/%E7%8B%84%E5%BE%B7%E7%BD%97%E4%B8%8E%E5%90%AF%E8%92%99%E6%97%B6%E4%BB%A3%E7%9A%84%E7%B2%BE%E7%A5%9E%E9%A3%8E%E8%B2%8C-%E5%9C%A8%E6%80%9D%E6%83%B3%E5%AE%B6-%E6%96%87%E5%AD%A6%E5%AE%B6%E4%B8%8E%E6%88%8F%E5%89%A7%E5%AE%B6%E4%B9%8B%E9%97%B4/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
