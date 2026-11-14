@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？ – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？
+——
+" />
+    <meta property="og:description" content="
+哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？" />
+    <meta property="twitter:title" content="哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fhulitw.medium.com%2Fwhy-credit-card-and-miles-5ab65df648b8%3Fsource%3Drss-f1fb3e40dc37------2" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://hulitw.medium.com/why-credit-card-and-miles-5ab65df648b8?source=rss-f1fb3e40dc37------2" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://hulitw.medium.com/why-credit-card-and-miles-5ab65df648b8?source=rss-f1fb3e40dc37------2&text=哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://hulitw.medium.com/why-credit-card-and-miles-5ab65df648b8?source=rss-f1fb3e40dc37------2&title=哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hulitw.medium.com/why-credit-card-and-miles-5ab65df648b8?source=rss-f1fb3e40dc37------2&title=哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？&body=
+哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://hulitw.medium.com/why-credit-card-and-miles-5ab65df648b8?source=rss-f1fb3e40dc37------2" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://hulitw.medium.com/why-credit-card-and-miles-5ab65df648b8?source=rss-f1fb3e40dc37------2&title=哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？&caption=
+哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？&url=https://hulitw.medium.com/why-credit-card-and-miles-5ab65df648b8?source=rss-f1fb3e40dc37------2" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2024-04-09
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Huli</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#medium">
+          medium
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://hulitw.medium.com/why-credit-card-and-miles-5ab65df648b8?source=rss-f1fb3e40dc37------2" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="medium的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#medium 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1712671366000-->
+<p><a href="https://hulitw.medium.com/why-credit-card-and-miles-5ab65df648b8?source=rss-f1fb3e40dc37------2">哩程新手入門：為什麼要刷卡累積哩程？真的有比較划算嗎？</a>
+——</p>
+
+<div>
+  <p>身為一個哩程界的新手，程度大概就只到看了一些網路文章並找了資料之後，覺得可以用哩程來換商務艙機票很划算，僅此而已。就算自己目前有累積了一些哩程，其實還沒有太多開過票的經驗。</p>
+  <p>至於原因的話，就是懶吧，每一間航空公司的規則都不一樣，而且有許多東西是規則上不會寫的，例如說票放得多不多，什麼時候的票比較好換之類的，太多東西要研究，就先擱著了。</p>
+  <p>但前陣子剛好有些時間，就趁機從源頭開始想一件事情：「累積哩程真的有比較划算嗎？」，研究出來的答案是：「看狀況」，但只講這一句就跟沒講一樣，因此這篇來記錄一下，怎樣的狀況有比較划算，怎樣又沒有。</p>
+  <p>這篇適合的對象會是對哩程完全不懂的超級新手，因為我目前的程度大概也只比這個好一點。</p>
+  <h3 id="section">累積哩程的管道以及基礎知識</h3>
+  <p>想要累積航空公司的哩程，通常就兩個管道最常見：</p>
+  <ol>
+    <li>搭飛機</li>
+    <li>刷卡</li>
+  </ol>
+  <p>雖然這篇的重點在於第二個管道，但先來講一下第一個，畢竟搭飛機累積哩程本來就是最普遍的手段。</p>
+  <p>能靠著第一個管道累積大量哩程的通常都是一些商務客，需要經常出差，所以可以一直飛，一直累積。或是如果經常要飛一些長途航班，可能也會累積到還不錯的哩程，例如說三個月飛一次台灣美國之類的，也會有不少哩程。</p>
+  <p>儘管每個人搭飛機都可以辦個會員累積哩程，但是如果沒有經常飛的話，累積到的哩程真的不多。</p>
+  <p>舉個例子，從桃園機場到日本成田機場，想知道距離的話可以用這個網站算出來：<a href="http://www.gcmap.com/dist?P=TPE-NRT">http://www.gcmap.com/dist?P=TPE-NRT</a></p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*qKwXMGIHZydMIihD.png" />
+  </figure>
+  <p>距離是 1356 哩，那這樣是不是就代表可以累積 1356 的哩程呢？並不是這樣的。</p>
+  <p>累積哩程的時候要注意兩個東西，第一個是會員計劃，第二個是艙等。</p>
+  <p>先講會員計劃的部分，例如說我搭的可能是日本航空的飛機好了，但其實這趟航班的哩程，不一定只能累積在日航的會員，通常都可以累積到其他有合作的航空公司，例如說國泰航空或是阿拉斯加航空。</p>
+  <p>這個合作關係最簡單的方式通常都是看聯盟，目前有三大聯盟，規模由大到小排序如下：</p>
+  <ol>
+    <li>星空聯盟 Star Alliance</li>
+    <li>天合聯盟 Skyteam</li>
+    <li>寰宇一家 oneworld</li>
+  </ol>
+  <p>以台灣人可能比較常搭的航空公司來說，其所屬的聯盟如下：</p>
+  <ol>
+    <li>星空聯盟：長榮、全日空、聯合航空、新加坡航空</li>
+    <li>天合聯盟：華航、大韓、達美</li>
+    <li>寰宇一家：國泰、日航、美國航空、英國航空</li>
+  </ol>
+  <p>並不是每一間航空公司都有加入聯盟，例如說星宇航空目前就沒有。</p>
+  <p>聯盟之間的航空基本上都有合作關係，因此你在等待長榮的班機登機時，可能會聽到：「目前邀請星空聯盟金卡夥伴以及商務艙的旅客登機」之類的。</p>
+  <p>但其實並不是星空聯盟本身有發行一張「星空聯盟金卡」，而是星空聯盟底下每一間航空公司都有自己的會員計劃，到了某個等級之後，效力就等同於是星空聯盟的金卡。</p>
+  <p>舉例來說，底下是長榮的會員表格，分成四種等級：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*SMYG5tF-5p7AEOUw.png" />
+  </figure>
+  <p>而這四種等級中，長榮的銀卡就對應著星空聯盟的銀卡，再上去的金卡跟鑽石卡就都是金卡：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/872/0*TneMQdvicMcar8nE.png" />
+  </figure>
+  <p>所以當我拿到長榮航空的金卡以後，搭乘同個聯盟的全日空，報到時可以跟商務艙用同一個櫃檯，可以進貴賓室，行李也可以變成優先行李。</p>
+  <p>讓我們再講回累積哩程這件事情，同理，當我搭乘長榮航空的班機後，我的哩程可以累積在其他夥伴航空公司，不一定要累積在長榮。每間公司都會有不同的表格，去計算說其他航空公司來累積的話，可以累積到多少。</p>
+  <p>而這個表格裡面就會有剛剛提到的第二個變因：艙等。</p>
+  <p>這個艙等並不只是指經濟艙、商務艙那種，而是會區分得更詳細。下面這是長榮會員計劃，搭乘長榮航班的<a href="https://www.evaair.com/zh-tw/infinity-mileagelands/mileage-award-program/earning-mileage/eva-air-and-uni-air/mileage-accrual-ratio-rule/">表格</a>：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/904/0*-iPviXXHgvlk4osJ.png" />
+  </figure>
+  <p>可以看到就算是經濟艙，也分了三種類型，這是為什麼呢？</p>
+  <p>這其實就跟買機票的時候有關啦，通常買機票的時候，就算買了經濟艙，不是也有其他的票價可以選嗎？例如說再貴一點可以優先選位，更貴一點的話取消機票不用錢之類的。</p>
+  <p>更好的福利通常都伴隨著更高的價格，因此就算都是經濟艙，細節的艙等也還是不同。我們在講的艙等其實就是上表中的「訂位代碼」，例如說最底下的 S 艙只能累積 50% 的哩程，最上面的 C 艙可以累積 175%。</p>
+  <p>底下是長榮航空的購票頁面，可以清楚看到越貴的票福利越好，可以累積的哩程也越多：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/971/0*ULWNT7zFmXE6rBqX.png" />
+  </figure>
+  <p>講完了上面這些背景知識以後，終於可以來回答「台灣飛日本單程的距離是 1356 哩，那到底可以累積多少哩程」這個問題了。</p>
+  <p>如果是搭乘長榮航空最便宜的經濟艙 S 艙，那只能累積 50%，也就是 1356 * 50% = 678 哩，來回的話就是 1356 哩。若搭乘的是商務艙 J 艙，來回就是 1356 * 2 * 150% = 4068 哩。</p>
+  <p>那如果累積在其他航空公司的話，會有多少呢？這時候可以用另外一個好用的網站：<a href="https://www.wheretocredit.com/calculator#TPE-NRT-BR-J/NRT-TPE-BR-J">https://www.wheretocredit.com/calculator#TPE-NRT-BR-J/NRT-TPE-BR-J</a></p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*lKSkljCY5AzNpGZk.png" />
+  </figure>
+  <p>根據上面的資料，如果累積到中國航空的會員，會有 5672 哩，比長榮還多了 1600 多。不過哩程這東西也不一定是多就好，還需要搭配其他各種因素來看，單看哩程數量是不準的，例如說別的航空公司有可能票比較難換，或是需要的哩程比較多等等。</p>
+  <p>除此之外，許多會員計劃內的哩程是會過期的，像長榮是三年，這也是在累積哩程時需要考慮的東西。</p>
+  <h3 id="section-1">刷卡累積哩程</h3>
+  <p>剛剛把第一種管道，搭飛機累積哩程談完了，接著來談談刷卡。</p>
+  <p>通常刷卡可以累積到的哩程也有兩種，一種是直接累積，另一種是先累積成信用卡點數，再把點數轉到航空公司去，由於後者通常都可以轉多個航空公司，所以會更彈性一點。</p>
+  <p>再次以長榮為例，長榮航空的聯名卡就屬於第一種，買長榮機票的話是 10 塊錢一哩，其他一般消費就是 20 塊一哩。</p>
+  <p>而滙豐旅人卡則是第二種，以滙豐旅人無限卡來說，海外消費是 10 塊錢一點，國內消費則是 18 塊一點。而這些點數可以用 1:1 的比例轉到華航、長榮、日航等等的航空公司：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/736/0*l-tCW1yVhpn8Y_z8.png" />
+  </figure>
+  <p>有另外一種的信用卡，刷了之後是直接現金回饋的，例如說聯邦 LINE Bank 聯名卡，國內消費回饋 2%（雖然說對很多信用卡來說指定管道消費活動帶來的回饋更多，可以到 5%、10% 或更高，但這塊我不熟，就先不談了），而滙豐現金回饋御璽卡，則是國外 2.2%。</p>
+  <p>以這種沒有指定通路，只要刷了就會回饋的信用卡來說，能到 3% 就已經算很高了。不過對那些熟悉信用卡的人來說，針對各種管道拿不同的卡刷，我看應該可以到 5%、8% 甚至再更高，例如說這篇就列了一大堆優惠：<a href="https://www.ptt.cc/bbs/creditcard/M.1704126609.A.04E.html">[心得] 2024上半年用卡整理</a>。</p>
+  <p>那如果是用累積哩程的信用卡，換算下來的價值有沒有比現金回饋高呢？話又說回來，哩程的價值應該怎麼計算？</p>
+  <h3 id="section-2">哩程的價值</h3>
+  <p>哩程其實是可以交易的。</p>
+  <p>像是這篇 PTT 點數版的文章：<a href="https://www.ptt.cc/bbs/points/M.1708851533.A.194.html">[ 售 ] 長榮哩程35000</a>，賣 35000 哩程，一點 0.513，總價 18000 台幣。</p>
+  <p>這邊的交易其實也有很多種，有一種是付錢之後把哩程轉到你的帳戶，需要注意的是很多航空公司，自己的跟轉入的不能一起用，所以我原本有 5000，別人轉給我 35000，能換到的機票還是只有 35000 的，不會變成 40000。</p>
+  <p>再來有些的交易是「我直接幫你開機票」，而不是用點數轉帳的方式（有些會員系統根本沒這功能）。</p>
+  <p>總之呢，以長榮航空為例，一哩的價值大約是 0.5~0.52 左右，就算 0.5 好了。</p>
+  <p>那以剛剛講到的信用卡為例，如果 20 元一哩，就代表是 20 元回饋 0.5 元，回饋率是 2.5%，如果是 10 元一哩，那回饋率就是 5%。</p>
+  <p>聽起來好像很不錯？</p>
+  <p>不過還有很多細節要考慮，就如同剛提到的，自己的哩程跟別人轉的不能共用，所以通常都會累積到一個量才會有人買，而且並不是每個數目都有人買。</p>
+  <p>舉例來說，日航換一張單程的台灣到日本經濟艙機票，最低是 2 萬哩，因此就算你有 23000 哩，那 3000 可能也不會有人買，因為他只需要 2 萬。必須存到下一個數量，才能一起賣掉。</p>
+  <p>換句話說，哩程要賣得掉，是有一個最低門檻跟級距的。</p>
+  <p>我們先假設這個最低門檻是 20000 哩好了，如果信用卡是 20 元一哩，那就必須要刷 40 萬台幣，才能集到 20000 哩。</p>
+  <p>這就是在考慮該用現金回饋卡還是哩程卡時，可以先思考的一個角度。如果你的刷卡消費一年才 10 萬，那三年 30 萬，可以換的哩程只有 15000 哩，很可能會賣不掉，此時用現金回饋卡或許會是更好的選擇。</p>
+  <p>再者，賣哩程還要找買家，也需要承擔網路交易會有的風險，如果回饋率沒有到這麼高，那不如就別自找麻煩，無腦刷現金回饋卡就好了。</p>
+  <p>但如果你的消費滿高，一年可以刷個 3、40 萬台幣，用的卡又比較高階，是那種 10 塊錢 1 哩的，就代表一年可以累積至少 30000 點，拿去賣的話直接變成 5% 現金回饋，或許就可以考慮累積哩程。</p>
+  <p>等等，還沒結束，這還不是結論。</p>
+  <p>剛剛都只有討論「哩程交易」的情形，並沒有談到「拿哩程去換機票」這件事情，那如果拿哩程換機票，回饋率又有多少？</p>
+  <h3 id="section-3">用哩程換機票，帶來的價值有多少？</h3>
+  <p>為了之後方便計算，我先假設信用卡是 10 塊錢 1 哩的卡片（如滙豐旅人無限卡，我就是用這張而且覺得滿好用的）。</p>
+  <p>滙豐旅人無限卡可以轉點的夥伴很多，底下我用長榮跟日航當作範例。</p>
+  <p>長榮航空的話，兌換表格如下：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/1024/0*qd-sepITpCChjpSd.png" />
+  </figure>
+  <p>以台灣人最喜歡去的日本為例，兌換一張經濟艙來回機票是 35000 哩，商務艙則是 50000 哩。</p>
+  <p>飛紐約的話，經濟艙是 110000 哩，商務艙是 160000 哩。</p>
+  <p>其實從這個兌換表格就可以知道為什麼有很多人說：「哩程換商務艙比較划算」，因為用現金買機票的話，商務艙通常會是經濟艙的兩倍起跳，但哩程卻不是。</p>
+  <p>接著我們隨意來找個機票：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/319/0*cEknwNflYwAv8pCh.png" />
+  </figure>
+  <p>台灣飛東京經濟艙，來回 14400 台幣。</p>
+  <p>用 35000 哩程去換的話，等於說一哩的價值就是 14400/35000 = 0.4 台幣，比拿去交易還不划算。</p>
+  <p>那如果是商務艙呢？</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/328/0*BZb3yyRieH8XO-__.png" />
+  </figure>
+  <p>商務艙的話是 35000 台幣，一哩的價值是 35000/50000，一哩是 0.7 台幣！換算下來就是 7% 的回饋，遠大於現金卡的 3%。</p>
+  <p>不過這算法其實有個問題，那就是沒有考慮到稅金跟其他費用。一張機票的價格除了機票本身，也包含了其他各種費用，用其他更專業的網站（如 <a href="https://matrix.itasoftware.com/search">ITA</a>）來查，就可以看到細節：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/813/0*UnHw8AXC5C-Z1mGh.png" />
+  </figure>
+  <p>像這張 39748 元的票，機票本身的價格是 36500 塊，剩下的 3248 元包含：</p>
+  <ol>
+    <li>台灣機場服務費 500 元</li>
+    <li>燃油附加費（Carrier-imposed surcharge） 1899 元</li>
+    <li>日本機場服務費 637 元</li>
+    <li>日本遊客稅 212 元</li>
+  </ol>
+  <p>當你用哩程開票時，能夠避開的只有機票本身的價格，上面這些其他的是避不開的。</p>
+  <p>因此，當我們用 50000 哩去換價值 35000 的商務艙機票時，要考慮到這些額外費用，一哩的價值變成 ((35000–3248)/50000) = 0.63 元台幣。</p>
+  <p>接著我們來看長程線，台灣飛紐約：</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/323/0*JAS1zvMwnqL_D_MI.png" />
+  </figure>
+  <p>經濟艙是 56672 元。</p>
+  <figure>
+<img alt="" src="https://cdn-images-1.medium.com/max/324/0*y8kziLBkZUe37R7U.png" />
+  </figure>
+  <p>商務艙是 204791 元，哇。</p>
+  <p>其他那些稅什麼的我幫大家算好了，是 6717 元。</p>
+  <p>結合前面講的經濟艙是 110000 哩，商務艙是 160000 哩，換算的結果如下。</p>
+  <p>經濟艙一哩是 (56672–6717) / 110000 = 0.45 元，不如賣掉。</p>
+  <p>商務艙一哩是 (204791–6717) / 160000 = 1.23 元！</p>
+  <p>刷 10 塊錢一哩，一哩 1.23 元，就等於是 12.3% 的回饋了！這就是為什麼許多人喜歡用哩程來換長途商務艙，因為從這個角度來看的話，根本超級划算。</p>
+  <p>不過要注意之前講的前提，你要累積到 16 萬的哩程，得先刷到 160 萬台幣，分三年一年也要刷 50 萬，很多人可能沒辦法刷到這個金額。</p>
+  <h3 id="section-4">日航的兌換標準</h3>
+  <p>看完了長榮，我們來看看另外一間日本航空。</p>
+  <p>這邊幫大家節省時間，就不附圖了。</p>
+  <p>一樣以 5/17 ~ 5/24 桃園東京來回航班為例，現金買經濟艙是 13773 元，商務艙是 25000 元（剛好特價），用哩程兌換的話，經濟艙是 20000 哩，商務艙是 48000 哩，但稅費很可怕，是 6263 元。</p>
+  <p>經濟艙一哩是 (13773–6263) / 20000 = 0.37 元，不如賣掉。</p>
+  <p>商務艙一哩是 (25000–6263) / 48000 = 0.39 元，也不如賣掉。</p>
+  <p>不過這是因為剛好碰到商務艙在特價的緣故，因此才這麼不划算，如果是沒有特價的時候，商務艙大概要個 35000，換算下來一哩就是 0.49，跟賣掉其實也差不多，但至少比 0.39 好。</p>
+  <p>像是這種現金票在特價的時候，用哩程換就沒這麼划算。</p>
+  <p>再來一樣是看長途線，東京飛舊金山，經濟艙是 65000 元，商務艙是 16 萬，用哩程的話經濟艙「表定最低」是 5 萬哩，商務艙是 10 萬哩，而稅金是 2 萬台幣。</p>
+  <p>經濟艙一哩是 (65000–20000) / 50000 = 0.9 元。</p>
+  <p>商務艙一哩是 (160000–20000) / 100000 = 1.4 元。</p>
+  <p>看起來兩個都相當划算，一個是 9% 回饋，另一個是 14%。</p>
+  <h3 id="section-5">用哩程換機票真的這麼划算嗎？</h3>
+  <p>剛剛我們已經用長榮跟日航的現金票價以及哩程兌換的換算來驗證過了，短程商務艙可以帶來 6% 以上的回饋價值，長程更是可以帶來 10% 以上，看起來非常不錯。</p>
+  <p>不過，剛剛的換算其實建立在兩個前提之上：</p>
+  <ol>
+    <li>哩程兌換標準不變</li>
+    <li>換得到機票</li>
+  </ol>
+  <p>先講第一點，剛剛在聊日航時有特別強調「表定最低」，會這樣講是因為現在許多航空公司的哩程兌換改成浮動制，需求多的話，需要的哩程也會變多，因此實際要換的日子可能不一定是這個價格。</p>
+  <p>舉例來說，我剛查的一張 10 月的機票，一樣是日本到舊金山來回，需要的是 376000 哩加上 2 萬台幣，一哩的價值就變成 (160000–20000) / 376000 = 0.37，非常不划算。</p>
+  <p>除此之外，哩程本身也有可能貶值，意思是航空公司改了兌換表格，通常都是越改越差，需要的哩程會變得更多，此時價值就又掉下來了。</p>
+  <p>而第二點更為重要，對航空公司來說還是現金票最賺錢，所以一個航班一定是現金票佔大多數，哩程票可以兌換的位子少很多，尤其是商務艙，可能一個航班才一個或兩個位子。</p>
+  <p>意思是你不一定能換到理想中的日子的機票。</p>
+  <p>因此，哩程票的玩法就比較適合旅遊日期彈性的人，否則有可能換不到機票，那哩程就沒什麼用了。</p>
+  <p>另外，如果你願意多花一些時間研究，有可能利用轉機、中停或是外站等等的方式讓哩程票的價值更大，不知道什麼是外站的話可以參考我之前簡單寫過的：<a href="https://life.huli.tw/2022/12/28/cheap-eva-air-ticket-taipei-to-japan-116cc1d68804/">長榮外站出發日本便宜機票購買心得</a>。</p>
+  <p>最後是一個我覺得另外一個很適合用哩程票的方式，那就是買單程機票。</p>
+  <p>用哩程換機票時很簡單，來回通常就是單程 * 2，但是自己用現金買機票的時候通常都不是，很有可能來回只要 12000，但單程卻要 8000 元，這時候用哩程票就會比較划算一點。</p>
+  <h3 id="section-6">我自己用哩程換票的經驗</h3>
+  <p>我自己到目前為止只有兩次經驗而已。</p>
+  <p>第一次是 2018 年的時候從新加坡工作回台灣，在 PTT 上面徵了新航哩程，27500 哩換一張新加坡往台北的單程商務艙機票，一哩 0.4 元，花了 11000 台幣。</p>
+  <p>那時候的交易就是用前面講的開票的形式，賣哩程的人會先把帳號借你用，你自己開完票以後還他。</p>
+  <p>如果是用現金買這張票的話，我記得少說也要個兩萬以上，直接省了一半。</p>
+  <p>第二次剛好是在最近，用以前累積的阿拉斯加航空哩程換了星宇航空的台北飛日本單程商務艙，超級划算。</p>
+  <p>只要 15000 哩程加上 30 塊美金而已。</p>
+  <p>阿拉斯加航空本身大概每一兩個月會有一次哩程特賣，最低都可以拿到 40% 的加成，換算下來一哩 0.66 元，因此這張機票的取得成本大約也是 11000 台幣，現金買的話一樣至少 2 萬，賺！</p>
+  <h3 id="section-7">總結</h3>
+  <p>有一點要先讓大家知道，這篇文章的前提是：「不需要花太多心力研究的狀況下，刷卡累積哩程的價值到底是多少？」</p>
+  <p>這是什麼意思呢？</p>
+  <p>如同前面所講過的，無論是信用卡還是哩程，想要發揮最大的價值，一定都是要花許多的心力去研究。有研究跟沒研究，最後的結果可能會差到兩倍以上。</p>
+  <p>舉例來說，方才有提到現金回饋卡，不看活動跟指定管道的話，3% 就已經算滿多的了。但真的懂玩的人就會說：「欸不是，刷卡的重點本來就是那個活動」，針對各種管道刷不同的卡，登錄不同的活動，有可能光是刷這種現金回饋的卡，就已經能拿到 8% 或更高的優惠了。</p>
+  <p>而哩程卡也類似，有很多 base 在美國的人光是開卡禮什麼的就可以拿幾萬哩了，而使用哩程開出來的票，運用各種轉機、中停與外站各種規則，也可以發揮比原本更多的價值。</p>
+  <p>但我的程度還不到那邊，所以這篇是給像我這種沒做功課的人看的，先不考慮這些活動。</p>
+  <p>從文章中實際查出來的各種數字，我們可以得知：</p>
+  <ol>
+    <li>無腦刷現金回饋卡，3% 回饋就很多了</li>
+    <li>假設刷的是 10 塊錢累積一哩程的信用卡，回饋至少 5%</li>
+    <li>短程經濟艙 3% — 4%</li>
+    <li>短程商務艙 5% — 7%</li>
+    <li>長程經濟艙 5% — 10%</li>
+    <li>長程商務艙 12% — 14%</li>
+  </ol>
+  <p>就這個結論看起來，刷哩程卡是會比較划算的。</p>
+  <p>但再次強調幾個重點：</p>
+  <p>第一，哩程卡重點在於累積，你要累積到一定數字（至少 20000 哩）以上才有意義。</p>
+  <p>第二，用哩程換商務艙以價錢來說是划算的，但會不會是一種不存在的需求？</p>
+  <p>舉例來說，你搭經濟艙就可以滿足了，根本不需要搭到商務艙，所以就算回饋高，其實整體看來還是虧的，你寧願把哩程拿去賣掉，也不想換商務艙。此時哩程的價值上限大概就是 5% 了。</p>
+  <p>第三，我前面在講刷卡累積哩程時，都是用 10 塊錢一哩來舉例，但這個數字在台灣基本上已經是最好的了，以滙豐旅人為例，要辦到年費 8000 台幣的無限卡才有這個回饋比例，而且這是海外消費才有。</p>
+  <p>那如果你的資格辦不到無限卡，或是都是國內消費居多，有可能就不是這個比例，而是 20 塊錢一哩，那這樣的話剛剛寫的回饋比例全都打對折，賣哩程的回饋變成 2.5%，跟現金卡差不了多少。</p>
+  <p>總而言之呢，如果你消費夠多（一年至少 20 萬台幣），也辦得到一張哩程回饋不錯的卡，又願意花一點時間去研究該怎麼開票，行程也比較彈性，想搭商務艙，那我覺得滿適合哩程卡的。</p>
+  <p>懶得研究哩程，消費又沒這麼多的話，無腦刷現金回饋卡會更有感覺，或是把時間拿去投資在信用卡的研究，CP 值也可能會更高。</p>
+  <p>如果看完這篇想要深入研究哩程的東西，台灣的話首選應該是這個：<a href="https://www.tripplus.cc/home">https://www.tripplus.cc/home</a> ，裡面的文章跟知識多到我看不完…</p>
+  <p>也可以用哩程當作關鍵字去搜一些人多的臉書社團，裡面會有各種開票的心得分享文。</p>
+  <p>最後的最後來講講我自己，之所以會想累積哩程，最大的原因是用現金買商務艙下不了手，所以才改用哩程的方式換，會讓我覺得划算了不少。</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=5ab65df648b8" width="1" height="1" alt="" />
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#medium 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2025-02-15/%E4%B8%8D%E6%9C%83%E6%97%A5%E6%96%87%E5%8E%BB%E8%80%83-JLPT-%E6%97%A5%E6%AA%A2-N2-%E5%8F%AF%E4%BB%A5%E5%BE%97%E5%B9%BE%E5%88%86/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2014-08-27/A-Letter-to-My-Former-Family-From-a-Shelter-Cat/">最早</a>--</span>
+    
+      <li>
+        <time>2024-06-10</time>
+        <a href="https://nodebe4.github.io/oped2/2024-06-10/2024-%E5%B9%B4%E6%97%A5%E6%9C%AC%E5%AE%B6%E6%97%8F%E6%BB%AF%E5%9C%A8%E7%B0%BD%E8%AD%89%E7%94%B3%E8%AB%8B%E5%BF%83%E5%BE%97/">
+          2024 年日本家族滯在簽證申請心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-05-11</time>
+        <a href="https://nodebe4.github.io/oped2/2024-05-11/2024-%E5%B9%B4-5-%E6%9C%88%E9%A6%96%E7%88%BE%E5%9B%9B%E5%A4%A9%E4%B8%89%E5%A4%9C%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+          2024 年 5 月首爾四天三夜旅遊心得
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2024-03-03</time>
+        <a href="https://nodebe4.github.io/oped2/2024-03-03/%E6%97%A5%E6%9C%AC%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E8%96%AA%E6%B0%B4%E5%A6%82%E4%BD%95-%E5%88%B0%E5%BA%95%E5%80%BC%E4%B8%8D%E5%80%BC%E5%BE%97%E5%8E%BB/">
+          日本軟體工程師的薪水如何？到底值不值得去？
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-11-30</time>
+        <a href="https://nodebe4.github.io/oped2/2023-11-30/2023-%E6%97%A5%E6%9C%AC%E6%9D%B1%E4%BA%AC%E7%A7%9F%E6%88%BF%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/">
+          2023 日本東京租房心得分享
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2024-03-15/Time-up-for-TikTok/">
+            前一篇：Time up for TikTok?
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2024-04-19/A-New-Round-of-Restrictions-Further-Constrains-Rel/">
+            後一篇：A New Round of Restrictions Further Constrains Religious Practice in Xinjiang
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2024-03-15/Time-up-for-TikTok/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2024-04-19/A-New-Round-of-Restrictions-Further-Constrains-Rel/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2024-05-11/2024-%E5%B9%B4-5-%E6%9C%88%E9%A6%96%E7%88%BE%E5%9B%9B%E5%A4%A9%E4%B8%89%E5%A4%9C%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2024-03-03/%E6%97%A5%E6%9C%AC%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E8%96%AA%E6%B0%B4%E5%A6%82%E4%BD%95-%E5%88%B0%E5%BA%95%E5%80%BC%E4%B8%8D%E5%80%BC%E5%BE%97%E5%8E%BB/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2024-03-15/Time-up-for-TikTok/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2024-04-19/A-New-Round-of-Restrictions-Further-Constrains-Rel/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<medium>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2024-05-11/2024-%E5%B9%B4-5-%E6%9C%88%E9%A6%96%E7%88%BE%E5%9B%9B%E5%A4%A9%E4%B8%89%E5%A4%9C%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<medium>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2024-03-03/%E6%97%A5%E6%9C%AC%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E8%96%AA%E6%B0%B4%E5%A6%82%E4%BD%95-%E5%88%B0%E5%BA%95%E5%80%BC%E4%B8%8D%E5%80%BC%E5%BE%97%E5%8E%BB/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
