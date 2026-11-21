@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Does America Have an End Game on China? – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Does America Have an End Game on China?
+——
+" />
+    <meta property="og:description" content="
+Does America Have an End Game on China?
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Does America Have an End Game on China?" />
+    <meta property="twitter:title" content="Does America Have an End Game on China?" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Fviewpoint%2Fdoes-america-have-end-game-china" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/viewpoint/does-america-have-end-game-china" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/viewpoint/does-america-have-end-game-china&text=Does America Have an End Game on China?&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/viewpoint/does-america-have-end-game-china&title=Does America Have an End Game on China?" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/viewpoint/does-america-have-end-game-china&title=Does America Have an End Game on China?" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Does America Have an End Game on China?&body=
+Does America Have an End Game on China?
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/viewpoint/does-america-have-end-game-china" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/viewpoint/does-america-have-end-game-china&title=Does America Have an End Game on China?&caption=
+Does America Have an End Game on China?
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Does America Have an End Game on China?&url=https://www.chinafile.com/reporting-opinion/viewpoint/does-america-have-end-game-china" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Does America Have an End Game on China?</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-12-15
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Zack Cooper</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/viewpoint/does-america-have-end-game-china" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1702635480000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/viewpoint/does-america-have-end-game-china">Does America Have an End Game on China?</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-f1db572fa5dfa49a548416b1970093c9">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/55091_sm.jpg" title="Does America Have an End Game on China?" class="colorbox" data-colorbox-gallery="gallery-node-55091-Lq-2JPmRigY" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/55091_sm.jpg?itok=XfirNSuN" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Saul Loeb—AFP/Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Chinese leader Xi Jinping (left) and U.S. President Joe Biden met on the sidelines of the G20 Summit in Nusa Dua, Bali, Indonesia, November 14, 2022.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">This fall, U.S. National Security Advisor Jake Sullivan <a href="https://www.foreignaffairs.com/united-states/sources-american-power-biden-jake-sullivan?check_logged_in=1" target="_blank" rel="nofollow">noted</a> that the Biden administration is “often asked about the end state of U.S. competition with China.” He argued that “we do not expect a transformative end state like the one that resulted from the collapse of the Soviet Union.” Instead, the Biden administration has <a href="https://www.state.gov/the-administrations-approach-to-the-peoples-republic-of-china/" target="_blank" rel="nofollow">identified</a> three lines of effort in U.S. relations with China: investing, aligning, and competing. Investing comprises domestic initiatives in the United States while aligning involves cooperation with allies and partners. Thus, the only portion of the Biden administration’s China strategy that explicitly centers on China is competition. Yet, competition does not amount to an objective in itself, but rather a description of current circumstances. As White House Coordinator for the Indo-Pacific Kurt Campbell has <a href="https://americas.chathamhouse.org/article/the-changing-china-debate/" target="_blank" rel="nofollow">warned</a>, “competition is not itself a strategy.” Indeed, before taking office, Campbell and Sullivan <a href="https://www.foreignaffairs.com/articles/china/competition-with-china-without-catastrophe" target="_blank" rel="nofollow">argued</a> that an approach centered on strategic competition “reflects uncertainty about what that competition is over and what it means to win.” So the question remains: What is America’s vision of success?</p>
+      <h3 id="the-allure-of-steady-states">The Allure of Steady States</h3>
+      <p class="dropcap">In introducing his 2022 National Security Strategy, President Joe Biden <a href="https://www.whitehouse.gov/wp-content/uploads/2022/10/Biden-Harris-Administrations-National-Security-Strategy-10.2022.pdf" target="_blank" rel="nofollow">promised</a> to “win the competition for the 21st century.” But what winning means remains unclear. Indeed, senior officials within the Biden administration reject the notion that the United States should aim for a specific “end state”—which usually describes a situation following the completion of an objective—when it comes to China. Instead, Kurt Campbell and Jake Sullivan have advocated that the United States “seek to achieve not a definitive end state akin to the Cold War’s ultimate conclusion but a steady state of clear-eyed coexistence on terms favorable to U.S. interests and values.” They reject end states in favor of “accepting competition as a condition to be managed rather than a problem to be solved.”</p>
+      <p>There are three strong arguments against identifying an end state for U.S. strategy on China. First, “solving” the “<a href="https://wwnorton.com/books/The-China-Challenge/" target="_blank" rel="nofollow">China challenge</a>” is a misnomer since even a change of governance in Beijing would bring about new challenges. If the Chinese people choose to make fundamental changes to their country’s political structures tomorrow, tensions over Taiwan and U.S. regional presence would no doubt remain. Political science research even <a href="https://www.jstor.org/stable/20047125" target="_blank" rel="nofollow">suggests</a> that a democratizing China could worsen tensions with the United States. As a result, some experts have endorsed the Biden administration’s focus on steady states, with Center for a New American Security CEO Richard Fontaine <a href="https://www.foreignaffairs.com/articles/united-states/2021-02-08/case-against-foreign-policy-solutionism" target="_blank" rel="nofollow">affirming</a> that Washington “should manage global problems, not try to solve them.”</p>
+      <p>Second, bureaucratic disagreements could stymie efforts to select an ideal end state. Although there is growing concern about China in Washington, there remains little consensus on the strategy that U.S. policymakers should adopt. A debate about end states might therefore prove divisive since no single end state is likely to appeal to all stakeholders. Even within the Biden administration, it could be difficult to get democracy and human rights advocates on the same page with environmentalists and economists. Getting Congress on board would be another matter altogether. As a result, it might not be possible bureaucratically to agree on an end state.</p>
+      <p>Third, even if U.S. leaders could agree on what they ultimately want, doing so might alienate allies and partners. For example, if the United States sought to accelerate the collapse of the Communist Party, few if any U.S. allies and partners would be comfortable with that objective. Conversely, returning to a “new type of great power relations” would leave <a href="https://www.foreignaffairs.com/china/not-so-empty-talk" target="_blank" rel="nofollow">many worried</a> about a great power condominium. Forcing a discussion on end states might thus weaken rather than strengthen the very coalitions that the United States needs to address the challenges that China poses.</p>
+      <h3 id="the-necessity-of-end-states">The Necessity of End States</h3>
+      <p class="dropcap">It is entirely reasonable, therefore, that Kurt Campbell has <a href="https://americas.chathamhouse.org/article/the-changing-china-debate/" target="_blank" rel="nofollow">urged</a> turning “the focus from end states to steady states.” Indeed, many in Washington agree that it might be wiser to sidestep the end states discussion, at least for the time being. The question is whether this approach is sustainable. Can policymakers build a lasting China strategy without an end goal in mind? Will the American people and friends abroad support a strategy predicated on an ongoing competition with no ultimate objective? In short, is managed competition a description of the current situation, or is it an actual strategy?</p>
+      <p>Advocates of identifying an end state counter their critics with three arguments of their own. First, without a clear objective, it is difficult to assess the success or failure of America’s current strategy. The Biden team sometimes says it is aiming for managed competition with China. But this simply implies competition without conflict, which already exists today. Strategy usually requires identifying an objective and then marshaling resources and plans to accomplish that goal. If the objective is simply maintaining the status quo of competition without conflict, then so long as deterrence holds, the administration’s strategy is working. This makes it nearly impossible to assess or measure progress, since the objective is already being accomplished.</p>
+      <p>Second, without a clear aim it is difficult to explain how the United States should make difficult strategic choices on everything from economic de-risking to deterrence posture to diplomatic engagement. Building political support for costly policies within the United States and among allies and partners requires a clear logic, which demands more than a hazy concept of competition. The vagueness of managed competition can justify almost any policy, from tough export controls and investment restrictions to deep dialogue with Beijing. Identifying an ultimate objective would help policymakers determine how to assess trade-offs strategically.</p>
+      <p>Third, the Biden team has been effective at describing what it does <em>not</em> want with China, but ineffective at describing what it <em>does</em> want. For example, Chinese media <a href="https://www.voanews.com/a/did-biden-make-a-series-of-promises-to-xi-/7155858.html" target="_blank" rel="nofollow">asserts</a> that U.S. leaders committed privately to “four no’s and one no-intention” during last year’s Xi-Biden meeting in Bali, Indonesia. Regardless of the veracity of these claims, senior U.S. leaders have made a wide variety of statements asserting that they:</p>
+      <ul>
+        <li>“<a href="https://www.politico.com/news/2023/09/10/biden-china-g20-00114892" target="_blank" rel="nofollow">don’t want to contain China</a>”</li>
+        <li>“<a href="https://www.washingtonpost.com/politics/2021/09/21/biden-china-we-do-not-want-new-cold-war/" target="_blank" rel="nofollow">are not seeking a new Cold War</a>”</li>
+        <li>“<a href="https://home.treasury.gov/news/press-releases/jy1603" target="_blank" rel="nofollow">do not see the relationship . . . through the frame of great power conflict</a>”</li>
+        <li>“<a href="https://www.politico.com/news/2022/05/26/blinken-biden-china-policy-speech-00035385" target="_blank" rel="nofollow">don’t seek to block China from its role as a major power</a>”</li>
+        <li>“<a href="https://www.state.gov/the-administrations-approach-to-the-peoples-republic-of-china/" target="_blank" rel="nofollow">don’t seek to block China . . . from growing [its] economy</a>”</li>
+        <li>“<a href="https://home.treasury.gov/news/press-releases/jy1603" target="_blank" rel="nofollow">[are] not seeking to decouple from China</a>”</li>
+        <li>“<a href="https://www.state.gov/the-administrations-approach-to-the-peoples-republic-of-china/" target="_blank" rel="nofollow">do not seek to transform China’s political system</a>”</li>
+        <li>“<a href="https://www.whitehouse.gov/wp-content/uploads/2022/10/Biden-Harris-Administrations-National-Security-Strategy-10.2022.pdf" target="_blank" rel="nofollow">do not support Taiwan independence</a>”</li>
+        <li>“<a href="https://www.aa.com.tr/en/americas/us-rejects-china-call-out-says-no-desire-to-change-status-quo/2839641" target="_blank" rel="nofollow">don’t want to see the status quo across that strait changed unilaterally</a>”</li>
+        <li>“<a href="https://www.whitehouse.gov/briefing-room/speeches-remarks/2023/04/27/remarks-by-national-security-advisor-jake-sullivan-on-renewing-american-economic-leadership-at-the-brookings-institution/" target="_blank" rel="nofollow">are not looking for confrontation or conflict</a>”</li>
+      </ul>
+      <p>These statements lay out what Washington does <em>not</em> want, without presenting a positive vision. This is one reason that Chinese observers are so skeptical of American assurances—many seem to be substanceless platitudes at odds with American actions. Although the <a href="https://www.whitehouse.gov/wp-content/uploads/2022/10/Biden-Harris-Administrations-National-Security-Strategy-10.2022.pdf" target="_blank" rel="nofollow">National Security Strategy</a> and <a href="https://www.whitehouse.gov/wp-content/uploads/2022/02/U.S.-Indo-Pacific-Strategy.pdf" target="_blank" rel="nofollow">Indo-Pacific Strategy</a> articulate some positive goals such as “strengthening democratic institutions, the rule of law, and accountable democratic governance,” these documents say surprisingly little about U.S. objectives vis-à-vis China. This leaves many American citizens, members of Congress, and foreign policymakers unsure about whether Washington actually has a vision for what managed competition entails. For all these reasons, it would be beneficial for the United States to identify an ultimate objective of its China policy.</p>
+      <h3 id="the-impracticality-of-a-unifying-objective">The Impracticality of a Unifying Objective</h3>
+      <p class="dropcap">A primary reason the Biden team has rejected end states appears to be that no single end state is simultaneously realistic and acceptable to two key audiences: the American public and policymakers in ally and partner countries. Administration leaders <a href="https://americas.chathamhouse.org/article/the-changing-china-debate/" target="_blank" rel="nofollow">insist</a> “neither collapse nor condominium are tenable end-states” and note that each suffers from fatal flaws.</p>
+      <p>The goal of bringing about the collapse of the Communist Party has some notable champions. When he was Secretary of State, Mike Pompeo <a href="https://sv.usembassy.gov/secretary-michael-r-pompeo-remarks-at-the-richard-nixon-presidential-library-and-museum-communist-china-and-the-free-worlds-future/" target="_blank" rel="nofollow">suggested</a> that “we, the freedom-loving nations of the world, must induce China to change.” Others have <a href="https://www.atlanticcouncil.org/content-series/atlantic-council-strategy-paper-series/the-longer-telegram/#conclusion" target="_blank" rel="nofollow">insisted</a> that Washington should aim for Xi Jinping to be “replaced by a more moderate party leadership” and for the Chinese people to “challenge the Communist Party’s century-long proposition that China’s ancient civilization is forever destined to an authoritarian future.” Many Americans are tempted by these arguments. After all, the United States brought about its opponents’ downfall in two World Wars and then waited out the Soviet Union during the Cold War. Why should the United States not do so again?</p>
+      <p>Explicitly attempting to bring about the end of the Communist Party, however, poses numerous problems. Washington has few levers to alter China’s domestic governance model. Worse still, making such an objective explicit could actually <a href="https://global.oup.com/academic/product/hostile-forces-9780197643204?cc=gb&amp;lang=en" target="_blank" rel="nofollow">strengthen</a> the Communist Party’s hold on power. And a public U.S. goal of forcible regime change would be opposed by most, if not all, U.S. allies and partners. Finally, attempting to remove the Communist Party from power would usher in a zero-sum struggle, which could lead to a heightened risk of conflict. For all these reasons, the Trump White House <a href="https://trumpwhitehouse.archives.gov/wp-content/uploads/2020/05/U.S.-Strategic-Approach-to-The-Peoples-Republic-of-China-Report-5.24v1.pdf" target="_blank" rel="nofollow">asserted</a> that its approach was “not premised on an attempt to change the PRC’s domestic governance model.” The Biden team has done the same, with Jake Sullivan <a href="https://transcripts.cnn.com/show/fzgps/date/2021-11-07/segment/01" target="_blank" rel="nofollow">noting</a> the U.S. goal “is not to bring about some fundamental transformation of China itself.”</p>
+      <p>The other end state rejected by the Biden team is creation of what they have called a great power condominium—essentially, an agreement by Beijing and Washington to share global leadership. The basic logic of those who favor such a condominium is analogous to the common understanding of the “responsible stakeholder” concept promoted by Robert Zoellick almost 20 years ago when he was Deputy Secretary of State. He <a href="https://2001-2009.state.gov/s/d/former/zoellick/rem/53682.htm" target="_blank" rel="nofollow">suggested</a> efforts “to encourage China to become a responsible stakeholder in the international system. . . [to] work with us to sustain the international system that has enabled its success.” Along similar lines, Michael Swaine, Jessica Lee, and Rachel Esplin Odell have more recently <a href="https://quincyinst.org/2021/01/11/toward-an-inclusive-balanced-regional-order-a-new-u-s-strategy-in-east-asia/" target="_blank" rel="nofollow">advocated</a> “ultimately integrating Beijing into inclusive economic and cooperative security mechanisms.”</p>
+      <p>Unfortunately, this end state is hard to imagine today. Julia Bowie has <a href="https://nationalinterest.org/blog/the-buzz/china-responsible-stakeholder-16131" target="_blank" rel="nofollow">described</a> the responsible stakeholder theory as resting on “the expectation that China would become a status quo power.” Indeed, Zoellick had <a href="https://2001-2009.state.gov/s/d/former/zoellick/rem/53682.htm" target="_blank" rel="nofollow">asserted</a>, “China does not believe that its future depends on overturning the fundamental order of the international system.” But now even the European Commission has publicly <a href="https://commission.europa.eu/system/files/2019-03/communication-eu-china-a-strategic-outlook.pdf" target="_blank" rel="nofollow">described</a> China as a “systemic rival promoting alternative models of governance.” Beijing’s coercive actions against Japan, India, South Korea, the Philippines, Australia, Lithuania, Canada, Norway, and others have driven a global reassessment of China’s behavior. Over 70 percent of respondents in a July <a href="https://www.pewresearch.org/global/2023/07/27/chinas-approach-to-foreign-policy-gets-largely-negative-reviews-in-24-country-survey/" target="_blank" rel="nofollow">Pew poll</a> said that China does not contribute to peace and stability nor take into account the interests of countries like theirs. As a result, it is difficult to imagine a successful effort at engagement without some fundamental changes occurring in Beijing. The “<a href="https://www.bloomberg.com/news/newsletters/2021-05-28/next-china-the-era-of-engagement-is-over" target="_blank" rel="nofollow">era of engagement</a>” appears to be over, at least for now.</p>
+      <p>So neither collapse nor condominium appears to be a practical end state around which to build consensus. They have something else in common: neither seems possible under Xi Jinping. Another concerted American <a href="https://www.brookings.edu/articles/obama-and-xi-at-sunnylands-a-good-start/" target="_blank" rel="nofollow">attempt at engagement</a> appears unlikely to shift Xi’s worldview, including his <a href="https://www.nytimes.com/2023/03/07/world/asia/china-us-xi-jinping.html" target="_blank" rel="nofollow">assessment</a> that “Western countries led by the United States have implemented all-around containment, encirclement and suppression of China.” Even if American leaders could change Xi’s views of the bilateral relationship, there is no political appetite on either side of the aisle in Washington to test this proposition. U.S. officials from both parties appear to concur with Orville Schell, who has <a href="https://www.project-syndicate.org/onpoint/xi-jinping-china-tragedy-by-orville-schell-and-irena-grudzinska-gross-2023-03" target="_blank" rel="nofollow">argued</a> that it was “Xi’s aggressiveness that put a stake through the heart of ‘engagement’ as a viable US or Western policy.”</p>
+      <p>To say that engagement is now implausible as a strategy is not to imply that diplomatic meetings with Chinese leaders are unwise. The Communist Party is so opaque that American leaders are likely to learn more from their Chinese counterparts than vice versa. Yet, the objective of this diplomacy must change, even if its value remains. Leaders in Beijing and Washington now describe their aims in bilateral dialogues not as seeking to “improve” the relationship but rather to “<a href="https://www.chinadaily.com.cn/a/202311/18/WS655826e0a31090682a5eee5a.html" target="_blank" rel="nofollow">stabilize</a>” it. This is a much more limited objective predicated on continued competition, rather than an outright improvement in the relationship. In short, few on either side expect that these engagements will lead to any major change in behavior.</p>
+      <h3 id="the-need-for-phased-objectives">The Need for Phased Objectives</h3>
+      <p class="dropcap">If end states are unattainable in the near-term and steady states are unsatisfying in the long-term, does that doom efforts to embrace a well-defined objective for America’s strategy on China? No. There is a third way: a phased approach. The United States could endeavor to maintain a stable steady state in the near-term while awaiting more fundamental change in China in the long-term. Doing so does not require American leaders to choose either collapse or condominium, but rather leaves the door open for either, depending on the choices of the Chinese people. If the United States is going to articulate an end state, this phased approach is the only approach likely to win support in both Washington and key allied capitals.</p>
+      <p>In the short-term, the Biden administration is right that America’s aim should be to establish a more durable steady state. Many of the administration’s actions have put the United States on a sounder path, particularly efforts to bolster cooperation with U.S. allies and partners while investing in the sources of American strength. Central to these initiatives will be reinforcing deterrence through adjustments to U.S. and allied military capabilities, posture, and planning. Unfortunately, efforts to make measurable progress with China on crisis management mechanisms have been slow going. Nonetheless, the Biden administration is right to try—and be seen trying—to push China to reduce the risk of conflict.</p>
+      <p>In the long-term, the United States should be clear that it is awaiting substantial changes in China’s behavior or governance. This is not a strategy of forceful regime change, but rather patience until the Chinese people themselves bring about a fundamental transformation in Beijing. Until then, the best Washington can hope for is to manage a risky competition and hope it does not spiral out of control. The Xi Jinping era will continue to be difficult and dangerous, so ultimately the American public and friends abroad should want a more durable end state. If this “patient but firm” approach sounds familiar, it is for good reason—it echoes U.S. strategy in the Cold War. Just as George Kennan <a href="https://www.digitalhistory.uh.edu/disp_textbook.cfm?smtID=3&amp;psid=3629" target="_blank" rel="nofollow">foresaw</a> the “break-up or the gradual mellowing of Soviet power,” Washington should hope for the mellowing or break-up of Chinese power. Then as now, waiting for regime failure should not be equated with forcible regime change.</p>
+      <p>Raising parallels with American strategy in the Cold War is not to suggest that the challenges posed by Beijing today are the same as Moscow’s decades ago. China bears little resemblance to the Soviet Union. Beijing boasts a far larger and more globally integrated economy than Moscow ever had. Yet, the Chinese Communist Party’s governance model is less attractive internationally than the Soviet system was in the early Cold War. Beijing’s political appeal lags far beyond that of the Soviets, who benefited from the communist bloc of aligned sympathizers worldwide. To date, Xi Jinping has also been less willing to use force at scale abroad than Soviet leaders, although U.S. policymakers must be wary because Beijing’s behavior could change over time. Thus, China is far more economically engaged abroad than the Soviet Union was, but is also less threatening ideologically. Containment is therefore inapplicable; Washington should not challenge Beijing abroad in the same way that it confronted Soviet influence globally, particularly given China’s current economic headwinds.</p>
+      <p>It is ironic that American strategists have spent much of the last few years playing the “<a href="https://www.wilsoncenter.org/sites/default/files/media/uploads/documents/Goldgeir%20Kennan%20Legacy%20Chapter.pdf" target="_blank" rel="nofollow">Kennan sweepstakes</a>” by trying to develop a phrase akin to <a href="https://foreignpolicy.com/2021/01/15/containment-russia-china-kennan-today/" target="_blank" rel="nofollow">containment</a> that might guide American strategy. A better strategy is simply to adopt Kennan’s own phased approach: patience and firmness today while awaiting the mellowing or break-up of the Communist Party tomorrow. This is no panacea. It will have critics in Washington, Beijing, and beyond. But combining these two concepts is not as radical as it might seem. Indeed, Robert Zoellick ended his responsible stakeholder speech by insisting that “We can cooperate with the emerging China of today, even as we work for the democratic China of tomorrow.”</p>
+      <p>The Biden team has done an able job executing the first phase of an enduring American strategy on China. In fact, the early portion of the phased strategy recommended here might look almost identical to the Biden administration’s approach. Where a two-phased strategy would differ is in the long term. The indefinite maintenance of an inherently risky and increasingly tense competition should not be the ultimate objective of American strategy. As the time nears to hand off the baton to a second Biden administration or a new Republican team, U.S. leaders should be discussing end states. Effective strategies require clear objectives, so it is time to go back to the future and embrace a phased approach.<span class="cube"></span></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2023-12-20</time>
+        <a href="https://nodebe4.github.io/oped2/2023-12-20/Hong-Kong-Finds-Its-Voice-at-the-UN-And-Uses-It-to/">
+          Hong Kong Finds Its Voice at the UN—And Uses It to Cheerlead for Beijing
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-12-20</time>
+        <a href="https://nodebe4.github.io/oped2/2023-12-20/Debating-Whether-China-Is-Getting-Stronger-or-Weak/">
+          Debating Whether China Is Getting Stronger or Weaker Won’t Make U.S. Policy More Sound
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-12-12</time>
+        <a href="https://nodebe4.github.io/oped2/2023-12-12/No-One-Is-Talking-About-the-Plight-of-Uyghurs-with/">
+          No One Is Talking About the Plight of Uyghurs with Disabilities in Detention. The World Owes Them More.
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-12-07</time>
+        <a href="https://nodebe4.github.io/oped2/2023-12-07/China-s-Vision-for-World-Order/">
+          China’s Vision for World Order
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-12-12/No-One-Is-Talking-About-the-Plight-of-Uyghurs-with/">
+            前一篇：No One Is Talking About the Plight of Uyghurs with Disabilities in Detention. The World Owes Them More.
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-12-20/Debating-Whether-China-Is-Getting-Stronger-or-Weak/">
+            後一篇：Debating Whether China Is Getting Stronger or Weaker Won’t Make U.S. Policy More Sound
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-12-12/No-One-Is-Talking-About-the-Plight-of-Uyghurs-with/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-12-20/Debating-Whether-China-Is-Getting-Stronger-or-Weak/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-12-20/Debating-Whether-China-Is-Getting-Stronger-or-Weak/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-12-12/No-One-Is-Talking-About-the-Plight-of-Uyghurs-with/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-12-12/No-One-Is-Talking-About-the-Plight-of-Uyghurs-with/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-12-20/Debating-Whether-China-Is-Getting-Stronger-or-Weak/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-12-20/Debating-Whether-China-Is-Getting-Stronger-or-Weak/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-12-12/No-One-Is-Talking-About-the-Plight-of-Uyghurs-with/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

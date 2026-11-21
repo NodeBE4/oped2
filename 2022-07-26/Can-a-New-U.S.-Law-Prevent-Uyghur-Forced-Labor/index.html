@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Can a New U.S. Law Prevent Uyghur Forced Labor? – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+Can a New U.S. Law Prevent Uyghur Forced Labor?
+——
+" />
+    <meta property="og:description" content="
+Can a New U.S. Law Prevent Uyghur Forced Labor?
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="Can a New U.S. Law Prevent Uyghur Forced Labor?" />
+    <meta property="twitter:title" content="Can a New U.S. Law Prevent Uyghur Forced Labor?" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Fconversation%2Fcan-new-us-law-prevent-uyghur-forced-labor" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/conversation/can-new-us-law-prevent-uyghur-forced-labor" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/conversation/can-new-us-law-prevent-uyghur-forced-labor&text=Can a New U.S. Law Prevent Uyghur Forced Labor?&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/conversation/can-new-us-law-prevent-uyghur-forced-labor&title=Can a New U.S. Law Prevent Uyghur Forced Labor?" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/conversation/can-new-us-law-prevent-uyghur-forced-labor&title=Can a New U.S. Law Prevent Uyghur Forced Labor?" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=Can a New U.S. Law Prevent Uyghur Forced Labor?&body=
+Can a New U.S. Law Prevent Uyghur Forced Labor?
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/conversation/can-new-us-law-prevent-uyghur-forced-labor" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/conversation/can-new-us-law-prevent-uyghur-forced-labor&title=Can a New U.S. Law Prevent Uyghur Forced Labor?&caption=
+Can a New U.S. Law Prevent Uyghur Forced Labor?
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=Can a New U.S. Law Prevent Uyghur Forced Labor?&url=https://www.chinafile.com/conversation/can-new-us-law-prevent-uyghur-forced-labor" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>Can a New U.S. Law Prevent Uyghur Forced Labor?</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2022-07-26
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: John Foote, Darren Byler &#38; more</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/conversation/can-new-us-law-prevent-uyghur-forced-labor" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1658853900000-->
+<p><a href="https://www.chinafile.com/conversation/can-new-us-law-prevent-uyghur-forced-labor">Can a New U.S. Law Prevent Uyghur Forced Labor?</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-4054bd1d7958e910c1ce4170ecc90949">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54106_sm.jpg" title="Can a New U.S. Law Prevent Uyghur Forced Labor?" class="colorbox" data-colorbox-gallery="gallery-node-54106-VaQ3aQ8SDH8" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54106_sm.jpg?itok=7kJGLH-C" width="1500" height="999" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+(TPG/Getty Images)
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Seeds are sown on a cotton field in Shuanghe, Xinjiang, April 26, 2021.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">Last month, the U.S. <a href="https://www.state.gov/implementation-of-the-uyghur-forced-labor-prevention-act/" target="_blank" rel="nofollow">began enforcement</a> of the Uyghur Forced Labor Prevention Act. Signed into law late last year, the UFLPA bans imports of goods made in Xinjiang unless the importer can <a href="https://www.congress.gov/117/plaws/publ78/PLAW-117publ78.pdf" target="_blank" rel="nofollow">offer</a> “clear and convincing evidence” that no forced labor was used in their production. A <a href="https://www.dhs.gov/sites/default/files/2022-06/22_0617_fletf_uflpa-strategy.pdf" target="_blank" rel="nofollow">prevention strategy</a> developed by the Department of Homeland Security focuses on four “high-priority” sectors: apparel, cotton, silica-based products, and tomatoes—products that campaigners <a href="https://enduyghurforcedlabour.org/about/" target="_blank" rel="nofollow">say</a> pose a high risk of being produced with forced labor. Advocates have roundly welcomed the law, but argue that one American law on its own is unlikely to cut into forced labor. The Coalition to End Forced Labour in the Uyghur Region fears companies can <a href="https://enduyghurforcedlabour.org/coalition-statements-releases/global-coalition-calls-on-companies-not-to-dump-forced-labour-made-goods-in-non-us-markets/" target="_blank" rel="nofollow">simply dump</a> “tainted” goods in Europe or other markets that lack stringent rules. Another concern is economic: The U.S. <a href="https://static1.squarespace.com/static/566ef8b4d8af107232d5358a/t/62840717c1a8343a3a2c894c/1652819757766/Everybody%27s+Business.pdf" target="_blank" rel="nofollow">imports</a> around U.S.$300 million from the Xinjiang Uyghur Autonomous Region, making it only the region’s eighth largest partner. Are the law’s investigative mechanisms sufficient to root out forced labor? What is the ultimate goal of such a law, and how might its efficacy be measured? —<em>The Editors</em></p>
+    </div>
+  </div>
+  <div id="comments" class="comment-wrapper">
+    <h2 class="title" id="comments">Comments</h2>
+ <a id="comment-9906" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/john-foote"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/john_foote.jpg?itok=WDGv6PdF" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="john-foote"><a href="https://www.chinafile.com/contributors/john-foote" title="John Foote">John Foote</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The idea of using a trade law as a tool to end supply chain links to forced labor is new, both as a matter of trade policy, and within the <a href="https://forcedlabortrade.substack.com/p/57737205" target="_blank" rel="nofollow">pantheon of sustainability laws</a> that aim to end practices such as forced labor and modern slavery.</p>
+        <p>While the U.S. has had a law since 1930 <a href="https://uscode.house.gov/view.xhtml?req=(title:19%20section:1307%20edition:prelim)%20OR%20(granuleid:USC-prelim-title19-section1307)&amp;f=treesort&amp;edition=prelim&amp;num=0&amp;jumpTo=true" target="_blank" rel="nofollow">banning the importation</a> of goods made wholly or in part with forced labor (<a href="https://crsreports.congress.gov/product/pdf/IF/IF11360" target="_blank" rel="nofollow">Section 307</a> of the Tariff Act of 1930), the law was not meaningfully enforced until it was <a href="https://www.congress.gov/114/plaws/publ125/PLAW-114publ125.pdf" target="_blank" rel="nofollow">amended in 2016</a> to close a longstanding loophole. Since 2016, the United States has been pioneering the use of the forced labor import ban to end supply chain links to forced labor, and by extension, to end the practice of forced labor itself. The Uyghur Forced Labor Prevention Act (UFLPA) is an augmentation of Section 307, establishing a presumption that all goods produced wholly or in part in Xinjiang, or by an entity listed by the U.S. government as participating in a social program of concern targeting Uyghurs and other minorities, is subject to the forced labor import ban (Section 307) and is therefore prohibited entry into the United States.</p>
+        <p>No U.S. legislative tool is capable of eradicating forced labor or modern slavery globally. Every country is limited in its capacity to legislate over conduct beyond its borders. But a forced labor import ban holds the unique possibility of extraterritorial impact.</p>
+        <p>Laws regulating import trade establish the conditions of market access. In order for goods produced outside the United States to be eligible for sale in the U.S. market, such goods must be produced in a manner consistent with U.S. law. Compliance with those laws is strictly voluntary, but so is the act of selling into the U.S. market. Therein lies the power and promise of a forced labor import ban. A law that prohibits the importation of goods that were produced with forced labor at any point in the supply chain serves to bring the labor conditions of that entire supply chain within the scope of a border-enforced law.</p>
+        <p>Beijing <a href="https://www.fmprc.gov.cn/ce/ceun/eng/hyyfy/t1916044.htm" target="_blank" rel="nofollow">asserts</a> that its policies in Xinjiang are “internal affairs” that do not warrant foreign interference (and in any event defends the policies as “<a href="https://www.nytimes.com/2020/09/26/world/asia/xi-jinping-china-xinjiang.html" target="_blank" rel="nofollow">totally correct</a>”). Nevertheless, the act of producing materials and goods for sale into streams of commerce destined for international markets is a necessarily international affair, by virtue of the eventual downstream cross-border activity. If the laws of a destination market prescribe labeling requirements, product safety rules, hazardous materials restrictions, or other product-specific rules, such rules must be respected throughout the supply chain. So too with a forced labor import ban.</p>
+        <p>The problem with the U.S. forced labor import ban is that it was not purpose-built for the reality of global supply chains in the mid-21st century. Section 307 is a relic of the infamous <a href="https://www.britannica.com/topic/Smoot-Hawley-Tariff-Act" target="_blank" rel="nofollow">Smoot-Hawley Tariff Act</a>. Unlike many other provisions in that seminal legislation, Section 307 has never been substantially evolved. To be more effective, it <a href="https://www.lawfareblog.com/can-us-end-supply-chain-links-forced-uighur-labor" target="_blank" rel="nofollow">needs to be</a> further developed. The UFLPA answers <a href="https://forcedlabortrade.substack.com/p/64093994" target="_blank" rel="nofollow">several important questions</a> related to forced labor trade enforcement, but not all of them. Additionally, even if the UFLPA and Section 307 were finely tuned and fully optimized, other consumer market jurisdictions would need to enact similar legislation in order to have the maximum impact on the underlying practices. Without a doubt, Europe, Australia, Canada, and other global markets will be watching whether the UFLPA is fair and effective as they consider whether a similar approach is merited.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9911" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/darren-byler"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/byler_sm_0.png?itok=hpyXtyqw" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="darren-byler"><a href="https://www.chinafile.com/contributors/darren-byler" title="Darren Byler">Darren Byler</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">It’s important to consider the intent of this law. The moral imperative to place human dignity and autonomy above economic gain should compel citizens and governments to end their complicity in forced labor. Whether or not this is effective in changing Chinese government behavior ought to be a secondary consideration.</p>
+        <p>Unlike sanctions that prohibit otherwise innocuous commerce with bad actors such as Iran or North Korea, the commerce banned by the Uyghur Forced Labor Prevention Act (UFLPA) is itself morally abhorrent. It is also <a href="https://press-files.anu.edu.au/downloads/press/n9354/pdf/ch12.pdf" target="_blank" rel="nofollow">mandated</a> by the Chinese state in a systematic attempt to perpetrate an atrocity toward a colonized minority. As with other instances of forced labor in places like Bangladesh or India, what occurs in the Xinjiang Uyghur Autonomous Region is morally abhorrent in itself. But because the forced labor is mandated by China’s government as opposed to an underground economy created by private employers or human traffickers, <a href="https://www.shu.ac.uk/helena-kennedy-centre-international-justice/research-and-projects/all-projects/laundered-cotton" target="_blank" rel="nofollow">the scale of its effect</a> on the global supply chain is much higher and thus requires a systematic response.</p>
+        <p>The tracking and enforcement of bans on Xinjiang products made with unfree, assigned, and otherwise forced labor is in some ways just beginning. In their forthcoming work, Laura Murphy and her team of researchers are compiling a list of more than 50,000 companies in Xinjiang. Other researchers have <a href="https://jww.org/site/uyghur-china-forced-labor-database/" target="_blank" rel="nofollow">identified</a> more than 600 companies around the world that are complicit in the system.</p>
+        <p>So far, the U.S. government has leaned on the exceptional work of these researchers, and on reports by investigative journalists, to make determinations of company involvement. Now, for the first time, U.S. Customs is taking the lead. This more formal, state-led effort will likely carry more legal weight with partner countries who are unsure of how to enforce their own laws regarding forced labor.</p>
+        <p>Will this be effective in ending Uyghur forced labor? Probably not in itself, even if expanded to a broader coalition. Chinese actors have already begun to apply at least three strategies to counter the effectiveness of that potential coalition.</p>
+        <p>First, many Chinese actors based outside of Xinjiang have begun to <a href="https://www.shu.ac.uk/helena-kennedy-centre-international-justice/research-and-projects/all-projects/laundered-cotton" target="_blank" rel="nofollow">obfuscate their role</a> in the Xinjiang supply chain through the use of shell companies, blocking access to facilities, and hiding records.</p>
+        <p>Second, many of the targeted companies are <a href="https://www.business-humanrights.org/en/latest-news/china-hugo-boss-and-asics-say-they-would-continue-to-source-cotton-from-xinjiang/" target="_blank" rel="nofollow">redirecting</a> their products toward the Chinese domestic market.</p>
+        <p>Third, my current research shows that large companies <a href="https://archive.ph/pJtdG" target="_blank" rel="nofollow">involved</a> in Uyghur forced labor, such as the Hongdou Group, have facilities outside of China in places like <a href="https://www.caixinglobal.com/2017-05-12/sino-cambodian-factory-zone-sets-pace-for-belt-and-road-101089824.html" target="_blank" rel="nofollow">Cambodia</a> that continue to produce for international markets even as their China-based facilities are banned.</p>
+        <p>While there is not much that can be done about the first two of these strategies, the third strategy offers an additional lever: allowing the U.S. and allied nations to place pressure on nations that host Chinese companies attempting to hide their complicity. This would, in turn, place additional pressure on China to reverse course.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9916" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/laura-t-murphy"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/murphy_sm.jpg?itok=T7S5P-6h" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="laura-t-murphy"><a href="https://www.chinafile.com/contributors/laura-t-murphy" title="Laura T. Murphy">Laura T. Murphy</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">How will the <a href="https://www.cbp.gov/trade/forced-labor/UFLPA" target="_blank" rel="nofollow">Uyghur Forced Labor Prevention Act</a> (UFLPA), which covers so many different products, most of which do not enter the U.S. directly from the Xinjiang Uyghur Autonomous Region (XUAR), be enforced? This is the multi-billion-dollar question. Already there are reports that solar panels entering the U.S. have <a href="https://pv-magazine-usa.com/2022/07/01/roth-customs-detains-solar-module-shipment-under-uflpa-3/" target="_blank" rel="nofollow">been detained</a> under the authority of the UFLPA since enforcement began. CBP reportedly has asked at least one solar module importer to provide evidence of the provenance of the quartzite used in making the panels. Customs and Border Protection (CBP) clearly indicated that companies should <a href="https://www.dhs.gov/uflpa-frequently-asked-questions" target="_blank" rel="nofollow">trace</a> their products down to the raw materials, and even <a href="https://www.cbp.gov/sites/default/files/assets/documents/2022-Jun/CBP_Guidance_for_Importers_for_UFLPA_13_June_2022.pdf" target="_blank" rel="nofollow">explicitly mentioned</a> quartzite in guidance importers. Still, it appears the industry believed not only that companies <a href="https://www.pv-magazine.com/2022/07/04/reports-reveal-which-manufacturer-is-believed-to-have-product-seized-under-uflpa/" target="_blank" rel="nofollow">would not</a> be asked for that proof but that many were unlikely to be troubled by the UFLPA due to the short list of companies <a href="https://pv-magazine-usa.com/2022/06/20/uflpa-implementation-strategy-could-be-best-case-scenario-for-solar-industry/" target="_blank" rel="nofollow">explicitly named</a> in the UFLPA entity list. It’s this kind of misunderstanding (or hubris?) that will lead to companies’ running afoul of the UFLPA. The law is quite clear. There should be nothing in a product that originates in the XUAR. What CBP showed us last month is that importers truly will need to have their entire supply chains traced down to raw materials.</p>
+        <p>Companies themselves are responsible for conducting that supply chain tracing. If CBP suspects a company is importing goods made with inputs from the XUAR—even if that product is being imported into the U.S. from a country other than China—it now has the authority to detain shipments and ask the company for detailed evidence of its sourcing for all aspects of its products. Companies in sectors that CBP has not previously scrutinized seem to be taking the new law fairly casually. But so many products are <a href="https://static1.squarespace.com/static/566ef8b4d8af107232d5358a/t/62840717c1a8343a3a2c894c/1652819757766/Everybody%27s+Business.pdf" target="_blank" rel="nofollow">grown, mined, or manufactured</a> in the XUAR that it’s difficult to think of a sector not at risk.</p>
+        <p>CBP might not catch every single import with a component linked to the XUAR, but the agency does seem to be actively investigating a wide variety of sectors. It is not as difficult to identify sourcing from the region as many companies would have us think. Most companies typically <a href="https://www.uschina.org/sites/default/files/uscbc_comments_on_uflpa_enforcement_docket_dhs_2022_0001.pdf" target="_blank" rel="nofollow">rely on</a> the attestations of their first-tier suppliers that their goods are not running afoul of the law and look no further, but a simple search of publicly available customs records often shows whether a supplier is lying. I have access to those records; CBP has access to those records; companies have access to those records. Companies should be doing their due diligence to ensure that their goods are not made in the XUAR or by <em>anyone anywhere</em> being forced to do labor. That’s the companies’ job; not CBP’s. Importing goods made with forced labor into the U.S. has been <a href="https://crsreports.congress.gov/product/pdf/IF/IF11360#:~:text=Section%20307%20of%20the%20Tariff,(CBP)%20enforces%20the%20prohibition." target="_blank" rel="nofollow">illegal since 1930</a>. It’s only because companies continue to break the law that the CBP has such an enormous task enforcing the UFLPA in the first place.</p>
+        <p>Governments and consumers should be able to expect that companies know where they are sourcing the inputs for their products down to the raw materials. The UFLPA is a huge first step in addressing any number of environmental, social, and governance issues in the earliest stages of production that have previously been ignored. Thankfully for consumers, the era of companies turning a blind eye to what is happening in their supply chains seems to be coming to an end.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9921" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/julian-g-ku"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/julian-ku-highres.jpg?itok=uzYnyrGB" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="julian-g-ku"><a href="https://www.chinafile.com/contributors/julian-g-ku" title="Julian G. Ku">Julian G. Ku</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">While the U.S. executive branch has taken various measures to limit or restrict economic relations with China in the form of sanctions, export controls, and tariffs, Congress has largely contented itself with narrow, largely <a href="https://home.treasury.gov/news/press-releases/sm1055" target="_blank" rel="nofollow">symbolic sanctions</a> on individual Chinese actors. This lack of congressional participation in the changes to U.S.-China economic relations ended with its recent passage of the <a href="https://www.cbp.gov/trade/forced-labor/UFLPA" target="_blank" rel="nofollow">Uyghur Forced Labor Prevention Act</a> (UFLPA). While the UFLPA does not require full “decoupling” of U.S.-China trade, it shows that bipartisan majorities in Congress are no longer reluctant to enact laws that create serious and meaningful disruption to U.S.-China trade. Now that Congress is fully on board, it is harder than ever to imagine returning to the heights of U.S.-China trade and investment cooperation during the 2000s and 2010s.</p>
+        <p>To be sure, the U.S. has banned the import of products made from forced labor since the late 19th century. The traditional process is currently administered by the U.S. Customs and Border Protection Service (CBP), pursuant to 19 U.S.C. §1307, which is allowed to issue a “withhold release order” for products brought into the U.S. after an investigation and a determination that the evidence “reasonably but not conclusively indicates” such products may be the product of forced labor. Importers may appeal the CBP order if it provides “satisfactory evidence” the goods were not the product of forced labor.</p>
+        <p>The UFLPA matters because by enacting it, Congress targeted Xinjiang with new legal standards which have already <a href="https://www.scmp.com/economy/china-economy/article/3182177/how-us-xinjiang-labour-law-has-crippled-chinas-cotton" target="_blank" rel="nofollow">created</a> real disruption to trade. The UFLPA creates a presumption that any products produced “wholly or in part” from the Xinjiang region of China, or products produced by persons in work programs sponsored by the Xinjiang government must be withheld as products made from forced labor. The reference to products produced “in part” from Xinjiang expands the scope of the UFLPA’s possible application to a much broader set of goods, including goods that comprise part of the supply chain of manufactured products like solar panels. Additionally, while importers may overcome this determination, they must now demonstrate the products are free from forced labor by “clear and convincing” evidence. This is a much higher standard than the “satisfactory evidence” requirement for products coming from other countries.</p>
+        <p>Taken together, the UFLPA will make it nearly impossible to legally import any product which was made in Xinjiang, contains a part made in Xinjiang, or contains goods or parts of goods made by workers from Xinjiang. While the sheer volume of products may lead to some slipping past CBP’s scrutiny, early reports <a href="https://www.nytimes.com/2022/05/27/business/cotton-xinjiang-forced-labor-retailers.html" target="_blank" rel="nofollow">suggest</a> that, at least in industries such as cotton, importers are not even bothering to try to overcome the UFLPA’s presumption and are simply leaving Xinjiang or even China completely.</p>
+        <p>While supply chains will adjust to the UFLPA and re-direct Xinjiang-related goods away from the U.S. market, the impact of the UFLPA is not just its immediate impact on Xinjiang. Rather, it reflects the end of an era of congressional acquiescence or support to ever greater trade liberalization with China. It shows that Congress is now willing to adopt measures that will create real disruptions in U.S.-China trade and investment flows. Having broken through the taboo on taking more than symbolic actions against trade with China, the UFLPA may herald congressional actions that will further disrupt economic relations between the two countries, no matter which party controls the White House.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9926" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/nicole-morgret"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/morgret_sm.jpg?itok=hWVo7vFg" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="nicole-morgret"><a href="https://www.chinafile.com/contributors/nicole-morgret" title="Nicole Morgret">Nicole Morgret</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">The requirements imposed by the <a href="https://www.cbp.gov/trade/forced-labor/UFLPA" target="_blank" rel="nofollow">Uyghur Forced Labor Prevention Act</a> (UFLPA) are unprecedented, reflecting the severity and nature of the human rights abuses taking place in the Xinjiang Uyghur Autonomous Region. The UFLPA is laudably ambitious, but its impact will depend on the rigor with which it is enforced.</p>
+        <p>In order to abide by the requirements of the UFPLA, stakeholders will have to understand and adapt to the rapidly evolving manufacturing sector in Xinjiang. C4ADS <a href="https://c4ads.org/everybodys-business" target="_blank" rel="nofollow">analysis</a> shows that despite constituting a relatively small portion of the Chinese economy, Xinjiang produces an outsized share of a number of goods that make their way into global supply chains. These include polysilicon (40 percent of global production), tomato products (25 percent), calcium carbide (22 percent), cotton (19 percent), rayon (10 percent), and wind turbines (13 percent). What’s more, our <a href="https://c4ads.org/s/Shifting-Gears.pdf" target="_blank" rel="nofollow">analysis</a> demonstrates that the rate at which manufacturing companies are being established in Xinjiang is higher than ever. This is particularly true of labor-intensive industries like food processing and textiles, reflecting government priorities and increasing the number of global industries which may be tied to forced labor in the region.</p>
+        <p>The UFLPA’s enforcement strategy acknowledges that the law will create incentives to deliberately evade import bans through transshipment through third countries, and that the complexity of supply chains makes it challenging to ascertain that no component of a product was produced in Xinjiang. Nevertheless, there are steps that the U.S. government, alongside other global stakeholders, can take to better leverage available data to uncover and eliminate obfuscated trade.</p>
+        <p>Our <a href="https://c4ads.org/shifting-gears" target="_blank" rel="nofollow">analysis</a> of recent developments in the industrial layout of Xinjiang provides a roadmap for understanding and responding to supply chain risks. Industrial transfer into the region is carried out in large part by the Xinjiang Pairing Assistance Program, which pairs provincial and city governments on the east coast with localities in Xinjiang. This program creates pathways that commercially link Xinjiang to the rest of China: Provincial governments help construct and manage industrial parks, state-owned enterprises invest in Xinjiang manufacturing, and private conglomerates shift production to the region, enticed by subsidized land, electricity, and transportation costs, as well as cheap labor. The entanglement of east coast governments and companies in the region means that human rights abuses in Xinjiang cannot be addressed in isolation. The U.S. government must adapt its investigative methodologies in response to these realities, examining the ownership structures and trade within China to the greatest extent possible. To aid in this work, C4ADS has released a <a href="https://c4ads.org/shifting-gears" target="_blank" rel="nofollow">dataset</a> of Xinjiang manufacturers headquartered outside of the region.</p>
+        <p>Despite these challenges, the potential impact of the Uyghur Forced Labor Prevention Act cannot be overstated. By forcing companies with a U.S. footprint to adhere to stricter regulation regarding forced labor and Xinjiang, this legislation will reshape how companies around the world approach their sourcing practices. However, the United States cannot end Uyghur forced labor alone. Other countries must implement similar legislation and enforce it to their fullest capacity, and, in so doing, end the world’s complicity with human rights abuse in Xinjiang.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+<a id="comment-9931" href="https://www.chinafile.com/conversation/undefined"></a>    <article class="comment comment-by-node-author">
+      <div class="node node-profile cboxes contributor grid-2 img-no logo-no">
+        <div class="inner-content">
+          <div class="field field-name-field-profile-photo field-type-image field-label-hidden">
+<a href="https://www.chinafile.com/contributors/marti-flacks"><img src="https://www.chinafile.com/sites/default/files/styles/epsacrop_220x220/public/assets/images/profile/flacks_sm.jpg?itok=FQhF8v4J" width="220" height="220" alt="" referrerpolicy="no-referrer" /></a>
+          </div>
+        </div>
+        <h3 id="marti-flacks"><a href="https://www.chinafile.com/contributors/marti-flacks" title="Marti Flacks">Marti Flacks</a></h3>
+      </div>
+      <div class="field field-name-comment-body field-type-text-long field-label-hidden">
+        <p class="dropcap">Enforcement of the Uyghur Forced Labor Prevention Act (UFLPA) marks a new phase of U.S. efforts to end the use of forced labor in global supply chains through import controls. The theory of change posits that the United States can leverage its global market power—specifically its <a href="https://ustr.gov/countries-regions" target="_blank" rel="nofollow">unique demand</a> for goods produced all over the world—to influence the behavior of companies sourcing or producing those goods and seeking to import them to the United States. It assumes that upon finding allegations of forced labor in their supply chains, companies will either work with suppliers to change their practices, or move <em>en masse</em> away from those abusive suppliers, thus eliminating suppliers’ incentive to rely on forced labor.</p>
+        <p>Those assumptions have proven correct in some cases. As a result of a ban on the import of rubber gloves produced in certain Malaysian factories, companies collectively <a href="https://thediplomat.com/2021/09/debt-bondage-payouts-flow-to-workers-in-malaysias-glove-industry/" target="_blank" rel="nofollow">paid</a> more than U.S.$60 million in compensation to workers who had suffered from debt bondage in the factories, and pledged to make systemic changes to prevent similar situations in the future. Even before the UFLPA was passed, narrower restrictions on Chinese solar panel supplier <a href="https://www.cbp.gov/trade/programs-administration/forced-labor/hoshine-silicon-industry-co-ltd-withhold-release-order-frequently-asked-questions" target="_blank" rel="nofollow">Hoshine</a> resulted in more than 310 solar companies <a href="https://www.seia.org/news/solar-companies-unite-prevent-forced-labor-solar-supply-chain" target="_blank" rel="nofollow">pledging</a> to develop traceability protocols to ensure they do not source materials produced with forced labor from Xinjiang.</p>
+        <p>These enforcement actions target private company behavior, however, not government policy. Applying this approach effectively to end state-sponsored forced labor in Xinjiang will be more difficult, and multilateralizing the effort to deny goods produced in Xinjiang access to global markets is a critical start. The U.S. is a relatively minor market for goods from Xinjiang. Central Asian countries <a href="https://c4ads.org/everybodys-business" target="_blank" rel="nofollow">make up</a> four of the top five destinations for products from Xinjiang, while Europe significantly <a href="https://www.koreatimes.co.kr/www/world/2022/04/672_312771.html" target="_blank" rel="nofollow">increased</a> its imports from the region in 2021. As long as Chinese raw materials companies and intermediate manufacturers operating in Xinjiang can convince downstream clients to simply segregate the manufacturing streams destined for the United States rather than change their sourcing patterns, they and the Chinese government will continue to have an incentive to invest in production capacity in Xinjiang. Efforts by the <a href="https://www.europarl.europa.eu/news/en/press-room/20220603IPR32222/ban-on-products-made-with-forced-labour-ep-presents-its-recommendations" target="_blank" rel="nofollow">European Union</a>, <a href="https://www.parl.ca/DocumentViewer/en/44-1/bill/S-204/first-reading" target="_blank" rel="nofollow">Canada</a>, <a href="https://www.cbc.ca/news/world/forced-labour-new-law-1.6475738" target="_blank" rel="nofollow">Mexico</a>, and others to adopt legislation that would ban goods made with forced labor from being imported are critical to eliminating this incentive.</p>
+        <p>And while increased attention to materials sourced from Xinjiang has already incentivized some Chinese companies to <a href="https://www.bloomberg.com/news/articles/2021-12-21/china-s-solar-industry-is-slowly-shifting-away-from-xinjiang" target="_blank" rel="nofollow">relocate</a> production to other parts of China, careful scrutiny must be applied to ensure that facilities in those regions <a href="https://www.scmp.com/business/companies/article/1962258/us-seizes-stevia-china-under-forced-labour-law" target="_blank" rel="nofollow">do not also rely on</a> Uyghur forced labor, or that the system that oppresses Uyghurs is not extended to <a href="https://time.com/6078961/china-ccp-anniversary-identity/" target="_blank" rel="nofollow">other marginalized groups</a> in China.</p>
+        <p>For these reasons, it may be that the greatest impact of the UFLPA is on forced labor practices outside of China, rather than inside. In creating a legal obligation for companies across a range of sectors—from agriculture to apparel to mining—to conduct human rights due diligence on their supply chains back to raw material inputs, the UFLPA will help destroy the myth that supply chain traceability is either impossible or economically unviable. In doing so, it creates an opportunity for both accountability and remedy in cases of egregious human rights violations by companies around the world.</p>
+      </div>
+      <nav class="links">
+        <ul class="links inline">
+          <li class="comment_forbidden first last"></li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2022-07-28</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-28/For-Your-Weekend,-July-28,-2022/">
+          For Your Weekend, July 28, 2022
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-27</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-27/Confession-and-Reconciliation-in-the-Cultural-Revo/">
+          Confession and Reconciliation in the Cultural Revolution’s Aftermath
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-25</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-25/Norma-in-Kaohsiung/">
+          Norma in Kaohsiung
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2022-07-21</time>
+        <a href="https://nodebe4.github.io/oped2/2022-07-21/From-My-Anguished-Heart-A-Letter-to-My-Daughter/">
+          From My Anguished Heart—A Letter to My Daughter
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2022-07-25/Norma-in-Kaohsiung/">
+            前一篇：Norma in Kaohsiung
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2022-07-27/Confession-and-Reconciliation-in-the-Cultural-Revo/">
+            後一篇：Confession and Reconciliation in the Cultural Revolution’s Aftermath
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2022-07-25/Norma-in-Kaohsiung/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2022-07-27/Confession-and-Reconciliation-in-the-Cultural-Revo/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2022-07-27/Confession-and-Reconciliation-in-the-Cultural-Revo/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2022-07-25/Norma-in-Kaohsiung/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2022-07-25/Norma-in-Kaohsiung/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2022-07-27/Confession-and-Reconciliation-in-the-Cultural-Revo/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2022-07-27/Confession-and-Reconciliation-in-the-Cultural-Revo/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2022-07-25/Norma-in-Kaohsiung/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
