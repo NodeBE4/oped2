@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>For Beijing, Putting People Back to Work May Prove a Tough Job – 觀點2 – 高頻版 git.io/JUJZT</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+For Beijing, Putting People Back to Work May Prove a Tough Job
+——
+" />
+    <meta property="og:description" content="
+For Beijing, Putting People Back to Work May Prove a Tough Job
+——
+" />
+    
+    <meta name="author" content="觀點2" />
+
+    
+    <meta property="og:title" content="For Beijing, Putting People Back to Work May Prove a Tough Job" />
+    <meta property="twitter:title" content="For Beijing, Putting People Back to Work May Prove a Tough Job" />
+    
+
+  <link rel="stylesheet" type="text/css" href="/oped2/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="觀點2 - 高頻版 git.io/JUJZT" href="/oped2/feed.xml" />
+
+  <!-- Social Share Kit CSS -->
+  <link rel="stylesheet" href="/oped2/assets/css/social-share-kit.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/oped2/assets/css/bootstrap.min.css" type="text/css">
+  <script type="text/javascript" src="/oped2/assets/js/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="/oped2/assets/js/page.js"></script>
+
+</head>
+
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name" style="display: inline-block;"><a href="/oped2/">觀點2</a></h1>
+        <i class="site-description" style="font-size: 12px;">高頻版 git.io/JUJZT</i>
+      </div>
+
+      <nav>
+        <span id="search-container" >
+          <a href="/oped2/tools"><i class="fa fa-bookmark twitter" title="百宝箱"></i></a>
+        <a><i class="fa fa-search" title="限前100結果"></i></a><input type="text" id="search-input" placeholder="標題 作者 來源 日期 (5685)"
+          style="margin: 10px 0px 0px 0px; height: 30px;width: auto" title="本站最正確的打開方式">
+        </span>
+        
+        
+        <a href="/oped2/categories" style="color: Tomato;"><i class="fa fa-tags" title="分类"></i></a>
+        
+        
+        
+        <a href="https://be4.herokuapp.com/" style="color: #003366;"><i class="fa fa-comments" title="论坛"></i></a>
+        
+        
+        
+        <a href="/oped2/about"><i class="fa fa-info-circle" title="关于"></i></a>
+        
+        
+        <a title="电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇，del同来源旧一篇" onclick="toggle_visibility('help')"><i class="fa fa-question-circle"></i></a>
+        <a id="fa-home" href="https://nodebe4.github.io" title="BE4服务列表" onclick="//toggle_visibility('site-list')"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </nav>
+
+    </header>
+    <div id="site-list" class="tags" style="display: block;text-align: right;border-bottom: 1px solid lightGray;"><noscript><span style="background-color: #e8e8e8;color: #d10000;font-size: 14px;">开启浏览器JavaScript以获取搜索功能和更好的浏览体验</span></noscript></div>
+    <p id="help" style="font-size: 14px;display: none;text-align: right;"><span style="color:green;">电脑热键：&larr;上一篇(页), &rarr;下一篇(页), ins同来源新一篇, del同来源旧一篇</span>; <span style="color:orange">对应触屏FAB：上下右左</span>; 轉Markdown<a href="https://euangoddard.github.io/clipboard2markdown/"><i class="fa fa-file-text-o"></i></a></p>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function toggle_visibility(id){
+    var help = document.getElementById(id)
+    if (help.style.display=='none'){
+      help.style.display='block';
+    }else{
+      help.style.display='none';
+    }
+  }
+
+  const url = "https://nodebe4.github.io/sitelist.json"
+
+  document.addEventListener("DOMContentLoaded", function(event){
+    // var homebtn = document.getElementById("fa-home")
+    // homebtn.removeAttribute("href")
+    var content = document.getElementById("site-list");
+    content.innerHTML = ''
+    var ul = document.createElement("ul")
+    ul.classList.add("label")
+    content.appendChild(ul)
+    var cnt = 0
+
+    $.getJSON(url, function(allsites) {
+
+      allsites.map(item =>{
+        var li = document.createElement('li')
+        li.classList.add("tag")
+        li.id = 'site-' + cnt
+        ul.appendChild(li)
+        var a0 = document.createElement('a')
+        li.appendChild(a0)
+        a0.href = item.url[0]
+        var span = document.createElement('span')
+        a0.appendChild(span)
+        span.innerText = item['name']
+        // span.style.backgroundColor = item['background-color']
+        // span.style.color='#E4CBC3'
+        span.style.color = item['background-color']
+        span.style['font-size'] = '14px'
+        cnt += 1
+        // test_alive(li.id, a0.href)
+      })
+    })
+  })
+
+function test_alive(id, url){
+  var divstatus = document.getElementById(id)
+  const base = 'https://textance.herokuapp.com/title/'
+  var fullurl = base + url
+  $.ajax({
+      url: fullurl,
+      complete: function(data) {
+        if (data.responseText.includes('502')){
+          // divstatus.style.color='#FBB7B7'
+          // divstatus.style.color='gray'
+          // divstatus.title = "服务器无响应"
+          divstatus.parentNode.removeChild(divstatus)
+        }else{
+          // divstatus.style.color='#B6FAC8'
+          divstatus.title = data.responseText
+        }
+      }
+  });
+  return divstatus
+}
+</script>
+
+
+
+    <!-- Left & centered positioning -->
+
+<div class="ssk-sticky ssk-right ssk-center ssk-sticky-hide-xs ssk-group ssk-round">
+  
+    <a href="https://be4news.pythonanywhere.com/archivenow/ia/https%3A%2F%2Fwww.chinafile.com%2Freporting-opinion%2Ffeatures%2Fbeijing-putting-people-back-work-may-prove-tough-job" class="ssk ssk-link" title="存到互联网档案馆" target="_blank"></a>
+    <a href="https://www.facebook.com/sharer.php?u=https://www.chinafile.com/reporting-opinion/features/beijing-putting-people-back-work-may-prove-tough-job" class="ssk ssk-facebook"></a>
+    <a href="https://twitter.com/intent/tweet?url=https://www.chinafile.com/reporting-opinion/features/beijing-putting-people-back-work-may-prove-tough-job&text=For Beijing, Putting People Back to Work May Prove a Tough Job&hashtags=觀點2" class="ssk ssk-twitter"></a>
+    <a href="https://reddit.com/submit?url=https://www.chinafile.com/reporting-opinion/features/beijing-putting-people-back-work-may-prove-tough-job&title=For Beijing, Putting People Back to Work May Prove a Tough Job" class="ssk ssk-reddit"></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.chinafile.com/reporting-opinion/features/beijing-putting-people-back-work-may-prove-tough-job&title=For Beijing, Putting People Back to Work May Prove a Tough Job" class="ssk ssk-linkedin"></a>
+    <a href="mailto:{email_address}?subject=For Beijing, Putting People Back to Work May Prove a Tough Job&body=
+For Beijing, Putting People Back to Work May Prove a Tough Job
+——
+" class="ssk ssk-email"></a>
+    <a href="http://pinterest.com/pin/create/link/?url=https://www.chinafile.com/reporting-opinion/features/beijing-putting-people-back-work-may-prove-tough-job" class="ssk ssk-pinterest"></a>
+    <a href="https://www.tumblr.com/widgets/share/tool?canonicalUrl=https://www.chinafile.com/reporting-opinion/features/beijing-putting-people-back-work-may-prove-tough-job&title=For Beijing, Putting People Back to Work May Prove a Tough Job&caption=
+For Beijing, Putting People Back to Work May Prove a Tough Job
+——
+&tags=觀點2" class="ssk ssk-tumblr"></a>
+    <a href="https://buffer.com/add?text=For Beijing, Putting People Back to Work May Prove a Tough Job&url=https://www.chinafile.com/reporting-opinion/features/beijing-putting-people-back-work-may-prove-tough-job" class="ssk ssk-buffer"></a>
+</div>
+
+
+    <div id="main" role="main" class="container">
+      
+  <!-- Html Elements for Search -->
+  <ul id="results-container" class="searched" style="color: #2980B9;"></ul>
+
+  <script src="/oped2/assets/js/simple-jekyll-search.min.js"></script>
+
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/oped2/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a><time>{date}</time><a class="tag">{category}</a></li>',
+    noResultsText: '没找到',
+    limit: 100,
+    fuzzy: false,
+    exclude: ['Welcome']
+  })
+
+  </script>
+
+      
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+    
+
+
+
+<article class="post">
+  <h1>For Beijing, Putting People Back to Work May Prove a Tough Job</h1>
+  <!-- Look the author details up from the site config. -->
+  
+
+  <div>
+    <span class="date">
+      2023-07-10
+    </span>
+
+    <!-- Output author details if some exist. -->
+    
+      
+        <span>
+            <!-- Personal Info. -->
+            <a  style="font-size:14px;">作者: Eva Xiao</a>
+        </span>
+      
+    
+
+
+    <ul class="tag">
+      <li>
+        <a href="https://nodebe4.github.io/oped2/categories/#中参馆">
+          中参馆
+        </a>
+      </li>
+    </ul>
+
+    
+        <span>
+            <!-- Personal Info. -->
+            <a href="https://www.chinafile.com/reporting-opinion/features/beijing-putting-people-back-work-may-prove-tough-job" style="font-size:14px;">原文</a>
+        </span>
+    
+
+    <span style="float: right;" title="中参馆的其它文章">
+      <a style="font-size: 14px;" rel="nofollow" href="#sametag" class="tags">#中参馆 的其它文章</a>
+    </span>
+
+  </div>
+
+  <div class="entry">
+    
+    
+    
+    <!--1688991420000-->
+<p><a href="https://www.chinafile.com/reporting-opinion/features/beijing-putting-people-back-work-may-prove-tough-job">For Beijing, Putting People Back to Work May Prove a Tough Job</a>
+——</p>
+
+<div>
+  <div class="view view-featured-photo view-id-featured_photo view-display-id-panel_pane_1 visual-box view-dom-id-1362175f45c274ed97a67e175f20e808">
+    <div class="content view-content">
+      <div class="views-row views-row-1">
+        <div class="views-field views-field-field-common-featured-photo">
+          <div class="field-content">
+&lt;a href="https://www.chinafile.com/sites/default/files/assets/images/article/featured/54821_sm.jpg" title="For Beijing, Putting People Back to Work May Prove a Tough Job" class="colorbox" data-colorbox-gallery="gallery-node-54821-VDQFX714JBU" data-cbox-img-attrs="{"title": "", "alt": ""}"&gt;<img src="https://www.chinafile.com/sites/default/files/styles/large/public/assets/images/article/featured/54821_sm.jpg?itok=QK9Jygc2" width="1500" height="1043" alt="" title="" referrerpolicy="no-referrer" />&lt;/a&gt;
+          </div>
+        </div>
+        <div>
+          <div class="photo-credit">
+Kevin Frayer—Getty Images
+          </div>
+        </div>
+        <div>
+          <div class="photo-caption">
+            <p>Construction workers repair a sidewalk in Beijing, April 14, 2023.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+      <p class="dropcap">In a small Chinese town where unemployment has run high during the COVID-19 pandemic, the local government has embraced a surprising remedy to joblessness: public toilets.</p>
+      <p>Fugong Village, on the southwestern side of Guangdong province, usually sees nearly half of its small populace of 700 migrate to the Pearl River Delta to seek manufacturing <a href="https://archive.is/ZXqPV#selection-379.0-383.76" target="_blank" rel="nofollow">jobs</a>. But during the pandemic, the village has struggled as urban factories shuttered and migrant workers returned to their hometowns.</p>
+      <p>So village officials decided it was time to renovate the village’s public toilet system, using funds from a government relief program that aims to mitigate unemployment by hiring workers to build infrastructure.</p>
+      <p>While laying bricks and improving public sewage systems may not sound controversial, the Chinese government’s unemployment relief program (以工代赈, <em>yi gong dai zhen</em>), or “work as relief,” has come under fire on social media for its recent emphasis on manual labor. Earlier this year, the government announced revamped relief program <a href="https://zfxxgk.ndrc.gov.cn/web/iteminfo.jsp?id=20117" target="_blank" rel="nofollow">guidelines</a> that encourage local governments to “use human labor and not machines if possible,” sparking online debates about inefficient or unnecessary projects designed purely for the purpose of driving up employment.</p>
+      <p>“First hire 200 people to dig a hole, then hire another 200 to fill it up. That counts as creating 400 jobs,” <a href="https://archive.is/Ll2uA" target="_blank" rel="nofollow">joked</a> one user on Weibo under a news post about the revised work as relief program guidelines.</p>
+      <p>“If you can’t use a shovel to dig dirt, then just use spoons,” <a href="https://archive.is/Ll2uA" target="_blank" rel="nofollow">wrote</a> another, reacting to the program’s affinity for manual labor.</p>
+      <p>The idea of government-backed programs to tackle unemployment and alleviate poverty isn’t new to China, which launched the work as relief program in 1984. This came a few years after Beijing began market-oriented reforms that effectively ended the country’s highly centralized planned economy, where the government—not the labor market—had allocated workers to different jobs. The <a href="http://paper.people.com.cn/rmrbhwb/html/2023-02/14/content_25964865.htm" target="_blank" rel="nofollow">early version</a> of the work as relief program facilitated the construction of infrastructure in impoverished areas.</p>
+      <p>The latest effort to revamp the program reflects the Chinese government’s growing concern about unemployment in rural and low-income areas following more than two years of harsh COVID lockdowns, as well as a <a href="https://www.npr.org/2021/10/18/1046945534/chinas-economic-growth-weakens-amid-construction-slowdown" target="_blank" rel="nofollow">slumping property sector</a> and a <a href="https://www.wsj.com/articles/chinas-fading-recovery-reveals-deeper-economic-struggles-31f4097b" target="_blank" rel="nofollow">slowing economy</a>. In particular, migrant workers, who typically travel from the countryside to find work in major cities, have <a href="https://www.reuters.com/world/china/no-work-nowhere-live-rural-migrants-ordeal-locked-down-shanghai-2022-05-27/" target="_blank" rel="nofollow">struggled</a> with employment during the pandemic, as many of the jobs that such workers rely on, such as construction, manufacturing, and labor-intensive service jobs, have become scarcer due to lower demand and China’s zero-COVID policies.</p>
+      <p>On top of COVID, longer-term trends, such as increasing automation in China’s manufacturing sector and a deindustrializing economy, point to growing challenges that rural workers might face in seeking low-skilled work in cities, even if the economy fully recovers from the pandemic. Recent efforts to revamp the work as relief program highlight the complex and longstanding structural issues China faces in addressing rural poverty and unemployment, and how the range of policy tools China’s leaders are deploying could fall short.</p>
+      <p>“There are no easy answers to the problem of China’s increasingly underemployed rural workers,” says Scott Rozelle from Stanford University, who <a href="https://www.tandfonline.com/doi/full/10.1080/0163660X.2021.1932097" target="_blank" rel="nofollow">researches</a> China’s agricultural policy and rural unemployment. China’s overall education rate is one of the lowest among middle-income countries, he says, which means it’s difficult for factory and construction workers to transition into higher-skilled employment. Instead, low-skilled workers are often pushed into the informal sector, with jobs that often lack healthcare and social security benefits. Under China’s nationwide household registration system, for instance, migrant workers registered as having a rural permanent residence, or <em>hukou</em>, have limited access to social services in urban areas, including pensions, healthcare, and education.</p>
+      <p>“China’s formal economy is leaving hundreds of millions of these workers behind,” he says.</p>
+      <p>Market-oriented reforms in the late 1970s through the early 2000s, when China joined the World Trade Organization, transformed the Communist Party-led country from a system where all productive assets were under state control to one that encouraged the formation of private businesses, loosened restrictions on foreign trade and investment, and privatized many state-owned companies. Prior to 1978, when the Chinese government kicked off “reform and opening” economic policies, the private sector was practically non-existent. Today, the private sector <a href="http://english.scio.gov.cn/m/pressroom/2022-06/29/content_78295756.htm" target="_blank" rel="nofollow">accounts for</a> more than 60 percent of the country’s GDP and 80 percent of urban employment, according to official figures shared last year.</p>
+      <p>Such economic policies have powered China’s rapid rise into the world’s second-largest economy over the last three decades but have also contributed to growing levels of income inequality. From 1981 to 2021, China’s Gini coefficient—a widely used measure of inequality where zero represents perfect equality and a score of one means one household controls 100 percent of income—rose from <a href="https://www.researchgate.net/figure/Income-inequality-in-China-from-1981-to-2018-measured-by-Gini-coefficients-Source_fig1_356704433" target="_blank" rel="nofollow">an estimated 0.31</a> to <a href="http://www.stats.gov.cn/zt_18555/jzgj/jzsc2022/202302/U020230222625262166314.pdf" rel="nofollow">0.466</a>. That’s lower than the U.S., which had a Gini coefficient of <a href="https://www.census.gov/library/stories/2022/09/income-inequality-increased.html" rel="nofollow">0.494</a> in 2021, but higher than European nations like Germany, which had a score of <a href="https://ec.europa.eu/eurostat/databrowser/view/tessi190/default/table" target="_blank" rel="nofollow">0.312</a>.</p>
+      <p>And while China’s wealth distribution is less concentrated among elites than in the U.S. and countries like Brazil, Russia, and India, according to a <a href="https://www.credit-suisse.com/media/assets/corporate/docs/about-us/research/publications/global-wealth-report-2022-en.pdf" target="_blank" rel="nofollow">2021 Credit Suisse report</a> that looked at the share of wealth owned by the top 1 percent in different countries, the gap between urban and rural incomes in China has continued to widen over the last decade. Meanwhile, China’s leaders <a href="http://dangjian.people.com.cn/n1/2023/0223/c117092-32629392.html" target="_blank" rel="nofollow">have touted</a> the country’s socialist system as being more equitable and less economically “polarized” than Western nations.</p>
+      <p>The issue of skewed development and wealth distribution has featured prominently in Xi Jinping’s recitations of his <a href="https://www.chinafile.com/conversation/common-prosperity-China-wealth-redistribution" target="_blank" rel="nofollow">top priorities</a>. Xi’s campaign to eliminate poverty has been one of his signature national policies, and he has <a href="https://www.cnn.com/2021/11/02/tech/china-economy-crackdown-private-companies-intl-hnk/index.html" target="_blank" rel="nofollow">overseen</a> a regulatory crackdown on the country’s high-growth tech, property, and education sectors. Economic concerns appear to have <a href="https://www.chinafile.com/conversation/common-prosperity-China-wealth-redistribution" target="_blank" rel="nofollow">slowed progress</a> over the last year, but even so Xi has made repeated calls to realize “common prosperity,” such as <a href="https://www.reuters.com/breakingviews/xis-wealth-redistribution-push-starts-with-stick-2021-08-18/" target="_blank" rel="nofollow">through</a> wealth redistribution and strengthening of regulation of high and “excessive” incomes.</p>
+      <p>“We must be clear-headed and aware that the problem of unbalanced and inadequate development in our country is still pronounced,” said Xi at a government conference in August 2021. “We need to prevent polarization and eliminate unfair distribution [of wealth] . . . and encourage high-income groups and enterprises to more fully repay society,” he said, adding that the “most arduous” task for common prosperity lies in rural areas.</p>
+      <p>Within this context, the latest work as relief program guidelines are another part of the government’s broader plans to mitigate the economic pains of uneven development that have been exacerbated by the pandemic and a slowing economy. The gap between rural and urban development, for instance, has fueled the country’s <a href="https://data.stats.gov.cn/easyquery.htm?cn=C01&amp;zb=A0A0I&amp;sj=2022" target="_blank" rel="nofollow">nearly 300 million</a> migrant workforce. Rural residents who travel to major cities to earn higher wages in labor-intensive industries, such as construction and manufacturing, are a key <a href="https://www.gov.cn/zhengce/zhengceku/2022-11/18/content_5727760.htm" target="_blank" rel="nofollow">target demographic</a> of the revamped work as relief program.</p>
+      <p>The Chinese government doesn’t publish regular statistics on rural unemployment in part because those who own farmland are <a href="https://fortune.com/2020/05/24/china-unemployment-rate-2/" target="_blank" rel="nofollow">considered</a> to be farming, even if they aren’t actively doing so or have never farmed. But according to China’s ministry of agriculture and rural affairs, the unemployment rate among migrant workers who have returned to the countryside was <a href="https://archive.is/yHKs5" target="_blank" rel="nofollow">9.3 percent</a> at the end of last June. That July, the overall urban unemployment rate was <a href="https://archive.is/kdcDU" target="_blank" rel="nofollow">5.4 percent</a>.</p>
+      <p>Employment in the country’s construction industry has also stagnated over the past five years, according to official statistics. In <a href="https://data.stats.gov.cn/easyquery.htm?cn=C01&amp;zb=A0F01&amp;sj=2022" target="_blank" rel="nofollow">2018</a>, the number of people working in construction fell by 4 percent year-on-year. <a href="https://data.stats.gov.cn/easyquery.htm?cn=C01&amp;zb=A0F01&amp;sj=2022" rel="nofollow">Since then</a>, yearly changes have wavered between 1 to 2 percent and have been trending down starting in 2020, the start of the pandemic.</p>
+      <p>The line about using manual labor over machines in the new work as relief program guidelines is a “direct response to possible job losses in the construction sector,” <a href="https://www.hangseng.com.cn/1/PA_esf-ca-app-content/content/pws/home/pdf/html_zh_CN/Feb2023.pdf" target="_blank" rel="nofollow">according</a> to Wang Dan, chief economist at Hang Seng Bank, in a January report on China’s economy.</p>
+      <p>Due to the low average level of education among workers in the construction industry, “once the industry shrinks, it will be very difficult to train the majority of workers to change jobs,” she wrote. This year, the most prominent employment issues will be in manufacturing and construction, Wang added.</p>
+      <p>And while China still <a href="https://data.worldbank.org/indicator/NV.IND.MANF.CD" target="_blank" rel="nofollow">accounted for</a> about 29 percent of global manufacturing output in 2021, the production of certain product categories is shifting to other countries. According to 2022 data from transport economics firm MDS Transmodal, China’s global shares in clothing, furniture, footwear, and handbags exports <a href="https://www.cnbc.com/2022/10/20/china-factory-of-the-world-is-losing-its-manufacturing-dominance.html" target="_blank" rel="nofollow">have declined</a> since 2016.</p>
+      <p>“It’s a broader trend, and those jobs will not come back to China,” Wang told ChinaFile, referring to China’s more labor-intensive manufacturing jobs, which are moving to Central and Southeast Asia, India, and Latin America.</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">For now, China’s work as relief program may serve as a temporary reprieve for unemployed rural workers, including those who have returned home after working in cities and must now find job opportunities in the countryside. The amount of funding available through relief projects, though, may be too limited for long-term effects, say experts.</p>
+      <p>In 2022, the central government invested 6.6 billion renminbi in work as relief initiatives, according to an <a href="https://archive.is/FLMkR" target="_blank" rel="nofollow">article</a> by official news agency Xinhua last May—a number that may or may not account for the totality of what China spent on the program that year. Part of that funding is to encourage local governments to mitigate the impact the epidemic has had on migrant workers, Xinhua reported. The money will also be allocated to rural revitalization, impoverished counties, and other low-income populations.</p>
+      <p>The Chinese government doesn’t publicize the yearly budget for the work as relief program. However, the amount of money the government announced it allocated last May is roughly in line with state media reports on past work as relief funds. For example, in 2020, 5.6 billion renminbi went to the program, according to a <em><a href="https://www.gov.cn/xinwen/2020-04/08/content_5500125.htm" target="_blank" rel="nofollow">People’s Daily</a></em> article published that year in April.</p>
+      <p>Most work as relief projects are modest, paying workers a few hundred renminbi per day to build roads, bolster dams, improve farmland, or work on other rural and agricultural infrastructure projects.</p>
+      <p>A road construction project in Zhangye city in northwestern Gansu province, for instance, planned to pay workers a daily rate ranging from 200 to 350 renminbi ($28 to $50) depending on their experience level—in line with the <a href="https://www.gov.cn/lianbo/2023-04/28/content_5753682.htm" target="_blank" rel="nofollow">average wage</a> of migrant workers in the construction industry—according to a 2022 procurement notice the local government posted. In Tiandong county in Guangxi province, a work as relief project employed 60 people and paid them a total of 1.3 million renminbi, according to China’s top economic planning agency, the <a href="https://archive.is/04yiA" target="_blank" rel="nofollow">National Development and Reform Commission</a>. The workers, including rural laborers unable to return to their jobs in cities due to epidemic controls, improved 11 kilometers of roads and built reservoirs, water collection wells, and other facilities.</p>
+      <p>Given the amount of funding allocated to the work as relief program reported by Xinhua last May, the program is unlikely to solve China’s rural unemployment issue, at least for now. Assuming laborers <a href="https://www.gov.cn/lianbo/2023-04/28/content_5753682.htm" target="_blank" rel="nofollow">make</a> 5,000 renminbi a month, for instance, the 6.6 billion renminbi would only provide at most one month of work for 1.32 million people.</p>
+      <p>In addition, the amount of income offered by the work as relief program cannot fully replace the income rural migrant workers have lost during the pandemic, says Kam Wing Chan, a professor at the University of Washington.</p>
+      <p>The work as relief program pays much less than what most migrant workers earn in cities. But export demand in 2022 and 2023 has remained sluggish, creating fewer manufacturing jobs, explains Chan, who has <a href="https://www.tandfonline.com/doi/abs/10.1080/15387216.2020.1791726" target="_blank" rel="nofollow">written</a> about COVID’s impact on migrant workers and their income.</p>
+      <p>However, the work as relief program could help with social stability, says Rozelle. The government is thinking about how it can support unemployed rural workers at least temporarily and “keep these people happy.”</p>
+      <p>Not all of the funds go to workers, however, as the government often hires local companies to lead and oversee work as relief projects. According to the National Development and Reform Commission <a href="https://archive.is/o5FIK" target="_blank" rel="nofollow">in February</a>, responding to questions on the latest work as relief program guidelines, remuneration for workers can account for at least 30 percent of total funding for the program, meaning the rest can go elsewhere, such as to equipment and materials, as well as to the company’s bottom line.</p>
+      <p>That paired with the prioritization of manual labor over machines has generated discussion on social media about better ways to alleviate unemployment stress in rural areas. This includes some netizens who say the full amount of work as relief program funding should go directly to workers versus being funneled through infrastructure projects and local companies first.</p>
+      <p>Giving workers more free time “is the root of improving productivity,” <a href="https://archive.is/op13F" target="_blank" rel="nofollow">wrote</a> one Weibo user, reacting to a post slamming critics of the work as relief program as naysayers who will attack the system no matter what. “This stupid work as relief program just wastes the free time of workers, it’s a policy that dooms the nation.”</p>
+      <p>In response to such criticism, state and local media have published a spate of stories—with rhetoric familiar to anyone who has observed debates on welfare in the U.S.—<a href="https://archive.is/iNADD" target="_blank" rel="nofollow">warning</a> citizens not to misread the latest guidelines and urging against “cultivating sluggards.” It’s a phrase that Xi too has used to dial back expectations of government support under “common prosperity.” Xi has <a href="https://archive.is/aoKAS" target="_blank" rel="nofollow">discouraged</a> “providing too much security” and pledged to “resolutely avoid falling into the trap of ‘welfarism.’”</p>
+      <p>“The main goal of ‘work as relief’ is not to improve production efficiency, but to alleviate poverty and solve employment problems,” <a href="https://archive.is/oYgiv" target="_blank" rel="nofollow">said</a> Su Jian, the director of Peking University’s National Economic Research Center, in a February interview with a Chinese finance media outlet.</p>
+      <p>Sending workers money can “solve the issue of their livelihood, but not employment,” said Su. “As a result, this encourages laziness. Work as relief gives them work to do and lets them make money diligently and with dignity.”</p>
+      <p align="center">* * *</p>
+      <p class="dropcap">In addition to the development gap between rural and urban areas, low levels of education among migrant workers but also more generally in China constitute a key structural issue complicating the government’s efforts to reduce inequality and spur development in more impoverished areas, including via the work as relief program.</p>
+      <p>According to a <a href="https://archive.is/mMcng" target="_blank" rel="nofollow">2022 report</a> on migrant workers by China’s National Bureau of Statistics, about 69 percent have an education level of middle school or below. More broadly, just 37 percent of 25-to-64-year-olds in China had a high school degree in 2020, <a href="https://gpseducation.oecd.org/CountryProfile?primaryCountry=CHN&amp;treshold=10&amp;topic=EO" target="_blank" rel="nofollow">according to</a> the Organization for Economic Cooperation and Development, compared to 83 percent on average across OECD countries.</p>
+      <p>That makes the challenge of retraining low-skilled workers especially acute in China, though the issue of reskilling workers as automation and other technological advances disrupt the need for a human workforce is global. According to a <a href="https://www.weforum.org/press/2020/10/recession-and-automation-changes-our-future-of-work-but-there-are-jobs-coming-report-says-52c5162fce/" target="_blank" rel="nofollow">2020 report</a> by the World Economic Forum, an estimated 85 million jobs will be displaced by technology in the next five years. For workers set to stay in their roles for that period, nearly half will need to learn new skills.</p>
+      <p>The Chinese government has framed the work as relief program as a way to train people to become self-reliant. The updated guidelines issued this year place much more emphasis on job training as a way to boost local employment than did the past two updated guidelines, issued in 2014 and 2005.</p>
+      <p>In the latest rules, training is aimed at helping workers participate in work as relief projects, namely building rural and agricultural infrastructure. While that could help workers with construction jobs, it may not prepare them for unemployment issues in the long term, as work as relief infrastructure projects tend to entail precisely the types of construction work at risk of further decline.</p>
+      <p>“The rural unemployment issue is not driven by lack of skill, particularly not a lack of manual work skills,” says Zhan Shaohua from Nanyang Technological University in Singapore, who studies rural issues in China, explaining that land consolidation and mechanization in agriculture have also contributed to employment struggles, especially among older rural workers. “What is lacking is employment opportunity,” he says.</p>
+      <p>Outside of the work as relief program, the Chinese government has also rolled out an initiative to train a new generation of rural workers to be “high-quality farmers,” to be skilled in both agricultural production and technology as well as management, according to the <a href="http://www.moa.gov.cn/ztzl/ymksn/gmrbbd/202302/t20230207_6420025.htm" target="_blank" rel="nofollow">Ministry of Agriculture and Rural Affairs</a>. This program is aimed at a wide range of outcomes, from boosting rural entrepreneurship to improving local food security.</p>
+      <p>In Wanning city, in Hainan province, for example, the local agriculture and rural affairs bureau commissioned a set of courses to train 500 “high-quality farmers” in 2020, according to a government procurement document. The target demographic for the course included farmers’ cooperatives, family farms, leaders of impoverished villages, and migrant workers returning home due to the impact of COVID.</p>
+      <p>Part of the program aimed to teach attendees about planting and animal breeding technology, sales and marketing, as well as pest control. Other courses covered developing an agricultural brand and selling specialty agricultural goods on e-commerce platforms. This is in line with the government’s “<a href="http://www.moa.gov.cn/zxfile/reader?file=http://www.moa.gov.cn/govpublic/XZQYJ/202111/P020211111389086407825.ofd" target="_blank" rel="nofollow">one village, one product” campaign</a>, encouraging villages to focus on one or several local specialty goods to promote and sell, such as chestnuts, mutton, or mangoes.</p>
+      <p>Still, by definition, the “high-quality farmer” training programs will only target certain segments of the rural workforce. They do not reach migrant workers or people living in rural areas who don’t farm and are struggling to find work, explains Wang from Hang Seng Bank.</p>
+      <p>Training workers to sell specialty agricultural goods online will “provide more jobs for sure,” she says. “It just doesn’t solve this big problem of all those excess construction workers.”</p>
+      <p>In the future, the Chinese government could create more public welfare jobs, such as those in forestry or environmental conservation, to help mitigate the seriousness of rural unemployment, says Zhan.</p>
+      <p>But to more effectively address poverty in China’s countryside, Beijing may have to take more drastic measures, such as increasing cash transfers to the rural elderly and poor, he says. “The Chinese state is reluctant to implement this, but in the future it might be forced to do so because population aging becomes such a serious issue.”</p>
+      <p>Measures to address rural underemployment are “complex, expensive, politically fraught, and their payoff will not be felt for years,” <a href="https://www.tandfonline.com/doi/full/10.1080/0163660X.2021.1932097" target="_blank" rel="nofollow">writes</a> Rozelle from Stanford. Still, he writes, such investments are worth it if China wants to reach its goal of becoming a high-income and socially stable nation.<span class="cube"></span></p>
+      <p><em><a href="https://www.chinafile.com/contributors/jessica-batke" target="_blank" rel="nofollow">Jessica Batke</a> provided research for this article.</em></p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <hr style="border-top:1px solid #28323C;"/>
+
+<font size=2px>
+  文章版权归原作者所有。
+</font>
+
+<div style="text-align:center"><img width="1px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站" style="text-align:center"/></div>
+
+  <div id="sametag">
+    <h4 style="display: inline-block;">#中参馆 的其它文章</h4>
+    <span>--<a href="https://nodebe4.github.io/oped2/2024-05-28/The-Future-According-to-Xi-and-Putin/">最新</a>-</span>
+    <span>-<a href="https://nodebe4.github.io/oped2/2020-03-09/Our-Daily-Media-Consumption-Is-Completely-Differe/">最早</a>--</span>
+    
+      <li>
+        <time>2023-07-24</time>
+        <a href="https://nodebe4.github.io/oped2/2023-07-24/Xi-Jinping-s-Three-Balancing-Acts/">
+          Xi Jinping’s Three Balancing Acts
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-07-20</time>
+        <a href="https://nodebe4.github.io/oped2/2023-07-20/The-War-in-Ukraine-and-China-Russia-Relations/">
+          The War in Ukraine and China-Russia Relations
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-06-23</time>
+        <a href="https://nodebe4.github.io/oped2/2023-06-23/What-Kind-of-Wish-Is-This/">
+          ‘What Kind of Wish Is This?’
+        </a>
+      </li>
+    
+    
+      <li>
+        <time>2023-06-16</time>
+        <a href="https://nodebe4.github.io/oped2/2023-06-16/What-s-at-Stake-as-Antony-Blinken-Heads-to-Beijing/">
+          What’s at Stake as Antony Blinken Heads to Beijing
+        </a>
+      </li>
+    
+  </div>
+
+
+  <hr>
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://nodebe4.github.io/oped2/2023-07-01/2023-%E5%B9%B4-6-%E6%9C%88%E6%BE%B3%E9%96%80%E4%B8%89%E5%A4%A9%E5%85%A9%E5%A4%9C%E5%B0%8F%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+            前一篇：2023 年 6 月澳門三天兩夜小旅遊心得
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://nodebe4.github.io/oped2/2023-07-20/The-War-in-Ukraine-and-China-Russia-Relations/">
+            後一篇：The War in Ukraine and China-Russia Relations
+          </a>
+      </span>
+    
+
+    <script>
+    /* post pagination keyboard shortcuts */
+    document.body.onkeyup = function(e){
+      if (e.keyCode == '37') { window.location = 'https://nodebe4.github.io/oped2/2023-07-01/2023-%E5%B9%B4-6-%E6%9C%88%E6%BE%B3%E9%96%80%E4%B8%89%E5%A4%A9%E5%85%A9%E5%A4%9C%E5%B0%8F%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/'; } // left arrow key
+      if (e.keyCode == '39') { window.location = 'https://nodebe4.github.io/oped2/2023-07-20/The-War-in-Ukraine-and-China-Russia-Relations/'; } // right arrow key
+      if (e.keyCode == '45') { window.location = 'https://nodebe4.github.io/oped2/2023-07-20/The-War-in-Ukraine-and-China-Russia-Relations/'; } // insert key
+      if (e.keyCode == '46') { window.location = 'https://nodebe4.github.io/oped2/2023-06-23/What-Kind-of-Wish-Is-This/'; } // delete key
+    };
+    </script>
+    <link rel="stylesheet" type="text/css" href="/oped2/assets/css/fab.css" />
+
+<div class="fab-wrapper">
+  <div class="fab-wheel">
+    
+    
+    
+    <a class="fab-action fab-action-1" title="上一篇(热键 &#8594;)" href="https://nodebe4.github.io/oped2/2023-07-01/2023-%E5%B9%B4-6-%E6%9C%88%E6%BE%B3%E9%96%80%E4%B8%89%E5%A4%A9%E5%85%A9%E5%A4%9C%E5%B0%8F%E6%97%85%E9%81%8A%E5%BF%83%E5%BE%97/">
+      <i>后</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-2" title="下一篇(热键 &#8592;)" href="https://nodebe4.github.io/oped2/2023-07-20/The-War-in-Ukraine-and-China-Russia-Relations/">
+      <i>前</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-3" title="<中参馆>上一篇(热键 ins)" href="https://nodebe4.github.io/oped2/2023-07-20/The-War-in-Ukraine-and-China-Russia-Relations/">
+      <i>左</i>
+    </a>
+    
+    
+    <a class="fab-action fab-action-4" title="<中参馆>下一篇(热键 del)" href="https://nodebe4.github.io/oped2/2023-06-23/What-Kind-of-Wish-Is-This/">
+      <i>右</i>
+    </a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+</article>
+
+    </div>
+
+    <div style="z-index:2;">
+<script src="/oped2/assets/js/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  cornerOffset: 20, // px
+  id: 'back-to-top',
+  backgroundColor: '#ddd',
+  textColor: 'red'
+})</script>
+</div>
+
+
+    <div class="wrapper-footer" id="footer">
+      <div class="container">
+        <footer class="footer">
+          <img width="200px" src="https://i.imgur.com/RinUcXm.png" alt="二维码分享本站"/>
+<font size=2px>二维码分享本站</font>
+
+<!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+  <li><a href="mailto:beauti4@protonmail.com" class="icon-8 email" title="Email"><svg viewBox="0 0 512 512"><path d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z"/></svg><!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/NodeBE4/oped2" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="/oped2/feed.xml" class="icon-21 rss" title="RSS"><svg viewBox="0 0 512 512"><path d="M201.8 347.2c0 20.3-16.5 36.8-36.8 36.8 -20.3 0-36.8-16.5-36.8-36.8s16.5-36.8 36.8-36.8C185.3 310.4 201.8 326.8 201.8 347.2zM128.2 204.7v54.5c68.5 0.7 124 56.3 124.7 124.7h54.5C306.7 285.3 226.9 205.4 128.2 204.7zM128.2 166.6c57.9 0.3 112.3 22.9 153.2 63.9 41 41 63.7 95.5 63.9 153.5h54.5c-0.3-149.9-121.7-271.4-271.6-271.9V166.6L128.2 166.6z"/></svg><!--[if lt IE 9]><em>RSS</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+    
+</ul>
+
+
+
+
+
+<p><span style="color:blue">内容每小时更新一次.</span> Powered by <a href="https://github.com/AWEEKJ/kiko-now">Kiko Now</a> & <a href="https://github.com/gitalk/gitalk">Gitalk</a> & <a href="https://github.com/duty-machine/news">duty-machine</a>, 站务 <a href="https://be4.herokuapp.com">NodeBE4</a>（<span style="color:red">被墙</span>）</p>
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>
